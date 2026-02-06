@@ -7,10 +7,8 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  // Esto asegura que Vite genere las rutas correctamente para Netlify
-  base: './', 
+  base: '/', 
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
   }
 })
