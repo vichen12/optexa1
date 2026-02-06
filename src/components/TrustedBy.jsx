@@ -42,7 +42,7 @@ export const TrustedBy = () => {
       {/* Contenedor rotado para dar efecto "Divertido/Innovador" */}
       <div className="-rotate-2 transform scale-105 origin-center">
         
-        {/* --- FILA 1 (Va hacia la IZQUIERDA) --- */}
+        {/* --- FILA 1 (Va hacia la IZQUIERDA) --- 2221*/}
         <div className="flex bg-optexa-cyan/10 backdrop-blur-md py-4 mb-6 border-y border-optexa-dark/10 shadow-lg">
           <div className="flex animate-[scroll_20s_linear_infinite]">
             {[...companiesRow1, ...companiesRow1, ...companiesRow1].map((company, i) => (
