@@ -108,9 +108,7 @@ export const TrustedBy = () => {
       <div className="mt-16 flex justify-center items-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
          <div className="flex items-center gap-2">
             <ShieldCheck size={18} className="text-slate-950" />
-            <span className="text-[10px] font-mono font-bold text-slate-950 uppercase tracking-widest">
-              Standard Compliance 2026
-            </span>
+          
          </div>
       </div>
     </section>
