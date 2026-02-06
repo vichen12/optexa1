@@ -36,7 +36,6 @@ const CompanyTag = ({ name, inverse = false }) => (
         "text-[8px] font-mono font-black tracking-[0.2em] mb-1.5",
         inverse ? "text-slate-500" : "text-optexa-cyan"
       )}>
-        ● ASRS_SYSTEM_ACTIVE
       </span>
       <span className="font-black tracking-tighter text-2xl italic">{name}</span>
     </div>
