@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- TUS COLORES DE MARCA --- */
+  --color-optexa-dark: #092a53;  /* Tu Azul Corporativo Profundo */
+  --color-optexa-main: #1e3a8a;  /* Azul intermedio */
+  --color-optexa-light: #60a5fa; /* Azul claro para brillos */
+  --color-optexa-cyan: #22d3ee;  /* Cian eléctrico para detalles tech */
+  --color-optexa-white: #ffffff; /* Blanco puro */
+  
+  /* --- ANIMACIONES --- */
+  --animate-blob: blob 15s infinite alternate;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes shimmer {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+}
+
+/* --- ESTILOS GENERALES --- */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  background-color: var(--color-optexa-dark); /* Color de respaldo */
+}
+
+/* --- FONDO MÁGICO: BLANCO ARRIBA -> AZUL ABAJO --- */
+.fun-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -50;
+  /* El gradiente que pediste: */
+  /* Empieza Blanco (#ffffff) hasta el 30%, luego baja suave a Azul (#092a53) */
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #092a53 100%);
+}
+
+/* --- LUCES FLOTANTES (ORBS) --- */
+/* Estas luces le dan vida al fondo para que no sea plano */
+
+.light-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px); /* Desenfoque alto para que parezca luz */
+  z-index: -40;
+  animation: blob 10s infinite;
+}
+
+.orb-1 {
+  top: 40%;
+  left: 10%;
+  width: 30vw;
+  height: 30vw;
+  background: var(--color-optexa-cyan);
+  opacity: 0.15; /* Muy sutil */
+}
+
+.orb-2 {
+  bottom: 0%;
+  right: 0%;
+  width: 50vw;
+  height: 50vw;
+  background: var(--color-optexa-main);
+  opacity: 0.3;
+  animation-delay: -5s; /* Para que se mueva distinto */
+}
+
+/* --- UTILIDADES --- */
+::selection {
+  background-color: var(--color-optexa-cyan);
+  color: var(--color-optexa-dark);
+}

@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- PALETA DE COLORES EXACTA (Tu Logo) --- */
+  --color-optexa-dark: #092a53;  /* Azul Profundo */
+  --color-optexa-main: #1e3a8a;  
+  --color-optexa-cyan: #22d3ee;  /* Cian para energía/tech */
+  --color-optexa-white: #ffffff;
+  
+  /* --- ANIMACIONES --- */
+  --animate-blob: blob 15s infinite alternate;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+  
+  /* Animaciones para el Carrusel de Empresas */
+  --animate-scroll: scroll 20s linear infinite;
+  --animate-scroll-reverse: scroll-reverse 20s linear infinite;
+
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes shimmer {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+
+  /* Keyframes para el scroll infinito (Izquierda) */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Keyframes para el scroll infinito invertido (Derecha) */
+  @keyframes scroll-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  /* El color de fondo base por si falla la imagen */
+  background-color: var(--color-optexa-white);
+  /* Color de texto base oscuro (para que se lea arriba en lo blanco) */
+  color: var(--color-optexa-dark);
+}
+
+/* --- CLASE MÁGICA: FONDO BLANCO -> AZUL --- */
+.fun-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -50;
+  /* El gradiente que pediste: Empieza Blanco puro, baja y se hace Azul #092a53 */
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 25%, #092a53 100%);
+}
+
+/* Luces flotantes para que no sea aburrido */
+.light-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -40;
+  animation: blob 10s infinite;
+}
+
+.orb-1 {
+  top: 30%;
+  left: 10%;
+  width: 30vw;
+  height: 30vw;
+  background: var(--color-optexa-cyan);
+  opacity: 0.15; /* Sutil */
+}
+
+.orb-2 {
+  bottom: 10%;
+  right: 10%;
+  width: 40vw;
+  height: 40vw;
+  background: var(--color-optexa-main);
+  opacity: 0.3;
+  animation-delay: 2s;
+}
+
+/* Selección de texto en cian */
+::selection {
+  background-color: var(--color-optexa-cyan);
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
