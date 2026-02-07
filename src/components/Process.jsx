@@ -157,12 +157,7 @@ export const Process = () => {
                               <div className={cn("absolute inset-0 bg-gradient-to-tr opacity-30 animate-[shimmer_3s_infinite]", `from-transparent via-${step.color}-300 to-transparent`)} />
                            </div>
 
-                           <div className="text-right">
-                             <span className="text-[10px] font-mono text-white/30 font-bold tracking-widest block mb-1">
-                                {step.code}
-                             </span>
-                             <Zap size={12} className={cn("ml-auto", isActive ? `text-${step.color}-400 animate-pulse` : "text-white/20")} />
-                           </div>
+                           
                         </div>
 
                         {/* 2. CONTENIDO */}

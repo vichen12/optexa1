@@ -6,6 +6,7 @@ import { SolutionsDeck } from './components/SolutionsDeck';
 import { Hero } from './components/hero';
 import { Contact } from './components/contact';
 import { Services } from './components/services';
+import { About } from './components/about';
 
 function App() {
   return (
@@ -46,6 +47,11 @@ function App() {
           <Process />
         </section>
 
+         <section id="equipo">
+          <About />
+        </section>
+
+  
         {/* SECCIÓN CONTACTO */}
         <section id="contacto">
           <Contact />
