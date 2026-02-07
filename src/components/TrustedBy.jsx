@@ -106,10 +106,7 @@ export const TrustedBy = () => {
 
       {/* SEO FOOTER: Validación de industria */}
       <div className="mt-16 flex justify-center items-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-         <div className="flex items-center gap-2">
-            <ShieldCheck size={18} className="text-slate-950" />
-          
-         </div>
+         
       </div>
     </section>
   );

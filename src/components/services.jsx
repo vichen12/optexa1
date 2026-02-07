@@ -1,178 +1,220 @@
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
-import { Box, Coffee, Cpu, ArrowUpRight, Crosshair, Activity, ScanLine, Zap } from 'lucide-react';
-import { cn } from '../lib/utils';
+import { 
+  Box, Coffee, Cpu, Activity, 
+  Terminal, Maximize, Ruler, Zap, ShieldCheck, Wifi, Database, ScanLine, Sparkles, Combine
+} from 'lucide-react';
 
-// Configuración del efecto 3D (Suave y elegante)
-const tiltOptions = {
-    reverse: false,
-    max: 15,        // Un poco más de ángulo para que se note el 3D
-    perspective: 1000,
-    scale: 1.02,    // Pequeño zoom al pasar el mouse
-    speed: 1000,
-    transition: true,
-    axis: null,
-    reset: true,
-    easing: "cubic-bezier(.03,.98,.52,.99)",
-}
+const services = [
+  {
+    id: "01",
+    title: "ASRS INDUSTRIAL",
+    subtitle: "ALMACENAMIENTO AUTOMATIZADO",
+    description: "Sistema de transelevadores de doble profundidad. Eliminamos los pasillos de maniobra para utilizar la altura total de la nave (hasta 40m). Integra sistemas KERS para devolver energía a la red.",
+    pain: "COSTOS FIJOS ELEVADOS Y LÍMITE DE ALTURA.",
+    gain: "OPERACIÓN 'LIGHTS-OUT'. DENSIDAD +400%.",
+    specs: [
+      { label: "Altura", val: "45m" },
+      { label: "Carga", val: "1.5T" },
+      { label: "Ciclos", val: "60/h" },
+      { label: "KERS", val: "-30%" },
+    ],
+    techStack: ["Siemens S7", "Profinet", "SICK PL-d"],
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
+    color: "cyan"
+  },
+  {
+    id: "02",
+    title: "FLOTA ROBÓTICA",
+    subtitle: "NAVEGACIÓN NATURAL AMR & AGV",
+    description: "Robots móviles sin cables ni cintas. Utilizan vSLAM y LiDAR 3D para mapear el entorno dinámicamente. La flota opera como un enjambre coordinado.",
+    pain: "FLUJOS RÍGIDOS Y DEPENDENCIA MANUAL.",
+    gain: "ESCALABILIDAD INSTANTÁNEA Y RUTAS DINÁMICAS.",
+    specs: [
+      { label: "Nav", val: "vSLAM" },
+      { label: "Safety", val: "LiDAR" },
+      { label: "Bat", val: "18hs" },
+      { label: "Carga", val: "2Ton" },
+    ],
+    techStack: ["ROS 2", "NVIDIA", "5G Mesh"],
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop",
+    color: "fuchsia"
+  },
+  {
+    id: "03",
+    title: "OPTEXA LABS",
+    subtitle: "INGENIERÍA & CONSULTORÍA",
+    description: "Análisis dimensional in-situ. Estudiamos tus flujos, medimos tu mix de productos y calculamos tus picos de demanda para diseñar el layout exacto.",
+    pain: "INVERSIONES A CIEGAS Y SOBREDIMENSIONAMIENTO.",
+    gain: "AUDITORÍA TÉCNICA Y DIMENSIONAMIENTO EXACTO.",
+    specs: [
+      { label: "Método", val: "Flujos" },
+      { label: "Entrega", val: "CAD 3D" },
+      { label: "Diseño", val: "Custom" },
+      { label: "Valid", val: "Simula" },
+    ],
+    techStack: ["Recomendaciones", "Simulación", "Cálculo"],
+    image: "./OPTEXACONFONDOBLANCO.png",
+    color: "emerald"
+  }
+];
 
-// --- COMPONENTE DE TARJETA TECH 3D ---
-const TechCard = ({ title, subtitle, icon: Icon, image, className, delay, accentColor }) => {
-  // Extraemos el color base (ej: "cyan-400") para usarlo en sombras dinámicas
-  const colorClass = accentColor.replace('border-', ''); 
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay }}
-      className={cn("h-full relative z-10", className)}
-    >
-      {/* 1. WRAPPER TILT (Hace la magia 3D) */}
-      <Tilt options={tiltOptions} className="h-full w-full">
-        
-        <div className={cn(
-            "relative h-full w-full rounded-[2rem] overflow-hidden group transition-all duration-500",
-            // FONDO DE CRISTAL: Importante el backdrop-blur y la opacidad baja para ver el fondo global
-            "bg-[#092a53]/40 backdrop-blur-xl border border-white/10", 
-            // HOVER: El borde se ilumina del color del acento
-            `hover:border-${colorClass} hover:shadow-[0_0_30px_rgba(0,0,0,0.3)]`
-        )}>
-
-          {/* 2. IMAGEN DE FONDO (Mezclada con el cristal) */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center opacity-50 mix-blend-overlay transition-transform duration-700 group-hover:scale-110 group-hover:opacity-70"
-            style={{ backgroundImage: `url(${image})` }}
-          />
-          
-          {/* 3. CAPA DE CIRCUITO (Textura Tech) */}
-          <div className="absolute inset-0 bg-[url('/circuit-board.svg')] opacity-10 mix-blend-soft-light pointer-events-none" />
-
-          {/* 4. SCANLINE (Línea de luz que baja) */}
-          <div className="absolute inset-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent z-10 animate-[scan_4s_ease-in-out_infinite] opacity-0 group-hover:opacity-100" />
-
-          {/* 5. ESQUINAS HUD (Detalle militar/tech) */}
-          <div className={cn("absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 transition-colors duration-300 z-20 opacity-50 group-hover:opacity-100", accentColor)} />
-          <div className={cn("absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 transition-colors duration-300 z-20 opacity-50 group-hover:opacity-100", accentColor)} />
-
-          {/* 6. CONTENIDO */}
-          <div className="relative z-30 h-full flex flex-col justify-between p-8">
-            
-            {/* Header */}
-            <div className="flex justify-between items-start">
-              <div className="p-3 bg-white/10 backdrop-blur-md border border-white/10 rounded-xl text-white group-hover:bg-white group-hover:text-[#092a53] transition-all duration-300 shadow-lg">
-                <Icon size={24} />
-              </div>
-              
-              {/* Badge de estado */}
-              <div className="flex items-center gap-2 px-2 py-1 bg-black/40 rounded border border-white/5 backdrop-blur-sm">
-                <Activity size={10} className={cn("animate-pulse", accentColor.replace('border-', 'text-'))} />
-                <span className="text-[10px] font-mono text-white/60 tracking-wider">ONLINE</span>
-              </div>
-            </div>
-
-            {/* Body */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-black text-white mb-3 uppercase tracking-tight leading-none drop-shadow-md group-hover:translate-x-1 transition-transform">
-                {title}
-              </h3>
-              <p className="text-blue-100/90 text-sm font-medium border-l-2 border-white/20 pl-4 mb-6 leading-relaxed group-hover:text-white transition-colors">
-                {subtitle}
-              </p>
-              
-              <button className={cn(
-                "flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 group-hover:gap-4",
-                accentColor.replace('border-', 'text-')
-              )}>
-                Ver Specs <ArrowUpRight size={14} />
-              </button>
-            </div>
-          </div>
-
-          {/* Glow interior al hacer hover */}
-          <div className={cn(
-              "absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none bg-gradient-to-tr",
-              `from-${colorClass} to-transparent`
-          )} />
-        </div>
-      </Tilt>
-    </motion.div>
-  );
-};
-
-// --- SECCIÓN PRINCIPAL ---
 export const Services = () => {
   return (
-    // IMPORTANTE: bg-transparent para que se vea tu fondo animado global
-    <section id="servicios" className="py-32 px-6 relative z-10 bg-transparent overflow-hidden">
+    <section className="relative py-24 px-4 md:px-8 overflow-hidden">
       
-      <div className="max-w-7xl mx-auto relative z-10">
-        
-        {/* HEADER DE SECCIÓN */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-2 mb-4">
-               <Crosshair size={16} className="text-optexa-cyan animate-[spin_10s_linear_infinite]" />
-               <span className="text-optexa-cyan font-mono text-xs tracking-[0.3em] uppercase">
-                 Matriz de Hardware v3.0
-               </span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-black text-optexa-dark leading-none">
-              ECOSISTEMA <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-optexa-main to-optexa-cyan">
-                AUTÓNOMO
-              </span>
-            </h2>
-          </div>
+      {/* FONDO DECORATIVO GLOBAL SUTIL */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-0" 
+           style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '60px 60px' }} 
+      />
+
+      <div className="max-w-[1400px] mx-auto relative z-10">
+
+        {/* --- HEADER --- */}
+        <div className="mb-32 flex flex-col items-center text-center">
           
-          <div className="hidden md:block text-right">
-             <div className="flex items-center gap-3 text-optexa-dark/70 font-bold font-mono bg-white/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/50">
-                <ScanLine size={18} className="animate-pulse text-green-600"/>
-                SYSTEM STATUS: <span className="text-green-600">OPERATIONAL</span>
-             </div>
-          </div>
+           <h2 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none drop-shadow-[0_5px_5px_rgba(0,0,0,1)]">
+             Ingeniería <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-purple-500 animate-gradient-x font-outline-2">Integral</span>
+           </h2>
         </div>
 
-        {/* --- GRID AVANZADO --- */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+        {/* --- SECCIONES ABIERTAS --- */}
+        <div className="flex flex-col gap-28">
           
-          {/* 1. TARJETA PRINCIPAL (LOGÍSTICA) - FOTO ARREGLADA */}
-          <TechCard 
-            title="Logística Pesada"
-            subtitle="AGVs industriales capaces de mover 1.2 toneladas con precisión milimétrica en oscuridad total."
-            icon={Box}
-            // Foto de depósito automatizado real
-            image="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop"
-            className="md:col-span-8 md:row-span-2 min-h-[400px]"
-            delay={0.1}
-            accentColor="border-cyan-400"
-          />
+          {services.map((item, index) => {
+            const isEven = index % 2 === 0;
 
-          {/* 2. TARJETA SECUNDARIA (MOZOS) */}
-          <TechCard 
-            title="Service Bots"
-            subtitle="Interacción humana fluida y entrega rápida."
-            icon={Coffee}
-            image="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop"
-            className="md:col-span-4 md:row-span-1 min-h-[280px]"
-            delay={0.2}
-            accentColor="border-pink-500"
-          />
+            return (
+              <motion.div 
+                key={item.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-20 items-center relative group/section`}
+              >
+                
+                {/* 1. IMAGEN (VISUAL) - AHORA SIEMPRE CLARA */}
+                <div className="w-full lg:w-1/2 relative perspective-card">
+                   {/* Borde de Energía Giratorio en la Imagen */}
+                   <div className={`absolute -inset-2 bg-gradient-to-r from-${item.color}-500/40 to-transparent rounded-2xl opacity-50 group-hover/section:opacity-100 transition-opacity duration-700 blur-md animate-spin-slow`} />
+                   
+                   <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-[#050a10] border border-white/10 shadow-2xl z-10">
+                      {/* IMAGEN: Se eliminó la opacidad reducida, ahora siempre está al 100% */}
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover/section:scale-105"
+                        style={{ backgroundImage: `url(${item.image})` }}
+                      />
+                      {/* Overlay muy sutil solo para contraste de textos, no oscurece la foto */}
+                      <div className="absolute inset-0 bg-black/20" />
+                      
+                      {/* Interferencia Digital sutil */}
+                      <div className="absolute inset-0 opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay pointer-events-none" />
 
-          {/* 3. TARJETA TERCIARIA (SOFTWARE) */}
-          <TechCard 
-            title="Core IA"
-            subtitle="Control de enjambre centralizado."
-            icon={Cpu}
-            image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
-            className="md:col-span-4 md:row-span-1 min-h-[280px]"
-            delay={0.3}
-            accentColor="border-violet-500"
-          />
+                     
+                   </div>
+                </div>
+
+                {/* 2. EL PANEL DE TEXTO "MATERIAL CUÁNTICO" (Sin cambios) */}
+                <div className="w-full lg:w-1/2 relative group/hud z-10">
+                   
+                   <div className="relative rounded-[2.5rem] overflow-hidden p-[1px]">
+                      
+                      {/* A. BORDE LÍQUIDO ACTIVO */}
+                      <div className={`absolute inset-0 bg-gradient-to-r from-${item.color}-500 via-white/20 to-${item.color}-500 opacity-30 group-hover/hud:opacity-100 blur-sm transition-all duration-700 animate-gradient-x`} />
+                      
+                      {/* B. EL MATERIAL DEL FONDO */}
+                      <div className="relative h-full bg-[#030508] rounded-[2.5rem] p-8 md:p-10 overflow-hidden">
+                         
+                         {/* B1. Textura de Metal Líquido Oscuro (Base) */}
+                         <div className="absolute inset-0 opacity-40 pointer-events-none z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-black to-black" />
+
+                         {/* B2. Ruido Digital Táctil (Textura) */}
+                         <div className="absolute inset-0 opacity-[0.15] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none mix-blend-overlay z-0" />
+                         
+                         {/* B3. Reflejos de Luz Dinámicos (Movimiento interno) */}
+                         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 opacity-30 mix-blend-color-dodge">
+                            <div className={`absolute -top-[50%] -left-[50%] w-[200%] h-[200%] bg-gradient-to-br from-transparent via-white/10 to-transparent animate-[spin_20s_linear_infinite]`} />
+                         </div>
+
+                         {/* B4. Reacción de Energía al Hover */}
+                         <div className={`absolute inset-0 bg-gradient-to-tr from-${item.color}-900/0 via-${item.color}-900/20 to-${item.color}-900/0 opacity-0 group-hover/hud:opacity-100 transition-all duration-700 z-0 mix-blend-screen`} />
+
+
+                         {/* --- CONTENIDO DEL PANEL (TEXTO) --- */}
+                         <div className="relative z-20">
+                           {/* Header */}
+                           <div className="mb-6 flex justify-between items-start">
+                               <div>
+                               
+                                  <h3 className="text-4xl md:text-5xl font-black text-white italic uppercase tracking-tighter leading-[0.9] mb-2 drop-shadow-lg">
+                                    {item.title}
+                                  </h3>
+                                  <p className="text-xs font-bold text-gray-400 tracking-[0.2em] uppercase">
+                                    {item.subtitle}
+                                  </p>
+                               </div>
+                               {/* Icono de la tecnología que brilla */}
+                               <div className={`hidden md:flex p-3 rounded-xl border border-${item.color}-500/20 bg-${item.color}-500/5 text-${item.color}-400 shadow-[0_0_15px_rgba(0,0,0,0.5)] group-hover/hud:shadow-[0_0_20px_rgba(${item.color === 'cyan' ? '34,211,238' : item.color === 'fuchsia' ? '232,121,249' : '52,211,153'},0.4)] transition-shadow`}>
+                                  <Sparkles size={24} />
+                               </div>
+                           </div>
+
+                           {/* Descripción */}
+                           <p className="text-sm md:text-base text-gray-200 font-light leading-relaxed mb-8 border-l-2 border-white/10 pl-4">
+                             {item.description}
+                           </p>
+
+                           {/* Problema vs Solución */}
+                           <div className="space-y-3 mb-8 bg-black/40 p-4 rounded-xl border border-white/5 backdrop-blur-sm relative overflow-hidden">
+                               <div className="absolute inset-0 bg-gradient-to-r from-red-900/10 to-transparent opacity-50 pointer-events-none" />
+                               <div className="flex gap-3 items-start relative z-10">
+                                   <span className="text-[10px] font-black text-red-500 uppercase tracking-widest mt-0.5 min-w-[60px]">PROBLEMA:</span>
+                                   <p className="text-xs text-gray-300 font-mono leading-tight opacity-80">"{item.pain}"</p>
+                               </div>
+                               <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
+                               <div className="flex gap-3 items-start relative z-10 pt-2">
+                                   <span className={`text-[10px] font-black text-${item.color}-400 uppercase tracking-widest mt-0.5 min-w-[60px]`}>SOLUCIÓN:</span>
+                                   <p className="text-sm font-bold text-white italic leading-tight">{item.gain}</p>
+                               </div>
+                           </div>
+
+                           {/* Grilla de Specs */}
+                           <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
+                               {item.specs.map((spec, i) => (
+                                 <div key={i}>
+                                     <p className="text-[9px] font-mono text-gray-500 uppercase mb-0.5">{spec.label}</p>
+                                     <p className="text-base font-bold text-white tracking-tight">{spec.val}</p>
+                                 </div>
+                               ))}
+                           </div>
+
+                           {/* Tech Stack */}
+                           <div className="mt-6 flex flex-wrap gap-2">
+                               {item.techStack.map((tech, i) => (
+                                 <span key={i} className="px-2 py-1 bg-black/30 border border-white/10 text-[9px] font-mono text-gray-400 uppercase rounded hover:bg-white/10 hover:text-white transition-colors hover:border-white/30">
+                                     {tech}
+                                 </span>
+                               ))}
+                           </div>
+                         </div>
+
+                      </div>
+                   </div>
+                </div>
+
+              </motion.div>
+            );
+          })}
 
         </div>
+
       </div>
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+        .animate-spin-slow { animation: spin 15s linear infinite; }
+        .animate-pulse-slow { animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        .font-outline-2 { -webkit-text-stroke: 1px rgba(255,255,255,0.1); }
+      `}} />
     </section>
   );
 };

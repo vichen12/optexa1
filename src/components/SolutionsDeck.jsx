@@ -1,178 +1,161 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Box, Coffee, Cpu, ArrowUpRight, Zap } from 'lucide-react';
-import { cn } from '../lib/utils';
+import { motion } from 'framer-motion';
+import { Box, Coffee, Cpu, Activity, AlertOctagon, CheckCircle2, ArrowRight } from 'lucide-react';
 
 const solutions = [
   {
-    id: 1,
-    title: "LOGÍSTICA",
-    category: "Industrial",
-    description: "Tus depósitos operando solos. AGVs de carga pesada que mueven pallets de 1200kg sin descanso.",
-    stats: [
-      { label: "Carga", val: "1.2T" },
-      { label: "Velocidad", val: "3m/s" },
-      { label: "Altura", val: "12m" }
-    ],
-    color: "bg-blue-600",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop"
+   
+    title: "TECNOLOGÍA ASRS",
+    // MARKETING: EL DOLOR (El problema real del cliente)
+    painTitle: "DEPÓSITOS INEFICIENTES",
+    painDesc: "Más volumen significa más metros, más gente y más errores. El depósito crece en costos, no en eficiencia.",
+    // MARKETING: EL PLACER (Tu solución)
+    gainTitle: "DENSIDAD MÁXIMA AUTOMATIZADA",
+    gainDesc: "Automatización vertical que multiplica capacidad sin ampliar superficie. Picking preciso, trazabilidad total y operación continua 24/7.",
+    icon: Box,
+    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
+    color: "from-cyan-500 via-blue-500 to-purple-600",
   },
   {
-    id: 2,
-    title: "HOSPITALITY",
-    category: "Servicios",
-    description: "Mozos robots que no se cansan. Llevan platos, traen cuentas y sorprenden a tus clientes.",
-    stats: [
-      { label: "Batería", val: "18hs" },
-      { label: "Sensores", val: "LiDAR" },
-      { label: "Payload", val: "40kg" }
-    ],
-    color: "bg-cyan-500",
-    image: "https://images.unsplash.com/photo-1665686376173-ada7a0031a85?q=80&w=2070&auto=format&fit=crop"
+ 
+    title: "ROBÓTICA DE SERVICIO",
+    // MARKETING: EL DOLOR
+    painTitle: "COLAPSO EN HORA PICO",
+    painDesc: "Mozos sobrepasados, pedidos que llegan fríos y mala experiencia del cliente por falta de personal.",
+    // MARKETING: EL PLACER
+    gainTitle: "FLOTA DE ATENCIÓN PERFECTA",
+    gainDesc: "Robots que cargan 40kg y nunca se cansan. Tu personal se enfoca en vender y sonreír, los robots en cargar y llevar.",
+    icon: Coffee,
+    img: "https://images.unsplash.com/photo-1665686376173-ada7a0031a85?q=80&w=2070&auto=format&fit=crop",
+    color: "from-fuchsia-500 via-pink-500 to-orange-500",
   },
   {
-    id: 3,
-    title: "SOFTWARE IA",
-    category: "Control",
-    description: "El cerebro de la operación. Controlá toda tu flota en tiempo real desde una tablet.",
-    stats: [
-      { label: "Cloud", val: "AWS" },
-      { label: "Update", val: "OTA" },
-      { label: "Uptime", val: "99%" }
-    ],
-    color: "bg-indigo-600",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+   
+    title: "OPTEXA AI",
+    // MARKETING: EL DOLOR
+    painTitle: "GESTIÓN A CIEGAS",
+    painDesc: "No sabés dónde están tus activos ni qué está fallando hasta que es tarde. Decisiones basadas en intuición, no en datos.",
+    // MARKETING: EL PLACER
+    gainTitle: "OMNISCIENCIA OPERATIVA",
+    gainDesc: "Panel de control total. IA que predice fallas antes de que ocurran y optimiza rutas en tiempo real.",
+    icon: Cpu,
+    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    color: "from-emerald-400 via-green-500 to-teal-500",
   }
 ];
 
 export const SolutionsDeck = () => {
-  const [active, setActive] = useState(1);
+  const [hovered, setHovered] = useState(null);
 
   return (
-    <section id="soluciones" className="py-24 px-4 bg-transparent relative z-10">
+    <section className="relative py-32 px-6 z-20 overflow-hidden bg-transparent">
       
-      {/* HEADER */}
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur border border-optexa-dark/10 mb-4 shadow-sm">
-           <Zap size={14} className="text-optexa-cyan" fill="currentColor"/>
-           <span className="text-[10px] font-black text-optexa-dark tracking-[0.2em] uppercase">Tecnología propietaria</span>
-        </div>
-        <h2 className="text-5xl md:text-7xl font-black text-optexa-dark leading-[0.9]">
-          POTENCIA <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-optexa-main to-optexa-cyan">
-            ILIMITADA
-          </span>
-        </h2>
+      {/* HEADER: CLARO Y DIRECTO */}
+      <div className="max-w-7xl mx-auto mb-20 text-center relative z-10">
+        
+        
+      
+    
+         <h2 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none drop-shadow-[0_5px_5px_rgba(0,0,0,1)]">
+             TRANSFORMAMOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-purple-500 animate-gradient-x font-outline-2">PROBLEMAS EN ACTIVOS</span>
+           </h2>
       </div>
 
-      {/* EL MAZO (DECK) */}
-      <div className="max-w-7xl mx-auto h-[600px] flex flex-col md:flex-row gap-3 px-2">
-        {solutions.map((item) => {
-          const isActive = active === item.id;
-          
-          return (
-            <motion.div
-              key={item.id}
-              layout
-              onClick={() => setActive(item.id)}
-              onHoverStart={() => setActive(item.id)}
-              className={cn(
-                "relative rounded-[2rem] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group shadow-2xl",
-                // Lógica de expansión: El activo es mucho más grande
-                isActive ? "flex-[4]" : "flex-[1] opacity-80 hover:opacity-100 grayscale hover:grayscale-0",
-                "h-full min-h-[100px]"
-              )}
-            >
+      {/* --- GRID DE MARKETING --- */}
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 perspective-1000 z-10 relative">
+        
+        {solutions.map((item, index) => (
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.2 }}
+            viewport={{ once: true }}
+            onMouseEnter={() => setHovered(index)}
+            onMouseLeave={() => setHovered(null)}
+            className="group relative h-[700px] perspective-card cursor-default"
+          >
+            {/* 1. Borde de Neón Giratorio (Mantenemos lo futurista) */}
+            <div className={`absolute -inset-[2px] rounded-[32px] bg-gradient-to-r ${item.color} opacity-30 group-hover:opacity-100 blur-sm transition-opacity duration-700 animate-spin-slow`} />
+            
+            {/* 2. TARJETA DE VIDRIO (Glassmorphism sobre App.jsx) */}
+            <div className="relative h-full bg-[#02040a]/80 backdrop-blur-xl rounded-[30px] overflow-hidden flex flex-col border border-white/10 group-hover:border-transparent transition-all duration-500 z-10 shadow-2xl">
               
-              {/* --- 1. IMAGEN DE FONDO --- */}
-              <div 
-                className={cn(
-                  "absolute inset-0 bg-cover bg-center transition-transform duration-1000",
-                  isActive ? "scale-105" : "scale-100"
-                )}
-                style={{ backgroundImage: `url(${item.image})` }}
-              />
+              {/* --- IMAGEN DE FONDO (Sutil) --- */}
+              <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-1000"
+                  style={{ backgroundImage: `url(${item.img})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#02040a] via-[#02040a]/90 to-transparent" />
+              </div>
 
-              {/* --- 2. CAPA OSCURA (Para que se lea el texto) --- */}
-              <div className={cn(
-                "absolute inset-0 transition-colors duration-500",
-                isActive ? "bg-optexa-dark/80" : "bg-optexa-dark/60 hover:bg-optexa-dark/40"
-              )} />
+              {/* --- HEADER --- */}
+              <div className="relative z-20 p-8 flex items-start justify-between">
+                <div>
+                 
+                  <h3 className="text-4xl font-black text-white italic tracking-tighter leading-[0.9] drop-shadow-lg">
+                    {item.title}
+                  </h3>
+                </div>
+                <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-white">
+                  <item.icon size={24} />
+                </div>
+              </div>
 
-              {/* --- 3. CONTENIDO --- */}
-              <div className="absolute inset-0 p-8 flex flex-col justify-between overflow-hidden">
+              {/* --- ZONA DE MARKETING (EL NÚCLEO) --- */}
+              <div className="relative z-20 px-8 flex-grow flex flex-col gap-4">
                 
-                {/* CABECERA DE TARJETA */}
-                <div className="flex justify-between items-start">
-                  <div className={cn(
-                    "px-3 py-1 rounded-full border text-xs font-bold uppercase tracking-widest transition-all duration-300",
-                    isActive ? "bg-white text-black border-white" : "bg-black/30 text-white border-white/20"
-                  )}>
-                    0{item.id} — {item.category}
+                {/* 🔴 EL PROBLEMA (ROJO) */}
+                <div className="bg-red-950/20 border-l-2 border-red-500/50 p-5 rounded-r-xl backdrop-blur-sm group-hover:bg-red-950/30 transition-colors">
+                  <div className="flex items-center gap-2 mb-2 text-red-400">
+                    <AlertOctagon size={14} />
+                    <span className="text-[10px] font-black tracking-widest uppercase">Problema</span>
                   </div>
-                  
-                  <div className={cn(
-                    "p-3 rounded-full bg-white/10 backdrop-blur-md transition-all duration-300",
-                    isActive ? "rotate-45 bg-optexa-cyan text-black" : "text-white"
-                  )}>
-                    <ArrowUpRight size={20} />
-                  </div>
+                  <h4 className="text-sm font-bold text-white mb-1 uppercase tracking-tight">{item.painTitle}</h4>
+                  <p className="text-xs text-red-100/70 font-mono leading-relaxed">
+                    "{item.painDesc}"
+                  </p>
                 </div>
 
-                {/* --- ESTADO CERRADO: TÍTULO GIGANTE VERTICAL --- */}
-                {!isActive && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="text-6xl md:text-8xl font-black text-white/20 uppercase tracking-widest -rotate-90 whitespace-nowrap select-none group-hover:text-white/40 transition-colors">
-                      {item.title}
-                    </h3>
+                {/* ⬇️ FLECHA DE TRANSFORMACIÓN */}
+                <div className="self-center">
+                  <ArrowRight className="text-white/20 rotate-90" size={20} />
+                </div>
+
+                {/* 🟢 LA SOLUCIÓN (VERDE/CIAN) */}
+                <div className="bg-cyan-950/20 border-l-2 border-cyan-400/50 p-5 rounded-r-xl backdrop-blur-sm group-hover:bg-cyan-950/30 transition-colors flex-grow">
+                  <div className="flex items-center gap-2 mb-2 text-cyan-400">
+                    <CheckCircle2 size={14} />
+                    <span className="text-[10px] font-black tracking-widest uppercase">SOLUCION QUE OFRECE OPTEXA</span>
                   </div>
-                )}
-
-                {/* --- ESTADO ABIERTO: INFO COMPLETA --- */}
-                <AnimatePresence>
-                  {isActive && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.4, delay: 0.1 }}
-                      className="relative z-10"
-                    >
-                      {/* Título Principal */}
-                      <h3 className="text-5xl md:text-7xl font-black text-white mb-4 uppercase italic leading-none drop-shadow-lg">
-                        {item.title}
-                      </h3>
-                      
-                      {/* Línea decorativa de color */}
-                      <div className={cn("w-20 h-2 mb-6 rounded-full", item.color)} />
-
-                      <p className="text-xl text-gray-200 max-w-lg mb-8 font-medium leading-relaxed">
-                        {item.description}
-                      </p>
-
-                      {/* STATS (Estilo Ficha Técnica) */}
-                      <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
-                        {item.stats.map((stat, i) => (
-                          <div key={i}>
-                            <p className="text-xs text-optexa-cyan uppercase font-bold tracking-wider mb-1">
-                              {stat.label}
-                            </p>
-                            <p className="text-3xl font-black text-white font-mono">
-                              {stat.val}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                  <h4 className="text-lg font-black text-white mb-2 uppercase italic tracking-tight">{item.gainTitle}</h4>
+                  <p className="text-sm text-cyan-100/80 font-medium leading-relaxed">
+                    {item.gainDesc}
+                  </p>
+                </div>
 
               </div>
-            </motion.div>
-          );
-        })}
+
+              {/* --- FOOTER --- */}
+              <div className="relative z-20 p-6 mt-auto">
+                 <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+                    <div className={`h-full bg-gradient-to-r ${item.color} w-0 group-hover:w-full transition-all duration-1000 ease-out`} />
+                 </div>
+             
+              </div>
+
+            </div>
+          </motion.div>
+        ))}
+
       </div>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        .animate-spin-slow { animation: spin 10s linear infinite; }
+        .perspective-1000 { perspective: 1000px; }
+      `}} />
+
     </section>
   );
 };
