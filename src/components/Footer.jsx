@@ -132,15 +132,10 @@ export const Footer = () => {
                </a>
             </div>
 
-            <div className="hidden md:block w-[1px] h-10 bg-white/5" />
+          
 
             {/* INDUSTRIAL LEAD */}
-            <div className="text-right">
-               <span className="text-[9px] font-mono text-slate-500 uppercase tracking-widest block mb-1">Industrial_Lead</span>
-               <span className="text-[11px] font-black text-slate-200 italic uppercase tracking-tighter">
-                  Anuk Vilarasau
-               </span>
-            </div>
+            
           </div>
 
         </div>
