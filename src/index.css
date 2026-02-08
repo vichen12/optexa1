@@ -104,3 +104,63 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* --- SCROLLBAR HYPER-TECH OPTEXA (ADN RUTAS DEL SUR) --- */
+
+.stroke-text {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
+.stroke-white { 
+  -webkit-text-stroke: 1px white; 
+}
+
+/* 1. Riel principal */
+::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+/* 2. La línea blanca que sigue toda la pantalla (Efecto Rutas del Sur) */
+::-webkit-scrollbar-track {
+  background: transparent;
+  background-image: linear-gradient(to right, 
+    transparent 49%, 
+    rgba(255, 255, 255, 0.15) 49%, 
+    rgba(255, 255, 255, 0.15) 51%, 
+    transparent 51%
+  );
+  border-left: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* 3. El Láser de Precisión (Thumb) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, 
+    transparent, 
+    #22d3ee, 
+    #ffffff, 
+    #22d3ee, 
+    transparent
+  );
+  border-radius: 100px;
+  
+  /* Resplandor técnico */
+  box-shadow: 
+    -2px 0 15px rgba(34, 211, 238, 0.5),
+    -5px 0 30px rgba(34, 211, 238, 0.2);
+    
+  transition: all 0.3s ease-in-out;
+}
+
+/* 4. Sobrecarga al tocar el sistema */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+  box-shadow: 
+    -2px 0 25px rgba(255, 255, 255, 0.8),
+    -10px 0 50px rgba(34, 211, 238, 0.6);
+}
+
+/* Limpieza de esquinas */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

@@ -5,12 +5,12 @@ import { TrustedBy } from './components/TrustedBy';
 import { Process } from './components/Process';
 import { Footer } from './components/Footer';
 import { SolutionsDeck } from './components/SolutionsDeck';
-// IMPORTANTE: Estos nombres ahora coinciden con tus archivos en minúsculas
 import { Hero } from './components/hero'; 
 import { Contact } from './components/contact'; 
 import { Services } from './components/services'; 
 import { About } from './components/about';
 import { WppFloat } from './components/WppFloat';
+import { ScrollTracker } from './components/ScrollTracker';
 
 function App() {
   
@@ -30,12 +30,16 @@ function App() {
   return (
     <div className="min-h-screen relative text-white selection:bg-cyan-500 selection:text-white">
       
+      {/* FONDO DE ORBES ORIGINAL */}
       <div className="fun-bg">
         <div className="light-orb orb-1"></div>
         <div className="light-orb orb-2"></div>
       </div>
 
       <Navbar />
+
+      {/* Seguidor de Scroll (Telemetría) */}
+      <ScrollTracker />
       
       <main className="relative z-10">
         <section id="inicio">

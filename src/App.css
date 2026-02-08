@@ -87,3 +87,53 @@ body {
   background-color: var(--color-optexa-cyan);
   color: var(--color-optexa-dark);
 }
+/* --- SCROLLBAR OPTEXA: ADN RUTAS DEL SUR --- */
+
+::-webkit-scrollbar {
+  width: 6px; /* Mantenemos la finura */
+}
+
+/* ESTO ES LO QUE NO VES: El riel permanente */
+::-webkit-scrollbar-track {
+  background: rgba(2, 4, 10, 0.8); /* Un fondo oscuro casi imperceptible */
+  
+  /* Dibujamos la línea guía blanca de 1px que recorre TODA la pantalla */
+  background-image: linear-gradient(to right, 
+    transparent 49%, 
+    rgba(255, 255, 255, 0.2) 49%, 
+    rgba(255, 255, 255, 0.2) 51%, 
+    transparent 51%
+  );
+  
+  /* Borde sutil para darle volumen de "riel" industrial */
+  border-left: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+::-webkit-scrollbar-thumb {
+  /* Tu efecto láser cian/blanco */
+  background: linear-gradient(to bottom, 
+    transparent, 
+    #22d3ee, 
+    #ffffff, 
+    #22d3ee, 
+    transparent
+  );
+  border-radius: 100px;
+  
+  /* El resplandor que "viaja" sobre la línea blanca */
+  box-shadow: 
+    -2px 0 15px rgba(34, 211, 238, 0.6),
+    -5px 0 30px rgba(34, 211, 238, 0.3);
+    
+  transition: all 0.3s ease;
+}
+
+/* Efecto cuando el usuario interactúa con el riel */
+::-webkit-scrollbar-track:hover {
+  background-image: linear-gradient(to right, 
+    transparent 49%, 
+    rgba(34, 211, 238, 0.3) 49%, 
+    rgba(34, 211, 238, 0.3) 51%, 
+    transparent 51%
+  );
+}
