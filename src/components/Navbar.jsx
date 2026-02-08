@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, Zap, ChevronRight, X } from 'lucide-react';
-import { cn } from '../lib/utils';
+import { Menu, ChevronRight, X } from 'lucide-react';
+
+const classes = (...btns) => btns.filter(Boolean).join(' ');
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -18,133 +17,159 @@ export const Navbar = () => {
   const handleScrollTo = (e, id) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    
-    // Quitamos el '#' si viene en el id para el selector
     const targetId = id.startsWith('#') ? id : `#${id}`;
     const element = document.querySelector(targetId);
     
     if (element) {
-      const yOffset = -80; 
+      const yOffset = scrolled ? -80 : -120; 
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
-  // DIRECCIONES TOTALES DE LA PÁGINA
   const navLinks = [
     { name: 'Inicio', href: '#inicio' },
-    { name: 'Empresas', href: '#trusted' },   // Carrusel de marcas
-    { name: 'Soluciones', href: '#soluciones' }, // El mazo de cartas (SolutionsDeck)
-    { name: 'Modelos', href: '#showcase' },   // El catálogo de robots
-    { name: 'Proceso', href: '#proceso' },    // El workflow de 4 pasos
+    { name: 'Soluciones', href: '#soluciones' },
+    { name: 'Modelos', href: '#showcase' },
+    { name: 'Proceso', href: '#proceso' },
     { name: 'Contacto', href: '#contacto' },
   ];
 
   return (
     <>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SiteNavigationElement",
+          "name": navLinks.map(l => l.name),
+          "url": navLinks.map(l => `https://optexa.com.ar/${l.href}`)
+        })}
+      </script>
+
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex justify-center",
-          scrolled ? "py-4" : "py-6"
+        className={classes(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex justify-center px-4 lg:px-6",
+          scrolled ? "py-3 lg:py-4" : "py-6 lg:py-8"
         )}
       >
         <div 
-          className={cn(
+          className={classes(
             "flex justify-between items-center transition-all duration-500 w-full relative",
             scrolled 
-              ? "max-w-6xl bg-white/70 backdrop-blur-xl border border-white/40 shadow-xl rounded-full px-8 py-3 mx-4" 
-              : "max-w-7xl px-8 bg-transparent"
+              ? "max-w-6xl bg-[#02040a]/95 backdrop-blur-xl border border-cyan-500/30 shadow-[0_0_40px_rgba(34,211,238,0.2)] rounded-2xl lg:rounded-3xl px-6 lg:px-10 py-2 lg:py-3 mx-2 lg:mx-4" 
+              : "max-w-7xl px-4 lg:px-8 bg-transparent"
           )}
         >
           
-          {/* LOGO */}
+          {/* LOGO ADAPTATIVO */}
           <a 
             href="#inicio" 
             onClick={(e) => handleScrollTo(e, '#inicio')}
-            className="group flex items-center gap-2 select-none cursor-pointer"
+            className="group flex items-center select-none cursor-pointer"
           >
-            <div className="w-10 h-10 bg-optexa-dark rounded-full flex items-center justify-center text-optexa-cyan shadow-lg group-hover:rotate-[360deg] transition-transform duration-700">
-              <Zap size={20} fill="currentColor" />
-            </div>
-            <span className="text-xl font-black tracking-tighter italic text-optexa-dark">
-              OPTEXA
-            </span>
+              <img 
+                src="/OPTEXACONFONDOBLANCO.png" 
+                alt="Optexa Logo" 
+                className={classes(
+                  "object-contain rounded-xl lg:rounded-2xl shadow-2xl transition-all duration-700 bg-white p-1",
+                  "group-hover:scale-110 active:scale-95", 
+                  scrolled 
+                    ? "w-10 h-10 lg:w-16 lg:h-16" 
+                    : "w-14 h-14 lg:w-24 lg:h-24" 
+                )}
+              />
           </a>
 
-          {/* LINKS ESCRITORIO */}
-          <div className="hidden lg:flex items-center gap-1">
+          {/* DESKTOP NAV CON TRANSICIÓN DE COLOR */}
+          <ul className="hidden lg:flex items-center gap-6">
             {navLinks.map((item) => (
-              <a 
-                key={item.name} 
-                href={item.href}
-                onClick={(e) => handleScrollTo(e, item.href)}
-                className="relative px-4 py-2 text-[11px] font-black uppercase tracking-widest text-optexa-dark/60 hover:text-optexa-main transition-all group rounded-full"
-              >
-                {item.name}
-                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 rounded-full bg-optexa-cyan group-hover:w-4 transition-all" />
-              </a>
+              <li key={item.name}>
+                <a 
+                  href={item.href}
+                  onClick={(e) => handleScrollTo(e, item.href)}
+                  className={classes(
+                    "relative px-4 py-2 text-[13px] font-black uppercase tracking-[0.2em] transition-colors duration-500 group italic",
+                    // LÓGICA DE COLOR: Negro arriba, Blanco con scroll
+                    scrolled ? "text-white" : "text-black"
+                  )}
+                >
+                  <span className="relative z-10">{item.name}</span>
+                  <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-cyan-500 shadow-[0_0_15px_#22d3ee] opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
 
-          {/* BOTÓN DE ACCIÓN */}
+          {/* DESKTOP CTA */}
           <div className="hidden md:block">
             <button
               onClick={(e) => handleScrollTo(e, '#contacto')}
-              className="bg-optexa-dark text-white px-6 py-2.5 rounded-full font-bold text-xs shadow-lg hover:bg-optexa-main transition-all flex items-center gap-2 active:scale-95"
+              className="relative group overflow-hidden bg-cyan-500 text-black px-8 py-3 rounded-xl font-black text-[11px] tracking-[0.1em] shadow-[0_10px_30px_rgba(34,211,238,0.3)] hover:shadow-cyan-400/60 transition-all active:scale-95 italic border-b-4 border-cyan-700 hover:border-cyan-400"
             >
-              COTIZAR <ChevronRight size={14} />
+              <div className="absolute inset-0 bg-white/30 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 skew-x-12" />
+              <span className="flex items-center gap-2">
+                COTIZAR AHORA <ChevronRight size={18} />
+              </span>
             </button>
           </div>
 
-          {/* HAMBURGUESA MOVIL */}
+          {/* MOBILE TRIGGER ADAPTATIVO */}
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden text-optexa-dark p-2 hover:bg-black/5 rounded-full"
+            className={classes(
+                "lg:hidden p-2 rounded-xl transition-colors duration-500",
+                scrolled ? "text-white" : "text-black"
+            )}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} className={scrolled ? "text-cyan-400" : "text-black"} />}
           </button>
         </div>
       </motion.nav>
 
-      {/* MENÚ MOVIL */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 100 }}
-            className="fixed inset-0 z-[60] bg-optexa-dark flex flex-col items-center justify-center p-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[60] bg-[#02040a]/95 backdrop-blur-3xl flex flex-col items-center justify-center p-8 overflow-hidden font-sans"
           >
             <button 
               onClick={() => setMobileMenuOpen(false)}
-              className="absolute top-8 right-8 text-white/50 hover:text-white"
+              className="absolute top-8 right-8 text-cyan-500 p-2"
             >
-              <X size={40} />
+              <X size={32} />
             </button>
 
-            <div className="flex flex-col gap-6 text-center">
+            <nav className="flex flex-col gap-8 text-center relative z-10">
                {navLinks.map((item, i) => (
                 <motion.a 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
+                  transition={{ delay: i * 0.05 }}
                   key={item.name} 
                   href={item.href}
                   onClick={(e) => handleScrollTo(e, item.href)}
-                  className="text-4xl font-black text-white uppercase tracking-tighter hover:text-optexa-cyan transition-colors"
+                  className="text-5xl font-black text-white uppercase tracking-tighter hover:text-cyan-400 transition-all italic flex flex-col items-center group"
                 >
+                  <span className="text-[10px] font-mono text-cyan-500/60 tracking-[0.5em] mb-2">// 0{i+1}</span>
                   {item.name}
                 </motion.a>
               ))}
-              <button 
+              
+              <motion.button 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4 }}
                 onClick={(e) => handleScrollTo(e, '#contacto')}
-                className="mt-8 bg-optexa-cyan text-optexa-dark px-10 py-5 rounded-2xl font-black text-xl"
+                className="mt-10 bg-cyan-500 text-black px-12 py-5 rounded-2xl font-black text-xl italic shadow-[0_0_40px_rgba(34,211,238,0.4)]"
               >
-                EMPEZAR AHORA
-              </button>
-            </div>
+                COTIZAR
+              </motion.button>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>

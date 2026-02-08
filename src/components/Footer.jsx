@@ -1,161 +1,145 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Zap, Github, Linkedin, Twitter, Instagram, MapPin, 
-  Activity, ArrowRight, Cpu, Terminal, Globe, ShieldCheck 
+  Zap, Linkedin, Instagram, MapPin, 
+  Activity, ShieldCheck, Terminal, Cpu, ArrowRight, Mail, Compass
 } from 'lucide-react';
-import { cn } from '../lib/utils';
 
-// Componente para los links con micro-interacción HUD
-const FooterLink = ({ href, children }) => (
+// Componente para links con visibilidad mejorada
+const NavLink = ({ href, children }) => (
   <li>
-    <a href={href} className="group flex items-center gap-3 text-gray-500 hover:text-cyan-400 transition-all duration-300">
-      <div className="w-1.5 h-1.5 rounded-full bg-white/5 group-hover:bg-cyan-400 group-hover:shadow-[0_0_8px_#22d3ee] transition-all" />
-      <span className="font-mono text-[13px] tracking-tight group-hover:translate-x-1 transition-transform">
+    <a href={href} className="group flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-all duration-300">
+      <div className="w-1.5 h-1.5 rounded-full bg-cyan-900 group-hover:bg-cyan-400 group-hover:shadow-[0_0_10px_#22d3ee] transition-all" />
+      <span className="text-[11px] font-black uppercase tracking-widest group-hover:translate-x-1 transition-transform italic">
         {children}
       </span>
     </a>
   </li>
 );
 
-// Botones sociales con efecto de cristal
-const SocialButton = ({ icon: Icon, href }) => (
-  <motion.a 
-    href={href}
-    whileHover={{ scale: 1.1, y: -3 }}
-    whileTap={{ scale: 0.9 }}
-    className="p-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-cyan-500/10 hover:text-cyan-400 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-md"
-  >
-    <Icon size={18} />
-  </motion.a>
-);
-
 export const Footer = () => {
-  return (
-    <footer className="relative bg-[#02040a] pt-24 pb-12 overflow-hidden border-t border-white/5 font-sans">
-      
-      {/* --- ELEMENTOS DE DISEÑO DE FONDO --- */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-cyan-950/20 to-transparent pointer-events-none" />
-      
-      {/* Ruido digital sutil para textura tech */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+  const currentYear = new Date().getFullYear();
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+  // LINKS DIRECTOS A GMAIL
+  const companyGmailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=optexamza@gmail.com&su=Consulta%20desde%20la%20web&body=Hola!%20Vengo%20de%20la%20página,%20me%20interesaría%20una%20cotización.";
+  const personalGmailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=vichendallape@gmail.com&su=Propuesta%20Desarrollo%20Web&body=Hola%20Vincenzo!%20Me%20gustó%20tu%20página,%20¿me%20harías%20una%20igual?";
+
+  return (
+    <footer className="relative pt-32 pb-10 px-6 bg-transparent overflow-hidden font-sans z-20">
+      
+      {/* --- INTEGRACIÓN DE FONDO --- */}
+      <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-[#02040a] via-[#02040a]/80 to-transparent -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
+
+      {/* Grilla técnica Blueprint sutil */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+           style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         
-        {/* --- GRID PRINCIPAL --- */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 lg:gap-8 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 mb-24 items-start">
           
-          {/* 1. BRANDING & STATUS MONITOR */}
-          <div className="md:col-span-4 space-y-8">
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-cyan-500/10 rounded-xl border border-cyan-500/30">
-                  <Zap size={24} className="text-cyan-400 fill-cyan-400/20" />
+          {/* 1. BRANDING & CONTACTO CORPORATIVO */}
+          <div className="lg:col-span-4 space-y-8">
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-cyan-500/10 rounded-2xl border border-cyan-500/30 shadow-[0_0_30px_rgba(34,211,238,0.2)]">
+                  <Zap size={28} className="text-cyan-400 fill-cyan-400/20" />
                 </div>
-                <span className="text-2xl font-black italic tracking-tighter text-white uppercase">
-                  Optexa
+                <span className="text-3xl font-black italic tracking-tighter text-white uppercase">
+                  Optexa<span className="text-cyan-500">_</span>
                 </span>
               </div>
-              <p className="text-gray-400 leading-relaxed text-sm max-w-xs font-light">
-                Ingeniería robótica y software ASRS de alta precisión. Automatizando el ecosistema industrial desde los Andes.
+              
+              <p className="text-slate-300 text-sm leading-relaxed max-w-sm font-medium italic border-l-2 border-cyan-500/30 pl-6">
+                Ingeniería híbrida de alta precisión. Sincronizando el ecosistema industrial desde Mendoza para el mercado global.
               </p>
-            </div>
-            
-            {/* Indicador de Estado de Red */}
-            <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 w-fit backdrop-blur-sm">
-               <div className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-               </div>
-               <div className="flex flex-col">
-                  <span className="text-[10px] font-mono text-white/40 uppercase tracking-widest">Estado del Sistema</span>
-                  <span className="text-xs font-mono text-emerald-400 font-bold uppercase tracking-tighter italic leading-none">Global_Stable_v3.5.0</span>
-               </div>
-            </div>
-          </div>
 
-          {/* 2. ÁREAS DE DESPLIEGUE */}
-          <div className="md:col-span-2">
-            <h4 className="font-black text-white/90 mb-8 uppercase tracking-[0.2em] text-[10px] flex items-center gap-2 italic">
-              <Cpu size={14} className="text-cyan-400"/> Áreas_ID
-            </h4>
-            <ul className="space-y-4">
-              <FooterLink href="#servicios">Almacenes ASRS</FooterLink>
-              <FooterLink href="#servicios">Robótica de Servicio</FooterLink>
-              <FooterLink href="#software">Core Software</FooterLink>
-              <FooterLink href="#nosotros">Ingeniería Colectiva</FooterLink>
-            </ul>
-          </div>
-
-          {/* 3. DOCUMENTACIÓN / SISTEMA */}
-          <div className="md:col-span-2">
-            <h4 className="font-black text-white/90 mb-8 uppercase tracking-[0.2em] text-[10px] flex items-center gap-2 italic">
-               <Terminal size={14} className="text-cyan-400"/> Sistema
-            </h4>
-            <ul className="space-y-4">
-              <FooterLink href="#">Whitepapers</FooterLink>
-              <FooterLink href="#">Privacidad</FooterLink>
-              <FooterLink href="#">SLA Industrial</FooterLink>
-              <FooterLink href="#">Protocolos</FooterLink>
-            </ul>
-          </div>
-
-          {/* 4. NEWSLETTER / UPLINK ENLACE */}
-          <div className="md:col-span-4">
-            <h4 className="font-black text-white/90 mb-8 uppercase tracking-[0.2em] text-[10px] italic">
-              Establecer_Enlace
-            </h4>
-            
-            <div className="relative mb-10 group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-              <div className="relative flex">
-                <input 
-                  type="email" 
-                  placeholder="ingrese_acceso_email..." 
-                  className="w-full bg-black/50 border border-white/10 rounded-l-xl py-4 px-5 text-white placeholder:text-gray-700 focus:outline-none focus:border-cyan-500/50 transition-all font-mono text-sm"
-                />
-                <button className="bg-white hover:bg-cyan-400 text-black px-6 rounded-r-xl transition-all flex items-center justify-center border-l border-black">
-                  <ArrowRight size={20} />
-                </button>
+              <div className="space-y-4">
+                 <h4 className="text-[10px] font-black text-cyan-500/50 uppercase tracking-[0.3em]">Canal_Ventas</h4>
+                 <a href={companyGmailLink} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-slate-200 hover:text-cyan-400 transition-colors">
+                    <div className="p-2 rounded-lg bg-white/5 border border-white/10 group-hover:border-cyan-500/50 transition-all">
+                        <Mail size={16} className="text-cyan-400" />
+                    </div>
+                    <span className="font-mono text-sm tracking-tighter italic">optexamza@gmail.com</span>
+                 </a>
               </div>
             </div>
-
+            
             <div className="flex gap-4">
-              <SocialButton href="#" icon={Linkedin} />
-              <SocialButton href="#" icon={Instagram} />
-              <SocialButton href="#" icon={Twitter} />
-              <SocialButton href="#" icon={Github} />
+              {[Linkedin, Instagram].map((Icon, i) => (
+                <a key={i} href="#" className="p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/50 transition-all backdrop-blur-md">
+                  <Icon size={20} />
+                </a>
+              ))}
             </div>
           </div>
+
+          {/* 2. SISTEMAS // ID */}
+          <div className="lg:col-span-3 space-y-8 lg:pl-12">
+            <div className="flex items-center gap-3 text-cyan-400">
+               <Cpu size={16} />
+               <h4 className="text-xs font-mono font-black uppercase tracking-[0.4em]">Sistemas // ID</h4>
+            </div>
+            <ul className="space-y-5">
+              <NavLink href="#servicios">Almacenes_ASRS</NavLink>
+              <NavLink href="#showcase">Robótica_AMR</NavLink>
+              <NavLink href="#proceso">Ecosistema_IA</NavLink>
+              <NavLink href="#nosotros">Ingeniería_Labs</NavLink>
+            </ul>
+          </div>
+
+          {/* 3. NODO MENDOZA */}
+          <div className="lg:col-span-5">
+             <div className="p-8 rounded-[2.5rem] bg-cyan-950/10 backdrop-blur-2xl border border-cyan-500/20 relative overflow-hidden group shadow-2xl h-full flex flex-col justify-between italic text-white">
+                
+                <div className="space-y-1 mb-10">
+                    <h3 className="text-5xl font-black text-white tracking-tighter uppercase leading-none">
+                        Mendoza<span className="text-cyan-500 text-2xl">.AR</span>
+                    </h3>
+                </div>
+                
+                <a href="#contacto" className="group/btn w-full flex items-center justify-center gap-4 px-6 py-5 bg-cyan-500 text-black font-black uppercase tracking-[0.2em] text-[11px] rounded-xl hover:bg-white transition-all duration-700 shadow-[0_10px_30px_rgba(34,211,238,0.2)] mt-auto">
+                   Solicitar Cotización
+                   <ArrowRight size={16} className="group-hover/btn:translate-x-2 transition-transform" />
+                </a>
+             </div>
+          </div>
+
         </div>
 
-        {/* --- BARRA INFERIOR: METADATA TÉCNICA --- */}
-        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        {/* --- BARRA DE FIRMA TÉCNICA (CRÉDITOS) --- */}
+        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           
-          <div className="flex flex-col md:flex-row items-center gap-4 text-[10px] font-mono text-gray-600">
+          <div className="flex items-center gap-6 text-[10px] font-mono font-black text-slate-400 uppercase tracking-widest">
             <span className="flex items-center gap-2">
-               <ShieldCheck size={12} className="text-cyan-500/50" />
-               © 2026 OPTEXA SOLUTIONS S.A.
+              <ShieldCheck size={14} className="text-cyan-900" />
+              © {currentYear} OPTEXA SOLUTIONS S.A.
             </span>
-            <div className="hidden md:block w-1 h-1 rounded-full bg-white/10" />
-            <span className="uppercase tracking-widest italic">Mendoza, Argentina</span>
           </div>
 
-          <div className="flex items-center gap-8">
-            <div className="flex flex-col items-end gap-1 group">
-               <div className="flex items-center gap-2 text-[10px] font-mono text-cyan-400/70 group-hover:text-cyan-400 transition-colors">
-                  <MapPin size={12} />
-                  <span className="tracking-tighter uppercase italic">MENDOZA_NODE_01</span>
+          <div className="flex items-center gap-12">
+            {/* FIRMA VINCENZO */}
+            <div className="flex flex-col items-end gap-2 group cursor-pointer">
+               <div className="flex items-center gap-3">
+                  <div className="h-[1px] w-8 bg-cyan-900 group-hover:w-12 group-hover:bg-cyan-400 transition-all" />
+                  <span className="text-[10px] font-black text-cyan-500 uppercase tracking-widest italic group-hover:text-cyan-400 transition-colors">
+                    Ingeniería Web // Vincenzo Dallapé
+                  </span>
                </div>
-               <span className="text-[9px] font-mono text-gray-700 tracking-tighter italic">COORDS: -32.889, -68.845</span>
+               <a href={personalGmailLink} target="_blank" rel="noopener noreferrer" className="text-[11px] font-bold text-slate-300 hover:text-white transition-colors flex items-center gap-2 font-mono">
+                  <Terminal size={12} className="text-cyan-600" /> vichendallape@gmail.com
+               </a>
             </div>
-            
-            <div className="flex flex-col items-end gap-1">
-               <div className="flex items-center gap-2 text-[10px] font-mono text-white/20">
-                  <Globe size={12} />
-                  <span className="tracking-tighter">TIMEZONE: GMT-3</span>
-               </div>
-               <span className="text-[9px] font-mono text-cyan-500/30 uppercase font-black italic tracking-[0.2em]">Stable_Link</span>
+
+            <div className="hidden md:block w-[1px] h-10 bg-white/5" />
+
+            {/* INDUSTRIAL LEAD */}
+            <div className="text-right">
+               <span className="text-[9px] font-mono text-slate-500 uppercase tracking-widest block mb-1">Industrial_Lead</span>
+               <span className="text-[11px] font-black text-slate-200 italic uppercase tracking-tighter">
+                  Anuk Vilarasau
+               </span>
             </div>
           </div>
 
