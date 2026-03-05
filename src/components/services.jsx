@@ -13,7 +13,7 @@ const services = [
     description: "Sistema de transelevadores de doble profundidad. Eliminamos los pasillos de maniobra para utilizar la altura total de la nave industrial hasta 40 metros. Integra sistemas KERS para eficiencia energética.",
     pain: "COSTOS FIJOS ELEVADOS Y LÍMITE DE ALTURA.",
     gain: "OPERACIÓN 'LIGHTS-OUT'. DENSIDAD +400%.",
-    alt: "Sistema de almacenamiento automatizado ASRS Optexa en Mendoza",
+    alt: "Sistema de almacenamiento automatizado ASRS STOKKA en Mendoza",
     specs: [
       { label: "Altura", val: "45m" },
       { label: "Carga", val: "1.5T" },
@@ -46,12 +46,12 @@ const services = [
   },
   {
     id: "03",
-    title: "OPTEXA LABS",
+    title: "STOKKA LABS",
     subtitle: "INGENIERÍA & CONSULTORÍA",
     description: "Análisis dimensional y auditoría técnica in-situ. Estudiamos flujos logísticos y calculamos picos de demanda para diseñar el layout exacto de tu próxima planta automatizada.",
     pain: "INVERSIONES A CIEGAS Y SOBREDIMENSIONAMIENTO.",
     gain: "AUDITORÍA TÉCNICA Y DIMENSIONAMIENTO EXACTO.",
-    alt: "Consultoría de ingeniería industrial y simulación de flujos Optexa",
+    alt: "Consultoría de ingeniería industrial y simulación de flujos STOKKA",
     specs: [
       { label: "Método", val: "Flujos" },
       { label: "Entrega", val: "CAD 3D" },
@@ -81,7 +81,7 @@ export const Services = () => {
           "serviceType": "Automatización Industrial",
           "provider": {
             "@type": "LocalBusiness",
-            "name": "Optexa"
+            "name": "STOKKA"
           },
           "hasOfferCatalog": {
             "@type": "OfferCatalog",

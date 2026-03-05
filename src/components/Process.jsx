@@ -72,7 +72,7 @@ export const Process = () => {
   return (
     <section 
       id="proceso" 
-      aria-label="Metodología de trabajo de Optexa"
+      aria-label="Metodología de trabajo de STOKKA"
       className="py-32 px-4 relative z-10 overflow-hidden bg-transparent"
     >
       {/* --- SCHEMA.ORG (JSON-LD) --- */}
@@ -81,7 +81,7 @@ export const Process = () => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "HowTo",
-          "name": "Proceso de Automatización Industrial Optexa",
+          "name": "Proceso de Automatización Industrial STOKKA",
           "description": "Metodología de 4 fases para la implementación de robótica y sistemas ASRS.",
           "step": steps.map(s => ({
             "@type": "HowToStep",
@@ -219,7 +219,7 @@ export const Process = () => {
                     <div className="flex items-center gap-3">
                         <div className={`flex items-center gap-2 px-3 py-1 rounded-full bg-${activeColor}-500/10 border border-${activeColor}-500/30`}>
                             <Terminal size={14} className={`text-${activeColor}-400`} />
-                            <span className="text-[10px] font-mono text-white uppercase tracking-widest font-bold">Optexa_Core // Live_Data_Stream</span>
+                            <span className="text-[10px] font-mono text-white uppercase tracking-widest font-bold">STOKKA-CORE // Live_Data_Stream</span>
                         </div>
                     </div>
                     <div className="flex items-center gap-2">

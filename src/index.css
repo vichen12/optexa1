@@ -2,58 +2,83 @@
 
 @theme {
   /* --- PALETA DE COLORES EXACTA (Tu Logo) --- */
-  --color-optexa-dark: #092a53;  /* Azul Profundo */
-  --color-optexa-main: #1e3a8a;  
-  --color-optexa-cyan: #22d3ee;  /* Cian para energía/tech */
-  --color-optexa-white: #ffffff;
-  
+  --color-stokka-dark: #092a53; /* Azul Profundo */
+  --color-stokka-main: #1e3a8a;
+  --color-stokka-cyan: #22d3ee; /* Cian para energía/tech */
+  --color-stokka-white: #ffffff;
+
   /* --- ANIMACIONES --- */
   --animate-blob: blob 15s infinite alternate;
   --animate-float: float 6s ease-in-out infinite;
   --animate-shimmer: shimmer 2s linear infinite;
-  
+
   /* Animaciones para el Carrusel de Empresas */
   --animate-scroll: scroll 20s linear infinite;
   --animate-scroll-reverse: scroll-reverse 20s linear infinite;
 
   @keyframes blob {
-    0% { transform: translate(0px, 0px) scale(1); }
-    33% { transform: translate(30px, -50px) scale(1.1); }
-    66% { transform: translate(-20px, 20px) scale(0.9); }
-    100% { transform: translate(0px, 0px) scale(1); }
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
 
   @keyframes shimmer {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(100%); }
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
   }
 
   /* Keyframes para el scroll infinito (Izquierda) */
   @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   /* Keyframes para el scroll infinito invertido (Derecha) */
   @keyframes scroll-reverse {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   overflow-x: hidden;
   /* El color de fondo base por si falla la imagen */
-  background-color: var(--color-optexa-white);
+  background-color: var(--color-stokka-white);
   /* Color de texto base oscuro (para que se lea arriba en lo blanco) */
-  color: var(--color-optexa-dark);
+  color: var(--color-stokka-dark);
 }
 
 /* --- CLASE MÁGICA: FONDO BLANCO -> AZUL --- */
@@ -82,7 +107,7 @@ body {
   left: 10%;
   width: 30vw;
   height: 30vw;
-  background: var(--color-optexa-cyan);
+  background: var(--color-stokka-cyan);
   opacity: 0.15; /* Sutil */
 }
 
@@ -91,28 +116,28 @@ body {
   right: 10%;
   width: 40vw;
   height: 40vw;
-  background: var(--color-optexa-main);
+  background: var(--color-stokka-main);
   opacity: 0.3;
   animation-delay: 2s;
 }
 
 /* Selección de texto en cian */
 ::selection {
-  background-color: var(--color-optexa-cyan);
+  background-color: var(--color-stokka-cyan);
   color: white;
 }
 html {
   scroll-behavior: smooth;
 }
 
-/* --- SCROLLBAR HYPER-TECH OPTEXA (ADN RUTAS DEL SUR) --- */
+/* --- SCROLLBAR HYPER-TECH STOKKA (ADN RUTAS DEL SUR) --- */
 
 .stroke-text {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
 }
 
-.stroke-white { 
-  -webkit-text-stroke: 1px white; 
+.stroke-white {
+  -webkit-text-stroke: 1px white;
 }
 
 /* 1. Riel principal */
@@ -124,10 +149,11 @@ html {
 /* 2. La línea blanca que sigue toda la pantalla (Efecto Rutas del Sur) */
 ::-webkit-scrollbar-track {
   background: transparent;
-  background-image: linear-gradient(to right, 
-    transparent 49%, 
-    rgba(255, 255, 255, 0.15) 49%, 
-    rgba(255, 255, 255, 0.15) 51%, 
+  background-image: linear-gradient(
+    to right,
+    transparent 49%,
+    rgba(255, 255, 255, 0.15) 49%,
+    rgba(255, 255, 255, 0.15) 51%,
     transparent 51%
   );
   border-left: 1px solid rgba(255, 255, 255, 0.02);
@@ -135,27 +161,28 @@ html {
 
 /* 3. El Láser de Precisión (Thumb) */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, 
-    transparent, 
-    #22d3ee, 
-    #ffffff, 
-    #22d3ee, 
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #22d3ee,
+    #ffffff,
+    #22d3ee,
     transparent
   );
   border-radius: 100px;
-  
+
   /* Resplandor técnico */
-  box-shadow: 
+  box-shadow:
     -2px 0 15px rgba(34, 211, 238, 0.5),
     -5px 0 30px rgba(34, 211, 238, 0.2);
-    
+
   transition: all 0.3s ease-in-out;
 }
 
 /* 4. Sobrecarga al tocar el sistema */
 ::-webkit-scrollbar-thumb:hover {
   background: #ffffff;
-  box-shadow: 
+  box-shadow:
     -2px 0 25px rgba(255, 255, 255, 0.8),
     -10px 0 50px rgba(34, 211, 238, 0.6);
 }

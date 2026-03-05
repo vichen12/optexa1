@@ -20,7 +20,7 @@ const founders = [
     role: "Ingeniería en Sistemas",
     status: "5to Año - UTN",
     specialty: "Arquitectura de Software & IoT",
-    bio: "Desarrollador Full Stack apasionado por la ciberseguridad y la domótica. Encargado de la inteligencia digital y la conectividad del ecosistema Optexa.",
+    bio: "Desarrollador Full Stack apasionado por la ciberseguridad y la domótica. Encargado de la inteligencia digital y la conectividad del ecosistema STOKKA.",
     image: "/vincenzo.png",
     color: "cyan",
     icon: Code2,
@@ -49,7 +49,7 @@ export const About = () => {
            <h2 className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none drop-shadow-[0_5px_10px_rgba(0,0,0,1)]">
             EL NÚCLEO <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-emerald-400 animate-gradient-x font-outline-2">
-              DE OPTEXA
+              DE STOKKA
             </span>
           </h2>
         </div>

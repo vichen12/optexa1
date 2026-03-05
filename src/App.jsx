@@ -15,7 +15,7 @@ import { ScrollTracker } from './components/ScrollTracker';
 function App() {
   
   useEffect(() => {
-    const originalTitle = "Optexa | Ingeniería Robótica";
+    const originalTitle = "STOKKA | Ingeniería Robótica";
     
     const handleVisibilityChange = () => {
       document.title = document.visibilityState === 'hidden' 

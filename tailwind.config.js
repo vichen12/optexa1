@@ -1,17 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        'optexa-dark': '#092a53',
-        'optexa-cyan': '#22d3ee',
-        'optexa-main': '#06b6d4',
-      }
+        "stokka-dark": "#092a53",
+        "stokka-cyan": "#22d3ee",
+        "stokka-main": "#06b6d4",
+      },
     },
   },
   plugins: [],
-}
+};
