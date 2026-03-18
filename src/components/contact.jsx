@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Globe, Clock, Building2, User, MessageSquare, Send, Loader2 } from 'lucide-react';
+import { Mail, Globe, Clock, Building2, User, MessageSquare, Send, Loader2, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
 export const Contact = () => {
@@ -18,12 +18,16 @@ export const Contact = () => {
       name: e.target.name.value,
       company: e.target.company.value,
       email: e.target.email.value,
+      phone: e.target.phone.value,
+      country: e.target.country.value,
+      province: e.target.province.value,
       message: e.target.message.value,
     };
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbzNqYHsdO8efyG19WOlLwW0R-SanfNZ-XXfsx1E61a5LKRexdXzEFO64Xse98kdXsmpxA/exec', {
-        method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+      await fetch('https://script.google.com/macros/s/AKfycbyrZ3qHI2SwTu0BslxrUEmLjK_M1lujE95EZxApSfH2DHhmVwAHsc4vj8ntxskrEYO7Lw/exec', {
+        method: 'POST', mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString(),
       });
       setTimeout(() => { setStatus('ok'); setSending(false); e.target.reset(); }, 1400);
     } catch { setStatus('err'); setSending(false); }
@@ -60,7 +64,7 @@ export const Contact = () => {
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <Mail size={14} className="text-cyan-400 shrink-0" />
-                  <span className="text-white/60 font-mono text-xs">stokkamza@gmail.com</span>
+                  <span className="text-white/60 font-mono text-xs">stokamza.consultas@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <Clock size={14} className="text-cyan-400 shrink-0" />
@@ -114,19 +118,67 @@ export const Contact = () => {
                 </div>
               </div>
 
-              {/* Email */}
-              <div>
-                <label className={`text-[11px] font-bold uppercase tracking-wider block mb-2 transition-colors ${focused === 'email' ? 'text-purple-400' : 'text-white/40'}`}>
-                  {c.fieldEmail}
-                </label>
-                <div className="relative">
-                  <Mail size={14} className={`absolute left-3 top-1/2 -translate-y-1/2 transition-colors ${focused === 'email' ? 'text-purple-400' : 'text-white/20'}`} />
-                  <input
-                    name="email" type="email" required
-                    onFocus={() => setFocused('email')} onBlur={() => setFocused(null)}
-                    placeholder={c.placeholderEmail}
-                    className="w-full bg-white/4 border border-white/8 rounded-xl pl-9 pr-4 py-3 text-white text-sm placeholder:text-white/15 focus:outline-none focus:border-purple-500/50 transition-all"
-                  />
+              {/* Email + Teléfono */}
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className={`text-[11px] font-bold uppercase tracking-wider block mb-2 transition-colors ${focused === 'email' ? 'text-purple-400' : 'text-white/40'}`}>
+                    {c.fieldEmail}
+                  </label>
+                  <div className="relative">
+                    <Mail size={14} className={`absolute left-3 top-1/2 -translate-y-1/2 transition-colors ${focused === 'email' ? 'text-purple-400' : 'text-white/20'}`} />
+                    <input
+                      name="email" type="email" required
+                      onFocus={() => setFocused('email')} onBlur={() => setFocused(null)}
+                      placeholder={c.placeholderEmail}
+                      className="w-full bg-white/4 border border-white/8 rounded-xl pl-9 pr-4 py-3 text-white text-sm placeholder:text-white/15 focus:outline-none focus:border-purple-500/50 transition-all"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className={`text-[11px] font-bold uppercase tracking-wider block mb-2 transition-colors ${focused === 'phone' ? 'text-emerald-400' : 'text-white/40'}`}>
+                    {c.fieldPhone}
+                  </label>
+                  <div className="relative">
+                    <Phone size={14} className={`absolute left-3 top-1/2 -translate-y-1/2 transition-colors ${focused === 'phone' ? 'text-emerald-400' : 'text-white/20'}`} />
+                    <input
+                      name="phone" type="tel"
+                      onFocus={() => setFocused('phone')} onBlur={() => setFocused(null)}
+                      placeholder={c.placeholderPhone}
+                      className="w-full bg-white/4 border border-white/8 rounded-xl pl-9 pr-4 py-3 text-white text-sm placeholder:text-white/15 focus:outline-none focus:border-emerald-500/50 transition-all"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* País + Provincia */}
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className={`text-[11px] font-bold uppercase tracking-wider block mb-2 transition-colors ${focused === 'country' ? 'text-amber-400' : 'text-white/40'}`}>
+                    {c.fieldCountry}
+                  </label>
+                  <div className="relative">
+                    <MapPin size={14} className={`absolute left-3 top-1/2 -translate-y-1/2 transition-colors ${focused === 'country' ? 'text-amber-400' : 'text-white/20'}`} />
+                    <input
+                      name="country" type="text"
+                      onFocus={() => setFocused('country')} onBlur={() => setFocused(null)}
+                      placeholder={c.placeholderCountry}
+                      className="w-full bg-white/4 border border-white/8 rounded-xl pl-9 pr-4 py-3 text-white text-sm placeholder:text-white/15 focus:outline-none focus:border-amber-500/50 transition-all"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className={`text-[11px] font-bold uppercase tracking-wider block mb-2 transition-colors ${focused === 'province' ? 'text-amber-400' : 'text-white/40'}`}>
+                    {c.fieldProvince}
+                  </label>
+                  <div className="relative">
+                    <MapPin size={14} className={`absolute left-3 top-1/2 -translate-y-1/2 transition-colors ${focused === 'province' ? 'text-amber-400' : 'text-white/20'}`} />
+                    <input
+                      name="province" type="text"
+                      onFocus={() => setFocused('province')} onBlur={() => setFocused(null)}
+                      placeholder={c.placeholderProvince}
+                      className="w-full bg-white/4 border border-white/8 rounded-xl pl-9 pr-4 py-3 text-white text-sm placeholder:text-white/15 focus:outline-none focus:border-amber-500/50 transition-all"
+                    />
+                  </div>
                 </div>
               </div>
 

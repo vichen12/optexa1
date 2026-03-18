@@ -6,7 +6,7 @@ export const Footer = () => {
   const { t } = useLanguage();
   const f = t.footer;
 
-  const gmailLink = 'https://mail.google.com/mail/?view=cm&fs=1&to=stokkamza@gmail.com&su=Consulta%20desde%20la%20web';
+  const gmailLink = 'https://mail.google.com/mail/?view=cm&fs=1&to=stokamza.consultas@gmail.com&su=Consulta%20desde%20la%20web';
   const devLink = 'https://mail.google.com/mail/?view=cm&fs=1&to=vichendallape@gmail.com&su=Propuesta%20Web';
 
   return (
@@ -36,7 +36,7 @@ export const Footer = () => {
             <p className="text-white/35 text-sm leading-relaxed">{f.tagline}</p>
             <a href={gmailLink} target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 text-white/50 hover:text-cyan-400 transition-colors text-sm font-mono">
-              <Mail size={14} />stokkamza@gmail.com
+              <Mail size={14} />stokamza.consultas@gmail.com
             </a>
             <div className="flex gap-3">
               {[Linkedin, Instagram].map((Icon, i) => (
