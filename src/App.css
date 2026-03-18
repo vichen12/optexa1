@@ -2,11 +2,11 @@
 
 @theme {
   /* --- TUS COLORES DE MARCA --- */
-  --color-stokka-dark: #092a53; /* Tu Azul Corporativo Profundo */
-  --color-stokka-main: #1e3a8a; /* Azul intermedio */
-  --color-stokka-light: #60a5fa; /* Azul claro para brillos */
-  --color-stokka-cyan: #22d3ee; /* Cian eléctrico para detalles tech */
-  --color-stokka-white: #ffffff; /* Blanco puro */
+  --color-stoka-dark: #092a53; /* Tu Azul Corporativo Profundo */
+  --color-stoka-main: #1e3a8a; /* Azul intermedio */
+  --color-stoka-light: #60a5fa; /* Azul claro para brillos */
+  --color-stoka-cyan: #22d3ee; /* Cian eléctrico para detalles tech */
+  --color-stoka-white: #ffffff; /* Blanco puro */
 
   /* --- ANIMACIONES --- */
   --animate-blob: blob 15s infinite alternate;
@@ -57,10 +57,10 @@ body {
     -apple-system,
     sans-serif;
   overflow-x: hidden;
-  background-color: var(--color-stokka-dark); /* Color de respaldo */
+  background-color: #070d1b; /* Color de respaldo */
 }
 
-/* --- FONDO MÁGICO: BLANCO ARRIBA -> AZUL ABAJO --- */
+/* --- FONDO: CIELO BRUMOSO BLANCO → NAVY --- */
 .fun-bg {
   position: fixed;
   top: 0;
@@ -68,45 +68,49 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: -50;
-  /* El gradiente que pediste: */
-  /* Empieza Blanco (#ffffff) hasta el 30%, luego baja suave a Azul (#092a53) */
-  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #092a53 100%);
+  background: linear-gradient(
+    to bottom,
+    #ffffff   0%,
+    #eaf4ff  15%,
+    #a8cbdf  40%,
+    #4a7fa0  60%,
+    #152d4a  80%,
+    #070d1b 100%
+  );
 }
 
-/* --- LUCES FLOTANTES (ORBS) --- */
-/* Estas luces le dan vida al fondo para que no sea plano */
-
+/* Orbs muy sutiles para no romper el gradiente limpio */
 .light-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px); /* Desenfoque alto para que parezca luz */
+  filter: blur(120px);
   z-index: -40;
-  animation: blob 10s infinite;
+  animation: blob 14s infinite;
 }
 
 .orb-1 {
-  top: 40%;
-  left: 10%;
-  width: 30vw;
-  height: 30vw;
-  background: var(--color-stokka-cyan);
-  opacity: 0.15; /* Muy sutil */
+  top: 30%;
+  left: 15%;
+  width: 35vw;
+  height: 35vw;
+  background: #7ec8e3;
+  opacity: 0.06;
 }
 
 .orb-2 {
-  bottom: 0%;
-  right: 0%;
-  width: 50vw;
-  height: 50vw;
-  background: var(--color-stokka-main);
-  opacity: 0.3;
-  animation-delay: -5s; /* Para que se mueva distinto */
+  bottom: 5%;
+  right: 5%;
+  width: 40vw;
+  height: 40vw;
+  background: #1a4a7a;
+  opacity: 0.12;
+  animation-delay: -7s;
 }
 
 /* --- UTILIDADES --- */
 ::selection {
-  background-color: var(--color-stokka-cyan);
-  color: var(--color-stokka-dark);
+  background-color: var(--color-stoka-cyan);
+  color: var(--color-stoka-dark);
 }
 /* --- SCROLLBAR OPTEXA: ADN RUTAS DEL SUR --- */
 
@@ -160,4 +164,14 @@ body {
     rgba(34, 211, 238, 0.3) 51%,
     transparent 51%
   );
+}
+
+/* Section title readability on any background */
+.section-title-dark {
+  color: #0f172a;
+  text-shadow: none;
+}
+.section-title-light {
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.5);
 }

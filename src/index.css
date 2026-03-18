@@ -2,10 +2,10 @@
 
 @theme {
   /* --- PALETA DE COLORES EXACTA (Tu Logo) --- */
-  --color-stokka-dark: #092a53; /* Azul Profundo */
-  --color-stokka-main: #1e3a8a;
-  --color-stokka-cyan: #22d3ee; /* Cian para energía/tech */
-  --color-stokka-white: #ffffff;
+  --color-stoka-dark: #092a53; /* Azul Profundo */
+  --color-stoka-main: #1e3a8a;
+  --color-stoka-cyan: #22d3ee; /* Cian para energía/tech */
+  --color-stoka-white: #ffffff;
 
   /* --- ANIMACIONES --- */
   --animate-blob: blob 15s infinite alternate;
@@ -76,9 +76,9 @@ body {
   font-family: "Inter", system-ui, sans-serif;
   overflow-x: hidden;
   /* El color de fondo base por si falla la imagen */
-  background-color: var(--color-stokka-white);
+  background-color: var(--color-stoka-white);
   /* Color de texto base oscuro (para que se lea arriba en lo blanco) */
-  color: var(--color-stokka-dark);
+  color: var(--color-stoka-dark);
 }
 
 /* --- CLASE MÁGICA: FONDO BLANCO -> AZUL --- */
@@ -107,7 +107,7 @@ body {
   left: 10%;
   width: 30vw;
   height: 30vw;
-  background: var(--color-stokka-cyan);
+  background: var(--color-stoka-cyan);
   opacity: 0.15; /* Sutil */
 }
 
@@ -116,21 +116,21 @@ body {
   right: 10%;
   width: 40vw;
   height: 40vw;
-  background: var(--color-stokka-main);
+  background: var(--color-stoka-main);
   opacity: 0.3;
   animation-delay: 2s;
 }
 
 /* Selección de texto en cian */
 ::selection {
-  background-color: var(--color-stokka-cyan);
+  background-color: var(--color-stoka-cyan);
   color: white;
 }
 html {
   scroll-behavior: smooth;
 }
 
-/* --- SCROLLBAR HYPER-TECH STOKKA (ADN RUTAS DEL SUR) --- */
+/* --- SCROLLBAR HYPER-TECH STOKA (ADN RUTAS DEL SUR) --- */
 
 .stroke-text {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);

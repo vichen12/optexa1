@@ -92,7 +92,7 @@ export const Showcase = () => {
       {
         "@type": "Product",
         "position": 3,
-        "name": "STOKKA Core",
+        "name": "STOKA Core",
         "description": "Software de control de flotas mixtas mediante inteligencia artificial."
       }
     ]
@@ -101,7 +101,7 @@ export const Showcase = () => {
   return (
     <section 
       id="showcase" 
-      aria-label="Catálogo de Tecnología STOKKA"
+      aria-label="Catálogo de Tecnología STOKA"
       className="py-24 px-6 relative z-10 bg-transparent"
     >
       {/* Inyección de Schema invisible para Google */}
@@ -124,7 +124,7 @@ export const Showcase = () => {
             </h2>
             <p className="text-gray-400 text-lg font-medium">
                 Unidades robustas diseñadas en Argentina para entornos industriales exigentes. 
-                Sincronización total con el ecosistema digital STOKKA.
+                Sincronización total con el ecosistema digital STOKA.
             </p>
         </header>
 
@@ -153,7 +153,7 @@ export const Showcase = () => {
 
             <TechCard 
               index="3"
-              title="STOKKA Core" 
+              title="STOKA Core" 
               subtitle="Inteligencia central: Gestión de flotas, optimización de rutas mediante IA y predicción de fallos."
               seoDesc="Software de control logístico y redes neurales"
               icon={Cpu}

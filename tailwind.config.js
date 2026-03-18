@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        "stokka-dark": "#092a53",
-        "stokka-cyan": "#22d3ee",
-        "stokka-main": "#06b6d4",
+        "stoka-dark": "#092a53",
+        "stoka-cyan": "#22d3ee",
+        "stoka-main": "#06b6d4",
       },
     },
   },
