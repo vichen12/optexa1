@@ -1,93 +1,94 @@
 import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { LanguageProvider } from './lib/i18n';
 import { Navbar } from './components/Navbar';
-import { TrustedBy } from './components/TrustedBy';
-import { Process } from './components/Process';
 import { Footer } from './components/Footer';
-import { Portfolio } from './components/Portfolio';
-import { SystemTypes } from './components/SystemTypes';
 import { Hero } from './components/hero';
 import { Contact } from './components/contact';
-import { About } from './components/about';
 import { WppFloat } from './components/WppFloat';
-import { LangFloat } from './components/LangFloat';
-import { ImpactStats } from './components/ImpactStats';
-import { ScrollTracker } from './components/ScrollTracker';
+import { CatalogPreview } from './components/CatalogPreview';
+import { PropuestaDeValor } from './components/PropuestaDeValor';
+import { IndustriasPreview } from './components/IndustriasPreview';
+import { ROISection } from './components/ROISection';
+import { BeneficiosBanner } from './components/BeneficiosBanner';
+import { Process } from './components/Process';
+import { CatalogPage } from './pages/CatalogPage';
+import { SolucionesPage } from './pages/SolucionesPage';
+import { NosotrosPage } from './pages/NosotrosPage';
+import { ComoTrabajamosPage } from './pages/ComoTrabajamosPage';
+import { BeneficiosFiscalesPage } from './pages/BeneficiosFiscalesPage';
+import { IndustriasPage } from './pages/IndustriasPage';
+import { IndustriaDetailPage } from './pages/IndustriaDetailPage';
 
-function App() {
-
+function HomePage() {
   useEffect(() => {
-    const originalTitle = "STOKA | Tecnología ASRS";
     const handleVisibilityChange = () => {
       document.title = document.visibilityState === 'hidden'
-        ? "¡Volvé! Te esperamos"
-        : originalTitle;
+        ? '¡Volvé! Te esperamos 👋'
+        : 'Optexa — Automatización de Almacenes DELIE en Argentina';
     };
     document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
   }, []);
 
   return (
-    <LanguageProvider>
-      <div className="min-h-screen relative text-white selection:bg-cyan-500 selection:text-white">
+    <div className="min-h-screen relative text-white selection:bg-cyan-400 selection:text-slate-900 bg-zinc-950">
+      <Navbar />
 
-        <div className="fun-bg">
-          <div className="light-orb orb-1"></div>
-          <div className="light-orb orb-2"></div>
-        </div>
+      <main className="relative z-10">
+        <section id="inicio">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+            <Hero />
+          </motion.div>
+        </section>
 
-        <Navbar />
-        <ScrollTracker />
+        <section id="propuesta">
+          <PropuestaDeValor />
+        </section>
 
-        <main className="relative z-10">
-          <section id="inicio">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-            >
-              <Hero />
-            </motion.div>
-          </section>
+        <section id="catalogo-preview">
+          <CatalogPreview />
+        </section>
 
-          {/* Todas las secciones post-hero */}
-          <div>
-            <section id="impacto">
-              <ImpactStats />
-            </section>
+        <section id="roi">
+          <ROISection />
+        </section>
 
-            <section id="soluciones">
-              <Portfolio />
-            </section>
+        <section id="beneficios">
+          <BeneficiosBanner />
+        </section>
 
-            <section id="tecnologia">
-              <SystemTypes />
-            </section>
+        <section id="proceso">
+          <Process />
+        </section>
 
-            <section id="proceso">
-              <Process />
-            </section>
+        <section id="industrias">
+          <IndustriasPreview />
+        </section>
 
-            <section id="equipo">
-              <About />
-            </section>
+        <section id="contacto">
+          <Contact />
+        </section>
+      </main>
 
-            <section id="trusted">
-              <TrustedBy />
-            </section>
+      <WppFloat />
+      <Footer />
+    </div>
+  );
+}
 
-            <section id="contacto">
-              <Contact />
-            </section>
-          </div>
-        </main>
-
-        <WppFloat />
-        <LangFloat />
-        <Footer />
-      </div>
-    </LanguageProvider>
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/catalogo" element={<CatalogPage />} />
+      <Route path="/soluciones" element={<SolucionesPage />} />
+      <Route path="/industrias" element={<IndustriasPage />} />
+      <Route path="/industrias/:slug" element={<IndustriaDetailPage />} />
+      <Route path="/beneficios-fiscales" element={<BeneficiosFiscalesPage />} />
+      <Route path="/como-trabajamos" element={<ComoTrabajamosPage />} />
+      <Route path="/nosotros" element={<NosotrosPage />} />
+    </Routes>
   );
 }
 

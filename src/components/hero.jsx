@@ -1,144 +1,129 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Play, X, Activity } from "lucide-react";
-import Typewriter from "typewriter-effect";
-import { useLanguage } from "../lib/i18n";
+import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
+const STATS = [
+  { value: "1.000+",   label: "Instalaciones ASRS globales" },
+  { value: "10+ años", label: "Experiencia DELIE" },
+  { value: "30–50%",   label: "Más económico que Europa" },
+  { value: "CE · ISO", label: "Certificación industrial" },
+];
 
 export const Hero = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { t } = useLanguage();
-  const h = t.hero;
+  const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "STOKA | Tecnología ASRS — Mendoza, Argentina";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content",
-        "Comercializamos e implementamos sistemas ASRS — tecnología de almacenamiento automatizado para operaciones industriales. Mendoza, Argentina."
-      );
-    }
+    document.title = "Optexa — Automatización de Almacenes DELIE en Argentina";
+    const m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", "Representantes oficiales exclusivos de DELIE en Argentina. Sistemas ASRS, robots y software WMS/WCS. 30–50% más económico que soluciones europeas.");
   }, []);
 
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex flex-col items-center justify-center bg-transparent pt-20 pb-0 overflow-hidden px-6"
+      className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-0 overflow-hidden px-6 bg-slate-900"
     >
-      {/* MAIN CONTENT */}
-      <div className="mt-20 max-w-4xl mx-auto relative z-10 w-full text-center flex flex-col items-center">
+      {/* VIDEO BG */}
+      <video
+        src="/bannervideo1.mp4"
+        autoPlay muted loop playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* Overlay oscuro — legibilidad del texto */}
+      <div className="absolute inset-0 bg-black/55" />
+      {/* Gradiente superior — navbar siempre legible */}
+      <div className="absolute top-0 left-0 right-0 h-28 bg-linear-to-b from-black/50 to-transparent pointer-events-none" />
+
+      {/* CONTENT */}
+      <div className="mt-16 max-w-5xl mx-auto relative z-10 w-full text-center flex flex-col items-center">
 
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-10 flex items-center gap-3 px-5 py-2 rounded-full border border-black/10 bg-black/5 backdrop-blur-sm"
+          className="mb-8 flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-400/40 bg-cyan-400/10 backdrop-blur-sm"
         >
-          <Activity size={12} className="text-stoka-cyan animate-pulse" />
-          <span className="text-[11px] font-mono tracking-[0.35em] text-black/60 font-bold uppercase">
-            {h.badge}
+          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+          <span className="text-[11px] font-mono tracking-[0.35em] text-cyan-300 font-bold uppercase">
+            Representación Oficial DELIE · Argentina
           </span>
         </motion.div>
 
-        {/* TÍTULO */}
+        {/* H1 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-6"
         >
-          <h1 className="text-6xl md:text-8xl lg:text-[108px] font-black italic leading-[0.9] tracking-tighter text-[#0f172a]">
-            {h.title1} <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-stoka-cyan to-blue-600">
-              {h.title2}
+          <h1 className="text-5xl md:text-7xl lg:text-[86px] font-black italic leading-[0.92] tracking-tighter text-white">
+            Automatización<br />
+            <span
+              className="text-transparent bg-clip-text"
+              style={{ backgroundImage: "linear-gradient(to right, #22d3ee, #60a5fa)" }}
+            >
+              de almacenes DELIE
             </span>
+            <br />en Argentina.
           </h1>
-
-          <div className="text-3xl md:text-4xl lg:text-5xl font-black italic text-slate-700 tracking-tighter mt-3 h-[1.2em]">
-            <Typewriter
-              options={{
-                strings: h.typewriter,
-                autoStart: true,
-                loop: true,
-                cursor: "_",
-              }}
-            />
-          </div>
         </motion.div>
 
-        {/* DESCRIPCIÓN */}
+        {/* Subheadline */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="text-lg md:text-xl text-slate-700/80 max-w-2xl mx-auto font-normal leading-relaxed mb-12"
-          dangerouslySetInnerHTML={{ __html: h.desc }}
-        />
+          className="text-lg md:text-xl text-white/75 max-w-2xl mx-auto font-light leading-relaxed mb-10"
+        >
+          Tecnología de clase mundial, precio accesible. Sistemas ASRS, robots y software
+          para empresas que necesitan operar mejor sin pagar precios europeos.
+        </motion.p>
 
-        {/* BOTONES */}
+        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.35 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
           <a
             href="#contacto"
-            className="group flex items-center gap-3 px-9 py-4 bg-slate-950 rounded-xl transition-all duration-300 hover:bg-slate-800 shadow-[0_4px_24px_rgba(0,0,0,0.3)] border border-white/10 hover:border-stoka-cyan/40"
+            className="group flex items-center gap-3 px-9 py-4 bg-cyan-500 rounded-xl transition-all duration-300 hover:bg-cyan-400 shadow-[0_4px_24px_rgba(6,182,212,0.4)]"
           >
-            <span className="text-white font-black uppercase tracking-[0.25em] text-[12px]">
-              {h.cta1}
+            <span className="text-white font-black uppercase tracking-[0.2em] text-[12px]">
+              Solicitar consulta técnica
             </span>
-            <ArrowRight size={14} className="text-stoka-cyan" />
+            <ArrowRight size={14} className="text-white group-hover:translate-x-0.5 transition-transform" />
           </a>
-
           <button
-            onClick={() => setIsOpen(true)}
-            className="group flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md border border-black/10 rounded-xl hover:border-stoka-cyan/40 transition-all duration-300"
+            onClick={() => navigate("/soluciones")}
+            className="group flex items-center gap-3 px-8 py-4 bg-white/10 border border-white/25 rounded-xl hover:bg-white/20 hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
           >
-            <div className="w-8 h-8 rounded-full bg-slate-950 flex items-center justify-center group-hover:bg-stoka-cyan transition-all duration-300 shrink-0">
-              <Play size={13} fill="currentColor" className="text-stoka-cyan group-hover:text-black transition-colors ml-0.5" />
-            </div>
-            <span className="text-[12px] font-black text-slate-900 uppercase tracking-[0.2em]">
-              {h.cta2}
+            <span className="text-[12px] font-black text-white uppercase tracking-[0.2em]">
+              Ver catálogo de soluciones
             </span>
+            <ChevronRight size={14} className="text-white/60 group-hover:text-white transition-colors" />
           </button>
         </motion.div>
 
+        {/* Stats bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="w-full max-w-3xl grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/15"
+        >
+          {STATS.map((s, i) => (
+            <div key={i} className="bg-white/8 backdrop-blur-sm px-5 py-4 text-center">
+              <p className="text-xl font-black text-cyan-300 leading-none mb-1">{s.value}</p>
+              <p className="text-[11px] text-white/55 leading-tight">{s.label}</p>
+            </div>
+          ))}
+        </motion.div>
       </div>
-
-      {/* VIDEO MODAL */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-slate-950/90 backdrop-blur-2xl"
-            onClick={() => setIsOpen(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.92 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.92 }}
-              className="relative w-full max-w-5xl aspect-video rounded-3xl overflow-hidden border border-white/10 bg-black shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                onClick={() => setIsOpen(false)}
-                className="absolute top-6 right-6 z-[110] w-10 h-10 flex items-center justify-center bg-black/60 text-white rounded-full hover:bg-stoka-cyan transition-all"
-              >
-                <X size={20} />
-              </button>
-              <video
-                src="/bannervideo1.mp4"
-                className="w-full h-full object-cover"
-                autoPlay muted loop playsInline
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };

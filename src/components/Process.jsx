@@ -1,154 +1,93 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Scan, FileText, Wrench, HeadphonesIcon } from 'lucide-react';
-import { cn } from '../lib/utils';
-import { useLanguage } from '../lib/i18n';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { Search, FileText, Cpu, Wrench, Rocket, HeadphonesIcon, ArrowRight } from 'lucide-react';
 
-const ICONS = [Scan, FileText, Wrench, HeadphonesIcon];
-const ACCENT = ['cyan', 'blue', 'emerald', 'violet'];
+const STEPS = [
+  { tag: '01', icon: Search,          title: 'Consulta inicial',      sub: 'Sin costo · 24 hs' },
+  { tag: '02', icon: FileText,        title: 'Diagnóstico técnico',   sub: 'Relevamiento in-situ' },
+  { tag: '03', icon: Cpu,             title: 'Diseño y propuesta',    sub: 'Selección + ROI' },
+  { tag: '04', icon: Wrench,          title: 'Instalación',           sub: 'Ingeniería + montaje' },
+  { tag: '05', icon: Rocket,          title: 'Puesta en marcha',      sub: 'Arranque asistido' },
+  { tag: '06', icon: HeadphonesIcon,  title: 'Soporte continuo',      sub: 'Posventa 24/7' },
+];
 
 export const Process = () => {
-  const [active, setActive] = useState(0);
-  const { t, lang } = useLanguage();
-  const p = t.process;
-
-  const steps = p.steps.map((s, i) => ({ ...s, icon: ICONS[i], accent: ACCENT[i] }));
+  const navigate = useNavigate();
 
   return (
-    <section
-      id="proceso"
-      className="py-28 px-6 relative z-10 bg-transparent"
-    >
+    <section id="proceso" className="py-24 px-6 bg-zinc-900 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
 
-        {/* HEADER */}
-        <div className="mb-16">
-          <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">{p.badge}</p>
-          <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none">
-            {p.title}{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-              {p.titleGrad}
-            </span>
-          </h2>
+        <div className="mb-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+          <div>
+            <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">Metodología de trabajo</p>
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none">
+              De la consulta al{' '}
+              <span
+                className="text-transparent bg-clip-text"
+                style={{ backgroundImage: 'linear-gradient(to right, #22d3ee, #60a5fa)' }}
+              >
+                arranque operativo
+              </span>
+            </h2>
+          </div>
+          <button
+            onClick={() => navigate('/como-trabajamos')}
+            className="flex items-center gap-2 text-sm text-white/40 hover:text-cyan-400 transition-colors group shrink-0"
+          >
+            Ver metodología completa
+            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+          </button>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8 items-start">
+        <div className="relative">
+          <div
+            className="hidden lg:block absolute z-0 bg-white/8"
+            style={{ top: '28px', left: 'calc(100% / 12)', right: 'calc(100% / 12)', height: '1px' }}
+          />
 
-          {/* LISTA DE PASOS — columna izquierda */}
-          <div className="lg:col-span-2 flex flex-col gap-2">
-            {steps.map((step, i) => {
-              const isActive = active === i;
-              return (
-                <button
-                  key={i}
-                  onClick={() => setActive(i)}
-                  className={cn(
-                    "w-full text-left flex items-center gap-4 px-5 py-4 rounded-xl border transition-all duration-250",
-                    isActive
-                      ? `bg-[#02040a]/90 border-${step.accent}-500/40 shadow-lg`
-                      : "bg-transparent border-white/5 hover:border-white/15 hover:bg-white/3"
-                  )}
-                >
-                  <div className={cn(
-                    "w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-250",
-                    isActive
-                      ? `bg-${step.accent}-500/15 text-${step.accent}-400`
-                      : "bg-white/5 text-white/30"
-                  )}>
-                    <step.icon size={18} />
-                  </div>
-                  <div className="text-left">
-                    <p className={cn(
-                      "text-[10px] font-bold uppercase tracking-widest mb-0.5",
-                      isActive ? `text-${step.accent}-400` : "text-white/25"
-                    )}>
-                      {String(i + 1).padStart(2, '0')} — {step.tag}
-                    </p>
-                    <p className={cn(
-                      "font-black uppercase tracking-tight text-sm",
-                      isActive ? "text-white" : "text-white/50"
-                    )}>
-                      {step.title}
-                    </p>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* DETALLE — columna derecha */}
-          <div className="lg:col-span-3">
-            <AnimatePresence mode="wait">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-4">
+            {STEPS.map((step, i) => (
               <motion.div
-                key={active}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.22 }}
-                className={`bg-[#02040a]/80 border border-${steps[active].accent}-500/20 rounded-3xl p-8 shadow-xl`}
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.35, delay: i * 0.08 }}
+                className="relative flex flex-col items-center text-center z-10"
               >
-                {/* Número de paso */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className={`flex items-center gap-3`}>
-                    <div className={`w-11 h-11 rounded-xl bg-${steps[active].accent}-500/10 border border-${steps[active].accent}-500/20 flex items-center justify-center text-${steps[active].accent}-400`}>
-                      {(() => { const Icon = steps[active].icon; return <Icon size={20} />; })()}
-                    </div>
-                    <div>
-                      <p className={`text-[10px] font-bold uppercase tracking-widest text-${steps[active].accent}-400`}>
-                        {lang === 'zh' ? `第${active + 1}步 / 共${steps.length}步` : lang === 'en' ? `Step ${active + 1} of ${steps.length}` : `Paso ${active + 1} de ${steps.length}`}
-                      </p>
-                      <h3 className="text-xl font-black text-white uppercase tracking-tight">
-                        {steps[active].title}
-                      </h3>
-                    </div>
-                  </div>
-                  <span className={`text-5xl font-black text-${steps[active].accent}-500/15 leading-none`}>
-                    0{active + 1}
+                <div className="relative w-14 h-14 rounded-2xl bg-zinc-950 border border-white/10 flex items-center justify-center mb-4">
+                  <step.icon size={20} className="text-cyan-400" />
+                  <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cyan-500 text-white text-[9px] font-black flex items-center justify-center leading-none">
+                    {step.tag}
                   </span>
                 </div>
-
-                <p className="text-white/65 leading-relaxed text-base mb-6 font-light">
-                  {steps[active].detail}
-                </p>
-
-                {/* Puntos clave */}
-                <div className="space-y-2.5 border-t border-white/5 pt-5">
-                  {steps[active].logs.map((log, idx) => (
-                    <div key={idx} className="flex items-center gap-3">
-                      <div className={`w-1.5 h-1.5 rounded-full bg-${steps[active].accent}-400 shrink-0`} />
-                      <p className="text-white/50 text-sm">{log.replace(/^>\s*/, '')}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Barra de progreso de pasos */}
-                <div className="mt-6 flex gap-1.5">
-                  {steps.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setActive(i)}
-                      className={cn(
-                        "flex-1 h-1 rounded-full transition-all duration-300",
-                        i === active ? `bg-${steps[active].accent}-400` : "bg-white/10"
-                      )}
-                    />
-                  ))}
-                </div>
+                <h3 className="text-white font-black text-xs uppercase tracking-tight leading-tight mb-1">
+                  {step.title}
+                </h3>
+                <p className="text-white/35 text-[10px] leading-tight">{step.sub}</p>
               </motion.div>
-            </AnimatePresence>
+            ))}
           </div>
-
         </div>
-      </div>
 
-      <style dangerouslySetInnerHTML={{ __html: `
-        :root {
-          --cyan-400: #22d3ee; --cyan-500: #06b6d4;
-          --blue-400: #60a5fa; --blue-500: #3b82f6;
-          --emerald-400: #34d399; --emerald-500: #10b981;
-          --violet-400: #a78bfa; --violet-500: #8b5cf6;
-        }
-      ` }} />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="mt-12 text-center"
+        >
+          <button
+            onClick={() => navigate('/como-trabajamos')}
+            className="inline-flex items-center gap-2 px-8 py-3 bg-zinc-950 border border-white/15 rounded-xl text-white/70 text-sm font-bold hover:border-cyan-400/50 hover:text-white transition-all"
+          >
+            Ver cada fase en detalle
+            <ArrowRight size={14} />
+          </button>
+        </motion.div>
+
+      </div>
     </section>
   );
 };
