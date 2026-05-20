@@ -132,17 +132,30 @@ export const Contact = () => {
             </a>
 
             {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/vincenzo-dallape/" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-3 px-4 py-3 bg-white border border-gray-200 rounded-xl hover:border-[#0A66C2]/40 transition-colors group"
-            >
-              <div className="w-7 h-7 rounded-lg bg-[#0A66C2] flex items-center justify-center shrink-0">
-                <Linkedin size={13} className="text-white" />
-              </div>
-              <div>
-                <p className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">LinkedIn</p>
-                <p className="text-gray-700 text-xs">Vincenzo Dallapé</p>
-              </div>
-            </a>
+            <div className="flex gap-2">
+              <a href="https://www.linkedin.com/in/anuk-vilarasau-9b138237b/" target="_blank" rel="noopener noreferrer"
+                className="flex-1 flex items-center gap-2.5 px-3 py-3 bg-white border border-gray-200 rounded-xl hover:border-[#0A66C2]/40 transition-colors"
+              >
+                <div className="w-7 h-7 rounded-lg bg-[#0A66C2] flex items-center justify-center shrink-0">
+                  <Linkedin size={13} className="text-white" />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">LinkedIn</p>
+                  <p className="text-gray-700 text-xs">Anuk V.</p>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/vincenzo-dallape/" target="_blank" rel="noopener noreferrer"
+                className="flex-1 flex items-center gap-2.5 px-3 py-3 bg-white border border-gray-200 rounded-xl hover:border-[#0A66C2]/40 transition-colors"
+              >
+                <div className="w-7 h-7 rounded-lg bg-[#0A66C2] flex items-center justify-center shrink-0">
+                  <Linkedin size={13} className="text-white" />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">LinkedIn</p>
+                  <p className="text-gray-700 text-xs">Vincenzo D.</p>
+                </div>
+              </a>
+            </div>
 
             <p className="text-gray-400 text-[11px] leading-relaxed px-1">
               Primera consulta técnica sin costo. Nuestros ingenieros analizan cada caso de forma personalizada.
