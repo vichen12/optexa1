@@ -180,7 +180,7 @@ export const NosotrosPage = () => {
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                    style={{ objectPosition: member.name === 'Anuk Vilarasau' ? 'center 10%' : 'center 20%' }}
+                    style={{ objectPosition: member.name === 'Anuk Vilarasau' ? 'center 60%' : 'center 20%' }}
                     onError={(e) => { e.currentTarget.style.display = 'none'; }}
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-slate-950/50 to-transparent" />
