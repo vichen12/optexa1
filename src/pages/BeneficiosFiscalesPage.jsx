@@ -5,7 +5,7 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { CTABanner } from '../components/CTABanner';
 import { WppFloat } from '../components/WppFloat';
-import { Shield, Percent, Building2, CheckCircle, ArrowRight, FileText, TrendingDown, Clock, DollarSign } from 'lucide-react';
+import { Shield, Percent, Building2, CheckCircle, ArrowRight, FileText } from 'lucide-react';
 
 const BENEFICIOS = [
   {
@@ -69,11 +69,6 @@ const BENEFICIOS = [
   },
 ];
 
-const KEY_NUMBERS = [
-  { icon: TrendingDown, value: '0%', label: 'Arancel importación equipos DELIE', sub: 'Decreto 513/2025' },
-  { icon: Clock, value: '30 años', label: 'Estabilidad fiscal garantizada', sub: 'RIGI — Ley 27.742' },
-  { icon: DollarSign, value: '80%', label: 'Financiamiento disponible', sub: 'Línea BICE' },
-];
 
 const FAQ = [
   { q: '¿Mi empresa puede acceder al RIGI?', a: 'El RIGI aplica a proyectos de inversión mayores a USD 200 millones. Para proyectos más pequeños, existen esquemas provinciales y municipales con beneficios similares. Consultanos por tu caso específico.' },
@@ -128,26 +123,7 @@ export const BeneficiosFiscalesPage = () => {
         </div>
       </div>
 
-      {/* ── KEY NUMBERS — bg: slate-900 ── */}
-      <section className="bg-slate-900 py-12 px-6 border-b border-white/5">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-          {KEY_NUMBERS.map((k, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-              className="flex items-start gap-4">
-              <div className="w-11 h-11 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center shrink-0">
-                <k.icon size={20} className="text-cyan-400" />
-              </div>
-              <div>
-                <p className="text-white text-3xl font-black italic leading-none mb-0.5">{k.value}</p>
-                <p className="text-gray-300 font-semibold text-sm">{k.label}</p>
-                <p className="text-gray-500 text-xs mt-0.5 font-mono">{k.sub}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── BENEFICIOS — alternando bg: white / gray-50 / white ── */}
+{/* ── BENEFICIOS — alternando bg: white / gray-50 / white ── */}
       {BENEFICIOS.map((b, i) => {
         const dark = i % 2 !== 0;
         return (
