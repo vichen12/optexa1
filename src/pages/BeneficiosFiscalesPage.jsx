@@ -1,129 +1,247 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { CTABanner } from '../components/CTABanner';
 import { WppFloat } from '../components/WppFloat';
-import { Shield, Percent, Building2, CheckCircle, ArrowRight, FileText } from 'lucide-react';
+import { Shield, Percent, Building2, CheckCircle, ArrowRight, FileText, TrendingDown, Clock, DollarSign } from 'lucide-react';
 
 const BENEFICIOS = [
   {
-    icon: Shield, tag: 'RIGI', subtitle: 'Ley 27.742 — Vigente',
+    num: '01',
+    icon: Shield,
+    tag: 'RIGI',
+    subtitle: 'Ley 27.742 — Vigente',
     title: 'Régimen de Incentivo para Grandes Inversiones',
     description: 'El RIGI establece un régimen unificado para grandes inversiones en Argentina que ofrece estabilidad fiscal, cambiaria y regulatoria a largo plazo. Los proyectos de automatización industrial que califiquen acceden a beneficios impositivos significativos.',
-    items: ['Estabilidad fiscal por 30 años desde la adhesión', 'Amortización acelerada de bienes de capital: 100% en el primer ejercicio', 'Deducción inmediata del IVA de las importaciones habilitadas', 'Libre disponibilidad de divisas a partir del tercer año', 'Tasa de Impuesto a las Ganancias reducida: 25% (vs. 35% general)', 'Exención del Impuesto a los Débitos y Créditos Bancarios'],
+    items: [
+      'Estabilidad fiscal por 30 años desde la adhesión',
+      'Amortización acelerada de bienes de capital: 100% en el primer ejercicio',
+      'Deducción inmediata del IVA de las importaciones habilitadas',
+      'Libre disponibilidad de divisas a partir del tercer año',
+      'Tasa de Impuesto a las Ganancias reducida: 25% (vs. 35% general)',
+      'Exención del Impuesto a los Débitos y Créditos Bancarios',
+    ],
+    accent: 'from-blue-50 to-white',
+    iconBg: 'bg-blue-50 border-blue-200',
+    iconColor: 'text-blue-500',
+    tagStyle: 'bg-blue-50 border-blue-200 text-blue-600',
   },
   {
-    icon: Percent, tag: 'Decreto 513/2025', subtitle: 'Decreto del Ejecutivo Nacional — 2025',
+    num: '02',
+    icon: Percent,
+    tag: 'Decreto 513/2025',
+    subtitle: 'Decreto del Ejecutivo Nacional — 2025',
     title: 'Importación de Equipos con Arancel 0%',
     description: 'El Decreto 513/2025 establece la eliminación de aranceles de importación para sistemas de automatización de almacenes y robótica industrial. Permite importar los equipos DELIE sin el costo adicional del arancel.',
-    items: ['Arancel 0% para posiciones arancelarias de robots industriales y ASRS', 'Aplicable a transelevadores, robots lanzadera, AMR y VLM', 'Transportadores, elevadores y sistemas de conveyors incluidos', 'Software WMS/WCS y hardware de control también beneficiado', 'Vigencia sujeta a revisión anual por el Ejecutivo'],
+    items: [
+      'Arancel 0% para posiciones arancelarias de robots industriales y ASRS',
+      'Aplicable a transelevadores, robots lanzadera, AMR y VLM',
+      'Transportadores, elevadores y sistemas de conveyors incluidos',
+      'Software WMS/WCS y hardware de control también beneficiado',
+      'Vigencia sujeta a revisión anual por el Ejecutivo',
+    ],
+    accent: 'from-cyan-50 to-white',
+    iconBg: 'bg-cyan-50 border-cyan-200',
+    iconColor: 'text-cyan-500',
+    tagStyle: 'bg-cyan-50 border-cyan-200 text-cyan-600',
   },
   {
-    icon: Building2, tag: 'Línea BICE', subtitle: 'Banco de Inversión y Comercio Exterior',
+    num: '03',
+    icon: Building2,
+    tag: 'Línea BICE',
+    subtitle: 'Banco de Inversión y Comercio Exterior',
     title: 'Financiamiento para Automatización Industrial',
     description: 'El BICE ofrece una línea específica para proyectos de modernización y automatización de procesos productivos y logísticos con condiciones preferenciales.',
-    items: ['Plazos de hasta 10 años para proyectos de automatización', 'Tasa de interés preferencial según perfil del proyecto', 'Financiamiento de hasta el 80% del valor total del proyecto', 'Período de gracia de hasta 2 años sobre el capital', 'Aplicable a empresas PYME y grandes empresas', 'Gestión a través de bancos comerciales adheridos'],
+    items: [
+      'Plazos de hasta 10 años para proyectos de automatización',
+      'Tasa de interés preferencial según perfil del proyecto',
+      'Financiamiento de hasta el 80% del valor total del proyecto',
+      'Período de gracia de hasta 2 años sobre el capital',
+      'Aplicable a empresas PYME y grandes empresas',
+      'Gestión a través de bancos comerciales adheridos',
+    ],
+    accent: 'from-emerald-50 to-white',
+    iconBg: 'bg-emerald-50 border-emerald-200',
+    iconColor: 'text-emerald-500',
+    tagStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
   },
+];
+
+const KEY_NUMBERS = [
+  { icon: TrendingDown, value: '0%', label: 'Arancel importación equipos DELIE', sub: 'Decreto 513/2025' },
+  { icon: Clock, value: '30 años', label: 'Estabilidad fiscal garantizada', sub: 'RIGI — Ley 27.742' },
+  { icon: DollarSign, value: '80%', label: 'Financiamiento disponible', sub: 'Línea BICE' },
 ];
 
 const FAQ = [
   { q: '¿Mi empresa puede acceder al RIGI?', a: 'El RIGI aplica a proyectos de inversión mayores a USD 200 millones. Para proyectos más pequeños, existen esquemas provinciales y municipales con beneficios similares. Consultanos por tu caso específico.' },
   { q: '¿El Decreto 513/2025 aplica a todos los equipos DELIE?', a: 'Aplica a las posiciones arancelarias específicas de robots industriales y sistemas automatizados de almacenamiento. La mayoría de los productos del catálogo DELIE están incluidos. Verificamos esto para cada proyecto.' },
-  { q: '¿Cómo accedo a la línea BICE?', a: 'A través de un banco comercial adherido (Banco Nación, Banco Provincia, entre otros). Optexa puede acompañarte en la elaboración del proyecto técnico requerido por el banco.' },
+  { q: '¿Cómo accedo a la línea BICE?', a: 'A través de un banco comercial adherido (Banco Nación, Banco Provincia, entre otros). STOKA puede acompañarte en la elaboración del proyecto técnico requerido por el banco.' },
   { q: '¿Se pueden combinar los beneficios?', a: 'Sí, en muchos casos es posible acceder simultáneamente a la importación con arancel 0% y al financiamiento BICE. La compatibilidad con el RIGI depende del perfil del proyecto.' },
 ];
 
 export const BeneficiosFiscalesPage = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
-    document.title = 'Beneficios Fiscales 2025 — RIGI, Decreto 513, BICE | Optexa Argentina';
+    document.title = 'Beneficios Fiscales 2025 — RIGI, Decreto 513, BICE | STOKA Argentina';
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
+    <div className="min-h-screen text-gray-900">
       <Navbar />
-      <main className="pt-28">
 
-        <section className="py-20 px-6 bg-zinc-950 border-t border-white/5">
-          <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-4">Marco normativo · Argentina 2025</p>
-              <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-6">
-                Invertí con el{' '}
-                <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, #22d3ee, #60a5fa)' }}>
-                  Estado a favor
+      {/* ── HERO — foto de fondo ── */}
+      <div className="relative mt-20 h-[50vh] min-h-[360px] flex items-end overflow-hidden">
+        <img
+          src="/bandera4-cropped.jpg"
+          alt="Beneficios fiscales Argentina"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-linear-to-r from-slate-950/95 via-slate-950/70 to-slate-950/20" />
+        <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-cyan-500" />
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-20">
+          <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut' }}>
+            <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.4em] mb-4">
+              Marco normativo · Argentina 2025
+            </p>
+            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black italic uppercase tracking-tighter leading-[1.05] mb-5">
+              Invertí con el<br />
+              <span className="text-cyan-400">Estado a favor</span>
+            </h1>
+            <p className="text-gray-300 text-base md:text-lg max-w-xl leading-relaxed mb-8">
+              El contexto normativo actual crea condiciones únicas para automatizar operaciones logísticas en Argentina: arancel cero, estabilidad fiscal y financiamiento preferencial.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {['RIGI — Ley 27.742', 'Decreto 513/2025', 'Línea BICE'].map((tag) => (
+                <span key={tag} className="text-xs font-bold text-cyan-400 bg-cyan-400/10 border border-cyan-400/20 px-4 py-1.5 rounded-full backdrop-blur-sm">
+                  {tag}
                 </span>
-              </h1>
-              <p className="text-white/60 text-xl max-w-3xl font-light leading-relaxed">
-                El contexto normativo actual crea condiciones únicas para automatizar operaciones logísticas en Argentina.
-              </p>
-            </motion.div>
-          </div>
-        </section>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </div>
 
-        <section className="py-8 px-6 bg-zinc-900 border-t border-white/5">
-          <div className="max-w-5xl mx-auto space-y-6">
-            {BENEFICIOS.map((b, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-zinc-950 border border-white/8 rounded-3xl p-8">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-5 mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center shrink-0">
-                    <b.icon size={22} className="text-cyan-400" />
+      {/* ── KEY NUMBERS — bg: slate-900 ── */}
+      <section className="bg-slate-900 py-12 px-6 border-b border-white/5">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+          {KEY_NUMBERS.map((k, i) => (
+            <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+              className="flex items-start gap-4">
+              <div className="w-11 h-11 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center shrink-0">
+                <k.icon size={20} className="text-cyan-400" />
+              </div>
+              <div>
+                <p className="text-white text-3xl font-black italic leading-none mb-0.5">{k.value}</p>
+                <p className="text-gray-300 font-semibold text-sm">{k.label}</p>
+                <p className="text-gray-500 text-xs mt-0.5 font-mono">{k.sub}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── BENEFICIOS — alternando bg: white / gray-50 / white ── */}
+      {BENEFICIOS.map((b, i) => {
+        const dark = i % 2 !== 0;
+        return (
+          <section key={i} className={`py-20 px-6 border-b ${dark ? 'bg-slate-900 border-white/5' : 'bg-white border-gray-100'}`}>
+            <div className="max-w-5xl mx-auto">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+                className="grid md:grid-cols-[1fr_2fr] gap-12 items-start">
+
+                {/* LEFT */}
+                <div className="flex flex-col gap-5">
+                  <span className={`text-[80px] font-black italic leading-none select-none ${dark ? 'text-white/10' : 'text-gray-100'}`}>
+                    {b.num}
+                  </span>
+                  <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center ${dark ? 'bg-white/10 border-white/20' : b.iconBg}`}>
+                    <b.icon size={26} className={dark ? 'text-cyan-400' : b.iconColor} />
                   </div>
                   <div>
-                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <span className="text-[11px] font-mono text-cyan-400 bg-cyan-400/10 border border-cyan-400/20 px-2.5 py-1 rounded-full">{b.tag}</span>
-                      <span className="text-[11px] text-white/35 font-mono">{b.subtitle}</span>
-                    </div>
-                    <h2 className="text-2xl font-black text-white uppercase tracking-tight">{b.title}</h2>
+                    <span className={`inline-block text-[11px] font-black uppercase tracking-[0.2em] border px-3 py-1 rounded-full ${dark ? 'bg-cyan-400/10 border-cyan-400/20 text-cyan-400' : b.tagStyle}`}>
+                      {b.tag}
+                    </span>
+                    <p className={`text-xs mt-2 font-mono ${dark ? 'text-gray-500' : 'text-gray-400'}`}>{b.subtitle}</p>
                   </div>
                 </div>
-                <p className="text-white/60 leading-relaxed mb-6">{b.description}</p>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {b.items.map((item, j) => (
-                    <div key={j} className="flex items-start gap-2.5">
-                      <CheckCircle size={14} className="text-cyan-400 mt-0.5 shrink-0" />
-                      <p className="text-white/60 text-sm leading-relaxed">{item}</p>
-                    </div>
-                  ))}
+
+                {/* RIGHT */}
+                <div>
+                  <h2 className={`text-2xl md:text-3xl font-black uppercase tracking-tighter leading-tight mb-5 ${dark ? 'text-white' : 'text-gray-900'}`}>
+                    {b.title}
+                  </h2>
+                  <p className={`text-base leading-relaxed mb-8 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>{b.description}</p>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {b.items.map((item, j) => (
+                      <motion.div key={j} initial={{ opacity: 0, x: -8 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: j * 0.06 }}
+                        className="flex items-start gap-2.5">
+                        <CheckCircle size={15} className={`mt-0.5 shrink-0 ${dark ? 'text-cyan-400' : b.iconColor}`} />
+                        <p className={`text-sm leading-relaxed ${dark ? 'text-gray-300' : 'text-gray-600'}`}>{item}</p>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
+              </motion.div>
+            </div>
+          </section>
+        );
+      })}
+
+      {/* ── FAQ — bg: slate-900 ── */}
+      <section className="bg-slate-900 py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-12">
+            <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.4em] mb-3">Preguntas frecuentes</p>
+            <h2 className="text-white text-3xl md:text-4xl font-black italic uppercase tracking-tighter">FAQ</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            {FAQ.map((item, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/30 transition-colors">
+                <div className="flex items-start gap-3 mb-3">
+                  <FileText size={15} className="text-cyan-400 mt-0.5 shrink-0" />
+                  <h3 className="text-white font-bold text-sm leading-snug">{item.q}</h3>
+                </div>
+                <p className="text-gray-400 text-sm leading-relaxed pl-6">{item.a}</p>
               </motion.div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="py-16 px-6 bg-zinc-950 border-t border-white/5">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-10">
-              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">Preguntas frecuentes</p>
-              <h2 className="text-3xl font-black uppercase tracking-tighter text-white">FAQ</h2>
-            </div>
-            <div className="space-y-4">
-              {FAQ.map((item, i) => (
-                <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-                  className="bg-zinc-900 border border-white/8 rounded-2xl p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <FileText size={16} className="text-cyan-400 mt-0.5 shrink-0" />
-                    <h3 className="text-white font-bold text-sm">{item.q}</h3>
-                  </div>
-                  <p className="text-white/60 text-sm leading-relaxed pl-7">{item.a}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 px-6 bg-zinc-900 border-t border-white/5">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-black uppercase tracking-tighter mb-4 text-white">¿Qué aplica a tu proyecto?</h2>
-            <p className="text-white/60 mb-8 leading-relaxed">Nuestro equipo analiza gratuitamente qué beneficios podés aprovechar según el tipo y escala de tu proyecto.</p>
-            <a href="/#contacto" className="inline-flex items-center gap-2 px-10 py-4 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
+      {/* ── CTA — bg: white ── */}
+      <section className="bg-white py-20 px-6 border-t border-gray-100">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-cyan-500 text-[11px] font-black uppercase tracking-[0.4em] mb-4">¿Qué aplica a tu proyecto?</p>
+          <h2 className="text-gray-900 text-3xl md:text-4xl font-black italic uppercase tracking-tighter mb-5">
+            Te ayudamos a<br />
+            <span className="text-cyan-500">aprovechar cada beneficio</span>
+          </h2>
+          <p className="text-gray-500 text-base max-w-xl mx-auto mb-8 leading-relaxed">
+            Nuestro equipo analiza gratuitamente qué beneficios podés aprovechar según el tipo y escala de tu proyecto de automatización.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onClick={() => navigate('/contacto')} style={{ outline: 'none' }}
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
               Consultá con nuestro equipo <ArrowRight size={14} />
-            </a>
+            </button>
+            <button onClick={() => navigate('/catalogo')} style={{ outline: 'none' }}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-600 text-sm font-bold hover:border-cyan-300 hover:text-gray-900 transition-all">
+              Ver catálogo completo
+            </button>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+
       <WppFloat />
+      <CTABanner />
       <Footer />
     </div>
   );

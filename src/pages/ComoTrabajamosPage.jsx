@@ -1,121 +1,223 @@
-import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { CTABanner } from '../components/CTABanner';
 import { WppFloat } from '../components/WppFloat';
-import { Search, FileText, Cpu, Wrench, Rocket, HeadphonesIcon, ArrowRight } from 'lucide-react';
+import { Search, FileText, Cpu, Wrench, Rocket, HeadphonesIcon, ArrowRight, CheckCircle } from 'lucide-react';
 
 const STEPS = [
-  { icon: Search,          tag: 'FASE 01', title: 'Consulta inicial',           subtitle: 'Sin costo — en 24 horas',         detail: 'Completás el formulario de contacto o nos escribís directamente. En menos de 24 horas un ingeniero te responde para entender tu operación a alto nivel: tipo de almacén, volumen de SKUs, throughput y objetivos.', logs: ['Reunión/llamada de 30 minutos con el equipo', 'Cuestionario técnico inicial enviado', 'Primera orientación tecnológica sin costo'] },
-  { icon: FileText,        tag: 'FASE 02', title: 'Diagnóstico técnico',        subtitle: 'Relevamiento in-situ o remoto',    detail: 'Analizamos datos históricos de movimientos, catálogo de SKUs, picos de demanda y layout existente. Medimos KPIs actuales para establecer la línea base del proyecto.', logs: ['Análisis de histórico de SKUs y throughput', 'Medición de KPIs actuales: errores, tiempos, espacio', 'Documentación de restricciones del layout existente'] },
-  { icon: Cpu,             tag: 'FASE 03', title: 'Diseño y propuesta',         subtitle: 'Selección tecnológica + ROI',      detail: 'Evaluamos alternativas tecnológicas según el perfil de la operación. Calculamos el TCO a 10 años y el retorno de inversión proyectado para seleccionar la solución óptima.', logs: ['Evaluación de tecnologías ASRS aplicables', 'Cálculo TCO 10 años y ROI proyectado', 'Propuesta técnica y comercial con layout 3D'] },
-  { icon: Wrench,          tag: 'FASE 04', title: 'Instalación',                subtitle: 'Ingeniería de detalle + montaje',  detail: 'Coordinamos la ingeniería de detalle, la instalación mecánica y eléctrica, la integración con el ERP/WMS del cliente y las pruebas de aceptación FAT y SAT.', logs: ['Instalación mecánica y eléctrica certificada', 'Integración con ERP/WMS del cliente', 'FAT en fábrica y SAT en sitio completados'] },
-  { icon: Rocket,          tag: 'FASE 05', title: 'Puesta en marcha',           subtitle: 'Arranque operativo asistido',      detail: 'Acompañamos el arranque operativo con soporte técnico directo y ajuste de parámetros. Los primeros días estamos presentes in-situ para garantizar una transición sin fricciones.', logs: ['Soporte in-situ durante los primeros días', 'Ajuste de parámetros y calibración del sistema', 'Capacitación final del personal operativo'] },
-  { icon: HeadphonesIcon,  tag: 'FASE 06', title: 'Soporte y optimización',     subtitle: 'Servicio posventa permanente',     detail: 'Monitoreo remoto de KPIs, mantenimiento preventivo programado y soporte técnico local 24/7. Análisis continuo para maximizar el retorno a lo largo de la vida útil del equipo.', logs: ['Monitoreo remoto de KPIs 24/7', 'Mantenimiento preventivo programado', 'Optimización continua basada en datos reales'] },
+  {
+    tag: 'Fase 01',
+    icon: Search,
+    title: 'Consulta inicial',
+    subtitle: 'Sin costo · Respuesta en 24 horas',
+    detail: 'Completás el formulario de contacto o nos escribís directamente. En menos de 24 horas un ingeniero te responde para entender tu operación a alto nivel: tipo de almacén, volumen de SKUs, throughput y objetivos.',
+    logs: [
+      'Reunión o llamada de 30 minutos con el equipo técnico',
+      'Cuestionario técnico inicial enviado por mail',
+      'Primera orientación tecnológica sin compromiso ni costo',
+    ],
+  },
+  {
+    tag: 'Fase 02',
+    icon: FileText,
+    title: 'Diagnóstico técnico',
+    subtitle: 'Relevamiento in-situ o remoto',
+    detail: 'Analizamos datos históricos de movimientos, catálogo de SKUs, picos de demanda y layout existente. Medimos los KPIs actuales para establecer la línea base del proyecto y detectar los cuellos de botella reales.',
+    logs: [
+      'Análisis de histórico de SKUs y throughput diario',
+      'Medición de KPIs actuales: errores, tiempos, espacio usado',
+      'Documentación de restricciones del layout existente',
+    ],
+  },
+  {
+    tag: 'Fase 03',
+    icon: Cpu,
+    title: 'Diseño y propuesta',
+    subtitle: 'Selección tecnológica + ROI proyectado',
+    detail: 'Evaluamos alternativas tecnológicas según el perfil de la operación. Calculamos el TCO a 10 años y el retorno de inversión proyectado para seleccionar la solución óptima. La propuesta incluye layout 3D y simulación de flujos.',
+    logs: [
+      'Evaluación de tecnologías ASRS aplicables al caso',
+      'Cálculo TCO 10 años y ROI proyectado con supuestos transparentes',
+      'Propuesta técnica y comercial con layout 3D incluido',
+    ],
+  },
+  {
+    tag: 'Fase 04',
+    icon: Wrench,
+    title: 'Instalación',
+    subtitle: 'Ingeniería de detalle + montaje certificado',
+    detail: 'Coordinamos la ingeniería de detalle, la instalación mecánica y eléctrica, la integración con el ERP/WMS existente y las pruebas de aceptación FAT (en fábrica) y SAT (en sitio) antes del arranque.',
+    logs: [
+      'Instalación mecánica y eléctrica con equipo certificado',
+      'Integración con ERP/WMS del cliente (SAP, Oracle y otros)',
+      'FAT en fábrica y SAT en sitio antes del arranque operativo',
+    ],
+  },
+  {
+    tag: 'Fase 05',
+    icon: Rocket,
+    title: 'Puesta en marcha',
+    subtitle: 'Arranque operativo asistido',
+    detail: 'Acompañamos el arranque con soporte técnico directo y ajuste de parámetros en tiempo real. Los primeros días estamos presentes in-situ para garantizar una transición sin fricciones y capacitar al personal.',
+    logs: [
+      'Soporte in-situ durante los primeros días operativos',
+      'Ajuste de parámetros y calibración fina del sistema',
+      'Capacitación final del personal operativo y supervisores',
+    ],
+  },
+  {
+    tag: 'Fase 06',
+    icon: HeadphonesIcon,
+    title: 'Soporte y optimización',
+    subtitle: 'Servicio posventa permanente',
+    detail: 'Monitoreo remoto de KPIs, mantenimiento preventivo programado y soporte técnico local 24/7. Análisis continuo de datos reales para optimizar el sistema y maximizar el retorno a lo largo de toda la vida útil del equipo.',
+    logs: [
+      'Monitoreo remoto de KPIs y alertas tempranas 24/7',
+      'Mantenimiento preventivo programado con piezas locales',
+      'Optimización continua basada en datos reales de la operación',
+    ],
+  },
 ];
 
+/* White → slate-900 alternando */
+const BG = ['bg-white', 'bg-slate-900'];
+const isDark = (i) => i % 2 !== 0;
+
 export const ComoTrabajamosPage = () => {
-  const [active, setActive] = useState(0);
-  const step = STEPS[active];
+  const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'Cómo Trabajamos — Metodología ASRS | Optexa Argentina';
+    document.title = 'Cómo Trabajamos — Metodología ASRS | STOKA Argentina';
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
+    <div className="min-h-screen text-gray-900">
       <Navbar />
-      <main className="pt-28">
 
-        <section className="py-16 px-6 bg-zinc-950 border-t border-white/5">
-          <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-4">Metodología de trabajo</p>
-              <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-5">
-                De la consulta al{' '}
-                <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, #22d3ee, #60a5fa)' }}>
-                  arranque operativo
+      {/* HERO */}
+      <div className="relative mt-20 h-[50vh] min-h-[360px] flex items-end overflow-hidden">
+        <img
+          src="/gxo-2023.jpg"
+          alt="Almacén automatizado STOKA"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-linear-to-r from-slate-950/95 via-slate-950/70 to-slate-950/20" />
+        <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-cyan-500" />
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-20">
+          <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut' }}>
+            <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.4em] mb-4">
+              Metodología · 6 fases
+            </p>
+            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black italic uppercase tracking-tighter leading-[1.05] mb-5">
+              De la consulta<br />
+              <span className="text-cyan-400">al arranque</span>
+            </h1>
+            <p className="text-gray-300 text-base md:text-lg max-w-xl leading-relaxed mb-8">
+              Un proceso estructurado en 6 fases que garantiza resultados predecibles, sin sorpresas y con soporte técnico local en cada etapa.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {STEPS.map((s, i) => (
+                <span key={i} className="flex items-center gap-2 text-xs font-bold text-gray-400 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full backdrop-blur-sm">
+                  <s.icon size={12} className="text-cyan-400" />
+                  {s.tag}
                 </span>
-              </h1>
-              <p className="text-white/60 text-lg max-w-2xl font-light leading-relaxed">
-                Un proceso estructurado en 6 fases que garantiza resultados predecibles, sin sorpresas y con soporte en cada etapa.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        <section className="py-8 px-6 pb-24 bg-zinc-900 border-t border-white/5">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-5 gap-8 items-start">
-
-              <div className="lg:col-span-2 flex flex-col gap-2">
-                {STEPS.map((s, i) => (
-                  <button key={i} onClick={() => setActive(i)} style={{ outline: 'none' }}
-                    className={['w-full text-left flex items-center gap-4 px-5 py-4 rounded-xl border transition-all duration-200',
-                      active === i ? 'bg-zinc-900 border-cyan-400/50' : 'bg-transparent border-white/10 hover:border-white/20 hover:bg-zinc-900/50',
-                    ].join(' ')}>
-                    <div className={['w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all',
-                      active === i ? 'bg-cyan-400/10 border border-cyan-400/20 text-cyan-400' : 'bg-white/5 border border-white/10 text-white/35',
-                    ].join(' ')}><s.icon size={18} /></div>
-                    <div className="text-left min-w-0">
-                      <p className={['text-[10px] font-bold uppercase tracking-widest mb-0.5', active === i ? 'text-cyan-400' : 'text-white/35'].join(' ')}>{s.tag}</p>
-                      <p className={['font-black uppercase tracking-tight text-sm truncate', active === i ? 'text-white' : 'text-white/60'].join(' ')}>{s.title}</p>
-                    </div>
-                  </button>
-                ))}
-              </div>
-
-              <div className="lg:col-span-3">
-                <AnimatePresence mode="wait">
-                  <motion.div key={active} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.22 }}
-                    className="bg-zinc-950 border border-cyan-400/20 rounded-3xl p-8">
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center gap-3">
-                        <div className="w-11 h-11 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400">
-                          <step.icon size={20} />
-                        </div>
-                        <div>
-                          <p className="text-[10px] font-bold uppercase tracking-widest text-cyan-400">{step.tag} — {step.subtitle}</p>
-                          <h3 className="text-xl font-black text-white uppercase tracking-tight">{step.title}</h3>
-                        </div>
-                      </div>
-                      <span className="text-5xl font-black text-white/10 leading-none">0{active + 1}</span>
-                    </div>
-                    <p className="text-white/60 leading-relaxed text-base mb-6 font-light">{step.detail}</p>
-                    <div className="space-y-2.5 border-t border-white/8 pt-5">
-                      {step.logs.map((log, idx) => (
-                        <div key={idx} className="flex items-center gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
-                          <p className="text-white/60 text-sm">{log}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="mt-6 flex gap-1.5">
-                      {STEPS.map((_, i) => (
-                        <button key={i} onClick={() => setActive(i)} style={{ outline: 'none' }}
-                          className={['flex-1 h-1 rounded-full transition-all duration-300', i === active ? 'bg-cyan-400' : 'bg-white/10'].join(' ')} />
-                      ))}
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
+              ))}
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </div>
 
-        <section className="py-16 px-6 bg-zinc-950 border-t border-white/5">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-black uppercase tracking-tighter mb-4 text-white">¿Listo para empezar?</h2>
-            <p className="text-white/60 mb-8">La primera consulta es sin costo. En 24 horas tenés una respuesta técnica de nuestro equipo.</p>
-            <a href="/#contacto"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
+      {/* STEPS */}
+      {STEPS.map((s, i) => {
+        const dark = isDark(i);
+        return (
+          <section key={i} className={`py-20 px-6 border-b ${dark ? 'bg-slate-900 border-white/5' : 'bg-white border-gray-100'}`}>
+            <div className="max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.55 }}
+                className="grid md:grid-cols-[200px_1fr] gap-10 items-start"
+              >
+                {/* LEFT — número + icono + tag */}
+                <div className="flex flex-col gap-4">
+                  <span className={`text-[88px] font-black italic leading-none select-none ${dark ? 'text-white/8' : 'text-gray-100'}`}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center border ${dark ? 'bg-cyan-400/10 border-cyan-400/20' : 'bg-cyan-50 border-cyan-200'}`}>
+                    <s.icon size={24} className={dark ? 'text-cyan-400' : 'text-cyan-500'} />
+                  </div>
+                  <div>
+                    <span className={`inline-block text-[11px] font-black uppercase tracking-[0.2em] border px-3 py-1 rounded-full ${dark ? 'bg-cyan-400/10 border-cyan-400/20 text-cyan-400' : 'bg-cyan-50 border-cyan-200 text-cyan-600'}`}>
+                      {s.tag}
+                    </span>
+                    <p className={`text-xs mt-2 font-mono ${dark ? 'text-gray-500' : 'text-gray-400'}`}>{s.subtitle}</p>
+                  </div>
+                </div>
+
+                {/* RIGHT — contenido */}
+                <div className="pt-2">
+                  <h2 className={`text-2xl md:text-3xl font-black uppercase tracking-tighter leading-tight mb-5 ${dark ? 'text-white' : 'text-gray-900'}`}>
+                    {s.title}
+                  </h2>
+                  <p className={`text-base leading-relaxed mb-8 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
+                    {s.detail}
+                  </p>
+                  <div className={`border-t pt-6 space-y-3 ${dark ? 'border-white/8' : 'border-gray-100'}`}>
+                    {s.logs.map((log, j) => (
+                      <motion.div
+                        key={j}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: j * 0.08 }}
+                        className="flex items-start gap-3"
+                      >
+                        <CheckCircle size={15} className={`mt-0.5 shrink-0 ${dark ? 'text-cyan-400' : 'text-cyan-500'}`} />
+                        <p className={`text-sm leading-relaxed ${dark ? 'text-gray-300' : 'text-gray-600'}`}>{log}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        );
+      })}
+
+      {/* CTA */}
+      <section className="bg-white py-20 px-6 border-t border-gray-100">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-cyan-500 text-[11px] font-black uppercase tracking-[0.4em] mb-4">¿Listo para empezar?</p>
+          <h2 className="text-gray-900 text-3xl md:text-4xl font-black italic uppercase tracking-tighter mb-5">
+            Consulta<br />
+            <span className="text-cyan-500">sin costo</span>
+          </h2>
+          <p className="text-gray-500 text-base max-w-xl mx-auto mb-8 leading-relaxed">
+            En 24 horas tenés una respuesta técnica de nuestro equipo de ingeniería, sin compromiso.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onClick={() => navigate('/contacto')} style={{ outline: 'none' }}
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
               Solicitar consulta técnica <ArrowRight size={14} />
-            </a>
+            </button>
+            <button onClick={() => navigate('/catalogo')} style={{ outline: 'none' }}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-600 text-sm font-bold hover:border-cyan-300 hover:text-gray-900 transition-all">
+              Ver catálogo completo
+            </button>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+
       <WppFloat />
+      <CTABanner />
       <Footer />
     </div>
   );

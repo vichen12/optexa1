@@ -1,14 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 
-export const WppFloat = () => {
-  // Configuración de enlace (Mendoza, Argentina)
-  const phoneNumber = "5492612071048";
-  const message = encodeURIComponent("¡Hola! Vengo de la web de Optexa, me interesaría solicitar una cotización técnica.");
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+const openLead = () => window.dispatchEvent(new CustomEvent('openLeadForm', { detail: {} }));
 
+export const WppFloat = () => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0.5, y: 100 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ delay: 1.5, type: 'spring', stiffness: 260, damping: 20 }}
@@ -16,12 +13,11 @@ export const WppFloat = () => {
     >
       {/* --- EFECTO PULSO (RADAR ACTIVO) --- */}
       <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-25 group-hover:opacity-40 transition-opacity duration-1000" />
-      
+
       {/* --- BOTÓN OFICIAL WHATSAPP --- */}
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        onClick={openLead}
+        style={{ outline: 'none' }}
         className="relative flex items-center gap-3 bg-[#25D366] text-white p-4 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:shadow-[#25D366]/60 transition-all duration-500 active:scale-90"
       >
         {/* LOGO OFICIAL DE WHATSAPP (SVG) */}
@@ -42,10 +38,8 @@ export const WppFloat = () => {
 
         {/* Notificación de Estado "Activo" */}
         <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 border-2 border-[#02040a] rounded-full shadow-[0_0_10px_#4ade80]" />
-      </a>
+      </button>
 
-      {/* --- TOOLTIP TÉCNICO --- */}
-    
     </motion.div>
   );
 };

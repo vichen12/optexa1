@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+﻿import { motion } from 'framer-motion';
 import { Factory, CircleDollarSign, Wrench } from 'lucide-react';
 
 const PILLARS = [
@@ -29,13 +29,13 @@ const PILLARS = [
 ];
 
 export const PropuestaDeValor = () => (
-  <section className="relative py-24 px-6 z-20 bg-zinc-900">
+  <section className="relative py-24 px-6 z-20 bg-white border-t border-gray-100">
     <div className="max-w-6xl mx-auto">
       <div className="mb-14">
-        <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">
-          Por qué Optexa
+        <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">
+          Por qué STOKA
         </p>
-        <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none">
+        <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter leading-none">
           La diferencia que{' '}
           <span
             className="text-transparent bg-clip-text"
@@ -54,20 +54,20 @@ export const PropuestaDeValor = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="relative bg-zinc-950 border border-white/8 rounded-2xl p-8 hover:border-cyan-400/35 transition-all duration-300 overflow-hidden group"
+            className="relative bg-white border border-gray-200 rounded-2xl p-8 hover:border-cyan-400/50 transition-all duration-300 overflow-hidden group shadow-sm"
           >
-            <div className="absolute top-4 right-4 text-[10px] font-mono text-white/15">//{p.tag}</div>
+            <div className="absolute top-4 right-4 text-[10px] font-mono text-gray-300">//{p.tag}</div>
 
-            <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mb-6">
-              <p.icon size={22} className="text-cyan-400" />
+            <div className="w-12 h-12 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center mb-6">
+              <p.icon size={22} className="text-cyan-500" />
             </div>
 
-            <h3 className="text-xl font-black text-white uppercase tracking-tight mb-3">{p.title}</h3>
-            <p className="text-white/55 text-sm leading-relaxed mb-6">{p.body}</p>
+            <h3 className="text-xl font-black text-gray-900 uppercase tracking-tight mb-3">{p.title}</h3>
+            <p className="text-gray-500 text-sm leading-relaxed mb-6">{p.body}</p>
 
-            <div className="pt-5 border-t border-white/8">
-              <p className="text-2xl font-black text-cyan-400 leading-none">{p.stat}</p>
-              <p className="text-[11px] text-white/35 mt-1">{p.statLabel}</p>
+            <div className="pt-5 border-t border-gray-100">
+              <p className="text-2xl font-black text-cyan-500 leading-none">{p.stat}</p>
+              <p className="text-[11px] text-gray-400 mt-1">{p.statLabel}</p>
             </div>
           </motion.div>
         ))}

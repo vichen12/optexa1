@@ -2,21 +2,23 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, ShoppingBag, Truck, Cog, UtensilsCrossed, FlaskConical, HardHat, Snowflake } from 'lucide-react';
 
+const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
+
 const INDUSTRIES = [
-  { slug: 'ecommerce',        label: 'E-commerce & Retail',    icon: ShoppingBag,    desc: 'Velocidad, exactitud y capacidad para el pico de demanda.' },
-  { slug: 'logistica-3pl',    label: 'Logística 3PL',          icon: Truck,          desc: 'Multicliente, multiproducto. Máxima flexibilidad operativa.' },
-  { slug: 'manufactura',      label: 'Manufactura Industrial', icon: Cog,            desc: 'Just-in-time y kanban automatizado para producción.' },
-  { slug: 'alimentos-bebidas',label: 'Alimentos & Bebidas',    icon: UtensilsCrossed,desc: 'FIFO garantizado y trazabilidad total por lote.' },
-  { slug: 'farmaceutica',     label: 'Farmacéutica',           icon: FlaskConical,   desc: 'GMP, FIFO/FEFO y temperatura controlada certificada.' },
-  { slug: 'mineria-oil-gas',  label: 'Minería & Oil & Gas',    icon: HardHat,        desc: 'Repuestos críticos disponibles 24/7 sin errores.' },
-  { slug: 'cadena-frio',      label: 'Cadena de Frío',         icon: Snowflake,      desc: 'Robots que operan a -30°C sin exposición de personal.' },
+  { slug: 'ecommerce',         label: 'E-commerce & Retail',    icon: ShoppingBag,     desc: 'Velocidad, exactitud y capacidad para el pico de demanda.', image: '/ECOMMERCE.png' },
+  { slug: 'logistica-3pl',     label: 'Logística 3PL',          icon: Truck,           desc: 'Multicliente, multiproducto. Máxima flexibilidad operativa.', image: '/Logística 3PL.png' },
+  { slug: 'manufactura',       label: 'Manufactura Industrial',  icon: Cog,             desc: 'Just-in-time y kanban automatizado para producción.', image: `/${seg('productos deliecn')}/${seg('industrias que atendemos')}/${seg('Manufactura de Precisión.png')}` },
+  { slug: 'alimentos-bebidas', label: 'Alimentos & Bebidas',     icon: UtensilsCrossed, desc: 'FIFO garantizado y trazabilidad total por lote.', image: `/${seg('productos deliecn')}/${seg('industrias que atendemos')}/${seg('Alimentos y Bebidas.png')}` },
+  { slug: 'farmaceutica',      label: 'Farmacéutica',            icon: FlaskConical,    desc: 'GMP, FIFO/FEFO y temperatura controlada certificada.', image: `/${seg('productos deliecn')}/${seg('industrias que atendemos')}/${seg('Farmacéutica.png')}` },
+  { slug: 'mineria-oil-gas',   label: 'Minería & Oil & Gas',     icon: HardHat,         desc: 'Repuestos críticos disponibles 24/7 sin errores.', image: `/${seg('productos deliecn')}/${seg('industrias que atendemos')}/mineria.png` },
+  { slug: 'cadena-frio',       label: 'Cadena de Frío',          icon: Snowflake,       desc: 'Robots que operan a -30°C sin exposición de personal.', image: `/${seg('productos deliecn')}/${seg('industrias que atendemos')}/${seg('Cadena de Frío.png')}` },
 ];
 
 export const IndustriasPreview = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative py-24 px-6 z-20 bg-zinc-950 border-t border-white/5">
+    <section className="relative py-24 px-6 z-20 bg-slate-900 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
 
         <div className="mb-14">
@@ -35,6 +37,7 @@ export const IndustriasPreview = () => {
             </h2>
             <button
               onClick={() => navigate('/industrias')}
+              style={{ outline: 'none' }}
               className="flex items-center gap-2 text-sm text-white/40 hover:text-cyan-400 transition-colors group"
             >
               Ver todas las industrias
@@ -43,7 +46,7 @@ export const IndustriasPreview = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {INDUSTRIES.map((ind, i) => (
             <motion.button
               key={ind.slug}
@@ -53,15 +56,29 @@ export const IndustriasPreview = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.35, delay: i * 0.05 }}
               style={{ outline: 'none' }}
-              className="relative text-left p-5 rounded-2xl border border-white/8 hover:border-cyan-400/40 hover:bg-zinc-900 transition-all duration-300 group bg-zinc-900/50"
+              className="relative text-left rounded-2xl overflow-hidden border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all duration-300 group bg-white"
             >
-              <div className="w-10 h-10 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mb-4 group-hover:bg-cyan-400/15 transition-colors">
-                <ind.icon size={18} className="text-cyan-400" />
+              {/* Photo */}
+              <div className="h-36 overflow-hidden bg-gray-100 relative">
+                <img
+                  src={ind.image}
+                  alt={ind.label}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onError={(ev) => { ev.currentTarget.style.display = 'none'; }}
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-900/70 to-transparent" />
+                <div className="absolute top-2.5 left-2.5 w-8 h-8 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                  <ind.icon size={14} className="text-cyan-300" />
+                </div>
               </div>
-              <h3 className="text-white font-bold text-sm leading-tight mb-1.5">{ind.label}</h3>
-              <p className="text-white/45 text-xs leading-relaxed">{ind.desc}</p>
-              <div className="mt-3 flex items-center gap-1 text-[11px] text-white/25 group-hover:text-cyan-400 transition-colors">
-                Ver soluciones <ArrowRight size={10} />
+
+              {/* Info */}
+              <div className="p-4">
+                <h3 className="text-gray-900 font-bold text-sm leading-tight mb-1">{ind.label}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed">{ind.desc}</p>
+                <div className="mt-3 flex items-center gap-1 text-[11px] text-cyan-500 font-semibold group-hover:gap-2 transition-all">
+                  Ver soluciones <ArrowRight size={10} />
+                </div>
               </div>
             </motion.button>
           ))}

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -14,7 +14,7 @@ export const Hero = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Optexa — Automatización de Almacenes DELIE en Argentina";
+    document.title = "STOKA — Automatización de Almacenes DELIE en Argentina";
     const m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", "Representantes oficiales exclusivos de DELIE en Argentina. Sistemas ASRS, robots y software WMS/WCS. 30–50% más económico que soluciones europeas.");
   }, []);
@@ -50,6 +50,21 @@ export const Hero = () => {
           <span className="text-[11px] font-mono tracking-[0.35em] text-cyan-300 font-bold uppercase">
             Representación Oficial DELIE · Argentina
           </span>
+        </motion.div>
+
+        {/* DELIE logo */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
+          className="mb-7"
+        >
+          <img
+            src="/image.png"
+            alt="DELIE"
+            className="h-10 object-contain mx-auto"
+            style={{ filter: 'brightness(1.1) saturate(1.2)' }}
+          />
         </motion.div>
 
         {/* H1 */}
@@ -89,15 +104,16 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.35 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
-          <a
-            href="#contacto"
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent('openLeadForm', { detail: {} }))}
+            style={{ outline: 'none' }}
             className="group flex items-center gap-3 px-9 py-4 bg-cyan-500 rounded-xl transition-all duration-300 hover:bg-cyan-400 shadow-[0_4px_24px_rgba(6,182,212,0.4)]"
           >
             <span className="text-white font-black uppercase tracking-[0.2em] text-[12px]">
               Solicitar consulta técnica
             </span>
             <ArrowRight size={14} className="text-white group-hover:translate-x-0.5 transition-transform" />
-          </a>
+          </button>
           <button
             onClick={() => navigate("/soluciones")}
             className="group flex items-center gap-3 px-8 py-4 bg-white/10 border border-white/25 rounded-xl hover:bg-white/20 hover:border-white/40 transition-all duration-300 backdrop-blur-sm"

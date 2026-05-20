@@ -27,18 +27,15 @@ export const BeneficiosBanner = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative py-24 px-6 z-20 bg-slate-900 overflow-hidden">
-      {/* Subtle cyan glow */}
-      <div className="absolute top-0 left-1/4 w-96 h-64 bg-cyan-400/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-64 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative py-24 px-6 z-20 bg-white overflow-hidden">
 
       <div className="max-w-6xl mx-auto relative">
 
         <div className="mb-12 text-center">
-          <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">
             Beneficios fiscales · Argentina 2025
           </p>
-          <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none">
+          <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter leading-none">
             Invertí con el{' '}
             <span
               className="text-transparent bg-clip-text"
@@ -47,7 +44,7 @@ export const BeneficiosBanner = () => {
               Estado a favor
             </span>
           </h2>
-          <p className="mt-5 text-white/50 max-w-xl mx-auto font-light leading-relaxed">
+          <p className="mt-5 text-gray-500 max-w-xl mx-auto font-light leading-relaxed">
             El marco normativo argentino en 2025 crea condiciones únicas para automatizar tu operación logística.
           </p>
         </div>
@@ -60,18 +57,18 @@ export const BeneficiosBanner = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="border border-white/10 rounded-2xl p-6 bg-white/5 hover:bg-white/8 transition-all duration-300"
+              className="border border-gray-200 rounded-2xl p-6 bg-gray-100 hover:bg-gray-50 transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-cyan-400/15 border border-cyan-400/25 flex items-center justify-center shrink-0">
-                  <item.icon size={18} className="text-cyan-400" />
+                <div className="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center shrink-0">
+                  <item.icon size={18} className="text-cyan-500" />
                 </div>
-                <span className="text-[10px] font-mono text-cyan-400 bg-cyan-400/10 border border-cyan-400/20 px-2 py-1 rounded-full">
+                <span className="text-[10px] font-mono text-cyan-600 bg-cyan-50 border border-cyan-200 px-2 py-1 rounded-full">
                   {item.tag}
                 </span>
               </div>
-              <h3 className="text-white font-bold text-sm leading-tight mb-2 uppercase tracking-tight">{item.title}</h3>
-              <p className="text-white/50 text-xs leading-relaxed">{item.body}</p>
+              <h3 className="text-gray-900 font-bold text-sm leading-tight mb-2 uppercase tracking-tight">{item.title}</h3>
+              <p className="text-gray-500 text-xs leading-relaxed">{item.body}</p>
             </motion.div>
           ))}
         </div>
@@ -82,27 +79,27 @@ export const BeneficiosBanner = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mb-10 border border-cyan-400/20 rounded-2xl p-6 bg-white/5 text-center"
+          className="mb-10 border border-gray-200 rounded-2xl p-6 bg-gray-100 text-center"
         >
-          <p className="text-[10px] font-mono text-cyan-400 tracking-[0.4em] uppercase mb-4">Ejemplo · Proyecto de USD 1.8M</p>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.4em] uppercase mb-4">Ejemplo · Proyecto de USD 1.8M</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
             <div>
-              <p className="text-4xl md:text-5xl font-black text-white leading-none">USD 604.800</p>
-              <p className="text-white/50 text-sm mt-2">en beneficios fiscales combinados</p>
+              <p className="text-4xl md:text-5xl font-black text-gray-900 leading-none">USD 604.800</p>
+              <p className="text-gray-400 text-sm mt-2">en beneficios fiscales combinados</p>
             </div>
-            <div className="hidden sm:block w-px h-12 bg-white/10" />
+            <div className="hidden sm:block w-px h-12 bg-gray-200" />
             <div className="space-y-1.5 text-left">
-              <div className="flex items-center gap-2 text-sm text-white/70">
-                <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
-                Decreto 513: <span className="text-white font-semibold">arancel 0% en equipos</span>
+              <div className="flex items-center gap-2 text-sm text-gray-500">
+                <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 shrink-0" />
+                Decreto 513: <span className="text-gray-900 font-semibold">arancel 0% en equipos</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-white/70">
-                <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
-                RIGI: <span className="text-white font-semibold">Ganancias al 25% (vs. 35%)</span>
+              <div className="flex items-center gap-2 text-sm text-gray-500">
+                <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 shrink-0" />
+                RIGI: <span className="text-gray-900 font-semibold">Ganancias al 25% (vs. 35%)</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-white/70">
-                <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
-                BICE: <span className="text-white font-semibold">financiamiento hasta 10 años</span>
+              <div className="flex items-center gap-2 text-sm text-gray-500">
+                <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 shrink-0" />
+                BICE: <span className="text-gray-900 font-semibold">financiamiento hasta 10 años</span>
               </div>
             </div>
           </div>
@@ -111,7 +108,7 @@ export const BeneficiosBanner = () => {
         <div className="text-center">
           <button
             onClick={() => navigate('/beneficios-fiscales')}
-            className="inline-flex items-center gap-2 px-8 py-3 border border-white/20 rounded-xl text-white/80 text-sm font-bold hover:bg-white/10 hover:text-white transition-all group"
+            className="inline-flex items-center gap-2 px-8 py-3 border border-gray-300 rounded-xl text-gray-600 text-sm font-bold hover:bg-gray-200 hover:text-gray-900 transition-all group"
           >
             Ver guía completa de beneficios
             <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />

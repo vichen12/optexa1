@@ -15,7 +15,7 @@ export const Process = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="proceso" className="py-24 px-6 bg-zinc-900 border-t border-white/5">
+    <section id="proceso" className="py-24 px-6 bg-slate-900 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
 
         <div className="mb-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -42,7 +42,7 @@ export const Process = () => {
 
         <div className="relative">
           <div
-            className="hidden lg:block absolute z-0 bg-white/8"
+            className="hidden lg:block absolute z-0 bg-white/10"
             style={{ top: '28px', left: 'calc(100% / 12)', right: 'calc(100% / 12)', height: '1px' }}
           />
 
@@ -56,7 +56,7 @@ export const Process = () => {
                 transition={{ duration: 0.35, delay: i * 0.08 }}
                 className="relative flex flex-col items-center text-center z-10"
               >
-                <div className="relative w-14 h-14 rounded-2xl bg-zinc-950 border border-white/10 flex items-center justify-center mb-4">
+                <div className="relative w-14 h-14 rounded-2xl bg-slate-800 border border-white/10 flex items-center justify-center mb-4">
                   <step.icon size={20} className="text-cyan-400" />
                   <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cyan-500 text-white text-[9px] font-black flex items-center justify-center leading-none">
                     {step.tag}
@@ -80,7 +80,7 @@ export const Process = () => {
         >
           <button
             onClick={() => navigate('/como-trabajamos')}
-            className="inline-flex items-center gap-2 px-8 py-3 bg-zinc-950 border border-white/15 rounded-xl text-white/70 text-sm font-bold hover:border-cyan-400/50 hover:text-white transition-all"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-slate-800 border border-white/15 rounded-xl text-white/70 text-sm font-bold hover:border-cyan-400/50 hover:text-white transition-all"
           >
             Ver cada fase en detalle
             <ArrowRight size={14} />

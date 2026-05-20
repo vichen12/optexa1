@@ -4,14 +4,15 @@ import { motion } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Hero } from './components/hero';
-import { Contact } from './components/contact';
 import { WppFloat } from './components/WppFloat';
+import { LeadPopup } from './components/LeadPopup';
 import { CatalogPreview } from './components/CatalogPreview';
 import { PropuestaDeValor } from './components/PropuestaDeValor';
 import { IndustriasPreview } from './components/IndustriasPreview';
 import { ROISection } from './components/ROISection';
 import { BeneficiosBanner } from './components/BeneficiosBanner';
 import { Process } from './components/Process';
+import { CTABanner } from './components/CTABanner';
 import { CatalogPage } from './pages/CatalogPage';
 import { SolucionesPage } from './pages/SolucionesPage';
 import { NosotrosPage } from './pages/NosotrosPage';
@@ -19,13 +20,14 @@ import { ComoTrabajamosPage } from './pages/ComoTrabajamosPage';
 import { BeneficiosFiscalesPage } from './pages/BeneficiosFiscalesPage';
 import { IndustriasPage } from './pages/IndustriasPage';
 import { IndustriaDetailPage } from './pages/IndustriaDetailPage';
+import { ContactPage } from './pages/ContactPage';
 
 function HomePage() {
   useEffect(() => {
     const handleVisibilityChange = () => {
       document.title = document.visibilityState === 'hidden'
         ? '¡Volvé! Te esperamos 👋'
-        : 'Optexa — Automatización de Almacenes DELIE en Argentina';
+        : 'STOKA — Automatización de Almacenes DELIE en Argentina';
     };
     document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
@@ -41,36 +43,15 @@ function HomePage() {
             <Hero />
           </motion.div>
         </section>
-
-        <section id="propuesta">
-          <PropuestaDeValor />
-        </section>
-
-        <section id="catalogo-preview">
-          <CatalogPreview />
-        </section>
-
-        <section id="roi">
-          <ROISection />
-        </section>
-
-        <section id="beneficios">
-          <BeneficiosBanner />
-        </section>
-
-        <section id="proceso">
-          <Process />
-        </section>
-
-        <section id="industrias">
-          <IndustriasPreview />
-        </section>
-
-        <section id="contacto">
-          <Contact />
-        </section>
+        <ROISection />
+        <CatalogPreview />
+        <PropuestaDeValor />
+        <IndustriasPreview />
+        <BeneficiosBanner />
+        <Process />
       </main>
 
+      <CTABanner />
       <WppFloat />
       <Footer />
     </div>
@@ -79,16 +60,20 @@ function HomePage() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/catalogo" element={<CatalogPage />} />
-      <Route path="/soluciones" element={<SolucionesPage />} />
-      <Route path="/industrias" element={<IndustriasPage />} />
-      <Route path="/industrias/:slug" element={<IndustriaDetailPage />} />
-      <Route path="/beneficios-fiscales" element={<BeneficiosFiscalesPage />} />
-      <Route path="/como-trabajamos" element={<ComoTrabajamosPage />} />
-      <Route path="/nosotros" element={<NosotrosPage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/catalogo" element={<CatalogPage />} />
+        <Route path="/soluciones" element={<SolucionesPage />} />
+        <Route path="/industrias" element={<IndustriasPage />} />
+        <Route path="/industrias/:slug" element={<IndustriaDetailPage />} />
+        <Route path="/beneficios-fiscales" element={<BeneficiosFiscalesPage />} />
+        <Route path="/como-trabajamos" element={<ComoTrabajamosPage />} />
+        <Route path="/nosotros" element={<NosotrosPage />} />
+        <Route path="/contacto" element={<ContactPage />} />
+      </Routes>
+      <LeadPopup />
+    </>
   );
 }
 

@@ -1,8 +1,8 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 @theme {
-  --color-optexa-cyan: #22d3ee;
-  --color-optexa-dark: #0f172a;
+  --color-STOKA-cyan: #22d3ee;
+  --color-STOKA-dark: #0f172a;
 
   --animate-scroll: scroll 20s linear infinite;
   --animate-scroll-reverse: scroll-reverse 20s linear infinite;
@@ -41,23 +41,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Light scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  background: transparent;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #e2e8f0, #22d3ee, #e2e8f0);
-  border-radius: 100px;
-  box-shadow: 0 0 8px rgba(34, 211, 238, 0.3);
-  transition: all 0.3s ease;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #22d3ee;
-}
-::-webkit-scrollbar-corner {
-  background: transparent;
+  background: #93c5fd;
 }

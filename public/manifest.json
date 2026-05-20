@@ -1,9 +1,9 @@
-{
-  "short_name": "Optexa",
-  "name": "Optexa | Ingeniería y Robótica",
+﻿{
+  "short_name": "STOKA",
+  "name": "STOKA | Ingeniería y Robótica",
   "icons": [
     {
-      "src": "OPTEXACONFONDOBLANCO.png",
+      "src": "STOKACONFONDOBLANCO.png",
       "sizes": "192x192",
       "type": "image/png"
     }

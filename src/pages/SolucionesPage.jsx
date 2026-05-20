@@ -1,12 +1,13 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { CTABanner } from '../components/CTABanner';
 import { ProductCatalog } from '../components/ProductCatalog';
 import { WppFloat } from '../components/WppFloat';
 
 export const SolucionesPage = () => {
   useEffect(() => {
-    document.title = 'Soluciones ASRS — Catálogo DELIE | Optexa Argentina';
+    document.title = 'Soluciones ASRS — Catálogo DELIE | STOKA Argentina';
     window.scrollTo(0, 0);
   }, []);
 
@@ -17,6 +18,7 @@ export const SolucionesPage = () => {
         <ProductCatalog />
       </div>
       <WppFloat />
+      <CTABanner />
       <Footer />
     </div>
   );

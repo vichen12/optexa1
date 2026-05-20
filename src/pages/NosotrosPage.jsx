@@ -1,156 +1,244 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { CTABanner } from '../components/CTABanner';
 import { WppFloat } from '../components/WppFloat';
-import { ArrowRight, Globe, Zap } from 'lucide-react';
+import { ArrowRight, Globe, Target, Shield, Zap, Linkedin } from 'lucide-react';
 
 const DELIE_STATS = [
-  { value: '2003',   label: 'Año de fundación'         },
-  { value: '1.000+', label: 'Instalaciones globales'   },
-  { value: '+15',    label: 'Países con presencia'      },
-  { value: '40m+',   label: 'Altura máx. de instalación' },
+  { value: '2003',   label: 'Año de fundación DELIE' },
+  { value: '+1.000', label: 'Instalaciones globales'  },
+  { value: '+30',    label: 'Países con presencia'    },
+  { value: '40m',    label: 'Altura máx. instalación' },
+];
+
+const VALORES = [
+  { icon: Target,  title: 'Ingeniería aplicada',   desc: 'No vendemos cajas. Diseñamos soluciones a medida para cada operación, con cálculo de ROI y layout 3D antes de cualquier inversión.' },
+  { icon: Shield,  title: 'Transparencia total',   desc: 'Precios claros, plazos reales y TCO a 10 años desde la propuesta. Sin sorpresas en la instalación ni en el soporte posventa.' },
+  { icon: Zap,     title: 'Respuesta local',        desc: 'Soporte técnico en Argentina. Sin depender de tiempos de fábrica ni husos horarios para resolver cualquier problema.' },
+  { icon: Globe,   title: 'Tecnología de clase mundial', desc: 'Acceso a la misma tecnología que usan las grandes multinacionales globales, con precios 30–50% más accesibles que las alternativas europeas.' },
 ];
 
 const TEAM = [
   {
     name: 'Anuk Vilarasau',
-    role: 'Ingeniería Industrial',
-    status: '5to Año — Universidad de Mendoza',
-    bio: 'Especialista en flujos logísticos y eficiencia de planta. Responsable del análisis técnico, diseño de layouts y dimensionamiento de cada proyecto ASRS.',
-    image: '/anuk.png',
-    skills: ['Logística 4.0', 'Simulación', 'Lean Mfg', 'ASRS Design'],
-    color: 'emerald',
+    role: 'Ingeniería & Proyectos',
+    bio: 'Ingeniero industrial especializado en automatización logística y diseño de sistemas ASRS. Responsable del análisis técnico, relevamiento de operaciones, diseño de layouts y dimensionamiento de cada proyecto.',
+    image: '/anuk.jpeg',
+    linkedin: 'https://www.linkedin.com/in/anuk-vilarasau-9b138237b/',
+    skills: ['Logística 4.0', 'ASRS Design', 'Lean Manufacturing', 'Simulación de flujos'],
   },
   {
     name: 'Vincenzo Dallapé',
-    role: 'Ingeniería en Sistemas',
-    status: '5to Año — UTN',
-    bio: 'Desarrollador Full Stack con foco en integración de sistemas industriales. A cargo de la conectividad del ecosistema ASRS con los sistemas de gestión del cliente.',
-    image: '/vincenzo.png',
-    skills: ['React / Next.js', 'IoT Industrial', 'Cloud Computing'],
-    color: 'cyan',
+    role: 'Tecnología & Desarrollo',
+    bio: 'Ingeniero en sistemas con foco en integración tecnológica industrial. A cargo de la conectividad del ecosistema ASRS con los sistemas de gestión del cliente y el desarrollo digital de STOKA.',
+    image: '/vincenzo.jpeg',
+    linkedin: 'https://www.linkedin.com/in/vincenzo-dallape/',
+    skills: ['Integración ERP/WMS', 'IoT Industrial', 'Desarrollo web', 'Cloud'],
   },
 ];
 
 export const NosotrosPage = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
-    document.title = 'Nosotros — Optexa | Representación oficial DELIE en Argentina';
+    document.title = 'Nosotros — STOKA | Representación oficial DELIE en Argentina';
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
+    <div className="min-h-screen text-gray-900">
       <Navbar />
-      <main className="pt-28">
 
-        {/* HERO */}
-        <section className="py-20 px-6 bg-zinc-950 border-t border-white/5">
-          <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-4">Quiénes somos</p>
-              <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-6">
-                Optexa —{' '}
-                <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, #22d3ee, #60a5fa)' }}>
-                  Argentina
-                </span>
-              </h1>
-              <p className="text-xl text-white/60 max-w-3xl font-light leading-relaxed">
-                Somos los representantes oficiales exclusivos de DELIE en Argentina. Llevamos tecnología de automatización de almacenes de clase mundial a empresas argentinas con precios 30–50% más accesibles que las alternativas europeas.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* DELIE */}
-        <section className="py-16 px-6 bg-zinc-900 border-t border-white/5">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-4">Nuestro fabricante</p>
-                <h2 className="text-4xl font-black uppercase tracking-tighter leading-none mb-5">
-                  DELIE — Fabricante{' '}
-                  <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, #22d3ee, #60a5fa)' }}>
-                    global ASRS
-                  </span>
-                </h2>
-                <p className="text-white/60 leading-relaxed mb-6">
-                  Fundada en 2003, DELIE es una de las principales fabricantes de sistemas de almacenamiento automatizado (ASRS) del mundo. Con más de 1.000 instalaciones en más de 15 países, DELIE combina robustez industrial, software propio WMS/WCS y una línea completa de productos: transelevadores, robots lanzadera, AMR, VLM, transportadores y estanterías de hasta 40 metros.
-                </p>
-                <div className="flex items-center gap-2 text-cyan-400 text-sm font-bold">
-                  <Globe size={14} />
-                  <span>Presencia en Asia, Europa, América y Medio Oriente</span>
+      {/* ── HERO — bg: white con acento cyan ── */}
+      <section className="bg-white pt-40 pb-20 px-6 border-b border-gray-100">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[2fr_1fr] gap-8 items-start">
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+            <div className="w-12 h-1 bg-cyan-500 mb-8 rounded-full" />
+            <p className="text-gray-400 text-[11px] font-black uppercase tracking-[0.4em] mb-5">Quiénes somos</p>
+            <h1 className="text-gray-900 text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-8">
+              STOKA<br />
+              <span className="text-cyan-500">Argentina</span>
+            </h1>
+            <p className="text-gray-500 text-xl max-w-2xl leading-relaxed mb-12">
+              Representantes oficiales exclusivos de DELIE en Argentina. Tecnología de automatización de almacenes de clase mundial, con ingeniería y soporte 100% local.
+            </p>
+            <div className="flex flex-wrap gap-10 border-t border-gray-100 pt-10">
+              {[
+                { value: '+1.000', label: 'Instalaciones globales DELIE' },
+                { value: '+30',    label: 'Países con presencia' },
+                { value: '100%',   label: 'Ingeniería y soporte local' },
+                { value: '2003',   label: 'Año de fundación DELIE' },
+              ].map((s) => (
+                <div key={s.label}>
+                  <p className="text-gray-900 text-3xl font-black italic leading-none mb-1">{s.value}</p>
+                  <p className="text-gray-400 text-xs uppercase tracking-widest">{s.label}</p>
                 </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {DELIE_STATS.map((s, i) => (
-                  <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-                    className="bg-zinc-950 border border-white/8 rounded-2xl p-5 text-center">
-                    <p className="text-3xl font-black text-cyan-400 leading-none mb-1">{s.value}</p>
-                    <p className="text-white/60 text-xs">{s.label}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* EQUIPO */}
-        <section className="py-16 px-6 bg-zinc-950 border-t border-white/5">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-12">
-              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">El equipo</p>
-              <h2 className="text-4xl font-black uppercase tracking-tighter leading-none">
-                Ingeniería local,{' '}
-                <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, #22d3ee, #60a5fa)' }}>
-                  resultados reales
-                </span>
-              </h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {TEAM.map((member, i) => (
-                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                  className="bg-zinc-900 border border-white/8 rounded-3xl p-7">
-                  <div className="flex items-start gap-4 mb-5">
-                    <img src={member.image} alt={member.name} className="w-16 h-16 rounded-2xl object-cover bg-zinc-800" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
-                    <div>
-                      <h3 className="text-white font-black text-lg">{member.name}</h3>
-                      <p className="text-cyan-400 text-sm font-semibold">{member.role}</p>
-                      <p className="text-white/35 text-xs mt-0.5">{member.status}</p>
-                    </div>
-                  </div>
-                  <p className="text-white/60 text-sm leading-relaxed mb-5">{member.bio}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {member.skills.map((skill) => (
-                      <span key={skill} className="text-[11px] font-mono text-cyan-400 bg-cyan-400/10 border border-cyan-400/20 px-2.5 py-1 rounded-full">{skill}</span>
-                    ))}
-                  </div>
-                </motion.div>
               ))}
             </div>
-          </div>
-        </section>
+          </motion.div>
 
-        {/* MISIÓN */}
-        <section className="py-16 px-6 bg-zinc-900 border-t border-white/5">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="max-w-3xl mx-auto">
-              <div className="w-14 h-14 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mx-auto mb-6">
-                <Zap size={26} className="text-cyan-400" />
-              </div>
-              <h2 className="text-3xl font-black uppercase tracking-tighter leading-none mb-5 text-white">Nuestra misión</h2>
-              <p className="text-white/60 text-lg leading-relaxed mb-8">
-                Democratizar la automatización de almacenes en Argentina. Que ninguna empresa pierda competitividad por no poder acceder a tecnología que hasta hoy estaba reservada para las multinacionales.
-              </p>
-              <a href="/#contacto"
-                className="inline-flex items-center gap-2 px-8 py-3 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
-                Hablemos de tu proyecto <ArrowRight size={14} />
-              </a>
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }}
+            className="hidden md:flex flex-col items-center gap-4 mt-8">
+            <div className="border border-gray-100 rounded-2xl px-10 py-8 bg-gray-50 flex flex-col items-center gap-4 shadow-sm">
+              <img src="/image.png" alt="DELIE" className="w-56 object-contain" />
+              <div className="w-8 h-px bg-gray-300" />
+              <p className="text-[10px] font-mono text-gray-400 uppercase tracking-[0.3em] text-center leading-relaxed">Representación oficial<br />Argentina</p>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── MISIÓN — bg: slate-900 ── */}
+      <section className="bg-slate-900 py-20 px-6 border-b border-white/5">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_2fr] gap-12 items-start">
+          <div>
+            <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">Nuestra misión</p>
+            <h2 className="text-2xl font-black text-white uppercase tracking-tighter leading-tight">
+              Democratizar la automatización logística en Argentina
+            </h2>
           </div>
-        </section>
-      </main>
+          <div className="space-y-4">
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Que ninguna empresa pierda competitividad por no poder acceder a tecnología que hasta hoy estaba reservada para las multinacionales. Los sistemas ASRS de clase mundial ya son accesibles para la industria argentina.
+            </p>
+            <p className="text-gray-400 text-base leading-relaxed">
+              Representamos a DELIE porque creemos que la combinación de fabricación asiática de primer nivel con ingeniería y soporte local es la forma más inteligente de automatizar una operación en Argentina: máxima tecnología, mínimo riesgo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── VALORES — bg: gray-50 ── */}
+      <section className="bg-gray-50 py-20 px-6 border-b border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Cómo trabajamos</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-10">Nuestros valores</h2>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {VALORES.map((v, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-cyan-300 hover:shadow-sm transition-all">
+                <div className="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center mb-4">
+                  <v.icon size={18} className="text-cyan-500" />
+                </div>
+                <h3 className="font-black text-gray-900 text-sm uppercase tracking-tight mb-2">{v.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── DELIE — bg: slate-900 ── */}
+      <section className="bg-slate-900 py-20 px-6">
+        <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <img src="/image.png" alt="DELIE" className="h-10 object-contain mb-5" />
+            <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-4">Nuestro fabricante</p>
+            <h2 className="text-3xl md:text-4xl font-black italic uppercase tracking-tighter leading-tight text-white mb-5">
+              DELIE —<br /><span className="text-cyan-400">Fabricante global ASRS</span>
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              Fundada en 2003, DELIE es uno de los principales fabricantes de sistemas de almacenamiento automatizado del mundo. Con más de 1.000 instalaciones en más de 30 países, combina robustez industrial, software propio WMS/WCS y una línea completa de productos: transelevadores, robots lanzadera, AMR, VLM, transportadores y estanterías de hasta 40 metros.
+            </p>
+            <div className="flex items-center gap-2 text-cyan-400 text-sm font-bold">
+              <Globe size={14} />
+              <span>Asia · Europa · América · Medio Oriente</span>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-2 gap-4">
+            {DELIE_STATS.map((s, i) => (
+              <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:border-cyan-400/30 transition-colors">
+                <p className="text-3xl font-black text-cyan-400 leading-none mb-2">{s.value}</p>
+                <p className="text-gray-400 text-xs uppercase tracking-wide">{s.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── EQUIPO — bg: white ── */}
+      <section className="bg-white py-20 px-6 border-b border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">El equipo</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-12">
+            Ingeniería local, resultados reales
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {TEAM.map((member, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }}
+                className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-lg transition-all duration-300">
+
+                {/* Foto */}
+                <div className="relative overflow-hidden bg-gray-100" style={{ aspectRatio: '1/1' }}>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                    style={{ objectPosition: member.name === 'Anuk Vilarasau' ? 'center 10%' : 'center 20%' }}
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-950/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <span className="text-[10px] font-black uppercase tracking-[0.25em] text-white bg-cyan-500/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                      {member.role}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Info */}
+                <div className="p-6">
+                  <h3 className="text-gray-900 font-black text-xl mb-2">{member.name}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-5">{member.bio}</p>
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {member.skills.map((skill) => (
+                      <span key={skill} className="text-[11px] font-mono text-cyan-600 bg-cyan-50 border border-cyan-200 px-2.5 py-1 rounded-full">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                    <Linkedin size={14} />
+                    LinkedIn
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA — bg: slate-900 ── */}
+      <section className="bg-slate-900 py-20 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.4em] mb-4">¿Trabajamos juntos?</p>
+          <h2 className="text-white text-3xl md:text-4xl font-black italic uppercase tracking-tighter mb-5">
+            Hablemos de<br /><span className="text-cyan-400">tu proyecto</span>
+          </h2>
+          <p className="text-gray-400 text-base max-w-xl mx-auto mb-8 leading-relaxed">
+            La primera consulta es sin costo. En 24 horas tenés una respuesta técnica de nuestro equipo de ingeniería.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onClick={() => navigate('/contacto')} style={{ outline: 'none' }}
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
+              Consultar ahora <ArrowRight size={14} />
+            </button>
+            <button onClick={() => navigate('/catalogo')} style={{ outline: 'none' }}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 border border-white/15 rounded-xl text-white/70 text-sm font-bold hover:border-cyan-400/50 hover:text-white transition-all">
+              Ver catálogo completo
+            </button>
+          </div>
+        </div>
+      </section>
+
       <WppFloat />
+      <CTABanner />
       <Footer />
     </div>
   );
