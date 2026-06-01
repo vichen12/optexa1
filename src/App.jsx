@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -35,6 +36,14 @@ function HomePage() {
 
   return (
     <div className="min-h-screen relative text-white selection:bg-cyan-400 selection:text-slate-900 bg-zinc-950">
+      <Helmet>
+        <title>STOKA | Sistemas ASRS y Automatización de Almacenes — Argentina y Chile</title>
+        <meta name="description" content="Representantes oficiales de DELIE en Argentina y Chile. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales y centros de distribución." />
+        <meta property="og:title" content="STOKA | Sistemas ASRS y Automatización de Almacenes — Argentina y Chile" />
+        <meta property="og:description" content="Representantes oficiales de DELIE en Argentina y Chile. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes." />
+        <meta property="og:url" content="https://www.stokagroup.com/" />
+        <link rel="canonical" href="https://www.stokagroup.com/" />
+      </Helmet>
       <Navbar />
 
       <main className="relative z-10">

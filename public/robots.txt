@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://STOKA.com.ar/sitemap.xml
+Sitemap: https://www.stokagroup.com/sitemap.xml

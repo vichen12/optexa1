@@ -1,4 +1,5 @@
 ﻿import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
@@ -7,13 +8,18 @@ import { ProductCatalog } from '../components/ProductCatalog';
 import { WppFloat } from '../components/WppFloat';
 
 export const CatalogPage = () => {
-  useEffect(() => {
-    document.title = 'Catálogo de Productos DELIE | STOKA Argentina';
-    window.scrollTo(0, 0);
-  }, []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
+      <Helmet>
+        <title>Catálogo ASRS | Transelevadores, Robots Shuttle, VLM y WMS | STOKA Argentina</title>
+        <meta name="description" content="Catálogo completo de sistemas ASRS DELIE: transelevadores de paletas y miniload, robots shuttle 4 vías, almacenamiento vertical (VLM), robots AMR y software WMS/WCS para automatización de almacenes." />
+        <meta property="og:title" content="Catálogo ASRS | Transelevadores, Robots Shuttle, VLM y WMS | STOKA Argentina" />
+        <meta property="og:description" content="Catálogo completo de sistemas ASRS DELIE: transelevadores, robots shuttle, almacenamiento vertical y software WMS para Argentina y Chile." />
+        <meta property="og:url" content="https://www.stokagroup.com/catalogo" />
+        <link rel="canonical" href="https://www.stokagroup.com/catalogo" />
+      </Helmet>
       <Navbar />
 
       {/* HERO */}

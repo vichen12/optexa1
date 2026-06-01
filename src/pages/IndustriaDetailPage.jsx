@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Navbar } from '../components/Navbar';
@@ -122,10 +123,7 @@ export const IndustriaDetailPage = () => {
   const data = INDUSTRY_DATA[slug];
   const ind = INDUSTRIES.find(i => i.slug === slug);
 
-  useEffect(() => {
-    if (ind) document.title = `${ind.label} — Automatización ASRS | STOKA Argentina`;
-    window.scrollTo(0, 0);
-  }, [slug, ind]);
+  useEffect(() => { window.scrollTo(0, 0); }, [slug]);
 
   if (!data || !ind) return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -140,6 +138,14 @@ export const IndustriaDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
+      <Helmet>
+        <title>{ind.label} — Automatización ASRS en Argentina | STOKA</title>
+        <meta name="description" content={`${ind.desc} Representantes oficiales de DELIE en Argentina y Chile. Consultoría y proyecto ASRS llave en mano.`} />
+        <meta property="og:title" content={`${ind.label} — Automatización ASRS | STOKA Argentina`} />
+        <meta property="og:description" content={ind.desc} />
+        <meta property="og:url" content={`https://www.stokagroup.com/industrias/${slug}`} />
+        <link rel="canonical" href={`https://www.stokagroup.com/industrias/${slug}`} />
+      </Helmet>
       <Navbar />
 
       {/* HERO */}

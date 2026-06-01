@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
@@ -82,13 +83,18 @@ const PILLARS = [
 export const IndustriasPage = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.title = 'Industrias — Automatización ASRS por sector | STOKA Argentina';
-    window.scrollTo(0, 0);
-  }, []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
+      <Helmet>
+        <title>Automatización ASRS por Industria | Farmacéutica, Alimentos, E-commerce | STOKA Argentina</title>
+        <meta name="description" content="Soluciones ASRS especializadas por sector: farmacéutica, alimentos y bebidas, e-commerce, manufactura, logística 3PL, minería y cadena de frío. Representantes DELIE en Argentina y Chile." />
+        <meta property="og:title" content="Automatización ASRS por Industria | STOKA Argentina y Chile" />
+        <meta property="og:description" content="ASRS para farmacéutica, alimentos, e-commerce, manufactura, 3PL, minería y cadena de frío. Representantes DELIE en Argentina y Chile." />
+        <meta property="og:url" content="https://www.stokagroup.com/industrias" />
+        <link rel="canonical" href="https://www.stokagroup.com/industrias" />
+      </Helmet>
       <Navbar />
 
       {/* HERO */}

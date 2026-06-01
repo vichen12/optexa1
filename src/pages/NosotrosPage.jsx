@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
@@ -43,13 +44,18 @@ const TEAM = [
 export const NosotrosPage = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.title = 'Nosotros — STOKA | Representación oficial DELIE en Argentina';
-    window.scrollTo(0, 0);
-  }, []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <div className="min-h-screen text-gray-900">
+      <Helmet>
+        <title>Nosotros | Representantes Oficiales DELIE en Argentina y Chile | STOKA Group</title>
+        <meta name="description" content="STOKA es el representante oficial exclusivo de DELIE en Argentina y Chile. Ingeniería y soporte 100% local para sistemas ASRS, transelevadores y automatización de almacenes industriales." />
+        <meta property="og:title" content="Nosotros | Representantes Oficiales DELIE — Argentina y Chile | STOKA Group" />
+        <meta property="og:description" content="Representante oficial exclusivo de DELIE en Argentina y Chile. Ingeniería y soporte 100% local para sistemas ASRS y automatización de almacenes." />
+        <meta property="og:url" content="https://www.stokagroup.com/nosotros" />
+        <link rel="canonical" href="https://www.stokagroup.com/nosotros" />
+      </Helmet>
       <Navbar />
 
       {/* ── HERO — bg: white con acento cyan ── */}

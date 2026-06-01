@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
@@ -80,13 +81,18 @@ const FAQ = [
 export const BeneficiosFiscalesPage = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.title = 'Beneficios Fiscales 2025 — RIGI, Decreto 513, BICE | STOKA Argentina';
-    window.scrollTo(0, 0);
-  }, []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <div className="min-h-screen text-gray-900">
+      <Helmet>
+        <title>Beneficios Fiscales 2025 — RIGI, Decreto 513/2025, BICE | STOKA Argentina</title>
+        <meta name="description" content="Invertí en automatización con el Estado a favor. RIGI: 30 años de estabilidad fiscal. Decreto 513/2025: arancel 0% en equipos DELIE. Línea BICE: financiamiento hasta 10 años a tasas preferenciales." />
+        <meta property="og:title" content="Beneficios Fiscales 2025 para Automatización | RIGI, Decreto 513, BICE | STOKA" />
+        <meta property="og:description" content="RIGI: 30 años de estabilidad. Decreto 513/2025: arancel 0% en equipos DELIE. BICE: financiamiento hasta 10 años. Invertí en automatización con el Estado a favor." />
+        <meta property="og:url" content="https://www.stokagroup.com/beneficios-fiscales" />
+        <link rel="canonical" href="https://www.stokagroup.com/beneficios-fiscales" />
+      </Helmet>
       <Navbar />
 
       {/* ── HERO — foto de fondo ── */}

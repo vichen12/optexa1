@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
@@ -89,13 +90,18 @@ const isDark = (i) => i % 2 !== 0;
 export const ComoTrabajamosPage = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.title = 'Cómo Trabajamos — Metodología ASRS | STOKA Argentina';
-    window.scrollTo(0, 0);
-  }, []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <div className="min-h-screen text-gray-900">
+      <Helmet>
+        <title>Cómo Trabajamos | Proyecto ASRS Llave en Mano en Argentina | STOKA</title>
+        <meta name="description" content="Metodología de 6 pasos: desde la consulta inicial hasta el soporte posventa. Proyectos ASRS llave en mano con ingeniería, instalación y capacitación en Argentina y Chile." />
+        <meta property="og:title" content="Cómo Trabajamos | Proyecto ASRS Llave en Mano | STOKA Argentina" />
+        <meta property="og:description" content="Metodología de 6 pasos para proyectos ASRS llave en mano: consulta, ingeniería, fabricación, instalación, integración y soporte." />
+        <meta property="og:url" content="https://www.stokagroup.com/como-trabajamos" />
+        <link rel="canonical" href="https://www.stokagroup.com/como-trabajamos" />
+      </Helmet>
       <Navbar />
 
       {/* HERO */}
