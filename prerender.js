@@ -37,9 +37,8 @@ const MIME = {
   '.ico':  'image/x-icon',
   '.mp4':  'video/mp4',
   '.json': 'application/json',
-  '.woff2':'font/woff2',
-  '.woff': 'font/woff',
-  '.ttf':  'font/ttf',
+  '.woff2': 'font/woff2',
+  '.woff':  'font/woff',
   '.xml':  'application/xml',
   '.txt':  'text/plain',
   '.pdf':  'application/pdf',
@@ -50,101 +49,118 @@ function startServer() {
     const server = http.createServer((req, res) => {
       let urlPath = req.url.split('?')[0];
       let filePath = path.join(DIST, urlPath);
-
       if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
         filePath = path.join(filePath, 'index.html');
       }
       if (!fs.existsSync(filePath)) {
         filePath = path.join(DIST, 'index.html');
       }
-
       const ext = path.extname(filePath).toLowerCase();
       res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream' });
       fs.createReadStream(filePath).pipe(res);
     });
-
     server.listen(PORT, () => {
-      console.log(`[prerender] Servidor estático en :${PORT}`);
+      console.log(`[prerender] Servidor en :${PORT}`);
       resolve(server);
     });
   });
 }
 
-async function getChromiumConfig() {
-  const isCI = process.env.VERCEL || process.env.CI || process.env.AWS_LAMBDA_FUNCTION_NAME;
+async function getLaunchOptions() {
+  const isCI = !!(process.env.VERCEL || process.env.CI);
+  console.log(`[prerender] Entorno: ${isCI ? 'CI/Vercel' : 'local'} | platform: ${process.platform}`);
+  console.log(`[prerender] VERCEL=${process.env.VERCEL} CI=${process.env.CI}`);
+
+  const BASE_ARGS = [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-dev-shm-usage',
+    '--disable-gpu',
+    '--no-first-run',
+    '--no-zygote',
+    '--single-process',
+  ];
 
   if (isCI) {
-    console.log('[prerender] Entorno serverless detectado, usando @sparticuz/chromium...');
+    // En Vercel: usar @sparticuz/chromium
     const chromium = (await import('@sparticuz/chromium')).default;
+    const executablePath = await chromium.executablePath();
+    console.log(`[prerender] executablePath (sparticuz): ${executablePath}`);
+    console.log(`[prerender] existe: ${fs.existsSync(executablePath)}`);
     return {
-      executablePath: await chromium.executablePath(),
-      args: [...chromium.args, '--no-sandbox', '--disable-setuid-sandbox'],
+      executablePath,
+      args: [...chromium.args, ...BASE_ARGS],
+      headless: chromium.headless,
+      defaultViewport: { width: 1280, height: 800 },
     };
   }
 
-  // Local — usar Chrome instalado según plataforma
-  const chromePaths = {
+  // Local: usar Chrome del sistema
+  const localPaths = {
     win32:  'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
     darwin: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-    linux:  '/usr/bin/google-chrome',
+    linux:  '/usr/bin/google-chrome-stable',
   };
-
-  return {
-    executablePath: chromePaths[process.platform] || chromePaths.linux,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  };
+  const executablePath = localPaths[process.platform] ?? localPaths.linux;
+  console.log(`[prerender] executablePath (local): ${executablePath}`);
+  return { executablePath, args: BASE_ARGS, headless: true, defaultViewport: { width: 1280, height: 800 } };
 }
 
 async function main() {
-  let puppeteerCore;
+  // Importar puppeteer-core dinámicamente para fallar graciosamente si no está
+  let puppeteer;
   try {
-    puppeteerCore = (await import('puppeteer-core')).default;
-  } catch {
-    console.log('[prerender] puppeteer-core no instalado — skipping (Vercel lo instala)');
+    puppeteer = (await import('puppeteer-core')).default;
+    console.log('[prerender] puppeteer-core importado OK');
+  } catch (e) {
+    console.warn('[prerender] puppeteer-core no disponible — prerender omitido');
+    console.warn('[prerender] Error:', e.message);
     return;
   }
 
   const server = await startServer();
-  const { executablePath, args } = await getChromiumConfig();
 
-  const browser = await puppeteerCore.launch({
-    executablePath,
-    args,
-    headless: true,
-    defaultViewport: { width: 1280, height: 800 },
-  });
+  let launchOpts;
+  try {
+    launchOpts = await getLaunchOptions();
+  } catch (e) {
+    console.error('[prerender] Error obteniendo configuración de Chromium:', e.message);
+    server.close();
+    process.exit(1);
+  }
 
-  console.log('[prerender] ✅ Chromium lanzado');
+  let browser;
+  try {
+    browser = await puppeteer.launch(launchOpts);
+    console.log('[prerender] ✅ Chromium lanzado');
+  } catch (e) {
+    console.error('[prerender] ❌ No se pudo lanzar Chromium:', e.message);
+    server.close();
+    process.exit(1);
+  }
 
   let ok = 0;
   let errors = 0;
 
   for (const route of ROUTES) {
     const page = await browser.newPage();
-
     try {
       await page.goto(`http://localhost:${PORT}${route}`, {
         waitUntil: 'domcontentloaded',
         timeout: 30000,
       });
-
-      // Esperar a que React renderice contenido
       await page.waitForSelector('#root > *', { timeout: 10000 }).catch(() => {});
       await new Promise(r => setTimeout(r, 800));
 
       const html = await page.content();
 
-      // Guardar como dist/ruta.html (NO dist/ruta/index.html) — cleanUrls en vercel.json lo sirve
-      let outPath;
-      if (route === '/') {
-        outPath = path.join(DIST, 'index.html');
-      } else {
-        outPath = path.join(DIST, route.slice(1).replace(/\//g, path.sep) + '.html');
-      }
+      const outPath = route === '/'
+        ? path.join(DIST, 'index.html')
+        : path.join(DIST, route.slice(1).replace(/\//g, path.sep) + '.html');
 
       fs.mkdirSync(path.dirname(outPath), { recursive: true });
       fs.writeFileSync(outPath, html, 'utf-8');
-      console.log(`[prerender] ✅ ${route}`);
+      console.log(`[prerender] ✅ ${route} → ${path.relative(DIST, outPath)}`);
       ok++;
     } catch (err) {
       console.error(`[prerender] ❌ ${route} — ${err.message}`);
@@ -156,8 +172,7 @@ async function main() {
 
   await browser.close();
   server.close();
-
-  console.log(`[prerender] Listo. ${ok} OK / ${errors} errores.`);
+  console.log(`\n[prerender] Resultado: ${ok} OK / ${errors} errores`);
   if (errors > 0) process.exit(1);
 }
 
