@@ -5,12 +5,12 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, 'dist');
-const PORT = 4173;
+const PORT = 8765;
 
 const ROUTES = [
   '/',
-  '/catalogo',
   '/soluciones',
+  '/catalogo',
   '/industrias',
   '/industrias/ecommerce',
   '/industrias/logistica-3pl',
@@ -64,41 +64,62 @@ function startServer() {
     });
 
     server.listen(PORT, () => {
-      console.log(`[prerender] Static server on :${PORT}`);
+      console.log(`[prerender] Servidor estático en :${PORT}`);
       resolve(server);
     });
   });
 }
 
+async function getChromiumConfig() {
+  const isCI = process.env.VERCEL || process.env.CI || process.env.AWS_LAMBDA_FUNCTION_NAME;
+
+  if (isCI) {
+    console.log('[prerender] Entorno serverless detectado, usando @sparticuz/chromium...');
+    const chromium = (await import('@sparticuz/chromium')).default;
+    return {
+      executablePath: await chromium.executablePath(),
+      args: [...chromium.args, '--no-sandbox', '--disable-setuid-sandbox'],
+    };
+  }
+
+  // Local — usar Chrome instalado según plataforma
+  const chromePaths = {
+    win32:  'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+    darwin: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    linux:  '/usr/bin/google-chrome',
+  };
+
+  return {
+    executablePath: chromePaths[process.platform] || chromePaths.linux,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  };
+}
+
 async function main() {
-  let puppeteer;
+  let puppeteerCore;
   try {
-    const mod = await import('puppeteer');
-    puppeteer = mod.default;
+    puppeteerCore = (await import('puppeteer-core')).default;
   } catch {
-    console.log('[prerender] puppeteer no disponible — skipping (instalar en Vercel)');
+    console.log('[prerender] puppeteer-core no instalado — skipping (Vercel lo instala)');
     return;
   }
 
   const server = await startServer();
+  const { executablePath, args } = await getChromiumConfig();
 
-  const browser = await puppeteer.launch({
+  const browser = await puppeteerCore.launch({
+    executablePath,
+    args,
     headless: true,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage',
-      '--disable-gpu',
-      '--no-first-run',
-      '--no-zygote',
-    ],
+    defaultViewport: { width: 1280, height: 800 },
   });
 
+  console.log('[prerender] ✅ Chromium lanzado');
+
   let ok = 0;
-  let fail = 0;
+  let errors = 0;
 
   for (const route of ROUTES) {
-    process.stdout.write(`[prerender] ${route} ...`);
     const page = await browser.newPage();
 
     try {
@@ -107,25 +128,27 @@ async function main() {
         timeout: 30000,
       });
 
-      // Wait for React to render content
+      // Esperar a que React renderice contenido
       await page.waitForSelector('#root > *', { timeout: 10000 }).catch(() => {});
       await new Promise(r => setTimeout(r, 800));
 
       const html = await page.content();
 
-      // Save as dist/ruta.html (not dist/ruta/index.html) to avoid 301 redirects
-      // cleanUrls:true in vercel.json serves /catalogo from dist/catalogo.html
-      const outPath = route === '/'
-        ? path.join(DIST, 'index.html')
-        : path.join(DIST, route.slice(1).replace(/\//g, path.sep) + '.html');
+      // Guardar como dist/ruta.html (NO dist/ruta/index.html) — cleanUrls en vercel.json lo sirve
+      let outPath;
+      if (route === '/') {
+        outPath = path.join(DIST, 'index.html');
+      } else {
+        outPath = path.join(DIST, route.slice(1).replace(/\//g, path.sep) + '.html');
+      }
 
       fs.mkdirSync(path.dirname(outPath), { recursive: true });
       fs.writeFileSync(outPath, html, 'utf-8');
-      console.log(' ✓');
+      console.log(`[prerender] ✅ ${route}`);
       ok++;
     } catch (err) {
-      console.log(` ✗  ${err.message}`);
-      fail++;
+      console.error(`[prerender] ❌ ${route} — ${err.message}`);
+      errors++;
     } finally {
       await page.close();
     }
@@ -134,11 +157,11 @@ async function main() {
   await browser.close();
   server.close();
 
-  console.log(`\n[prerender] ${ok} ok, ${fail} failed`);
-  if (fail > 0) process.exit(1);
+  console.log(`[prerender] Listo. ${ok} OK / ${errors} errores.`);
+  if (errors > 0) process.exit(1);
 }
 
 main().catch(err => {
-  console.error('[prerender] Fatal:', err.message);
+  console.error('[prerender] Error fatal:', err.message);
   process.exit(1);
 });
