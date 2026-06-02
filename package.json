@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node prerender.js",
+    "build": "vite build",
+    "build:vercel": "vite build && node prerender.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@sparticuz/chromium": "^133.0.0",
+    "mime-types": "^2.1.35",
     "puppeteer-core": "^24.0.0",
     "@eslint/js": "^9.39.1",
     "@types/react": "^19.2.5",

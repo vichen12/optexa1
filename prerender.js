@@ -1,10 +1,13 @@
-import http from 'http';
-import fs from 'fs';
-import path from 'path';
+import puppeteer from 'puppeteer-core';
+import chromium from '@sparticuz/chromium';
+import { createServer } from 'http';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from 'fs';
+import { resolve, join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import mime from 'mime-types';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DIST = path.resolve(__dirname, 'dist');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const DIST = resolve(__dirname, 'dist');
 const PORT = 8765;
 
 const ROUTES = [
@@ -25,119 +28,69 @@ const ROUTES = [
   '/contacto',
 ];
 
-const MIME = {
-  '.html': 'text/html; charset=utf-8',
-  '.js':   'application/javascript',
-  '.css':  'text/css',
-  '.png':  'image/png',
-  '.jpg':  'image/jpeg',
-  '.jpeg': 'image/jpeg',
-  '.webp': 'image/webp',
-  '.svg':  'image/svg+xml',
-  '.ico':  'image/x-icon',
-  '.mp4':  'video/mp4',
-  '.json': 'application/json',
-  '.woff2': 'font/woff2',
-  '.woff':  'font/woff',
-  '.xml':  'application/xml',
-  '.txt':  'text/plain',
-  '.pdf':  'application/pdf',
-};
+function startStaticServer() {
+  return new Promise((resolve, reject) => {
+    const server = createServer((req, res) => {
+      const urlPath = req.url.split('?')[0];
+      let filePath = join(DIST, urlPath);
 
-function startServer() {
-  return new Promise(resolve => {
-    const server = http.createServer((req, res) => {
-      let urlPath = req.url.split('?')[0];
-      let filePath = path.join(DIST, urlPath);
-      if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
-        filePath = path.join(filePath, 'index.html');
+      if (existsSync(filePath) && statSync(filePath).isDirectory()) {
+        filePath = join(filePath, 'index.html');
       }
-      if (!fs.existsSync(filePath)) {
-        filePath = path.join(DIST, 'index.html');
+      if (!existsSync(filePath)) {
+        filePath = join(DIST, 'index.html');
       }
-      const ext = path.extname(filePath).toLowerCase();
-      res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream' });
-      fs.createReadStream(filePath).pipe(res);
+
+      const contentType = mime.lookup(filePath) || 'application/octet-stream';
+      res.writeHead(200, { 'Content-Type': contentType });
+      res.end(readFileSync(filePath));
     });
+
     server.listen(PORT, () => {
-      console.log(`[prerender] Servidor en :${PORT}`);
+      console.log(`[prerender] Servidor estático en http://localhost:${PORT}`);
       resolve(server);
     });
+
+    server.on('error', reject);
   });
 }
 
-async function getLaunchOptions() {
-  const isCI = !!(process.env.VERCEL || process.env.CI);
-  console.log(`[prerender] Entorno: ${isCI ? 'CI/Vercel' : 'local'} | platform: ${process.platform}`);
-  console.log(`[prerender] VERCEL=${process.env.VERCEL} CI=${process.env.CI}`);
+async function getBrowserConfig() {
+  const isServerless = process.env.VERCEL === '1' || process.env.CI === 'true';
 
-  const BASE_ARGS = [
-    '--no-sandbox',
-    '--disable-setuid-sandbox',
-    '--disable-dev-shm-usage',
-    '--disable-gpu',
-    '--no-first-run',
-    '--no-zygote',
-    '--single-process',
-  ];
-
-  if (isCI) {
-    // En Vercel: usar @sparticuz/chromium
-    const chromium = (await import('@sparticuz/chromium')).default;
+  if (isServerless) {
+    console.log('[prerender] Entorno serverless detectado — usando @sparticuz/chromium');
     const executablePath = await chromium.executablePath();
-    console.log(`[prerender] executablePath (sparticuz): ${executablePath}`);
-    console.log(`[prerender] existe: ${fs.existsSync(executablePath)}`);
+    console.log(`[prerender] executablePath: ${executablePath}`);
     return {
       executablePath,
-      args: [...chromium.args, ...BASE_ARGS],
+      args: chromium.args,
       headless: chromium.headless,
-      defaultViewport: { width: 1280, height: 800 },
+      defaultViewport: chromium.defaultViewport,
     };
   }
 
-  // Local: usar Chrome del sistema
   const localPaths = {
     win32:  'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
     darwin: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
     linux:  '/usr/bin/google-chrome-stable',
   };
   const executablePath = localPaths[process.platform] ?? localPaths.linux;
-  console.log(`[prerender] executablePath (local): ${executablePath}`);
-  return { executablePath, args: BASE_ARGS, headless: true, defaultViewport: { width: 1280, height: 800 } };
+  console.log(`[prerender] Chrome local: ${executablePath}`);
+  return {
+    executablePath,
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+    headless: true,
+    defaultViewport: { width: 1280, height: 800 },
+  };
 }
 
 async function main() {
-  // Importar puppeteer-core dinámicamente para fallar graciosamente si no está
-  let puppeteer;
-  try {
-    puppeteer = (await import('puppeteer-core')).default;
-    console.log('[prerender] puppeteer-core importado OK');
-  } catch (e) {
-    console.warn('[prerender] puppeteer-core no disponible — prerender omitido');
-    console.warn('[prerender] Error:', e.message);
-    return;
-  }
+  const server = await startStaticServer();
+  const config = await getBrowserConfig();
 
-  const server = await startServer();
-
-  let launchOpts;
-  try {
-    launchOpts = await getLaunchOptions();
-  } catch (e) {
-    console.error('[prerender] Error obteniendo configuración de Chromium:', e.message);
-    server.close();
-    process.exit(1);
-  }
-
-  let browser;
-  try {
-    browser = await puppeteer.launch(launchOpts);
-    console.log('[prerender] ✅ Chromium lanzado');
-  } catch (e) {
-    console.error('[prerender] ❌ No se pudo lanzar Chromium:', e.message);
-    server.close();
-    process.exit(1);
-  }
+  const browser = await puppeteer.launch(config);
+  console.log('[prerender] ✅ Chromium lanzado');
 
   let ok = 0;
   let errors = 0;
@@ -146,21 +99,21 @@ async function main() {
     const page = await browser.newPage();
     try {
       await page.goto(`http://localhost:${PORT}${route}`, {
-        waitUntil: 'domcontentloaded',
+        waitUntil: 'networkidle0',
         timeout: 30000,
       });
-      await page.waitForSelector('#root > *', { timeout: 10000 }).catch(() => {});
-      await new Promise(r => setTimeout(r, 800));
 
       const html = await page.content();
 
       const outPath = route === '/'
-        ? path.join(DIST, 'index.html')
-        : path.join(DIST, route.slice(1).replace(/\//g, path.sep) + '.html');
+        ? join(DIST, 'index.html')
+        : join(DIST, route.slice(1).replace(/\//g, '/') + '.html');
 
-      fs.mkdirSync(path.dirname(outPath), { recursive: true });
-      fs.writeFileSync(outPath, html, 'utf-8');
-      console.log(`[prerender] ✅ ${route} → ${path.relative(DIST, outPath)}`);
+      const outDir = dirname(outPath);
+      if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
+      writeFileSync(outPath, html, 'utf-8');
+
+      console.log(`[prerender] ✅ ${route}`);
       ok++;
     } catch (err) {
       console.error(`[prerender] ❌ ${route} — ${err.message}`);
@@ -172,7 +125,8 @@ async function main() {
 
   await browser.close();
   server.close();
-  console.log(`\n[prerender] Resultado: ${ok} OK / ${errors} errores`);
+
+  console.log(`\n[prerender] Listo. ${ok} OK / ${errors} errores.`);
   if (errors > 0) process.exit(1);
 }
 
