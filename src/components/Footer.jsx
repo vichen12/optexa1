@@ -15,7 +15,7 @@ const MAPS_LINK  = "https://maps.google.com/maps?q=Carril+Rodr%C3%ADguez+Pe%C3%B
 export const Footer = () => {
   const year = new Date().getFullYear();
   const navigate = useNavigate();
-  const gmailLink = 'https://mail.google.com/mail/?view=cm&fs=1&to=stokamza.consultas@gmail.com&su=Consulta%20desde%20Stoka';
+  const gmailLink = 'mailto:consultas@stokagroup.com';
 
   const handlePageNav = (href) => {
     navigate(href);
@@ -56,7 +56,7 @@ export const Footer = () => {
               </a>
               <a href={gmailLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm font-mono">
                 <Mail size={14} className="text-cyan-500 shrink-0" />
-                stokamza.consultas@gmail.com
+                consultas@stokagroup.com
               </a>
               <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm">
                 <MapPin size={14} className="text-cyan-500 shrink-0" />

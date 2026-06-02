@@ -10,5 +10,14 @@ export default defineConfig({
   base: '/', 
   build: {
     outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'router': ['react-router-dom'],
+          'motion': ['framer-motion'],
+        },
+      },
+    },
   }
 })

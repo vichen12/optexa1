@@ -1,4 +1,3 @@
-import puppeteer from 'puppeteer';
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
@@ -72,6 +71,15 @@ function startServer() {
 }
 
 async function main() {
+  let puppeteer;
+  try {
+    const mod = await import('puppeteer');
+    puppeteer = mod.default;
+  } catch {
+    console.log('[prerender] puppeteer no disponible — skipping (instalar en Vercel)');
+    return;
+  }
+
   const server = await startServer();
 
   const browser = await puppeteer.launch({
@@ -105,8 +113,11 @@ async function main() {
 
       const html = await page.content();
 
-      const parts = route === '/' ? [] : route.slice(1).split('/');
-      const outPath = path.join(DIST, ...parts, 'index.html');
+      // Save as dist/ruta.html (not dist/ruta/index.html) to avoid 301 redirects
+      // cleanUrls:true in vercel.json serves /catalogo from dist/catalogo.html
+      const outPath = route === '/'
+        ? path.join(DIST, 'index.html')
+        : path.join(DIST, route.slice(1).replace(/\//g, path.sep) + '.html');
 
       fs.mkdirSync(path.dirname(outPath), { recursive: true });
       fs.writeFileSync(outPath, html, 'utf-8');

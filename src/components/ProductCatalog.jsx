@@ -187,7 +187,7 @@ function ProductModal({ product, onClose }) {
                     i === imgIdx ? 'border-cyan-500' : 'border-transparent opacity-60 hover:opacity-100'
                   }`}
                 >
-                  <img src={src} alt="" className="w-full h-full object-contain bg-gray-50" />
+                  <img src={src} alt={`${product.name} — imagen ${i + 1}`} className="w-full h-full object-contain bg-gray-50" />
                 </button>
               ))}
             </div>
