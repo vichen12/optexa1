@@ -61,7 +61,7 @@ export const Hero = () => {
         >
           <img
             src="/image.png"
-            alt="DELIE"
+            alt="Sistemas ASRS DELIE para automatización de almacenes industriales"
             className="h-10 object-contain mx-auto"
             style={{ filter: 'brightness(1.1) saturate(1.2)' }}
           />

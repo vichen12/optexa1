@@ -19,6 +19,19 @@ export const CatalogPage = () => {
         <meta property="og:description" content="Catálogo completo de sistemas ASRS DELIE: transelevadores, robots shuttle, almacenamiento vertical y software WMS para Argentina y Chile." />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo" />
         <link rel="canonical" href="https://www.stokagroup.com/catalogo" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Catálogo ASRS DELIE — Argentina",
+          "description": "Sistemas de almacenamiento automatizado DELIE disponibles en Argentina a través de STOKA.",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "AS/RS", "description": "Estanterías AS/RS de 7 a 40 metros. Drive-in, shuttle, mezzanine." },
+            { "@type": "ListItem", "position": 2, "name": "Almacenamiento vertical", "description": "Carruseles verticales y módulos VLM. Hasta 90% menos espacio de suelo." },
+            { "@type": "ListItem", "position": 3, "name": "Robots de manipulación", "description": "Grúas apiladoras, transelevadores MiniLoad, robots lanzadera y AMR." },
+            { "@type": "ListItem", "position": 4, "name": "Equipo de transporte", "description": "Elevadores, transportadores de cadena, rodillos y paletizadores." },
+            { "@type": "ListItem", "position": 5, "name": "Software inteligente", "description": "WMS, WCS, HMS y visualización 3D para control total del almacén." }
+          ]
+        })}</script>
       </Helmet>
       <Navbar />
 
@@ -26,7 +39,7 @@ export const CatalogPage = () => {
       <div className="relative mt-20 h-[50vh] min-h-[360px] flex items-end overflow-hidden">
         {/* Background image */}
         <img
-          src="/WhatsApp Image 2026-05-19 at 12.19.03.jpeg"
+          src="/catalogo-banner-asrs.jpeg"
           alt="Almacén automatizado STOKA"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />

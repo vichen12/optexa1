@@ -39,7 +39,7 @@ export const Footer = () => {
           {/* BRAND + CONTACT */}
           <div className="space-y-6">
             <div className="flex items-center">
-              <img src="/stoka_deliecn_logo_sin_fondo.png" alt="Stoka" className="w-56 h-28 object-contain" />
+              <img src="/stoka_deliecn_logo_sin_fondo.png" alt="Logo STOKA — Representantes DELIE en Argentina" className="w-56 h-28 object-contain" />
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">
               Representantes oficiales exclusivos de DELIE en Argentina. Automatización de almacenes ASRS de clase mundial con precios locales.

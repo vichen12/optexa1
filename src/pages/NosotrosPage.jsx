@@ -89,7 +89,7 @@ export const NosotrosPage = () => {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }}
             className="hidden md:flex flex-col items-center gap-4 mt-8">
             <div className="border border-gray-100 rounded-2xl px-10 py-8 bg-gray-50 flex flex-col items-center gap-4 shadow-sm">
-              <img src="/image.png" alt="DELIE" className="w-56 object-contain" />
+              <img src="/image.png" alt="DELIE — Fabricante de sistemas ASRS" className="w-56 object-contain" />
               <div className="w-8 h-px bg-gray-300" />
               <p className="text-[10px] font-mono text-gray-400 uppercase tracking-[0.3em] text-center leading-relaxed">Representación oficial<br />Argentina</p>
             </div>
@@ -141,7 +141,7 @@ export const NosotrosPage = () => {
       <section className="bg-slate-900 py-20 px-6">
         <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <img src="/image.png" alt="DELIE" className="h-10 object-contain mb-5" />
+            <img src="/image.png" alt="DELIE — Fabricante de sistemas ASRS" className="h-10 object-contain mb-5" />
             <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-4">Nuestro fabricante</p>
             <h2 className="text-3xl md:text-4xl font-black italic uppercase tracking-tighter leading-tight text-white mb-5">
               DELIE —<br /><span className="text-cyan-400">Fabricante global ASRS</span>

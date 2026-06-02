@@ -99,7 +99,7 @@ export const IndustriasPage = () => {
 
       {/* HERO */}
       <div className="relative mt-20 h-[50vh] min-h-[360px] flex items-end overflow-hidden">
-        <img src="/ChatGPT Image 20 may 2026, 00_42_43.png" alt="Industrias STOKA"
+        <img src="/industrias-banner.png" alt="Industrias STOKA — automatización ASRS por sector"
           className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-linear-to-r from-slate-950/95 via-slate-950/70 to-slate-950/20" />
         <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 to-transparent" />

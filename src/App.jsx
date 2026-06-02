@@ -41,9 +41,16 @@ function HomePage() {
         <meta name="description" content="Representantes oficiales de DELIE en Argentina y Chile. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales y centros de distribución." />
         <meta property="og:title" content="STOKA | Sistemas ASRS y Automatización de Almacenes — Argentina y Chile" />
         <meta property="og:description" content="Representantes oficiales de DELIE en Argentina y Chile. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes." />
-        <meta property="og:image" content="https://www.stokagroup.com/OPTEXACONFONDOBLANCO.png" />
+        <meta property="og:image" content="https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png" />
         <meta property="og:url" content="https://www.stokagroup.com/" />
         <link rel="canonical" href="https://www.stokagroup.com/" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "STOKA",
+          "url": "https://www.stokagroup.com",
+          "description": "Representantes oficiales exclusivos de DELIE en Argentina. Sistemas ASRS y automatización de almacenes."
+        })}</script>
       </Helmet>
       <Navbar />
 

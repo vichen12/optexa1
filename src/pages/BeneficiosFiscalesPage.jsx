@@ -92,6 +92,16 @@ export const BeneficiosFiscalesPage = () => {
         <meta property="og:description" content="RIGI: 30 años de estabilidad. Decreto 513/2025: arancel 0% en equipos DELIE. BICE: financiamiento hasta 10 años. Invertí en automatización con el Estado a favor." />
         <meta property="og:url" content="https://www.stokagroup.com/beneficios-fiscales" />
         <link rel="canonical" href="https://www.stokagroup.com/beneficios-fiscales" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "¿Mi empresa puede acceder al RIGI?", "acceptedAnswer": { "@type": "Answer", "text": "El RIGI aplica a proyectos de inversión mayores a USD 200 millones. Para proyectos más pequeños, existen esquemas provinciales y municipales con beneficios similares." } },
+            { "@type": "Question", "name": "¿El Decreto 513/2025 aplica a todos los equipos DELIE?", "acceptedAnswer": { "@type": "Answer", "text": "Aplica a las posiciones arancelarias específicas de robots industriales y sistemas automatizados de almacenamiento. La mayoría de los productos del catálogo DELIE están incluidos." } },
+            { "@type": "Question", "name": "¿Cómo accedo a la línea BICE?", "acceptedAnswer": { "@type": "Answer", "text": "A través de un banco comercial adherido (Banco Nación, Banco Provincia, entre otros). STOKA puede acompañarte en la elaboración del proyecto técnico requerido por el banco." } },
+            { "@type": "Question", "name": "¿Se pueden combinar los beneficios?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, en muchos casos es posible acceder simultáneamente a la importación con arancel 0% y al financiamiento BICE. La compatibilidad con el RIGI depende del perfil del proyecto." } }
+          ]
+        })}</script>
       </Helmet>
       <Navbar />
 
