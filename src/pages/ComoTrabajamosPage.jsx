@@ -99,8 +99,32 @@ export const ComoTrabajamosPage = () => {
         <meta name="description" content="Metodología de 6 pasos: desde la consulta inicial hasta el soporte posventa. Proyectos ASRS llave en mano con ingeniería, instalación y capacitación en Argentina y Chile." />
         <meta property="og:title" content="Cómo Trabajamos | Proyecto ASRS Llave en Mano | STOKA Argentina" />
         <meta property="og:description" content="Metodología de 6 pasos para proyectos ASRS llave en mano: consulta, ingeniería, fabricación, instalación, integración y soporte." />
+        <meta name="robots" content="index, follow" />
         <meta property="og:url" content="https://www.stokagroup.com/como-trabajamos" />
         <link rel="canonical" href="https://www.stokagroup.com/como-trabajamos" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Cómo trabajamos", "item": "https://www.stokagroup.com/como-trabajamos" }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": "Cómo implementar un proyecto ASRS llave en mano con STOKA",
+          "description": "Proceso de 6 fases para automatizar tu almacén: desde la consulta inicial hasta el soporte posventa continuo.",
+          "totalTime": "P6M",
+          "step": [
+            { "@type": "HowToStep", "position": 1, "name": "Consulta inicial", "text": "Completás el formulario de contacto o nos escribís directamente. En menos de 24 horas un ingeniero te responde para entender tu operación: tipo de almacén, volumen de SKUs, throughput y objetivos." },
+            { "@type": "HowToStep", "position": 2, "name": "Diagnóstico técnico", "text": "Analizamos datos históricos de movimientos, catálogo de SKUs, picos de demanda y layout existente. Medimos los KPIs actuales para establecer la línea base del proyecto." },
+            { "@type": "HowToStep", "position": 3, "name": "Diseño y propuesta", "text": "Evaluamos alternativas tecnológicas según el perfil de la operación. Calculamos el TCO a 10 años y el ROI proyectado. La propuesta incluye layout 3D y simulación de flujos." },
+            { "@type": "HowToStep", "position": 4, "name": "Instalación", "text": "Coordinamos ingeniería de detalle, instalación mecánica y eléctrica, integración con ERP/WMS existente y pruebas de aceptación FAT y SAT." },
+            { "@type": "HowToStep", "position": 5, "name": "Puesta en marcha", "text": "Acompañamos el arranque con soporte técnico directo, ajuste de parámetros en tiempo real y capacitación del personal operativo." },
+            { "@type": "HowToStep", "position": 6, "name": "Soporte y optimización", "text": "Monitoreo remoto de KPIs, mantenimiento preventivo programado y soporte técnico local 24/7. Optimización continua basada en datos reales." }
+          ]
+        })}</script>
       </Helmet>
       <Navbar />
 

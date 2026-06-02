@@ -90,8 +90,17 @@ export const BeneficiosFiscalesPage = () => {
         <meta name="description" content="Invertí en automatización con el Estado a favor. RIGI: 30 años de estabilidad fiscal. Decreto 513/2025: arancel 0% en equipos DELIE. Línea BICE: financiamiento hasta 10 años a tasas preferenciales." />
         <meta property="og:title" content="Beneficios Fiscales 2025 para Automatización | RIGI, Decreto 513, BICE | STOKA" />
         <meta property="og:description" content="RIGI: 30 años de estabilidad. Decreto 513/2025: arancel 0% en equipos DELIE. BICE: financiamiento hasta 10 años. Invertí en automatización con el Estado a favor." />
+        <meta name="robots" content="index, follow" />
         <meta property="og:url" content="https://www.stokagroup.com/beneficios-fiscales" />
         <link rel="canonical" href="https://www.stokagroup.com/beneficios-fiscales" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Beneficios fiscales", "item": "https://www.stokagroup.com/beneficios-fiscales" }
+          ]
+        })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",

@@ -22,13 +22,62 @@ import { BeneficiosFiscalesPage } from './pages/BeneficiosFiscalesPage';
 import { IndustriasPage } from './pages/IndustriasPage';
 import { IndustriaDetailPage } from './pages/IndustriaDetailPage';
 import { ContactPage } from './pages/ContactPage';
+import { CatalogoASRSPage } from './pages/catalogo/CatalogoASRSPage';
+import { CatalogoRobotsPage } from './pages/catalogo/CatalogoRobotsPage';
+import { CatalogoVerticalPage } from './pages/catalogo/CatalogoVerticalPage';
+import { CatalogoTransportePage } from './pages/catalogo/CatalogoTransportePage';
+import { CatalogoSoftwarePage } from './pages/catalogo/CatalogoSoftwarePage';
+
+const ORGANIZATION_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  "name": "STOKA",
+  "legalName": "STOKA",
+  "description": "Representantes oficiales exclusivos de DELIE en Argentina. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales.",
+  "url": "https://www.stokagroup.com",
+  "logo": "https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png",
+  "image": "https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png",
+  "telephone": ["+5492615886671", "+5492612071048"],
+  "email": "contacto@stokagroup.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carril Rodríguez Peña 35",
+    "addressLocality": "Maipú",
+    "addressRegion": "Mendoza",
+    "postalCode": "5515",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -32.9468,
+    "longitude": -68.4081
+  },
+  "areaServed": [
+    { "@type": "Country", "name": "Argentina" },
+    { "@type": "Country", "name": "Chile" }
+  ],
+
+  "knowsAbout": [
+    "Sistemas ASRS",
+    "Automatización de almacenes",
+    "Transelevadores",
+    "Robots AMR",
+    "Software WMS",
+    "Software WCS",
+    "VLM",
+    "Carruseles verticales"
+  ],
+  "foundingDate": "2025",
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2 },
+  "priceRange": "$$$$"
+};
 
 function HomePage() {
   useEffect(() => {
     const handleVisibilityChange = () => {
       document.title = document.visibilityState === 'hidden'
         ? '¡Volvé! Te esperamos 👋'
-        : 'STOKA — Automatización de Almacenes DELIE en Argentina';
+        : 'Automatización de Almacenes Argentina | Sistemas ASRS DELIE | STOKA';
     };
     document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
@@ -37,9 +86,10 @@ function HomePage() {
   return (
     <div className="min-h-screen relative text-white selection:bg-cyan-400 selection:text-slate-900 bg-zinc-950">
       <Helmet>
-        <title>STOKA | Sistemas ASRS y Automatización de Almacenes — Argentina y Chile</title>
+        <title>Automatización de Almacenes Argentina | Sistemas ASRS DELIE | STOKA</title>
+        <meta name="robots" content="index, follow" />
         <meta name="description" content="Representantes oficiales de DELIE en Argentina y Chile. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales y centros de distribución." />
-        <meta property="og:title" content="STOKA | Sistemas ASRS y Automatización de Almacenes — Argentina y Chile" />
+        <meta property="og:title" content="Automatización de Almacenes Argentina | Sistemas ASRS DELIE | STOKA" />
         <meta property="og:description" content="Representantes oficiales de DELIE en Argentina y Chile. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes." />
         <meta property="og:image" content="https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png" />
         <meta property="og:url" content="https://www.stokagroup.com/" />
@@ -47,10 +97,12 @@ function HomePage() {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": "STOKA",
+          "name": "STOKA — Automatización de Almacenes",
           "url": "https://www.stokagroup.com",
-          "description": "Representantes oficiales exclusivos de DELIE en Argentina. Sistemas ASRS y automatización de almacenes."
+          "description": "Representantes oficiales exclusivos de DELIE en Argentina. Sistemas ASRS y automatización de almacenes.",
+          "publisher": { "@type": "Organization", "name": "STOKA" }
         })}</script>
+        <script type="application/ld+json">{JSON.stringify(ORGANIZATION_SCHEMA)}</script>
       </Helmet>
       <Navbar />
 
@@ -78,9 +130,17 @@ function HomePage() {
 function App() {
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(ORGANIZATION_SCHEMA)}</script>
+      </Helmet>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/catalogo" element={<CatalogPage />} />
+        <Route path="/catalogo/asrs" element={<CatalogoASRSPage />} />
+        <Route path="/catalogo/robots-manipulacion" element={<CatalogoRobotsPage />} />
+        <Route path="/catalogo/almacenamiento-vertical" element={<CatalogoVerticalPage />} />
+        <Route path="/catalogo/equipo-transporte" element={<CatalogoTransportePage />} />
+        <Route path="/catalogo/software" element={<CatalogoSoftwarePage />} />
         <Route path="/soluciones" element={<SolucionesPage />} />
         <Route path="/industrias" element={<IndustriasPage />} />
         <Route path="/industrias/:slug" element={<IndustriaDetailPage />} />

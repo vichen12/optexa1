@@ -88,7 +88,7 @@ export const Navbar = () => {
             )}>
               <img
                 src="/stoka_logo_sin_fondo.png"
-                alt="STOKA Logo"
+                alt="STOKA — Representantes oficiales DELIE en Argentina"
                 className="w-full h-full object-contain scale-[2] group-hover:scale-[2.1] active:scale-[1.9] transition-transform duration-300"
               />
             </div>

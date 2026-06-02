@@ -1,4 +1,4 @@
-import { Mail, ArrowRight, MapPin, Phone, Linkedin } from 'lucide-react';
+import { Mail, ArrowRight, MapPin, Phone } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const PAGE_LINKS = [
@@ -15,7 +15,7 @@ const MAPS_LINK  = "https://maps.google.com/maps?q=Carril+Rodr%C3%ADguez+Pe%C3%B
 export const Footer = () => {
   const year = new Date().getFullYear();
   const navigate = useNavigate();
-  const gmailLink = 'mailto:consultas@stokagroup.com';
+  const gmailLink = 'mailto:contacto@stokagroup.com';
 
   const handlePageNav = (href) => {
     navigate(href);
@@ -56,7 +56,7 @@ export const Footer = () => {
               </a>
               <a href={gmailLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm font-mono">
                 <Mail size={14} className="text-cyan-500 shrink-0" />
-                consultas@stokagroup.com
+                contacto@stokagroup.com
               </a>
               <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm">
                 <MapPin size={14} className="text-cyan-500 shrink-0" />
@@ -64,19 +64,7 @@ export const Footer = () => {
               </a>
             </div>
 
-            <div className="flex items-center gap-3 pt-1">
-              <a href="https://www.linkedin.com/in/anuk-vilarasau-9b138237b/" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-blue-600 transition-colors">
-                <Linkedin size={13} />
-                Anuk Vilarasau
-              </a>
-              <span className="text-gray-200">·</span>
-              <a href="https://www.linkedin.com/in/vincenzo-dallape/" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-blue-600 transition-colors">
-                <Linkedin size={13} />
-                Vincenzo Dallapé
-              </a>
-            </div>
+
 
           </div>
 

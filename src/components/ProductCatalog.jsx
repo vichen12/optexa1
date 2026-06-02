@@ -1,21 +1,22 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, ChevronLeft, CheckCircle2, ArrowLeft, LayoutGrid } from 'lucide-react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
-const img = (cat, prod, file) => `/${seg('productos deliecn')}/${seg(cat)}/${seg(prod)}/${file}`;
+const img = (cat, prod, file) => `/productos-delie/${cat}/${seg(prod)}/${file}`;
 
-const CAT_R = 'Robot de manipulación de materiales';
-const CAT_V = 'Dispositivo de almacenamiento vertical';
-const CAT_T = 'Equipo de transporte';
-const CAT_S = 'Sistema de almacenamiento inteligente';
-const CAT_E = 'Estanterías de almacén';
+const CAT_R = 'robots-manipulacion';
+const CAT_V = 'almacenamiento-vertical';
+const CAT_T = 'equipo-transporte';
+const CAT_S = 'software-inteligente';
+const CAT_E = 'asrs';
 
 const CATALOG = [
   {
     id: 'estanterias',
     label: 'AS/RS',
+    href: '/catalogo/asrs',
     cover: '/n2025120811423550745.webp',
     desc: 'Estanterías AS/RS de 7 a 40 metros. Drive-in, shuttle, mezzanine.',
     products: [
@@ -36,6 +37,7 @@ const CATALOG = [
   {
     id: 'vertical',
     label: 'Almacenamiento vertical',
+    href: '/catalogo/almacenamiento-vertical',
     cover: img(CAT_V, 'Carrusel vertical inteligente para almacenamiento automatizado de alta-densidad', '2025112714330825019.webp'),
     desc: 'Carruseles verticales y módulos VLM. Hasta 90% menos espacio de suelo.',
     products: [
@@ -46,6 +48,7 @@ const CATALOG = [
   {
     id: 'robots',
     label: 'Robots de manipulación',
+    href: '/catalogo/robots-manipulacion',
     cover: img(CAT_R, 'Robot lanzadera de cuatro direcciones-para paletas', 'pallet-four-way-shuttle-robotb829c.webp'),
     desc: 'Grúas apiladoras, transelevadores MiniLoad, robots lanzadera y AMR.',
     products: [
@@ -68,6 +71,7 @@ const CATALOG = [
   {
     id: 'transport',
     label: 'Equipo de transporte',
+    href: '/catalogo/equipo-transporte',
     cover: img(CAT_T, 'Transportador de cadena', 'chain-conveyor9e540.webp'),
     desc: 'Elevadores, transportadores de cadena, rodillos y paletizadores.',
     products: [
@@ -86,6 +90,7 @@ const CATALOG = [
   {
     id: 'sistema',
     label: 'Software inteligente',
+    href: '/catalogo/software',
     cover: img(CAT_S, '(WMS) Sistema de gestión de almacenes', '2025112715331054f3e.webp'),
     desc: 'WMS, WCS, HMS y visualización 3D para control total del almacén.',
     products: [
@@ -285,9 +290,17 @@ export const ProductCatalog = () => {
               <div className="p-5">
                 <h3 className="text-gray-900 font-black text-base uppercase tracking-tight mb-1">{cat.label}</h3>
                 <p className="text-gray-500 text-xs leading-relaxed mb-3">{cat.desc}</p>
-                <span className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-500 group-hover:gap-2 transition-all">
-                  Ver productos <ChevronRight size={13} />
-                </span>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-500 group-hover:gap-2 transition-all">
+                    Ver productos <ChevronRight size={13} />
+                  </span>
+                  {cat.href && (
+                    <Link to={cat.href} onClick={e => e.stopPropagation()}
+                      className="text-[10px] text-gray-400 hover:text-cyan-500 transition-colors underline underline-offset-2">
+                      Página dedicada
+                    </Link>
+                  )}
+                </div>
               </div>
             </motion.button>
           ))}

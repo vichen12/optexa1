@@ -17,8 +17,17 @@ export const CatalogPage = () => {
         <meta name="description" content="Catálogo completo de sistemas ASRS DELIE: transelevadores de paletas y miniload, robots shuttle 4 vías, almacenamiento vertical (VLM), robots AMR y software WMS/WCS para automatización de almacenes." />
         <meta property="og:title" content="Catálogo ASRS | Transelevadores, Robots Shuttle, VLM y WMS | STOKA Argentina" />
         <meta property="og:description" content="Catálogo completo de sistemas ASRS DELIE: transelevadores, robots shuttle, almacenamiento vertical y software WMS para Argentina y Chile." />
+        <meta name="robots" content="index, follow" />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo" />
         <link rel="canonical" href="https://www.stokagroup.com/catalogo" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Catálogo", "item": "https://www.stokagroup.com/catalogo" }
+          ]
+        })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",

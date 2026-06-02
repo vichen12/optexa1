@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Clock, Building2, User, MessageSquare, Send, Loader2, Phone, MapPin, Briefcase, HelpCircle, Globe, Linkedin, ArrowRight } from 'lucide-react';
+import { Mail, Clock, Building2, User, MessageSquare, Send, Loader2, Phone, MapPin, Briefcase, HelpCircle, Globe, ArrowRight } from 'lucide-react';
 
 const SECTORES = [
   'E-commerce & Retail', 'Logística 3PL', 'Manufactura Industrial',
@@ -119,7 +119,7 @@ export const Contact = () => {
             </div>
 
             {/* Email */}
-            <a href="mailto:stokamza.consultas@gmail.com"
+            <a href="mailto:contacto@stokagroup.com"
               className="flex items-center gap-3 px-4 py-3 bg-white border border-gray-200 rounded-xl hover:border-gray-300 transition-colors group"
             >
               <div className="w-7 h-7 rounded-lg bg-gray-100 flex items-center justify-center shrink-0">
@@ -127,35 +127,11 @@ export const Contact = () => {
               </div>
               <div className="min-w-0">
                 <p className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">Email</p>
-                <p className="text-gray-700 text-xs font-mono truncate">stokamza.consultas@gmail.com</p>
+                <p className="text-gray-700 text-xs font-mono truncate">contacto@stokagroup.com</p>
               </div>
             </a>
 
-            {/* LinkedIn */}
-            <div className="flex gap-2">
-              <a href="https://www.linkedin.com/in/anuk-vilarasau-9b138237b/" target="_blank" rel="noopener noreferrer"
-                className="flex-1 flex items-center gap-2.5 px-3 py-3 bg-white border border-gray-200 rounded-xl hover:border-[#0A66C2]/40 transition-colors"
-              >
-                <div className="w-7 h-7 rounded-lg bg-[#0A66C2] flex items-center justify-center shrink-0">
-                  <Linkedin size={13} className="text-white" />
-                </div>
-                <div>
-                  <p className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">LinkedIn</p>
-                  <p className="text-gray-700 text-xs">Anuk V.</p>
-                </div>
-              </a>
-              <a href="https://www.linkedin.com/in/vincenzo-dallape/" target="_blank" rel="noopener noreferrer"
-                className="flex-1 flex items-center gap-2.5 px-3 py-3 bg-white border border-gray-200 rounded-xl hover:border-[#0A66C2]/40 transition-colors"
-              >
-                <div className="w-7 h-7 rounded-lg bg-[#0A66C2] flex items-center justify-center shrink-0">
-                  <Linkedin size={13} className="text-white" />
-                </div>
-                <div>
-                  <p className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">LinkedIn</p>
-                  <p className="text-gray-700 text-xs">Vincenzo D.</p>
-                </div>
-              </a>
-            </div>
+
 
             <p className="text-gray-400 text-[11px] leading-relaxed px-1">
               Primera consulta técnica sin costo. Nuestros ingenieros analizan cada caso de forma personalizada.

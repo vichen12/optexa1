@@ -10,7 +10,7 @@ import { INDUSTRIES } from './IndustriasPage';
 import { ArrowRight, ArrowLeft, CheckCircle, X, ChevronRight } from 'lucide-react';
 
 const INDUSTRY_DATA = {
-  ecommerce: {
+  'e-commerce-retail': {
     hero: 'Fulfillment automatizado para el pico de demanda.',
     description: 'El e-commerce exige velocidad, exactitud y escalabilidad instantánea. En Black Friday, la demanda puede multiplicarse 5x en horas. Los almacenes manuales no pueden responder — un sistema ASRS sí, sin contratar personal extra.',
     highlight: '"La diferencia entre vender en un pico de demanda y perder ventas está en la velocidad de despacho."',
@@ -140,11 +140,21 @@ export const IndustriaDetailPage = () => {
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
         <title>{ind.label} — Automatización ASRS en Argentina | STOKA</title>
+        <meta name="robots" content="index, follow" />
         <meta name="description" content={`${ind.desc} Representantes oficiales de DELIE en Argentina y Chile. Consultoría y proyecto ASRS llave en mano.`} />
         <meta property="og:title" content={`${ind.label} — Automatización ASRS | STOKA Argentina`} />
         <meta property="og:description" content={ind.desc} />
         <meta property="og:url" content={`https://www.stokagroup.com/industrias/${slug}`} />
         <link rel="canonical" href={`https://www.stokagroup.com/industrias/${slug}`} />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Industrias", "item": "https://www.stokagroup.com/industrias" },
+            { "@type": "ListItem", "position": 3, "name": ind.label, "item": `https://www.stokagroup.com/industrias/${slug}` }
+          ]
+        })}</script>
       </Helmet>
       <Navbar />
 

@@ -15,8 +15,17 @@ export const ContactPage = () => {
         <meta name="description" content="Consultá sin costo. Ingenieros especializados en ASRS responden en 24 horas. Soluciones de automatización de almacenes para empresas en Argentina y Chile." />
         <meta property="og:title" content="Contacto | Consultoría ASRS sin costo | STOKA Argentina" />
         <meta property="og:description" content="Ingenieros especializados en ASRS responden en 24 horas. Soluciones de automatización de almacenes para Argentina y Chile." />
+        <meta name="robots" content="index, follow" />
         <meta property="og:url" content="https://www.stokagroup.com/contacto" />
         <link rel="canonical" href="https://www.stokagroup.com/contacto" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Contacto", "item": "https://www.stokagroup.com/contacto" }
+          ]
+        })}</script>
       </Helmet>
       <Navbar />
       <div className="pt-24">

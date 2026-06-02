@@ -2,16 +2,14 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, ShoppingBag, Truck, Cog, UtensilsCrossed, FlaskConical, HardHat, Snowflake } from 'lucide-react';
 
-const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
-
 const INDUSTRIES = [
-  { slug: 'ecommerce',         label: 'E-commerce & Retail',    icon: ShoppingBag,     desc: 'Velocidad, exactitud y capacidad para el pico de demanda.', image: '/ECOMMERCE.png' },
-  { slug: 'logistica-3pl',     label: 'Logística 3PL',          icon: Truck,           desc: 'Multicliente, multiproducto. Máxima flexibilidad operativa.', image: '/Logística 3PL.png' },
-  { slug: 'manufactura',       label: 'Manufactura Industrial',  icon: Cog,             desc: 'Just-in-time y kanban automatizado para producción.', image: `/${seg('productos deliecn')}/${seg('industrias que atendemos')}/${seg('Manufactura de Precisión.png')}` },
-  { slug: 'alimentos-bebidas', label: 'Alimentos & Bebidas',     icon: UtensilsCrossed, desc: 'FIFO garantizado y trazabilidad total por lote.', image: `/${seg('productos deliecn')}/${seg('industrias que atendemos')}/${seg('Alimentos y Bebidas.png')}` },
-  { slug: 'farmaceutica',      label: 'Farmacéutica',            icon: FlaskConical,    desc: 'GMP, FIFO/FEFO y temperatura controlada certificada.', image: `/${seg('productos deliecn')}/${seg('industrias que atendemos')}/${seg('Farmacéutica.png')}` },
-  { slug: 'mineria-oil-gas',   label: 'Minería & Oil & Gas',     icon: HardHat,         desc: 'Repuestos críticos disponibles 24/7 sin errores.', image: `/${seg('productos deliecn')}/${seg('industrias que atendemos')}/mineria.png` },
-  { slug: 'cadena-frio',       label: 'Cadena de Frío',          icon: Snowflake,       desc: 'Robots que operan a -30°C sin exposición de personal.', image: `/${seg('productos deliecn')}/${seg('industrias que atendemos')}/${seg('Cadena de Frío.png')}` },
+  { slug: 'e-commerce-retail',  label: 'E-commerce & Retail',   icon: ShoppingBag,     desc: 'Velocidad, exactitud y capacidad para el pico de demanda.', image: '/industria-ecommerce-retail.png' },
+  { slug: 'logistica-3pl',      label: 'Logística 3PL',         icon: Truck,           desc: 'Multicliente, multiproducto. Máxima flexibilidad operativa.', image: '/industria-logistica-3pl.png' },
+  { slug: 'manufactura',        label: 'Manufactura Industrial', icon: Cog,             desc: 'Just-in-time y kanban automatizado para producción.', image: '/productos-delie/industrias/manufactura.png' },
+  { slug: 'alimentos-bebidas',  label: 'Alimentos & Bebidas',   icon: UtensilsCrossed, desc: 'FIFO garantizado y trazabilidad total por lote.', image: '/productos-delie/industrias/alimentos-bebidas.png' },
+  { slug: 'farmaceutica',       label: 'Farmacéutica',          icon: FlaskConical,    desc: 'GMP, FIFO/FEFO y temperatura controlada certificada.', image: '/productos-delie/industrias/farmaceutica.png' },
+  { slug: 'mineria-oil-gas',    label: 'Minería & Oil & Gas',   icon: HardHat,         desc: 'Repuestos críticos disponibles 24/7 sin errores.', image: '/productos-delie/industrias/mineria.png' },
+  { slug: 'cadena-frio',        label: 'Cadena de Frío',        icon: Snowflake,       desc: 'Robots que operan a -30°C sin exposición de personal.', image: '/productos-delie/industrias/cadena-frio.png' },
 ];
 
 export const IndustriasPreview = () => {

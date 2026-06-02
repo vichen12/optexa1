@@ -10,12 +10,12 @@ import { ArrowRight, ShoppingBag, Truck, Cog, UtensilsCrossed, FlaskConical, Har
 
 export const INDUSTRIES = [
   {
-    slug: 'ecommerce',
+    slug: 'e-commerce-retail',
     label: 'E-commerce & Retail',
     icon: ShoppingBag,
     tagline: 'Velocidad y exactitud para el pico de demanda.',
     desc: 'Triplicá la velocidad de picking y escalá sin contratar personal en fechas clave como Black Friday o CyberMonday.',
-    image: '/ECOMMERCE.png',
+    image: '/industria-ecommerce-retail.png',
     stats: [{ v: '3x', l: 'Picking' }, { v: '99.9%', l: 'Exactitud' }, { v: '-60%', l: 'Labor' }],
   },
   {
@@ -24,7 +24,7 @@ export const INDUSTRIES = [
     icon: Truck,
     tagline: 'Multicliente, multiproducto. Máxima flexibilidad.',
     desc: 'Operá múltiples clientes en el mismo almacén con slots dinámicos y reportes en tiempo real por cliente.',
-    image: '/Logística 3PL.png',
+    image: '/industria-logistica-3pl.png',
     stats: [{ v: '40%', l: 'Menos espacio' }, { v: '5x', l: 'Densidad' }, { v: '24/7', l: 'Operación' }],
   },
   {
@@ -33,7 +33,7 @@ export const INDUSTRIES = [
     icon: Cog,
     tagline: 'Just-in-time y kanban automatizado.',
     desc: 'Sincronizá el almacén de insumos con tu línea de producción y eliminá paradas por falta de materiales.',
-    image: '/productos deliecn/industrias que atendemos/Manufactura de Precisión.png',
+    image: '/productos-delie/industrias/manufactura.png',
     stats: [{ v: '-35%', l: 'Búsqueda' }, { v: '100%', l: 'Trazabilidad' }, { v: '+20%', l: 'OEE' }],
   },
   {
@@ -42,7 +42,7 @@ export const INDUSTRIES = [
     icon: UtensilsCrossed,
     tagline: 'FIFO garantizado. Trazabilidad total.',
     desc: 'FIFO automático, trazabilidad de lote en tiempo real y alertas de vencimiento para cero mermas.',
-    image: '/productos deliecn/industrias que atendemos/Alimentos y Bebidas.png',
+    image: '/productos-delie/industrias/alimentos-bebidas.png',
     stats: [{ v: 'FIFO', l: 'Garantizado' }, { v: '100%', l: 'Trazabilidad' }, { v: 'GS1', l: 'Compatible' }],
   },
   {
@@ -51,7 +51,7 @@ export const INDUSTRIES = [
     icon: FlaskConical,
     tagline: 'GMP, FEFO y temperatura controlada.',
     desc: 'Cumplimiento GMP, FEFO automático y audit trail completo para ANMAT, FDA y normativas internacionales.',
-    image: '/productos deliecn/industrias que atendemos/Farmacéutica.png',
+    image: '/productos-delie/industrias/farmaceutica.png',
     stats: [{ v: 'GMP', l: 'Compliant' }, { v: 'FEFO', l: 'Automático' }, { v: '21 CFR', l: 'Compatible' }],
   },
   {
@@ -60,7 +60,7 @@ export const INDUSTRIES = [
     icon: HardHat,
     tagline: 'Repuestos críticos disponibles 24/7.',
     desc: 'Localizá cualquier repuesto en segundos y eliminá paradas de equipo por stock no encontrado.',
-    image: '/productos deliecn/industrias que atendemos/mineria.png',
+    image: '/productos-delie/industrias/mineria.png',
     stats: [{ v: '0', l: 'Errores' }, { v: '-30%', l: 'Stock' }, { v: '24/7', l: 'Disponibilidad' }],
   },
   {
@@ -69,7 +69,7 @@ export const INDUSTRIES = [
     icon: Snowflake,
     tagline: 'Robots que operan a -30°C sin exposición.',
     desc: 'Maximizá cada m³ de cámara frigorífica mientras eliminás la exposición del personal al frío extremo.',
-    image: '/productos deliecn/industrias que atendemos/Cadena de Frío.png',
+    image: '/productos-delie/industrias/cadena-frio.png',
     stats: [{ v: '-30°C', l: 'Temp. mín.' }, { v: '0', l: 'Personal exp.' }, { v: '+50%', l: 'Uso cámara' }],
   },
 ];
@@ -92,8 +92,17 @@ export const IndustriasPage = () => {
         <meta name="description" content="Soluciones ASRS especializadas por sector: farmacéutica, alimentos y bebidas, e-commerce, manufactura, logística 3PL, minería y cadena de frío. Representantes DELIE en Argentina y Chile." />
         <meta property="og:title" content="Automatización ASRS por Industria | STOKA Argentina y Chile" />
         <meta property="og:description" content="ASRS para farmacéutica, alimentos, e-commerce, manufactura, 3PL, minería y cadena de frío. Representantes DELIE en Argentina y Chile." />
+        <meta name="robots" content="index, follow" />
         <meta property="og:url" content="https://www.stokagroup.com/industrias" />
         <link rel="canonical" href="https://www.stokagroup.com/industrias" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Industrias", "item": "https://www.stokagroup.com/industrias" }
+          ]
+        })}</script>
       </Helmet>
       <Navbar />
 

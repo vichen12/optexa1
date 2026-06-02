@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
-const img = (cat, prod, file) => `/${seg('productos deliecn')}/${seg(cat)}/${seg(prod)}/${file}`;
+const img = (cat, prod, file) => `/productos-delie/${cat}/${seg(prod)}/${file}`;
 
 const CATEGORIES = [
   {
@@ -11,34 +11,39 @@ const CATEGORIES = [
     label: 'AS/RS',
     count: 12,
     image: '/n2025120811423550745.webp',
+    href: '/catalogo/asrs',
     desc: 'Estanterías AS/RS de 7 a 40 metros. Drive-in, shuttle, mezzanine.',
   },
   {
     id: 'vertical',
     label: 'Almacenamiento vertical',
     count: 2,
-    image: img('Dispositivo de almacenamiento vertical', 'Carrusel vertical inteligente para almacenamiento automatizado de alta-densidad', '2025112714330825019.webp'),
+    image: img('almacenamiento-vertical', 'Carrusel vertical inteligente para almacenamiento automatizado de alta-densidad', '2025112714330825019.webp'),
+    href: '/catalogo/almacenamiento-vertical',
     desc: 'Carruseles verticales y módulos VLM. Hasta 90% menos espacio de suelo.',
   },
   {
     id: 'robots',
     label: 'Robots de manipulación',
     count: 14,
-    image: img('Robot de manipulación de materiales', 'Robot lanzadera de cuatro direcciones-para paletas', 'pallet-four-way-shuttle-robotb829c.webp'),
+    image: img('robots-manipulacion', 'Robot lanzadera de cuatro direcciones-para paletas', 'pallet-four-way-shuttle-robotb829c.webp'),
+    href: '/catalogo/robots-manipulacion',
     desc: 'Grúas apiladoras, transelevadores MiniLoad, robots lanzadera y AMR.',
   },
   {
     id: 'transport',
     label: 'Equipo de transporte',
     count: 10,
-    image: img('Equipo de transporte', 'Transportador de cadena', 'chain-conveyor9e540.webp'),
+    image: img('equipo-transporte', 'Transportador de cadena', 'chain-conveyor9e540.webp'),
+    href: '/catalogo/equipo-transporte',
     desc: 'Elevadores, transportadores de cadena, rodillos y paletizadores.',
   },
   {
     id: 'sistema',
     label: 'Software inteligente',
     count: 6,
-    image: img('Sistema de almacenamiento inteligente', '(WMS) Sistema de gestión de almacenes', '2025112715331054f3e.webp'),
+    image: img('software-inteligente', '(WMS) Sistema de gestión de almacenes', '2025112715331054f3e.webp'),
+    href: '/catalogo/software',
     desc: 'WMS, WCS, HMS y visualización 3D para control total del almacén.',
   },
 ];
@@ -46,8 +51,9 @@ const CATEGORIES = [
 export const CatalogPreview = () => {
   const navigate = useNavigate();
 
-  const goToCatalog = (catId) => {
-    navigate(`/catalogo?cat=${catId}`);
+  const goToCatalog = (cat) => {
+    const url = cat.href || `/catalogo?cat=${cat.id}`;
+    navigate(url);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -70,7 +76,7 @@ export const CatalogPreview = () => {
               </span>
             </h2>
             <button
-              onClick={() => goToCatalog('robots')}
+              onClick={() => navigate('/catalogo')}
               className="flex items-center gap-2 text-sm text-white/40 hover:text-cyan-400 transition-colors group"
             >
               Ver catálogo completo
@@ -83,7 +89,7 @@ export const CatalogPreview = () => {
           {CATEGORIES.map((cat, i) => (
             <motion.button
               key={cat.id}
-              onClick={() => goToCatalog(cat.id)}
+              onClick={() => goToCatalog(cat)}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

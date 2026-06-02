@@ -6,7 +6,7 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { CTABanner } from '../components/CTABanner';
 import { WppFloat } from '../components/WppFloat';
-import { ArrowRight, Globe, Target, Shield, Zap, Linkedin } from 'lucide-react';
+import { ArrowRight, Globe, Target, Shield, Zap } from 'lucide-react';
 
 const DELIE_STATS = [
   { value: '2003',   label: 'Año de fundación DELIE' },
@@ -22,24 +22,7 @@ const VALORES = [
   { icon: Globe,   title: 'Tecnología de clase mundial', desc: 'Acceso a la misma tecnología que usan las grandes multinacionales globales, con precios 30–50% más accesibles que las alternativas europeas.' },
 ];
 
-const TEAM = [
-  {
-    name: 'Anuk Vilarasau',
-    role: 'Ingeniería & Proyectos',
-    bio: 'Ingeniero industrial especializado en automatización logística y diseño de sistemas ASRS. Responsable del análisis técnico, relevamiento de operaciones, diseño de layouts y dimensionamiento de cada proyecto.',
-    image: '/anuk.jpeg',
-    linkedin: 'https://www.linkedin.com/in/anuk-vilarasau-9b138237b/',
-    skills: ['Logística 4.0', 'ASRS Design', 'Lean Manufacturing', 'Simulación de flujos'],
-  },
-  {
-    name: 'Vincenzo Dallapé',
-    role: 'Tecnología & Desarrollo',
-    bio: 'Ingeniero en sistemas con foco en integración tecnológica industrial. A cargo de la conectividad del ecosistema ASRS con los sistemas de gestión del cliente y el desarrollo digital de STOKA.',
-    image: '/vincenzo.jpeg',
-    linkedin: 'https://www.linkedin.com/in/vincenzo-dallape/',
-    skills: ['Integración ERP/WMS', 'IoT Industrial', 'Desarrollo web', 'Cloud'],
-  },
-];
+
 
 export const NosotrosPage = () => {
   const navigate = useNavigate();
@@ -53,8 +36,17 @@ export const NosotrosPage = () => {
         <meta name="description" content="STOKA es el representante oficial exclusivo de DELIE en Argentina y Chile. Ingeniería y soporte 100% local para sistemas ASRS, transelevadores y automatización de almacenes industriales." />
         <meta property="og:title" content="Nosotros | Representantes Oficiales DELIE — Argentina y Chile | STOKA Group" />
         <meta property="og:description" content="Representante oficial exclusivo de DELIE en Argentina y Chile. Ingeniería y soporte 100% local para sistemas ASRS y automatización de almacenes." />
+        <meta name="robots" content="index, follow" />
         <meta property="og:url" content="https://www.stokagroup.com/nosotros" />
         <link rel="canonical" href="https://www.stokagroup.com/nosotros" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Nosotros", "item": "https://www.stokagroup.com/nosotros" }
+          ]
+        })}</script>
       </Helmet>
       <Navbar />
 
@@ -167,58 +159,6 @@ export const NosotrosPage = () => {
         </div>
       </section>
 
-      {/* ── EQUIPO — bg: white ── */}
-      <section className="bg-white py-20 px-6 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">El equipo</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-12">
-            Ingeniería local, resultados reales
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {TEAM.map((member, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }}
-                className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-lg transition-all duration-300">
-
-                {/* Foto */}
-                <div className="relative overflow-hidden bg-gray-100" style={{ aspectRatio: '1/1' }}>
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                    style={{ objectPosition: member.name === 'Anuk Vilarasau' ? 'center 60%' : 'center 20%' }}
-                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-slate-950/50 to-transparent" />
-                  <div className="absolute bottom-4 left-4">
-                    <span className="text-[10px] font-black uppercase tracking-[0.25em] text-white bg-cyan-500/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                      {member.role}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Info */}
-                <div className="p-6">
-                  <h3 className="text-gray-900 font-black text-xl mb-2">{member.name}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-5">{member.bio}</p>
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    {member.skills.map((skill) => (
-                      <span key={skill} className="text-[11px] font-mono text-cyan-600 bg-cyan-50 border border-cyan-200 px-2.5 py-1 rounded-full">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors">
-                    <Linkedin size={14} />
-                    LinkedIn
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── CTA — bg: slate-900 ── */}
       <section className="bg-slate-900 py-20 px-6">
