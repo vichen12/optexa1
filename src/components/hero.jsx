@@ -24,24 +24,14 @@ export const Hero = () => {
       id="inicio"
       className="relative h-screen flex flex-col items-center justify-center pt-20 px-6 bg-slate-900"
     >
-      {/* BG — imagen en mobile, video en desktop */}
+      {/* VIDEO BG */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* MOBILE: imagen estática (evita descargar el video en mobile) */}
-        <img
-          src="/bannervideo1-poster.jpg"
-          alt=""
-          aria-hidden="true"
-          fetchpriority="high"
-          width="1920" height="1080"
-          className="block md:hidden w-full h-full object-cover"
-        />
-        {/* DESKTOP: video */}
         <video
           src="/bannervideo1-compressed.mp4"
           poster="/bannervideo1-poster.jpg"
           autoPlay muted loop playsInline
           width="1920" height="1080"
-          className="hidden md:block w-full h-full object-cover"
+          className="w-full h-full object-cover"
         >
           <track kind="captions" src="" label="Sin audio" default />
         </video>
