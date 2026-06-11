@@ -21,6 +21,7 @@ const INDUSTRIAS_LINKS = [
 
 const RECURSOS_LINKS = [
   { label: 'Glosario técnico',       href: '/recursos/glosario' },
+  { label: 'Calculadora ROI',        href: '/recursos/roi-automatizacion' },
   { label: 'Comparador de sistemas', href: '/recursos/comparador-sistemas' },
   { label: 'Blog y artículos',       href: '/recursos' },
   { label: 'Casos de éxito',         href: '/casos-de-exito' },
@@ -31,7 +32,8 @@ const EMPRESA_LINKS = [
   { label: 'Cómo trabajamos',       href: '/como-trabajamos' },
   { label: 'Beneficios fiscales',   href: '/beneficios-fiscales' },
   { label: 'Contacto',              href: '/contacto' },
-  { label: 'DELIE en Argentina',     href: '/delie-argentina' },
+  { label: 'DELIE en Argentina',    href: '/delie-argentina' },
+  { label: 'Automatización Chile',  href: '/chile' },
 ];
 
 const MAPS_EMBED = "https://maps.google.com/maps?q=Carril+Rodr%C3%ADguez+Pe%C3%B1a+35+Maip%C3%BA+Mendoza+Argentina&output=embed";

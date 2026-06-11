@@ -95,8 +95,8 @@ export const ComoTrabajamosPage = () => {
   return (
     <div className="min-h-screen text-gray-900">
       <Helmet>
-        <title>Cómo Trabajamos | Proyecto ASRS Llave en Mano en Argentina | STOKA</title>
-        <meta name="description" content="Metodología de 6 pasos: desde la consulta inicial hasta el soporte posventa. Proyectos ASRS llave en mano con ingeniería, instalación y capacitación en Argentina y Chile." />
+        <title>Cómo Trabajamos | Proyecto ASRS Llave en Mano | STOKA</title>
+        <meta name="description" content="Metodología de 6 pasos: consulta, ingeniería, instalación y soporte posventa. Proyectos ASRS llave en mano en Argentina y Chile." />
         <meta property="og:title" content="Cómo Trabajamos | Proyecto ASRS Llave en Mano | STOKA Argentina" />
         <meta property="og:description" content="Metodología de 6 pasos para proyectos ASRS llave en mano: consulta, ingeniería, fabricación, instalación, integración y soporte." />
         <meta name="robots" content="index, follow" />
@@ -109,6 +109,16 @@ export const ComoTrabajamosPage = () => {
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
             { "@type": "ListItem", "position": 2, "name": "Cómo trabajamos", "item": "https://www.stokagroup.com/como-trabajamos" }
           ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Implementación de Sistemas ASRS Llave en Mano — STOKA Argentina",
+          "description": "Metodología de 6 fases para automatizar tu almacén: consulta, diagnóstico, diseño, instalación, puesta en marcha y soporte posventa continuo en Argentina y Chile.",
+          "provider": { "@id": "https://www.stokagroup.com/#organization" },
+          "areaServed": [{ "@type": "Country", "name": "Argentina" }, { "@type": "Country", "name": "Chile" }],
+          "serviceType": "Integración ASRS Llave en Mano",
+          "url": "https://www.stokagroup.com/como-trabajamos"
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",

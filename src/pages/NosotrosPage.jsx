@@ -30,10 +30,10 @@ export const NosotrosPage = () => {
   return (
     <div className="min-h-screen text-gray-900">
       <Helmet>
-        <title>Nosotros | Representantes Oficiales DELIE en Argentina y Chile | STOKA Group</title>
-        <meta name="description" content="STOKA es el integrador ASRS en Argentina y Chile, representante exclusivo DELIE. Alternativa a Daifuku Argentina y Wynright Argentina. Ingeniería y soporte 100% local para automatización de almacenes." />
-        <meta property="og:title" content="Nosotros | Representantes Oficiales DELIE — Argentina y Chile | STOKA Group" />
-        <meta property="og:description" content="Representante oficial exclusivo de DELIE en Argentina y Chile. Ingeniería y soporte 100% local para sistemas ASRS y automatización de almacenes." />
+        <title>STOKA Group | Ingeniería ASRS Argentina | Nosotros</title>
+        <meta name="description" content="STOKA: ingeniería, instalación y soporte 100% local para sistemas ASRS en Argentina y Chile. Representantes exclusivos de DELIE. Proyectos llave en mano." />
+        <meta property="og:title" content="STOKA Group | Ingeniería y Soporte ASRS en Argentina" />
+        <meta property="og:description" content="STOKA: ingeniería local, instalación certificada y soporte técnico en Argentina para sistemas de almacenamiento automatizado ASRS. Proyectos llave en mano." />
         <meta name="robots" content="index, follow" />
         <meta property="og:url" content="https://www.stokagroup.com/nosotros" />
         <link rel="canonical" href="https://www.stokagroup.com/nosotros" />
@@ -135,12 +135,12 @@ export const NosotrosPage = () => {
             </div>
           </div>
 
-          {/* Alternativa Daifuku/Wynright */}
+          {/* DELIE en Argentina */}
           <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-2xl p-6">
-            <p className="text-cyan-400 text-[10px] font-black uppercase tracking-[0.35em] mb-3">Alternativa local a Daifuku y Wynright</p>
+            <p className="text-cyan-400 text-[10px] font-black uppercase tracking-[0.35em] mb-3">DELIE · Representación exclusiva Argentina y Chile</p>
             <p className="text-gray-300 text-sm leading-relaxed">
-              STOKA ofrece tecnología técnicamente comparable a <strong className="text-white">Daifuku Argentina</strong> y <strong className="text-white">Wynright Argentina</strong> con precios DELIE{' '}
-              <strong className="text-cyan-400">30–50% más accesibles</strong> que las alternativas japonesas o europeas, y soporte técnico 100% local que los proveedores internacionales no garantizan directamente en el mercado argentino.
+              STOKA es el representante exclusivo de <strong className="text-white">DELIE</strong> en Argentina y Chile. Tecnología ASRS de primer nivel mundial con precios{' '}
+              <strong className="text-cyan-400">30–50% más accesibles</strong> que las alternativas europeas, y soporte técnico 100% local garantizado desde Argentina.
             </p>
           </div>
         </div>

@@ -248,10 +248,10 @@ export const BeneficiosFiscalesPage = () => {
   return (
     <div className="min-h-screen text-gray-900">
       <Helmet>
-        <title>Beneficios Fiscales para Automatizar tu Almacén | STOKA</title>
-        <meta name="description" content="RIMI, RIGI, aranceles reducidos, leasing y más: hasta 6 herramientas fiscales para reducir el costo de tu sistema ASRS en Argentina. Evaluación sin cargo." />
-        <meta property="og:title" content="Beneficios Fiscales para Automatizar tu Almacén en Argentina | STOKA" />
-        <meta property="og:description" content="RIMI, RIGI, aranceles reducidos, leasing y más. Hasta 6 herramientas fiscales que reducen el costo real de tu sistema ASRS." />
+        <title>Beneficios Fiscales Automatización 2026 | RIMI | STOKA</title>
+        <meta name="description" content="RIMI 2026, RIGI, amortización acelerada e IVA anticipado: hasta 6 beneficios fiscales para reducir el costo de tu ASRS en Argentina. Guía actualizada 2026." />
+        <meta property="og:title" content="Beneficios Fiscales Automatización Argentina 2026 | RIMI · RIGI | STOKA" />
+        <meta property="og:description" content="RIMI 2026 (Ley 27.802), RIGI, amortización acelerada bienes de capital, devolución IVA inversiones. Hasta 6 incentivos fiscales para tu proyecto ASRS en Argentina." />
         <meta name="robots" content="index, follow" />
         <meta property="og:url" content="https://www.stokagroup.com/beneficios-fiscales" />
         <link rel="canonical" href="https://www.stokagroup.com/beneficios-fiscales" />

@@ -88,8 +88,8 @@ export const IndustriasPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>Automatización ASRS por Industria | Farmacéutica, Alimentos, E-commerce | STOKA Argentina</title>
-        <meta name="description" content="Soluciones ASRS especializadas por sector: farmacéutica, alimentos y bebidas, e-commerce, manufactura, logística 3PL, minería y cadena de frío. Representantes DELIE en Argentina y Chile." />
+        <title>Automatización ASRS por Industria en Argentina | STOKA</title>
+        <meta name="description" content="ASRS especializado por sector: farmacéutica, alimentos, e-commerce, manufactura, 3PL, minería y cadena de frío. Representantes DELIE en Argentina y Chile." />
         <meta property="og:title" content="Automatización ASRS por Industria | STOKA Argentina y Chile" />
         <meta property="og:description" content="ASRS para farmacéutica, alimentos, e-commerce, manufactura, 3PL, minería y cadena de frío. Representantes DELIE en Argentina y Chile." />
         <meta name="robots" content="index, follow" />

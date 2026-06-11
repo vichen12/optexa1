@@ -92,17 +92,19 @@ const INDUSTRY_DATA = {
   },
   farmaceutica: {
     hero: 'GMP, FEFO y trazabilidad regulatoria nativa.',
-    description: 'La industria farmacéutica opera bajo las regulaciones más exigentes del mundo. Los sistemas DELIE están diseñados para cumplir con GMP, 21 CFR Part 11 y las normativas de ANMAT sin configuración adicional.',
+    description: 'La industria farmacéutica opera bajo las regulaciones más exigentes del mundo. Los sistemas DELIE están diseñados para cumplir con GMP, 21 CFR Part 11 y las normativas de ANMAT sin configuración adicional. Desde laboratorios de producción hasta droguerías y distribuidores, la automatización reduce el tiempo de calificación IQ/OQ/PQ y elimina el riesgo regulatorio operativo.',
     highlight: '"En farmacéutica, el compliance no es opcional. El sistema tiene que garantizarlo por diseño, no por proceso."',
     benefits: [
-      { title: 'GMP by design', desc: 'Registro automático de cada movimiento con usuario, timestamp y ubicación para audit trail completo.' },
-      { title: 'FEFO automático', desc: 'El sistema prioriza por fecha de vencimiento en cada egreso sin intervención del operario.' },
-      { title: 'Temperatura controlada', desc: 'Zonas de temperatura diferenciada integradas para productos refrigerados y controlados.' },
-      { title: 'Control de acceso', desc: 'Acceso por rol a zonas y operaciones, con registro de cada acción para 21 CFR Part 11.' },
+      { title: 'GMP by design', desc: 'Registro automático de cada movimiento con usuario, timestamp y ubicación para audit trail completo e inmutable.' },
+      { title: 'FEFO automático', desc: 'El sistema prioriza por fecha de vencimiento en cada egreso sin intervención del operario. Cumplimiento garantizado 100%.' },
+      { title: 'Temperatura controlada', desc: 'Zonas diferenciadas para refrigerados (2-8°C), controlados (15-25°C) y congelados (-20°C) dentro del mismo depósito.' },
+      { title: 'Control de acceso por rol', desc: 'Acceso restringido por zona y tipo de operación con segundo factor para productos controlados. Compatible con 21 CFR Part 11.' },
+      { title: 'Serialización ANMAT', desc: 'Módulo de trazabilidad unitaria que cumple los requisitos de serialización farmacéutica de ANMAT en Argentina.' },
+      { title: 'Documentación IQ/OQ/PQ', desc: 'DELIE entrega DQ, FS y DS preelaborados. STOKA acompaña el proceso de calificación para cumplir plazos regulatorios.' },
     ],
-    challenges: ['Cumplimiento GMP con registros de cada movimiento', 'FEFO estricto con múltiples fechas de vencimiento', 'Control de temperatura y humedad para productos sensibles', 'Acceso controlado y trazabilidad de operadores', 'Preparación para auditorías regulatorias'],
-    solutions: ['WMS con módulo GMP y trazabilidad de usuario', 'FEFO automático con alertas de vencimiento', 'Zonas de temperatura controlada integradas', 'Control de acceso por rol con audit trail completo', 'Reportes en formato regulatorio para ANMAT y FDA'],
-    stats: [{ value: 'GMP', label: 'Compliant' }, { value: 'FEFO', label: 'Automático' }, { value: '21 CFR', label: 'Compatible' }, { value: '100%', label: 'Audit trail' }],
+    challenges: ['Cumplimiento GMP con audit trail inmutable en cada movimiento', 'FEFO estricto con múltiples lotes y fechas de vencimiento', 'Control de temperatura y humedad con registros continuos', 'Acceso controlado y trazabilidad de operadores para 21 CFR', 'Serialización por unidad para trazabilidad ANMAT', 'Proceso de calificación IQ/OQ/PQ largo y costoso'],
+    solutions: ['WMS GMP-compliant con audit trail de usuario y timestamp', 'FEFO automático con alertas de vencimiento por lote', 'Zonas de temperatura diferenciada con monitoreo continuo', 'Control de acceso por rol con segundo factor para controlados', 'Módulo de serialización unitaria compatible con ANMAT', 'Documentación de validación DQ/FS/DS preelaborada por DELIE'],
+    stats: [{ value: 'GMP', label: 'Compliant' }, { value: 'FEFO', label: 'Automático' }, { value: 'IQ/OQ/PQ', label: 'Documentado' }, { value: '100%', label: 'Audit trail' }],
     products: [
       { name: 'AS/RS Cámara Fría (GxP)', url: '/catalogo/asrs/camara-frio' },
       { name: 'Transelevador MiniLoad', url: '/catalogo/asrs/miniload' },
@@ -165,9 +167,11 @@ El almacén o bodega de producto terminado automatizado resuelve el otro extremo
   'alimentos-bebidas': `La industria de alimentos y bebidas en Argentina y Chile opera bajo una tensión permanente entre el costo de almacenamiento y los requisitos de inocuidad. Las grandes cadenas exigen trazabilidad alimentaria completa, fechas de vencimiento garantizadas y cero errores de identificación. El almacén automatizado de alimentos y la bodega automatizada de bebidas son la única forma de garantizar eso de forma consistente a escala industrial.
 
 Los sistemas ASRS de DELIE para alimentos y bebidas incluyen módulo FEFO (First Expired, First Out) nativo en el WMS: en cada salida, el sistema elige automáticamente el producto con vencimiento más próximo sin depender del criterio del operario. Esto elimina las mermas por vencimiento, reduce el riesgo de recall y garantiza el cumplimiento de los requisitos de los grandes compradores. Para almacenes y bodegas con temperatura controlada —cámaras frigoríficas, bodegas de vino, almacenes de productos frescos— los robots y transelevadores DELIE operan desde +10 °C (vinos) hasta -25 °C (congelados de exportación), con versiones especiales para depósitos de atmósfera controlada. El almacenamiento FIFO FEFO automatizado en estas condiciones garantiza cumplimiento regulatorio sin depender del criterio del operario.`,
-  farmaceutica: `El almacén farmacéutico es el entorno más regulado de la industria logística. Las normativas nacionales (ANMAT en Argentina) e internacionales (FDA, EMA, WHO GDP) exigen trazabilidad completa de cada unidad desde su recepción hasta su despacho, control de temperatura y humedad con registros continuos, y acceso controlado por rol con audit trail inmutable. El almacén farmacéutico automatizado no es una adaptación del sistema industrial estándar: es una arquitectura específica donde el almacenamiento GMP, la serialización farmacéutica y la trazabilidad ANMAT están embebidos en el diseño.
+  farmaceutica: `El almacén farmacéutico es el entorno más regulado de la industria logística. Las normativas nacionales (ANMAT en Argentina) e internacionales (FDA, EMA, WHO GDP) exigen trazabilidad completa de cada unidad desde su recepción hasta su despacho, control de temperatura y humedad con registros continuos, y acceso controlado por rol con audit trail inmutable. El almacén farmacéutico automatizado no es una adaptación del sistema industrial estándar: es una arquitectura específica donde el almacenamiento GMP, la serialización farmacéutica y la trazabilidad ANMAT están embebidos en el diseño desde la fase de ingeniería.
 
-El WMS GMP-compliant de DELIE cumple con 21 CFR Part 11, EU GMP Annex 11 y los requisitos de ANMAT. Para laboratorios, droguerías y distribuidores farmacéuticos en Argentina y Chile, la automatización de la droguería con STOKA incluye documentación IQ/OQ/PQ preelaborada que reduce significativamente el tiempo y el costo del proceso de calificación regulatoria. El módulo de serialización farmacéutica integrado cumple con los requisitos de trazabilidad de ANMAT vigentes sin configuración adicional.`,
+El WMS GMP-compliant de DELIE cumple con 21 CFR Part 11, EU GMP Annex 11 y los requisitos de ANMAT. Para laboratorios, droguerías y distribuidores farmacéuticos en Argentina y Chile, la automatización de la droguería con STOKA incluye documentación IQ/OQ/PQ preelaborada que reduce significativamente el tiempo y el costo del proceso de calificación regulatoria. El módulo de serialización farmacéutica integrado cumple con los requisitos de trazabilidad unitaria de ANMAT vigentes sin configuración adicional.
+
+La bodega de droguería automatizada resuelve también el desafío del almacenamiento de productos controlados: estupefacientes y psicotrópicos bajo doble llave física y lógica, con acceso autorizado solamente por el segundo factor de autenticación y registro inmutable de cada apertura. El sistema genera automáticamente los libros de movimientos de controlados en el formato requerido por ANMAT. Para distribuidores mayoristas con habilitación GDP (Good Distribution Practice), el sistema DELIE es la única plataforma con calificación OQ documentada en instalaciones farmacéuticas activas en Latinoamérica.`,
   'mineria-oil-gas': `La industria minera y de oil & gas en Argentina (Vaca Muerta, minería en Mendoza, San Juan, Catamarca) y en Chile (norte minero: I a IV Región) comparte un desafío logístico específico: almacenes MRO automatizados y bodegas de insumos de la minera en ubicaciones remotas, con personal escaso y rotación alta. La gestión de repuestos en minería es crítica: una parada de equipo por falta de pieza puede costar USD 10.000 a USD 100.000 por hora. El almacén de repuestos automatizado elimina ese riesgo.
 
 Los sistemas VLM y carrusel vertical de DELIE para almacén MRO automatizado resuelven tres problemas simultáneamente: densifican el almacenamiento en el espacio disponible (en campamentos remotos, el espacio es limitado y caro), reducen el personal necesario para operar el depósito, y localizan cualquier repuesto entre miles de SKUs en menos de 30 segundos. Los equipos tienen versiones certificadas para ambientes con polvo en suspensión (IP65), operación a alta altitud (hasta 5.000 m) y temperaturas extremas. Para locaciones con riesgo de explosión, existe la versión ATEX certificada.`,
@@ -203,9 +207,12 @@ const INDUSTRY_FAQ = {
   ],
   farmaceutica: [
     { q: '¿El sistema cumple con GMP y las normativas de ANMAT para almacenes farmacéuticos?', a: 'Sí. El WMS incluye módulo GMP que registra cada movimiento con usuario, timestamp, ubicación de origen y destino. Este audit trail cumple con 21 CFR Part 11, EU GMP Annex 11 y los requisitos de ANMAT. El cumplimiento es nativo por diseño, sin configuración adicional.' },
-    { q: '¿Cómo funciona el control de acceso por rol en la bodega o almacén farmacéutico?', a: 'Cada operario tiene credenciales únicas con permisos por zona, tipo de operación y producto. El sistema registra quién hizo qué y cuándo en cada movimiento. Las zonas de productos controlados pueden tener restricción adicional con validación de segundo factor para cumplir 21 CFR Part 11.' },
-    { q: '¿Se pueden crear zonas de temperatura diferenciada en el mismo depósito?', a: 'Sí. El sistema permite definir zonas lógicas con requisitos de temperatura específicos (2-8°C, 15-25°C, -20°C) dentro del mismo almacén. El WMS asigna cada producto a su zona correcta según su perfil y el monitoreo de temperatura es continuo con alertas automáticas ante desvíos.' },
+    { q: '¿Cómo funciona el control de acceso por rol en la bodega o almacén farmacéutico?', a: 'Cada operario tiene credenciales únicas con permisos por zona, tipo de operación y producto. El sistema registra quién hizo qué y cuándo en cada movimiento. Las zonas de productos controlados tienen restricción adicional con validación de segundo factor para cumplir 21 CFR Part 11 y los requisitos de ANMAT para estupefacientes.' },
+    { q: '¿Se pueden crear zonas de temperatura diferenciada en el mismo depósito?', a: 'Sí. El sistema permite definir zonas lógicas con requisitos de temperatura específicos (2-8°C, 15-25°C, -20°C) dentro del mismo almacén. El WMS asigna cada producto a su zona correcta según su perfil y el monitoreo de temperatura es continuo con alertas automáticas ante desvíos y registro para auditoría.' },
     { q: '¿Cuánto tiempo lleva validar el sistema para GMP en un depósito farmacéutico?', a: 'La validación IQ/OQ/PQ toma entre 3 y 6 meses post-instalación. DELIE entrega documentación de validación (DQ, FS, DS) con el sistema. STOKA acompaña el proceso de calificación localmente para garantizar que los plazos no se extiendan por cuellos de botella en documentación.' },
+    { q: '¿El sistema gestiona la serialización unitaria requerida por ANMAT?', a: 'Sí. El módulo de serialización del WMS lee y registra el código de barras o DataMatrix 2D de cada unidad en las operaciones de recepción, almacenamiento y despacho. El sistema genera automáticamente los reportes de trazabilidad en el formato requerido por ANMAT para medicamentos de prescripción.' },
+    { q: '¿Puede usarse el sistema en una droguería con habilitación GDP?', a: 'Sí. El WMS de DELIE ha sido calificado en instalaciones con habilitación GDP en Latinoamérica. STOKA entrega el protocolo de calificación OQ adaptado a los requisitos de la Disposición ANMAT 9713/2018 (Guía GDP Argentina) y acompaña el trámite de presentación ante el organismo.' },
+    { q: '¿Cómo se maneja la devolución de medicamentos vencidos o retirados del mercado?', a: 'El WMS tiene flujo específico de cuarentena y destrucción: los productos bloqueados se segregan lógicamente (sin movimiento físico), con bloqueo de despacho automático y notificación al responsable regulatorio. El flujo queda registrado en el audit trail para la documentación del recall ante ANMAT.' },
   ],
   'mineria-oil-gas': [
     { q: '¿El sistema funciona en ambientes con polvo, vibración y temperaturas extremas?', a: 'Sí. Los equipos DELIE para minería y oil & gas tienen grado de protección IP54 a IP65, están certificados para vibración conforme a IEC y operan entre -20°C y +50°C. Para zonas con riesgo de explosión, existe la versión ATEX certificada para depósitos de materiales inflamables.' },
@@ -219,6 +226,37 @@ const INDUSTRY_FAQ = {
     { q: '¿Cuánto espacio adicional gano al automatizar una cámara frigorífica existente?', a: 'Con almacenamiento vertical automatizado, podés triplicar la capacidad de la cámara sin construir nuevas instalaciones. El sistema opera en pasillos de 900 mm (vs. 3-4 metros para autoelevadores), liberando hasta el 60% del área de suelo para más estanterías y mayor densidad de almacenaje.' },
     { q: '¿Cómo elimino la exposición del personal al frío extremo en el depósito?', a: 'El sistema opera de forma autónoma dentro de la cámara. Los operarios trabajan en estaciones a temperatura ambiente, donde la mercadería llega a través de una ventanilla aislada. La práctica totalidad de los movimientos se realiza sin que nadie ingrese a la zona de frío extremo del depósito.' },
   ],
+};
+
+const INDUSTRY_META = {
+  'e-commerce-retail': {
+    title: 'Almacén E-commerce Automatizado | Fulfillment | STOKA',
+    desc: 'Fulfillment automatizado para e-commerce y retail en Argentina. Pedidos 3x más rápido, 99,9% de exactitud. Robots shuttle, WMS y ASRS llave en mano.',
+  },
+  'logistica-3pl': {
+    title: 'Automatización 3PL | WMS Multicliente Argentina | STOKA',
+    desc: 'Automatización 3PL en Argentina: WMS multicliente, cross docking, operación 24/7. Sistemas ASRS y robots DELIE con soporte técnico local.',
+  },
+  manufactura: {
+    title: 'Intralogística Industrial Automatizada | JIT | STOKA',
+    desc: 'Intralogística automatizada para manufactura en Argentina. Suministro JIT, kanban digital y trazabilidad de lotes para cero paradas de línea.',
+  },
+  'alimentos-bebidas': {
+    title: 'Almacén Alimentos Automatizado | FIFO FEFO | STOKA',
+    desc: 'Almacén automatizado para alimentos y bebidas en Argentina. FIFO/FEFO automático, trazabilidad alimentaria, compatible GS1 y FSSC 22000. Sistemas ASRS DELIE.',
+  },
+  farmaceutica: {
+    title: 'Almacén Farmacéutico GMP | Serialización ANMAT | STOKA',
+    desc: 'Almacén farmacéutico GMP: FEFO automático, serialización ANMAT y zonas de temperatura. Documentación IQ/OQ/PQ incluida. DELIE Argentina.',
+  },
+  'mineria-oil-gas': {
+    title: 'Almacén MRO Minería y Oil & Gas Automatizado | STOKA',
+    desc: 'Almacenes de repuestos para minería y oil & gas en Argentina: VLM y WMS para MRO, IP54-IP65. Localización de repuesto crítico en menos de 2 segundos.',
+  },
+  'cadena-frio': {
+    title: 'ASRS Cámara Frigorífica −30°C | Cadena de Frío | STOKA',
+    desc: 'ASRS para cámara frigorífica hasta −30°C en Argentina. Transelevadores y robots shuttle para congelado. FIFO automático, ahorro energético del 30–40%.',
+  },
 };
 
 export const IndustriaDetailPage = () => {
@@ -245,11 +283,11 @@ export const IndustriaDetailPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>{ind.label} — Automatización ASRS en Argentina | STOKA</title>
+        <title>{INDUSTRY_META[slug]?.title ?? `${ind.label} — Automatización ASRS en Argentina | STOKA`}</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content={`${ind.desc} Representantes oficiales de DELIE en Argentina y Chile. Consultoría y proyecto ASRS llave en mano.`} />
-        <meta property="og:title" content={`${ind.label} — Automatización ASRS | STOKA Argentina`} />
-        <meta property="og:description" content={ind.desc} />
+        <meta name="description" content={INDUSTRY_META[slug]?.desc ?? `${ind.desc} Representantes oficiales de DELIE en Argentina y Chile. Consultoría y proyecto ASRS llave en mano.`} />
+        <meta property="og:title" content={INDUSTRY_META[slug]?.title ?? `${ind.label} — Automatización ASRS | STOKA Argentina`} />
+        <meta property="og:description" content={INDUSTRY_META[slug]?.desc ?? ind.desc} />
         <meta property="og:url" content={`https://www.stokagroup.com/industrias/${slug}`} />
         <link rel="canonical" href={`https://www.stokagroup.com/industrias/${slug}`} />
         <script type="application/ld+json">{JSON.stringify({
@@ -270,6 +308,16 @@ export const IndustriaDetailPage = () => {
             "acceptedAnswer": { "@type": "Answer", "text": item.a }
           }))
         })}</script>}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": `Automatización ASRS para ${ind.label} — STOKA Argentina`,
+          "description": `${ind.desc} Representantes oficiales de DELIE en Argentina y Chile. Proyecto llave en mano.`,
+          "provider": { "@id": "https://www.stokagroup.com/#organization" },
+          "areaServed": [{ "@type": "Country", "name": "Argentina" }, { "@type": "Country", "name": "Chile" }],
+          "serviceType": "Sistemas ASRS — Automatización de Almacenes por Industria",
+          "url": `https://www.stokagroup.com/industrias/${slug}`
+        })}</script>
       </Helmet>
       <Navbar />
 

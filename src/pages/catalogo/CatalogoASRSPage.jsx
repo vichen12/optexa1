@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
@@ -48,11 +48,11 @@ export const CatalogoASRSPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>Sistemas ASRS | Almacén Automatizado Alta Densidad | Estanterías AS/RS | STOKA Argentina</title>
+        <title>Sistemas ASRS Argentina | AS/RS Automatizados | STOKA</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Sistemas de almacenamiento y recuperación automatizados (ASRS) DELIE. Almacén automatizado, bodega y depósito de 7 a 40 m. ASRS Argentina y ASRS Chile. 30–50% más económico que Europa." />
-        <meta property="og:title" content="Sistemas AS/RS | Estanterías Automatizadas | STOKA Argentina" />
-        <meta property="og:description" content="Estanterías AS/RS DELIE de 7 a 40 metros. Drive-in, shuttle, mezzanine. Representantes oficiales en Argentina." />
+        <meta name="description" content="ASRS y AS/RS DELIE en Argentina: transelevadores, pallet shuttle y miniload de 7 a 40 m de altura. 30–50% más económico que proveedores europeos." />
+        <meta property="og:title" content="Sistemas ASRS Argentina | Almacén Automatizado AS/RS | STOKA" />
+        <meta property="og:description" content="Sistema de almacenamiento y recuperación automatizado (AS/RS) DELIE. 7 a 40 metros, drive-in, shuttle, miniload. Representantes oficiales en Argentina y Chile." />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo/asrs" />
         <link rel="canonical" href="https://www.stokagroup.com/catalogo/asrs" />
         <script type="application/ld+json">{JSON.stringify({
@@ -85,6 +85,19 @@ export const CatalogoASRSPage = () => {
             "name": item.q,
             "acceptedAnswer": { "@type": "Answer", "text": item.a }
           }))
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Sistemas ASRS — Almacenamiento Automatizado Argentina",
+          "description": "Sistemas de almacenamiento y recuperación automatizado (ASRS / AS/RS) DELIE para Argentina y Chile. Transelevadores, pallet shuttle, miniload y estanterías automatizadas de 7 a 40 m.",
+          "provider": { "@id": "https://www.stokagroup.com/#organization" },
+          "areaServed": [
+            { "@type": "Country", "name": "Argentina" },
+            { "@type": "Country", "name": "Chile" }
+          ],
+          "serviceType": "Sistemas ASRS — Automatización de Almacenes",
+          "url": "https://www.stokagroup.com/catalogo/asrs"
         })}</script>
       </Helmet>
       <Navbar />
@@ -381,6 +394,27 @@ export const CatalogoASRSPage = () => {
               {l.label}
             </button>
           ))}
+        </div>
+      </section>
+
+      {/* También te puede interesar */}
+      <section className="py-10 px-6 bg-slate-950">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.4em] uppercase mb-4">También te puede interesar</p>
+          <Link
+            to="/catalogo/asrs/autostore-alternativa"
+            className="group flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-slate-900 border border-slate-700 hover:border-cyan-400/50 rounded-2xl p-6 transition-colors"
+          >
+            <div>
+              <h3 className="text-base font-black text-white mb-1 group-hover:text-cyan-50 transition-colors">
+                ¿Evaluaste AutoStore? Conocé la alternativa DELIE
+              </h3>
+              <p className="text-sm text-slate-400">Misma densidad de almacenamiento, 30-50% más económico y con soporte técnico local en Argentina.</p>
+            </div>
+            <span className="shrink-0 flex items-center gap-1 text-cyan-400 text-sm font-bold group-hover:gap-2 transition-all">
+              Ver comparativa <ArrowRight size={15} />
+            </span>
+          </Link>
         </div>
       </section>
 

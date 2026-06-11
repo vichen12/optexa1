@@ -10,8 +10,10 @@
   <url><loc>https://www.stokagroup.com/como-trabajamos</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/nosotros</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/contacto</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
- <url><loc>https://www.stokagroup.com/delie-argentina</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.stokagroup.com/alternativa-delie-argentina</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.stokagroup.com/delie-argentina</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.stokagroup.com/alternativa-economica-asrs</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.stokagroup.com/chile</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
   <!-- Categorías de catálogo -->
   <url><loc>https://www.stokagroup.com/catalogo/asrs</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.stokagroup.com/catalogo/robots-manipulacion</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -24,6 +26,7 @@
   <url><loc>https://www.stokagroup.com/catalogo/asrs/miniload</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/catalogo/asrs/shuttle</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/catalogo/asrs/camara-frio</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.stokagroup.com/catalogo/asrs/autostore-alternativa</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/catalogo/robots-manipulacion/paletizado</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/catalogo/robots-manipulacion/picking</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/catalogo/robots-manipulacion/agv-amr</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -35,9 +38,10 @@
   <url><loc>https://www.stokagroup.com/catalogo/software/wcs</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Recursos, glosario y herramientas -->
-  <url><loc>https://www.stokagroup.com/recursos</loc><lastmod>2026-06-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.stokagroup.com/recursos</loc><lastmod>2026-06-11</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.stokagroup.com/recursos/glosario</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/recursos/comparador-sistemas</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.stokagroup.com/recursos/roi-automatizacion</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Artículos del blog -->
   <url><loc>https://www.stokagroup.com/recursos/que-es-un-sistema-asrs</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -48,6 +52,8 @@
   <url><loc>https://www.stokagroup.com/recursos/wms-vs-wcs</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/recursos/automatizacion-bodegas-chile</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/recursos/asrs-vs-autostore</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.stokagroup.com/recursos/que-es-un-transelevador</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.stokagroup.com/recursos/que-es-un-wms</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Casos de éxito -->
   <url><loc>https://www.stokagroup.com/casos-de-exito</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -57,7 +63,7 @@
   <url><loc>https://www.stokagroup.com/industrias/logistica-3pl</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/industrias/manufactura</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/industrias/alimentos-bebidas</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.stokagroup.com/industrias/farmaceutica</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.stokagroup.com/industrias/farmaceutica</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.stokagroup.com/industrias/mineria-oil-gas</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.stokagroup.com/industrias/cadena-frio</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 

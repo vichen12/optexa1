@@ -358,6 +358,95 @@ export const ARTICULOS = [
       { titulo: 'Cuánto cuesta automatizar un almacén', slug: 'cuanto-cuesta-automatizar-almacen' },
     ],
   },
+  {
+    slug: 'que-es-un-transelevador',
+    h1: 'Qué es un transelevador y cómo funciona en un almacén automático',
+    metaTitle: '¿Qué es un Transelevador? Tipos, Funcionamiento y Costos 2026 | STOKA',
+    wordCount: 1600,
+    metaDesc: 'Guía completa sobre transelevadores: tipos (unit-load, miniload), cómo funcionan, diferencias con shuttle y cuándo conviene instalar uno en tu almacén, bodega o depósito en Argentina.',
+    categoria: 'Fundamentos ASRS',
+    readTime: '7 min',
+    publishDate: '2026-06-10',
+    heroImg: '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
+    intro: 'Un transelevador es el componente central de la mayoría de los sistemas ASRS (sistemas de almacenamiento y recuperación automatizados). Es una grúa automatizada que se desplaza dentro de un pasillo de estanterías, capturando y depositando paletas, cajas o contenedores con precisión milimétrica. Si alguna vez viste imágenes de un almacén moderno con estanterías de 20 o 30 metros y máquinas moviéndose entre ellas sin operarios — eso es un transelevador. En Argentina y Chile, la creciente adopción de automatización industrial hace que cada vez más empresas de logística, manufactura, alimentos y farmacéutica evalúen esta tecnología para sus almacenes, bodegas y depósitos.',
+    sections: [
+      {
+        h2: 'Tipos de transelevador: unit-load y miniload',
+        body: 'Existen dos grandes familias de transelevadores. El transelevador unit-load (o de paletas) está diseñado para manejar unidades de carga pesadas: paletas EURO, ISO o americanas de hasta 1.500 kg. Opera en pasillos de almacenes o bodegas de gran altura (7 a 40 metros), con velocidades de traslación de hasta 160 metros por minuto. Es el sistema de referencia para distribuidores, operadores 3PL y plantas de manufactura que manejan grandes volúmenes de paletas. El transelevador miniload, por su parte, está optimizado para cargas más pequeñas: cajas, totes y bandejas de hasta 50 kg. Opera en pasillos más estrechos (600 a 800 mm) y alcanza velocidades de hasta 180 metros por minuto en traslación. Es el sistema habitual para picking de alta velocidad en e-commerce, farmacéutica y manufactura con muchos SKUs. Ambos comparten la misma arquitectura básica pero tienen especificaciones de estructura, horquilla y control completamente diferentes.',
+      },
+      {
+        h2: 'Cómo funciona un transelevador paso a paso',
+        body: 'El ciclo de operación comienza en el software. El WMS (sistema de gestión de almacenes) recibe la orden — puede ser de almacenamiento o de recuperación — y la pasa al WCS (sistema de control de equipos). El WCS calcula la posición exacta del producto en el rack y asigna la misión al transelevador disponible más eficiente. El transelevador se desplaza simultáneamente en horizontal (sobre rieles en el suelo y el techo) y en vertical (elevando la plataforma de carga) hasta llegar a la celda correcta. La horquilla telescópica se extiende, captura la paleta o el contenedor y lo retrae. El transelevador navega hasta el punto de entrega — una estación de carga/descarga o un transportador — y deposita la carga. Todo el ciclo, desde la misión hasta la entrega, toma entre 45 y 90 segundos en un almacén de 20 metros de altura. Cada movimiento queda registrado automáticamente en el WMS: inventario 100% trazado en tiempo real.',
+      },
+      {
+        h2: 'Transelevador vs. shuttle: cuándo usar cada uno',
+        body: 'La decisión entre transelevador y shuttle depende principalmente de dos variables: el throughput necesario y la densidad de almacenamiento requerida. El transelevador opera en un pasillo único con una máquina: es secuencial, con un ciclo a la vez. Esto lo hace adecuado cuando el throughput no es extremadamente alto pero la altura disponible es mucha (10+ metros). El shuttle, por su parte, puede tener múltiples robots en distintos niveles del mismo pasillo, operando en paralelo: eso le da un throughput potencialmente mucho mayor por pasillo. Sin embargo, el shuttle requiere más inversión por pasillo y tiene mayor complejidad de mantenimiento. La regla práctica: almacén con throughput moderado (hasta 200 movimientos/hora por pasillo), gran altura y muchas posiciones — transelevador. Almacén con throughput muy alto, menor altura y alta densidad — shuttle. Para muchas operaciones, la combinación de ambos en el mismo depósito es la solución más eficiente.',
+      },
+      {
+        h2: 'Cuánto cuesta un transelevador y cuál es el ROI en Argentina',
+        body: 'El costo de un transelevador unitload DELIE para un pasillo de almacén de mediana escala (15 metros de altura, 500 posiciones de paleta) ronda los USD 180.000 a USD 280.000, sin incluir las estanterías ni el WCS. Un proyecto completo de 2 pasillos con transportadores, estanterías, WCS e integración con el ERP existente en un almacén o bodega en Argentina oscila entre USD 800.000 y USD 1.500.000. Con el Decreto 513/2025 (arancel 0% para equipos ASRS) y el RIMI (amortización acelerada del 100% en el primer ejercicio), el costo neto de un proyecto se reduce entre un 25% y un 35%. El ROI típico de un proyecto de transelevadores en Argentina está entre 18 y 36 meses, dependiendo del costo laboral actual de la operación manual que reemplaza.',
+      },
+    ],
+    conclusionH2: 'El primer paso es un diagnóstico gratuito',
+    conclusion: 'La decisión de instalar un transelevador en tu almacén, bodega o depósito no empieza por el presupuesto: empieza por entender si el sistema es el correcto para tu operación. STOKA realiza el diagnóstico técnico —análisis de throughput, perfil de SKUs, altura disponible y proyección de ROI— sin costo y sin compromiso. Si el transelevador no es lo que necesitás, lo decimos. Si lo es, armamos la propuesta técnica completa en 2 a 4 semanas.',
+    faq: [
+      { q: '¿Un transelevador puede operar en una bodega o depósito existente o solo en obra nueva?', a: 'Puede instalarse en instalaciones existentes siempre que haya altura libre suficiente (mínimo 7 metros) y la losa pueda soportar las cargas de la estructura. La mayoría de los proyectos de STOKA son en depósitos existentes. Se requiere una nivelación de piso y obra civil menor de anclaje.' },
+      { q: '¿Qué pasa si el transelevador falla en el medio de la operación?', a: 'Los transelevadores DELIE tienen un MTBF (tiempo medio entre fallas) mayor a 8.000 horas de operación. Si se produce una falla, el pasillo puede operarse en modo manual de emergencia con carretilla elevadora mientras se resuelve. STOKA tiene repuestos en Argentina para resolver la mayoría de las fallas en menos de 24 horas.' },
+      { q: '¿Cuántos pasillos de transelevador necesito para mi operación?', a: 'El número de pasillos depende del throughput requerido (movimientos por hora) y de la capacidad de almacenamiento necesaria (número de posiciones de paleta o contenedor). Con esos dos datos, STOKA dimensiona el sistema en la primera consulta técnica gratuita.' },
+      { q: '¿El transelevador se integra con mi WMS o ERP existente?', a: 'Sí. El WCS de DELIE se conecta a cualquier WMS o ERP vía API REST, SOAP o EDI. Integraciones certificadas con SAP, Oracle, Microsoft Dynamics e Infor. STOKA gestiona la integración técnica como parte del proyecto llave en mano sin costo adicional.' },
+    ],
+    cta: { heading: 'Evaluamos si un transelevador es lo correcto para tu operación', text: 'Diagnóstico técnico gratuito con análisis de throughput y estimación de ROI incluida.', btnPrimary: { label: 'Solicitar diagnóstico gratuito', url: '/contacto' }, btnSecondary: { label: 'Ver transelevadores unit-load', url: '/catalogo/asrs/unit-load' } },
+    relacionados: [
+      { titulo: 'Transelevador vs Shuttle: cuál conviene', slug: 'transelevador-vs-shuttle' },
+      { titulo: 'Qué es un sistema ASRS', slug: 'que-es-un-sistema-asrs' },
+      { titulo: 'Cuánto cuesta automatizar un almacén', slug: 'cuanto-cuesta-automatizar-almacen' },
+    ],
+  },
+
+  {
+    slug: 'que-es-un-wms',
+    h1: 'Qué es un WMS y por qué es el cerebro del almacén automatizado',
+    metaTitle: '¿Qué es un WMS? Warehouse Management System Explicado | STOKA Argentina',
+    wordCount: 1500,
+    metaDesc: 'Guía completa sobre WMS (Warehouse Management System): qué hace, diferencia con WCS y ERP, funciones clave y cómo elegir el correcto para tu almacén, bodega o depósito en Argentina.',
+    categoria: 'Software y tecnología',
+    readTime: '6 min',
+    publishDate: '2026-06-10',
+    heroImg: '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp',
+    intro: 'El WMS (Warehouse Management System, o sistema de gestión de almacenes) es el software que convierte un almacén, bodega o depósito en una operación controlada y trazable. Sabe exactamente qué está en cada celda, de dónde vino, cuándo llegó y para qué cliente es. Sin WMS, la automatización física — transelevadores, robots, transportadores — no puede funcionar con precisión. Con WMS, el almacén sabe y decide; sin él, alguien tiene que adivinarlo. En Argentina, el WMS se convirtió en un requisito en industrias reguladas (farmacéutica, alimentos) y en el ancla de todo proyecto de automatización de almacén serio.',
+    sections: [
+      {
+        h2: 'Qué hace exactamente un WMS',
+        body: 'El WMS gestiona tres grandes áreas de la operación del almacén. La primera es el inventario: cada producto tiene ubicación exacta, cantidad, lote, fecha de vencimiento y propietario. No hay stock fantasma ni discrepancias entre el sistema y la realidad física — porque cada movimiento queda registrado en tiempo real. La segunda área es las operaciones: recepción, almacenamiento, picking, preparación y despacho. El WMS asigna automáticamente la mejor ubicación para cada producto al ingreso (slotting dinámico), elige el producto correcto para cada egreso (FIFO o FEFO automático) y secuencia las órdenes de picking para minimizar recorridos. La tercera área es la trazabilidad: cada movimiento queda auditado con usuario, timestamp y ubicación de origen y destino. Para farmacéutica, alimentos y automotriz, este audit trail es un requisito regulatorio; para logística 3PL, es la base de la facturación por servicio.',
+      },
+      {
+        h2: 'WMS vs WCS vs ERP: qué hace cada uno',
+        body: 'El ERP (SAP, Oracle, Microsoft Dynamics) gestiona los procesos de negocio: finanzas, compras, ventas, producción. Sabe que hay 100 paletas de producto X en el almacén, pero no sabe en qué celda está cada una. El WMS vive entre el ERP y el almacén físico: recibe las órdenes del ERP y las traduce en instrucciones de almacenamiento y picking, sabiendo exactamente dónde está cada producto en el depósito. El WCS (Warehouse Control System) es el siguiente nivel de control: convierte las instrucciones del WMS en comandos para los equipos físicos — transelevadores, robots, transportadores — en tiempo real. En un almacén automatizado completo, los tres sistemas trabajan en cascada: ERP → WMS → WCS → equipo físico. En sistemas DELIE, el WMS y WCS están integrados en una misma plataforma, reduciendo la complejidad de integración.',
+      },
+      {
+        h2: 'Funciones clave de un WMS moderno para almacenes en Argentina',
+        body: 'El WMS de un almacén o bodega moderno en Argentina debe incluir al menos estas funciones: control de inventario en tiempo real con ubicación exacta; FIFO y FEFO automáticos para alimentos y farmacéutica; trazabilidad de lote y número de serie para cumplimiento de ANMAT y FDA; gestión de devoluciones con inspección y re-ingreso controlado; slotting dinámico que optimiza la ubicación según el historial de rotación; reportes para facturación y auditoría; e integración bidireccional con el ERP existente. Para operadores 3PL, se agrega gestión multi-cliente con inventarios segregados. Para farmacéutica, el WMS debe tener módulo GMP con validación IQ/OQ/PQ y cumplimiento de 21 CFR Part 11.',
+      },
+      {
+        h2: 'Cuándo el WMS del ERP no es suficiente y se necesita WMS dedicado',
+        body: 'Los módulos de inventario de los ERP (SAP MM, Oracle Inventory) gestionan el stock a nivel de almacén, no a nivel de celda. Saben que hay 100 paletas en el depósito pero no en qué celda exacta está cada una. Para un almacén con celdas numeradas, operación de picking y procesos de FEFO, el módulo de inventario del ERP no es suficiente: necesitás un WMS dedicado que se integre con el ERP. El punto de inflexión habitual es cuando el almacén supera las 500 posiciones de almacenamiento y 300 movimientos diarios, o cuando se incorpora equipamiento automatizado (transelevadores, robots) que requiere control en tiempo real de las ubicaciones. DELIE entrega su propio WMS integrado con el WCS como parte del proyecto llave en mano de STOKA.',
+      },
+    ],
+    conclusionH2: 'El WMS: la inversión que más impacta en el largo plazo',
+    conclusion: 'En un proyecto de automatización de almacén, bodega o depósito, el WMS es la tecnología que más impacta la operación en el largo plazo: sigue siendo el sistema central después de que los equipos físicos se amortizan. Elegir un WMS con capacidad de crecimiento — multi-cliente, multi-sitio, escalable en funciones regulatorias — evita proyectos de reemplazo costosos en el futuro. STOKA entrega el WMS de DELIE como parte del proyecto, con integración completa al ERP existente y capacitación del equipo operativo incluida.',
+    faq: [
+      { q: '¿El WMS de DELIE se integra con SAP?', a: 'Sí. El WMS tiene conector certificado con SAP S/4HANA y SAP ECC vía RFC/BAPI y API REST. La integración bidireccional sincroniza órdenes de entrada y salida del ERP con las ubicaciones físicas del almacén en tiempo real. STOKA gestiona la integración técnica con el equipo IT del cliente.' },
+      { q: '¿Cuánto tiempo lleva implementar un WMS en un almacén o depósito existente?', a: 'Para un almacén sin sistema WMS previo, la implementación completa (configuración, integración con ERP, carga de datos maestros y capacitación) toma entre 8 y 14 semanas. Si ya hay un WMS que se reemplaza, el proyecto incluye migración de datos y puede extenderse entre 4 y 6 meses.' },
+      { q: '¿El WMS funciona si se corta la conexión al ERP?', a: 'Sí. El WMS opera de forma autónoma con su propia base de datos. En caso de caída del ERP, el almacén continúa operando y las transacciones se sincronizan automáticamente cuando se restablece la conexión. No hay pérdida de datos ni necesidad de ingreso manual retroactivo.' },
+      { q: '¿Qué pasa cuando crece el almacén o se agregan más SKUs?', a: 'El WMS de DELIE es escalable sin cambios de arquitectura. Podés agregar más posiciones de almacenamiento, más usuarios, más equipos físicos y más funciones regulatorias de forma incremental. La licencia incluye actualizaciones de software y nuevas funciones durante el período de soporte.' },
+    ],
+    cta: { heading: 'Evaluamos si tu operación necesita WMS dedicado o el del ERP es suficiente', text: 'Consulta técnica gratuita con análisis de tu flujo operativo actual.', btnPrimary: { label: 'Consultar con un especialista', url: '/contacto' }, btnSecondary: { label: 'Ver software WMS/WCS', url: '/catalogo/software/wms' } },
+    relacionados: [
+      { titulo: 'WMS vs WCS: qué hace cada software', slug: 'wms-vs-wcs' },
+      { titulo: 'Qué es un sistema ASRS', slug: 'que-es-un-sistema-asrs' },
+      { titulo: 'Cuánto cuesta automatizar un almacén', slug: 'cuanto-cuesta-automatizar-almacen' },
+    ],
+  },
 ];
 
 export const getArticulo = (slug) => ARTICULOS.find(a => a.slug === slug);

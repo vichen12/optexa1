@@ -55,7 +55,7 @@ export const AlternativaDeliePage = () => {
     <div className="min-h-screen text-gray-900 bg-white">
       <Helmet>
         <title>DELIE en Argentina — Sistemas ASRS con Soporte Local | STOKA</title>
-        <meta name="description" content="STOKA es el representante oficial exclusivo de DELIE en Argentina y Chile. Sistemas ASRS, transelevadores, robots shuttle y software WMS/WCS con ingeniería y soporte 100% local." />
+        <meta name="description" content="Representantes exclusivos de DELIE en Argentina y Chile. Sistemas ASRS, transelevadores, robots shuttle y WMS/WCS. Ingeniería y soporte técnico 100% local." />
         <meta property="og:title" content="DELIE en Argentina — Representación Oficial STOKA | Sistemas ASRS" />
         <meta property="og:description" content="STOKA representa oficialmente a DELIE en Argentina: transelevadores hasta 40 m, robots shuttle, WMS/WCS CMMI Nivel 5. Soporte técnico 100% local." />
         <meta name="robots" content="index, follow" />
@@ -77,6 +77,16 @@ export const AlternativaDeliePage = () => {
             "name": item.q,
             "acceptedAnswer": { "@type": "Answer", "text": item.a },
           })),
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Sistemas ASRS DELIE en Argentina — Representación Oficial STOKA",
+          "description": "Representantes exclusivos de DELIE en Argentina y Chile. Transelevadores hasta 40 m, robots shuttle, WMS/WCS CMMI Nivel 5. Ingeniería y soporte 100% local.",
+          "provider": { "@id": "https://www.stokagroup.com/#organization" },
+          "areaServed": [{ "@type": "Country", "name": "Argentina" }, { "@type": "Country", "name": "Chile" }],
+          "serviceType": "Sistemas ASRS DELIE — Representación y Distribución",
+          "url": "https://www.stokagroup.com/delie-argentina"
         })}</script>
       </Helmet>
       <Navbar />

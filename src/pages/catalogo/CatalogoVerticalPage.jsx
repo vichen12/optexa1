@@ -51,9 +51,9 @@ export const CatalogoVerticalPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>Almacén Vertical Automático | VLM, Carrusel, Torre de Almacenamiento | STOKA Argentina</title>
+        <title>Almacén Vertical Automático | VLM y Carrusel | STOKA</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Almacén vertical automático, VLM, carrusel vertical y torre de almacenamiento DELIE. Optimizá el espacio de tu almacén hasta un 90%. Cotizá sin costo en Argentina." />
+        <meta name="description" content="VLM, carrusel vertical y almacén vertical automático DELIE. Hasta 90% más espacio en tu almacén. Cotización sin costo para Argentina y Chile." />
         <meta property="og:title" content="Almacenamiento Vertical VLM y Carruseles | STOKA Argentina" />
         <meta property="og:description" content="VLM y carruseles verticales DELIE. Hasta 90% menos espacio de suelo. Representantes oficiales en Argentina." />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo/almacenamiento-vertical" />
@@ -85,6 +85,16 @@ export const CatalogoVerticalPage = () => {
             "name": item.q,
             "acceptedAnswer": { "@type": "Answer", "text": item.a }
           }))
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Almacenamiento Vertical Automático VLM y Carrusel — DELIE Argentina",
+          "description": "Módulos VLM y carruseles verticales DELIE para almacenes en Argentina. Hasta 90% menos espacio de suelo. Goods-to-person automatizado con soporte local.",
+          "provider": { "@id": "https://www.stokagroup.com/#organization" },
+          "areaServed": [{ "@type": "Country", "name": "Argentina" }, { "@type": "Country", "name": "Chile" }],
+          "serviceType": "Almacenamiento Vertical — Automatización de Almacenes",
+          "url": "https://www.stokagroup.com/catalogo/almacenamiento-vertical"
         })}</script>
       </Helmet>
       <Navbar />

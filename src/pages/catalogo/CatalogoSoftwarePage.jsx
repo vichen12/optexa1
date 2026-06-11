@@ -59,9 +59,9 @@ export const CatalogoSoftwarePage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>Sistema WMS | Warehouse Management System para Almacenes y Bodegas | STOKA Argentina</title>
+        <title>Sistema WMS y WCS para Almacenes | Software DELIE | STOKA</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Sistema WMS (warehouse management system) y software de gestión de bodegas DELIE. Integración WMS SAP, WMS ERP, WCS. Control total del almacén automatizado en Argentina." />
+        <meta name="description" content="WMS y WCS DELIE para almacenes en Argentina. Integración con SAP, Oracle y Microsoft Dynamics. Control total del almacén automatizado en tiempo real." />
         <meta property="og:title" content="Software WMS y WCS DELIE | Gestión de Almacén | STOKA Argentina" />
         <meta property="og:description" content="WMS, WCS, HMS y visualización 3D DELIE. Integración SAP, ERP, MES. Control total del almacén automatizado en Argentina." />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo/software" />
@@ -93,6 +93,16 @@ export const CatalogoSoftwarePage = () => {
             "name": item.q,
             "acceptedAnswer": { "@type": "Answer", "text": item.a }
           }))
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Software WMS y WCS para Almacenes DELIE — Argentina",
+          "description": "WMS y WCS DELIE certificados CMMI Nivel 5. Integración con SAP, Oracle y Microsoft Dynamics. Control total del almacén automatizado en Argentina y Chile.",
+          "provider": { "@id": "https://www.stokagroup.com/#organization" },
+          "areaServed": [{ "@type": "Country", "name": "Argentina" }, { "@type": "Country", "name": "Chile" }],
+          "serviceType": "Software WMS/WCS — Gestión de Almacenes",
+          "url": "https://www.stokagroup.com/catalogo/software"
         })}</script>
       </Helmet>
       <Navbar />

@@ -50,9 +50,9 @@ export const CatalogoRobotsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>Robot Paletizador y Robots para Almacenes | Transelevadores, Shuttle, AGV, AMR | STOKA</title>
+        <title>Robot AGV AMR y Paletizador para Almacén | STOKA</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Robot paletizador, paletizadora automática, AGV y AMR DELIE para bodegas y almacenes. Picking automatizado goods-to-person. Brazo robótico para almacén. Soporte 24/7 en Argentina." />
+        <meta name="description" content="Robot paletizador, AGV y AMR DELIE para almacenes en Argentina. Picking goods-to-person automatizado con soporte técnico local 24/7." />
         <meta property="og:title" content="Robots de Manipulación | Transelevadores y Shuttle DELIE | STOKA Argentina" />
         <meta property="og:description" content="Transelevadores MiniLoad, robots lanzadera, grúas apiladoras y AMR DELIE en Argentina. Soporte 24/7." />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo/robots-manipulacion" />
@@ -84,6 +84,16 @@ export const CatalogoRobotsPage = () => {
             "name": item.q,
             "acceptedAnswer": { "@type": "Answer", "text": item.a }
           }))
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Robots y Transelevadores para Almacenes — DELIE Argentina",
+          "description": "Transelevadores MiniLoad, robots lanzadera 4 vías y grúas apiladoras DELIE para automatización de almacenes en Argentina y Chile. Soporte técnico 100% local.",
+          "provider": { "@id": "https://www.stokagroup.com/#organization" },
+          "areaServed": [{ "@type": "Country", "name": "Argentina" }, { "@type": "Country", "name": "Chile" }],
+          "serviceType": "Robots y Transelevadores — Automatización de Almacenes",
+          "url": "https://www.stokagroup.com/catalogo/robots-manipulacion"
         })}</script>
       </Helmet>
       <Navbar />

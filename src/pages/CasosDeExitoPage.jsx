@@ -106,14 +106,14 @@ export const CasosDeExitoPage = () => {
     "author": { "@id": "https://www.stokagroup.com/#organization" },
     "publisher": { "@id": "https://www.stokagroup.com/#organization" },
     "url": canonical,
-    "keywords": `${c.industria}, ${c.sistema}, automatización almacenes, Daifuku, ASRS Argentina`,
+    "keywords": `${c.industria}, ${c.sistema}, automatización almacenes, DELIE, ASRS Argentina`,
   }));
 
   return (
     <div className="min-h-screen bg-zinc-950 text-white">
       <Helmet>
         <title>Casos de Éxito | Almacenes Automatizados | STOKA</title>
-        <meta name="description" content="Proyectos de automatización Daifuku/Wynright implementados: e-commerce, farmacéutica, alimentos, 3PL. Resultados reales." />
+        <meta name="description" content="Casos de éxito de automatización con DELIE: e-commerce, farmacéutica, alimentos y 3PL. Resultados reales de sistemas ASRS en Argentina y Chile." />
         <meta property="og:title" content="Casos de Éxito | Almacenes Automatizados | STOKA" />
         <meta property="og:url" content={canonical} />
         <link rel="canonical" href={canonical} />
@@ -133,13 +133,13 @@ export const CasosDeExitoPage = () => {
             <span>/</span>
             <span className="text-slate-400">Casos de éxito</span>
           </nav>
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-4">Daifuku · Wynright · DELIE — implementaciones globales de referencia</p>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-4">DELIE — implementaciones globales de referencia</p>
           <h1 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
             Proyectos de automatización<br />
             <span className="text-cyan-400">de referencia global</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mb-8">
-            Daifuku, Wynright y DELIE son los referentes mundiales en automatización de almacenes. Estos son casos representativos por industria —la misma tecnología que STOKA implementa en Argentina y Chile, probada a escala global.
+            DELIE es uno de los fabricantes de sistemas ASRS de mayor escala global. Estos son casos representativos por industria — la misma tecnología que STOKA implementa en Argentina y Chile, probada a escala mundial.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
@@ -210,6 +210,13 @@ export const CasosDeExitoPage = () => {
           ))}
         </div>
       </section>
+
+      {/* Fuente */}
+      <div className="max-w-5xl mx-auto px-6 pb-4">
+        <p className="text-slate-600 text-[10px] leading-relaxed">
+          * Casos representativos de instalaciones globales DELIE. Métricas tomadas de la documentación técnica oficial de DELIE y materiales de referencia del fabricante. Las implementaciones en Argentina y Chile pueden variar según el diseño específico del proyecto.
+        </p>
+      </div>
 
       {/* CTA */}
       <section className="bg-slate-950 border-t border-slate-800 py-16">

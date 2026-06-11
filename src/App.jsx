@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { useEffect, lazy, Suspense } from 'react';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Navbar } from './components/Navbar';
@@ -14,30 +14,35 @@ import { ROISection } from './components/ROISection';
 import { BeneficiosBanner } from './components/BeneficiosBanner';
 import { Process } from './components/Process';
 import { CTABanner } from './components/CTABanner';
-import { CatalogPage } from './pages/CatalogPage';
-import { SolucionesPage } from './pages/SolucionesPage';
-import { NosotrosPage } from './pages/NosotrosPage';
-import { ComoTrabajamosPage } from './pages/ComoTrabajamosPage';
-import { BeneficiosFiscalesPage } from './pages/BeneficiosFiscalesPage';
-import { IndustriasPage } from './pages/IndustriasPage';
-import { IndustriaDetailPage } from './pages/IndustriaDetailPage';
-import { ContactPage } from './pages/ContactPage';
-import { CatalogoASRSPage } from './pages/catalogo/CatalogoASRSPage';
-import { CatalogoRobotsPage } from './pages/catalogo/CatalogoRobotsPage';
-import { CatalogoVerticalPage } from './pages/catalogo/CatalogoVerticalPage';
-import { CatalogoTransportePage } from './pages/catalogo/CatalogoTransportePage';
-import { CatalogoSoftwarePage } from './pages/catalogo/CatalogoSoftwarePage';
-import { ProductoPage } from './pages/catalogo/ProductoPage';
-import { AlternativaDeliePage } from "./pages/AlternativaDeliePage";
-import { RecursosHub } from './pages/recursos/RecursosHub';
-import { ArticuloPage } from './pages/recursos/ArticuloPage';
-import { GlosarioPage } from './pages/recursos/GlosarioPage';
-import { ComparadorPage } from './pages/recursos/ComparadorPage';
-import { CasosDeExitoPage } from './pages/CasosDeExitoPage';
+const CatalogPage = lazy(() => import('./pages/CatalogPage').then(m => ({ default: m.CatalogPage })));
+const SolucionesPage = lazy(() => import('./pages/SolucionesPage').then(m => ({ default: m.SolucionesPage })));
+const NosotrosPage = lazy(() => import('./pages/NosotrosPage').then(m => ({ default: m.NosotrosPage })));
+const ComoTrabajamosPage = lazy(() => import('./pages/ComoTrabajamosPage').then(m => ({ default: m.ComoTrabajamosPage })));
+const BeneficiosFiscalesPage = lazy(() => import('./pages/BeneficiosFiscalesPage').then(m => ({ default: m.BeneficiosFiscalesPage })));
+const IndustriasPage = lazy(() => import('./pages/IndustriasPage').then(m => ({ default: m.IndustriasPage })));
+const IndustriaDetailPage = lazy(() => import('./pages/IndustriaDetailPage').then(m => ({ default: m.IndustriaDetailPage })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
+const CatalogoASRSPage = lazy(() => import('./pages/catalogo/CatalogoASRSPage').then(m => ({ default: m.CatalogoASRSPage })));
+const CatalogoRobotsPage = lazy(() => import('./pages/catalogo/CatalogoRobotsPage').then(m => ({ default: m.CatalogoRobotsPage })));
+const CatalogoVerticalPage = lazy(() => import('./pages/catalogo/CatalogoVerticalPage').then(m => ({ default: m.CatalogoVerticalPage })));
+const CatalogoTransportePage = lazy(() => import('./pages/catalogo/CatalogoTransportePage').then(m => ({ default: m.CatalogoTransportePage })));
+const CatalogoSoftwarePage = lazy(() => import('./pages/catalogo/CatalogoSoftwarePage').then(m => ({ default: m.CatalogoSoftwarePage })));
+const ProductoPage = lazy(() => import('./pages/catalogo/ProductoPage').then(m => ({ default: m.ProductoPage })));
+const AlternativaDeliePage = lazy(() => import('./pages/AlternativaDeliePage').then(m => ({ default: m.AlternativaDeliePage })));
+const AlternativaEconomicaASRSPage = lazy(() => import('./pages/AlternativaEconomicaASRSPage').then(m => ({ default: m.AlternativaEconomicaASRSPage })));
+const RecursosHub = lazy(() => import('./pages/recursos/RecursosHub').then(m => ({ default: m.RecursosHub })));
+const ArticuloPage = lazy(() => import('./pages/recursos/ArticuloPage').then(m => ({ default: m.ArticuloPage })));
+const GlosarioPage = lazy(() => import('./pages/recursos/GlosarioPage').then(m => ({ default: m.GlosarioPage })));
+const ComparadorPage = lazy(() => import('./pages/recursos/ComparadorPage').then(m => ({ default: m.ComparadorPage })));
+const CasosDeExitoPage = lazy(() => import('./pages/CasosDeExitoPage').then(m => ({ default: m.CasosDeExitoPage })));
+const ROIPage = lazy(() => import('./pages/recursos/ROIPage').then(m => ({ default: m.ROIPage })));
+const AutoStoreAlternativaPage = lazy(() => import('./pages/catalogo/AutoStoreAlternativaPage').then(m => ({ default: m.AutoStoreAlternativaPage })));
+const ChilePage = lazy(() => import('./pages/ChilePage').then(m => ({ default: m.ChilePage })));
 
 const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness"],
+  "@id": "https://www.stokagroup.com/#organization",
   "name": "STOKA",
   "legalName": "STOKA",
   "description": "Representantes oficiales exclusivos de DELIE en Argentina. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales.",
@@ -95,9 +100,9 @@ function HomePage() {
       <Helmet>
         <title>Sistemas ASRS y Automatización de Almacenes en Argentina | STOKA</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Sistemas ASRS, robots y software WMS/WCS para automatización de almacenes en Argentina. Tecnología DELIE, integración local STOKA. 30-50% más económico que Europa." />
+        <meta name="description" content="Sistemas ASRS para automatización de almacenes, bodegas y depósitos en Argentina. Transelevadores, pallet shuttle, robots y WMS/WCS DELIE. 30–50% más económico que Europa. Soporte local STOKA." />
         <meta property="og:title" content="Sistemas ASRS y Automatización de Almacenes en Argentina | STOKA" />
-        <meta property="og:description" content="Sistemas ASRS, robots y software WMS/WCS para automatización de almacenes en Argentina. Tecnología DELIE, integración local STOKA. 30-50% más económico que Europa." />
+        <meta property="og:description" content="Automatización de almacenes, bodegas y depósitos en Argentina con tecnología DELIE. Transelevadores, robots shuttle, VLM y software WMS/WCS. Integración local STOKA." />
         <meta property="og:image" content="https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png" />
         <meta property="og:url" content="https://www.stokagroup.com/" />
         <link rel="canonical" href="https://www.stokagroup.com/" />
@@ -107,7 +112,15 @@ function HomePage() {
           "name": "STOKA — Automatización de Almacenes",
           "url": "https://www.stokagroup.com",
           "description": "Representantes oficiales exclusivos de DELIE en Argentina. Sistemas ASRS y automatización de almacenes.",
-          "publisher": { "@type": "Organization", "name": "STOKA" }
+          "publisher": { "@type": "Organization", "name": "STOKA" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.stokagroup.com/recursos?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
         })}</script>
         <script type="application/ld+json">{JSON.stringify(ORGANIZATION_SCHEMA)}</script>
       </Helmet>
@@ -274,30 +287,36 @@ function App() {
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(ORGANIZATION_SCHEMA)}</script>
       </Helmet>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/catalogo" element={<CatalogPage />} />
-        <Route path="/catalogo/asrs" element={<CatalogoASRSPage />} />
-        <Route path="/catalogo/robots-manipulacion" element={<CatalogoRobotsPage />} />
-        <Route path="/catalogo/almacenamiento-vertical" element={<CatalogoVerticalPage />} />
-        <Route path="/catalogo/equipo-transporte" element={<CatalogoTransportePage />} />
-        <Route path="/catalogo/software" element={<CatalogoSoftwarePage />} />
-        <Route path="/catalogo/:categoria/:producto" element={<ProductoPage />} />
-        <Route path="/soluciones" element={<SolucionesPage />} />
-        <Route path="/industrias" element={<IndustriasPage />} />
-        <Route path="/industrias/:slug" element={<IndustriaDetailPage />} />
-        <Route path="/beneficios-fiscales" element={<BeneficiosFiscalesPage />} />
-        <Route path="/como-trabajamos" element={<ComoTrabajamosPage />} />
-        <Route path="/nosotros" element={<NosotrosPage />} />
-        <Route path="/contacto" element={<ContactPage />} />
-        <Route path="/delie-argentina" element={<AlternativaDeliePage />} />
-        <Route path="/alternativa-delie-argentina" element={<AlternativaDeliePage />} />
-        <Route path="/casos-de-exito" element={<CasosDeExitoPage />} />
-        <Route path="/recursos" element={<RecursosHub />} />
-        <Route path="/recursos/glosario" element={<GlosarioPage />} />
-        <Route path="/recursos/comparador-sistemas" element={<ComparadorPage />} />
-        <Route path="/recursos/:slug" element={<ArticuloPage />} />
-      </Routes>
+      <Suspense fallback={<div className="min-h-screen bg-zinc-950" />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalogo" element={<CatalogPage />} />
+          <Route path="/catalogo/asrs" element={<CatalogoASRSPage />} />
+          <Route path="/catalogo/robots-manipulacion" element={<CatalogoRobotsPage />} />
+          <Route path="/catalogo/almacenamiento-vertical" element={<CatalogoVerticalPage />} />
+          <Route path="/catalogo/equipo-transporte" element={<CatalogoTransportePage />} />
+          <Route path="/catalogo/software" element={<CatalogoSoftwarePage />} />
+          <Route path="/catalogo/:categoria/:producto" element={<ProductoPage />} />
+          <Route path="/soluciones" element={<SolucionesPage />} />
+          <Route path="/industrias" element={<IndustriasPage />} />
+          <Route path="/industrias/:slug" element={<IndustriaDetailPage />} />
+          <Route path="/beneficios-fiscales" element={<BeneficiosFiscalesPage />} />
+          <Route path="/como-trabajamos" element={<ComoTrabajamosPage />} />
+          <Route path="/nosotros" element={<NosotrosPage />} />
+          <Route path="/contacto" element={<ContactPage />} />
+          <Route path="/delie-argentina" element={<AlternativaDeliePage />} />
+          <Route path="/alternativa-economica-asrs" element={<AlternativaEconomicaASRSPage />} />
+          <Route path="/alternativa-delie-argentina" element={<Navigate to="/delie-argentina" replace />} />
+          <Route path="/casos-de-exito" element={<CasosDeExitoPage />} />
+          <Route path="/recursos" element={<RecursosHub />} />
+          <Route path="/recursos/glosario" element={<GlosarioPage />} />
+          <Route path="/recursos/comparador-sistemas" element={<ComparadorPage />} />
+          <Route path="/recursos/roi-automatizacion" element={<ROIPage />} />
+          <Route path="/recursos/:slug" element={<ArticuloPage />} />
+          <Route path="/catalogo/asrs/autostore-alternativa" element={<AutoStoreAlternativaPage />} />
+          <Route path="/chile" element={<ChilePage />} />
+        </Routes>
+      </Suspense>
       <LeadPopup />
     </>
   );

@@ -45,9 +45,9 @@ export const CatalogoTransportePage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>Transportadores Industriales | Conveyor, Sorter, Clasificador Automático | STOKA Argentina</title>
+        <title>Transportadores y Sorters Industriales | DELIE | STOKA</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Transportadores industriales, conveyor, sorter y clasificador automático de paquetes DELIE. Sistemas de sortación y transportador de rodillos para almacenes y bodegas." />
+        <meta name="description" content="Transportadores industriales, conveyor, sorter y clasificador automático DELIE. Sistemas de sortación para almacenes y bodegas en Argentina." />
         <meta property="og:title" content="Equipo de Transporte DELIE | Conveyors y Paletizadores | STOKA Argentina" />
         <meta property="og:description" content="Transportadores de cadena, rodillos, elevadores y paletizadores DELIE. Automatización completa de flujos en Argentina." />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo/equipo-transporte" />
@@ -79,6 +79,16 @@ export const CatalogoTransportePage = () => {
             "name": item.q,
             "acceptedAnswer": { "@type": "Answer", "text": item.a }
           }))
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Transportadores y Sorters Industriales DELIE — Argentina",
+          "description": "Transportadores de cadena, rodillos, elevadores y paletizadores DELIE para almacenes en Argentina. Integración WMS/WCS con soporte técnico local.",
+          "provider": { "@id": "https://www.stokagroup.com/#organization" },
+          "areaServed": [{ "@type": "Country", "name": "Argentina" }, { "@type": "Country", "name": "Chile" }],
+          "serviceType": "Equipo de Transporte — Automatización de Almacenes",
+          "url": "https://www.stokagroup.com/catalogo/equipo-transporte"
         })}</script>
       </Helmet>
       <Navbar />

@@ -4,9 +4,18 @@ import { motion } from 'framer-motion';
 import { Clock, ArrowRight, BookOpen, HelpCircle, BarChart2 } from 'lucide-react';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
+import { CTABanner } from '../../components/CTABanner';
+import { WppFloat } from '../../components/WppFloat';
 import { ARTICULOS } from '../../data/articulosData';
 
 const RECURSOS_EXTRA = [
+  {
+    icon: BarChart2,
+    title: 'Calculadora de ROI',
+    desc: 'Ingresá operarios, movimientos e inversión estimada y obtené el ahorro anual, payback y ROI proyectado en segundos.',
+    url: '/recursos/roi-automatizacion',
+    tag: 'Herramienta',
+  },
   {
     icon: BookOpen,
     title: 'Glosario ASRS',
@@ -15,18 +24,11 @@ const RECURSOS_EXTRA = [
     tag: 'Glosario',
   },
   {
-    icon: BarChart2,
+    icon: HelpCircle,
     title: 'Comparador de sistemas',
-    desc: 'Formulario guiado: respondé 5 preguntas sobre tu operación y recibí la recomendación de tecnología DELIE más adecuada.',
+    desc: 'Respondé 5 preguntas sobre tu operación y recibí la recomendación de tecnología DELIE más adecuada.',
     url: '/recursos/comparador-sistemas',
     tag: 'Herramienta',
-  },
-  {
-    icon: HelpCircle,
-    title: 'Casos de éxito DELIE',
-    desc: 'Instalaciones reales de DELIE en todo el mundo: e-commerce, manufactura, farmacéutica, cadena de frío.',
-    url: '/casos-de-exito',
-    tag: 'Referencias',
   },
 ];
 
@@ -45,8 +47,8 @@ export const RecursosHub = () => {
   return (
     <div className="min-h-screen bg-zinc-950 text-white">
       <Helmet>
-        <title>Recursos de Automatización de Almacenes | Guías y Artículos | STOKA</title>
-        <meta name="description" content="Guías técnicas, artículos y herramientas sobre automatización de almacenes, sistemas ASRS, transelevadores, AGV, WMS y beneficios fiscales en Argentina y Chile." />
+        <title>Recursos: Guías ASRS y Automatización de Almacenes | STOKA</title>
+        <meta name="description" content="Guías técnicas y herramientas sobre automatización de almacenes, ASRS, transelevadores, AGV y WMS. Recursos para logística en Argentina y Chile." />
         <meta property="og:title" content="Recursos de Automatización de Almacenes | STOKA" />
         <meta property="og:url" content={canonical} />
         <link rel="canonical" href={canonical} />
@@ -139,6 +141,8 @@ export const RecursosHub = () => {
         </div>
       </section>
 
+      <WppFloat />
+      <CTABanner />
       <Footer />
     </div>
   );

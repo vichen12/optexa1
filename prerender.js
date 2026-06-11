@@ -44,7 +44,8 @@ const ROUTES = [
   '/como-trabajamos',
   '/nosotros',
   '/contacto',
-  '/alternativa-daifuku-argentina',
+  '/delie-argentina',
+  '/alternativa-economica-asrs',
   '/casos-de-exito',
   '/recursos',
   '/recursos/glosario',
@@ -57,6 +58,11 @@ const ROUTES = [
   '/recursos/wms-vs-wcs',
   '/recursos/automatizacion-bodegas-chile',
   '/recursos/asrs-vs-autostore',
+  '/recursos/que-es-un-transelevador',
+  '/recursos/que-es-un-wms',
+  '/recursos/roi-automatizacion',
+  '/catalogo/asrs/autostore-alternativa',
+  '/chile',
 ];
 
 function startStaticServer() {
