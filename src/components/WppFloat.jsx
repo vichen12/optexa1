@@ -139,30 +139,27 @@ export const WppFloat = () => {
         )}
       </AnimatePresence>
 
-      {/* Email pill — visible sobre el botón WA */}
-      <AnimatePresence>
-        {!open && (
-          <motion.a
-            href={`mailto:${EMAIL}`}
-            initial={{ opacity: 0, y: 4 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ delay: 2, duration: 0.3 }}
-            className="absolute bottom-[90px] right-0 flex items-center gap-1.5 bg-white border border-gray-200 shadow-sm rounded-full px-3 py-1.5 text-[11px] text-gray-500 hover:text-cyan-600 hover:border-cyan-300 transition-colors whitespace-nowrap"
-          >
-            <Mail size={11} className="text-cyan-500" />
-            {EMAIL}
-          </motion.a>
-        )}
-      </AnimatePresence>
-
-      {/* Floating button */}
+      {/* Floating buttons row */}
       <motion.div
         initial={{ opacity: 0, scale: 0.5, y: 100 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ delay: 1.5, type: 'spring', stiffness: 260, damping: 20 }}
-        className="group relative"
+        className="flex items-center gap-3"
       >
+        {/* Email button */}
+        <motion.a
+          href={`mailto:${EMAIL}`}
+          aria-label="Enviar email"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.8, type: 'spring', stiffness: 260, damping: 20 }}
+          className="flex items-center justify-center bg-blue-500 hover:bg-blue-400 text-white p-4 rounded-full shadow-[0_10px_30px_rgba(59,130,246,0.4)] transition-all duration-300 active:scale-90"
+        >
+          <Mail size={28} />
+        </motion.a>
+
+        {/* WhatsApp button */}
+        <div className="group relative">
         <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-25 group-hover:opacity-40 transition-opacity duration-1000" />
         <button
           onClick={() => setOpen(o => !o)}
@@ -175,6 +172,7 @@ export const WppFloat = () => {
           </span>
           <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 border-2 border-white rounded-full shadow-[0_0_10px_#4ade80]" />
         </button>
+        </div>
       </motion.div>
     </div>
   );
