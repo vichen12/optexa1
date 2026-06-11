@@ -65,6 +65,18 @@ const ROUTES = [
   '/chile',
 ];
 
+// External domains to block during prerender — they prevent networkidle2
+// and don't contribute to the rendered HTML content.
+const BLOCKED_PATTERNS = [
+  'fonts.googleapis.com',
+  'fonts.gstatic.com',
+  'googletagmanager.com',
+  'google-analytics.com',
+  'analytics.google.com',
+  'doubleclick.net',
+  'spline.design',
+];
+
 function startStaticServer() {
   return new Promise((resolve, reject) => {
     const server = createServer((req, res) => {
@@ -131,6 +143,58 @@ async function getBrowserConfig() {
   };
 }
 
+async function renderRoute(browser, route) {
+  const page = await browser.newPage();
+
+  // Block external requests that block networkidle and don't affect HTML
+  await page.setRequestInterception(true);
+  page.on('request', (req) => {
+    const url = req.url();
+    const isLocal = url.startsWith(`http://localhost:${PORT}`);
+    if (!isLocal && BLOCKED_PATTERNS.some((p) => url.includes(p))) {
+      req.abort();
+      return;
+    }
+    req.continue();
+  });
+
+  try {
+    await page.goto(`http://localhost:${PORT}${route}`, {
+      waitUntil: 'domcontentloaded',
+      timeout: 30000,
+    });
+
+    // Wait for React to mount and render meaningful content
+    await page.waitForFunction(
+      () => {
+        const root = document.querySelector('#root');
+        if (!root) return false;
+        return root.querySelector('nav, main, h1, h2, article, section, header') !== null;
+      },
+      { timeout: 15000 }
+    );
+
+    const html = await page.content();
+
+    const outPath =
+      route === '/'
+        ? join(DIST, 'index.html')
+        : join(DIST, route.slice(1), 'index.html');
+
+    const outDir = dirname(outPath);
+    if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
+    writeFileSync(outPath, html, 'utf-8');
+
+    console.log(`[prerender] ✅ ${route}`);
+    return true;
+  } catch (err) {
+    console.error(`[prerender] ❌ ${route} — ${err.message}`);
+    return false;
+  } finally {
+    await page.close();
+  }
+}
+
 async function main() {
   const server = await startStaticServer();
   const config = await getBrowserConfig();
@@ -142,31 +206,9 @@ async function main() {
   let errors = 0;
 
   for (const route of ROUTES) {
-    const page = await browser.newPage();
-    try {
-      await page.goto(`http://localhost:${PORT}${route}`, {
-        waitUntil: 'networkidle2',
-        timeout: 60000,
-      });
-
-      const html = await page.content();
-
-      const outPath = route === '/'
-        ? join(DIST, 'index.html')
-        : join(DIST, route.slice(1), 'index.html');
-
-      const outDir = dirname(outPath);
-      if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
-      writeFileSync(outPath, html, 'utf-8');
-
-      console.log(`[prerender] ✅ ${route}`);
-      ok++;
-    } catch (err) {
-      console.error(`[prerender] ❌ ${route} — ${err.message}`);
-      errors++;
-    } finally {
-      await page.close();
-    }
+    const success = await renderRoute(browser, route);
+    if (success) ok++;
+    else errors++;
   }
 
   await browser.close();
@@ -176,7 +218,7 @@ async function main() {
   if (errors > 0) process.exit(1);
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error('[prerender] Error fatal:', err.message);
   process.exit(1);
 });
