@@ -25,10 +25,10 @@ const ALL_NAV = [
   { name: "Inicio",             href: "#inicio",              type: "scroll"            },
   { name: "Catálogo",           href: "/catalogo",            type: "dropdown-catalogo" },
   { name: "Industrias",         href: "/industrias",          type: "page"              },
-  { name: "Recursos",           href: "/recursos",            type: "dropdown-recursos" },
   { name: "Beneficios fiscales", href: "/beneficios-fiscales", type: "page"             },
   { name: "Cómo Trabajamos",    href: "/como-trabajamos",     type: "page"              },
   { name: "Nosotros",           href: "/nosotros",            type: "page"              },
+  { name: "Recursos",           href: "/recursos",            type: "dropdown-recursos" },
 ];
 
 export const Navbar = () => {
