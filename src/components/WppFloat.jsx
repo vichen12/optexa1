@@ -14,6 +14,7 @@ const WaIcon = ({ size = 32 }) => (
 
 export const WppFloat = () => {
   const [open, setOpen] = useState(false);
+  const [emailOpen, setEmailOpen] = useState(false);
   const [name, setName] = useState('');
   const [empresa, setEmpresa] = useState('');
   const [phone, setPhone] = useState('');
@@ -22,11 +23,14 @@ export const WppFloat = () => {
 
   useEffect(() => {
     const handler = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
+      if (ref.current && !ref.current.contains(e.target)) {
+        setOpen(false);
+        setEmailOpen(false);
+      }
     };
-    if (open) document.addEventListener('mousedown', handler);
+    if (open || emailOpen) document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
-  }, [open]);
+  }, [open, emailOpen]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -147,16 +151,39 @@ export const WppFloat = () => {
         className="flex flex-col items-end gap-3"
       >
         {/* Email button — encima, un poco más chico */}
-        <motion.a
-          href={`mailto:${EMAIL}`}
-          aria-label="Enviar email"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.8, type: 'spring', stiffness: 260, damping: 20 }}
-          className="flex items-center justify-center bg-blue-500 hover:bg-blue-400 text-white p-3 rounded-full shadow-[0_8px_24px_rgba(59,130,246,0.4)] transition-all duration-300 active:scale-90"
-        >
-          <Mail size={22} />
-        </motion.a>
+        <div className="relative flex items-center justify-end">
+          <AnimatePresence>
+            {emailOpen && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, x: 8 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.9, x: 8 }}
+                transition={{ duration: 0.15 }}
+                className="absolute right-14 bg-white rounded-2xl shadow-xl border border-gray-100 px-4 py-3 w-52"
+              >
+                <p className="text-[11px] text-gray-400 mb-1">Escribinos por mail</p>
+                <p className="text-xs font-bold text-gray-700 mb-3">{EMAIL}</p>
+                <a
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent('Consulta desde stokagroup.com')}&body=${encodeURIComponent('Hola equipo STOKA,\n\nMe contacto desde el sitio web para consultar sobre automatización de almacenes.\n\nNombre: \nTeléfono: \nEmpresa: \n\nConsulta: ')}`}
+                  className="flex items-center justify-center gap-2 w-full bg-blue-500 hover:bg-blue-400 text-white text-xs font-bold py-2 rounded-xl transition-colors"
+                  onClick={() => setEmailOpen(false)}
+                >
+                  <Mail size={12} /> Abrir Gmail
+                </a>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <motion.button
+            onClick={() => { setEmailOpen(o => !o); setOpen(false); }}
+            aria-label="Enviar email"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1.8, type: 'spring', stiffness: 260, damping: 20 }}
+            className="flex items-center justify-center bg-blue-500 hover:bg-blue-400 text-white p-3 rounded-full shadow-[0_8px_24px_rgba(59,130,246,0.4)] transition-all duration-300 active:scale-90"
+          >
+            <Mail size={22} />
+          </motion.button>
+        </div>
 
         {/* WhatsApp button */}
         <div className="group relative">
