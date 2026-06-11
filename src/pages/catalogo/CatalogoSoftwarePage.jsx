@@ -27,6 +27,13 @@ const COMPARISON = [
   { system: 'ECS', full: 'Electronic Control System', role: 'Control eléctrico de motores, variadores y sensores.', integra: 'WCS, WMS', nivel: 'Hardware' },
 ];
 
+const FAQ = [
+  { q: '¿Cuánto tiempo lleva implementar el WMS en mi almacén, bodega o depósito?', a: 'La implementación base del WMS toma entre 4 y 12 semanas según la complejidad de integración con el ERP. En proyectos con hardware DELIE, el WMS se configura simultáneamente con la instalación mecánica, sin sumar tiempo al cronograma general. STOKA gestiona la implementación de software como parte del proyecto llave en mano.' },
+  { q: '¿El WMS puede gestionar un almacén o bodega manual (sin robots)?', a: 'Sí. El WMS puede implementarse en un depósito manual como primer paso de digitalización, antes de automatizar. Gestiona inventario en tiempo real, picking con listas o pick-to-light, FIFO/FEFO y reportes por turno. Este enfoque permite capacitar al equipo con el sistema antes de añadir hardware automatizado.' },
+  { q: '¿Cómo es la integración técnica del WMS con SAP o ERP en Argentina?', a: 'DELIE tiene conectores nativos para SAP (BAPI/RFC y SAP EWM), Oracle, Microsoft Dynamics y APIs RESTful para cualquier otro sistema. La integración incluye sincronización de maestros de artículos y ubicaciones, órdenes de entrada/salida y confirmaciones en tiempo real. STOKA entrega documentación técnica completa.' },
+  { q: '¿Qué pasa con los datos del depósito si el servidor del WMS se cae?', a: 'El WMS tiene redundancia activa-pasiva: si el servidor principal falla, el servidor de respaldo toma el control en segundos sin pérdida de datos. Los robots y transportadores tienen modo de operación autónoma de corto plazo. Todos los movimientos se registran con timestamp y se sincronizan automáticamente cuando el sistema se recupera.' },
+];
+
 const SISTER_CATS = [
   { label: 'AS/RS', href: '/catalogo/asrs', desc: 'Estanterías automatizadas' },
   { label: 'Robots de manipulación', href: '/catalogo/robots-manipulacion', desc: 'Transelevadores, shuttles y AMR' },
@@ -41,9 +48,9 @@ export const CatalogoSoftwarePage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>Software WMS y WCS | Gestión de Almacén Automatizado | STOKA Argentina</title>
+        <title>Sistema WMS | Warehouse Management System para Almacenes y Bodegas | STOKA Argentina</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Software WMS, WCS, HMS y visualización 3D de DELIE. Control total de tu almacén automatizado con integración SAP, Oracle y ERP. Soporte en Argentina." />
+        <meta name="description" content="Sistema WMS (warehouse management system) y software de gestión de bodegas DELIE. Integración WMS SAP, WMS ERP, WCS. Control total del almacén automatizado en Argentina." />
         <meta property="og:title" content="Software WMS y WCS DELIE | Gestión de Almacén | STOKA Argentina" />
         <meta property="og:description" content="WMS, WCS, HMS y visualización 3D DELIE. Integración SAP, ERP, MES. Control total del almacén automatizado en Argentina." />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo/software" />
@@ -65,6 +72,15 @@ export const CatalogoSoftwarePage = () => {
           "itemListElement": PRODUCTS.map((p, i) => ({
             "@type": "ListItem", "position": i + 1, "name": p.name, "description": p.desc,
             "url": "https://www.stokagroup.com/catalogo/software"
+          }))
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": FAQ.map(item => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": { "@type": "Answer", "text": item.a }
           }))
         })}</script>
       </Helmet>
@@ -112,9 +128,9 @@ export const CatalogoSoftwarePage = () => {
       <section className="bg-white py-14 px-6 border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Entendiendo el software de almacén</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-6">WMS vs WCS: diferencias y complementariedad</h2>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-6">Sistema WMS vs WCS: diferencias y complementariedad en la gestión de almacenes y bodegas</h2>
           <p className="text-gray-600 leading-relaxed mb-8">
-            En un almacén automatizado moderno, el software no es una sola pieza sino una arquitectura en capas donde cada sistema cumple una función específica. Entender la diferencia entre WMS, WCS, HMS y ECS es fundamental para diseñar una integración exitosa con el ERP corporativo y maximizar el retorno de la inversión.
+            En un almacén automatizado moderno, el sistema WMS (warehouse management system) no es una sola pieza sino una arquitectura en capas. El software de gestión de almacenes y bodegas debe diseñarse con la integración WMS ERP —especialmente integración WMS SAP— como requisito desde el inicio, no como adaptación posterior. Entender la diferencia entre WMS, WCS, HMS y ECS es fundamental para maximizar el retorno de la inversión.
           </p>
           <div className="grid md:grid-cols-2 gap-4 mb-8">
             {COMPARISON.map((c, i) => (
@@ -133,7 +149,13 @@ export const CatalogoSoftwarePage = () => {
             ))}
           </div>
           <p className="text-gray-600 leading-relaxed">
-            El software DELIE está certificado en CMMI Nivel 5, el estándar más alto de madurez en desarrollo de software. Esto garantiza procesos de desarrollo controlados, actualizaciones predecibles y soporte técnico estructurado. La integración con SAP, Oracle, TMS y OMS se realiza mediante APIs RESTful estándar, con documentación técnica completa entregada en cada proyecto.
+            El software WMS DELIE (warehouse management system) está certificado en CMMI Nivel 5, el estándar más alto de madurez en desarrollo de software. Como software de gestión de bodegas y almacenes, garantiza procesos controlados y actualizaciones predecibles. La integración WMS SAP se realiza mediante conectores nativos BAPI/RFC; la integración WMS ERP con Oracle, TMS y OMS mediante APIs RESTful estándar, con documentación técnica completa entregada en cada proyecto.
+          </p>
+          <p className="text-gray-600 leading-relaxed mt-4">
+            Uno de los errores más comunes en proyectos de automatización de almacenes es implementar el hardware ASRS sin considerar correctamente la capa de software. Un transelevador sin WCS adecuado opera como un equipo manual: eficiente en el movimiento físico pero sin la inteligencia que necesita para coordinar ciclos combinados, gestionar inventario en tiempo real y integrarse con el ERP. El WMS y el WCS de DELIE se diseñaron como un stack integrado: misma base de datos, misma interfaz, misma fuente de verdad para el inventario del almacén, bodega o depósito.
+          </p>
+          <p className="text-gray-600 leading-relaxed mt-4">
+            En Argentina y Chile, muchos operadores de depósitos y almacenes tienen ya un WMS heredado (o el módulo WM del ERP) y buscan agregar un WCS para controlar el equipamiento ASRS. El WCS de DELIE se integra con cualquier WMS externo mediante APIs documentadas. STOKA gestiona la integración técnica con el ERP del cliente como parte del contrato llave en mano, sin costos adicionales por hora de consultoría de integración.
           </p>
         </div>
       </section>
@@ -179,6 +201,47 @@ export const CatalogoSoftwarePage = () => {
                 <p className="font-bold text-gray-900 text-sm mb-0.5 group-hover:text-cyan-600 transition-colors">{c.label}</p>
                 <p className="text-gray-500 text-xs">{c.desc}</p>
               </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      {/* Explorar por tipo — product child links */}
+      <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Explorar por tipo</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Software disponible</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { nombre: 'WMS — Gestión de almacenes', desc: 'Inventario en tiempo real, picking, expedición. CMMI Nivel 5.', url: '/catalogo/software/wms' },
+              { nombre: 'WCS — Control del almacén', desc: 'Control en tiempo real de transelevadores, robots y transportadores.', url: '/catalogo/software/wcs' },
+            ].map((item, i) => (
+              <motion.a key={i} href={item.url}
+                initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
+                className="bg-white border border-gray-200 rounded-2xl p-5 hover:border-cyan-400 hover:shadow-sm transition-all group block">
+                <h3 className="font-black text-gray-900 text-sm mb-2 group-hover:text-cyan-600 transition-colors">{item.nombre}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed mb-3">{item.desc}</p>
+                <span className="inline-flex items-center gap-1 text-xs text-cyan-500 font-bold">
+                  Ver detalle <ChevronRight size={12} />
+                </span>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Preguntas frecuentes</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Lo que pregunta un Director de Operaciones</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {FAQ.map((item, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:border-cyan-300 transition-colors">
+                <h3 className="font-black text-gray-900 text-sm mb-3">{item.q}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.a}</p>
+              </motion.div>
             ))}
           </div>
         </div>

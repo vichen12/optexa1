@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { CTABanner } from '../components/CTABanner';
@@ -14,7 +14,7 @@ const STEPS = [
     icon: Search,
     title: 'Consulta inicial',
     subtitle: 'Sin costo · Respuesta en 24 horas',
-    detail: 'Completás el formulario de contacto o nos escribís directamente. En menos de 24 horas un ingeniero te responde para entender tu operación a alto nivel: tipo de almacén, volumen de SKUs, throughput y objetivos.',
+    detail: 'Completás el formulario de contacto o nos escribís directamente. En menos de 24 horas un ingeniero te responde para entender tu operación a alto nivel: tipo de almacén, bodega o depósito, volumen de SKUs, throughput y objetivos de automatización.',
     logs: [
       'Reunión o llamada de 30 minutos con el equipo técnico',
       'Cuestionario técnico inicial enviado por mail',
@@ -26,7 +26,7 @@ const STEPS = [
     icon: FileText,
     title: 'Diagnóstico técnico',
     subtitle: 'Relevamiento in-situ o remoto',
-    detail: 'Analizamos datos históricos de movimientos, catálogo de SKUs, picos de demanda y layout existente. Medimos los KPIs actuales para establecer la línea base del proyecto y detectar los cuellos de botella reales.',
+    detail: 'Analizamos datos históricos de movimientos, catálogo de SKUs, picos de demanda y layout existente del almacén, bodega o depósito. Medimos los KPIs actuales para establecer la línea base del proyecto y detectar los cuellos de botella reales.',
     logs: [
       'Análisis de histórico de SKUs y throughput diario',
       'Medición de KPIs actuales: errores, tiempos, espacio usado',
@@ -141,6 +141,11 @@ export const ComoTrabajamosPage = () => {
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-20">
           <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut' }}>
+            <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6">
+              <Link to="/" className="hover:text-cyan-400 transition-colors">Inicio</Link>
+              <span>/</span>
+              <span className="text-slate-400">Cómo trabajamos</span>
+            </nav>
             <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.4em] mb-4">
               Metodología · 6 fases
             </p>

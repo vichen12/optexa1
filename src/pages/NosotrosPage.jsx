@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { CTABanner } from '../components/CTABanner';
@@ -33,7 +33,7 @@ export const NosotrosPage = () => {
     <div className="min-h-screen text-gray-900">
       <Helmet>
         <title>Nosotros | Representantes Oficiales DELIE en Argentina y Chile | STOKA Group</title>
-        <meta name="description" content="STOKA es el representante oficial exclusivo de DELIE en Argentina y Chile. Ingeniería y soporte 100% local para sistemas ASRS, transelevadores y automatización de almacenes industriales." />
+        <meta name="description" content="STOKA es el integrador ASRS en Argentina y Chile, representante exclusivo DELIE. Alternativa a Daifuku Argentina y Wynright Argentina. Ingeniería y soporte 100% local para automatización de almacenes." />
         <meta property="og:title" content="Nosotros | Representantes Oficiales DELIE — Argentina y Chile | STOKA Group" />
         <meta property="og:description" content="Representante oficial exclusivo de DELIE en Argentina y Chile. Ingeniería y soporte 100% local para sistemas ASRS y automatización de almacenes." />
         <meta name="robots" content="index, follow" />
@@ -54,6 +54,11 @@ export const NosotrosPage = () => {
       <section className="bg-white pt-40 pb-20 px-6 border-b border-gray-100">
         <div className="max-w-5xl mx-auto grid md:grid-cols-[2fr_1fr] gap-8 items-start">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+            <nav className="flex items-center gap-2 text-xs text-gray-400 mb-6">
+              <Link to="/" className="hover:text-cyan-500 transition-colors">Inicio</Link>
+              <span>/</span>
+              <span className="text-gray-600">Nosotros</span>
+            </nav>
             <div className="w-12 h-1 bg-cyan-500 mb-8 rounded-full" />
             <p className="text-gray-400 text-[11px] font-black uppercase tracking-[0.4em] mb-5">Quiénes somos</p>
             <h1 className="text-gray-900 text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-8">
@@ -100,10 +105,16 @@ export const NosotrosPage = () => {
           </div>
           <div className="space-y-4">
             <p className="text-gray-300 text-lg leading-relaxed">
-              Que ninguna empresa pierda competitividad por no poder acceder a tecnología que hasta hoy estaba reservada para las multinacionales. Los sistemas ASRS de clase mundial ya son accesibles para la industria argentina.
+              Que ninguna empresa pierda competitividad por no poder acceder a tecnología que hasta hoy estaba reservada para las multinacionales. Los sistemas ASRS de clase mundial ya son accesibles para la industria argentina: tanto para almacenes de distribución como para bodegas de manufactura y depósitos 3PL.
             </p>
             <p className="text-gray-400 text-base leading-relaxed">
               Representamos a DELIE porque creemos que la combinación de fabricación asiática de primer nivel con ingeniería y soporte local es la forma más inteligente de automatizar una operación en Argentina: máxima tecnología, mínimo riesgo.
+            </p>
+            <p className="text-gray-400 text-base leading-relaxed mt-4">
+              El mercado de automatización en Argentina tiene una particularidad que los proveedores internacionales suelen ignorar: no alcanza con vender el equipo. La empresa que automatiza su almacén, bodega o depósito necesita un socio que entienda el contexto regulatorio local (aranceles, AFIP, beneficios fiscales vigentes), que pueda gestionar la importación, que tenga técnicos que lleguen el mismo día cuando hay un problema, y que conozca las restricciones de la industria nacional. STOKA fue creada para ser exactamente eso.
+            </p>
+            <p className="text-gray-400 text-base leading-relaxed mt-4">
+              En Argentina, muchas empresas buscan tecnología de Daifuku Argentina o Wynright Argentina para automatizar sus almacenes industriales. STOKA es el integrador ASRS en Argentina equivalente: ofrecemos tecnología técnicamente comparable con la ventaja del precio DELIE —30–50% más accesible que marcas japonesas o europeas— y soporte técnico local que los proveedores internacionales no garantizan directamente en el mercado argentino. Como representante exclusivo de DELIE y distribuidor ASRS Argentina, STOKA es la alternativa real para empresas que evalúan automatizar su almacén, bodega o depósito industrial.
             </p>
           </div>
         </div>

@@ -1,26 +1,66 @@
-import { Mail, ArrowRight, MapPin, Phone } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Mail, MapPin, Phone, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const PAGE_LINKS = [
-  { label: 'Catálogo de productos',  href: '/catalogo'            },
-  { label: 'Industrias',             href: '/industrias'           },
-  { label: 'Beneficios fiscales',    href: '/beneficios-fiscales'  },
-  { label: 'Cómo trabajamos',        href: '/como-trabajamos'      },
-  { label: 'Nosotros',               href: '/nosotros'             },
+const CATALOGO_LINKS = [
+  { label: 'Sistemas AS/RS',             href: '/catalogo/asrs' },
+  { label: 'Robots de manipulación',     href: '/catalogo/robots-manipulacion' },
+  { label: 'Almacenamiento vertical',    href: '/catalogo/almacenamiento-vertical' },
+  { label: 'Equipo de transporte',       href: '/catalogo/equipo-transporte' },
+  { label: 'Software WMS / WCS',         href: '/catalogo/software' },
+];
+
+const INDUSTRIAS_LINKS = [
+  { label: 'E-commerce y retail',   href: '/industrias/e-commerce-retail' },
+  { label: 'Logística 3PL',         href: '/industrias/logistica-3pl' },
+  { label: 'Manufactura',           href: '/industrias/manufactura' },
+  { label: 'Alimentos y bebidas',   href: '/industrias/alimentos-bebidas' },
+  { label: 'Farmacéutica',          href: '/industrias/farmaceutica' },
+  { label: 'Minería y Oil & Gas',   href: '/industrias/mineria-oil-gas' },
+  { label: 'Cadena de frío',        href: '/industrias/cadena-frio' },
+];
+
+const RECURSOS_LINKS = [
+  { label: 'Glosario técnico',       href: '/recursos/glosario' },
+  { label: 'Comparador de sistemas', href: '/recursos/comparador-sistemas' },
+  { label: 'Blog y artículos',       href: '/recursos' },
+  { label: 'Casos de éxito',         href: '/casos-de-exito' },
+];
+
+const EMPRESA_LINKS = [
+  { label: 'Nosotros',               href: '/nosotros' },
+  { label: 'Cómo trabajamos',        href: '/como-trabajamos' },
+  { label: 'Beneficios fiscales',    href: '/beneficios-fiscales' },
+  { label: 'Contacto',               href: '/contacto' },
+  { label: 'Alternativa a Daifuku',  href: '/alternativa-daifuku-argentina' },
 ];
 
 const MAPS_EMBED = "https://maps.google.com/maps?q=Carril+Rodr%C3%ADguez+Pe%C3%B1a+35+Maip%C3%BA+Mendoza+Argentina&output=embed";
 const MAPS_LINK  = "https://maps.google.com/maps?q=Carril+Rodr%C3%ADguez+Pe%C3%B1a+35+Maip%C3%BA+Mendoza+Argentina";
 
+function FooterLinkGroup({ title, links }) {
+  return (
+    <div>
+      <p className="text-gray-900 text-[10px] font-black uppercase tracking-[0.3em] mb-4">{title}</p>
+      <ul className="space-y-2.5">
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link
+              to={link.href}
+              className="flex items-center gap-1.5 text-gray-500 hover:text-cyan-600 transition-colors text-sm group"
+            >
+              <ChevronRight size={11} className="text-gray-300 group-hover:text-cyan-500 transition-colors shrink-0" />
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export const Footer = () => {
   const year = new Date().getFullYear();
-  const navigate = useNavigate();
   const gmailLink = 'mailto:contacto@stokagroup.com';
-
-  const handlePageNav = (href) => {
-    navigate(href);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <footer className="relative border-t border-gray-200 z-20 overflow-hidden" style={{ background: 'linear-gradient(135deg, #f0f9ff 0%, #ffffff 40%, #f8fafc 70%, #e0f2fe 100%)' }}>
@@ -32,106 +72,65 @@ export const Footer = () => {
         </p>
       </div>
 
-      {/* MAIN GRID */}
-      <div className="max-w-7xl mx-auto px-6 pt-20 pb-12 relative">
-        <div className="grid lg:grid-cols-[1fr_2fr_1fr] gap-12 mb-14">
+      {/* MAIN LINKS GRID */}
+      <div className="max-w-7xl mx-auto px-6 pt-20 pb-10 relative">
+        <div className="grid lg:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-8 mb-12">
 
           {/* BRAND + CONTACT */}
-          <div className="space-y-6">
+          <div className="space-y-5">
             <div className="flex items-center">
-              <img src="/stoka_deliecn_logo_sin_fondo.png" alt="Logo STOKA — Representantes DELIE en Argentina" className="w-56 h-28 object-contain" />
+              <img src="/stoka_deliecn_logo_sin_fondo.png" alt="Logo STOKA — Representantes DELIE en Argentina" className="w-52 h-24 object-contain" />
             </div>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              Representantes oficiales exclusivos de DELIE en Argentina. Automatización de almacenes ASRS de clase mundial con precios locales.
+            <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
+              Representantes oficiales exclusivos de DELIE en Argentina y Chile. Automatización de almacenes ASRS con soporte técnico 100% local.
             </p>
-
-            <div className="space-y-2.5">
+            <div className="space-y-2">
               <a href="tel:+5492615886671" className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm">
-                <Phone size={14} className="text-cyan-500 shrink-0" />
+                <Phone size={13} className="text-cyan-500 shrink-0" />
                 +54 9 2615 88-6671
               </a>
               <a href="tel:+5492612071048" className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm">
-                <Phone size={14} className="text-cyan-500 shrink-0" />
+                <Phone size={13} className="text-cyan-500 shrink-0" />
                 +54 9 261 207-1048
               </a>
               <a href={gmailLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm font-mono">
-                <Mail size={14} className="text-cyan-500 shrink-0" />
+                <Mail size={13} className="text-cyan-500 shrink-0" />
                 contacto@stokagroup.com
               </a>
               <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm">
-                <MapPin size={14} className="text-cyan-500 shrink-0" />
+                <MapPin size={13} className="text-cyan-500 shrink-0" />
                 Carril Rodríguez Peña 35, Maipú
               </a>
             </div>
-
-
-
           </div>
 
-          {/* MAP — columna ancha */}
-          <div className="flex flex-col gap-3">
-            <p className="text-gray-400 text-[10px] font-bold uppercase tracking-[0.3em]">Ubicación</p>
-            <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm flex-1 min-h-[260px]">
-              <iframe
-                src={MAPS_EMBED}
-                width="100%"
-                height="100%"
-                style={{ border: 0, minHeight: '260px', display: 'block' }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Stoka ubicación"
-              />
-            </div>
-            <a
-              href={MAPS_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs text-gray-400 hover:text-cyan-500 transition-colors"
-            >
-              <MapPin size={12} />
-              Carril Rodríguez Peña 35, Maipú, Mendoza
-              <ArrowRight size={12} />
-            </a>
-          </div>
+          <FooterLinkGroup title="Catálogo" links={CATALOGO_LINKS} />
+          <FooterLinkGroup title="Industrias" links={INDUSTRIAS_LINKS} />
+          <FooterLinkGroup title="Recursos" links={RECURSOS_LINKS} />
+          <FooterLinkGroup title="Empresa" links={EMPRESA_LINKS} />
+        </div>
 
-          {/* NAV + CTA */}
-          <div className="space-y-10">
-            <div>
-              <p className="text-gray-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-5">Navegación</p>
-              <ul className="space-y-3">
-                {PAGE_LINKS.map((link) => (
-                  <li key={link.href}>
-                    <button
-                      onClick={() => handlePageNav(link.href)}
-                      style={{ outline: 'none' }}
-                      className="flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors text-sm group"
-                    >
-                      <span className="w-1 h-1 rounded-full bg-cyan-400/50 group-hover:bg-cyan-500 transition-colors" />
-                      {link.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <p className="text-gray-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Argentina · DELIE Official Rep.</p>
-              <a
-                href="/contacto"
-                className="flex items-center justify-between gap-4 px-5 py-4 bg-cyan-500 rounded-xl text-white font-bold text-sm uppercase tracking-wide hover:bg-cyan-400 transition-all group shadow-[0_4px_20px_rgba(6,182,212,0.2)]"
-              >
-                Solicitar consulta técnica
-                <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
+        {/* MAP */}
+        <div className="mb-10">
+          <p className="text-gray-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-3">Ubicación — Mendoza, Argentina</p>
+          <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm" style={{ height: '200px' }}>
+            <iframe
+              src={MAPS_EMBED}
+              width="100%"
+              height="200"
+              style={{ border: 0, display: 'block' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Stoka ubicación"
+            />
           </div>
         </div>
 
         {/* BOTTOM BAR */}
         <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-400">
           <span>© {year} Stoka — Representación oficial DELIE en Argentina</span>
-          <span>Carril Rodríguez Peña 35, Maipú, Argentina</span>
+          <span>Carril Rodríguez Peña 35, Maipú, Mendoza</span>
           <a href={gmailLink} target="_blank" rel="noopener noreferrer"
             className="hover:text-gray-600 transition-colors font-mono">
             Desarrollo web // Vincenzo Dallapé

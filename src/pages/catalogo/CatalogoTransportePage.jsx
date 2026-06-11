@@ -24,6 +24,13 @@ const PRODUCTS = [
   { name: 'Transportador de rodillos — totes', image: img('Transportador de rodillos totalizadores', 'tote-roller-conveyor24f15.webp'), desc: 'Rodillos con zonas de acumulación para gestionar flujo de totes. Compatible con MiniLoad y robots tote.' },
 ];
 
+const FAQ = [
+  { q: '¿Qué tipo de transportador necesito para paletas de 3.000 kg en mi depósito?', a: 'Para cargas de 3.000 kg por palé, el transportador de cadena o el de rodillos de DELIE son los indicados. Ambos están dimensionados para esa carga con variador de frecuencia para arranque suave. La elección entre cadena y rodillos depende de la fragilidad de la paleta y si necesitás acumulación por zonas en el almacén o bodega.' },
+  { q: '¿Puedo integrar transportadores existentes en mi almacén con el sistema DELIE?', a: 'En muchos casos, sí. El WCS de DELIE puede controlar transportadores de otras marcas con interfaz de control estándar (PLC con Profibus, Profinet o similar). STOKA realiza la auditoría de compatibilidad durante el diagnóstico técnico para determinar qué conveyors existentes podés reutilizar y reducir la inversión total.' },
+  { q: '¿Qué mantenimiento requieren los transportadores en el almacén o bodega?', a: 'Los conveyors DELIE tienen mantenimiento preventivo trimestral: lubricación de cadenas o rodillos, verificación de tensores y revisión de sensores. Los componentes de desgaste están normalizados y disponibles en Argentina. El WCS monitorea cada sección del depósito y emite alertas antes de que ocurra una falla.' },
+  { q: '¿Los transportadores DELIE funcionan a temperatura negativa en bodegas o cámaras frigoríficas?', a: 'Sí. Los transportadores de cadena para cadena de frío operan hasta -25°C con lubricantes especiales, materiales anticongelantes y diseño hermético. Se integran con los transelevadores y robots lanzadera de la línea de frío para crear un sistema completamente automatizado en el depósito frigorífico.' },
+];
+
 const SISTER_CATS = [
   { label: 'AS/RS', href: '/catalogo/asrs', desc: 'Estanterías automatizadas' },
   { label: 'Robots de manipulación', href: '/catalogo/robots-manipulacion', desc: 'Transelevadores, shuttles y AMR' },
@@ -38,9 +45,9 @@ export const CatalogoTransportePage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>Equipo de Transporte | Conveyors, Elevadores y Paletizadores | STOKA Argentina</title>
+        <title>Transportadores Industriales | Conveyor, Sorter, Clasificador Automático | STOKA Argentina</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Transportadores de cadena y rodillos, elevadores de paletas y paletizadores automáticos DELIE. Conectá tu almacén automatizado de punta a punta." />
+        <meta name="description" content="Transportadores industriales, conveyor, sorter y clasificador automático de paquetes DELIE. Sistemas de sortación y transportador de rodillos para almacenes y bodegas." />
         <meta property="og:title" content="Equipo de Transporte DELIE | Conveyors y Paletizadores | STOKA Argentina" />
         <meta property="og:description" content="Transportadores de cadena, rodillos, elevadores y paletizadores DELIE. Automatización completa de flujos en Argentina." />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo/equipo-transporte" />
@@ -62,6 +69,15 @@ export const CatalogoTransportePage = () => {
           "itemListElement": PRODUCTS.map((p, i) => ({
             "@type": "ListItem", "position": i + 1, "name": p.name, "description": p.desc,
             "url": "https://www.stokagroup.com/catalogo/equipo-transporte"
+          }))
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": FAQ.map(item => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": { "@type": "Answer", "text": item.a }
           }))
         })}</script>
       </Helmet>
@@ -111,15 +127,21 @@ export const CatalogoTransportePage = () => {
           <div className="grid md:grid-cols-[2fr_1fr] gap-10">
             <div>
               <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Por qué el transporte interno importa</p>
-              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-5">Transportadores automáticos: la columna vertebral del almacén automatizado</h2>
+              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-5">Transportadores industriales y sistemas de sortación: la columna vertebral del almacén automatizado</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                En un sistema de automatización de almacenes completo, los equipos de transporte son el tejido conectivo que une cada componente: los transelevadores, los robots shuttle, los módulos VLM y las estaciones de picking. Sin transportadores adecuados, el throughput del sistema queda limitado por los cuellos de botella en el flujo de materiales.
+                En un sistema de automatización de almacenes completo, los transportadores industriales son el tejido conectivo que une cada componente: transelevadores, robots shuttle, módulos VLM y estaciones de picking. Los sorters —clasificadores automáticos de paquetes— distribuyen el flujo de salida hacia los muelles. Los sistemas de sortación con conveyor completan la red de transporte interno del almacén o bodega.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 DELIE ofrece una gama completa de transportadores modulares diseñados para integrarse perfectamente con el WCS, que coordina y optimiza el flujo en tiempo real. Los transportadores de cadena soportan hasta 3.000 kg por palé, los elevadores de totes alcanzan 5 m/s y los paletizadores automáticos operan las 24/7 sin intervención manual.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 La integración de todos los equipos de transporte bajo un sistema WCS centralizado elimina los tiempos de espera entre etapas, maximiza el throughput total y permite optimizar el flujo en tiempo real según la demanda. En Argentina, estos equipos aplican al Decreto 513/2025 para importación con arancel 0%.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                En un almacén automatizado, el transportador es tan crítico como el transelevador: un cuello de botella en el conveyor puede reducir el throughput total del sistema aunque los robots funcionen a máxima capacidad. Por eso el diseño de la red de transporte interno del almacén, la bodega o el depósito se realiza con simulación de flujos antes de la instalación: el WCS prueba virtualmente el comportamiento del sistema bajo picos de demanda para garantizar que no existan cuellos de botella.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                Los paletizadores y despaletizadores automáticos de DELIE son el puente entre la línea de producción y el almacén. En industrias como alimentos y bebidas, consumo masivo o e-commerce con cajas selladas, la paletización automática elimina uno de los trabajos más lesivos y garantiza paletas perfectamente formadas para los transelevadores ASRS. En Argentina y Chile, muchos proyectos arrancan por el paletizador: menor inversión relativa, alto impacto en reducción de accidentes laborales y mejora de la calidad de las paletas enviadas al depósito.
               </p>
             </div>
             <div className="space-y-4">
@@ -185,6 +207,47 @@ export const CatalogoTransportePage = () => {
                 <p className="font-bold text-gray-900 text-sm mb-0.5 group-hover:text-cyan-600 transition-colors">{c.label}</p>
                 <p className="text-gray-500 text-xs">{c.desc}</p>
               </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      {/* Explorar por tipo — product child links */}
+      <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Explorar por tipo</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Equipo de transporte disponible</h2>
+          <div className="grid sm:grid-cols-2 max-w-2xl gap-4">
+            {[
+              { nombre: 'Transportadores Industriales', desc: 'Cadena, rodillos y banda para flujos continuos en almacenes y depósitos.', url: '/catalogo/equipo-transporte/transportadores' },
+              { nombre: 'Sorters y Clasificadores', desc: 'Clasificador automático de paquetes para sistemas de sortación en centros de distribución.', url: '/catalogo/equipo-transporte/sorters' },
+            ].map((item, i) => (
+              <motion.a key={i} href={item.url}
+                initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
+                className="bg-white border border-gray-200 rounded-2xl p-5 hover:border-cyan-400 hover:shadow-sm transition-all group block">
+                <h3 className="font-black text-gray-900 text-sm mb-2 group-hover:text-cyan-600 transition-colors">{item.nombre}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed mb-3">{item.desc}</p>
+                <span className="inline-flex items-center gap-1 text-xs text-cyan-500 font-bold">
+                  Ver detalle <ChevronRight size={12} />
+                </span>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Preguntas frecuentes</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Lo que pregunta un Director de Operaciones</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {FAQ.map((item, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:border-cyan-300 transition-colors">
+                <h3 className="font-black text-gray-900 text-sm mb-3">{item.q}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.a}</p>
+              </motion.div>
             ))}
           </div>
         </div>

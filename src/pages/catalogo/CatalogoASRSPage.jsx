@@ -26,6 +26,13 @@ const PRODUCTS = [
   { name: 'Drive-in racking', image: img('Conducir en estanterías', 'drive-in-rackinga817d.webp'), desc: 'La carretilla ingresa dentro. Hasta 80% de utilización del espacio. Sistema LIFO, apto para frío.', link: '/catalogo' },
 ];
 
+const FAQ = [
+  { q: '¿Cuánto espacio vertical aprovecha un sistema AS/RS en mi almacén, bodega o depósito?', a: 'Los sistemas AS/RS DELIE aprovechan desde 7 hasta 40 metros de altura libre. En un almacén con 12 metros de altura, podés almacenar hasta 5 veces más que con estanterías convencionales de 4-5 metros. La clave está en diseñar la estructura según la altura disponible y el tipo de carga.' },
+  { q: '¿Cuál es la diferencia entre estanterías drive-in, shuttle y MiniLoad?', a: 'Las estanterías drive-in usan carretillas convencionales: las más económicas, ideales para LIFO de alta densidad. Las shuttle combinan estanterías con robots lanzadera para mayor velocidad y FIFO/LIFO selectivo. Las MiniLoad son para contenedores y totes con transelevadores: máxima velocidad y precisión para e-commerce, farmacéutica y bodega de alta rotación.' },
+  { q: '¿Cuánto tiempo lleva instalar un sistema AS/RS en un almacén o depósito existente?', a: 'La instalación mecánica de estanterías AS/RS toma 4 a 10 semanas según el modelo. La adecuación civil previa (losa plana, iluminación) puede añadir 4-6 semanas si el edificio lo requiere. STOKA coordina toda la ingeniería de detalle, el montaje y la puesta en marcha certificada en Argentina.' },
+  { q: '¿Las estanterías DELIE aplican al Decreto 513/2025 de arancel 0% en Argentina?', a: 'Sí. Las estanterías AS/RS para sistemas automatizados están incluidas en las posiciones arancelarias del Decreto 513/2025. STOKA verifica la posición arancelaria exacta para cada proyecto sin costo adicional, garantizando que aprovechés el beneficio desde el primer día de importación.' },
+];
+
 const SISTER_CATS = [
   { label: 'Robots de manipulación', href: '/catalogo/robots-manipulacion', desc: 'Transelevadores, shuttles y AMR' },
   { label: 'Almacenamiento vertical', href: '/catalogo/almacenamiento-vertical', desc: 'VLM y carruseles inteligentes' },
@@ -40,9 +47,9 @@ export const CatalogoASRSPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>Sistemas AS/RS | Estanterías Automatizadas de 7 a 40m | STOKA Argentina</title>
+        <title>Sistemas ASRS | Almacén Automatizado Alta Densidad | Estanterías AS/RS | STOKA Argentina</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Estanterías AS/RS DELIE de 7 a 40 metros de altura. Drive-in, shuttle, mezzanine y rack selectivo automatizado. 30-50% más económico que Europa. Cotizá sin costo." />
+        <meta name="description" content="Sistemas de almacenamiento y recuperación automatizados (ASRS) DELIE. Almacén automatizado, bodega y depósito de 7 a 40 m. ASRS Argentina y ASRS Chile. 30–50% más económico que Europa." />
         <meta property="og:title" content="Sistemas AS/RS | Estanterías Automatizadas | STOKA Argentina" />
         <meta property="og:description" content="Estanterías AS/RS DELIE de 7 a 40 metros. Drive-in, shuttle, mezzanine. Representantes oficiales en Argentina." />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo/asrs" />
@@ -67,6 +74,15 @@ export const CatalogoASRSPage = () => {
             "name": p.name,
             "description": p.desc,
             "url": "https://www.stokagroup.com/catalogo/asrs"
+          }))
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": FAQ.map(item => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": { "@type": "Answer", "text": item.a }
           }))
         })}</script>
       </Helmet>
@@ -118,18 +134,24 @@ export const CatalogoASRSPage = () => {
           <div className="grid md:grid-cols-[2fr_1fr] gap-10">
             <div>
               <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Qué son los sistemas AS/RS</p>
-              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-5">Estanterías AS/RS: almacenamiento automatizado de alta densidad</h2>
+              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-5">Sistemas de almacenamiento y recuperación automatizados (AS/RS): ASRS de alta densidad</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Los sistemas AS/RS (Automated Storage and Retrieval Systems) son estructuras de almacenamiento de alta densidad diseñadas para operar con robots y equipos automatizados: transelevadores, robots lanzadera, robots shuttle y AMR. A diferencia del almacenamiento convencional, maximizan el uso del espacio vertical —hasta 40 metros de altura— y eliminan la necesidad de pasillos anchos para carretillas manuales.
+                Los sistemas AS/RS (Automated Storage and Retrieval Systems) son estructuras de almacenamiento de alta densidad diseñadas para operar con robots y equipos automatizados: transelevadores, robots lanzadera, robots shuttle y AMR. Los almacenes inteligentes modernos los utilizan para maximizar el uso del espacio vertical —hasta 40 metros de altura— y eliminar pasillos anchos para carretillas manuales. La automatización de almacenes con ASRS es la base de cualquier operación logística competitiva.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 DELIE fabrica sus estanterías AS/RS con acero de alta resistencia de grandes acerías certificadas, con tolerancias de mecanizado de ±0,1 mm y tratamientos anticorrosión de silano. Esta precisión es fundamental para garantizar la operación continua de robots y transelevadores sin desgaste prematuro ni paradas no planificadas.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                En Argentina, los sistemas ASRS de DELIE son entre un 30% y 50% más económicos que sus equivalentes europeos de marca comparable, gracias a la capacidad de fabricación propia en China a escala global. STOKA, como representante oficial exclusivo en Argentina y Chile, garantiza el proyecto llave en mano: ingeniería, importación, instalación y soporte posventa local.
+                En Argentina y Chile, los sistemas ASRS de alta densidad de DELIE son entre un 30% y 50% más económicos que sus equivalentes europeos de marca comparable, gracias a la capacidad de fabricación propia en China a escala global. STOKA, representante oficial exclusivo ASRS Argentina y ASRS Chile, garantiza el proyecto llave en mano: ingeniería, importación, instalación y soporte posventa local.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Los beneficios fiscales vigentes en Argentina (Decreto 513/2025 — arancel 0% para equipos ASRS, financiamiento BICE a tasas preferenciales) hacen que 2025 y 2026 sean el momento ideal para invertir en automatización. La estabilidad fiscal del RIGI por 30 años protege la inversión de largo plazo.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                La elección del sistema AS/RS correcto depende de tres variables: el tipo de unidad de carga (paleta, caja, tote o pieza pequeña), el throughput requerido (movimientos por hora) y la altura libre disponible en el almacén, bodega o depósito. Para paletas con muchos SKUs distintos, el transelevador unit-load es la opción más versátil. Para alta densidad con producto homogéneo, el robot lanzadera shuttle ofrece mayor capacidad por metro cuadrado. Para cajas y totes en e-commerce o farmacéutica, el MiniLoad garantiza la velocidad de picking goods-to-person que los canales digitales exigen.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                En la Argentina de 2026, la combinación del Decreto 513/2025 (arancel 0%), el RIMI (amortización acelerada del 100% en el primer ejercicio) y la línea BICE (financiamiento a 10 años con período de gracia) convierte la automatización en una decisión que, en muchos casos, se financia con los ahorros que genera. Un almacén, bodega o depósito de mediana escala puede amortizar la inversión en 18 a 36 meses dependiendo del volumen de operación. STOKA calcula el TCO a 10 años y el ROI proyectado sin costo en la consulta inicial.
               </p>
             </div>
             <div className="space-y-4">
@@ -194,6 +216,49 @@ export const CatalogoASRSPage = () => {
                 <p className="font-bold text-gray-900 text-sm mb-0.5 group-hover:text-cyan-600 transition-colors">{c.label}</p>
                 <p className="text-gray-500 text-xs">{c.desc}</p>
               </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      {/* Explorar por tipo — product child links */}
+      <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Explorar por tipo</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Sistemas AS/RS disponibles</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { nombre: 'Transelevador Unit-Load', desc: 'Paletas hasta 40 m de altura', url: '/catalogo/asrs/unit-load' },
+              { nombre: 'Transelevador MiniLoad', desc: 'Cajas y totes, picking a alta velocidad', url: '/catalogo/asrs/miniload' },
+              { nombre: 'Robot Lanzadera Shuttle', desc: 'Alta densidad con robots autónomos', url: '/catalogo/asrs/shuttle' },
+              { nombre: 'AS/RS Cámara Fría', desc: 'Operación desde -30 °C', url: '/catalogo/asrs/camara-frio' },
+            ].map((item, i) => (
+              <motion.a key={i} href={item.url}
+                initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
+                className="bg-white border border-gray-200 rounded-2xl p-5 hover:border-cyan-400 hover:shadow-sm transition-all group block">
+                <h3 className="font-black text-gray-900 text-sm mb-2 group-hover:text-cyan-600 transition-colors">{item.nombre}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed mb-3">{item.desc}</p>
+                <span className="inline-flex items-center gap-1 text-xs text-cyan-500 font-bold">
+                  Ver detalle <ChevronRight size={12} />
+                </span>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Preguntas frecuentes</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Lo que pregunta un Director de Operaciones</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {FAQ.map((item, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:border-cyan-300 transition-colors">
+                <h3 className="font-black text-gray-900 text-sm mb-3">{item.q}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.a}</p>
+              </motion.div>
             ))}
           </div>
         </div>

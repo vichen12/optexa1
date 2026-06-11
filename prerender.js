@@ -14,18 +14,49 @@ const ROUTES = [
   '/',
   '/soluciones',
   '/catalogo',
+  '/catalogo/asrs',
+  '/catalogo/robots-manipulacion',
+  '/catalogo/almacenamiento-vertical',
+  '/catalogo/equipo-transporte',
+  '/catalogo/software',
   '/industrias',
-  '/industrias/ecommerce',
+  '/industrias/e-commerce-retail',
   '/industrias/logistica-3pl',
   '/industrias/manufactura',
   '/industrias/alimentos-bebidas',
   '/industrias/farmaceutica',
   '/industrias/mineria-oil-gas',
   '/industrias/cadena-frio',
+  '/catalogo/asrs/unit-load',
+  '/catalogo/asrs/miniload',
+  '/catalogo/asrs/shuttle',
+  '/catalogo/asrs/camara-frio',
+  '/catalogo/robots-manipulacion/paletizado',
+  '/catalogo/robots-manipulacion/picking',
+  '/catalogo/robots-manipulacion/agv-amr',
+  '/catalogo/almacenamiento-vertical/vlm',
+  '/catalogo/almacenamiento-vertical/carruseles',
+  '/catalogo/equipo-transporte/transportadores',
+  '/catalogo/equipo-transporte/sorters',
+  '/catalogo/software/wms',
+  '/catalogo/software/wcs',
   '/beneficios-fiscales',
   '/como-trabajamos',
   '/nosotros',
   '/contacto',
+  '/alternativa-daifuku-argentina',
+  '/casos-de-exito',
+  '/recursos',
+  '/recursos/glosario',
+  '/recursos/comparador-sistemas',
+  '/recursos/que-es-un-sistema-asrs',
+  '/recursos/cuanto-cuesta-automatizar-almacen',
+  '/recursos/transelevador-vs-shuttle',
+  '/recursos/rimi-2026-automatizacion',
+  '/recursos/agv-vs-amr',
+  '/recursos/wms-vs-wcs',
+  '/recursos/automatizacion-bodegas-chile',
+  '/recursos/asrs-vs-autostore',
 ];
 
 function startStaticServer() {
@@ -79,7 +110,16 @@ async function getBrowserConfig() {
   console.log(`[prerender] Chrome local: ${executablePath}`);
   return {
     executablePath,
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-extensions',
+      '--disable-background-networking',
+      '--disable-sync',
+      '--metrics-recording-only',
+      '--no-first-run',
+    ],
     headless: true,
     defaultViewport: { width: 1280, height: 800 },
   };
@@ -99,8 +139,8 @@ async function main() {
     const page = await browser.newPage();
     try {
       await page.goto(`http://localhost:${PORT}${route}`, {
-        waitUntil: 'networkidle0',
-        timeout: 30000,
+        waitUntil: 'networkidle2',
+        timeout: 60000,
       });
 
       const html = await page.content();

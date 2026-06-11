@@ -28,6 +28,13 @@ const PRODUCTS = [
   { name: 'Robot tote bidireccional', image: img('Robot transportador bidireccional Tote', 'tote-two-way-shuttle-robot20c07.webp'), desc: 'Robot tote de dos vías para pasillos lineales. Ideal para e-commerce y distribución. Multi-robot bajo WCS.' },
 ];
 
+const FAQ = [
+  { q: '¿Qué diferencia hay entre un transelevador y un robot lanzadera (shuttle) en un almacén?', a: 'El transelevador ocupa un pasillo completo de estantería y mueve paletas o totes con un único equipo. El robot lanzadera circula dentro de las estanterías entre niveles con mayor velocidad y sin pasillo dedicado. Para almacenes, bodegas y depósitos con alta rotación y muchos SKUs, el shuttle generalmente ofrece mayor throughput por metro cuadrado.' },
+  { q: '¿Los robots DELIE pueden operar en cámaras frigoríficas o bodegas de frío?', a: 'Sí. DELIE fabrica versiones para cadena de frío certificadas a -25°C (robots lanzadera) y -30°C (transelevadores). Incluyen sellado hermético anticondensación, lubricación especial y materiales de frío. Operan de forma autónoma sin necesidad de personal dentro del depósito frigorífico.' },
+  { q: '¿Cuántos robots necesito para el throughput de mi operación?', a: 'Depende del throughput requerido (líneas/hora o paletas/hora), la cantidad de SKUs, el layout del depósito y los picos de demanda. En la fase de diagnóstico, STOKA realiza una simulación de flujos que determina la cantidad óptima de robots para cubrir los picos sin sobredimensionar la inversión.' },
+  { q: '¿Qué mantenimiento preventivo requieren los robots de almacén?', a: 'Los robots DELIE tienen mantenimiento preventivo de 2-4 horas por mes por equipo. El WCS monitorea en tiempo real el estado de cada robot y genera alertas tempranas. Los componentes de mayor desgaste son modulares y se reemplazan sin herramientas especializadas. STOKA mantiene stock de repuestos locales en Argentina.' },
+];
+
 const SISTER_CATS = [
   { label: 'AS/RS', href: '/catalogo/asrs', desc: 'Estanterías automatizadas' },
   { label: 'Almacenamiento vertical', href: '/catalogo/almacenamiento-vertical', desc: 'VLM y carruseles inteligentes' },
@@ -42,9 +49,9 @@ export const CatalogoRobotsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>Robots de Manipulación | Transelevadores, Shuttle, AMR | STOKA Argentina</title>
+        <title>Robot Paletizador y Robots para Almacenes | Transelevadores, Shuttle, AGV, AMR | STOKA</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Transelevadores MiniLoad, robots lanzadera 4 direcciones, grúas apiladoras y robots AMR DELIE. Picking automatizado para tu almacén. Ingeniería local + soporte 24/7." />
+        <meta name="description" content="Robot paletizador, paletizadora automática, AGV y AMR DELIE para bodegas y almacenes. Picking automatizado goods-to-person. Brazo robótico para almacén. Soporte 24/7 en Argentina." />
         <meta property="og:title" content="Robots de Manipulación | Transelevadores y Shuttle DELIE | STOKA Argentina" />
         <meta property="og:description" content="Transelevadores MiniLoad, robots lanzadera, grúas apiladoras y AMR DELIE en Argentina. Soporte 24/7." />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo/robots-manipulacion" />
@@ -66,6 +73,15 @@ export const CatalogoRobotsPage = () => {
           "itemListElement": PRODUCTS.map((p, i) => ({
             "@type": "ListItem", "position": i + 1, "name": p.name, "description": p.desc,
             "url": "https://www.stokagroup.com/catalogo/robots-manipulacion"
+          }))
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": FAQ.map(item => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": { "@type": "Answer", "text": item.a }
           }))
         })}</script>
       </Helmet>
@@ -116,15 +132,21 @@ export const CatalogoRobotsPage = () => {
           <div className="grid md:grid-cols-[2fr_1fr] gap-10">
             <div>
               <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Robots de almacén DELIE</p>
-              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-5">Transelevadores, robots shuttle y AMR para automatización de almacenes</h2>
+              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-5">Transelevadores, robots shuttle, AMR, paletizadora automática y picking automatizado goods-to-person</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Los robots de manipulación son el corazón de cualquier sistema de automatización de almacenes. DELIE ofrece la gama más completa del mercado: desde grúas apiladoras de mástil simple para almacenes convencionales, hasta robots lanzadera de 4 vías para alta densidad y velocidad máxima de throughput.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Los transelevadores MiniLoad de DELIE alcanzan velocidades de hasta 360 m/min con precisión de ±2 mm, operando de forma continua sin mantenimiento no planificado gracias a su diseño de componentes modulares independientes. Son ideales para e-commerce, farmacéutica y manufactura donde la velocidad de picking es crítica.
+                Los transelevadores MiniLoad de DELIE alcanzan velocidades de hasta 360 m/min con precisión de ±2 mm. Son el núcleo del picking automatizado goods-to-person: el sistema lleva el contenedor al operario eliminando recorridos. Ideales para e-commerce, farmacéutica y manufactura donde la velocidad de picking es crítica.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Los robots lanzadera 4 vías tienen solo 125 mm de espesor y 1,5 toneladas de carga útil. Pueden operar en cámaras frigoríficas a -25°C, en zonas ATEX certificadas, y bajo control multi-robot coordinado por WCS. Su diseño plug-and-play permite instalaciones rápidas sin obras civiles.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                La decisión entre transelevador y robot lanzadera no es solo técnica: es estratégica. Para almacenes y bodegas con alta variabilidad de SKUs, el transelevador es la opción más robusta. Para depósitos con productos homogéneos, el shuttle multiplica la capacidad sin ampliar el footprint. El robot paletizador y la paletizadora automática forman paletas a alta velocidad para alimentar directamente al transelevador. En operaciones mixtas, el WCS coordina transelevadores, paletizadores y brazos robóticos de almacén en la misma instalación.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Los robots AGV y AMR de DELIE completan el ecosistema de manipulación. El AGV se aplica en flujos fijos entre el almacén y la línea de producción; el AMR en zonas con alta interacción humana y layouts cambiantes. En Argentina, el costo laboral creciente y la dificultad de retención de operarios hace que la flota robótica sea cada vez más rentable: el cálculo de ROI en proyectos de flota AMR en almacenes o bodegas medianas suele cerrar entre 18 y 24 meses.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 En Argentina, importar estos equipos con el Decreto 513/2025 implica arancel 0% en las posiciones arancelarias de robots industriales. STOKA gestiona toda la importación, la ingeniería de instalación y el soporte técnico local post-venta.
@@ -193,6 +215,48 @@ export const CatalogoRobotsPage = () => {
                 <p className="font-bold text-gray-900 text-sm mb-0.5 group-hover:text-cyan-600 transition-colors">{c.label}</p>
                 <p className="text-gray-500 text-xs">{c.desc}</p>
               </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      {/* Explorar por tipo — product child links */}
+      <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Explorar por tipo</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Robots disponibles</h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { nombre: 'Paletizador / Despaletizador', desc: 'Formación automática de paletas a alta velocidad', url: '/catalogo/robots-manipulacion/paletizado' },
+              { nombre: 'Robot de Picking', desc: 'Goods-to-person, hasta 1.200 líneas/hora', url: '/catalogo/robots-manipulacion/picking' },
+              { nombre: 'Robots AGV / AMR', desc: 'Transporte autónomo sin infraestructura fija', url: '/catalogo/robots-manipulacion/agv-amr' },
+            ].map((item, i) => (
+              <motion.a key={i} href={item.url}
+                initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
+                className="bg-white border border-gray-200 rounded-2xl p-5 hover:border-cyan-400 hover:shadow-sm transition-all group block">
+                <h3 className="font-black text-gray-900 text-sm mb-2 group-hover:text-cyan-600 transition-colors">{item.nombre}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed mb-3">{item.desc}</p>
+                <span className="inline-flex items-center gap-1 text-xs text-cyan-500 font-bold">
+                  Ver detalle <ChevronRight size={12} />
+                </span>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Preguntas frecuentes</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Lo que pregunta un Director de Operaciones</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {FAQ.map((item, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:border-cyan-300 transition-colors">
+                <h3 className="font-black text-gray-900 text-sm mb-3">{item.q}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.a}</p>
+              </motion.div>
             ))}
           </div>
         </div>

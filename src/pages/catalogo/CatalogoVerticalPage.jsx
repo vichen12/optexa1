@@ -28,6 +28,13 @@ const PRODUCTS = [
   },
 ];
 
+const FAQ = [
+  { q: '¿Cuándo conviene un VLM y cuándo un carrusel vertical para mi depósito o bodega?', a: 'El VLM conviene cuando tenés alta variedad de SKUs y necesitás acceso aleatorio: cada ciclo podés extraer cualquier bandeja del almacén de forma independiente. El carrusel es más eficiente para SKUs de alta rotación con acceso más secuencial. Para depósitos farmacéuticos, repuestos y e-commerce con muchos SKUs distintos, el VLM es generalmente la mejor opción.' },
+  { q: '¿Cuánto espacio de suelo ahorro con un VLM en mi almacén o bodega?', a: 'Típicamente entre el 70% y el 90% comparado con estanterías convencionales. Un VLM de 10 metros de altura ocupa 5-8 m² de superficie y almacena lo equivalente a 30-50 m² de estanterías convencionales. En edificios con altura libre, la densidad de almacenaje por m² de suelo se multiplica entre 4 y 8 veces.' },
+  { q: '¿Cómo se integra el VLM con mi ERP o WMS actual?', a: 'Mediante APIs estándar RESTful o la interfaz del WMS de DELIE. Si ya tenés un WMS de terceros (SAP EWM, Manhattan, etc.), el VLM puede operar como subsistema esclavo que recibe órdenes de extracción. Si no tenés WMS, el módulo de DELIE gestiona el inventario del depósito de forma autónoma con integración al ERP.' },
+  { q: '¿Puede operar el VLM o carrusel vertical en temperatura controlada?', a: 'El carrusel vertical opera entre -5°C y +40°C, compatible con cámaras de frío positivo. El VLM tiene versiones para entornos entre 2°C y 25°C, ideal para farmacéutica y productos refrigerados. Para frío negativo (bodega de congelados), se recomiendan los transelevadores especializados de la línea AS/RS de DELIE.' },
+];
+
 const SISTER_CATS = [
   { label: 'AS/RS', href: '/catalogo/asrs', desc: 'Estanterías automatizadas' },
   { label: 'Robots de manipulación', href: '/catalogo/robots-manipulacion', desc: 'Transelevadores, shuttles y AMR' },
@@ -42,9 +49,9 @@ export const CatalogoVerticalPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Helmet>
-        <title>Almacenamiento Vertical | VLM y Carruseles Verticales | STOKA Argentina</title>
+        <title>Almacén Vertical Automático | VLM, Carrusel, Torre de Almacenamiento | STOKA Argentina</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Módulos VLM y carruseles verticales DELIE. Ahorrá hasta 90% de espacio de suelo. Picking ergonómico a la altura del operador. Cotizá sin costo en Argentina." />
+        <meta name="description" content="Almacén vertical automático, VLM, carrusel vertical y torre de almacenamiento DELIE. Optimizá el espacio de tu almacén hasta un 90%. Cotizá sin costo en Argentina." />
         <meta property="og:title" content="Almacenamiento Vertical VLM y Carruseles | STOKA Argentina" />
         <meta property="og:description" content="VLM y carruseles verticales DELIE. Hasta 90% menos espacio de suelo. Representantes oficiales en Argentina." />
         <meta property="og:url" content="https://www.stokagroup.com/catalogo/almacenamiento-vertical" />
@@ -66,6 +73,15 @@ export const CatalogoVerticalPage = () => {
           "itemListElement": PRODUCTS.map((p, i) => ({
             "@type": "ListItem", "position": i + 1, "name": p.name, "description": p.desc,
             "url": "https://www.stokagroup.com/catalogo/almacenamiento-vertical"
+          }))
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": FAQ.map(item => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": { "@type": "Answer", "text": item.a }
           }))
         })}</script>
       </Helmet>
@@ -115,9 +131,9 @@ export const CatalogoVerticalPage = () => {
           <div className="grid md:grid-cols-[2fr_1fr] gap-10">
             <div>
               <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">VLM vs Carrusel vertical</p>
-              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-5">Almacenamiento vertical automatizado: VLM y carrusel comparados</h2>
+              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-5">Almacén vertical automático: VLM, carrusel y torre de almacenamiento para optimizar espacio</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                El almacenamiento vertical automatizado maximiza el uso del espacio aéreo disponible en el almacén, aprovechando la altura del techo en lugar de expandir horizontalmente. DELIE ofrece dos tecnologías complementarias: el VLM (Vertical Lift Module) y el carrusel vertical inteligente, cada uno optimizado para un perfil operativo diferente.
+                El almacén vertical automático maximiza el uso del espacio aéreo disponible para optimizar el espacio del almacén, aprovechando la altura del techo en lugar de expandir horizontalmente. Estas torres de almacenamiento automatizadas —VLM y carrusel vertical— de DELIE ofrecen dos tecnologías complementarias, cada una optimizada para un perfil operativo diferente.
               </p>
               <div className="grid md:grid-cols-2 gap-5 mb-5">
                 <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
@@ -133,6 +149,12 @@ export const CatalogoVerticalPage = () => {
               </div>
               <p className="text-gray-600 leading-relaxed">
                 Ambas tecnologías eliminan el tiempo de desplazamiento del operario (que representa hasta el 70% del tiempo en un almacén manual), mejoran la ergonomía, y se integran directamente con WMS y ERP. En Argentina, aplican al Decreto 513/2025 para importación con arancel 0%.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                El almacenamiento vertical es especialmente adecuado para operaciones donde el espacio de planta es limitado y caro: talleres de manufactura, depósitos de repuestos en zonas industriales urbanas, almacenes de laboratorio o bodega de archivo de componentes electrónicos. Un VLM de 10 metros de altura en una huella de 3×3 metros puede almacenar el equivalente a 50 metros lineales de estantería convencional. Para repuestos de maquinaria, componentes electrónicos o materiales de mantenimiento, esa densidad cambia completamente el modelo operativo.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                En Argentina y Chile, los sectores con mayor adopción de VLM y carrusel vertical son: minería y oil &amp; gas (bodega de repuestos críticos en locaciones remotas), manufactura automotriz (almacén de componentes y repuestos de herramientas), farmacéutica (depósito de muestras y materiales de control de calidad) y e-commerce (fulfillment de artículos de pequeño formato con muchos SKUs). STOKA dimensiona el sistema según los KPIs de tu operación actual y proyecta el ROI antes de cualquier inversión.
               </p>
             </div>
             <div className="space-y-4">
@@ -209,6 +231,47 @@ export const CatalogoVerticalPage = () => {
                 <p className="font-bold text-gray-900 text-sm mb-0.5 group-hover:text-cyan-600 transition-colors">{c.label}</p>
                 <p className="text-gray-500 text-xs">{c.desc}</p>
               </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      {/* Explorar por tipo — product child links */}
+      <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Explorar por tipo</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Soluciones de almacenamiento vertical</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { nombre: 'Módulo VLM', desc: 'Hasta 90% menos espacio. Lanzadera de acceso aleatorio.', url: '/catalogo/almacenamiento-vertical/vlm' },
+              { nombre: 'Carrusel Vertical', desc: 'La solución más compacta para repuestos y piezas pequeñas.', url: '/catalogo/almacenamiento-vertical/carruseles' },
+            ].map((item, i) => (
+              <motion.a key={i} href={item.url}
+                initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
+                className="bg-white border border-gray-200 rounded-2xl p-5 hover:border-cyan-400 hover:shadow-sm transition-all group block">
+                <h3 className="font-black text-gray-900 text-sm mb-2 group-hover:text-cyan-600 transition-colors">{item.nombre}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed mb-3">{item.desc}</p>
+                <span className="inline-flex items-center gap-1 text-xs text-cyan-500 font-bold">
+                  Ver detalle <ChevronRight size={12} />
+                </span>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Preguntas frecuentes</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Lo que pregunta un Director de Operaciones</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {FAQ.map((item, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:border-cyan-300 transition-colors">
+                <h3 className="font-black text-gray-900 text-sm mb-3">{item.q}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.a}</p>
+              </motion.div>
             ))}
           </div>
         </div>

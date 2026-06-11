@@ -1,22 +1,32 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, ChevronRight, X } from "lucide-react";
+import { Menu, ChevronRight, ChevronDown, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const cx = (...cls) => cls.filter(Boolean).join(" ");
 
+const CATALOG_CATEGORIES = [
+  { name: "Sistemas AS/RS",          href: "/catalogo/asrs" },
+  { name: "Robots de Manipulación",  href: "/catalogo/robots-manipulacion" },
+  { name: "Almacenamiento Vertical", href: "/catalogo/almacenamiento-vertical" },
+  { name: "Equipo de Transporte",    href: "/catalogo/equipo-transporte" },
+  { name: "Software Inteligente",    href: "/catalogo/software" },
+];
+
 const ALL_NAV = [
-  { name: "Inicio",           href: "#inicio",             type: "scroll" },
-  { name: "Catálogo",         href: "/catalogo",           type: "page"   },
-  { name: "Industrias",       href: "/industrias",         type: "page"   },
-  { name: "Beneficios",       href: "/beneficios-fiscales",type: "page"   },
-  { name: "Cómo Trabajamos",  href: "/como-trabajamos",    type: "page"   },
-  { name: "Nosotros",         href: "/nosotros",           type: "page"   },
+  { name: "Inicio",          href: "#inicio",              type: "scroll"   },
+  { name: "Catálogo",        href: "/catalogo",            type: "dropdown" },
+  { name: "Industrias",      href: "/industrias",          type: "page"     },
+  { name: "Beneficios",      href: "/beneficios-fiscales", type: "page"     },
+  { name: "Cómo Trabajamos", href: "/como-trabajamos",     type: "page"     },
+  { name: "Nosotros",        href: "/nosotros",            type: "page"     },
 ];
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [catalogOpen, setCatalogOpen] = useState(false);
+  const catalogRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -25,6 +35,16 @@ export const Navbar = () => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (catalogRef.current && !catalogRef.current.contains(e.target)) {
+        setCatalogOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleScrollTo = (e, id) => {
@@ -49,13 +69,17 @@ export const Navbar = () => {
   const handlePageNav = (e, href) => {
     e.preventDefault();
     setMobileMenuOpen(false);
+    setCatalogOpen(false);
     navigate(href);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleNavClick = (e, item) => {
     if (item.type === "scroll") handleScrollTo(e, item.href);
-    else handlePageNav(e, item.href);
+    else if (item.type === "dropdown") {
+      e.preventDefault();
+      setCatalogOpen((v) => !v);
+    } else handlePageNav(e, item.href);
   };
 
   return (
@@ -97,18 +121,68 @@ export const Navbar = () => {
           {/* DESKTOP NAV */}
           <ul className="hidden lg:flex items-center gap-1">
             {ALL_NAV.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item)}
-                  className={cx(
-                    "relative px-3 py-2 text-[11px] font-black uppercase tracking-[0.18em] transition-colors duration-300 group italic whitespace-nowrap",
-                    scrolled ? "text-gray-600 hover:text-gray-900" : "text-gray-600 hover:text-gray-900",
-                  )}
-                >
-                  <span className="relative z-10">{item.name}</span>
-                  <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-cyan-500 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                </a>
+              <li key={item.name} className="relative" ref={item.type === "dropdown" ? catalogRef : undefined}>
+                {item.type === "dropdown" ? (
+                  <>
+                    <button
+                      onClick={(e) => handleNavClick(e, item)}
+                      className={cx(
+                        "relative px-3 py-2 text-[11px] font-black uppercase tracking-[0.18em] transition-colors duration-300 group italic whitespace-nowrap flex items-center gap-1",
+                        scrolled ? "text-gray-600 hover:text-gray-900" : "text-gray-600 hover:text-gray-900",
+                      )}
+                    >
+                      <span className="relative z-10">{item.name}</span>
+                      <ChevronDown size={11} className={cx("transition-transform duration-200", catalogOpen ? "rotate-180" : "")} />
+                      <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-cyan-500 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    </button>
+
+                    <AnimatePresence>
+                      {catalogOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                          transition={{ duration: 0.15 }}
+                          className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-2xl shadow-xl overflow-hidden z-60"
+                        >
+                          <div className="p-2">
+                            <a
+                              href="/catalogo"
+                              onClick={(e) => handlePageNav(e, "/catalogo")}
+                              className="block px-4 py-2.5 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-cyan-500 transition-colors rounded-xl hover:bg-gray-50"
+                            >
+                              Ver catálogo completo →
+                            </a>
+                            <div className="border-t border-gray-100 my-1" />
+                            {CATALOG_CATEGORIES.map((cat) => (
+                              <a
+                                key={cat.href}
+                                href={cat.href}
+                                onClick={(e) => handlePageNav(e, cat.href)}
+                                className="flex items-center justify-between px-4 py-2.5 text-[11px] font-bold text-gray-700 hover:text-cyan-600 hover:bg-cyan-50 rounded-xl transition-colors group"
+                              >
+                                <span>{cat.name}</span>
+                                <ChevronRight size={12} className="text-gray-300 group-hover:text-cyan-400 transition-colors" />
+                              </a>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </>
+                ) : (
+                  <a
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item)}
+                    className={cx(
+                      "relative px-3 py-2 text-[11px] font-black uppercase tracking-[0.18em] transition-colors duration-300 group italic whitespace-nowrap",
+                      scrolled ? "text-gray-600 hover:text-gray-900" : "text-gray-600 hover:text-gray-900",
+                    )}
+                  >
+                    <span className="relative z-10">{item.name}</span>
+                    <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-cyan-500 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -163,7 +237,7 @@ export const Navbar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
                   href={item.href}
-                  onClick={(e) => handleNavClick(e, item)}
+                  onClick={(e) => item.type === "dropdown" ? handlePageNav(e, item.href) : handleNavClick(e, item)}
                   className="text-4xl font-black text-slate-900 uppercase tracking-tighter hover:text-cyan-500 transition-all italic flex flex-col items-center"
                 >
                   <span className="text-[10px] font-mono text-slate-300 tracking-[0.5em] mb-1">
