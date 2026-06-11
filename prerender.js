@@ -1,14 +1,9 @@
-import puppeteer from 'puppeteer-core';
-import chromium from '@sparticuz/chromium';
-import { createServer } from 'http';
-import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { resolve, join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import mime from 'mime-types';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, 'dist');
-const PORT = 8765;
 
 const ROUTES = [
   '/',
@@ -65,117 +60,45 @@ const ROUTES = [
   '/chile',
 ];
 
-// External domains to block during prerender — they prevent networkidle2
-// and don't contribute to the rendered HTML content.
-const BLOCKED_PATTERNS = [
-  'fonts.googleapis.com',
-  'fonts.gstatic.com',
-  'googletagmanager.com',
-  'google-analytics.com',
-  'analytics.google.com',
-  'doubleclick.net',
-  'spline.design',
-];
+// Import the SSR bundle built by: vite build --ssr src/App.ssr.jsx --outDir dist/ssr
+const { render } = await import('./dist/ssr/App.ssr.js');
 
-function startStaticServer() {
-  return new Promise((resolve, reject) => {
-    const server = createServer((req, res) => {
-      const urlPath = req.url.split('?')[0];
-      let filePath = join(DIST, urlPath);
+const template = readFileSync(join(DIST, 'index.html'), 'utf-8');
 
-      if (existsSync(filePath) && statSync(filePath).isDirectory()) {
-        filePath = join(filePath, 'index.html');
-      }
-      if (!existsSync(filePath)) {
-        filePath = join(DIST, 'index.html');
-      }
+let ok = 0;
+let errors = 0;
 
-      const contentType = mime.lookup(filePath) || 'application/octet-stream';
-      res.writeHead(200, { 'Content-Type': contentType });
-      res.end(readFileSync(filePath));
-    });
-
-    server.listen(PORT, () => {
-      console.log(`[prerender] Servidor estático en http://localhost:${PORT}`);
-      resolve(server);
-    });
-
-    server.on('error', reject);
-  });
-}
-
-async function getBrowserConfig() {
-  const isServerless = process.env.VERCEL === '1' || process.env.CI === 'true';
-
-  if (isServerless) {
-    console.log('[prerender] Entorno serverless detectado — usando @sparticuz/chromium');
-    const executablePath = await chromium.executablePath();
-    console.log(`[prerender] executablePath: ${executablePath}`);
-    return {
-      executablePath,
-      args: chromium.args,
-      headless: chromium.headless,
-      defaultViewport: chromium.defaultViewport,
-    };
-  }
-
-  const localPaths = {
-    win32:  'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-    darwin: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-    linux:  '/usr/bin/google-chrome-stable',
-  };
-  const executablePath = localPaths[process.platform] ?? localPaths.linux;
-  console.log(`[prerender] Chrome local: ${executablePath}`);
-  return {
-    executablePath,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage',
-      '--disable-extensions',
-      '--disable-background-networking',
-      '--disable-sync',
-      '--metrics-recording-only',
-      '--no-first-run',
-    ],
-    headless: true,
-    defaultViewport: { width: 1280, height: 800 },
-  };
-}
-
-async function renderRoute(browser, route) {
-  const page = await browser.newPage();
-
-  // Block external requests that block networkidle and don't affect HTML
-  await page.setRequestInterception(true);
-  page.on('request', (req) => {
-    const url = req.url();
-    const isLocal = url.startsWith(`http://localhost:${PORT}`);
-    if (!isLocal && BLOCKED_PATTERNS.some((p) => url.includes(p))) {
-      req.abort();
-      return;
-    }
-    req.continue();
-  });
-
+for (const route of ROUTES) {
   try {
-    await page.goto(`http://localhost:${PORT}${route}`, {
-      waitUntil: 'domcontentloaded',
-      timeout: 30000,
-    });
+    const { html, helmet } = render(route);
 
-    // Wait for React to mount and render meaningful content
-    await page.waitForFunction(
-      () => {
-        const root = document.querySelector('#root');
-        if (!root) return false;
-        return root.querySelector('nav, main, h1, h2, article, section, header') !== null;
-      },
-      { timeout: 15000 }
+    let page = template;
+
+    // 1. Inject rendered HTML into root div
+    page = page.replace(
+      '<div id="root"></div>',
+      `<div id="root">${html}</div>`
     );
 
-    const html = await page.content();
+    // 2. Replace the generic <title> with the route-specific one
+    if (helmet?.title) {
+      page = page.replace(/<title>[^<]*<\/title>/, helmet.title.toString());
+    }
 
+    // 3. Inject meta, link, and script (JSON-LD) tags from helmet before </head>
+    const headTags = [
+      helmet?.meta?.toString() ?? '',
+      helmet?.link?.toString() ?? '',
+      helmet?.script?.toString() ?? '',
+    ]
+      .filter((s) => s.trim().length > 0)
+      .join('\n    ');
+
+    if (headTags) {
+      page = page.replace('</head>', `    ${headTags}\n  </head>`);
+    }
+
+    // 4. Write to dist/[route]/index.html (or dist/index.html for root)
     const outPath =
       route === '/'
         ? join(DIST, 'index.html')
@@ -183,42 +106,16 @@ async function renderRoute(browser, route) {
 
     const outDir = dirname(outPath);
     if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
-    writeFileSync(outPath, html, 'utf-8');
+    writeFileSync(outPath, page, 'utf-8');
 
     console.log(`[prerender] ✅ ${route}`);
-    return true;
+    ok++;
   } catch (err) {
     console.error(`[prerender] ❌ ${route} — ${err.message}`);
-    return false;
-  } finally {
-    await page.close();
+    console.error(err.stack);
+    errors++;
   }
 }
 
-async function main() {
-  const server = await startStaticServer();
-  const config = await getBrowserConfig();
-
-  const browser = await puppeteer.launch(config);
-  console.log('[prerender] ✅ Chromium lanzado');
-
-  let ok = 0;
-  let errors = 0;
-
-  for (const route of ROUTES) {
-    const success = await renderRoute(browser, route);
-    if (success) ok++;
-    else errors++;
-  }
-
-  await browser.close();
-  server.close();
-
-  console.log(`\n[prerender] Listo. ${ok} OK / ${errors} errores.`);
-  if (errors > 0) process.exit(1);
-}
-
-main().catch((err) => {
-  console.error('[prerender] Error fatal:', err.message);
-  process.exit(1);
-});
+console.log(`\n[prerender] Listo. ${ok} OK / ${errors} errores.`);
+if (errors > 0) process.exit(1);

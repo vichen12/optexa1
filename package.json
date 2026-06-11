@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:vercel": "vite build && node prerender.js",
+    "build:vercel": "vite build && vite build --ssr src/App.ssr.jsx --outDir dist/ssr && node prerender.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
