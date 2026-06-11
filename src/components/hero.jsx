@@ -24,15 +24,25 @@ export const Hero = () => {
       id="inicio"
       className="relative h-screen flex flex-col items-center justify-center pt-20 px-6 bg-slate-900"
     >
-      {/* VIDEO BG — overflow-hidden solo aquí para no cortar el texto */}
+      {/* BG — imagen en mobile, video en desktop */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* MOBILE: imagen estática (evita descargar el video en mobile) */}
+        <img
+          src="/bannervideo1-poster.jpg"
+          alt=""
+          aria-hidden="true"
+          fetchpriority="high"
+          width="1920" height="1080"
+          className="block md:hidden w-full h-full object-cover"
+        />
+        {/* DESKTOP: video */}
         <video
-          src="/bannervideo1.mp4"
+          src="/bannervideo1-compressed.mp4"
           poster="/bannervideo1-poster.jpg"
           autoPlay muted loop playsInline
-          preload="none"
+          preload="metadata"
           width="1920" height="1080"
-          className="w-full h-full object-cover"
+          className="hidden md:block w-full h-full object-cover"
         >
           <track kind="captions" src="" label="Sin audio" default />
         </video>
@@ -58,7 +68,7 @@ export const Hero = () => {
 
         {/* DELIE logo */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
           className="mb-5"
