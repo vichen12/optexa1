@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const STATS = [
   { value: "1.000+",   label: "Instalaciones ASRS globales" },
-  { value: "10+ años", label: "Experiencia DELIE" },
+  { value: "15+ años", label: "Trayectoria DELIE" },
   { value: "30–50%",   label: "Más económico que Europa" },
   { value: "CE · ISO", label: "Certificación industrial" },
 ];
@@ -14,9 +14,9 @@ export const Hero = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "STOKA — Automatización de Almacenes DELIE en Argentina";
+    document.title = "Sistemas ASRS y Automatización de Almacenes en Argentina | STOKA";
     const m = document.querySelector('meta[name="description"]');
-    if (m) m.setAttribute("content", "Representantes oficiales exclusivos de DELIE en Argentina. Sistemas ASRS, robots y software WMS/WCS. 30–50% más económico que soluciones europeas.");
+    if (m) m.setAttribute("content", "Sistemas ASRS, robots y software WMS/WCS para automatización de almacenes en Argentina. Tecnología DELIE, integración local STOKA. 30-50% más económico que Europa.");
   }, []);
 
   return (
@@ -80,7 +80,7 @@ export const Hero = () => {
               className="text-transparent bg-clip-text"
               style={{ backgroundImage: "linear-gradient(to right, #22d3ee, #60a5fa)" }}
             >
-              de almacenes DELIE
+              de almacenes con tecnología DELIE
             </span>
             <br />en Argentina.
           </h1>

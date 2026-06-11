@@ -6,7 +6,7 @@ const PILLARS = [
     icon: Factory,
     tag: '01',
     title: 'Fabricante directo',
-    body: 'DELIE es fabricante, no revendedor. Garantía directa, soporte técnico de primera línea y acceso a piezas originales sin intermediarios ni demoras.',
+    body: 'DELIE fabrica, STOKA integra. Acceso directo al fabricante sin cadena de intermediarios: garantía de fábrica, piezas originales y soporte técnico local en Argentina.',
     stat: '1.000+',
     statLabel: 'instalaciones en el mundo',
   },

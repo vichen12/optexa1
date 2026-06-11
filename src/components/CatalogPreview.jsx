@@ -63,7 +63,7 @@ export const CatalogPreview = () => {
 
         <div className="mb-14">
           <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">
-            DELIE — Catálogo de productos
+            Catálogo de soluciones — Tecnología DELIE
           </p>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none">
@@ -138,7 +138,7 @@ export const CatalogPreview = () => {
           >
             <div className="aspect-video flex items-center justify-center bg-slate-800 relative overflow-hidden">
               <div className="absolute inset-0 bg-linear-to-br from-slate-700 to-slate-900" />
-              <img src="/image.png" alt="DELIE — Fabricante de sistemas ASRS" className="relative z-10 w-32 object-contain" style={{ filter: 'brightness(1.1) saturate(1.2)' }} />
+              <img src="/image.png" alt="DELIE en YouTube — Instalaciones reales y casos de uso globales" className="relative z-10 w-32 object-contain" style={{ filter: 'brightness(1.1) saturate(1.2)' }} />
               <div className="absolute top-3 right-3 w-9 h-9 bg-red-600 rounded-xl flex items-center justify-center shadow-lg">
                 <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4">
                   <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6a3 3 0 0 0-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/>

@@ -84,7 +84,7 @@ function HomePage() {
     const handleVisibilityChange = () => {
       document.title = document.visibilityState === 'hidden'
         ? '¡Volvé! Te esperamos 👋'
-        : 'Automatización de Almacenes Argentina | Sistemas ASRS DELIE | STOKA';
+        : 'Sistemas ASRS y Automatización de Almacenes en Argentina | STOKA';
     };
     document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
@@ -93,11 +93,11 @@ function HomePage() {
   return (
     <div className="min-h-screen relative text-white selection:bg-cyan-400 selection:text-slate-900 bg-zinc-950">
       <Helmet>
-        <title>Automatización de Almacenes Argentina | Sistemas ASRS DELIE | STOKA</title>
+        <title>Sistemas ASRS y Automatización de Almacenes en Argentina | STOKA</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Representantes oficiales de DELIE en Argentina y Chile. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales y centros de distribución." />
-        <meta property="og:title" content="Automatización de Almacenes Argentina | Sistemas ASRS DELIE | STOKA" />
-        <meta property="og:description" content="Representantes oficiales de DELIE en Argentina y Chile. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes." />
+        <meta name="description" content="Sistemas ASRS, robots y software WMS/WCS para automatización de almacenes en Argentina. Tecnología DELIE, integración local STOKA. 30-50% más económico que Europa." />
+        <meta property="og:title" content="Sistemas ASRS y Automatización de Almacenes en Argentina | STOKA" />
+        <meta property="og:description" content="Sistemas ASRS, robots y software WMS/WCS para automatización de almacenes en Argentina. Tecnología DELIE, integración local STOKA. 30-50% más económico que Europa." />
         <meta property="og:image" content="https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png" />
         <meta property="og:url" content="https://www.stokagroup.com/" />
         <link rel="canonical" href="https://www.stokagroup.com/" />

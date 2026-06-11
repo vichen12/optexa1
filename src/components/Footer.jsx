@@ -129,12 +129,8 @@ export const Footer = () => {
 
         {/* BOTTOM BAR */}
         <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-400">
-          <span>© {year} Stoka — Representación oficial DELIE en Argentina</span>
+          <span>© {year} STOKA — Representación oficial DELIE en Argentina</span>
           <span>Carril Rodríguez Peña 35, Maipú, Mendoza</span>
-          <a href={gmailLink} target="_blank" rel="noopener noreferrer"
-            className="hover:text-gray-600 transition-colors font-mono">
-            Desarrollo web // Vincenzo Dallapé
-          </a>
         </div>
       </div>
     </footer>
