@@ -149,6 +149,7 @@ export const ROIPage = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
         source: 'roi_calculator',
+        message: texto,
         operarios: labelOp,
         movimientos_dia: labelMov,
         costo_operario_usd: costoPorOperario,
@@ -156,7 +157,6 @@ export const ROIPage = () => {
         ahorro_neto_anual_usd: Math.round(result.ahorroNeto),
         payback: paybackStr,
         roi_pct: result.roi.toFixed(0),
-        whatsapp_mensaje: texto,
         timestamp: new Date().toISOString(),
       }).toString(),
     }).catch(() => {});

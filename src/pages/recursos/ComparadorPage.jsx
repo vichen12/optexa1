@@ -181,6 +181,7 @@ export const ComparadorPage = () => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
           source: 'comparador_sistemas',
+          message: `Comparador de sistemas — Recomendación: ${rec.nombre}`,
           carga: nuevas.carga ?? '',
           throughput: nuevas.throughput ?? '',
           altura: nuevas.altura ?? '',
