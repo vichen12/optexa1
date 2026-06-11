@@ -13,7 +13,8 @@ export default defineConfig(({ isSsrBuild }) => ({
     rollupOptions: {
       output: {
         manualChunks: isSsrBuild ? undefined : {
-          'react-vendor': ['react', 'react-dom'],
+          'react-vendor': ['react', 'react-dom', 'react/jsx-runtime', 'react-dom/client'],
+          'helmet': ['react-helmet-async'],
           'router': ['react-router-dom'],
           'motion': ['framer-motion'],
           'icons': ['lucide-react'],

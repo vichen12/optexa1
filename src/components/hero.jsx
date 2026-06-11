@@ -28,9 +28,14 @@ export const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <video
           src="/bannervideo1.mp4"
+          poster="/bannervideo1-poster.jpg"
           autoPlay muted loop playsInline
+          preload="none"
+          width="1920" height="1080"
           className="w-full h-full object-cover"
-        />
+        >
+          <track kind="captions" src="" label="Sin audio" default />
+        </video>
         <div className="absolute inset-0 bg-black/55" />
         <div className="absolute top-0 left-0 right-0 h-28 bg-linear-to-b from-black/50 to-transparent pointer-events-none" />
       </div>
@@ -61,6 +66,7 @@ export const Hero = () => {
           <img
             src="/image.png"
             alt="Sistemas ASRS DELIE para automatización de almacenes industriales"
+            width="400" height="51"
             className="h-10 object-contain mx-auto"
             style={{ filter: 'brightness(1.1) saturate(1.2)' }}
           />
@@ -68,7 +74,7 @@ export const Hero = () => {
 
         {/* H1 */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-5"

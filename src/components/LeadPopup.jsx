@@ -95,7 +95,7 @@ export const LeadPopup = () => {
                   <p className="text-white/70 text-[10px]">Te respondemos en &lt; 2 hs</p>
                 </div>
               </div>
-              <button onClick={close} className="w-7 h-7 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition-colors">
+              <button onClick={close} aria-label="Cerrar" className="w-7 h-7 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition-colors">
                 <X size={14} className="text-white" />
               </button>
             </div>

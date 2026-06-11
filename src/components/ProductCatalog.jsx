@@ -131,6 +131,7 @@ function ProductModal({ product, onClose }) {
           {/* CLOSE */}
           <button
             onClick={onClose}
+            aria-label="Cerrar"
             className="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 hover:bg-gray-100 shadow transition-colors"
           >
             <X size={16} className="text-gray-600" />
@@ -157,12 +158,14 @@ function ProductModal({ product, onClose }) {
               <>
                 <button
                   onClick={prev}
+                  aria-label="Imagen anterior"
                   className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-white/90 shadow hover:bg-white transition-colors"
                 >
                   <ChevronLeft size={18} className="text-gray-700" />
                 </button>
                 <button
                   onClick={next}
+                  aria-label="Imagen siguiente"
                   className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-white/90 shadow hover:bg-white transition-colors"
                 >
                   <ChevronRight size={18} className="text-gray-700" />
@@ -173,6 +176,7 @@ function ProductModal({ product, onClose }) {
                     <button
                       key={i}
                       onClick={() => setImgIdx(i)}
+                      aria-label={`Imagen ${i + 1}`}
                       className={`w-2 h-2 rounded-full transition-all ${i === imgIdx ? 'bg-cyan-500 w-5' : 'bg-gray-300'}`}
                     />
                   ))}

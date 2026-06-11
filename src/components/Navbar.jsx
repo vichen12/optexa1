@@ -235,6 +235,8 @@ export const Navbar = () => {
           {/* MOBILE TRIGGER */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={mobileMenuOpen}
             className={cx(
               "lg:hidden p-2 rounded-xl transition-colors",
               scrolled ? "text-gray-600 hover:text-gray-900" : "text-gray-600 hover:text-gray-900",
