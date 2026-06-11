@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { CTABanner } from '../components/CTABanner';
 import { WppFloat } from '../components/WppFloat';
-import { ArrowRight, Globe, Target, Shield, Zap } from 'lucide-react';
+import { Globe, Target, Shield, Zap } from 'lucide-react';
 
 const DELIE_STATS = [
   { value: '2003',   label: 'Año de fundación DELIE' },
@@ -25,8 +25,6 @@ const VALORES = [
 
 
 export const NosotrosPage = () => {
-  const navigate = useNavigate();
-
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
@@ -96,25 +94,53 @@ export const NosotrosPage = () => {
 
       {/* ── MISIÓN — bg: slate-900 ── */}
       <section className="bg-slate-900 py-20 px-6 border-b border-white/5">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_2fr] gap-12 items-start">
-          <div>
-            <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">Nuestra misión</p>
-            <h2 className="text-2xl font-black text-white uppercase tracking-tighter leading-tight">
-              Democratizar la automatización logística en Argentina
-            </h2>
-          </div>
-          <div className="space-y-4">
+        <div className="max-w-5xl mx-auto">
+
+          {/* Header + lead */}
+          <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-start mb-12">
+            <div>
+              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">Nuestra misión</p>
+              <h2 className="text-2xl font-black text-white uppercase tracking-tighter leading-tight">
+                Democratizar la automatización logística en Argentina
+              </h2>
+            </div>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Que ninguna empresa pierda competitividad por no poder acceder a tecnología que hasta hoy estaba reservada para las multinacionales. Los sistemas ASRS de clase mundial ya son accesibles para la industria argentina: tanto para almacenes de distribución como para bodegas de manufactura y depósitos 3PL.
+              Que ninguna empresa pierda competitividad por no poder acceder a tecnología que hasta hoy estaba reservada para las multinacionales. Los sistemas ASRS de clase mundial ya son accesibles para la industria argentina: almacenes de distribución, bodegas de manufactura y depósitos 3PL.
             </p>
-            <p className="text-gray-400 text-base leading-relaxed">
-              Representamos a DELIE porque creemos que la combinación de fabricación asiática de primer nivel con ingeniería y soporte local es la forma más inteligente de automatizar una operación en Argentina: máxima tecnología, mínimo riesgo.
+          </div>
+
+          {/* Pull quote */}
+          <blockquote className="border-l-4 border-cyan-500 pl-6 py-1 mb-12">
+            <p className="text-white text-lg italic leading-relaxed">
+              "Fabricación asiática de primer nivel + ingeniería y soporte local = la forma más inteligente de automatizar en Argentina: máxima tecnología, mínimo riesgo."
             </p>
-            <p className="text-gray-400 text-base leading-relaxed mt-4">
-              El mercado de automatización en Argentina tiene una particularidad que los proveedores internacionales suelen ignorar: no alcanza con vender el equipo. La empresa que automatiza su almacén, bodega o depósito necesita un socio que entienda el contexto regulatorio local (aranceles, AFIP, beneficios fiscales vigentes), que pueda gestionar la importación, que tenga técnicos que lleguen el mismo día cuando hay un problema, y que conozca las restricciones de la industria nacional. STOKA fue creada para ser exactamente eso.
-            </p>
-            <p className="text-gray-400 text-base leading-relaxed mt-4">
-              En Argentina, muchas empresas buscan tecnología de Daifuku Argentina o Wynright Argentina para automatizar sus almacenes industriales. STOKA es el integrador ASRS en Argentina equivalente: ofrecemos tecnología técnicamente comparable con la ventaja del precio DELIE —30–50% más accesible que marcas japonesas o europeas— y soporte técnico local que los proveedores internacionales no garantizan directamente en el mercado argentino. Como representante exclusivo de DELIE y distribuidor ASRS Argentina, STOKA es la alternativa real para empresas que evalúan automatizar su almacén, bodega o depósito industrial.
+          </blockquote>
+
+          {/* 4 pilares */}
+          <div className="mb-10">
+            <p className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-5">Lo que un integrador ASRS en Argentina debe garantizar</p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {[
+                { label: 'Contexto regulatorio local',   desc: 'Aranceles, AFIP y beneficios fiscales vigentes.' },
+                { label: 'Gestión de importación',       desc: 'Tramitación aduanera y logística de internación.' },
+                { label: 'Soporte técnico el mismo día', desc: 'Técnicos en Argentina, sin depender de fábrica.' },
+                { label: 'Conocimiento de la industria', desc: 'Restricciones y realidades de la operación nacional.' },
+              ].map((r, i) => (
+                <motion.div key={i} initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
+                  className="bg-white/5 border border-white/10 rounded-xl p-4 hover:border-cyan-400/30 transition-colors">
+                  <p className="text-white text-sm font-bold mb-1">{r.label}</p>
+                  <p className="text-gray-400 text-xs leading-relaxed">{r.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Alternativa Daifuku/Wynright */}
+          <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-2xl p-6">
+            <p className="text-cyan-400 text-[10px] font-black uppercase tracking-[0.35em] mb-3">Alternativa local a Daifuku y Wynright</p>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              STOKA ofrece tecnología técnicamente comparable a <strong className="text-white">Daifuku Argentina</strong> y <strong className="text-white">Wynright Argentina</strong> con precios DELIE{' '}
+              <strong className="text-cyan-400">30–50% más accesibles</strong> que las alternativas japonesas o europeas, y soporte técnico 100% local que los proveedores internacionales no garantizan directamente en el mercado argentino.
             </p>
           </div>
         </div>
@@ -170,29 +196,6 @@ export const NosotrosPage = () => {
         </div>
       </section>
 
-
-      {/* ── CTA — bg: slate-900 ── */}
-      <section className="bg-slate-900 py-20 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.4em] mb-4">¿Trabajamos juntos?</p>
-          <h2 className="text-white text-3xl md:text-4xl font-black italic uppercase tracking-tighter mb-5">
-            Hablemos de<br /><span className="text-cyan-400">tu proyecto</span>
-          </h2>
-          <p className="text-gray-400 text-base max-w-xl mx-auto mb-8 leading-relaxed">
-            La primera consulta es sin costo. En 24 horas tenés una respuesta técnica de nuestro equipo de ingeniería.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => navigate('/contacto')} style={{ outline: 'none' }}
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
-              Consultar ahora <ArrowRight size={14} />
-            </button>
-            <button onClick={() => navigate('/catalogo')} style={{ outline: 'none' }}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 border border-white/15 rounded-xl text-white/70 text-sm font-bold hover:border-cyan-400/50 hover:text-white transition-all">
-              Ver catálogo completo
-            </button>
-          </div>
-        </div>
-      </section>
 
       <WppFloat />
       <CTABanner />

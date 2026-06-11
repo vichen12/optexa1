@@ -4,14 +4,6 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { Contact } from '../components/contact';
 import { WppFloat } from '../components/WppFloat';
-import { CheckCircle } from 'lucide-react';
-
-const PROMESAS = [
-  'Respuesta técnica en menos de 24 horas',
-  'Ingeniero especializado en ASRS asignado a tu consulta',
-  'Orientación técnica inicial sin costo ni compromiso',
-  'Estimación de ROI incluida en la primera propuesta',
-];
 
 export const ContactPage = () => {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, []);
@@ -37,33 +29,7 @@ export const ContactPage = () => {
       </Helmet>
       <Navbar />
 
-      {/* SEO header — transactional keywords */}
-      <section className="bg-slate-950 pt-32 pb-12 px-6 border-b border-white/5">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-[2fr_1fr] gap-10 items-start">
-          <div>
-            <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.4em] mb-4">
-              Proveedores de automatización logística · Argentina y Chile
-            </p>
-            <h1 className="text-white text-4xl md:text-5xl font-black italic uppercase tracking-tighter leading-tight mb-5">
-              Cotizá tu sistema<br />
-              <span className="text-cyan-400">ASRS sin costo</span>
-            </h1>
-            <p className="text-gray-300 text-base leading-relaxed max-w-xl">
-              STOKA es una de las principales empresas de automatización logística en Argentina. Como integradores WMS y representantes oficiales de DELIE, entregamos presupuestos técnicos para sistemas ASRS, transelevadores, robots AMR y software WMS/WCS. El precio de cada proyecto depende del layout, throughput y equipamiento. La consulta inicial es siempre sin costo.
-            </p>
-          </div>
-          <div className="space-y-3 mt-2">
-            {PROMESAS.map((p, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <CheckCircle size={16} className="text-cyan-400 shrink-0 mt-0.5" />
-                <p className="text-gray-300 text-sm leading-snug">{p}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="bg-white">
+      <div className="bg-white mt-20">
         <Contact />
       </div>
       <WppFloat />

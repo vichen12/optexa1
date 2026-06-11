@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { ChevronRight, ArrowRight, CheckCircle, Factory, ShoppingCart, Truck, Pill, Snowflake, Mountain } from 'lucide-react';
+import { ChevronRight, ArrowRight, CheckCircle, Factory, ShoppingCart, Truck, Pill, Snowflake, Mountain, X, ZoomIn, ChevronLeft } from 'lucide-react';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
@@ -34,8 +34,18 @@ export const ProductoPage = () => {
   const navigate = useNavigate();
   const key = `${categoria}/${producto}`;
   const data = PRODUCTOS[key];
+  const [lightboxIdx, setLightboxIdx] = useState(null);
 
   useEffect(() => { window.scrollTo(0, 0); }, [key]);
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape') setLightboxIdx(null);
+      if (e.key === 'ArrowRight') setLightboxIdx(i => i !== null ? Math.min(i + 1, (PRODUCTOS[key]?.images?.length ?? 0)) : null);
+      if (e.key === 'ArrowLeft') setLightboxIdx(i => i !== null ? Math.max(i - 1, 0) : null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [key]);
 
   if (!data) {
     return (
@@ -107,130 +117,145 @@ export const ProductoPage = () => {
       </Helmet>
       <Navbar />
 
-      {/* HERO */}
-      <div className="relative mt-20 h-[55vh] min-h-[380px] flex items-end overflow-hidden">
-        <img
-          src={data.heroImg}
-          alt={data.heroAlt}
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-linear-to-r from-slate-950/95 via-slate-950/70 to-slate-950/20" />
-        <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 to-transparent" />
-        <div className="absolute top-0 left-0 right-0 h-[3px] bg-cyan-500" />
-
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-20">
-          {/* Breadcrumb */}
+      {/* HEADER — texto limpio sin imagen de fondo */}
+      <div className="bg-white border-b border-gray-100 mt-20">
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-cyan-500 mt-20" />
+        <div className="max-w-5xl mx-auto px-6 pt-10 pb-12">
           <nav className="flex items-center gap-2 text-xs text-gray-400 mb-6 flex-wrap">
-            <Link to="/" className="hover:text-cyan-400 transition-colors">Inicio</Link>
-            <ChevronRight size={12} className="text-gray-600" />
-            <Link to="/catalogo" className="hover:text-cyan-400 transition-colors">Catálogo</Link>
-            <ChevronRight size={12} className="text-gray-600" />
-            <Link to={data.categoriaUrl} className="hover:text-cyan-400 transition-colors">{data.categoriaLabel}</Link>
-            <ChevronRight size={12} className="text-gray-600" />
-            <span className="text-gray-300">{data.nombre}</span>
+            <Link to="/" className="hover:text-cyan-500 transition-colors">Inicio</Link>
+            <ChevronRight size={12} className="text-gray-300" />
+            <Link to="/catalogo" className="hover:text-cyan-500 transition-colors">Catálogo</Link>
+            <ChevronRight size={12} className="text-gray-300" />
+            <Link to={data.categoriaUrl} className="hover:text-cyan-500 transition-colors">{data.categoriaLabel}</Link>
+            <ChevronRight size={12} className="text-gray-300" />
+            <span className="text-gray-600">{data.nombre}</span>
           </nav>
-
-          <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.4em] mb-3">
-              {data.categoriaLabel} · DELIE
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+            <p className="text-cyan-500 text-[11px] font-black uppercase tracking-[0.4em] mb-3">
+              {data.categoriaLabel} · DELIE · Argentina
             </p>
-            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black italic uppercase tracking-tighter leading-[1.05] mb-4">
+            <h1 className="text-gray-900 text-4xl md:text-5xl lg:text-6xl font-black italic uppercase tracking-tighter leading-[1.05] mb-4">
               {data.nombre}
             </h1>
-            <p className="text-gray-300 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-gray-500 text-base md:text-lg max-w-2xl leading-relaxed">
               {data.tagline}
             </p>
           </motion.div>
         </div>
       </div>
 
-      {/* DESCRIPCIÓN */}
-      <section className="bg-white py-16 px-6 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-[2fr_1fr] gap-12 items-start">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Descripción técnica</p>
-            <p className="text-gray-700 text-lg leading-relaxed">{data.descripcion}</p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-            className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-4">Representante oficial en Argentina</p>
-            <img src="/image.png" alt="DELIE — Fabricante" className="h-8 object-contain mb-4" />
-            <p className="text-gray-500 text-sm leading-relaxed mb-4">
-              STOKA es el representante oficial exclusivo de DELIE en Argentina y Chile. Ingeniería, instalación y soporte técnico 100% local.
-            </p>
-            <button onClick={() => navigate('/contacto')}
-              className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
-              Consultar disponibilidad <ArrowRight size={13} />
-            </button>
-          </motion.div>
-        </div>
-      </section>
+      {/* MAIN 2-COL: foto izquierda / data derecha */}
+      <section className="bg-white py-14 px-6 border-b border-gray-100">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[2fr_3fr] gap-10 items-start">
 
-      {/* CÓMO FUNCIONA */}
-      <section className="bg-slate-900 py-16 px-6 border-b border-white/5">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">Funcionamiento</p>
-          <h2 className="text-2xl font-black text-white uppercase tracking-tighter mb-10">Cómo funciona</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {data.comoFunciona.map((item, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/30 transition-colors">
-                <div className="w-8 h-8 rounded-lg bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mb-4">
-                  <span className="text-cyan-400 font-black text-sm">{String(i + 1).padStart(2, '0')}</span>
-                </div>
-                <h3 className="font-black text-white text-sm uppercase tracking-tight mb-3">{item.titulo}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.texto}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ESPECIFICACIONES TÉCNICAS */}
-      <section className="bg-white py-16 px-6 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Ficha técnica</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Especificaciones técnicas</h2>
-          <div className="overflow-hidden rounded-2xl border border-gray-200">
-            <table className="w-full text-sm">
-              <tbody>
-                {data.specs.map((spec, i) => (
-                  <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                    <td className="px-6 py-4 font-bold text-gray-700 w-1/2 border-r border-gray-100">{spec.param}</td>
-                    <td className="px-6 py-4 text-gray-600">{spec.valor}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* INDUSTRIAS */}
-      <section className="bg-gray-50 py-16 px-6 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Aplicaciones</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Industrias que lo utilizan</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {data.industrias.map((ind, i) => {
-              const Icon = INDUSTRY_ICONS[ind] || Factory;
-              const slug = INDUSTRY_SLUGS[ind];
-              const card = (
-                <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-                  className="bg-white border border-gray-200 rounded-2xl p-5 hover:border-cyan-300 transition-colors text-center h-full">
-                  <div className="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center mx-auto mb-3">
-                    <Icon size={18} className="text-cyan-500" />
+          {/* IZQUIERDA — foto + CTA */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+            className="space-y-4 md:sticky md:top-24">
+            {(() => {
+              const allImgs = [data.heroImg, ...(data.images || [])];
+              return (
+                <>
+                  <div
+                    className="relative rounded-2xl overflow-hidden border border-gray-200 cursor-zoom-in group"
+                    onClick={() => setLightboxIdx(0)}
+                  >
+                    <img src={allImgs[0]} alt={data.heroAlt} className="w-full object-cover" style={{ aspectRatio: '4/3' }} />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                      <ZoomIn size={28} className="text-white opacity-0 group-hover:opacity-100 transition-opacity drop-shadow-lg" />
+                    </div>
                   </div>
-                  <p className="text-gray-800 font-bold text-sm">{ind}</p>
-                </motion.div>
+                  {allImgs.length > 1 && (
+                    <div className="grid grid-cols-3 gap-2">
+                      {allImgs.slice(1).map((img, i) => (
+                        <div key={i} className="rounded-xl overflow-hidden border border-gray-200 cursor-zoom-in group aspect-square"
+                          onClick={() => setLightboxIdx(i + 1)}>
+                          <img src={img} alt={`${data.nombre} — foto ${i + 2}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </>
               );
-              return slug ? (
-                <Link key={i} to={`/industrias/${slug}`} className="block">{card}</Link>
-              ) : (
-                <div key={i}>{card}</div>
-              );
-            })}
-          </div>
+            })()}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
+              <img src="/image.png" alt="DELIE" className="h-7 object-contain mb-3" />
+              <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                STOKA es el representante oficial exclusivo de DELIE en Argentina y Chile.
+              </p>
+              <button onClick={() => navigate('/contacto')}
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
+                Consultar disponibilidad <ArrowRight size={13} />
+              </button>
+            </div>
+            {/* Industrias */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-5">
+              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Industrias</p>
+              <div className="flex flex-wrap gap-2">
+                {data.industrias.map((ind) => {
+                  const Icon = INDUSTRY_ICONS[ind] || Factory;
+                  const slug = INDUSTRY_SLUGS[ind];
+                  const chip = (
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-gray-600 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full hover:border-cyan-300 hover:text-cyan-600 transition-all">
+                      <Icon size={11} className="text-cyan-500 shrink-0" />
+                      {ind}
+                    </div>
+                  );
+                  return slug ? (
+                    <Link key={ind} to={`/industrias/${slug}`}>{chip}</Link>
+                  ) : (
+                    <div key={ind}>{chip}</div>
+                  );
+                })}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* DERECHA — descripción + cómo funciona + specs */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
+            className="space-y-10">
+
+            {/* Descripción */}
+            <div>
+              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Descripción técnica</p>
+              <p className="text-gray-700 text-base leading-relaxed">{data.descripcion}</p>
+            </div>
+
+            {/* Cómo funciona */}
+            <div>
+              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-4">Funcionamiento</p>
+              <div className="space-y-4">
+                {data.comoFunciona.map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="w-7 h-7 rounded-lg bg-cyan-50 border border-cyan-200 flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="text-cyan-500 font-black text-xs">{String(i + 1).padStart(2, '0')}</span>
+                    </div>
+                    <div>
+                      <p className="font-black text-gray-900 text-sm uppercase tracking-tight mb-1">{item.titulo}</p>
+                      <p className="text-gray-500 text-sm leading-relaxed">{item.texto}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Especificaciones */}
+            <div>
+              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-4">Ficha técnica</p>
+              <div className="overflow-hidden rounded-2xl border border-gray-200">
+                <table className="w-full text-sm">
+                  <tbody>
+                    {data.specs.map((spec, i) => (
+                      <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                        <td className="px-5 py-3 font-bold text-gray-700 w-2/5 border-r border-gray-100 text-xs">{spec.param}</td>
+                        <td className="px-5 py-3 text-gray-600 text-xs">{spec.valor}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </motion.div>
         </div>
       </section>
 
@@ -252,8 +277,8 @@ export const ProductoPage = () => {
               a los sistemas Daifuku, con más de 1.000 instalaciones en 30 países y certificaciones
               internacionales equivalentes. STOKA es el representante exclusivo en Argentina: ingeniería,
               instalación y soporte técnico local sin depender de tiempos de fábrica en el exterior.
-              {' '}<Link to="/alternativa-daifuku-argentina" className="text-cyan-400 hover:underline font-medium">
-                Ver comparativa DELIE vs. Daifuku →
+              {' '}<Link to="/delie-argentina" className="text-cyan-400 hover:underline font-medium">
+                Ver más sobre DELIE en Argentina →
               </Link>
             </p>
           </motion.div>
@@ -320,6 +345,52 @@ export const ProductoPage = () => {
           </div>
         </div>
       </section>
+
+      {/* LIGHTBOX */}
+      {lightboxIdx !== null && (() => {
+        const allImgs = [data.heroImg, ...(data.images || [])];
+        const total = allImgs.length;
+        return (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6"
+            onClick={() => setLightboxIdx(null)}>
+            <div className="relative max-w-4xl w-full" onClick={e => e.stopPropagation()}>
+              <img
+                src={allImgs[lightboxIdx]}
+                alt="Vista ampliada"
+                className="w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl"
+              />
+              {/* X — dentro del marco, esquina superior derecha */}
+              <button
+                onClick={() => setLightboxIdx(null)}
+                className="absolute top-3 right-3 p-1.5 bg-black/60 hover:bg-black/90 rounded-full transition-colors">
+                <X size={18} className="text-white" />
+              </button>
+              {/* Anterior */}
+              {lightboxIdx > 0 && (
+                <button
+                  onClick={() => setLightboxIdx(i => i - 1)}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 p-2 bg-black/60 hover:bg-black/90 rounded-full transition-colors">
+                  <ChevronLeft size={20} className="text-white" />
+                </button>
+              )}
+              {/* Siguiente */}
+              {lightboxIdx < total - 1 && (
+                <button
+                  onClick={() => setLightboxIdx(i => i + 1)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-black/60 hover:bg-black/90 rounded-full transition-colors">
+                  <ChevronRight size={20} className="text-white" />
+                </button>
+              )}
+              {/* Contador si hay más de una foto */}
+              {total > 1 && (
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-black/60 rounded-full text-white text-xs font-bold">
+                  {lightboxIdx + 1} / {total}
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })()}
 
       <WppFloat />
       <CTABanner />

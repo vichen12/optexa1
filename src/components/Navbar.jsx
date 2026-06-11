@@ -17,7 +17,7 @@ const ALL_NAV = [
   { name: "Inicio",          href: "#inicio",              type: "scroll"   },
   { name: "Catálogo",        href: "/catalogo",            type: "dropdown" },
   { name: "Industrias",      href: "/industrias",          type: "page"     },
-  { name: "Beneficios",      href: "/beneficios-fiscales", type: "page"     },
+  { name: "Beneficios fiscales", href: "/beneficios-fiscales", type: "page"     },
   { name: "Cómo Trabajamos", href: "/como-trabajamos",     type: "page"     },
   { name: "Nosotros",        href: "/nosotros",            type: "page"     },
 ];

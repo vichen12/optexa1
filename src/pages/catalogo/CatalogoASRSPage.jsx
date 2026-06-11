@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -6,24 +6,24 @@ import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronRight, Maximize2 } from 'lucide-react';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
 const img = (prod, file) => `/productos-delie/asrs/${seg(prod)}/${file}`;
 
 const PRODUCTS = [
-  { name: 'Estanterías Pallet Shuttle', image: img('Estanterías robóticas con lanzadera para palés', 'pallet-shuttle-robot-racking13c59.webp'), desc: 'Estanterías de alta densidad para robots lanzadera de paletas. 7 a 40 metros de altura, precisión ±0,1 mm.', link: '/catalogo' },
-  { name: 'Estantería Tote Shuttle', image: img('Estantería del robot Tote Shuttle', 'tote-shuttle-robot-racking38678.webp'), desc: 'Para robots tote shuttle bidireccionales y 4 vías. Hasta 40 metros, anticorrosión de silano.', link: '/catalogo' },
-  { name: 'Estanterías para grúa apiladora', image: img('Estanterías para grúa apiladora de paletas', 'pallet-stacker-crane-racking598c7.webp'), desc: 'Gran altura para transelevadores y grúas apiladoras. Compatible con grúas de 1 y 2 mástiles.', link: '/catalogo' },
-  { name: 'Mini-estantería Flybox', image: img('Mini-estantería Flybox', 'mini-flybox-racking93d5a.webp'), desc: 'Distancia ultra estrecha entre contenedores. Altura 550–12.000 mm. Ideal para e-commerce y farmacéutica.', link: '/catalogo' },
-  { name: 'Transelevador + Robot lanzadera', image: img('Transelevador Grúa + Estantería Robot Lanzadera', 'pallet-stacker-crane-shuttle-robot-racking89e90.webp'), desc: 'Sistema combinado de transelevadores y robots lanzadera. Máxima flexibilidad y eficiencia.', link: '/catalogo' },
-  { name: 'Estanterías Miniload', image: img('Estanterías Miniload', 'miniload-rackinga0ea0.webp'), desc: 'Para transelevadores MiniLoad, simple y doble profundidad. Alta densidad de contenedores y totes.', link: '/catalogo' },
-  { name: 'Estanterías de servicio pesado', image: img('Estanterías de servicio pesado', 'heavy-duty-racking9a1ae.webp'), desc: 'Hasta 2.000 kg por palé. Compatible con frío y trabajo pesado. Anticorrosión de silano.', link: '/catalogo' },
-  { name: 'Estanterías push-back', image: img('Estanterías push-para almacenamiento-de alta densidad', 'push-in-racking-for-high-density-storage2a4c0.webp'), desc: 'Alta densidad tipo push-back, sistema LIFO. Compatible con carretillas estándar.', link: '/catalogo' },
-  { name: 'Estanterías de entresuelo', image: img('Estanterías de entresuelo', 'mezzanine-racking7da1b.webp'), desc: 'Plataforma elevada sobre estanterías para crear niveles adicionales de almacenamiento.', link: '/catalogo' },
-  { name: 'Plataforma de estructura de acero', image: img('Plataforma de estructura de acero', 'steel-structure-platformfb756.webp'), desc: 'Plataforma elevada de acero personalizable para espacio adicional de almacenamiento.', link: '/catalogo' },
-  { name: 'Palé de almacenamiento de acero', image: img('Plataforma de almacenamiento de acero', 'steel-storage-palletce853.webp'), desc: 'Palé de acero resistente a humedad, frío y químicos. Compatible con sistemas automáticos.', link: '/catalogo' },
-  { name: 'Drive-in racking', image: img('Conducir en estanterías', 'drive-in-rackinga817d.webp'), desc: 'La carretilla ingresa dentro. Hasta 80% de utilización del espacio. Sistema LIFO, apto para frío.', link: '/catalogo' },
+  { name: 'Estanterías Pallet Shuttle', image: img('Estanterías robóticas con lanzadera para palés', 'pallet-shuttle-robot-racking13c59.webp'), desc: 'Estanterías de alta densidad para robots lanzadera de paletas. 7 a 40 metros de altura, precisión ±0,1 mm.', link: '/catalogo/asrs/pallet-shuttle-racking' },
+  { name: 'Estantería Tote Shuttle', image: img('Estantería del robot Tote Shuttle', 'tote-shuttle-robot-racking38678.webp'), desc: 'Para robots tote shuttle bidireccionales y 4 vías. Hasta 40 metros, anticorrosión de silano.', link: '/catalogo/asrs/tote-shuttle-racking' },
+  { name: 'Estanterías para grúa apiladora', image: img('Estanterías para grúa apiladora de paletas', 'pallet-stacker-crane-racking598c7.webp'), desc: 'Gran altura para transelevadores y grúas apiladoras. Compatible con grúas de 1 y 2 mástiles.', link: '/catalogo/asrs/pallet-stacker-crane-racking' },
+  { name: 'Mini-estantería Flybox', image: img('Mini-estantería Flybox', 'mini-flybox-racking93d5a.webp'), desc: 'Distancia ultra estrecha entre contenedores. Altura 550–12.000 mm. Ideal para e-commerce y farmacéutica.', link: '/catalogo/asrs/mini-flybox-racking' },
+  { name: 'Transelevador + Robot lanzadera', image: img('Transelevador Grúa + Estantería Robot Lanzadera', 'pallet-stacker-crane-shuttle-robot-racking89e90.webp'), desc: 'Sistema combinado de transelevadores y robots lanzadera. Máxima flexibilidad y eficiencia.', link: '/catalogo/asrs/stacker-crane-shuttle-racking' },
+  { name: 'Estanterías Miniload', image: img('Estanterías Miniload', 'miniload-rackinga0ea0.webp'), desc: 'Para transelevadores MiniLoad, simple y doble profundidad. Alta densidad de contenedores y totes.', link: '/catalogo/asrs/miniload-racking' },
+  { name: 'Estanterías de servicio pesado', image: img('Estanterías de servicio pesado', 'heavy-duty-racking9a1ae.webp'), desc: 'Hasta 2.000 kg por palé. Compatible con frío y trabajo pesado. Anticorrosión de silano.', link: '/catalogo/asrs/heavy-duty-racking' },
+  { name: 'Estanterías push-back', image: img('Estanterías push-para almacenamiento-de alta densidad', 'push-in-racking-for-high-density-storage2a4c0.webp'), desc: 'Alta densidad tipo push-back, sistema LIFO. Compatible con carretillas estándar.', link: '/catalogo/asrs/push-back-racking' },
+  { name: 'Estanterías de entresuelo', image: img('Estanterías de entresuelo', 'mezzanine-racking7da1b.webp'), desc: 'Plataforma elevada sobre estanterías para crear niveles adicionales de almacenamiento.', link: '/catalogo/asrs/mezzanine-racking' },
+  { name: 'Plataforma de estructura de acero', image: img('Plataforma de estructura de acero', 'steel-structure-platformfb756.webp'), desc: 'Plataforma elevada de acero personalizable para espacio adicional de almacenamiento.', link: '/catalogo/asrs/steel-platform' },
+  { name: 'Palé de almacenamiento de acero', image: img('Plataforma de almacenamiento de acero', 'steel-storage-palletce853.webp'), desc: 'Palé de acero resistente a humedad, frío y químicos. Compatible con sistemas automáticos.', link: '/catalogo/asrs/steel-pallet' },
+  { name: 'Drive-in racking', image: img('Conducir en estanterías', 'drive-in-rackinga817d.webp'), desc: 'La carretilla ingresa dentro. Hasta 80% de utilización del espacio. Sistema LIFO, apto para frío.', link: '/catalogo/asrs/drive-in-racking' },
 ];
 
 const FAQ = [
@@ -42,6 +42,7 @@ const SISTER_CATS = [
 
 export const CatalogoASRSPage = () => {
   const navigate = useNavigate();
+  const videoRef = useRef(null);
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
@@ -88,12 +89,15 @@ export const CatalogoASRSPage = () => {
       </Helmet>
       <Navbar />
 
-      {/* HERO */}
-      <div className="relative mt-20 h-[50vh] min-h-[360px] flex items-end overflow-hidden">
-        <img src="/catalogo-banner-asrs.jpeg" alt="Sistema AS/RS DELIE — estanterías automatizadas de hasta 40 metros"
-          className="absolute inset-0 w-full h-full object-cover object-center" />
-        <div className="absolute inset-0 bg-linear-to-r from-slate-950/95 via-slate-950/70 to-slate-950/20" />
-        <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 to-transparent" />
+      {/* HERO — video de fondo */}
+      <div className="relative mt-20 h-[70vh] min-h-[480px] flex items-end overflow-hidden">
+        <video
+          src="/productos-delie/bannervideo2.mp4"
+          autoPlay muted loop playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-linear-to-r from-slate-950/80 via-slate-950/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-transparent to-transparent" />
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-cyan-500" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-20">
@@ -110,7 +114,7 @@ export const CatalogoASRSPage = () => {
               Sistema ASRS · Representantes DELIE · Argentina
             </p>
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black italic uppercase leading-[1.05] tracking-tight mb-5">
-              Sistemas AS/RS —<br />
+              Sistemas AS/RS<br />
               <span className="text-cyan-400">Estanterías automatizadas</span>
             </h1>
             <p className="text-gray-300 text-base md:text-lg max-w-xl leading-relaxed mb-8">
@@ -130,49 +134,148 @@ export const CatalogoASRSPage = () => {
 
       {/* DESCRIPCIÓN SEO */}
       <section className="bg-white py-14 px-6 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-[2fr_1fr] gap-10">
-            <div>
-              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Qué son los sistemas AS/RS</p>
-              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-5">Sistemas de almacenamiento y recuperación automatizados (AS/RS): ASRS de alta densidad</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Los sistemas AS/RS (Automated Storage and Retrieval Systems) son estructuras de almacenamiento de alta densidad diseñadas para operar con robots y equipos automatizados: transelevadores, robots lanzadera, robots shuttle y AMR. Los almacenes inteligentes modernos los utilizan para maximizar el uso del espacio vertical —hasta 40 metros de altura— y eliminar pasillos anchos para carretillas manuales. La automatización de almacenes con ASRS es la base de cualquier operación logística competitiva.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                DELIE fabrica sus estanterías AS/RS con acero de alta resistencia de grandes acerías certificadas, con tolerancias de mecanizado de ±0,1 mm y tratamientos anticorrosión de silano. Esta precisión es fundamental para garantizar la operación continua de robots y transelevadores sin desgaste prematuro ni paradas no planificadas.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                En Argentina y Chile, los sistemas ASRS de alta densidad de DELIE son entre un 30% y 50% más económicos que sus equivalentes europeos de marca comparable, gracias a la capacidad de fabricación propia en China a escala global. STOKA, representante oficial exclusivo ASRS Argentina y ASRS Chile, garantiza el proyecto llave en mano: ingeniería, importación, instalación y soporte posventa local.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Los beneficios fiscales vigentes en Argentina (Decreto 513/2025 — arancel 0% para equipos ASRS, financiamiento BICE a tasas preferenciales) hacen que 2025 y 2026 sean el momento ideal para invertir en automatización. La estabilidad fiscal del RIGI por 30 años protege la inversión de largo plazo.
-              </p>
-              <p className="text-gray-600 leading-relaxed mt-4">
-                La elección del sistema AS/RS correcto depende de tres variables: el tipo de unidad de carga (paleta, caja, tote o pieza pequeña), el throughput requerido (movimientos por hora) y la altura libre disponible en el almacén, bodega o depósito. Para paletas con muchos SKUs distintos, el transelevador unit-load es la opción más versátil. Para alta densidad con producto homogéneo, el robot lanzadera shuttle ofrece mayor capacidad por metro cuadrado. Para cajas y totes en e-commerce o farmacéutica, el MiniLoad garantiza la velocidad de picking goods-to-person que los canales digitales exigen.
-              </p>
-              <p className="text-gray-600 leading-relaxed mt-4">
-                En la Argentina de 2026, la combinación del Decreto 513/2025 (arancel 0%), el RIMI (amortización acelerada del 100% en el primer ejercicio) y la línea BICE (financiamiento a 10 años con período de gracia) convierte la automatización en una decisión que, en muchos casos, se financia con los ahorros que genera. Un almacén, bodega o depósito de mediana escala puede amortizar la inversión en 18 a 36 meses dependiendo del volumen de operación. STOKA calcula el TCO a 10 años y el ROI proyectado sin costo en la consulta inicial.
+        <div className="max-w-5xl mx-auto space-y-10">
+
+          {/* Header */}
+          <div>
+            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Qué son los sistemas AS/RS</p>
+            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter">Sistemas de almacenamiento y recuperación automatizados (AS/RS): ASRS de alta densidad</h2>
+          </div>
+
+          {/* Stat badges */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { value: '40 m', label: 'Altura máxima', sub: 'Uso total del espacio vertical' },
+              { value: '±0,1 mm', label: 'Precisión de mecanizado', sub: 'Robots sin desgaste ni paradas' },
+              { value: '30–50%', label: 'Más económico que Europa', sub: 'Precio directo de fábrica DELIE' },
+              { value: '18–36', label: 'Meses de ROI', sub: 'Comprobado en operaciones reales' },
+            ].map(s => (
+              <div key={s.label} className="bg-gray-50 border border-gray-200 rounded-2xl p-4 text-center">
+                <p className="text-2xl font-black text-gray-900 leading-none mb-1">{s.value}</p>
+                <p className="text-[11px] font-bold text-cyan-600 uppercase tracking-wide mb-1">{s.label}</p>
+                <p className="text-[11px] text-gray-400 leading-tight">{s.sub}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Video */}
+          <div className="relative rounded-2xl overflow-hidden border border-gray-200 bg-black group">
+            <video
+              ref={videoRef}
+              src="/bannervideo1.mp4"
+              autoPlay muted loop playsInline
+              className="w-full max-h-[360px] object-cover"
+            />
+            <button
+              onClick={() => videoRef.current?.requestFullscreen()}
+              className="absolute bottom-3 right-3 p-2 bg-black/50 hover:bg-black/80 rounded-lg transition-colors opacity-0 group-hover:opacity-100"
+              aria-label="Pantalla completa"
+            >
+              <Maximize2 size={16} className="text-white" />
+            </button>
+          </div>
+
+          {/* System selection guide */}
+          <div>
+            <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-4">Guía de selección — ¿Qué sistema AS/RS necesitás?</p>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {[
+                {
+                  type: 'Unit Load',
+                  sub: 'Transelevador de paletas',
+                  badge: 'Más versátil',
+                  badgeColor: 'bg-blue-50 text-blue-600 border-blue-200',
+                  cases: ['Paletas con muchos SKUs distintos', 'Operaciones FIFO / LIFO mixtas', 'Altura libre desde 12 m'],
+                  note: 'Transelevador de 1 o 2 mástiles'
+                },
+                {
+                  type: 'Shuttle',
+                  sub: 'Robot lanzadera',
+                  badge: 'Mayor densidad',
+                  badgeColor: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+                  cases: ['Alta densidad con producto homogéneo', 'Gran volumen por SKU', 'Máximo aprovechamiento del m²'],
+                  note: 'Bidireccional o 4 vías'
+                },
+                {
+                  type: 'MiniLoad',
+                  sub: 'Cajas y totes',
+                  badge: 'Máxima velocidad',
+                  badgeColor: 'bg-violet-50 text-violet-600 border-violet-200',
+                  cases: ['E-commerce y farmacéutica', 'Picking goods-to-person', 'SKUs pequeños y medianos'],
+                  note: 'Simple o doble profundidad'
+                },
+              ].map(s => (
+                <div key={s.type} className="bg-gray-50 border border-gray-200 rounded-2xl p-5 flex flex-col gap-3">
+                  <div>
+                    <span className={`inline-block text-[10px] font-bold uppercase tracking-wide border px-2 py-0.5 rounded-full mb-2 ${s.badgeColor}`}>{s.badge}</span>
+                    <p className="text-base font-black text-gray-900">{s.type}</p>
+                    <p className="text-xs text-gray-400">{s.sub}</p>
+                  </div>
+                  <ul className="space-y-1.5">
+                    {s.cases.map(c => (
+                      <li key={c} className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0" />
+                        <span className="text-xs text-gray-600">{c}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-[11px] text-gray-400 border-t border-gray-200 pt-3 mt-auto">{s.note}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 2-col: fabricación + fiscal */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Fabricación DELIE */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+              <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-4">Fabricación DELIE</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  'Acero de acerías certificadas',
+                  'Tolerancia ±0,1 mm',
+                  'Anticorrosión silano',
+                  '1.000+ instalaciones globales',
+                  'Compatible robots shuttle',
+                  'Compatible transelevadores',
+                  'Compatible AMR',
+                  'Apto frío y trabajo pesado',
+                ].map(tag => (
+                  <span key={tag} className="text-[11px] bg-white border border-gray-200 text-gray-600 px-2.5 py-1 rounded-full">{tag}</span>
+                ))}
+              </div>
+              <p className="text-xs text-gray-500 mt-4 leading-relaxed">
+                STOKA garantiza el proyecto llave en mano: ingeniería, importación, instalación y soporte posventa 100% local en Argentina.
               </p>
             </div>
-            <div className="space-y-4">
-              <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
-                <p className="text-xs font-black text-gray-900 uppercase tracking-wide mb-3">Beneficios clave</p>
-                {['Hasta 40 metros de altura', 'Densidad 5x vs. almacenamiento convencional', 'Compatible con robots lanzadera y transelevadores', 'Anticorrosión: silano de alta duración', 'Instalación in-situ en Argentina', 'ROI en 18–36 meses'].map(b => (
-                  <div key={b} className="flex items-start gap-2 mb-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0" />
-                    <p className="text-sm text-gray-600">{b}</p>
+
+            {/* Fiscal 2026 */}
+            <div className="bg-slate-900 rounded-2xl p-6 flex flex-col gap-4">
+              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.4em] uppercase">Argentina 2026 — Combinación fiscal</p>
+              <div className="space-y-2.5">
+                {[
+                  { label: 'Decreto 513/2025', desc: 'Arancel 0% en importación de equipos ASRS' },
+                  { label: 'RIMI', desc: 'Amortización acelerada del 100% en el 1er ejercicio' },
+                  { label: 'BICE', desc: 'Financiamiento a 10 años con período de gracia' },
+                ].map(item => (
+                  <div key={item.label} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
+                    <div>
+                      <span className="text-xs font-bold text-white">{item.label}</span>
+                      <span className="text-xs text-gray-400"> — {item.desc}</span>
+                    </div>
                   </div>
                 ))}
               </div>
-              <div className="bg-cyan-50 border border-cyan-200 rounded-2xl p-5">
-                <p className="text-xs font-black text-cyan-700 uppercase tracking-wide mb-2">Decreto 513/2025</p>
-                <p className="text-sm text-cyan-800">Importá estas estanterías con <strong>arancel 0%</strong>. Verificamos la posición arancelaria para tu proyecto sin costo.</p>
-                <button onClick={() => navigate('/beneficios-fiscales')} className="mt-3 text-xs font-bold text-cyan-600 hover:text-cyan-700 flex items-center gap-1">
-                  Ver beneficios fiscales <ArrowRight size={12} />
-                </button>
-              </div>
+              <p className="text-sm font-black text-white leading-tight border-t border-white/10 pt-4">
+                ROI en <span className="text-cyan-400">18–36 meses</span> en operaciones de mediana escala.
+              </p>
+              <button onClick={() => navigate('/beneficios-fiscales')} className="mt-auto text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">
+                Ver todos los beneficios fiscales <ArrowRight size={12} />
+              </button>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -183,9 +286,9 @@ export const CatalogoASRSPage = () => {
           <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">12 modelos de estanterías AS/RS</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {PRODUCTS.map((p, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-sm transition-all group">
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+              <motion.button key={i} onClick={() => navigate(p.link)} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+                className="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-sm transition-all group">
+                <div className="aspect-4/3 overflow-hidden bg-gray-100">
                   <img src={p.image} alt={`${p.name} — sistema AS/RS DELIE`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
@@ -193,7 +296,7 @@ export const CatalogoASRSPage = () => {
                   <h3 className="font-black text-gray-900 text-sm mb-1.5">{p.name}</h3>
                   <p className="text-gray-500 text-xs leading-relaxed">{p.desc}</p>
                 </div>
-              </motion.div>
+              </motion.button>
             ))}
           </div>
           <div className="mt-8 text-center">
@@ -264,24 +367,20 @@ export const CatalogoASRSPage = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-14 px-6 bg-slate-900">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.35em] mb-4">Cotizá sin costo</p>
-          <h2 className="text-white text-3xl font-black italic uppercase tracking-tighter mb-4">
-            ¿Qué sistema AS/RS<br /><span className="text-cyan-400">necesita tu operación?</span>
-          </h2>
-          <p className="text-gray-400 text-base mb-8">Un ingeniero especializado en sistemas ASRS te responde en menos de 24 horas con la orientación técnica inicial sin compromiso.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => navigate('/contacto')}
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
-              Solicitar cotización <ArrowRight size={14} />
+      {/* Link pills — navegación al pie */}
+      <section className="py-8 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto flex flex-wrap gap-3">
+          {[
+            { label: 'Beneficios fiscales 2026', href: '/beneficios-fiscales' },
+            { label: 'Robots de manipulación', href: '/catalogo/robots-manipulacion' },
+            { label: 'Software WMS/WCS', href: '/catalogo/software' },
+            { label: 'Cómo trabajamos', href: '/como-trabajamos' },
+          ].map(l => (
+            <button key={l.href} onClick={() => navigate(l.href)}
+              className="text-xs font-bold text-gray-600 border border-gray-200 px-4 py-2 rounded-full hover:border-cyan-300 hover:text-cyan-600 transition-all bg-gray-50">
+              {l.label}
             </button>
-            <button onClick={() => navigate('/beneficios-fiscales')}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 border border-white/15 rounded-xl text-white/70 text-sm font-bold hover:border-cyan-400/50 hover:text-white transition-all">
-              Ver beneficios fiscales
-            </button>
-          </div>
+          ))}
         </div>
       </section>
 

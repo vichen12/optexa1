@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, ChevronLeft, CheckCircle2, ArrowLeft, LayoutGrid } from 'lucide-react';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams, Link, useNavigate } from 'react-router-dom';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
 const img = (cat, prod, file) => `/productos-delie/${cat}/${seg(prod)}/${file}`;
@@ -231,6 +231,7 @@ function ProductModal({ product, onClose }) {
 
 export const ProductCatalog = () => {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const catParam = searchParams.get('cat');
   const initialCat = catParam ? CATALOG.find(c => c.id === catParam) || null : null;
 
@@ -239,6 +240,7 @@ export const ProductCatalog = () => {
   const topRef = useRef(null);
 
   const goTocat = (cat) => {
+    if (cat.href) { navigate(cat.href); return; }
     setActiveCat(cat);
     setTimeout(() => topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
   };
@@ -290,17 +292,9 @@ export const ProductCatalog = () => {
               <div className="p-5">
                 <h3 className="text-gray-900 font-black text-base uppercase tracking-tight mb-1">{cat.label}</h3>
                 <p className="text-gray-500 text-xs leading-relaxed mb-3">{cat.desc}</p>
-                <div className="flex items-center justify-between gap-2">
-                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-500 group-hover:gap-2 transition-all">
-                    Ver productos <ChevronRight size={13} />
-                  </span>
-                  {cat.href && (
-                    <Link to={cat.href} onClick={e => e.stopPropagation()}
-                      className="text-[10px] text-gray-400 hover:text-cyan-500 transition-colors underline underline-offset-2">
-                      Página dedicada
-                    </Link>
-                  )}
-                </div>
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-500 group-hover:gap-2 transition-all">
+                  Ver productos <ChevronRight size={13} />
+                </span>
               </div>
             </motion.button>
           ))}

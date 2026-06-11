@@ -12,16 +12,16 @@ const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURI
 const img = (prod, file) => `/productos-delie/equipo-transporte/${seg(prod)}/${file}`;
 
 const PRODUCTS = [
-  { name: 'Elevador de paletas', image: img('Carretilla elevadora-Tipo elevador vertical', 'forklift-type-vertical-lifterbcb8e.webp'), desc: 'Elevación vertical de paletas entre niveles. Plataforma hasta 1.200×1.600 mm, 2.000 kg, hasta 60 m/min, precisión ±2 mm.' },
-  { name: 'Elevador de totes alta velocidad', image: img('Elevador de bolsas de alta-velocidad', 'high-speed-tote-lifter042d8.webp'), desc: '150 kg de carga máxima, 5 m/s de velocidad, 3 m/s² de aceleración. Operación 24/7 entre niveles verticales.' },
-  { name: 'Máquina de aterrizaje y elevación', image: img('Máquina de aterrizaje y elevación', 'landing-lifting-machine33ba0.webp'), desc: 'Transferencia vertical de paletas dentro de líneas de transporte. Hasta 3.000 kg por palé con variador de frecuencia.' },
-  { name: 'Máquina de transferencia 90°', image: img('Máquina de transferencia de 90 grados', '90-degree-transfer-machine95639.webp'), desc: 'Cambia la dirección de paletas a 90° sin interrumpir el flujo. Hasta 3.000 kg por palé, arranque suave.' },
-  { name: 'Transferencia de totes', image: img('Máquina de transferencia de bolsas', 'tote-transfer-machine40dd2.webp'), desc: 'Cambio de dirección para contenedores y totes en líneas de alta velocidad. Múltiples tamaños de totes.' },
-  { name: 'Paletizador / Despaletizador', image: img('PaletizadorDespaletizador', 'palletizer-depalletizer58a90.webp'), desc: 'Formación automática de paletas a partir de capas de producto. Integración directa WMS/WCS, bajo mantenimiento.' },
-  { name: 'Transportador de cadena', image: img('Transportador de cadena', 'chain-conveyor9e540.webp'), desc: '3.000 kg por palé, variador de frecuencia, operable a baja temperatura. Transporte eficiente de paletas.' },
-  { name: 'Cinta transportadora de totes', image: img('Transportador de cinta de asas', 'tote-belt-conveyor1b7b5.webp'), desc: 'Cinta modular para totes y contenedores. Línea recta e inclinada, múltiples tamaños, operación 24/7.' },
-  { name: 'Transportador de rodillos — paletas', image: img('Transportador de rodillos', 'roller-conveyor4b990.webp'), desc: '3.000 kg por palé, velocidad configurable. Movimiento horizontal de paletas con integración WMS/WCS.' },
-  { name: 'Transportador de rodillos — totes', image: img('Transportador de rodillos totalizadores', 'tote-roller-conveyor24f15.webp'), desc: 'Rodillos con zonas de acumulación para gestionar flujo de totes. Compatible con MiniLoad y robots tote.' },
+  { name: 'Elevador de paletas', image: img('Carretilla elevadora-Tipo elevador vertical', 'forklift-type-vertical-lifterbcb8e.webp'), desc: 'Elevación vertical de paletas entre niveles. Plataforma hasta 1.200×1.600 mm, 2.000 kg, hasta 60 m/min, precisión ±2 mm.', link: '/catalogo/equipo-transporte/elevador-paletas' },
+  { name: 'Elevador de totes alta velocidad', image: img('Elevador de bolsas de alta-velocidad', 'high-speed-tote-lifter042d8.webp'), desc: '150 kg de carga máxima, 5 m/s de velocidad, 3 m/s² de aceleración. Operación 24/7 entre niveles verticales.', link: '/catalogo/equipo-transporte/elevador-totes' },
+  { name: 'Máquina de aterrizaje y elevación', image: img('Máquina de aterrizaje y elevación', 'landing-lifting-machine33ba0.webp'), desc: 'Transferencia vertical de paletas dentro de líneas de transporte. Hasta 3.000 kg por palé con variador de frecuencia.', link: '/catalogo/equipo-transporte/maquina-aterrizaje-elevacion' },
+  { name: 'Máquina de transferencia 90°', image: img('Máquina de transferencia de 90 grados', '90-degree-transfer-machine95639.webp'), desc: 'Cambia la dirección de paletas a 90° sin interrumpir el flujo. Hasta 3.000 kg por palé, arranque suave.', link: '/catalogo/equipo-transporte/maquina-transferencia-90' },
+  { name: 'Transferencia de totes', image: img('Máquina de transferencia de bolsas', 'tote-transfer-machine40dd2.webp'), desc: 'Cambio de dirección para contenedores y totes en líneas de alta velocidad. Múltiples tamaños de totes.', link: '/catalogo/equipo-transporte/transferencia-totes' },
+  { name: 'Paletizador / Despaletizador', image: img('PaletizadorDespaletizador', 'palletizer-depalletizer58a90.webp'), desc: 'Formación automática de paletas a partir de capas de producto. Integración directa WMS/WCS, bajo mantenimiento.', link: '/catalogo/equipo-transporte/paletizador' },
+  { name: 'Transportador de cadena', image: img('Transportador de cadena', 'chain-conveyor9e540.webp'), desc: '3.000 kg por palé, variador de frecuencia, operable a baja temperatura. Transporte eficiente de paletas.', link: '/catalogo/equipo-transporte/transportador-cadena' },
+  { name: 'Cinta transportadora de totes', image: img('Transportador de cinta de asas', 'tote-belt-conveyor1b7b5.webp'), desc: 'Cinta modular para totes y contenedores. Línea recta e inclinada, múltiples tamaños, operación 24/7.', link: '/catalogo/equipo-transporte/cinta-totes' },
+  { name: 'Transportador de rodillos — paletas', image: img('Transportador de rodillos', 'roller-conveyor4b990.webp'), desc: '3.000 kg por palé, velocidad configurable. Movimiento horizontal de paletas con integración WMS/WCS.', link: '/catalogo/equipo-transporte/transportador-rodillos-paletas' },
+  { name: 'Transportador de rodillos — totes', image: img('Transportador de rodillos totalizadores', 'tote-roller-conveyor24f15.webp'), desc: 'Rodillos con zonas de acumulación para gestionar flujo de totes. Compatible con MiniLoad y robots tote.', link: '/catalogo/equipo-transporte/transportador-rodillos-totes' },
 ];
 
 const FAQ = [
@@ -68,7 +68,7 @@ export const CatalogoTransportePage = () => {
           "numberOfItems": 10,
           "itemListElement": PRODUCTS.map((p, i) => ({
             "@type": "ListItem", "position": i + 1, "name": p.name, "description": p.desc,
-            "url": "https://www.stokagroup.com/catalogo/equipo-transporte"
+            "url": `https://www.stokagroup.com${p.link}`
           }))
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
@@ -84,106 +84,72 @@ export const CatalogoTransportePage = () => {
       <Navbar />
 
       {/* HERO */}
-      <div className="relative mt-20 h-[50vh] min-h-[360px] flex items-end overflow-hidden">
-        <img src={img('Transportador de cadena', 'chain-conveyor9e540.webp')}
-          alt="Transportador de cadena DELIE para logística industrial"
-          className="absolute inset-0 w-full h-full object-cover object-center" />
-        <div className="absolute inset-0 bg-linear-to-r from-slate-950/95 via-slate-950/70 to-slate-950/20" />
-        <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 to-transparent" />
-        <div className="absolute top-0 left-0 right-0 h-[3px] bg-cyan-500" />
-
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-20">
-          <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut' }}>
-            <nav className="flex items-center gap-2 text-xs text-gray-400 mb-4">
-              <button onClick={() => navigate('/')} className="hover:text-cyan-400 transition-colors">Inicio</button>
+      <div className="bg-white border-b border-gray-100 mt-20">
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-cyan-500 mt-20" />
+        <div className="max-w-5xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut' }}>
+            <nav className="flex items-center gap-2 text-xs text-gray-400 mb-5">
+              <button onClick={() => navigate('/')} className="hover:text-cyan-500 transition-colors">Inicio</button>
               <ChevronRight size={12} />
-              <button onClick={() => navigate('/catalogo')} className="hover:text-cyan-400 transition-colors">Catálogo</button>
+              <button onClick={() => navigate('/catalogo')} className="hover:text-cyan-500 transition-colors">Catálogo</button>
               <ChevronRight size={12} />
-              <span className="text-cyan-400">Equipo de transporte</span>
+              <span className="text-cyan-500">Equipo de transporte</span>
             </nav>
-            <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.35em] mb-4">Conveyors · Elevadores · Paletizadores · DELIE</p>
-            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black italic uppercase leading-[1.05] tracking-tight mb-5">
+            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-4">Conveyors · Elevadores · Paletizadores · DELIE</p>
+            <h1 className="text-gray-900 text-4xl md:text-5xl lg:text-6xl font-black italic uppercase leading-[1.05] tracking-tight mb-5">
               Equipo de transporte —<br />
-              <span className="text-cyan-400">Conveyors, elevadores y paletizadores</span>
+              <span className="text-cyan-500">Conveyors, elevadores y paletizadores</span>
             </h1>
-            <p className="text-gray-300 text-base md:text-lg max-w-xl leading-relaxed mb-8">
+            <p className="text-gray-500 text-base md:text-lg max-w-2xl leading-relaxed">
               10 modelos de equipos de transporte para conectar cada punto de tu almacén automatizado. Desde transportadores de cadena hasta paletizadores automáticos con integración WCS.
             </p>
-            <div className="flex flex-wrap gap-6">
-              {[{ value: '10', label: 'Modelos' }, { value: '3.000kg', label: 'Carga máx.' }, { value: '5m/s', label: 'Velocidad máx.' }].map(s => (
-                <div key={s.label} className="flex flex-col">
-                  <span className="text-2xl font-black text-white italic">{s.value}</span>
-                  <span className="text-[11px] text-gray-400 uppercase tracking-widest">{s.label}</span>
-                </div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* DESCRIPCIÓN SEO */}
-      <section className="bg-white py-14 px-6 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-[2fr_1fr] gap-10">
-            <div>
-              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Por qué el transporte interno importa</p>
-              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-5">Transportadores industriales y sistemas de sortación: la columna vertebral del almacén automatizado</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                En un sistema de automatización de almacenes completo, los transportadores industriales son el tejido conectivo que une cada componente: transelevadores, robots shuttle, módulos VLM y estaciones de picking. Los sorters —clasificadores automáticos de paquetes— distribuyen el flujo de salida hacia los muelles. Los sistemas de sortación con conveyor completan la red de transporte interno del almacén o bodega.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                DELIE ofrece una gama completa de transportadores modulares diseñados para integrarse perfectamente con el WCS, que coordina y optimiza el flujo en tiempo real. Los transportadores de cadena soportan hasta 3.000 kg por palé, los elevadores de totes alcanzan 5 m/s y los paletizadores automáticos operan las 24/7 sin intervención manual.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                La integración de todos los equipos de transporte bajo un sistema WCS centralizado elimina los tiempos de espera entre etapas, maximiza el throughput total y permite optimizar el flujo en tiempo real según la demanda. En Argentina, estos equipos aplican al Decreto 513/2025 para importación con arancel 0%.
-              </p>
-              <p className="text-gray-600 leading-relaxed mt-4">
-                En un almacén automatizado, el transportador es tan crítico como el transelevador: un cuello de botella en el conveyor puede reducir el throughput total del sistema aunque los robots funcionen a máxima capacidad. Por eso el diseño de la red de transporte interno del almacén, la bodega o el depósito se realiza con simulación de flujos antes de la instalación: el WCS prueba virtualmente el comportamiento del sistema bajo picos de demanda para garantizar que no existan cuellos de botella.
-              </p>
-              <p className="text-gray-600 leading-relaxed mt-4">
-                Los paletizadores y despaletizadores automáticos de DELIE son el puente entre la línea de producción y el almacén. En industrias como alimentos y bebidas, consumo masivo o e-commerce con cajas selladas, la paletización automática elimina uno de los trabajos más lesivos y garantiza paletas perfectamente formadas para los transelevadores ASRS. En Argentina y Chile, muchos proyectos arrancan por el paletizador: menor inversión relativa, alto impacto en reducción de accidentes laborales y mejora de la calidad de las paletas enviadas al depósito.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
-                <p className="text-xs font-black text-gray-900 uppercase tracking-wide mb-3">Tipos disponibles</p>
-                {['Transportadores de cadena (paletas)', 'Cintas para totes y contenedores', 'Transportadores de rodillos', 'Elevadores verticales (paletas y totes)', 'Máquinas de transferencia 90°', 'Paletizadores y despaletizadores'].map(b => (
-                  <div key={b} className="flex items-start gap-2 mb-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0" />
-                    <p className="text-sm text-gray-600">{b}</p>
-                  </div>
-                ))}
+      {/* STATS — arriba del catálogo */}
+      <section className="bg-white py-10 px-6 border-b border-gray-100">
+        <div className="max-w-5xl mx-auto space-y-6">
+          <div>
+            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Equipo de transporte DELIE</p>
+            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter">El tejido conectivo del almacén automatizado — conveyors, elevadores y paletizadores integrados bajo WCS</h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { value: '10', label: 'Modelos disponibles', sub: 'Gama completa de transporte' },
+              { value: '3.000 kg', label: 'Carga máx. por palé', sub: 'Cadena y rodillos' },
+              { value: '5 m/s', label: 'Velocidad máxima', sub: 'Elevador de totes' },
+              { value: '-25°C', label: 'Temp. mínima', sub: 'Versión cadena de frío' },
+            ].map(s => (
+              <div key={s.label} className="bg-gray-50 border border-gray-200 rounded-2xl p-4 text-center">
+                <p className="text-2xl font-black text-gray-900 leading-none mb-1">{s.value}</p>
+                <p className="text-[11px] font-bold text-cyan-600 uppercase tracking-wide mb-1">{s.label}</p>
+                <p className="text-[11px] text-gray-400 leading-tight">{s.sub}</p>
               </div>
-              <div className="bg-cyan-50 border border-cyan-200 rounded-2xl p-5">
-                <p className="text-xs font-black text-cyan-700 uppercase tracking-wide mb-2">Decreto 513/2025</p>
-                <p className="text-sm text-cyan-800">Los conveyors y paletizadores aplican al arancel 0% para importación.</p>
-                <button onClick={() => navigate('/beneficios-fiscales')} className="mt-3 text-xs font-bold text-cyan-600 hover:text-cyan-700 flex items-center gap-1">
-                  Ver beneficios fiscales <ArrowRight size={12} />
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* PRODUCTOS */}
-      <section className="py-14 px-6 bg-gray-50">
+      <section className="py-14 px-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto">
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Catálogo completo</p>
           <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">10 equipos de transporte automatizado</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {PRODUCTS.map((p, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-sm transition-all group">
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+              <motion.button key={i} onClick={() => navigate(p.link)}
+                initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.04 }}
+                className="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-md transition-all group w-full cursor-pointer">
+                <div className="aspect-4/3 overflow-hidden bg-gray-100">
                   <img src={p.image} alt={`${p.name} — equipo de transporte DELIE`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-black text-gray-900 text-sm mb-1.5">{p.name}</h3>
+                  <h3 className="font-black text-gray-900 text-sm mb-1.5 group-hover:text-cyan-600 transition-colors">{p.name}</h3>
                   <p className="text-gray-500 text-xs leading-relaxed">{p.desc}</p>
                 </div>
-              </motion.div>
+              </motion.button>
             ))}
           </div>
           <div className="mt-8 text-center">
@@ -191,6 +157,96 @@ export const CatalogoTransportePage = () => {
               className="inline-flex items-center gap-2 px-8 py-3 bg-white border border-gray-200 rounded-xl text-gray-600 text-sm font-bold hover:border-cyan-300 hover:text-gray-900 transition-all">
               Ver catálogo completo <ArrowRight size={14} />
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* DESCRIPCIÓN SEO */}
+      <section className="bg-white py-16 px-6 border-b border-gray-100">
+        <div className="max-w-5xl mx-auto space-y-10">
+
+          {/* Comparación */}
+          <div>
+            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Por qué el transporte interno importa</p>
+            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">
+              La columna vertebral del almacén automatizado
+            </h2>
+            <div className="grid md:grid-cols-2 gap-5">
+              <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+                <p className="text-xs font-black text-gray-900 uppercase tracking-wide mb-4">Transporte de paletas</p>
+                {[
+                  ['Transportador de cadena', '3.000 kg · variador de frecuencia · frío -25°C'],
+                  ['Transportador de rodillos', '3.000 kg · zonas de acumulación · WCS nativo'],
+                  ['Máquina de transferencia 90°', 'Cambio de dirección sin interrumpir el flujo'],
+                  ['Elevador de paletas', 'Entre niveles · hasta 2.000 kg · ±2 mm'],
+                  ['Paletizador / Despaletizador', 'Formación automática · integración WMS/WCS'],
+                ].map(([nombre, detalle]) => (
+                  <div key={nombre} className="flex items-start gap-3 mb-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0" />
+                    <div>
+                      <p className="text-sm font-bold text-gray-800">{nombre}</p>
+                      <p className="text-xs text-gray-500">{detalle}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+                <p className="text-xs font-black text-gray-900 uppercase tracking-wide mb-4">Transporte de totes y contenedores</p>
+                {[
+                  ['Elevador de totes alta velocidad', '150 kg · 5 m/s · 3 m/s² · operación 24/7'],
+                  ['Cinta transportadora de totes', 'Recta e inclinada · múltiples tamaños · 24/7'],
+                  ['Transportador de rodillos totes', 'Acumulación por zonas · MiniLoad y robots tote'],
+                  ['Transferencia de totes', 'Cambio de dirección en alta velocidad'],
+                  ['Máquina de aterrizaje y elevación', 'Hasta 3.000 kg · variador de frecuencia'],
+                ].map(([nombre, detalle]) => (
+                  <div key={nombre} className="flex items-start gap-3 mb-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0" />
+                    <div>
+                      <p className="text-sm font-bold text-gray-800">{nombre}</p>
+                      <p className="text-xs text-gray-500">{detalle}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Beneficios */}
+          <div>
+            <p className="text-xs font-black text-gray-900 uppercase tracking-wide mb-4">Por qué automatizar el transporte interno</p>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {[
+                'Integración WCS nativa',
+                'Sin cuellos de botella entre etapas',
+                'Hasta 3.000 kg por palé',
+                'Hasta 5 m/s en totes',
+                'Operación a -25°C',
+                'Modular y escalable',
+                'Mantenimiento preventivo trimestral',
+                'Simulación de flujos previa',
+                'Repuestos disponibles en Argentina',
+              ].map(b => (
+                <span key={b} className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-xs font-semibold text-gray-700">{b}</span>
+              ))}
+            </div>
+            <p className="text-gray-600 text-sm leading-relaxed max-w-3xl">
+              En un almacén automatizado, el transportador es tan crítico como el transelevador: un cuello de botella en el conveyor puede reducir el throughput total del sistema aunque los robots funcionen a máxima capacidad. Por eso el diseño de la red de transporte interno se realiza con simulación de flujos antes de la instalación — el WCS prueba virtualmente el comportamiento del sistema bajo picos de demanda para garantizar que no existan cuellos de botella.
+            </p>
+          </div>
+
+          {/* Fiscal */}
+          <div className="bg-slate-900 rounded-2xl p-7 flex flex-col md:flex-row md:items-center gap-6">
+            <div className="flex-1">
+              <p className="text-cyan-400 text-[10px] font-black uppercase tracking-[0.4em] mb-2">Decreto 513/2025 — Beneficio fiscal</p>
+              <h3 className="text-white font-black text-lg uppercase tracking-tight mb-2">Arancel 0% para importación de conveyors y paletizadores</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">Los equipos de transporte industrial DELIE aplican al Decreto 513/2025. Reducción del arancel de importación al 0% para transportadores industriales, elevadores y paletizadores automáticos. STOKA gestiona la importación completa desde China hasta tu planta en Argentina.</p>
+            </div>
+            <div className="shrink-0">
+              <button onClick={() => navigate('/beneficios-fiscales')}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-cyan-500 text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
+                Ver beneficios fiscales <ArrowRight size={13} />
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -212,8 +268,7 @@ export const CatalogoTransportePage = () => {
         </div>
       </section>
 
-      {/* FAQ */}
-      {/* Explorar por tipo — product child links */}
+      {/* EXPLORAR POR TIPO */}
       <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Explorar por tipo</p>
@@ -237,6 +292,7 @@ export const CatalogoTransportePage = () => {
         </div>
       </section>
 
+      {/* FAQ */}
       <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Preguntas frecuentes</p>
@@ -249,27 +305,6 @@ export const CatalogoTransportePage = () => {
                 <p className="text-gray-500 text-sm leading-relaxed">{item.a}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-14 px-6 bg-slate-900">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.35em] mb-4">Cotizá sin costo</p>
-          <h2 className="text-white text-3xl font-black italic uppercase tracking-tighter mb-4">
-            Conectá tu almacén<br /><span className="text-cyan-400">de punta a punta.</span>
-          </h2>
-          <p className="text-gray-400 text-base mb-8">Ingenieros especializados diseñan el sistema de transporte óptimo para tu operación sin costo inicial.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => navigate('/contacto')}
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
-              Solicitar cotización <ArrowRight size={14} />
-            </button>
-            <button onClick={() => navigate('/como-trabajamos')}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 border border-white/15 rounded-xl text-white/70 text-sm font-bold hover:border-cyan-400/50 hover:text-white transition-all">
-              Ver nuestra metodología
-            </button>
           </div>
         </div>
       </section>
