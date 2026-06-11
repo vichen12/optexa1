@@ -144,18 +144,18 @@ export const WppFloat = () => {
         initial={{ opacity: 0, scale: 0.5, y: 100 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ delay: 1.5, type: 'spring', stiffness: 260, damping: 20 }}
-        className="flex items-center gap-3"
+        className="flex flex-col items-end gap-3"
       >
-        {/* Email button */}
+        {/* Email button — encima, un poco más chico */}
         <motion.a
           href={`mailto:${EMAIL}`}
           aria-label="Enviar email"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.8, type: 'spring', stiffness: 260, damping: 20 }}
-          className="flex items-center justify-center bg-blue-500 hover:bg-blue-400 text-white p-4 rounded-full shadow-[0_10px_30px_rgba(59,130,246,0.4)] transition-all duration-300 active:scale-90"
+          className="flex items-center justify-center bg-blue-500 hover:bg-blue-400 text-white p-3 rounded-full shadow-[0_8px_24px_rgba(59,130,246,0.4)] transition-all duration-300 active:scale-90"
         >
-          <Mail size={28} />
+          <Mail size={22} />
         </motion.a>
 
         {/* WhatsApp button */}
