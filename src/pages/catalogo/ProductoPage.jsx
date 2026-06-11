@@ -81,7 +81,7 @@ export const ProductoPage = () => {
     "name": data.nombre,
     "description": data.metaDesc,
     "provider": { "@id": `${baseUrl}/#organization` },
-    "brand": { "@type": "Brand", "name": "Daifuku" },
+    "brand": { "@type": "Brand", "name": "DELIE" },
     "areaServed": [
       { "@type": "Country", "name": "Argentina" },
       { "@type": "Country", "name": "Chile" },
@@ -259,12 +259,12 @@ export const ProductoPage = () => {
         </div>
       </section>
 
-      {/* TECNOLOGÍA DAIFUKU */}
+      {/* Especificaciones técnicas */}
       <section className="bg-slate-900 py-16 px-6 border-b border-white/5">
         <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_2fr] gap-10 items-start">
           <div>
-            <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">Alternativa en Argentina</p>
-            <h2 className="text-2xl font-black text-white uppercase tracking-tighter">Tecnología Daifuku en Argentina</h2>
+            <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">Tecnología DELIE en Argentina</p>
+            <h2 className="text-2xl font-black text-white uppercase tracking-tighter">DELIE — representación oficial STOKA</h2>
           </div>
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="space-y-5">
@@ -273,10 +273,9 @@ export const ProductoPage = () => {
               <p className="text-gray-300 text-base leading-relaxed">{data.porQueDelie}</p>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed border-t border-white/10 pt-5">
-              ¿Buscabas {data.nombre} Daifuku en Argentina? Los equipos DELIE son técnicamente comparables
-              a los sistemas Daifuku, con más de 1.000 instalaciones en 30 países y certificaciones
-              internacionales equivalentes. STOKA es el representante exclusivo en Argentina: ingeniería,
-              instalación y soporte técnico local sin depender de tiempos de fábrica en el exterior.
+              DELIE fabrica más de 1.000 instalaciones activas en +30 países. STOKA es el representante
+              exclusivo en Argentina: ingeniería, instalación y soporte técnico local sin depender de
+              tiempos de fábrica en el exterior. Tecnología de clase mundial, precio para el mercado LATAM.
               {' '}<Link to="/delie-argentina" className="text-cyan-400 hover:underline font-medium">
                 Ver más sobre DELIE en Argentina →
               </Link>
