@@ -104,7 +104,7 @@ export const Contact = () => {
                   className="flex items-center justify-between group px-4 py-2.5 rounded-xl bg-gray-50 hover:bg-[#25D366]/8 border border-gray-200 hover:border-[#25D366]/30 transition-all"
                 >
                   <div>
-                    <p className="text-gray-400 text-[9px] uppercase tracking-wider font-bold mb-0.5">Vincenzo Dallapé</p>
+                    <p className="text-gray-400 text-[9px] uppercase tracking-wider font-bold mb-0.5">Consultas técnicas</p>
                     <p className="text-gray-800 font-mono text-xs font-bold">+54 9 261 207-1048</p>
                   </div>
                   <ArrowRight size={12} className="text-[#25D366] group-hover:translate-x-0.5 transition-transform" />

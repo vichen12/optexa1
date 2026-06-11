@@ -153,7 +153,7 @@ async function main() {
 
       const outPath = route === '/'
         ? join(DIST, 'index.html')
-        : join(DIST, route.slice(1).replace(/\//g, '/') + '.html');
+        : join(DIST, route.slice(1), 'index.html');
 
       const outDir = dirname(outPath);
       if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });

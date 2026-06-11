@@ -20,11 +20,11 @@ const INDUSTRIAS_LINKS = [
 ];
 
 const RECURSOS_LINKS = [
-  { label: 'Glosario técnico',       href: '/recursos/glosario' },
   { label: 'Calculadora ROI',        href: '/recursos/roi-automatizacion' },
   { label: 'Comparador de sistemas', href: '/recursos/comparador-sistemas' },
   { label: 'Blog y artículos',       href: '/recursos' },
   { label: 'Casos de éxito',         href: '/casos-de-exito' },
+  { label: 'Glosario técnico',       href: '/recursos/glosario' },
 ];
 
 const EMPRESA_LINKS = [

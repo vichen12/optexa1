@@ -16,6 +16,8 @@ export default defineConfig({
           'react-vendor': ['react', 'react-dom'],
           'router': ['react-router-dom'],
           'motion': ['framer-motion'],
+          'icons': ['lucide-react'],
+          'spline': ['@splinetool/react-spline', '@splinetool/runtime'],
         },
       },
     },
