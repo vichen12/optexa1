@@ -69,7 +69,7 @@ export const ROISection = () => (
           </div>
 
           <div className="text-center bg-white rounded-2xl p-6 shadow-sm">
-            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-4">Payback de la inversión</p>
+            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-4">Retorno de inversión</p>
             <p className="text-4xl font-black text-slate-900 leading-none">18–36</p>
             <p className="text-[11px] text-slate-400 mt-2">meses</p>
             <div className="mt-4 inline-block px-3 py-1 bg-cyan-50 border border-cyan-200 rounded-full">
