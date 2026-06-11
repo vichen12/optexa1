@@ -3,15 +3,15 @@
   "name": "STOKA | Sistemas ASRS y Automatización de Almacenes",
   "icons": [
     {
-      "src": "/fotogoogle.png",
+      "src": "/fotogoogle.avif",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/avif",
       "purpose": "any maskable"
     },
     {
-      "src": "/fotogoogle.png",
+      "src": "/fotogoogle.avif",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/avif",
       "purpose": "any maskable"
     }
   ],
