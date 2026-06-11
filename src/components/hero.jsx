@@ -40,7 +40,6 @@ export const Hero = () => {
           src="/bannervideo1-compressed.mp4"
           poster="/bannervideo1-poster.jpg"
           autoPlay muted loop playsInline
-          preload="metadata"
           width="1920" height="1080"
           className="hidden md:block w-full h-full object-cover"
         >
