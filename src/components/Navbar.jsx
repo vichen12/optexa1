@@ -101,8 +101,9 @@ export const Navbar = () => {
   return (
     <>
       <motion.nav
-        initial={{ y: 0 }}
-        animate={{ y: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
         className={cx(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex justify-center px-4 lg:px-6",
           scrolled ? "py-2" : "py-3",
