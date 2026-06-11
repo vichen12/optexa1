@@ -101,7 +101,7 @@ export const Navbar = () => {
   return (
     <>
       <motion.nav
-        initial={{ y: -100 }}
+        initial={{ y: 0 }}
         animate={{ y: 0 }}
         className={cx(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex justify-center px-4 lg:px-6",

@@ -44,7 +44,7 @@ export const Hero = () => {
 
         {/* Badge */}
         <motion.div
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="mb-6 flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-400/40 bg-cyan-400/10 backdrop-blur-sm"
@@ -90,7 +90,7 @@ export const Hero = () => {
 
         {/* Subheadline */}
         <motion.p
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.25 }}
           className="text-base md:text-lg text-white/75 max-w-2xl mx-auto font-light leading-relaxed mb-8"
@@ -101,7 +101,7 @@ export const Hero = () => {
 
         {/* CTAs */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.35 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
@@ -130,7 +130,7 @@ export const Hero = () => {
 
       {/* Stats bar — pegada al fondo siempre visible */}
       <motion.div
-        initial={{ opacity: 0, y: 16 }}
+        initial={{ opacity: 1, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
         className="absolute bottom-0 left-0 right-0 z-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 border-t border-white/15"
