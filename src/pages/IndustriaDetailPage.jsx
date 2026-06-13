@@ -1,13 +1,16 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { CTABanner } from '../components/CTABanner';
 import { WppFloat } from '../components/WppFloat';
 import { INDUSTRIES } from './IndustriasPage';
 import { ArrowRight, ArrowLeft, CheckCircle, X, ChevronRight } from 'lucide-react';
+import { LangLink, useLangNavigate } from '../lib/i18n-utils';
+import { SeoHead } from '../lib/SeoHead';
 
 const INDUSTRY_DATA = {
   'e-commerce-retail': {
@@ -92,7 +95,7 @@ const INDUSTRY_DATA = {
   },
   farmaceutica: {
     hero: 'GMP, FEFO y trazabilidad regulatoria nativa.',
-    description: 'La industria farmacéutica opera bajo las regulaciones más exigentes del mundo. Los sistemas DELIE están diseñados para cumplir con GMP, 21 CFR Part 11 y las normativas de ANMAT sin configuración adicional. Desde laboratorios de producción hasta droguerías y distribuidores, la automatización reduce el tiempo de calificación IQ/OQ/PQ y elimina el riesgo regulatorio operativo.',
+    description: 'La industria farmacéutica opera bajo las regulaciones más exigentes del mundo. Los sistemas DELIE están diseñados para cumplir con GMP, 21 CFR Part 11 y las normativas de ANMAT sin configuración adicional.',
     highlight: '"En farmacéutica, el compliance no es opcional. El sistema tiene que garantizarlo por diseño, no por proceso."',
     benefits: [
       { title: 'GMP by design', desc: 'Registro automático de cada movimiento con usuario, timestamp y ubicación para audit trail completo e inmutable.' },
@@ -163,68 +166,66 @@ Los sistemas DELIE para e-commerce incluyen gestión de devoluciones automática
 La automatización del almacén o depósito 3PL permite además ofrecer servicios de valor agregado que antes eran inaccesibles: picking unitario a alta velocidad, gestión de devoluciones e-commerce, picking por temperatura para productos frescos o farmacéuticos, y automatización cross docking para flujos de alta rotación sin almacenaje intermedio. El WMS multicliente de DELIE permite que una misma bodega atienda simultáneamente a clientes con perfiles operativos muy distintos —consumo masivo, farmacéutica, textil— con inventarios completamente segregados y sin mezclas. Esta flexibilidad convierte al operador 3PL en un socio estratégico del cliente, no en un simple proveedor de espacio.`,
   manufactura: `En la industria manufacturera de Argentina y Chile, la intralogística industrial —la logística interna de la planta— es el cuello de botella que más impacta la eficiencia productiva. El almacén de materia prima automatizado y el abastecimiento a línea automatizado eliminan las paradas: una línea de producción que para por falta de insumos pierde entre USD 500 y USD 5.000 por hora. El buffer de producción sincronizado con el MES elimina ese riesgo.
 
-El almacén o bodega de producto terminado automatizado resuelve el otro extremo: el despacho ágil y exacto de pedidos al canal de distribución. Con la logística interna de planta sincronizada con el ERP vía WCS, la preparación de cargas se inicia automáticamente sin intervención humana. La trazabilidad de lote y número de serie queda registrada en cada movimiento del depósito, agilizando auditorías y retiros de mercado. Para las industrias con requisitos regulatorios estrictos —alimentaria, farmacéutica, automotriz— esta trazabilidad automática es un requisito, no un diferencial.`,
+El almacén o bodega de producto terminado automatizado resuelve el otro extremo: el despacho ágil y exacto de pedidos al canal de distribución. Con la logística interna de planta sincronizada con el ERP vía WCS, la preparación de cargas se inicia automáticamente sin intervención humana. La trazabilidad de lote y número de serie queda registrada en cada movimiento del depósito, agilizando auditorías y retiros de mercado.`,
   'alimentos-bebidas': `La industria de alimentos y bebidas en Argentina y Chile opera bajo una tensión permanente entre el costo de almacenamiento y los requisitos de inocuidad. Las grandes cadenas exigen trazabilidad alimentaria completa, fechas de vencimiento garantizadas y cero errores de identificación. El almacén automatizado de alimentos y la bodega automatizada de bebidas son la única forma de garantizar eso de forma consistente a escala industrial.
 
-Los sistemas ASRS de DELIE para alimentos y bebidas incluyen módulo FEFO (First Expired, First Out) nativo en el WMS: en cada salida, el sistema elige automáticamente el producto con vencimiento más próximo sin depender del criterio del operario. Esto elimina las mermas por vencimiento, reduce el riesgo de recall y garantiza el cumplimiento de los requisitos de los grandes compradores. Para almacenes y bodegas con temperatura controlada —cámaras frigoríficas, bodegas de vino, almacenes de productos frescos— los robots y transelevadores DELIE operan desde +10 °C (vinos) hasta -25 °C (congelados de exportación), con versiones especiales para depósitos de atmósfera controlada. El almacenamiento FIFO FEFO automatizado en estas condiciones garantiza cumplimiento regulatorio sin depender del criterio del operario.`,
-  farmaceutica: `El almacén farmacéutico es el entorno más regulado de la industria logística. Las normativas nacionales (ANMAT en Argentina) e internacionales (FDA, EMA, WHO GDP) exigen trazabilidad completa de cada unidad desde su recepción hasta su despacho, control de temperatura y humedad con registros continuos, y acceso controlado por rol con audit trail inmutable. El almacén farmacéutico automatizado no es una adaptación del sistema industrial estándar: es una arquitectura específica donde el almacenamiento GMP, la serialización farmacéutica y la trazabilidad ANMAT están embebidos en el diseño desde la fase de ingeniería.
+Los sistemas ASRS de DELIE para alimentos y bebidas incluyen módulo FEFO (First Expired, First Out) nativo en el WMS: en cada salida, el sistema elige automáticamente el producto con vencimiento más próximo sin depender del criterio del operario. Esto elimina las mermas por vencimiento, reduce el riesgo de recall y garantiza el cumplimiento de los requisitos de los grandes compradores.`,
+  farmaceutica: `El almacén farmacéutico es el entorno más regulado de la industria logística. Las normativas nacionales (ANMAT en Argentina) e internacionales (FDA, EMA, WHO GDP) exigen trazabilidad completa de cada unidad desde su recepción hasta su despacho, control de temperatura y humedad con registros continuos, y acceso controlado por rol con audit trail inmutable.
 
-El WMS GMP-compliant de DELIE cumple con 21 CFR Part 11, EU GMP Annex 11 y los requisitos de ANMAT. Para laboratorios, droguerías y distribuidores farmacéuticos en Argentina y Chile, la automatización de la droguería con STOKA incluye documentación IQ/OQ/PQ preelaborada que reduce significativamente el tiempo y el costo del proceso de calificación regulatoria. El módulo de serialización farmacéutica integrado cumple con los requisitos de trazabilidad unitaria de ANMAT vigentes sin configuración adicional.
+El WMS GMP-compliant de DELIE cumple con 21 CFR Part 11, EU GMP Annex 11 y los requisitos de ANMAT. Para laboratorios, droguerías y distribuidores farmacéuticos en Argentina y Chile, la automatización de la droguería con STOKA incluye documentación IQ/OQ/PQ preelaborada que reduce significativamente el tiempo y el costo del proceso de calificación regulatoria.`,
+  'mineria-oil-gas': `La industria minera y de oil & gas en Argentina (Vaca Muerta, minería en Mendoza, San Juan, Catamarca) y en Chile (norte minero: I a IV Región) comparte un desafío logístico específico: almacenes MRO automatizados y bodegas de insumos de la minera en ubicaciones remotas, con personal escaso y rotación alta. La gestión de repuestos en minería es crítica: una parada de equipo por falta de pieza puede costar USD 10.000 a USD 100.000 por hora.
 
-La bodega de droguería automatizada resuelve también el desafío del almacenamiento de productos controlados: estupefacientes y psicotrópicos bajo doble llave física y lógica, con acceso autorizado solamente por el segundo factor de autenticación y registro inmutable de cada apertura. El sistema genera automáticamente los libros de movimientos de controlados en el formato requerido por ANMAT. Para distribuidores mayoristas con habilitación GDP (Good Distribution Practice), el sistema DELIE es la única plataforma con calificación OQ documentada en instalaciones farmacéuticas activas en Latinoamérica.`,
-  'mineria-oil-gas': `La industria minera y de oil & gas en Argentina (Vaca Muerta, minería en Mendoza, San Juan, Catamarca) y en Chile (norte minero: I a IV Región) comparte un desafío logístico específico: almacenes MRO automatizados y bodegas de insumos de la minera en ubicaciones remotas, con personal escaso y rotación alta. La gestión de repuestos en minería es crítica: una parada de equipo por falta de pieza puede costar USD 10.000 a USD 100.000 por hora. El almacén de repuestos automatizado elimina ese riesgo.
+Los sistemas VLM y carrusel vertical de DELIE para almacén MRO automatizado resuelven tres problemas simultáneamente: densifican el almacenamiento en el espacio disponible, reducen el personal necesario para operar el depósito, y localizan cualquier repuesto entre miles de SKUs en menos de 30 segundos.`,
+  'cadena-frio': `La cadena de frío es uno de los sectores de más rápido crecimiento en automatización logística. El almacén frigorífico automatizado y la bodega refrigerada automatizada son la respuesta al costo creciente de la mano de obra en frío extremo.
 
-Los sistemas VLM y carrusel vertical de DELIE para almacén MRO automatizado resuelven tres problemas simultáneamente: densifican el almacenamiento en el espacio disponible (en campamentos remotos, el espacio es limitado y caro), reducen el personal necesario para operar el depósito, y localizan cualquier repuesto entre miles de SKUs en menos de 30 segundos. Los equipos tienen versiones certificadas para ambientes con polvo en suspensión (IP65), operación a alta altitud (hasta 5.000 m) y temperaturas extremas. Para locaciones con riesgo de explosión, existe la versión ATEX certificada.`,
-  'cadena-frio': `La cadena de frío es uno de los sectores de más rápido crecimiento en automatización logística. El almacén frigorífico automatizado y la bodega refrigerada automatizada son la respuesta al costo creciente de la mano de obra en frío extremo. La exportación de proteínas y frutas frescas desde Argentina y Chile requiere una cámara de frío automatizada sin interrupciones desde la planta hasta el contenedor de exportación. Cualquier ruptura puede costar la certificación de origen o el rechazo del embarque.
-
-El ASRS congelado de DELIE —el sistema para almacén a -30 grados— opera sin presencia de operarios dentro de la cámara. Los transelevadores y robots lanzadera tienen diseño especial: sellado hermético anticondensación, lubricación para frío extremo y calefacción interna de la electrónica. El resultado práctico para el almacén frigorífico automatizado: menos aperturas de puerta (ahorro energético del 35-40%), más capacidad en el mismo footprint de cámara frigorífica, y FIFO/FEFO automático garantizado sin que nadie tenga que ingresar al frío para verificar fechas.`,
+El ASRS congelado de DELIE —el sistema para almacén a -30 grados— opera sin presencia de operarios dentro de la cámara. Los transelevadores y robots lanzadera tienen diseño especial: sellado hermético anticondensación, lubricación para frío extremo y calefacción interna de la electrónica.`,
 };
 
 const INDUSTRY_FAQ = {
   'e-commerce-retail': [
     { q: '¿Cuánto tiempo lleva implementar un sistema ASRS para e-commerce?', a: 'Un proyecto de automatización de almacén o bodega para e-commerce toma entre 4 y 8 meses desde la consulta inicial hasta el arranque operativo. La fase de ingeniería es simultánea a la fabricación del equipo, lo que comprime los plazos. STOKA gestiona el proyecto llave en mano desde el diseño hasta la capacitación del personal.' },
     { q: '¿Cómo maneja el sistema los picos de demanda como Black Friday?', a: 'El ASRS no requiere contratar personal adicional para absorber picos. El throughput se incrementa activando más robots o estaciones de picking. Un depósito automatizado puede gestionar 5x el volumen habitual sin cambios de infraestructura, algo imposible de lograr con operación manual en el mismo plazo.' },
-    { q: '¿Qué velocidad de picking real puedo esperar en mi depósito?', a: 'Dependiendo del perfil de SKUs, los sistemas DELIE alcanzan entre 800 y 1.200 líneas por hora por estación, comparado con 150-200 líneas en picking manual. El WMS optimiza el secuenciado de órdenes en tiempo real para maximizar el throughput total del almacén.' },
-    { q: '¿El WMS de DELIE se integra con mi ERP o plataforma de e-commerce?', a: 'Sí. El WMS tiene conectores nativos para SAP, Oracle, Microsoft Dynamics y APIs RESTful para cualquier sistema. La integración con plataformas como Shopify, VTEX o Magento es posible mediante middleware estándar. STOKA gestiona la integración como parte del proyecto llave en mano.' },
+    { q: '¿Qué velocidad de picking real puedo esperar en mi depósito?', a: 'Dependiendo del perfil de SKUs, los sistemas DELIE alcanzan entre 800 y 1.200 líneas por hora por estación, comparado con 150-200 líneas en picking manual.' },
+    { q: '¿El WMS de DELIE se integra con mi ERP o plataforma de e-commerce?', a: 'Sí. El WMS tiene conectores nativos para SAP, Oracle, Microsoft Dynamics y APIs RESTful para cualquier sistema. La integración con plataformas como Shopify, VTEX o Magento es posible mediante middleware estándar.' },
   ],
   'logistica-3pl': [
-    { q: '¿Puedo gestionar múltiples clientes en el mismo almacén o bodega automatizada?', a: 'Sí. El WMS soporta segregación lógica y física multi-cliente en el mismo depósito. Cada cliente tiene su propio inventario, reportes y KPIs separados sin necesidad de separar físicamente las zonas. El sistema garantiza que no haya mezclas entre clientes.' },
-    { q: '¿Qué pasa si pierdo un cliente o cambia el contrato?', a: 'Los slots son dinámicos: podés reasignar espacio entre clientes sin mover físicamente la mercadería. Si un cliente disminuye su volumen, ese espacio queda disponible automáticamente. El almacén automatizado se adapta a la estructura comercial del operador 3PL, no al revés.' },
-    { q: '¿Cómo facturo el espacio y los movimientos a cada cliente en el depósito?', a: 'El WMS genera reportes detallados por cliente: posiciones ocupadas, entradas, salidas y órdenes procesadas. Estos datos se exportan en formatos estándar para facturación. Podés cobrar por posición, por movimiento o cualquier combinación que tu modelo comercial requiera.' },
-    { q: '¿Cuánto reduce la automatización el costo operativo en un depósito 3PL?', a: 'En operaciones 3PL típicas, la automatización reduce el costo de labor entre 40% y 55%. El sistema opera 24/7 sin variación de productividad ni costo adicional en temporada alta. El ROI en un depósito 3PL suele estar entre 24 y 48 meses según el volumen.' },
+    { q: '¿Puedo gestionar múltiples clientes en el mismo almacén o bodega automatizada?', a: 'Sí. El WMS soporta segregación lógica y física multi-cliente en el mismo depósito. Cada cliente tiene su propio inventario, reportes y KPIs separados sin necesidad de separar físicamente las zonas.' },
+    { q: '¿Qué pasa si pierdo un cliente o cambia el contrato?', a: 'Los slots son dinámicos: podés reasignar espacio entre clientes sin mover físicamente la mercadería. Si un cliente disminuye su volumen, ese espacio queda disponible automáticamente.' },
+    { q: '¿Cómo facturo el espacio y los movimientos a cada cliente en el depósito?', a: 'El WMS genera reportes detallados por cliente: posiciones ocupadas, entradas, salidas y órdenes procesadas. Estos datos se exportan en formatos estándar para facturación.' },
+    { q: '¿Cuánto reduce la automatización el costo operativo en un depósito 3PL?', a: 'En operaciones 3PL típicas, la automatización reduce el costo de labor entre 40% y 55%. El sistema opera 24/7 sin variación de productividad ni costo adicional en temporada alta.' },
   ],
   manufactura: [
-    { q: '¿Puedo integrar el almacén o bodega directamente con mi línea de producción?', a: 'Sí. Los sistemas DELIE se integran con el MES (Manufacturing Execution System) de la planta. Cuando la línea necesita un insumo, el MES envía la orden al WCS del depósito automáticamente. El sistema despacha el material a la estación exacta eliminando búsquedas manuales y tiempos muertos.' },
-    { q: '¿Qué pasa si hay un corte de energía durante la operación?', a: 'Los sistemas DELIE cuentan con UPS integrada y protocolos de recuperación automática. En caso de corte, el sistema registra la posición exacta de cada robot y se recupera desde el punto de interrupción sin pérdida de datos. El tiempo de recuperación típico es inferior a 5 minutos.' },
-    { q: '¿Puedo implementar el sistema por fases sin parar la producción?', a: 'Sí. La implementación por fases es la estrategia habitual: primero el almacén de materias primas o el de producto terminado, sin tocar la línea de producción. Cada fase tiene su propio ROI calculado y el arranque se realiza con soporte in-situ de STOKA durante los primeros días.' },
-    { q: '¿Qué nivel de mantenimiento requiere el sistema en planta?', a: 'El mantenimiento preventivo equivale a 2-4 horas por mes para un sistema estándar. El WCS monitorea el estado de cada componente y emite alertas tempranas antes de que ocurra una falla. STOKA provee repuestos locales en Argentina para evitar tiempos de espera de importación.' },
+    { q: '¿Puedo integrar el almacén o bodega directamente con mi línea de producción?', a: 'Sí. Los sistemas DELIE se integran con el MES (Manufacturing Execution System) de la planta. Cuando la línea necesita un insumo, el MES envía la orden al WCS del depósito automáticamente.' },
+    { q: '¿Qué pasa si hay un corte de energía durante la operación?', a: 'Los sistemas DELIE cuentan con UPS integrada y protocolos de recuperación automática. En caso de corte, el sistema registra la posición exacta de cada robot y se recupera desde el punto de interrupción sin pérdida de datos.' },
+    { q: '¿Puedo implementar el sistema por fases sin parar la producción?', a: 'Sí. La implementación por fases es la estrategia habitual: primero el almacén de materias primas o el de producto terminado, sin tocar la línea de producción.' },
+    { q: '¿Qué nivel de mantenimiento requiere el sistema en planta?', a: 'El mantenimiento preventivo equivale a 2-4 horas por mes para un sistema estándar. El WCS monitorea el estado de cada componente y emite alertas tempranas antes de que ocurra una falla.' },
   ],
   'alimentos-bebidas': [
-    { q: '¿El sistema garantiza el FIFO automático en almacenes o bodegas de alimentos?', a: 'Sí, el FIFO es nativo. El WMS registra fecha de elaboración y vencimiento de cada lote al ingreso. En cada salida, el sistema elige automáticamente el producto con fecha de ingreso más antigua sin depender del criterio del operario. Aplica igualmente para FEFO (First Expired, First Out).' },
-    { q: '¿A qué temperaturas operan los robots para cámara frigorífica?', a: 'Los transelevadores y robots lanzadera de DELIE operan entre -5°C y +10°C en formato refrigerado y hasta -25°C en formato congelado. Cuentan con sellado hermético anticondensación, lubricación especial para frío y diagnóstico remoto para mantenimiento sin necesidad de ingresar al depósito.' },
-    { q: '¿Cómo agiliza el sistema un retiro de mercado (recall)?', a: 'Con trazabilidad completa, un recall que normalmente toma días se ejecuta en minutos. El WMS localiza todos los depósitos con mercadería del lote afectado, genera la lista de destinos y bloquea automáticamente las salidas del stock comprometido. Es audit-ready para ANMAT y certificaciones internacionales.' },
-    { q: '¿Qué certificaciones de calidad tiene el sistema para la industria alimentaria?', a: 'Los sistemas DELIE son compatibles con GS1, FSSC 22000 y BRC. El WMS genera registros en formato audit-ready que cumplen los requisitos de estas certificaciones. Los materiales en contacto con alimentos cumplen normas FDA y CE.' },
+    { q: '¿El sistema garantiza el FIFO automático en almacenes o bodegas de alimentos?', a: 'Sí, el FIFO es nativo. El WMS registra fecha de elaboración y vencimiento de cada lote al ingreso. En cada salida, el sistema elige automáticamente el producto con fecha de ingreso más antigua sin depender del criterio del operario.' },
+    { q: '¿A qué temperaturas operan los robots para cámara frigorífica?', a: 'Los transelevadores y robots lanzadera de DELIE operan entre -5°C y +10°C en formato refrigerado y hasta -25°C en formato congelado. Cuentan con sellado hermético anticondensación y lubricación especial para frío.' },
+    { q: '¿Cómo agiliza el sistema un retiro de mercado (recall)?', a: 'Con trazabilidad completa, un recall que normalmente toma días se ejecuta en minutos. El WMS localiza todos los depósitos con mercadería del lote afectado y bloquea automáticamente las salidas del stock comprometido.' },
+    { q: '¿Qué certificaciones de calidad tiene el sistema para la industria alimentaria?', a: 'Los sistemas DELIE son compatibles con GS1, FSSC 22000 y BRC. El WMS genera registros en formato audit-ready que cumplen los requisitos de estas certificaciones.' },
   ],
   farmaceutica: [
-    { q: '¿El sistema cumple con GMP y las normativas de ANMAT para almacenes farmacéuticos?', a: 'Sí. El WMS incluye módulo GMP que registra cada movimiento con usuario, timestamp, ubicación de origen y destino. Este audit trail cumple con 21 CFR Part 11, EU GMP Annex 11 y los requisitos de ANMAT. El cumplimiento es nativo por diseño, sin configuración adicional.' },
-    { q: '¿Cómo funciona el control de acceso por rol en la bodega o almacén farmacéutico?', a: 'Cada operario tiene credenciales únicas con permisos por zona, tipo de operación y producto. El sistema registra quién hizo qué y cuándo en cada movimiento. Las zonas de productos controlados tienen restricción adicional con validación de segundo factor para cumplir 21 CFR Part 11 y los requisitos de ANMAT para estupefacientes.' },
-    { q: '¿Se pueden crear zonas de temperatura diferenciada en el mismo depósito?', a: 'Sí. El sistema permite definir zonas lógicas con requisitos de temperatura específicos (2-8°C, 15-25°C, -20°C) dentro del mismo almacén. El WMS asigna cada producto a su zona correcta según su perfil y el monitoreo de temperatura es continuo con alertas automáticas ante desvíos y registro para auditoría.' },
-    { q: '¿Cuánto tiempo lleva validar el sistema para GMP en un depósito farmacéutico?', a: 'La validación IQ/OQ/PQ toma entre 3 y 6 meses post-instalación. DELIE entrega documentación de validación (DQ, FS, DS) con el sistema. STOKA acompaña el proceso de calificación localmente para garantizar que los plazos no se extiendan por cuellos de botella en documentación.' },
-    { q: '¿El sistema gestiona la serialización unitaria requerida por ANMAT?', a: 'Sí. El módulo de serialización del WMS lee y registra el código de barras o DataMatrix 2D de cada unidad en las operaciones de recepción, almacenamiento y despacho. El sistema genera automáticamente los reportes de trazabilidad en el formato requerido por ANMAT para medicamentos de prescripción.' },
-    { q: '¿Puede usarse el sistema en una droguería con habilitación GDP?', a: 'Sí. El WMS de DELIE ha sido calificado en instalaciones con habilitación GDP en Latinoamérica. STOKA entrega el protocolo de calificación OQ adaptado a los requisitos de la Disposición ANMAT 9713/2018 (Guía GDP Argentina) y acompaña el trámite de presentación ante el organismo.' },
-    { q: '¿Cómo se maneja la devolución de medicamentos vencidos o retirados del mercado?', a: 'El WMS tiene flujo específico de cuarentena y destrucción: los productos bloqueados se segregan lógicamente (sin movimiento físico), con bloqueo de despacho automático y notificación al responsable regulatorio. El flujo queda registrado en el audit trail para la documentación del recall ante ANMAT.' },
+    { q: '¿El sistema cumple con GMP y las normativas de ANMAT para almacenes farmacéuticos?', a: 'Sí. El WMS incluye módulo GMP que registra cada movimiento con usuario, timestamp, ubicación de origen y destino. Este audit trail cumple con 21 CFR Part 11, EU GMP Annex 11 y los requisitos de ANMAT.' },
+    { q: '¿Cómo funciona el control de acceso por rol en la bodega o almacén farmacéutico?', a: 'Cada operario tiene credenciales únicas con permisos por zona, tipo de operación y producto. El sistema registra quién hizo qué y cuándo en cada movimiento.' },
+    { q: '¿Se pueden crear zonas de temperatura diferenciada en el mismo depósito?', a: 'Sí. El sistema permite definir zonas lógicas con requisitos de temperatura específicos (2-8°C, 15-25°C, -20°C) dentro del mismo almacén. El monitoreo de temperatura es continuo con alertas automáticas ante desvíos.' },
+    { q: '¿Cuánto tiempo lleva validar el sistema para GMP en un depósito farmacéutico?', a: 'La validación IQ/OQ/PQ toma entre 3 y 6 meses post-instalación. DELIE entrega documentación de validación (DQ, FS, DS) con el sistema.' },
+    { q: '¿El sistema gestiona la serialización unitaria requerida por ANMAT?', a: 'Sí. El módulo de serialización del WMS lee y registra el código de barras o DataMatrix 2D de cada unidad en las operaciones de recepción, almacenamiento y despacho.' },
+    { q: '¿Puede usarse el sistema en una droguería con habilitación GDP?', a: 'Sí. El WMS de DELIE ha sido calificado en instalaciones con habilitación GDP en Latinoamérica.' },
+    { q: '¿Cómo se maneja la devolución de medicamentos vencidos o retirados del mercado?', a: 'El WMS tiene flujo específico de cuarentena y destrucción: los productos bloqueados se segregan lógicamente, con bloqueo de despacho automático y notificación al responsable regulatorio.' },
   ],
   'mineria-oil-gas': [
-    { q: '¿El sistema funciona en ambientes con polvo, vibración y temperaturas extremas?', a: 'Sí. Los equipos DELIE para minería y oil & gas tienen grado de protección IP54 a IP65, están certificados para vibración conforme a IEC y operan entre -20°C y +50°C. Para zonas con riesgo de explosión, existe la versión ATEX certificada para depósitos de materiales inflamables.' },
-    { q: '¿Cuánto tarda en localizar un repuesto crítico entre 50.000 SKUs en el depósito?', a: 'El WMS localiza cualquier repuesto en menos de 2 segundos. Para los VLM y carruseles verticales, el material llega a la ventanilla del operario en menos de 30 segundos desde la solicitud. Eliminás el tiempo de búsqueda manual que en almacenes convencionales puede llevar horas.' },
-    { q: '¿Cuánto stock inmovilizado puedo reducir en mi bodega de repuestos?', a: 'Con visibilidad total del inventario en tiempo real, los clientes reducen el stock inmovilizado entre 25% y 40%. La eliminación de stock fantasma (piezas perdidas o no registradas) y la trazabilidad de consumo permiten ajustar los niveles de reposición con precisión estadística.' },
-    { q: '¿Se puede instalar el sistema en una ubicación remota sin soporte técnico cercano?', a: 'Sí. El WCS incluye monitoreo remoto 24/7. La mayoría de los problemas se diagnostican y resuelven sin visita in-situ. Para intervenciones físicas, STOKA mantiene repuestos locales en Argentina para evitar tiempos de espera de importación que podrían paralizar operaciones críticas.' },
+    { q: '¿El sistema funciona en ambientes con polvo, vibración y temperaturas extremas?', a: 'Sí. Los equipos DELIE para minería y oil & gas tienen grado de protección IP54 a IP65, están certificados para vibración conforme a IEC y operan entre -20°C y +50°C. Para zonas con riesgo de explosión, existe la versión ATEX certificada.' },
+    { q: '¿Cuánto tarda en localizar un repuesto crítico entre 50.000 SKUs en el depósito?', a: 'El WMS localiza cualquier repuesto en menos de 2 segundos. Para los VLM y carruseles verticales, el material llega a la ventanilla del operario en menos de 30 segundos desde la solicitud.' },
+    { q: '¿Cuánto stock inmovilizado puedo reducir en mi bodega de repuestos?', a: 'Con visibilidad total del inventario en tiempo real, los clientes reducen el stock inmovilizado entre 25% y 40%.' },
+    { q: '¿Se puede instalar el sistema en una ubicación remota sin soporte técnico cercano?', a: 'Sí. El WCS incluye monitoreo remoto 24/7. La mayoría de los problemas se diagnostican y resuelven sin visita in-situ. STOKA mantiene repuestos locales en Argentina.' },
   ],
   'cadena-frio': [
-    { q: '¿A qué temperatura mínima operan los robots de DELIE en la bodega frigorífica?', a: 'Los transelevadores y robots lanzadera para cadena de frío están certificados hasta -30°C. Cuentan con sellado hermético anticondensación, lubricantes especiales para frío extremo y diagnóstico remoto que permite mantenimiento preventivo sin ingresar al almacén o depósito de frío.' },
-    { q: '¿Cuánto ahorro energético real puedo esperar al automatizar mi cámara?', a: 'El ahorro energético típico es del 30% al 40%. La principal fuente es la reducción de aperturas de puerta: un almacén manual requiere 50-100 aperturas por turno, mientras que el sistema automatizado trabaja internamente. Menos intercambio térmico implica directamente menos consumo del equipo de frío.' },
-    { q: '¿Cuánto espacio adicional gano al automatizar una cámara frigorífica existente?', a: 'Con almacenamiento vertical automatizado, podés triplicar la capacidad de la cámara sin construir nuevas instalaciones. El sistema opera en pasillos de 900 mm (vs. 3-4 metros para autoelevadores), liberando hasta el 60% del área de suelo para más estanterías y mayor densidad de almacenaje.' },
-    { q: '¿Cómo elimino la exposición del personal al frío extremo en el depósito?', a: 'El sistema opera de forma autónoma dentro de la cámara. Los operarios trabajan en estaciones a temperatura ambiente, donde la mercadería llega a través de una ventanilla aislada. La práctica totalidad de los movimientos se realiza sin que nadie ingrese a la zona de frío extremo del depósito.' },
+    { q: '¿A qué temperatura mínima operan los robots de DELIE en la bodega frigorífica?', a: 'Los transelevadores y robots lanzadera para cadena de frío están certificados hasta -30°C. Cuentan con sellado hermético anticondensación, lubricantes especiales y diagnóstico remoto.' },
+    { q: '¿Cuánto ahorro energético real puedo esperar al automatizar mi cámara?', a: 'El ahorro energético típico es del 30% al 40%. La principal fuente es la reducción de aperturas de puerta: un almacén manual requiere 50-100 aperturas por turno, mientras que el sistema automatizado trabaja internamente.' },
+    { q: '¿Cuánto espacio adicional gano al automatizar una cámara frigorífica existente?', a: 'Con almacenamiento vertical automatizado, podés triplicar la capacidad de la cámara sin construir nuevas instalaciones. El sistema opera en pasillos de 900 mm (vs. 3-4 metros para autoelevadores).' },
+    { q: '¿Cómo elimino la exposición del personal al frío extremo en el depósito?', a: 'El sistema opera de forma autónoma dentro de la cámara. Los operarios trabajan en estaciones a temperatura ambiente, donde la mercadería llega a través de una ventanilla aislada.' },
   ],
 };
 
@@ -261,19 +262,31 @@ const INDUSTRY_META = {
 
 export const IndustriaDetailPage = () => {
   const { slug } = useParams();
-  const navigate = useNavigate();
+  const langNavigate = useLangNavigate();
+  const { t } = useTranslation();
   const data = INDUSTRY_DATA[slug];
   const ind = INDUSTRIES.find(i => i.slug === slug);
   const faq = INDUSTRY_FAQ[slug];
   const seoText = INDUSTRY_SEO[slug];
+
+  /* Etiquetas visibles resueltas desde i18n (industriesList[slug]) */
+  const industriesList = t('pages.industrias.industriesList', { returnObjects: true }) || {};
+  const info = industriesList[slug] || {};
+  const label = info.name || '';
+  const tagline = info.tagline || '';
+  const desc = info.desc || '';
+  const metaTitle = `Automatización ASRS para ${label} — STOKA`;
+  const metaDesc = desc;
 
   useEffect(() => { window.scrollTo(0, 0); }, [slug]);
 
   if (!data || !ind) return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="text-center">
-        <p className="text-gray-400 mb-4">Industria no encontrada</p>
-        <button onClick={() => navigate('/industrias')} className="text-cyan-500 underline">Ver todas las industrias</button>
+        <p className="text-gray-400 mb-4">{t('pages.industriaDetail.notFound')}</p>
+        <button onClick={() => langNavigate('/industrias')} className="text-cyan-500 underline">
+          {t('pages.industriaDetail.viewAll')}
+        </button>
       </div>
     </div>
   );
@@ -282,22 +295,20 @@ export const IndustriaDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
+      <SeoHead
+        title={metaTitle}
+        description={metaDesc}
+        basePath={`/industrias/${slug}`}
+      />
       <Helmet>
-        <title>{INDUSTRY_META[slug]?.title ?? `${ind.label} — Automatización ASRS en Argentina | STOKA`}</title>
-        <meta name="robots" content="index, follow" />
-        <meta name="description" content={INDUSTRY_META[slug]?.desc ?? `${ind.desc} Representantes oficiales de DELIE en Argentina y Chile. Consultoría y proyecto ASRS llave en mano.`} />
-        <meta property="og:title" content={INDUSTRY_META[slug]?.title ?? `${ind.label} — Automatización ASRS | STOKA Argentina`} />
-        <meta property="og:description" content={INDUSTRY_META[slug]?.desc ?? ind.desc} />
-        <meta property="og:url" content={`https://www.stokagroup.com/industrias/${slug}`} />
-        <link rel="canonical" href={`https://www.stokagroup.com/industrias/${slug}`} />
-        <script type="application/ld+json">{JSON.stringify({
+                                        <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Industrias", "item": "https://www.stokagroup.com/industrias" },
-            { "@type": "ListItem", "position": 3, "name": ind.label, "item": `https://www.stokagroup.com/industrias/${slug}` }
-          ]
+            { "@type": "ListItem", "position": 1, "name": t('pages.industriaDetail.breadcrumbHome'), "item": "https://www.stokagroup.com/" },
+            { "@type": "ListItem", "position": 2, "name": t('pages.industriaDetail.breadcrumbIndustrias'), "item": "https://www.stokagroup.com/industrias" },
+            { "@type": "ListItem", "position": 3, "name": label, "item": `https://www.stokagroup.com/industrias/${slug}` },
+          ],
         })}</script>
         {faq && <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -305,41 +316,41 @@ export const IndustriaDetailPage = () => {
           "mainEntity": faq.map(item => ({
             "@type": "Question",
             "name": item.q,
-            "acceptedAnswer": { "@type": "Answer", "text": item.a }
-          }))
+            "acceptedAnswer": { "@type": "Answer", "text": item.a },
+          })),
         })}</script>}
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "name": `Automatización ASRS para ${ind.label} — STOKA Argentina`,
-          "description": `${ind.desc} Representantes oficiales de DELIE en Argentina y Chile. Proyecto llave en mano.`,
+          "name": `Automatización ASRS para ${label} — STOKA Argentina`,
+          "description": `${desc} Representantes oficiales de DELIE en Argentina y Chile. Proyecto llave en mano.`,
           "provider": { "@id": "https://www.stokagroup.com/#organization" },
           "areaServed": [{ "@type": "Country", "name": "Argentina" }, { "@type": "Country", "name": "Chile" }],
           "serviceType": "Sistemas ASRS — Automatización de Almacenes por Industria",
-          "url": `https://www.stokagroup.com/industrias/${slug}`
+          "url": `https://www.stokagroup.com/industrias/${slug}`,
         })}</script>
       </Helmet>
       <Navbar />
 
       {/* HERO */}
-      <div className="relative mt-20 h-[55vh] min-h-[400px] flex items-end overflow-hidden">
-        <img src={ind.image} alt={ind.label}
+      <div className="relative mt-20 h-[55vh] min-h-90 flex items-end overflow-hidden">
+        <img src={ind.image} alt={label}
           className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-linear-to-r from-slate-950/95 via-slate-950/70 to-slate-950/20" />
         <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 to-transparent" />
-        <div className="absolute top-0 left-0 right-0 h-[3px] bg-cyan-500" />
+        <div className="absolute top-0 left-0 right-0 h-0.75 bg-cyan-500" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-14 lg:pb-20">
           <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut' }}>
-            <button onClick={() => navigate('/industrias')} style={{ outline: 'none' }}
+            <button onClick={() => langNavigate('/industrias')} style={{ outline: 'none' }}
               className="flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors text-xs mb-5">
-              <ArrowLeft size={13} /> Todas las industrias
+              <ArrowLeft size={13} /> {t('pages.industriaDetail.backToAll')}
             </button>
             <div className="flex items-center gap-3 mb-3">
               <div className="w-9 h-9 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
                 <ind.icon size={16} className="text-cyan-400" />
               </div>
-              <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.35em]">{ind.label}</p>
+              <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.35em]">{label}</p>
             </div>
             <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-black italic uppercase leading-[1.1] tracking-tight max-w-3xl">
               {data.hero}
@@ -365,8 +376,10 @@ export const IndustriaDetailPage = () => {
       <section className="py-14 px-6 bg-white">
         <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_2fr] gap-10 items-start">
           <div>
-            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">El desafío</p>
-            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter leading-tight">{ind.tagline}</h2>
+            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">
+              {t('pages.industriaDetail.challengeLabel')}
+            </p>
+            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter leading-tight">{tagline}</h2>
           </div>
           <p className="text-gray-600 text-lg leading-relaxed">{data.description}</p>
         </div>
@@ -382,8 +395,12 @@ export const IndustriaDetailPage = () => {
       {/* BENEFICIOS */}
       <section className="py-14 px-6 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Por qué automatizar</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Beneficios clave</h2>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">
+            {t('pages.industriaDetail.whyAutomate')}
+          </p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">
+            {t('pages.industriaDetail.keyBenefits')}
+          </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {data.benefits.map((b, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
@@ -400,11 +417,15 @@ export const IndustriaDetailPage = () => {
       {/* DESAFÍOS VS SOLUCIONES */}
       <section className="py-14 px-6 bg-slate-900">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-8">El antes y el después</p>
+          <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-8">
+            {t('pages.industriaDetail.beforeAfter')}
+          </p>
           <div className="grid md:grid-cols-2 gap-5">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
               className="bg-red-500/10 border border-red-400/20 rounded-2xl p-7">
-              <p className="text-[10px] font-mono text-red-400 tracking-[0.4em] uppercase mb-5">Sin automatización</p>
+              <p className="text-[10px] font-mono text-red-400 tracking-[0.4em] uppercase mb-5">
+                {t('pages.industriaDetail.withoutAutomation')}
+              </p>
               <div className="space-y-3.5">
                 {data.challenges.map((c, i) => (
                   <div key={i} className="flex items-start gap-3">
@@ -419,7 +440,9 @@ export const IndustriaDetailPage = () => {
 
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
               className="bg-cyan-400/10 border border-cyan-400/20 rounded-2xl p-7">
-              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.4em] uppercase mb-5">Con STOKA · DELIE</p>
+              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.4em] uppercase mb-5">
+                {t('pages.industriaDetail.withStoka')}
+              </p>
               <div className="space-y-3.5">
                 {data.solutions.map((s, i) => (
                   <div key={i} className="flex items-start gap-3">
@@ -439,9 +462,11 @@ export const IndustriaDetailPage = () => {
       {seoText && (
         <section className="py-14 px-6 bg-white border-t border-gray-100">
           <div className="max-w-5xl mx-auto">
-            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Contexto de automatización</p>
+            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">
+              {t('pages.industriaDetail.automationContext')}
+            </p>
             <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-6">
-              Automatización de almacenes, bodegas y depósitos en {ind.label.toLowerCase()}
+              {t('pages.industriaDetail.automationH2', { industry: label.toLowerCase() })}
             </h2>
             <div className="grid md:grid-cols-[3fr_1fr] gap-10 items-start">
               <div className="space-y-4">
@@ -465,35 +490,39 @@ export const IndustriaDetailPage = () => {
       {/* PRODUCTOS RECOMENDADOS */}
       <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Equipamiento recomendado</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Productos para este sector</h2>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">
+            {t('pages.industriaDetail.recommendedTag')}
+          </p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">
+            {t('pages.industriaDetail.recommendedH2')}
+          </h2>
           <div className="grid sm:grid-cols-2 gap-3 mb-6">
             {data.products.map((p, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}>
-                <Link to={p.url}
+                <LangLink to={p.url}
                   className="flex items-center justify-between gap-3 bg-white border border-gray-200 rounded-xl px-5 py-4 hover:border-cyan-300 hover:shadow-sm transition-all group w-full">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-cyan-500 shrink-0" />
                     <p className="text-gray-700 text-sm font-medium group-hover:text-cyan-600 transition-colors">{p.name}</p>
                   </div>
                   <ChevronRight size={15} className="text-gray-300 group-hover:text-cyan-500 transition-colors shrink-0" />
-                </Link>
+                </LangLink>
               </motion.div>
             ))}
           </div>
           <div className="flex flex-wrap gap-3 mt-4">
-            <Link to="/catalogo"
+            <LangLink to="/catalogo"
               className="inline-flex items-center gap-2 text-sm text-cyan-500 hover:text-cyan-600 font-semibold transition-colors">
-              Ver catálogo completo <ArrowRight size={14} />
-            </Link>
-            <Link to="/beneficios-fiscales"
+              {t('pages.industriaDetail.viewCatalog')} <ArrowRight size={14} />
+            </LangLink>
+            <LangLink to="/beneficios-fiscales"
               className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 font-medium transition-colors border border-gray-200 rounded-lg px-4 py-2 hover:border-cyan-300 bg-white">
-              Beneficios fiscales vigentes →
-            </Link>
-            <Link to="/casos-de-exito"
+              {t('pages.industriaDetail.taxBenefits')} →
+            </LangLink>
+            <LangLink to="/casos-de-exito"
               className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 font-medium transition-colors border border-gray-200 rounded-lg px-4 py-2 hover:border-cyan-300 bg-white">
-              Ver casos de éxito →
-            </Link>
+              {t('pages.industriaDetail.successCases')} →
+            </LangLink>
           </div>
         </div>
       </section>
@@ -502,8 +531,12 @@ export const IndustriaDetailPage = () => {
       {faq && (
         <section className="py-14 px-6 bg-white border-t border-gray-100">
           <div className="max-w-5xl mx-auto">
-            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Preguntas frecuentes</p>
-            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Lo que pregunta un Director de Operaciones</h2>
+            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">
+              {t('pages.industriaDetail.faqTag')}
+            </p>
+            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">
+              {t('pages.industriaDetail.faqH2')}
+            </h2>
             <div className="grid md:grid-cols-2 gap-4">
               {faq.map((item, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
@@ -520,22 +553,29 @@ export const IndustriaDetailPage = () => {
       {/* OTRAS INDUSTRIAS */}
       <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Seguir explorando</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Otras industrias</h2>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">
+            {t('pages.industriaDetail.exploreMore')}
+          </p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">
+            {t('pages.industriaDetail.otherIndustries')}
+          </h2>
           <div className="grid sm:grid-cols-3 gap-4">
-            {otherIndustries.map((oi, i) => (
-              <motion.button key={oi.slug} onClick={() => navigate(`/industrias/${oi.slug}`)}
+            {otherIndustries.map((oi, i) => {
+              const oiInfo = industriesList[oi.slug] || {};
+              return (
+              <motion.button key={oi.slug} onClick={() => langNavigate(`/industrias/${oi.slug}`)}
                 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                 style={{ outline: 'none' }}
                 className="relative text-left rounded-2xl overflow-hidden group h-40 shadow-sm hover:shadow-md transition-all">
-                <img src={oi.image} alt={oi.label} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={oi.image} alt={oiInfo.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-white font-black text-sm uppercase tracking-tight leading-tight">{oi.label}</h3>
-                  <p className="text-gray-300 text-xs mt-0.5 opacity-80">{oi.tagline}</p>
+                  <h3 className="text-white font-black text-sm uppercase tracking-tight leading-tight">{oiInfo.name}</h3>
+                  <p className="text-gray-300 text-xs mt-0.5 opacity-80">{oiInfo.tagline}</p>
                 </div>
               </motion.button>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -543,19 +583,22 @@ export const IndustriaDetailPage = () => {
       {/* CTA */}
       <section className="py-16 px-6 bg-slate-900">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.35em] mb-4">¿Listo para automatizar?</p>
+          <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.35em] mb-4">
+            {t('pages.industriaDetail.ctaTag')}
+          </p>
           <h2 className="text-white text-3xl font-black italic uppercase tracking-tighter mb-4">
-            Consultá sin costo.<br /><span className="text-cyan-400">Respuesta en 24 hs.</span>
+            {t('pages.industriaDetail.ctaH2_a')}<br />
+            <span className="text-cyan-400">{t('pages.industriaDetail.ctaH2_b')}</span>
           </h2>
-          <p className="text-gray-400 text-base mb-8">Un ingeniero especializado te da la primera orientación técnica para tu proyecto.</p>
+          <p className="text-gray-400 text-base mb-8">{t('pages.industriaDetail.ctaSub')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contacto"
+            <LangLink to="/contacto"
               className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
-              Solicitar consulta <ArrowRight size={14} />
-            </a>
-            <button onClick={() => navigate('/catalogo')} style={{ outline: 'none' }}
+              {t('pages.industriaDetail.ctaBtn')} <ArrowRight size={14} />
+            </LangLink>
+            <button onClick={() => langNavigate('/catalogo')} style={{ outline: 'none' }}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 border border-white/15 rounded-xl text-white/70 text-sm font-bold hover:border-cyan-400/50 hover:text-white transition-all">
-              Ver catálogo completo
+              {t('pages.industriaDetail.viewCatalogBtn')}
             </button>
           </div>
         </div>

@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { LangLink } from '../../lib/i18n-utils';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Clock, ArrowRight, BookOpen, HelpCircle, BarChart2 } from 'lucide-react';
@@ -7,6 +8,7 @@ import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
 import { ARTICULOS } from '../../data/articulosData';
+import { SeoHead } from '../../lib/SeoHead';
 
 const RECURSOS_EXTRA = [
   {
@@ -33,6 +35,8 @@ const RECURSOS_EXTRA = [
 ];
 
 export const RecursosHub = () => {
+  const { t } = useTranslation();
+  const p = (k) => t(`pages.recursosHub.${k}`, { returnObjects: true });
   const canonical = 'https://www.stokagroup.com/recursos';
 
   const breadcrumbSchema = {
@@ -46,13 +50,13 @@ export const RecursosHub = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      <SeoHead
+        title={p('metaTitle')}
+        description={p('metaDesc')}
+        basePath={'/recursos'}
+      />
       <Helmet>
-        <title>Recursos: Guías ASRS y Automatización de Almacenes | STOKA</title>
-        <meta name="description" content="Guías técnicas y herramientas sobre automatización de almacenes, ASRS, transelevadores, AGV y WMS. Recursos para logística en Argentina y Chile." />
-        <meta property="og:title" content="Recursos de Automatización de Almacenes | STOKA" />
-        <meta property="og:url" content={canonical} />
-        <link rel="canonical" href={canonical} />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+                                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <Navbar />
@@ -61,19 +65,19 @@ export const RecursosHub = () => {
       <section className="bg-white pt-36 pb-14 px-6 border-b border-gray-100">
         <div className="max-w-5xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
-            <Link to="/" className="hover:text-cyan-500 transition-colors">Inicio</Link>
+            <LangLink to="/" className="hover:text-cyan-500 transition-colors">{t('nav.home')}</LangLink>
             <span>/</span>
-            <span className="text-gray-600">Recursos</span>
+            <span className="text-gray-600">{p('breadcrumb')}</span>
           </nav>
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-5">
-            Artículos · Herramientas · Glosario · Argentina
+            {p('heroTag')}
           </p>
           <h1 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-6">
-            Centro de<br />
-            <span className="text-cyan-500">recursos técnicos</span>
+            {p('heroH1_a')}<br />
+            <span className="text-cyan-500">{p('heroH1_b')}</span>
           </h1>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-            Artículos técnicos, comparativas y herramientas interactivas para tomar mejores decisiones sobre automatización logística en Argentina y Chile.
+            {p('heroSub')}
           </p>
         </div>
       </section>
@@ -81,7 +85,7 @@ export const RecursosHub = () => {
       <div className="bg-white">
         {/* Tools & extra resources */}
         <section className="max-w-5xl mx-auto px-6 pt-12 pb-10">
-          <h2 className="text-lg font-black text-gray-900 uppercase tracking-widest mb-6">Herramientas y referencias</h2>
+          <h2 className="text-lg font-black text-gray-900 uppercase tracking-widest mb-6">{p('toolsH2')}</h2>
           <div className="grid md:grid-cols-3 gap-5">
             {RECURSOS_EXTRA.map((r, i) => (
               <motion.div
@@ -91,7 +95,7 @@ export const RecursosHub = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
               >
-                <Link
+                <LangLink
                   to={r.url}
                   className="group flex flex-col h-full bg-gray-50 border border-gray-200 hover:border-cyan-300 rounded-2xl p-6 transition-colors"
                 >
@@ -102,9 +106,9 @@ export const RecursosHub = () => {
                   <h3 className="text-base font-black text-gray-900 mb-2">{r.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed flex-1">{r.desc}</p>
                   <div className="flex items-center gap-1 mt-4 text-cyan-600 text-sm font-medium group-hover:gap-2 transition-all">
-                    <span>Ver más</span><ArrowRight size={14} />
+                    <span>{p('viewMore')}</span><ArrowRight size={14} />
                   </div>
-                </Link>
+                </LangLink>
               </motion.div>
             ))}
           </div>
@@ -112,7 +116,7 @@ export const RecursosHub = () => {
 
         {/* Articles grid */}
         <section className="max-w-5xl mx-auto px-6 pb-20">
-          <h2 className="text-lg font-black text-gray-900 uppercase tracking-widest mb-6">Artículos técnicos</h2>
+          <h2 className="text-lg font-black text-gray-900 uppercase tracking-widest mb-6">{p('articlesH2')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {ARTICULOS.map((art, i) => (
               <motion.div
@@ -122,12 +126,12 @@ export const RecursosHub = () => {
                 viewport={{ once: true }}
                 transition={{ delay: (i % 2) * 0.06 }}
               >
-                <Link
+                <LangLink
                   to={`/recursos/${art.slug}`}
                   className="group flex flex-col h-full bg-white border border-gray-200 hover:border-cyan-300 rounded-2xl overflow-hidden transition-colors shadow-sm"
                 >
                   <div className="relative h-40 overflow-hidden">
-                    <img
+                    <img loading="lazy"
                       src={art.heroImg}
                       alt={art.h1}
                       className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-500"
@@ -140,10 +144,10 @@ export const RecursosHub = () => {
                     <p className="text-sm text-gray-500 leading-relaxed flex-1 line-clamp-2">{art.metaDesc}</p>
                     <div className="flex items-center justify-between mt-4">
                       <span className="flex items-center gap-1 text-xs text-gray-400"><Clock size={11} />{art.readTime}</span>
-                      <span className="flex items-center gap-1 text-cyan-600 text-xs font-medium group-hover:gap-2 transition-all">Leer <ArrowRight size={12} /></span>
+                      <span className="flex items-center gap-1 text-cyan-600 text-xs font-medium group-hover:gap-2 transition-all">{p('readArticle')} <ArrowRight size={12} /></span>
                     </div>
                   </div>
-                </Link>
+                </LangLink>
               </motion.div>
             ))}
           </div>

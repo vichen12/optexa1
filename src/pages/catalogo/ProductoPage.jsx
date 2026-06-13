@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { LangLink, useLangNavigate } from '../../lib/i18n-utils';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { ChevronRight, ArrowRight, CheckCircle, Factory, ShoppingCart, Truck, Pill, Snowflake, Mountain, X, ZoomIn, ChevronLeft } from 'lucide-react';
@@ -8,6 +10,7 @@ import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
 import { PRODUCTOS } from '../../data/productosData';
+import { SeoHead } from '../../lib/SeoHead';
 
 const INDUSTRY_ICONS = {
   'E-commerce y retail': ShoppingCart,
@@ -30,8 +33,10 @@ const INDUSTRY_SLUGS = {
 };
 
 export const ProductoPage = () => {
+  const { t } = useTranslation();
+  const p = (k) => t(`pages.producto.${k}`, { returnObjects: true });
   const { categoria, producto } = useParams();
-  const navigate = useNavigate();
+  const langNavigate = useLangNavigate();
   const key = `${categoria}/${producto}`;
   const data = PRODUCTOS[key];
   const [lightboxIdx, setLightboxIdx] = useState(null);
@@ -52,9 +57,9 @@ export const ProductoPage = () => {
       <div className="min-h-screen flex items-center justify-center bg-zinc-950 text-white">
         <div className="text-center">
           <p className="text-cyan-400 font-mono text-sm mb-4">404</p>
-          <h1 className="text-3xl font-black mb-4">Producto no encontrado</h1>
-          <button onClick={() => navigate('/catalogo')} className="px-6 py-3 bg-cyan-500 rounded-xl font-bold">
-            Ver catálogo
+          <h1 className="text-3xl font-black mb-4">{p('notFound')}</h1>
+          <button onClick={() => langNavigate('/catalogo')} className="px-6 py-3 bg-cyan-500 rounded-xl font-bold">
+            {p('verCatalogo')}
           </button>
         </div>
       </div>
@@ -90,6 +95,40 @@ export const ProductoPage = () => {
     "url": canonicalUrl,
   };
 
+  // URL absoluta de la imagen para Product/OG (heroImg viene como ruta relativa)
+  const absImg = data.heroImg
+    ? (data.heroImg.startsWith('http') ? data.heroImg : `${baseUrl}${data.heroImg}`)
+    : `${baseUrl}/stoka_og_image_1200x630.png`;
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": data.nombre,
+    "description": data.metaDesc,
+    "image": absImg,
+    "brand": { "@type": "Brand", "name": "DELIE" },
+    "category": data.categoriaLabel,
+    "url": canonicalUrl,
+    "manufacturer": { "@type": "Organization", "name": "DELIE" },
+    // Sin precio público: ofertamos consulta/cotización con priceSpecification.
+    // Evita el warning de "missing price" declarando que el precio es a consultar.
+    "offers": {
+      "@type": "Offer",
+      "url": canonicalUrl,
+      "priceCurrency": "USD",
+      "price": "0",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "valueAddedTaxIncluded": false,
+      },
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "seller": { "@id": `${baseUrl}/#organization` },
+      "areaServed": ["AR", "CL"],
+    },
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -102,16 +141,15 @@ export const ProductoPage = () => {
 
   return (
     <div className="min-h-screen text-gray-900">
+      <SeoHead
+        title={data.metaTitle}
+        description={data.metaDesc}
+        ogImage={data.heroImg}
+        basePath={`/catalogo/${data.categoria}/${data.slug}`}
+      />
       <Helmet>
-        <title>{data.metaTitle}</title>
-        <meta name="description" content={data.metaDesc} />
-        <meta property="og:title" content={data.metaTitle} />
-        <meta property="og:description" content={data.metaDesc} />
-        <meta property="og:image" content={data.heroImg} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={canonicalUrl} />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+                                                        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
@@ -119,14 +157,14 @@ export const ProductoPage = () => {
 
       {/* HEADER — texto limpio sin imagen de fondo */}
       <div className="bg-white border-b border-gray-100 mt-20">
-        <div className="absolute top-0 left-0 right-0 h-[3px] bg-cyan-500 mt-20" />
+        <div className="absolute top-0 left-0 right-0 h-0.75 bg-cyan-500 mt-20" />
         <div className="max-w-5xl mx-auto px-6 pt-10 pb-12">
           <nav className="flex items-center gap-2 text-xs text-gray-400 mb-6 flex-wrap">
-            <Link to="/" className="hover:text-cyan-500 transition-colors">Inicio</Link>
+            <LangLink to="/" className="hover:text-cyan-500 transition-colors">{p('breadcrumbHome')}</LangLink>
             <ChevronRight size={12} className="text-gray-300" />
-            <Link to="/catalogo" className="hover:text-cyan-500 transition-colors">Catálogo</Link>
+            <LangLink to="/catalogo" className="hover:text-cyan-500 transition-colors">{p('breadcrumbCatalog')}</LangLink>
             <ChevronRight size={12} className="text-gray-300" />
-            <Link to={data.categoriaUrl} className="hover:text-cyan-500 transition-colors">{data.categoriaLabel}</Link>
+            <LangLink to={data.categoriaUrl} className="hover:text-cyan-500 transition-colors">{data.categoriaLabel}</LangLink>
             <ChevronRight size={12} className="text-gray-300" />
             <span className="text-gray-600">{data.nombre}</span>
           </nav>
@@ -159,7 +197,7 @@ export const ProductoPage = () => {
                     className="relative rounded-2xl overflow-hidden border border-gray-200 cursor-zoom-in group"
                     onClick={() => setLightboxIdx(0)}
                   >
-                    <img src={allImgs[0]} alt={data.heroAlt} className="w-full object-cover" style={{ aspectRatio: '4/3' }} />
+                    <img fetchpriority="high" src={allImgs[0]} alt={data.heroAlt} width="800" height="600" className="w-full object-cover" style={{ aspectRatio: '4/3' }} />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                       <ZoomIn size={28} className="text-white opacity-0 group-hover:opacity-100 transition-opacity drop-shadow-lg" />
                     </div>
@@ -169,7 +207,7 @@ export const ProductoPage = () => {
                       {allImgs.slice(1).map((img, i) => (
                         <div key={i} className="rounded-xl overflow-hidden border border-gray-200 cursor-zoom-in group aspect-square"
                           onClick={() => setLightboxIdx(i + 1)}>
-                          <img src={img} alt={`${data.nombre} — foto ${i + 2}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                          <img loading="lazy" src={img} alt={`${data.nombre} — foto ${i + 2}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                         </div>
                       ))}
                     </div>
@@ -178,18 +216,18 @@ export const ProductoPage = () => {
               );
             })()}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
-              <img src="/image.png" alt="DELIE" className="h-7 object-contain mb-3" />
+              <img loading="lazy" src="/image.png" alt="DELIE" className="h-7 object-contain mb-3" />
               <p className="text-gray-500 text-sm leading-relaxed mb-4">
                 STOKA es el representante oficial exclusivo de DELIE en Argentina y Chile.
               </p>
-              <button onClick={() => navigate('/contacto')}
+              <button onClick={() => langNavigate('/contacto')}
                 className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
-                Consultar disponibilidad <ArrowRight size={13} />
+                {p('consultarWpp')} <ArrowRight size={13} />
               </button>
             </div>
             {/* Industrias */}
             <div className="bg-white border border-gray-200 rounded-2xl p-5">
-              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Industrias</p>
+              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('industrias')}</p>
               <div className="flex flex-wrap gap-2">
                 {data.industrias.map((ind) => {
                   const Icon = INDUSTRY_ICONS[ind] || Factory;
@@ -201,7 +239,7 @@ export const ProductoPage = () => {
                     </div>
                   );
                   return slug ? (
-                    <Link key={ind} to={`/industrias/${slug}`}>{chip}</Link>
+                    <LangLink key={ind} to={`/industrias/${slug}`}>{chip}</LangLink>
                   ) : (
                     <div key={ind}>{chip}</div>
                   );
@@ -276,9 +314,9 @@ export const ProductoPage = () => {
               DELIE fabrica más de 1.000 instalaciones activas en +30 países. STOKA es el representante
               exclusivo en Argentina: ingeniería, instalación y soporte técnico local sin depender de
               tiempos de fábrica en el exterior. Tecnología de clase mundial, precio para el mercado LATAM.
-              {' '}<Link to="/delie-argentina" className="text-cyan-400 hover:underline font-medium">
+              {' '}<LangLink to="/delie-argentina" className="text-cyan-400 hover:underline font-medium">
                 Ver más sobre DELIE en Argentina →
-              </Link>
+              </LangLink>
             </p>
           </motion.div>
         </div>
@@ -287,8 +325,8 @@ export const ProductoPage = () => {
       {/* FAQ */}
       <section className="bg-white py-16 px-6 border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Preguntas frecuentes</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Lo que pregunta un Director de Operaciones</h2>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('faqH2')}</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">{p('faqH2')}</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {data.faq.map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
@@ -308,15 +346,15 @@ export const ProductoPage = () => {
           <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Productos relacionados</h2>
           <div className="flex flex-wrap gap-3">
             {data.relacionados.map((rel, i) => (
-              <Link key={i} to={rel.url}
+              <LangLink key={i} to={rel.url}
                 className="inline-flex items-center gap-2 px-5 py-3 bg-white border border-gray-200 rounded-xl text-gray-700 text-sm font-bold hover:border-cyan-400 hover:text-cyan-600 transition-all">
                 {rel.nombre} <ChevronRight size={14} />
-              </Link>
+              </LangLink>
             ))}
-            <Link to={data.categoriaUrl}
+            <LangLink to={data.categoriaUrl}
               className="inline-flex items-center gap-2 px-5 py-3 bg-cyan-50 border border-cyan-200 rounded-xl text-cyan-700 text-sm font-bold hover:bg-cyan-100 transition-all">
               Ver toda la categoría: {data.categoriaLabel} <ChevronRight size={14} />
-            </Link>
+            </LangLink>
           </div>
         </div>
       </section>
@@ -333,11 +371,11 @@ export const ProductoPage = () => {
             Un ingeniero de STOKA analiza tu almacén, bodega o depósito y te responde en menos de 24 horas con orientación técnica inicial y estimación de ROI.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => navigate('/contacto')}
+            <button onClick={() => langNavigate('/contacto')}
               className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
               Consultar sobre {data.nombre} <ArrowRight size={14} />
             </button>
-            <button onClick={() => navigate(data.categoriaUrl)}
+            <button onClick={() => langNavigate(data.categoriaUrl)}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-600 text-sm font-bold hover:border-cyan-300 hover:text-gray-900 transition-all">
               Ver categoría completa
             </button>
@@ -353,7 +391,7 @@ export const ProductoPage = () => {
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6"
             onClick={() => setLightboxIdx(null)}>
             <div className="relative max-w-4xl w-full" onClick={e => e.stopPropagation()}>
-              <img
+              <img loading="lazy"
                 src={allImgs[lightboxIdx]}
                 alt="Vista ampliada"
                 className="w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl"

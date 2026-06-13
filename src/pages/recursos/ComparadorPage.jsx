@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const GS_URL = 'https://script.google.com/macros/s/AKfycbzhg3lF1NXpxytuxno8XakeIYEA_iMEomRYK5jNIdpbM8vGDufWx-MepBKodQEMAhReOw/exec';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { LangLink } from '../../lib/i18n-utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronLeft, CheckCircle, ArrowRight } from 'lucide-react';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
+import { SeoHead } from '../../lib/SeoHead';
 
 const PREGUNTAS = [
   {
@@ -160,6 +162,8 @@ function calcularRecomendacion(respuestas) {
 }
 
 export const ComparadorPage = () => {
+  const { t } = useTranslation();
+  const p = (k) => t(`pages.comparador.${k}`, { returnObjects: true });
   const [paso, setPaso] = useState(0);
   const [respuestas, setRespuestas] = useState({});
   const [terminado, setTerminado] = useState(false);
@@ -214,15 +218,13 @@ export const ComparadorPage = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      <SeoHead
+        title={p('metaTitle')}
+        description={p('metaDesc')}
+        basePath={'/recursos/comparador-sistemas'}
+      />
       <Helmet>
-        <title>Comparador de Sistemas ASRS | ¿Cuál necesitás? | STOKA</title>
-        <meta name="description" content="Elegí tipo de carga, altura y throughput y te recomendamos el sistema de almacenamiento automatizado ideal para tu operación." />
-        <meta property="og:title" content="Comparador de Sistemas ASRS | ¿Cuál necesitás? | STOKA" />
-        <meta property="og:description" content="Elegí tipo de carga, altura y throughput y te recomendamos el sistema de almacenamiento automatizado ideal para tu operación en Argentina." />
-        <meta property="og:url" content={canonical} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={canonical} />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+                                                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <Navbar />
@@ -230,20 +232,20 @@ export const ComparadorPage = () => {
       <section className="bg-white pt-36 pb-14 px-6 border-b border-gray-100">
         <div className="max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
-            <Link to="/" className="hover:text-cyan-500 transition-colors">Inicio</Link>
+            <LangLink to="/" className="hover:text-cyan-500 transition-colors">{t('nav.home')}</LangLink>
             <span>/</span>
-            <Link to="/recursos" className="hover:text-cyan-500 transition-colors">Recursos</Link>
+            <LangLink to="/recursos" className="hover:text-cyan-500 transition-colors">{t('nav.resources')}</LangLink>
             <span>/</span>
-            <span className="text-gray-600">Comparador</span>
+            <span className="text-gray-600">{p('breadcrumb')}</span>
           </nav>
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-5">
-            Transelevador · Shuttle · VLM · AGV · 5 preguntas
+            {p('heroTag')}
           </p>
           <h1 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-6">
-            Encontrá el sistema<br />
-            <span className="text-cyan-500">ASRS correcto</span>
+            {p('heroH1_a')}<br />
+            <span className="text-cyan-500">{p('heroH1_b')}</span>
           </h1>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto">Respondé 5 preguntas sobre tu operación y recibís la recomendación técnica personalizada.</p>
+          <p className="text-gray-500 text-lg max-w-xl mx-auto">{p('heroSub')}</p>
         </div>
       </section>
 
@@ -254,7 +256,7 @@ export const ComparadorPage = () => {
               {/* Progress */}
               <div className="mb-8">
                 <div className="flex justify-between text-xs text-gray-400 mb-2">
-                  <span>Pregunta {paso + 1} de {PREGUNTAS.length}</span>
+                  <span>{p('preguntaLabel')} {paso + 1} {p('de')} {PREGUNTAS.length}</span>
                   <span>{progreso}%</span>
                 </div>
                 <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
@@ -295,11 +297,11 @@ export const ComparadorPage = () => {
 
                   {paso > 0 && (
                     <button
-                      onClick={() => setPaso(p => p - 1)}
+                      onClick={() => setPaso(prev => prev - 1)}
                       className="mt-6 flex items-center gap-2 text-sm text-gray-400 hover:text-cyan-600 transition-colors"
                     >
                       <ChevronLeft size={14} />
-                      Volver a la pregunta anterior
+                      {p('volverPregunta')}
                     </button>
                   )}
                 </motion.div>
@@ -315,7 +317,7 @@ export const ComparadorPage = () => {
                 <div className="bg-cyan-50 border border-cyan-200 rounded-3xl p-8 mb-8">
                   <div className="flex items-center gap-3 mb-2">
                     <CheckCircle size={20} className="text-cyan-600" />
-                    <p className="text-xs font-mono text-cyan-600 uppercase tracking-widest">Tu recomendación</p>
+                    <p className="text-xs font-mono text-cyan-600 uppercase tracking-widest">{p('recTag')}</p>
                   </div>
                   <h2 className="text-3xl font-black text-gray-900 mb-4">{recomendacion.nombre}</h2>
                   <p className="text-gray-600 leading-relaxed mb-6">{recomendacion.descripcion}</p>
@@ -327,12 +329,12 @@ export const ComparadorPage = () => {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Link
+                    <LangLink
                       to={recomendacion.url}
                       className="flex items-center gap-2 justify-center bg-cyan-500 hover:bg-cyan-400 text-white font-bold px-6 py-3 rounded-xl transition-colors"
                     >
-                      Ver ficha técnica <ArrowRight size={16} />
-                    </Link>
+                      {p('verFicha')} <ArrowRight size={16} />
+                    </LangLink>
                     <a
                       href={`https://wa.me/5492612071048?text=${encodeURIComponent(`Hola, completé el comparador de sistemas ASRS de STOKA y me recomendaron: *${recomendacion.nombre}*. Me gustaría recibir más información para mi operación.`)}`}
                       target="_blank"
@@ -342,30 +344,30 @@ export const ComparadorPage = () => {
                       <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" className="shrink-0">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                       </svg>
-                      Consultar por WhatsApp
+                      {p('consultarWpp')}
                     </a>
                   </div>
                 </div>
 
                 {/* Alternative */}
                 <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5 mb-8">
-                  <p className="text-xs text-gray-400 uppercase tracking-widest mb-2">Alternativa a considerar</p>
-                  <Link
+                  <p className="text-xs text-gray-400 uppercase tracking-widest mb-2">{p('altTag')}</p>
+                  <LangLink
                     to={recomendacion.altUrl}
                     className="flex items-center justify-between group"
                   >
                     <span className="font-bold text-gray-900 group-hover:text-cyan-600 transition-colors">{recomendacion.alternativa}</span>
                     <ChevronRight size={16} className="text-cyan-500" />
-                  </Link>
+                  </LangLink>
                 </div>
 
                 {/* CTA */}
                 <div className="text-center bg-gray-50 border border-gray-200 rounded-2xl p-6">
-                  <p className="text-gray-500 mb-4 text-sm">¿Querés validar esta recomendación con datos reales de tu operación?</p>
-                  <p className="text-gray-900 font-semibold mb-5">Un ingeniero de STOKA analiza tu throughput real y te responde en 24 horas.</p>
-                  <Link to="/contacto" className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-bold px-8 py-4 rounded-xl transition-colors">
-                    Solicitar análisis técnico gratuito <ArrowRight size={16} />
-                  </Link>
+                  <p className="text-gray-500 mb-4 text-sm">{p('validarCTA')}</p>
+                  <p className="text-gray-900 font-semibold mb-5">{p('validarDesc')}</p>
+                  <LangLink to="/contacto" className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-bold px-8 py-4 rounded-xl transition-colors">
+                    {p('validarBtn')} <ArrowRight size={16} />
+                  </LangLink>
                 </div>
 
                 <button
@@ -373,7 +375,7 @@ export const ComparadorPage = () => {
                   className="mt-6 flex items-center gap-2 mx-auto text-sm text-gray-400 hover:text-cyan-600 transition-colors"
                 >
                   <ChevronLeft size={14} />
-                  Empezar de nuevo
+                  {p('empezarNuevo')}
                 </button>
               </motion.div>
             </AnimatePresence>

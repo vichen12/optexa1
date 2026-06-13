@@ -1,6 +1,7 @@
-import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useLangNavigate } from '../lib/i18n-utils';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
 const img = (cat, prod, file) => `/productos-delie/${cat}/${seg(prod)}/${file}`;
@@ -8,52 +9,52 @@ const img = (cat, prod, file) => `/productos-delie/${cat}/${seg(prod)}/${file}`;
 const CATEGORIES = [
   {
     id: 'estanterias',
+    descKey: 'asrsDesc',
     label: 'AS/RS',
     count: 12,
     image: '/n2025120811423550745.webp',
     href: '/catalogo/asrs',
-    desc: 'Estanterías AS/RS de 7 a 40 metros. Drive-in, shuttle, mezzanine.',
   },
   {
     id: 'vertical',
+    descKey: 'verticalDesc',
     label: 'Almacenamiento vertical',
     count: 2,
     image: img('almacenamiento-vertical', 'Carrusel vertical inteligente para almacenamiento automatizado de alta-densidad', '2025112714330825019.webp'),
     href: '/catalogo/almacenamiento-vertical',
-    desc: 'Carruseles verticales y módulos VLM. Hasta 90% menos espacio de suelo.',
   },
   {
     id: 'robots',
+    descKey: 'robotsDesc',
     label: 'Robots de manipulación',
     count: 14,
     image: img('robots-manipulacion', 'Robot lanzadera de cuatro direcciones-para paletas', 'pallet-four-way-shuttle-robotb829c.webp'),
     href: '/catalogo/robots-manipulacion',
-    desc: 'Grúas apiladoras, transelevadores MiniLoad, robots lanzadera y AMR.',
   },
   {
     id: 'transport',
+    descKey: 'transportDesc',
     label: 'Equipo de transporte',
     count: 10,
     image: img('equipo-transporte', 'Transportador de cadena', 'chain-conveyor9e540.webp'),
     href: '/catalogo/equipo-transporte',
-    desc: 'Elevadores, transportadores de cadena, rodillos y paletizadores.',
   },
   {
     id: 'sistema',
+    descKey: 'softwareDesc',
     label: 'Software inteligente',
     count: 6,
     image: img('software-inteligente', '(WMS) Sistema de gestión de almacenes', '2025112715331054f3e.webp'),
     href: '/catalogo/software',
-    desc: 'WMS, WCS, HMS y visualización 3D para control total del almacén.',
   },
 ];
 
 export const CatalogPreview = () => {
-  const navigate = useNavigate();
+  const { t } = useTranslation();
+  const langNavigate = useLangNavigate();
 
-  const goToCatalog = (cat) => {
-    const url = cat.href || `/catalogo?cat=${cat.id}`;
-    navigate(url);
+  const goTo = (href) => {
+    langNavigate(href);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -63,23 +64,23 @@ export const CatalogPreview = () => {
 
         <div className="mb-14">
           <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">
-            Catálogo de soluciones — Tecnología DELIE
+            {t('catalog.tag')}
           </p>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none">
-              Nuestras{' '}
+              {t('catalog.h2_a')}{' '}
               <span
                 className="text-transparent bg-clip-text"
                 style={{ backgroundImage: 'linear-gradient(to right, #22d3ee, #60a5fa)' }}
               >
-                Categorías
+                {t('catalog.h2_b')}
               </span>
             </h2>
             <button
-              onClick={() => navigate('/catalogo')}
+              onClick={() => langNavigate('/catalogo')}
               className="flex items-center gap-2 text-sm text-white/40 hover:text-cyan-400 transition-colors group"
             >
-              Ver catálogo completo
+              {t('catalog.viewAll')}
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -89,7 +90,7 @@ export const CatalogPreview = () => {
           {CATEGORIES.map((cat, i) => (
             <motion.button
               key={cat.id}
-              onClick={() => goToCatalog(cat)}
+              onClick={() => goTo(cat.href)}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -102,7 +103,7 @@ export const CatalogPreview = () => {
               ].join(' ')}
             >
               <div className="aspect-video overflow-hidden bg-gray-200">
-                <img
+                <img loading="lazy"
                   src={cat.image}
                   alt={cat.label}
                   className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
@@ -117,15 +118,15 @@ export const CatalogPreview = () => {
                     {cat.count}
                   </span>
                 </div>
-                <p className="text-white/55 text-xs leading-relaxed mb-3">{cat.desc}</p>
+                <p className="text-white/55 text-xs leading-relaxed mb-3">{t(`catalog.categories.${cat.descKey}`)}</p>
                 <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-300 group-hover:gap-2.5 transition-all">
-                  Ver productos <ArrowRight size={12} />
+                  {t('catalog.viewProducts')} <ArrowRight size={12} />
                 </span>
               </div>
             </motion.button>
           ))}
 
-          {/* Card YouTube DELIE */}
+          {/* YouTube DELIE card */}
           <motion.a
             href="https://www.youtube.com/@DELIECN"
             target="_blank"
@@ -138,7 +139,7 @@ export const CatalogPreview = () => {
           >
             <div className="aspect-video flex items-center justify-center bg-slate-800 relative overflow-hidden">
               <div className="absolute inset-0 bg-linear-to-br from-slate-700 to-slate-900" />
-              <img src="/image.png" alt="DELIE en YouTube — Instalaciones reales y casos de uso globales" className="relative z-10 w-32 object-contain" style={{ filter: 'brightness(1.1) saturate(1.2)' }} />
+              <img loading="lazy" src="/image.png" alt="DELIE en YouTube — Instalaciones reales y casos de uso globales" className="relative z-10 w-32 object-contain" style={{ filter: 'brightness(1.1) saturate(1.2)' }} />
               <div className="absolute top-3 right-3 w-9 h-9 bg-red-600 rounded-xl flex items-center justify-center shadow-lg">
                 <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4">
                   <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6a3 3 0 0 0-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/>
@@ -147,10 +148,10 @@ export const CatalogPreview = () => {
             </div>
             <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5">
-              <h3 className="text-white font-bold text-base leading-tight mb-1">DELIE en YouTube</h3>
-              <p className="text-white/55 text-xs leading-relaxed mb-3">Instalaciones reales, demos y casos de uso globales.</p>
+              <h3 className="text-white font-bold text-base leading-tight mb-1">{t('catalog.youtube.title')}</h3>
+              <p className="text-white/55 text-xs leading-relaxed mb-3">{t('catalog.youtube.desc')}</p>
               <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-red-400 group-hover:gap-2.5 transition-all">
-                Ver canal <ArrowRight size={12} />
+                {t('catalog.youtube.cta')} <ArrowRight size={12} />
               </span>
             </div>
           </motion.a>

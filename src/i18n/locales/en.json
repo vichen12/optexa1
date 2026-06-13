@@ -1,0 +1,3037 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "industries": "Industries",
+    "taxBenefits": "Tax Benefits",
+    "howWeWork": "How We Work",
+    "aboutUs": "About Us",
+    "resources": "Resources",
+    "viewCatalog": "View full catalog →",
+    "consult": "Contact",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu",
+    "catalogCategories": {
+      "asrs": "AS/RS Systems",
+      "robots": "Handling Robots",
+      "vertical": "Vertical Storage",
+      "transport": "Transport Equipment",
+      "software": "Intelligent Software"
+    },
+    "resourcesItems": {
+      "roi": "ROI Calculator",
+      "comparator": "System Comparator",
+      "blog": "Blog & Articles",
+      "cases": "Success Cases",
+      "glossary": "Technical Glossary"
+    },
+    "menu": "Menu",
+    "language": "Select language"
+  },
+  "hero": {
+    "badge": "Official DELIE Representative · Argentina",
+    "h1_line1": "Warehouse",
+    "h1_line2": "automation with",
+    "h1_line3": "DELIE technology",
+    "h1_line4": "in Argentina.",
+    "sub": "World-class technology at an accessible price. ASRS systems, robots and software for companies that need to operate better without paying European prices.",
+    "cta1": "Request Technical Consultation",
+    "cta2": "View Solutions Catalog",
+    "stats": {
+      "installations": "Global ASRS Installations",
+      "years": "DELIE Track Record",
+      "cheaper": "More affordable than Europe",
+      "cert": "Industrial Certification"
+    }
+  },
+  "roi": {
+    "tag": "Return on Investment",
+    "h2_a": "Automation",
+    "h2_b": "pays for itself",
+    "sub": "Real numbers from an operation that automated with DELIE.",
+    "exampleTag": "Real example · Distribution warehouse",
+    "space": "Space used",
+    "before": "m² before",
+    "after": "m² after",
+    "spaceSaving": "–85% floor space",
+    "rentSaving": "Monthly rent savings",
+    "perMonth": "per month",
+    "payback": "Return on investment",
+    "months": "months",
+    "noExpand": "Without expanding the facility",
+    "note": "Based on industrial rent rate of <strong>USD 8/m²/month</strong> and 24/7 operation.",
+    "metrics": {
+      "costLabel": "Cost reduction",
+      "costDesc": "Fewer errors, less labor intensive, less waste.",
+      "accuracyLabel": "Inventory accuracy",
+      "accuracyDesc": "Full traceability by lot, FIFO guaranteed.",
+      "densityLabel": "Storage density",
+      "densityDesc": "Same physical space, up to 3x more SKUs.",
+      "paybackLabel": "Months to payback",
+      "paybackDesc": "ROI proven in real operations."
+    }
+  },
+  "catalog": {
+    "tag": "Solutions Catalog — DELIE Technology",
+    "h2_a": "Our",
+    "h2_b": "Categories",
+    "viewAll": "View full catalog",
+    "viewProducts": "View products",
+    "youtube": {
+      "title": "DELIE on YouTube",
+      "desc": "Real installations, demos and global use cases.",
+      "cta": "View channel"
+    },
+    "categories": {
+      "asrsDesc": "AS/RS racks from 7 to 40 meters. Drive-in, shuttle, mezzanine.",
+      "verticalDesc": "Vertical carousels and VLM modules. Up to 90% less floor space.",
+      "robotsDesc": "Stacker cranes, MiniLoad stackers, shuttle robots and AMR.",
+      "transportDesc": "Elevators, chain conveyors, rollers and palletizers.",
+      "softwareDesc": "WMS, WCS, HMS and 3D visualization for total warehouse control."
+    }
+  },
+  "value": {
+    "tag": "Why STOKA",
+    "h2_a": "The difference that",
+    "h2_b": "matters",
+    "pillars": {
+      "p1title": "Direct Manufacturer",
+      "p1body": "DELIE manufactures, STOKA integrates. Direct access to the manufacturer without intermediaries: factory warranty, original parts and local technical support in Argentina.",
+      "p1stat": "global installations",
+      "p2title": "30–50% more affordable",
+      "p2body": "Same technology as Europe and the US, with Chinese manufacturing costs and local commercialization. Price is no longer the barrier.",
+      "p2stat": "vs. European solutions",
+      "p3title": "Local Engineering",
+      "p3body": "Team in Argentina. Turnkey projects: design, installation, WMS/WCS integration, training and after-sales support in your language.",
+      "p3stat": "local technical support"
+    }
+  },
+  "industries": {
+    "tag": "Sectors we automate",
+    "h2_a": "Industries we",
+    "h2_b": "serve",
+    "viewAll": "View all industries",
+    "viewSolutions": "View solutions",
+    "items": {
+      "ecommerceDesc": "Speed, accuracy and capacity for peak demand.",
+      "logisticsDesc": "Multi-client, multi-product. Maximum operational flexibility.",
+      "manufacturingDesc": "Just-in-time and automated kanban for production.",
+      "foodDesc": "FIFO guaranteed and full traceability by lot.",
+      "pharmaDesc": "GMP, FIFO/FEFO and certified controlled temperature.",
+      "miningDesc": "Critical spare parts available 24/7 error-free.",
+      "coldDesc": "Robots that operate at -30°C without staff exposure."
+    }
+  },
+  "benefits": {
+    "tag": "Tax Benefits · Argentina 2026",
+    "h2_a": "Invest with the",
+    "h2_b": "State on your side",
+    "sub": "Argentina's regulatory framework in 2026 creates unique conditions to automate your logistics operation.",
+    "rigiTitle": "30-year Tax Stability",
+    "rigiBody": "Accelerated depreciation, 30-year tax stability and immediate VAT deduction for industrial automation projects.",
+    "decretoTitle": "Reduced Tariffs for Capital Goods",
+    "decretoBody": "ASRS systems and automation equipment may access reduced or zero tariffs under their tariff classification (Decree 513/2025).",
+    "biceTitle": "Up to 10-year Financing",
+    "biceBody": "Investment Bank credit line with preferential rates and terms of up to 10 years for industrial automation projects.",
+    "combinableTag": "Benefits combinable in the same project",
+    "combinableText": "Real savings depend on each company's tax structure.",
+    "combinableSub": "We help you evaluate it at no cost.",
+    "viewGuide": "View complete benefits guide"
+  },
+  "process": {
+    "tag": "Working Methodology",
+    "h2_a": "From consultation to",
+    "h2_b": "operational launch",
+    "viewFull": "View complete methodology",
+    "viewDetail": "View each phase in detail",
+    "steps": {
+      "s1title": "Initial Consultation",
+      "s1sub": "Free · 24 hours",
+      "s2title": "Technical Diagnosis",
+      "s2sub": "On-site survey",
+      "s3title": "Design & Proposal",
+      "s3sub": "Selection + ROI",
+      "s4title": "Installation",
+      "s4sub": "Engineering + assembly",
+      "s5title": "Commissioning",
+      "s5sub": "Assisted startup",
+      "s6title": "Ongoing Support",
+      "s6sub": "After-sales 24/7"
+    }
+  },
+  "cta": {
+    "ready": "Ready to get started?",
+    "heading": "Free",
+    "headingAccent": "Consultation",
+    "sub": "Get a technical response from our team within 24 hours.",
+    "btn1": "Request Technical Consultation",
+    "btn2": "View Full Catalog"
+  },
+  "footer": {
+    "tagline": "Official exclusive representatives of DELIE in Argentina and Chile. 100% local technical support.",
+    "catalog": "Catalog",
+    "industries": "Industries",
+    "resources": "Resources",
+    "company": "Company",
+    "location": "Location — Mendoza, Argentina",
+    "copyright": "© {{year}} STOKA — Official DELIE Representative in Argentina",
+    "address": "Carril Rodríguez Peña 35, Maipú, Mendoza",
+    "catalogLinks": {
+      "asrs": "AS/RS Systems",
+      "robots": "Handling Robots",
+      "vertical": "Vertical Storage",
+      "transport": "Transport Equipment",
+      "software": "WMS / WCS Software"
+    },
+    "industriesLinks": {
+      "ecommerce": "E-commerce & Retail",
+      "logistics": "3PL Logistics",
+      "manufacturing": "Manufacturing",
+      "food": "Food & Beverages",
+      "pharma": "Pharmaceutical",
+      "mining": "Mining & Oil & Gas",
+      "cold": "Cold Chain"
+    },
+    "resourcesLinks": {
+      "roi": "ROI Calculator",
+      "comparator": "System Comparator",
+      "blog": "Blog & Articles",
+      "cases": "Success Cases",
+      "glossary": "Technical Glossary"
+    },
+    "companyLinks": {
+      "about": "About Us",
+      "howWeWork": "How We Work",
+      "taxBenefits": "Tax Benefits",
+      "contact": "Contact",
+      "delie": "DELIE in Argentina",
+      "chile": "Chile Automation"
+    }
+  },
+  "wpp": {
+    "writeUs": "Message us on WhatsApp",
+    "namePlaceholder": "Your name *",
+    "companyPlaceholder": "Company (optional)",
+    "phonePlaceholder": "Your phone *",
+    "msgPlaceholder": "Message (optional)",
+    "openWhatsApp": "Open WhatsApp",
+    "writeEmail": "Email us",
+    "openGmail": "Open Gmail",
+    "directWpp": "Direct WhatsApp",
+    "emailSubject": "Inquiry from stokagroup.com",
+    "emailBody": "Hello STOKA team,\n\nI am contacting you from the website to inquire about warehouse automation.\n\nName: \nPhone: \nCompany: \n\nInquiry: "
+  },
+  "leadPopup": {
+    "title": "Quick contact",
+    "sub": "We respond in < 2 hours",
+    "close": "Close",
+    "selectedProduct": "Selected product",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "sectorPlaceholder": "Your sector / industry",
+    "submit": "Send and open WhatsApp",
+    "done": "Done!",
+    "opening": "Opening WhatsApp..."
+  },
+  "contact": {
+    "tag": "Contact",
+    "h2_a": "Start your",
+    "h2_b": "Project",
+    "wppTag": "Direct WhatsApp",
+    "online": "Online now",
+    "name": "Full name",
+    "company": "Company",
+    "email": "Corporate email",
+    "phone": "Phone / WhatsApp",
+    "country": "Country",
+    "province": "Province / State",
+    "sector": "Sector / Industry",
+    "queryType": "Type of inquiry",
+    "message": "Message",
+    "howFound": "How did you find us?",
+    "submit": "Send inquiry",
+    "successMsg": "Inquiry received! Our team will respond in less than 2 hours.",
+    "errorMsg": "Sending error. Please try again or message us on WhatsApp.",
+    "sectors": [
+      "E-commerce & Retail",
+      "3PL Logistics",
+      "Industrial Manufacturing",
+      "Food & Beverages",
+      "Pharmaceutical",
+      "Mining & Oil & Gas",
+      "Cold Chain",
+      "Other"
+    ],
+    "queryTypes": [
+      "ASRS system quote",
+      "General technical inquiry",
+      "WMS/WCS integration with my ERP",
+      "Technical visit to my facility",
+      "Tax benefits information",
+      "BICE financing",
+      "Other"
+    ],
+    "howFoundOptions": [
+      "Google / web search",
+      "LinkedIn",
+      "Colleague referral",
+      "Trade show or industrial event",
+      "Social media",
+      "Other"
+    ],
+    "techInquiries": "Technical inquiries",
+    "responseTime": "Response in less than 2 hours",
+    "freeConsult": "First technical consultation free. Our engineers analyze each case personally.",
+    "namePlaceholder": "Your name",
+    "companyPlaceholder": "Your organization",
+    "countryPlaceholder": "Country",
+    "provincePlaceholder": "Province / State",
+    "selectPlaceholder": "Select",
+    "queryTypePlaceholder": "What do you need?",
+    "messagePlaceholder": "Describe your operation, SKU volume, available m²...",
+    "sending": "Sending...",
+    "successTitle": "Inquiry received!"
+  },
+  "home": {
+    "seoTag": "STOKA · DELIE Representatives in Argentina",
+    "h2": "Warehouse automation for industrial storage in Argentina and Chile",
+    "seoPara": "Official exclusive representative of DELIE — one of the world's largest-scale ASRS system manufacturers. 100% local engineering, installation and support in Argentina and Chile.",
+    "stats": {
+      "installations": "DELIE Global Installations",
+      "countries": "Countries with presence",
+      "height": "Max. rack height",
+      "cert": "WMS/WCS software certification"
+    },
+    "challengesTag": "3 Historic challenges · 3 concrete solutions",
+    "challenges": [
+      {
+        "num": "01",
+        "challenge": "Import cost",
+        "solution": "Decree 513/2025 eliminates tariffs for ASRS systems — savings of 12% to 18% on equipment value."
+      },
+      {
+        "num": "02",
+        "challenge": "No local technical support",
+        "solution": "STOKA's engineering team is in Argentina for the project, installation and after-sales. No intermediaries."
+      },
+      {
+        "num": "03",
+        "challenge": "Regulatory uncertainty",
+        "solution": "The RIGI offers 30 years of tax stability. RIMI allows 100% depreciation of the asset in the first fiscal year."
+      }
+    ],
+    "systemsTag": "Systems we install",
+    "roiTag": "Typical return on investment",
+    "roiMonths": "months",
+    "roiSub": "First consultation free · Response in less than 24 hours",
+    "processTag": "Our process",
+    "processSteps": [
+      "Throughput and SKU profile diagnosis",
+      "Peak analysis and layout constraints",
+      "10-year TCO with verifiable assumptions",
+      "Flow simulation and projected ROI"
+    ],
+    "fiscalTag": "Tax Context · Argentina 2026",
+    "fiscal": [
+      {
+        "label": "Decree 513/2025",
+        "detail": "Reduced or zero tariffs for ASRS equipment · savings of 12% to 18%"
+      },
+      {
+        "label": "RIMI · Law 27.802",
+        "detail": "Capital asset depreciation in the first fiscal year"
+      },
+      {
+        "label": "BICE Credit Line",
+        "detail": "Up to 80% financing over 10 years · payment less than replaced labor cost"
+      }
+    ],
+    "fiscalLink": "View complete tax benefits guide",
+    "chileTag": "Operations in Chile",
+    "chile": [
+      {
+        "ind": "Mining",
+        "desc": "Spare parts warehouses in remote areas with restricted access. High density, critical inventory."
+      },
+      {
+        "ind": "Wine Industry",
+        "desc": "High-density warehouses without expanding footprint. FIFO and traceability by lot and vintage."
+      },
+      {
+        "ind": "Export Agribusiness",
+        "desc": "Cold chain with automatic FIFO for origin certification. Compliance with phytosanitary regulations."
+      }
+    ],
+    "chileNote": "DELIE systems comply with Chile's local regulations on electrical safety and capital goods importation.",
+    "links": {
+      "cases": "Real success cases",
+      "glossary": "Technical glossary",
+      "comparator": "System comparator",
+      "fiscalBenefits": "Tax benefits 2026"
+    },
+    "tabAway": "We miss you! Come back 👋",
+    "pageTitle": "ASRS Systems and Warehouse Automation in Argentina | STOKA",
+    "metaDesc": "ASRS systems for warehouse automation in Argentina and Chile. DELIE stacker cranes, shuttle robots, VLM and WMS/WCS software with local STOKA support."
+  },
+  "pages": {
+    "breadcrumb": {
+      "home": "Home"
+    },
+    "nosotros": {
+      "metaTitle": "STOKA Group | ASRS Engineering Argentina | About Us",
+      "metaDesc": "STOKA: 100% local engineering, installation and support for ASRS systems in Argentina and Chile. Exclusive DELIE representatives. Turnkey projects.",
+      "breadcrumb": "About Us",
+      "whoWeAre": "Who we are",
+      "h1_a": "STOKA",
+      "h1_b": "Argentina",
+      "tagline": "Official exclusive representatives of DELIE in Argentina. World-class warehouse automation technology with 100% local engineering and support.",
+      "stats": {
+        "installations": "DELIE Global Installations",
+        "countries": "Countries with presence",
+        "local": "Local engineering & support",
+        "founded": "DELIE founding year"
+      },
+      "officialRep": "Official representative",
+      "officialRepCountry": "Argentina",
+      "missionTag": "Our mission",
+      "missionH2": "Democratizing logistics automation in Argentina",
+      "missionPara": "No company should lose competitiveness by being unable to access technology that until now was reserved for multinationals. World-class ASRS systems are now accessible to Argentine industry: distribution warehouses, manufacturing storage and 3PL depots.",
+      "quote": "\"Top-tier Asian manufacturing + local engineering and support = the smartest way to automate in Argentina: maximum technology, minimum risk.\"",
+      "requirementsTag": "What an ASRS integrator in Argentina must guarantee",
+      "requirements": [
+        {
+          "label": "Local regulatory context",
+          "desc": "Tariffs, AFIP and current tax benefits."
+        },
+        {
+          "label": "Import management",
+          "desc": "Customs processing and import logistics."
+        },
+        {
+          "label": "Same-day technical support",
+          "desc": "Technicians in Argentina, not dependent on the factory."
+        },
+        {
+          "label": "Industry knowledge",
+          "desc": "Constraints and realities of national operations."
+        }
+      ],
+      "delieTag": "DELIE · Exclusive representation Argentina and Chile",
+      "deliePara": "STOKA is the exclusive representative of DELIE in Argentina and Chile. World-class ASRS technology at prices 30–50% more accessible than European alternatives, with 100% local technical support guaranteed from Argentina.",
+      "valuesTag": "How we work",
+      "valuesH2": "Our values",
+      "values": [
+        {
+          "title": "Applied engineering",
+          "desc": "We don't sell boxes. We design custom solutions for each operation, with ROI calculation and 3D layout before any investment."
+        },
+        {
+          "title": "Full transparency",
+          "desc": "Clear prices, realistic timelines and 10-year TCO from the proposal. No surprises during installation or after-sales support."
+        },
+        {
+          "title": "Local response",
+          "desc": "Technical support in Argentina. No dependency on factory lead times or time zones to solve any problem."
+        },
+        {
+          "title": "World-class technology",
+          "desc": "Access to the same technology used by large global multinationals, at prices 30–50% more accessible than European alternatives."
+        }
+      ],
+      "ourManufacturer": "Our manufacturer",
+      "delieH2_a": "DELIE —",
+      "delieH2_b": "Global ASRS Manufacturer",
+      "deliePara2": "Founded in 2003, DELIE is one of the world's leading manufacturers of automated storage systems. With over 1,000 installations in more than 30 countries, it combines industrial robustness, proprietary WMS/WCS software and a complete product line: stacker cranes, shuttle robots, AMR, VLM, conveyors and racks up to 40 meters.",
+      "delieRegions": "Asia · Europe · America · Middle East",
+      "delieStats": {
+        "founded": "DELIE founding year",
+        "installations": "Global installations",
+        "countries": "Countries with presence",
+        "height": "Max. installation height"
+      }
+    },
+    "howWeWork": {
+      "metaTitle": "How We Work | Turnkey ASRS Project | STOKA",
+      "metaDesc": "6-step methodology: consultation, engineering, installation and after-sales support. Turnkey ASRS projects in Argentina and Chile.",
+      "breadcrumb": "How we work",
+      "methodologyTag": "Methodology · 6 phases",
+      "h1_a": "From consultation",
+      "h1_b": "to launch",
+      "intro": "A structured 6-phase process that guarantees predictable results, no surprises and local technical support at every stage.",
+      "readyTag": "Ready to get started?",
+      "readyH2_a": "Free",
+      "readyH2_b": "Consultation",
+      "readyPara": "In 24 hours you get a technical response from our engineering team, with no commitment.",
+      "btn1": "Request Technical Consultation",
+      "btn2": "View Full Catalog",
+      "steps": [
+        {
+          "tag": "Phase 01",
+          "title": "Initial Consultation",
+          "subtitle": "Free · Response in 24 hours",
+          "detail": "Fill in the contact form or write to us directly. In less than 24 hours an engineer responds to understand your operation at a high level: type of warehouse or depot, SKU volume, throughput and automation goals.",
+          "logs": [
+            "30-minute meeting or call with the technical team",
+            "Initial technical questionnaire sent by email",
+            "First technology guidance with no commitment or cost"
+          ]
+        },
+        {
+          "tag": "Phase 02",
+          "title": "Technical Diagnosis",
+          "subtitle": "On-site or remote survey",
+          "detail": "We analyze historical movement data, SKU catalog, demand peaks and existing warehouse layout. We measure current KPIs to establish the project baseline and identify real bottlenecks.",
+          "logs": [
+            "Analysis of SKU history and daily throughput",
+            "Measurement of current KPIs: errors, times, space used",
+            "Documentation of existing layout constraints"
+          ]
+        },
+        {
+          "tag": "Phase 03",
+          "title": "Design & Proposal",
+          "subtitle": "Technology selection + projected ROI",
+          "detail": "We evaluate technology alternatives based on the operation's profile. We calculate the 10-year TCO and projected return on investment to select the optimal solution. The proposal includes a 3D layout and flow simulation.",
+          "logs": [
+            "Evaluation of applicable ASRS technologies for the case",
+            "10-year TCO and projected ROI calculation with transparent assumptions",
+            "Technical and commercial proposal with 3D layout included"
+          ]
+        },
+        {
+          "tag": "Phase 04",
+          "title": "Installation",
+          "subtitle": "Detail engineering + certified assembly",
+          "detail": "We coordinate detailed engineering, mechanical and electrical installation, integration with the existing ERP/WMS and FAT (factory) and SAT (site) acceptance tests before launch.",
+          "logs": [
+            "Mechanical and electrical installation with certified team",
+            "ERP/WMS integration for the client (SAP, Oracle and others)",
+            "Factory FAT and site SAT before operational launch"
+          ]
+        },
+        {
+          "tag": "Phase 05",
+          "title": "Commissioning",
+          "subtitle": "Assisted operational startup",
+          "detail": "We accompany the startup with direct technical support and real-time parameter adjustment. We are on-site during the first days to ensure a smooth transition and train staff.",
+          "logs": [
+            "On-site support during the first operational days",
+            "Parameter adjustment and fine calibration of the system",
+            "Final training of operational staff and supervisors"
+          ]
+        },
+        {
+          "tag": "Phase 06",
+          "title": "Support & Optimization",
+          "subtitle": "Permanent after-sales service",
+          "detail": "Remote KPI monitoring, scheduled preventive maintenance and 24/7 local technical support. Continuous analysis of real data to optimize the system and maximize return throughout the equipment's useful life.",
+          "logs": [
+            "Remote KPI monitoring and early alerts 24/7",
+            "Scheduled preventive maintenance with local parts",
+            "Continuous optimization based on real operational data"
+          ]
+        }
+      ]
+    },
+    "contactPage": {
+      "metaTitle": "Contact | Request ASRS Consultation | STOKA Argentina",
+      "metaDesc": "Contact STOKA to quote ASRS systems, robots and WMS/WCS software for your warehouse in Argentina."
+    },
+    "catalog": {
+      "metaTitle": "Automation Catalog | DELIE ASRS Systems | STOKA Argentina",
+      "metaDesc": "Complete catalog of ASRS systems, robots, vertical storage, transport equipment and DELIE WMS/WCS software for warehouse automation in Argentina.",
+      "tag": "Catalog",
+      "h1": "Automation Catalog",
+      "stats": {
+        "categories": "Categories",
+        "products": "Products",
+        "projects": "Global Projects"
+      },
+      "heroTag": "Official DELIE Representatives · Argentina",
+      "heroH1_a": "Automation",
+      "heroH1_b": "Catalog",
+      "heroSub": "World-class AS/RS systems, vertical storage, robots and software — with local support in Argentina.",
+      "faqTag": "Frequently asked questions",
+      "faqH2": "Automation catalog Argentina",
+      "faq": [
+        {
+          "q": "Can I combine systems from different categories in the same warehouse?",
+          "a": "Yes, this is the most common approach in complex projects. For example: unit-load stackers for pallets in mass storage + shuttle robots for high-rotation SKUs + VLM for spare parts, all coordinated by the DELIE WMS. System integration is part of the turnkey project."
+        },
+        {
+          "q": "What is the minimum warehouse size for automation to make sense?",
+          "a": "There is no square meter threshold. What determines viability is movement volume (generally over 300-500 moves/day), current manual operation cost, and available clear height. STOKA performs the ROI analysis free of charge before any proposal."
+        },
+        {
+          "q": "Are all catalog products available in Argentina?",
+          "a": "Yes. STOKA is the exclusive representative of DELIE in Argentina and Chile. All catalog systems — stackers, shuttle robots, VLM, conveyors and WMS/WCS software — can be installed locally with 100% local engineering, installation and support."
+        },
+        {
+          "q": "Does the catalog include management software or only physical equipment?",
+          "a": "Both. DELIE has its own WMS (inventory and order management) and WCS (physical equipment control) certified at CMMI Level 5. They integrate with your existing ERP. There are also 3D visualization solutions and an HMS module for AMR robot fleets."
+        },
+        {
+          "q": "Can the system be expanded in the future without stopping operations?",
+          "a": "Yes, all DELIE systems are modular. A warehouse can start with 2 stacker aisles and scale to 10 without stopping operations. The WMS manages capacity expansion transparently for the existing operation."
+        }
+      ],
+      "consultarWpp": "Ask on WhatsApp",
+      "categoriesH2_a": "Our",
+      "categoriesH2_b": "Categories",
+      "allCategories": "All categories",
+      "allShort": "All"
+    },
+    "solutions": {
+      "metaTitle": "ASRS Solutions for your Industry | STOKA Argentina",
+      "metaDesc": "ASRS warehouse automation solutions for e-commerce, logistics, manufacturing, food and pharmaceutical in Argentina."
+    },
+    "beneficios": {
+      "metaTitle": "Tax Benefits for Automation | RIGI, RIMI, BICE | STOKA",
+      "metaDesc": "Save on ASRS system imports with Decree 513/2025, RIGI and RIMI in Argentina. STOKA helps you leverage all tax benefits.",
+      "h1": "Tax Benefits",
+      "breadcrumb": "Tax Benefits"
+    },
+    "industrias": {
+      "metaTitle": "Automation by Industry | ASRS for your Sector | STOKA",
+      "metaDesc": "ASRS systems and warehouse automation for e-commerce, 3PL logistics, manufacturing, food, pharmaceutical, mining and cold chain in Argentina.",
+      "h1": "Industries",
+      "breadcrumb": "Industries",
+      "heroTag": "Sectors we automate · Argentina",
+      "heroH1_a": "Solutions for",
+      "heroH1_b": "your industry",
+      "heroSub": "Each sector has its own storage challenges. See how DELIE technology solves them with local engineering.",
+      "heroStats": {
+        "industries": "Industries",
+        "projects": "Global projects",
+        "operation": "Continuous operation"
+      },
+      "pillars": [
+        {
+          "title": "Local implementation",
+          "desc": "Engineering, installation and support in Argentina. No waiting for factory lead times."
+        },
+        {
+          "title": "ISO 9001 · CE certified",
+          "desc": "DELIE manufacturer with over 1,000 projects in 30 countries and dual certification."
+        },
+        {
+          "title": "Proven ROI",
+          "desc": "Average return on investment between 18 and 36 months depending on sector and volume."
+        }
+      ],
+      "sectorTag": "7 sectors · DELIE Argentina",
+      "sectorH2": "Choose your industry",
+      "ctaTag": "Can't find your sector?",
+      "ctaH2_a": "We work with",
+      "ctaH2_b": "any industry",
+      "ctaSub": "If your sector isn't on the list, contact us anyway. DELIE systems are configurable for virtually any type of storage.",
+      "ctaBtn": "Discuss my case",
+      "industriesList": {
+        "e-commerce-retail": {
+          "tagline": "Speed and accuracy for peak demand.",
+          "desc": "Triple picking speed and scale without hiring staff on key dates like Black Friday or CyberMonday.",
+          "name": "E-commerce & Retail"
+        },
+        "logistica-3pl": {
+          "tagline": "Multi-client, multi-product. Maximum flexibility.",
+          "desc": "Operate multiple clients in the same warehouse with dynamic slots and real-time per-client reports.",
+          "name": "Logistics & 3PL"
+        },
+        "manufactura": {
+          "tagline": "Just-in-time and automated kanban.",
+          "desc": "Synchronize the input warehouse with your production line and eliminate stoppages due to material shortages.",
+          "name": "Manufacturing"
+        },
+        "alimentos-bebidas": {
+          "tagline": "FIFO guaranteed. Full traceability.",
+          "desc": "Automatic FIFO, real-time lot traceability and expiry alerts for zero waste.",
+          "name": "Food & Beverage"
+        },
+        "farmaceutica": {
+          "tagline": "GMP, FEFO and controlled temperature.",
+          "desc": "GMP compliance, automatic FEFO and complete audit trail for FDA, ANMAT and international regulations.",
+          "name": "Pharmaceutical"
+        },
+        "mineria-oil-gas": {
+          "tagline": "Critical spare parts available 24/7.",
+          "desc": "Locate any spare part in seconds and eliminate equipment downtime due to missing stock.",
+          "name": "Mining, Oil & Gas"
+        },
+        "cadena-frio": {
+          "tagline": "Robots operating at -30°C without exposure.",
+          "desc": "Maximize every m³ of refrigerated space while eliminating staff exposure to extreme cold.",
+          "name": "Cold Chain"
+        }
+      }
+    },
+    "casos": {
+      "metaTitle": "Success Cases | DELIE ASRS Installations | STOKA Argentina",
+      "metaDesc": "Real results from ASRS projects in manufacturing, logistics and e-commerce. +1,000 global DELIE installations.",
+      "h1": "Success Cases",
+      "breadcrumb": "Success Cases",
+      "statsTag": "+1,000 installations",
+      "casesTitle": "9 cases that prove it"
+    },
+    "chile": {
+      "metaTitle": "Warehouse Automation in Chile | ASRS DELIE Systems | STOKA",
+      "metaDesc": "DELIE logistics automation systems for warehouses in Chile. ASRS, manipulation robots, and WMS software with local technical support. Request a free",
+      "h1": "Automation in Chile",
+      "breadcrumb": "Chile",
+      "breadcrumbHome": "Home",
+      "heroTag": "CHILE · WAREHOUSE AUTOMATION",
+      "heroH1_a": "AUTOMATION",
+      "heroH1_b": "FOR CHILE",
+      "heroSub": "DELIE ASRS systems and manipulation robots for Chilean warehouses. Diagnosis, engineering and implementation with in-country technical support.",
+      "heroBtnPrimary": "Schedule diagnosis",
+      "heroBtnSecondary": "View catalog",
+      "stats": [
+        {
+          "v": "2+",
+          "l": "Projects in Chile"
+        },
+        {
+          "v": "24/7",
+          "l": "Technical support"
+        },
+        {
+          "v": "-60%",
+          "l": "Cost reduction"
+        },
+        {
+          "v": "10+",
+          "l": "Years of experience"
+        }
+      ],
+      "whyTag": "LOCAL ADVANTAGES",
+      "whyH2": "WHY CHOOSE STOKA IN CHILE?",
+      "whyItems": [
+        "Diagnosis and engineering project entirely in Spanish, without international intermediaries.",
+        "Direct import from DELIE factory with local customs management and no extra costs.",
+        "On-site technical support available in Santiago, Valparaíso, Concepción and other cities.",
+        "Adaptation to Chilean industrial safety regulations (SUSESO, ARICA, etc.).",
+        "Integration with ERP and WMS systems used in Chile (SAP, Oracle, local).",
+        "Financing compatible with the Productive Investment Promotion Law."
+      ],
+      "sectorsTag": "SECTORS",
+      "sectorsH2": "INDUSTRIES WE AUTOMATE IN CHILE",
+      "sectorViewSolution": "View solution",
+      "sectors": [
+        {
+          "title": "Mining & supplies",
+          "desc": "Management of spare parts, supplies and PPE for large-scale mining operations.",
+          "url": "/industrias/manufactura"
+        },
+        {
+          "title": "Food & retail",
+          "desc": "Distribution centers for fresh, frozen and mass consumer products.",
+          "url": "/industrias/alimentos-bebidas"
+        },
+        {
+          "title": "Pharmaceutical & health",
+          "desc": "Batch, expiry, and cold chain control for medicines and medical devices.",
+          "url": "/industrias/farmaceutica"
+        },
+        {
+          "title": "Logistics & distribution",
+          "desc": "Logistics operators looking to automate their facilities for multiple clients.",
+          "url": "/industrias/distribucion"
+        },
+        {
+          "title": "Industrial manufacturing",
+          "desc": "Raw material, finished product and WIP warehouses for continuous manufacturing plants.",
+          "url": "/industrias/manufactura"
+        },
+        {
+          "title": "Wine & beverages",
+          "desc": "Warehouses for bottles, cases and bulk for wine and beverage industry.",
+          "url": "/industrias/alimentos-bebidas"
+        }
+      ],
+      "systemsTag": "AVAILABLE SYSTEMS",
+      "systemsH2": "TECHNOLOGY AVAILABLE IN CHILE",
+      "systems": [
+        {
+          "name": "AS/RS Unit-Load (Stacker Cranes)",
+          "desc": "For standard pallets. High density and throughput in medium and large-scale warehouses."
+        },
+        {
+          "name": "Miniload AS/RS",
+          "desc": "For boxes, trays and high-volume picking. Ideal for pharmaceutical, e-commerce and spare parts."
+        },
+        {
+          "name": "Pallet Shuttle System",
+          "desc": "High-density storage for homogeneous products. FIFO or LIFO according to operation."
+        },
+        {
+          "name": "WMS / Management software",
+          "desc": "Warehouse management software integrable with SAP, Oracle and other market ERPs."
+        }
+      ],
+      "faqH2": "FREQUENTLY ASKED QUESTIONS — CHILE",
+      "faq": [
+        {
+          "q": "Does STOKA have a physical presence in Chile?",
+          "a": "Yes. We have commercial and technical representation in Chile for diagnosis, sales, installation and after-sales support. No need to manage from Argentina."
+        },
+        {
+          "q": "Do DELIE systems comply with Chilean regulations?",
+          "a": "Yes. The systems are adapted to the industrial safety and construction standards in force in Chile, including specific seismic requirements for permanent installations."
+        },
+        {
+          "q": "What is the delivery time for projects in Chile?",
+          "a": "It depends on scale. Medium projects (5,000–20,000 positions) have a delivery time of 8–14 months from contract signing, including manufacturing, import and installation."
+        },
+        {
+          "q": "Can an automation project be financed in Chile?",
+          "a": "Yes. We work with leasing options, bank credit, and in some cases with CORFO and other public agency investment promotion lines."
+        }
+      ]
+    },
+    "delie": {
+      "metaTitle": "DELIE Argentina | Official Representative | STOKA",
+      "metaDesc": "STOKA is the exclusive representative of DELIE in Argentina and Chile. Leading global ASRS systems with local technical support, local financing and factory",
+      "h1": "DELIE in Argentina",
+      "breadcrumb": "DELIE Argentina",
+      "breadcrumbHome": "Home",
+      "heroTag": "DELIE IN ARGENTINA · EXCLUSIVE REPRESENTATION",
+      "heroH1_a": "DELIE TECHNOLOGY",
+      "heroH1_b": "WITH LOCAL SUPPORT",
+      "heroSub": "We import, implement and support DELIE ASRS systems in Argentina and Chile. Direct access to the manufacturer with first-class local technical support.",
+      "metrics": [
+        {
+          "value": "30+",
+          "label": "Countries with DELIE"
+        },
+        {
+          "value": "2,000+",
+          "label": "Installed projects"
+        },
+        {
+          "value": "30 years",
+          "label": "Global experience"
+        },
+        {
+          "value": "100%",
+          "label": "Local support"
+        }
+      ],
+      "capacidadesTag": "DELIE CAPABILITIES",
+      "capacidadesH2": "A COMPLETE LINE OF AUTOMATION",
+      "capacidadesSub": "DELIE manufactures and designs solutions for the full spectrum of logistics automation.",
+      "capacidades": [
+        {
+          "title": "Pallet & Box AS/RS",
+          "desc": "Stacker cranes, Pallet Shuttle and Miniload for automated high-density storage at any scale."
+        },
+        {
+          "title": "Integrated WMS software",
+          "desc": "Proprietary WMS integrable with SAP, Oracle and any ERP. Real-time control of inventory, batches and traceability."
+        },
+        {
+          "title": "Certified global presence",
+          "desc": "Certified installations in Europe, Asia, America and Oceania. Over 2,000 projects with availability above 99%."
+        },
+        {
+          "title": "Temperature-controlled solutions",
+          "desc": "ASRS systems for positive and negative cold, pharmaceutical cold chain and cryogenic storage."
+        }
+      ],
+      "globalTag": "GLOBAL PRESENCE",
+      "globalPresence": "DELIE operates in over 30 countries on 5 continents",
+      "globalStats": [
+        {
+          "value": "30+",
+          "label": "Countries"
+        },
+        {
+          "value": "2,000+",
+          "label": "Projects"
+        },
+        {
+          "value": "30 years",
+          "label": "Experience"
+        },
+        {
+          "value": "5",
+          "label": "Continents"
+        }
+      ],
+      "whyTag": "LOCAL ADVANTAGE",
+      "whyH2": "WHY CHOOSE DELIE WITH LOCAL SUPPORT",
+      "whyItems": [
+        {
+          "label": "No international intermediaries",
+          "desc": "Buy directly from the exclusive representative. No distributor markups, with factory pricing and direct support."
+        },
+        {
+          "label": "Engineering in your language",
+          "desc": "The entire process—diagnosis, engineering, installation and support—in Spanish, with local engineers."
+        },
+        {
+          "label": "Parts and spares in stock",
+          "desc": "We maintain critical spare parts inventory in Argentina to minimize downtime in case of any failure."
+        },
+        {
+          "label": "Integration with local systems",
+          "desc": "Experience integrating with the most widely used ERPs and accounting systems in Argentina and Chile (SAP, Oracle, Tango, etc.)."
+        }
+      ],
+      "tcoTag": "TCO / RETURN ON INVESTMENT",
+      "tcoText": "The total cost of ownership (TCO) of a DELIE system with local support is significantly lower than equivalent European or North American systems, especially considering response times, technician travel costs, and spare parts availability.",
+      "comparativaTag": "COMPARISON",
+      "comparativaH2": "DELIE VS. GLOBAL ALTERNATIVES",
+      "comparativaColAspect": "Aspect",
+      "comparativaColDelie": "DELIE + STOKA",
+      "comparativaColOther": "Other brands",
+      "comparativaNote": "* Based on projects implemented in LATAM. Results may vary by scale and operation type.",
+      "comparativa": [
+        {
+          "aspecto": "Local technical support in Argentina",
+          "delie": true,
+          "otro": false
+        },
+        {
+          "aspecto": "Local spare parts in stock",
+          "delie": true,
+          "otro": false
+        },
+        {
+          "aspecto": "Engineering in Spanish",
+          "delie": true,
+          "otro": "Partial"
+        },
+        {
+          "aspecto": "Local currency financing",
+          "delie": true,
+          "otro": false
+        },
+        {
+          "aspecto": "Direct factory warranty",
+          "delie": true,
+          "otro": "Partial"
+        },
+        {
+          "aspecto": "Local ERP integration (SAP, Tango)",
+          "delie": true,
+          "otro": "Partial"
+        },
+        {
+          "aspecto": "Competitive price for LATAM",
+          "delie": true,
+          "otro": false
+        },
+        {
+          "aspecto": "IRAM/local regulation compliance",
+          "delie": true,
+          "otro": "Partial"
+        },
+        {
+          "aspecto": "Over 2,000 installed projects",
+          "delie": true,
+          "otro": "Varies"
+        },
+        {
+          "aspecto": "On-site operator training",
+          "delie": true,
+          "otro": false
+        }
+      ],
+      "faqTag": "FREQUENTLY ASKED QUESTIONS",
+      "faqH2": "DELIE IN ARGENTINA — COMMON QUESTIONS",
+      "faq": [
+        {
+          "q": "Is STOKA the only DELIE representative in Argentina?",
+          "a": "Yes. STOKA Group is the exclusive representative and distributor of DELIE for Argentina and Chile. Any DELIE system quotation in these countries must go through STOKA."
+        },
+        {
+          "q": "Do DELIE systems have factory warranty in Argentina?",
+          "a": "Yes. When purchasing through STOKA you get a factory warranty with local backing. We handle any warranty claims directly with DELIE without additional intermediaries."
+        },
+        {
+          "q": "Can I visit a reference installation in Argentina?",
+          "a": "We have project references in Latin America and Asia available for visits. Depending on the client and their NDA, we coordinate technical visits so you can see the system in real operation."
+        },
+        {
+          "q": "What differentiates DELIE from other Asian brands?",
+          "a": "DELIE has over 30 years of history, international certifications (CE, ISO) and presence in demanding markets like Europe and Japan. It is not a new brand: it is an established manufacturer with proven track record."
+        }
+      ]
+    },
+    "alternativeAsrs": {
+      "metaTitle": "Affordable Alternative to European ASRS Systems | STOKA",
+      "metaDesc": "DELIE: the world-class alternative to European and Japanese ASRS systems. 30-50% more affordable with the same technology.",
+      "h1": "Affordable ASRS Alternative"
+    },
+    "recursos": {
+      "hub": {
+        "metaTitle": "Technical Resources | ASRS Argentina | STOKA",
+        "metaDesc": "ROI calculator, system comparator, technical glossary and articles on warehouse automation in Argentina.",
+        "h1_a": "Technical",
+        "h1_b": "resource center",
+        "sub": "Technical articles, comparisons and interactive tools to make better decisions about logistics automation in Argentina and Chile.",
+        "toolsTag": "Tools & References",
+        "roiTitle": "ROI Calculator",
+        "roiDesc": "Enter headcount, movements and estimated investment and get annual savings, payback and projected ROI in seconds.",
+        "roiCta": "View more",
+        "glossaryTitle": "ASRS Glossary",
+        "glossaryDesc": "Over 60 technical terms on automation and logistics with definitions.",
+        "comparatorTitle": "System Comparator",
+        "comparatorDesc": "Answer 5 questions about your operation and receive the most suitable DELIE technology recommendation.",
+        "articlesTitle": "Technical Articles",
+        "read": "Read",
+        "toolBadge": "Tool",
+        "glossaryBadge": "Glossary"
+      },
+      "roi": {
+        "metaTitle": "Automation ROI Calculator | STOKA Argentina",
+        "metaDesc": "Calculate the return on investment of automating your warehouse with ASRS systems in Argentina.",
+        "h1": "Automation ROI Calculator",
+        "sub": "Choose your operation parameters and get the estimated annual savings, payback period and projected ROI.",
+        "operationTag": "Your current operation",
+        "operationSub": "Select the option closest to your situation."
+      },
+      "comparador": {
+        "metaTitle": "ASRS Systems Comparator | STOKA Argentina",
+        "metaDesc": "Interactive comparator of ASRS systems, robots and vertical storage for your operation."
+      },
+      "glosario": {
+        "metaTitle": "ASRS and Logistics Technical Glossary | STOKA Argentina",
+        "metaDesc": "Glossary of over 60 technical terms on warehouse automation and logistics."
+      },
+      "articulo": {
+        "notFound": "Article not found",
+        "viewAll": "View all resources",
+        "related": "Related articles"
+      }
+    },
+    "soluciones": {
+      "metaTitle": "Logistics Automation Solutions | STOKA",
+      "metaDesc": "Discover STOKA's warehouse automation solutions: ASRS, robots, WMS software and more. Implementation with local technical support in Argentina and Chile.",
+      "breadcrumbHome": "Home",
+      "breadcrumb": "Solutions",
+      "heroTag": "COMPREHENSIVE SOLUTIONS",
+      "heroH1_a": "AUTOMATION",
+      "heroH1_b": "TAILORED",
+      "heroSub": "From diagnosis to startup: we design, integrate, and support systems that transform your logistics operation.",
+      "heroBtnPrimary": "Consult my case",
+      "heroBtnSecondary": "View catalog",
+      "problemasTag": "DIAGNOSIS",
+      "problemasH2": "WHAT PROBLEM DO WE SOLVE?",
+      "problemas": [
+        {
+          "num": "01",
+          "problema": "Insufficient space",
+          "descripcion": "Stock growth exceeds warehouse capacity and expansion is not viable.",
+          "solucion": "High-density ASRS systems that multiply capacity without expanding floor area.",
+          "link": "/catalogo/asrs",
+          "linkLabel": "View ASRS systems"
+        },
+        {
+          "num": "02",
+          "problema": "Picking errors",
+          "descripcion": "Order preparation errors generate returns, losses, and dissatisfied customers.",
+          "solucion": "Robots and WMS software with real-time control and full traceability of every movement.",
+          "link": "/catalogo/software/wms",
+          "linkLabel": "View WMS"
+        },
+        {
+          "num": "03",
+          "problema": "Rising labor costs",
+          "descripcion": "Staff for manual operations represents the largest variable cost of the warehouse.",
+          "solucion": "Automation of repetitive movements that frees your team for higher-value tasks.",
+          "link": "/como-trabajamos",
+          "linkLabel": "View methodology"
+        },
+        {
+          "num": "04",
+          "problema": "Zero traceability",
+          "descripcion": "Without real-time visibility, inventory management depends on slow manual processes.",
+          "solucion": "WMS + ERP integration with full visibility from receiving to shipping.",
+          "link": "/catalogo/software",
+          "linkLabel": "View software"
+        }
+      ],
+      "metodologiaTag": "METHODOLOGY",
+      "metodologiaH2": "HOW WE IMPLEMENT IT",
+      "stepLabel": "Step",
+      "metodologia": [
+        {
+          "paso": "01",
+          "titulo": "Diagnosis",
+          "desc": "Survey of your current operation: flows, volumes, SKUs, demand peaks, and building constraints."
+        },
+        {
+          "paso": "02",
+          "titulo": "Design",
+          "desc": "Custom solution engineering: layout, technology selection, flow simulation, and projected ROI."
+        },
+        {
+          "paso": "03",
+          "titulo": "Implementation",
+          "desc": "Installation, integration with your existing systems, and startup with operational team training."
+        },
+        {
+          "paso": "04",
+          "titulo": "Support",
+          "desc": "Preventive and corrective maintenance, software updates, and 24/7 support in Argentina and Chile."
+        }
+      ],
+      "ctaTag": "GET STARTED",
+      "ctaBannerTitle": "READY TO AUTOMATE?",
+      "ctaBannerSub": "Our engineering team evaluates your operation and presents a custom solution at no cost.",
+      "ctaBannerBtn": "Schedule free diagnosis",
+      "casosTag": "USE CASES",
+      "casosH2": "SOLUTIONS BY INDUSTRY",
+      "casosSub": "Real implementations across different sectors with measurable results.",
+      "casosViewSolution": "View solution →",
+      "casosViewAll": "View all success cases →",
+      "casosUso": [
+        {
+          "operacion": "Pharmaceutical & labs",
+          "desc": "Temperature control, batch and expiry management with full traceability.",
+          "soluciones": [
+            "Miniload ASRS",
+            "Pharma WMS"
+          ],
+          "industria": "Pharma"
+        },
+        {
+          "operacion": "Food & beverages",
+          "desc": "Automated cold rooms, FIFO, and perishable management.",
+          "soluciones": [
+            "Pallet Shuttle",
+            "Cold Storage"
+          ],
+          "industria": "Food"
+        },
+        {
+          "operacion": "Chemical industry",
+          "desc": "Safe storage of hazardous materials with automatic segregation.",
+          "soluciones": [
+            "ASRS Unit-Load",
+            "Racks"
+          ],
+          "industria": "Chemical"
+        },
+        {
+          "operacion": "E-commerce & retail",
+          "desc": "High-volume mass picking with accuracy above 99.9%.",
+          "soluciones": [
+            "Tote Shuttle",
+            "Pick-to-light"
+          ],
+          "industria": "Retail"
+        },
+        {
+          "operacion": "Automotive & manufacturing",
+          "desc": "Just-in-time component management for production lines.",
+          "soluciones": [
+            "AGV",
+            "Miniload"
+          ],
+          "industria": "Automotive"
+        },
+        {
+          "operacion": "Textile & footwear",
+          "desc": "SKU storage with high size variability and turnover.",
+          "soluciones": [
+            "Vertical Storage",
+            "WMS"
+          ],
+          "industria": "Textile"
+        }
+      ],
+      "whyTag": "WHY STOKA",
+      "whyH2": "DIFFERENTIATING ADVANTAGES",
+      "whyItems": [
+        {
+          "label": "Official DELIE representation",
+          "desc": "Direct access to the manufacturer: no intermediaries, with factory warranty and original parts."
+        },
+        {
+          "label": "Local engineering",
+          "desc": "Team of engineers in Argentina and Chile for design, implementation, and after-sales support."
+        },
+        {
+          "label": "Local financing",
+          "desc": "We structure each project with financial tools available in the local market."
+        },
+        {
+          "label": "Full integration",
+          "desc": "We connect the system to your existing ERP/WMS without interrupting operations."
+        }
+      ],
+      "linkHowWeWork": "/como-trabajamos",
+      "linkCases": "/casos-de-exito",
+      "linkCatalog": "/catalogo",
+      "linkFiscal": "/beneficios-fiscales",
+      "faqTag": "FREQUENTLY ASKED QUESTIONS",
+      "faqH2": "WE ANSWER YOUR QUESTIONS",
+      "faq": [
+        {
+          "q": "How long does it take to implement an ASRS system?",
+          "a": "It depends on scale. A medium system (5,000–20,000 positions) generally takes 6–12 months from contract signing to startup. Larger projects may require 18–24 months."
+        },
+        {
+          "q": "Do I need to change my ERP to implement an automated system?",
+          "a": "No. Our systems integrate with the main ERPs on the market (SAP, Oracle, Microsoft Dynamics, etc.) through standard APIs. Integration is part of the project scope."
+        },
+        {
+          "q": "What happens if there's a power outage or technical failure?",
+          "a": "DELIE systems have emergency operation protocols, UPS, and optional generators. The WMS preserves inventory state and equipment automatically resumes from where they were."
+        },
+        {
+          "q": "Can you finance the project in Argentina?",
+          "a": "Yes. We work with local financing tools: leasing, bank credit, and in some cases access to productive investment promotion lines."
+        }
+      ]
+    },
+    "casosDeExito": {
+      "metaTitle": "Success Cases | Logistics Automation | STOKA",
+      "metaDesc": "Real ASRS DELIE system implementations in pharmaceutical, chemical, textile and other industries. Measurable results in efficiency and ROI.",
+      "breadcrumbHome": "Home",
+      "breadcrumb": "Success Cases",
+      "heroTag": "REAL RESULTS",
+      "heroH1_a": "SUCCESS",
+      "heroH1_b": "CASES",
+      "heroSub": "Real DELIE system implementations across different countries and industries, with verified metrics and concrete results.",
+      "stats": [
+        {
+          "num": "9+",
+          "label": "Documented cases"
+        },
+        {
+          "num": "5",
+          "label": "Countries"
+        },
+        {
+          "num": "7",
+          "label": "Industries"
+        },
+        {
+          "num": "99%",
+          "label": "Average accuracy"
+        }
+      ],
+      "portfolioTag": "PORTFOLIO",
+      "portfolioH2": "FEATURED IMPLEMENTATIONS",
+      "portfolioNote": "Client data is referenced for illustration. Some details may vary due to confidentiality agreements.",
+      "trustTag": "TRUST",
+      "trustH2": "WHY TRUST THESE RESULTS",
+      "trustItems": [
+        {
+          "title": "Verified data",
+          "desc": "All metrics are reported by the client themselves or validated by our post-implementation engineering team."
+        },
+        {
+          "title": "Globally proven technology",
+          "desc": "DELIE operates in over 30 countries with more than 2,000 installed projects, guaranteeing robustness and predictability."
+        },
+        {
+          "title": "Ongoing support",
+          "desc": "After-sales accompaniment allows us to document and measure the real impact of each implementation over time."
+        }
+      ],
+      "ctaTag": "NEXT STEP",
+      "ctaH2_a": "WANT TO BE THE",
+      "ctaH2_b": "NEXT CASE?",
+      "ctaSub": "We evaluate your operation and present a solution with ROI projection at no cost or commitment.",
+      "ctaBtnPrimary": "Consult now",
+      "ctaBtnSecondary": "View catalog",
+      "showRelevance": "View LATAM relevance",
+      "hideRelevance": "Hide relevance",
+      "relevanceLabel": "RELEVANCE FOR ARGENTINA / LATAM",
+      "casos": [
+        {
+          "id": "alfombras-tailandia",
+          "industria": "Textile / Carpets",
+          "ubicacion": "Thailand",
+          "titulo": "Automated warehouse for high-volume carpet manufacturer",
+          "empresa": "Leading textile manufacturer · Asia Pacific",
+          "sistema": "AS/RS Unit-Load + DELIE Stacker Crane",
+          "resumen": "A large-scale carpet manufacturer needed to triple storage capacity without expanding floor area. A 4-crane double-mast ASRS with WMS integrated to the existing ERP was implemented.",
+          "metricas": [
+            {
+              "val": "×3",
+              "sub": "Capacity"
+            },
+            {
+              "val": "99.7%",
+              "sub": "Accuracy"
+            },
+            {
+              "val": "-60%",
+              "sub": "Floor area"
+            }
+          ],
+          "tecnologias": [
+            "DELIE Stacker Crane",
+            "Integrated WMS",
+            "Standard pallets"
+          ],
+          "relevancia": "The Argentine textile industry, especially in Córdoba and Buenos Aires, faces the same density challenges. This case demonstrates viability for warehouses of 2,000–8,000 m²."
+        },
+        {
+          "id": "licores-china",
+          "industria": "Beverages / Spirits",
+          "ubicacion": "China",
+          "titulo": "Automated distribution center for premium spirits warehouse",
+          "empresa": "Premium spirits producer · China",
+          "sistema": "Pallet Shuttle + Miniload DELIE",
+          "resumen": "Integration of a combined ASRS system (Pallet Shuttle for bulk stock and Miniload for box picking) in a 15,000 m² distribution center. 75% reduction in dispatch times.",
+          "metricas": [
+            {
+              "val": "-75%",
+              "sub": "Dispatch time"
+            },
+            {
+              "val": "15K",
+              "sub": "Positions"
+            },
+            {
+              "val": "24/7",
+              "sub": "Operation"
+            }
+          ],
+          "tecnologias": [
+            "DELIE Pallet Shuttle",
+            "Miniload",
+            "Conveyor",
+            "WMS"
+          ],
+          "relevancia": "The wine and beverage sector in Mendoza, San Juan and Cuyo can replicate this model for high-seasonality distribution."
+        },
+        {
+          "id": "farmaceutica-tcm",
+          "industria": "Pharmaceutical / Traditional Medicine",
+          "ubicacion": "China",
+          "titulo": "Automated warehouse for traditional medicine laboratory",
+          "empresa": "Certified pharmaceutical laboratory · China",
+          "sistema": "Miniload AS/RS + DELIE Pharma WMS",
+          "resumen": "Miniload implementation with batch and expiry control under GMP regulations. Full traceability from raw material intake to finished product dispatch.",
+          "metricas": [
+            {
+              "val": "100%",
+              "sub": "Traceability"
+            },
+            {
+              "val": "-40%",
+              "sub": "Errors"
+            },
+            {
+              "val": "GMP",
+              "sub": "Compliance"
+            }
+          ],
+          "tecnologias": [
+            "Miniload ASRS",
+            "GMP WMS",
+            "Batch traceability",
+            "Temperature control"
+          ],
+          "relevancia": "Argentine pharmaceutical laboratories (ANMAT) require equivalent traceability. The system is adaptable to local regulations without major redesign."
+        },
+        {
+          "id": "farmaceutica-temperatura",
+          "industria": "Pharmaceutical / Cold Chain",
+          "ubicacion": "Europe",
+          "titulo": "Cold chain depot for pharmaceutical distribution",
+          "empresa": "Multinational pharmaceutical distributor · Europe",
+          "sistema": "DELIE Cold Storage ASRS",
+          "resumen": "ASRS system specific for 2–8°C storage with real-time temperature control per position. 45% reduction in energy consumption compared to equivalent manual storage.",
+          "metricas": [
+            {
+              "val": "2–8°C",
+              "sub": "Precise control"
+            },
+            {
+              "val": "-45%",
+              "sub": "Energy"
+            },
+            {
+              "val": "99.9%",
+              "sub": "Availability"
+            }
+          ],
+          "tecnologias": [
+            "Cold Storage ASRS",
+            "IoT monitoring",
+            "Pharma WMS"
+          ],
+          "relevancia": "The pharmaceutical cold chain in Argentina is critical. This case directly applies to distributors and laboratories in CABA, Greater Buenos Aires and Córdoba."
+        },
+        {
+          "id": "quimica-sulfato",
+          "industria": "Industrial Chemical",
+          "ubicacion": "China",
+          "titulo": "Automated management of bulk industrial chemical raw materials",
+          "empresa": "Industrial sulfate producer · China",
+          "sistema": "DELIE Heavy Duty Unit-Load AS/RS",
+          "resumen": "Automated storage of raw materials in big-bag and pallet format for continuous production. The system manages automatic FIFO and line replenishment without manual intervention.",
+          "metricas": [
+            {
+              "val": "-50%",
+              "sub": "Cycle time"
+            },
+            {
+              "val": "FIFO",
+              "sub": "Automatic"
+            },
+            {
+              "val": "+35%",
+              "sub": "Throughput"
+            }
+          ],
+          "tecnologias": [
+            "Unit-Load ASRS",
+            "Big-bag handling",
+            "Integrated WMS"
+          ],
+          "relevancia": "The petrochemical and chemical industry in Bahía Blanca and Rosario can implement this model for raw material management and production dispatch."
+        },
+        {
+          "id": "quimica-peligrosos",
+          "industria": "Chemical / Hazardous Materials",
+          "ubicacion": "Europe",
+          "titulo": "Automated warehouse for hazardous products under ATEX",
+          "empresa": "Chemical specialties manufacturer · Europe",
+          "sistema": "DELIE ATEX ASRS + Segregation system",
+          "resumen": "ATEX-certified ASRS system for storage of flammable and toxic products. Includes automatic segregation by hazard class and incompatibility management.",
+          "metricas": [
+            {
+              "val": "ATEX",
+              "sub": "Certified"
+            },
+            {
+              "val": "0",
+              "sub": "Incidents"
+            },
+            {
+              "val": "-70%",
+              "sub": "Worker risk"
+            }
+          ],
+          "tecnologias": [
+            "ATEX ASRS",
+            "Automatic segregation",
+            "HAZMAT WMS"
+          ],
+          "relevancia": "Argentine regulations for hazardous materials (IRAM, APN) require similar controls. Chemical, paint and agrochemical industry in Greater Buenos Aires and Córdoba."
+        },
+        {
+          "id": "titanio",
+          "industria": "Metallurgy / Special Materials",
+          "ubicacion": "Asia",
+          "titulo": "Automated warehouse for titanium and alloy management",
+          "empresa": "Aerospace materials supplier · Asia",
+          "sistema": "Vertical Storage + DELIE ASRS",
+          "resumen": "Management of titanium and special alloy profiles, tubes and sheets with traceability by material certificate. Control of environmental conditions and full traceability of each piece.",
+          "metricas": [
+            {
+              "val": "100%",
+              "sub": "Traceability"
+            },
+            {
+              "val": "-55%",
+              "sub": "Search time"
+            },
+            {
+              "val": "∞",
+              "sub": "Safety"
+            }
+          ],
+          "tecnologias": [
+            "Vertical Storage",
+            "QR/RFID code",
+            "Materials WMS"
+          ],
+          "relevancia": "For the Argentine metallurgical industry (Tenaris, etc.) and aerospace suppliers: material traceability with quality certificate."
+        },
+        {
+          "id": "lubricantes",
+          "industria": "Lubricants / Petrochemical",
+          "ubicacion": "Asia",
+          "titulo": "Automated distribution center for industrial lubricants",
+          "empresa": "Industrial lubricants distributor · Asia",
+          "sistema": "Pallet Shuttle + DELIE Conveyor",
+          "resumen": "High-speed distribution of lubricants in multi-format containers (jerry cans, drums, IBC). The system handles 1,200 movements/hour with 99.8% accuracy.",
+          "metricas": [
+            {
+              "val": "1,200",
+              "sub": "Moves/hour"
+            },
+            {
+              "val": "99.8%",
+              "sub": "Accuracy"
+            },
+            {
+              "val": "-40%",
+              "sub": "Staff"
+            }
+          ],
+          "tecnologias": [
+            "Pallet Shuttle",
+            "Conveyor system",
+            "Multi-format WMS"
+          ],
+          "relevancia": "Lubricant and petrochemical distributors in Argentina with medium and large-scale operations."
+        },
+        {
+          "id": "manufactura-gran-escala",
+          "industria": "Manufacturing / Mass production",
+          "ubicacion": "China",
+          "titulo": "Central warehouse for large-scale just-in-time manufacturing",
+          "empresa": "Multinational component manufacturer · China",
+          "sistema": "Full AS/RS + AGV + DELIE WMS",
+          "resumen": "Integrated logistics center supplying 12 production lines just-in-time. The WMS coordinates AGVs, ASRS and conveyors to guarantee components on line with latency below 15 minutes.",
+          "metricas": [
+            {
+              "val": "<15min",
+              "sub": "JIT latency"
+            },
+            {
+              "val": "12",
+              "sub": "JIT lines"
+            },
+            {
+              "val": "-65%",
+              "sub": "WIP"
+            }
+          ],
+          "tecnologias": [
+            "ASRS Unit-Load",
+            "AGV fleet",
+            "Integrated conveyor",
+            "JIT WMS"
+          ],
+          "relevancia": "Industrial parks in Buenos Aires, Córdoba and Rosario with serial production can implement this model to reduce WIP and improve OEE."
+        }
+      ]
+    },
+    "alternativaEconomica": {
+      "metaTitle": "Cost-Effective Alternative to European ASRS Systems | STOKA",
+      "metaDesc": "DELIE ASRS systems with the same technology as European brands but at competitive pricing for Argentina and LATAM. Local financing and technical support",
+      "breadcrumbHome": "Home",
+      "breadcrumb": "Cost-Effective ASRS Alternative",
+      "heroTag": "ALTERNATIVE TO EUROPEAN ASRS",
+      "heroH1_a": "SAME TECHNOLOGY",
+      "heroH1_b": "LOWER",
+      "heroH1_c": "TOTAL COST",
+      "heroSub": "DELIE ASRS systems offer the same functionality and reliability as leading European brands, at an acquisition cost up to 40% lower, with local technical support in Argentina.",
+      "heroStats": [
+        {
+          "n": "-40%",
+          "l": "vs. European brands"
+        },
+        {
+          "n": "99%+",
+          "l": "Availability"
+        },
+        {
+          "n": "30+",
+          "l": "Countries"
+        },
+        {
+          "n": "2,000+",
+          "l": "Projects"
+        }
+      ],
+      "heroBtnPrimary": "Request quote",
+      "heroBtnSecondary": "View catalog",
+      "whyTag": "WHY IT COSTS MORE",
+      "whyH2": "WHY ARE EUROPEAN SYSTEMS MORE EXPENSIVE IN ARGENTINA?",
+      "whyCosts": [
+        {
+          "title": "Indirect distribution",
+          "desc": "Many European brands sell through regional distributors with additional margins that increase the final price."
+        },
+        {
+          "title": "Logistics and tariffs",
+          "desc": "The cost of importing from Europe includes high tariffs, long-term insurance, and more expensive freight."
+        },
+        {
+          "title": "High-cost support",
+          "desc": "After-sales support involves bringing technicians from Europe or paying local representatives without real system expertise."
+        }
+      ],
+      "comparisonTag": "TECHNICAL COMPARISON",
+      "comparisonH2": "DELIE VS. EUROPEAN BRANDS",
+      "comparisonSub": "Comparison of technical and commercial features for projects in Argentina and LATAM.",
+      "comparisonColOther": "European brand",
+      "comparisonPartial": "Partial",
+      "comparisonNote": "* Based on comparable projects in LATAM. Results vary by scale and operation type.",
+      "comparison": [
+        {
+          "label": "Availability >99%",
+          "europeo": true
+        },
+        {
+          "label": "Local 24/7 technical support",
+          "europeo": false
+        },
+        {
+          "label": "Competitive price for LATAM",
+          "europeo": false
+        },
+        {
+          "label": "Spare parts in stock in Argentina",
+          "europeo": false
+        },
+        {
+          "label": "Local currency financing",
+          "europeo": false
+        },
+        {
+          "label": "Local ERP integration (SAP, Tango)",
+          "europeo": "parcial"
+        }
+      ],
+      "productsTag": "PRODUCTS",
+      "productsH2": "SYSTEMS AVAILABLE IN ARGENTINA",
+      "productsViewAll": "View full catalog →",
+      "products": [
+        {
+          "name": "Unit-Load AS/RS",
+          "tag": "Pallets",
+          "specs": [
+            "Up to 30m height",
+            "Double depth",
+            "High speed"
+          ]
+        },
+        {
+          "name": "Pallet Shuttle",
+          "tag": "High density",
+          "specs": [
+            "FIFO / LIFO",
+            "Multiple depths",
+            "No intermediate aisles"
+          ]
+        },
+        {
+          "name": "Miniload AS/RS",
+          "tag": "Boxes / Picking",
+          "specs": [
+            "Automatic picking",
+            "High precision",
+            "Pharma & e-com"
+          ]
+        },
+        {
+          "name": "View full catalog",
+          "tag": "All",
+          "specs": [
+            "Vertical",
+            "AGV",
+            "WMS Software",
+            "Consult"
+          ]
+        }
+      ],
+      "tcoTag": "TCO / ROI",
+      "tcoH2_a": "THE LOWEST",
+      "tcoH2_b": "TOTAL COST",
+      "tcoH2_c": "OF OWNERSHIP",
+      "tcoSub": "Not just the purchase price: consider the total cost over 15–20 years of operation. With local support and in-stock spare parts, the TCO of a DELIE system is significantly lower.",
+      "tcoLinkLabel": "View available tax benefits →",
+      "tcoStats": [
+        {
+          "num": "-40%",
+          "desc": "Acquisition price vs. equivalent European brands for projects in Argentina"
+        },
+        {
+          "num": "-60%",
+          "desc": "After-sales support cost: local technicians vs. travel from Europe"
+        },
+        {
+          "num": "+20%",
+          "desc": "Additional ROI from local currency financing and available local tax benefits"
+        }
+      ],
+      "faqTag": "FREQUENTLY ASKED QUESTIONS",
+      "faqH2": "QUESTIONS ABOUT THE COMPARISON",
+      "faq": [
+        {
+          "q": "Is DELIE the same quality as European brands like SSI Schäfer or Mecalux?",
+          "a": "Yes. DELIE has over 30 years of history, CE and ISO certifications, and operates in European and Japanese markets that demand the same standards as traditional European brands. The difference is in cost structure, not technical quality."
+        },
+        {
+          "q": "What about long-term technical support?",
+          "a": "STOKA maintains a team of DELIE-certified local engineers, with critical spare parts stock in Argentina. After-sales support is guaranteed locally without depending on overseas technicians."
+        },
+        {
+          "q": "Can I see a reference installation before deciding?",
+          "a": "Yes. We can coordinate technical visits to reference installations in Argentina and Latin America, with prior client agreement. We also have project references in Europe and Asia."
+        },
+        {
+          "q": "Do Argentine tax benefits apply to DELIE systems?",
+          "a": "Yes. DELIE systems qualify for accelerated depreciation regimes, leasing, and in many cases for capital goods law tax credits. Our team advises on available options in each case."
+        },
+        {
+          "q": "What is the process for getting a quote?",
+          "a": "The process starts with a free diagnosis of your operation (flows, volumes, SKUs). With that information, we prepare a detailed technical-commercial proposal with projected ROI, at no cost or commitment."
+        }
+      ]
+    },
+    "industriaDetail": {
+      "notFound": "Industry not found.",
+      "viewAll": "View all industries",
+      "backToAll": "All industries",
+      "breadcrumbHome": "Home",
+      "breadcrumbIndustrias": "Industries",
+      "challengeLabel": "The challenge",
+      "whyAutomate": "Why automate",
+      "keyBenefits": "Key benefits",
+      "beforeAfter": "Before & after",
+      "withoutAutomation": "Without automation",
+      "withStoka": "With STOKA · DELIE",
+      "automationContext": "Automation context",
+      "automationH2": "Warehouse automation in {{industry}}",
+      "recommendedTag": "Recommended equipment",
+      "recommendedH2": "Products for this sector",
+      "viewCatalog": "View full catalog",
+      "taxBenefits": "Available tax benefits →",
+      "successCases": "View success cases →",
+      "faqTag": "FAQ",
+      "faqH2": "Frequently asked questions about automation",
+      "exploreMore": "Keep exploring",
+      "otherIndustries": "Other industries",
+      "ctaTag": "Ready to automate?",
+      "ctaH2_a": "Free consultation.",
+      "ctaH2_b": "Response in 24 hrs.",
+      "ctaSub": "Our technical team analyzes your operation and proposes the most suitable solution with no commitment.",
+      "ctaBtn": "Request consultation",
+      "viewCatalogBtn": "View full catalog"
+    },
+    "catalogoAsrs": {
+      "metaTitle": "ASRS Systems Argentina | Automated AS/RS | STOKA",
+      "metaDesc": "DELIE ASRS and AS/RS in Argentina: stacker cranes, pallet shuttle and miniload from 7 to 40 m height. 30–50% more affordable than European suppliers.",
+      "breadcrumbCat": "AS/RS",
+      "heroTag": "ASRS System · DELIE Representatives · Argentina",
+      "heroH1_a": "AS/RS Systems",
+      "heroH1_b": "Automated racking",
+      "heroSub": "DELIE AS/RS racking from 7 to 40 meters tall. Drive-in, shuttle, mezzanine and automated selective rack with local support in Argentina.",
+      "heroStat1Label": "Models",
+      "heroStat2Label": "Max height",
+      "heroStat3Label": "Precision",
+      "whatIsTag": "What are AS/RS systems",
+      "whatIsH2": "Automated Storage and Retrieval Systems (AS/RS): high-density ASRS",
+      "stat1Label": "Maximum height",
+      "stat1Sub": "Full use of vertical space",
+      "stat2Label": "Machining precision",
+      "stat2Sub": "Robots without wear or downtime",
+      "stat3Label": "More affordable than Europe",
+      "stat3Sub": "DELIE direct factory price",
+      "stat4Label": "Months ROI",
+      "stat4Sub": "Proven in real operations",
+      "guideTag": "Selection guide — Which AS/RS system do you need?",
+      "guide": [
+        {
+          "type": "Unit Load",
+          "sub": "Pallet stacker crane",
+          "badge": "Most versatile",
+          "cases": [
+            "Pallets with many different SKUs",
+            "Mixed FIFO / LIFO operations",
+            "Clear height from 12 m"
+          ],
+          "note": "1 or 2 mast stacker crane"
+        },
+        {
+          "type": "Shuttle",
+          "sub": "Shuttle robot",
+          "badge": "Higher density",
+          "cases": [
+            "High density with homogeneous product",
+            "High volume per SKU",
+            "Maximum use of floor m²"
+          ],
+          "note": "Bidirectional or 4-way"
+        },
+        {
+          "type": "MiniLoad",
+          "sub": "Boxes and totes",
+          "badge": "Maximum speed",
+          "cases": [
+            "E-commerce and pharma",
+            "Goods-to-person picking",
+            "Small and medium SKUs"
+          ],
+          "note": "Single or double depth"
+        }
+      ],
+      "fabTag": "DELIE Manufacturing",
+      "fiscalTag": "Argentina 2026 — Tax incentives",
+      "fiscalItems": [
+        {
+          "label": "Decree 513/2025",
+          "desc": "0% import duty on ASRS equipment"
+        },
+        {
+          "label": "RIMI",
+          "desc": "100% accelerated depreciation in first fiscal year"
+        },
+        {
+          "label": "BICE",
+          "desc": "10-year financing with grace period"
+        }
+      ],
+      "fiscalRoi": "ROI in {{value}} months in mid-scale operations.",
+      "fiscalLink": "View all tax benefits",
+      "catalogTag": "Full catalog",
+      "catalogH2": "12 AS/RS racking models",
+      "viewFullCatalog": "View full catalog",
+      "sisterTag": "Keep exploring",
+      "sisterH2": "Other catalog categories",
+      "exploreTag": "Explore by type",
+      "exploreH2": "Available AS/RS systems",
+      "exploreItems": [
+        {
+          "nombre": "Unit-Load Stacker Crane",
+          "desc": "Pallets up to 40 m height"
+        },
+        {
+          "nombre": "MiniLoad Stacker Crane",
+          "desc": "Boxes and totes, high-speed picking"
+        },
+        {
+          "nombre": "Shuttle Robot",
+          "desc": "High density with autonomous robots"
+        },
+        {
+          "nombre": "Cold Storage AS/RS",
+          "desc": "Operation from -30 °C"
+        }
+      ],
+      "viewDetail": "View detail",
+      "faqTag": "FAQ",
+      "faqH2": "What an Operations Director asks",
+      "faq": [
+        {
+          "q": "How much vertical space does an AS/RS system use in my warehouse?",
+          "a": "DELIE AS/RS systems utilize from 7 to 40 meters of free height. In a warehouse with 12 meters, you can store up to 5 times more than with conventional 4-5 meter racking. The key is designing the structure according to available height and load type."
+        },
+        {
+          "q": "What is the difference between drive-in, shuttle, and MiniLoad racking?",
+          "a": "Drive-in racking uses conventional forklifts: the most economical, ideal for high-density LIFO. Shuttle racking combines shelving with shuttle robots for higher speed and selective FIFO/LIFO. MiniLoad is for containers and totes with stacker cranes: maximum speed and precision for e-commerce, pharma and high-turnover warehouses."
+        },
+        {
+          "q": "How long does it take to install an AS/RS system in an existing warehouse?",
+          "a": "Mechanical installation of AS/RS racking takes 4 to 10 weeks depending on the model. Prior civil adaptation (flat slab, lighting) can add 4-6 weeks if the building requires it. STOKA coordinates all detailed engineering, assembly and certified commissioning in Argentina."
+        },
+        {
+          "q": "Does DELIE racking qualify for Argentina's Decree 513/2025 0% import duty?",
+          "a": "Yes. AS/RS racking for automated systems is included in the tariff positions of Decree 513/2025. STOKA verifies the exact tariff position for each project at no extra cost, ensuring you benefit from the first day of import."
+        }
+      ],
+      "footerLinks": [
+        {
+          "label": "Tax benefits 2026"
+        },
+        {
+          "label": "Handling robots"
+        },
+        {
+          "label": "WMS/WCS software"
+        },
+        {
+          "label": "How we work"
+        }
+      ],
+      "alsoInterest": "You may also be interested in",
+      "autostoreH3": "Evaluated AutoStore? Discover the DELIE alternative",
+      "autostoreDesc": "Same storage density, 30-50% more affordable and with local technical support in Argentina.",
+      "autostoreLink": "View comparison",
+      "sisterCats": [
+        {
+          "label": "Handling robots",
+          "desc": "Stacker cranes, shuttles and AMR"
+        },
+        {
+          "label": "Vertical storage",
+          "desc": "VLM and intelligent carousels"
+        },
+        {
+          "label": "Transport equipment",
+          "desc": "Conveyors, lifters and palletizers"
+        },
+        {
+          "label": "Smart software",
+          "desc": "WMS, WCS and warehouse control"
+        }
+      ]
+    },
+    "catalogoRobots": {
+      "breadcrumbCat": "Handling robots",
+      "heroTag": "Stacker cranes · Shuttle · AMR · DELIE",
+      "heroH1_a": "Handling robots",
+      "heroH1_b": "Stacker cranes, shuttles and AMR",
+      "heroSub": "14 DELIE warehouse robot models: stacker cranes, MiniLoad stacker cranes, 4-way shuttle robots and tote robots. 24/7 technical support in Argentina.",
+      "statsTag": "DELIE warehouse robots",
+      "statsH2": "Stacker cranes, shuttle robots, AMR, automatic palletizer and goods-to-person automated picking",
+      "stat1Label": "Available models",
+      "stat1Sub": "Most complete range in the market",
+      "stat2Label": "Maximum speed",
+      "stat2Sub": "DELIE MiniLoad stacker crane",
+      "stat3Label": "Precision",
+      "stat3Sub": "Absolute position control",
+      "stat4Label": "Minimum temp.",
+      "stat4Sub": "Certified cold chain",
+      "catalogTag": "Full catalog",
+      "catalogH2": "14 handling robot models",
+      "viewFullCatalog": "View full catalog",
+      "faqTag": "FAQ",
+      "faqH2": "What an Operations Director asks",
+      "faq": [
+        {
+          "q": "What is the difference between a stacker crane and a shuttle robot in a warehouse?",
+          "a": "The stacker crane occupies a full racking aisle and moves pallets or totes with a single machine. The shuttle robot travels inside the racking between levels at higher speed and without a dedicated aisle. For warehouses with high turnover and many SKUs, the shuttle generally offers higher throughput per square meter."
+        },
+        {
+          "q": "Can DELIE robots operate in cold storage or refrigerated warehouses?",
+          "a": "Yes. DELIE manufactures cold chain versions certified to -25°C (shuttle robots) and -30°C (stacker cranes). They include airtight anti-condensation sealing, special lubrication and cold materials. They operate autonomously without staff inside the cold room."
+        },
+        {
+          "q": "How many robots do I need for my operation's throughput?",
+          "a": "It depends on the required throughput (lines/hour or pallets/hour), SKU count, warehouse layout and demand peaks. During the diagnostic phase, STOKA performs a flow simulation that determines the optimal number of robots to cover peaks without over-sizing the investment."
+        },
+        {
+          "q": "What preventive maintenance do warehouse robots require?",
+          "a": "DELIE robots require 2-4 hours of preventive maintenance per month per unit. The WCS monitors each robot's status in real time and generates early alerts. High-wear components are modular and replaced without specialized tools. STOKA maintains local spare parts stock in Argentina."
+        }
+      ],
+      "sisterCats": [
+        {
+          "label": "AS/RS",
+          "desc": "Automated racking"
+        },
+        {
+          "label": "Vertical storage",
+          "desc": "VLM and intelligent carousels"
+        },
+        {
+          "label": "Transport equipment",
+          "desc": "Conveyors, lifters and palletizers"
+        },
+        {
+          "label": "Smart software",
+          "desc": "WMS, WCS and warehouse control"
+        }
+      ],
+      "metaTitle": "Handling Robots | Stacker Cranes & AMR | STOKA",
+      "metaDesc": "DELIE warehouse robot catalog: stacker cranes, MiniLoad cranes, shuttle robots and AMR. 14 models with local STOKA support in Argentina and Chile."
+    },
+    "catalogoVertical": {
+      "breadcrumbCat": "Vertical storage",
+      "heroTag": "VLM · Vertical carousel · DELIE",
+      "heroH1_a": "Vertical storage",
+      "heroH1_b": "VLM and intelligent carousels",
+      "heroSub": "Save up to 90% of floor space. Ergonomic \"goods-to-person\" picking at operator height, no walking. Integration with ERP and MES.",
+      "statsTag": "VLM vs Vertical carousel",
+      "statsH2": "Automated vertical warehouse: VLM, carousel and storage tower to optimize space",
+      "stat1Label": "Space savings",
+      "stat1Sub": "Less floor m² used",
+      "stat2Label": "Less time",
+      "stat2Sub": "Reduction in search time",
+      "stat3Label": "Maximum height",
+      "stat3Sub": "Full ceiling utilization",
+      "stat4Label": "Total capacity",
+      "stat4Sub": "Configurable vertical carousel",
+      "catalogTag": "Full catalog",
+      "catalogH2": "2 vertical storage solutions",
+      "viewFullCatalog": "View full catalog",
+      "techTag": "Which technology do you need?",
+      "techItems": [
+        {
+          "name": "VLM — Vertical Lift Module",
+          "badge": "Random access",
+          "desc": "Smart extractor that retrieves any tray independently. Ideal when there is high SKU variety and the operator needs different products each cycle.",
+          "best": "Pharma · Spare parts · E-commerce with many SKUs"
+        },
+        {
+          "name": "Intelligent vertical carousel",
+          "badge": "High rotation",
+          "desc": "System that circulates trays internally. More efficient for repetitive high-turnover SKUs where sequential access is adequate.",
+          "best": "Manufacturing · Automotive · High-rotation distribution"
+        }
+      ],
+      "sharedBenefits": "Shared benefits",
+      "benefitsList": [
+        "Up to 90% less floor space",
+        "Picking at operator height",
+        "WMS / ERP / MES integration",
+        "Integrated weighing and scanning",
+        "70% less search time",
+        "Full extraction traceability",
+        "No operator walking"
+      ],
+      "faqTag": "FAQ",
+      "faqH2": "Frequently asked questions about vertical storage",
+      "faq": [
+        {
+          "q": "When is a VLM better and when is a vertical carousel better for my warehouse?",
+          "a": "The VLM is best when you have high SKU variety and need random access: each cycle you can retrieve any tray independently. The carousel is more efficient for high-turnover SKUs with sequential access. For pharma, spare parts and e-commerce with many different SKUs, the VLM is generally the best option."
+        },
+        {
+          "q": "How much floor space do I save with a VLM in my warehouse?",
+          "a": "Typically between 70% and 90% compared to conventional shelving. A 10-meter VLM occupies 5-8 m² of floor area and stores the equivalent of 30-50 m² of conventional shelving. In buildings with free height, storage density per floor m² multiplies between 4 and 8 times."
+        },
+        {
+          "q": "How does the VLM integrate with my existing ERP or WMS?",
+          "a": "Via standard RESTful APIs or DELIE's WMS interface. If you already have a third-party WMS (SAP EWM, Manhattan, etc.), the VLM can operate as a slave subsystem that receives extraction orders. If you don't have a WMS, DELIE's module manages warehouse inventory autonomously with ERP integration."
+        },
+        {
+          "q": "Can the VLM or vertical carousel operate in temperature-controlled environments?",
+          "a": "The vertical carousel operates between -5°C and +40°C, compatible with positive cold rooms. The VLM has versions for environments between 2°C and 25°C, ideal for pharma and refrigerated products. For negative cold (frozen storage), DELIE's specialized AS/RS stacker cranes are recommended."
+        }
+      ],
+      "sisterCats": [
+        {
+          "label": "AS/RS",
+          "desc": "Automated racking"
+        },
+        {
+          "label": "Handling robots",
+          "desc": "Stacker cranes, shuttles and AMR"
+        },
+        {
+          "label": "Transport equipment",
+          "desc": "Conveyors, lifters and palletizers"
+        },
+        {
+          "label": "Smart software",
+          "desc": "WMS, WCS and warehouse control"
+        }
+      ],
+      "metaTitle": "Vertical Storage | VLM & Carousels | STOKA",
+      "metaDesc": "DELIE vertical storage systems: VLM and smart carousels. Save up to 90% floor space with goods-to-person picking. Local STOKA support in Argentina."
+    },
+    "catalogoTransporte": {
+      "breadcrumbCat": "Transport equipment",
+      "heroTag": "Conveyors · Lifters · Palletizers · DELIE",
+      "heroH1_a": "Transport equipment —",
+      "heroH1_b": "Conveyors, lifters and palletizers",
+      "heroSub": "10 transport equipment models to connect every point of your automated warehouse. From chain conveyors to automatic palletizers with WCS integration.",
+      "statsTag": "DELIE transport equipment",
+      "statsH2": "The connective tissue of the automated warehouse — conveyors, lifters and palletizers integrated under WCS",
+      "stat1Label": "Available models",
+      "stat1Sub": "Complete transport range",
+      "stat2Label": "Max load per pallet",
+      "stat2Sub": "Chain and rollers",
+      "stat3Label": "Maximum speed",
+      "stat3Sub": "Tote lifter",
+      "stat4Label": "Minimum temp.",
+      "stat4Sub": "Cold chain version",
+      "catalogTag": "Full catalog",
+      "catalogH2": "10 automated transport machines",
+      "viewFullCatalog": "View full catalog",
+      "faqTag": "FAQ",
+      "faqH2": "What an Operations Director asks",
+      "faq": [
+        {
+          "q": "What type of conveyor do I need for 3,000 kg pallets in my warehouse?",
+          "a": "For 3,000 kg pallet loads, DELIE's chain or roller conveyor is the right choice. Both are sized for that load with a frequency inverter for smooth start. The choice between chain and rollers depends on pallet fragility and whether you need zone accumulation in the warehouse."
+        },
+        {
+          "q": "Can I integrate existing conveyors in my warehouse with the DELIE system?",
+          "a": "In many cases, yes. DELIE's WCS can control conveyors from other brands with standard control interfaces (PLC with Profibus, Profinet or similar). STOKA performs a compatibility audit during the technical diagnosis to determine which existing conveyors can be reused to reduce total investment."
+        },
+        {
+          "q": "What maintenance do DELIE conveyors require?",
+          "a": "DELIE conveyors have quarterly preventive maintenance: chain or roller lubrication, tensioner verification and sensor check. Wear components are standardized and available in Argentina. The WCS monitors each warehouse section and issues alerts before a failure occurs."
+        },
+        {
+          "q": "Do DELIE conveyors work at negative temperatures in cold rooms?",
+          "a": "Yes. Cold chain conveyors operate down to -25°C with special lubricants, anti-freeze materials and hermetic design. They integrate with DELIE's cold line stacker cranes and shuttle robots to create a fully automated cold storage system."
+        }
+      ],
+      "sisterCats": [
+        {
+          "label": "AS/RS",
+          "desc": "Automated racking"
+        },
+        {
+          "label": "Handling robots",
+          "desc": "Stacker cranes, shuttles and AMR"
+        },
+        {
+          "label": "Vertical storage",
+          "desc": "VLM and intelligent carousels"
+        },
+        {
+          "label": "Smart software",
+          "desc": "WMS, WCS and warehouse control"
+        }
+      ],
+      "metaTitle": "Conveying Equipment | Conveyors & Lifts | STOKA",
+      "metaDesc": "DELIE conveying catalog: conveyors, lifts, palletizers and transfer machines. 10 models with local STOKA engineering in Argentina and Chile."
+    },
+    "catalogoSoftware": {
+      "breadcrumbCat": "Smart software",
+      "heroTag": "WMS · WCS · HMS · ECS · DELIE",
+      "heroH1_a": "Smart software —",
+      "heroH1_b": "WMS, WCS and warehouse control",
+      "heroSub": "6 DELIE software modules CMMI Level 5 certified. Full control of the automated warehouse with SAP, Oracle and any ERP integration. 3D Digital Twin included.",
+      "stat1Label": "Software modules",
+      "stat2Label": "Top certification",
+      "stat3Label": "Native integration",
+      "stat4Label": "Digital Twin included",
+      "catalogTag": "Full catalog",
+      "catalogH2": "6 warehouse software modules",
+      "viewFullCatalog": "View full catalog",
+      "seoTag": "Understanding warehouse software",
+      "seoH2": "WMS vs WCS: differences and complementarity",
+      "seoSub": "in warehouse management",
+      "nivel": "Level",
+      "integraWith": "Integrates with",
+      "benefitsTag": "Key advantages of the DELIE stack",
+      "errorTag": "The most common mistake in AS/RS projects",
+      "errorH3": "Implementing hardware without designing the software layer.",
+      "errorBody": "A stacker crane without adequate WCS operates as a manual machine: efficient in physical movement but without the intelligence to coordinate combined cycles, manage real-time inventory and integrate with the ERP. DELIE's WMS and WCS were designed as an integrated stack: same database, same interface, same source of truth for warehouse inventory.",
+      "argTag": "Argentina & Chile — Legacy WMS",
+      "comparison": [
+        {
+          "system": "WMS",
+          "full": "Warehouse Management System",
+          "role": "Manages WHAT: inventory, locations, orders, traceability.",
+          "integra": "ERP, SAP, TMS, OMS, MES",
+          "nivel": "Business"
+        },
+        {
+          "system": "WCS",
+          "full": "Warehouse Control System",
+          "role": "Manages HOW: coordinates robots, stacker cranes and conveyors in real time.",
+          "integra": "WMS, robots, stacker cranes, AMR, RGV",
+          "nivel": "Operations"
+        },
+        {
+          "system": "HMS",
+          "full": "Human Machine System",
+          "role": "Interface for operators and supervisors on the floor.",
+          "integra": "WCS, WMS",
+          "nivel": "End user"
+        },
+        {
+          "system": "ECS",
+          "full": "Electronic Control System",
+          "role": "Electrical control of motors, drives and sensors.",
+          "integra": "WCS, WMS",
+          "nivel": "Hardware"
+        }
+      ],
+      "benefits": [
+        "CMMI Level 5 certified",
+        "Native SAP WMS integration (BAPI/RFC)",
+        "WMS + WCS same integrated stack",
+        "Documented RESTful APIs",
+        "3D Digital Twin included",
+        "No extra ERP integration cost",
+        "Active-passive redundancy",
+        "Local after-sales technical support"
+      ],
+      "faqTag": "FAQ",
+      "faqH2": "What an Operations Director asks",
+      "faq": [
+        {
+          "q": "How long does it take to implement the WMS in my warehouse?",
+          "a": "Base WMS implementation takes between 4 and 12 weeks depending on ERP integration complexity. In projects with DELIE hardware, the WMS is configured simultaneously with mechanical installation, not adding time to the overall schedule. STOKA manages software implementation as part of the turnkey project."
+        },
+        {
+          "q": "Can the WMS manage a manual warehouse (without robots)?",
+          "a": "Yes. The WMS can be deployed in a manual warehouse as a first digitization step, before automating. It manages real-time inventory, list-based or pick-to-light picking, FIFO/FEFO and shift reports. This approach lets the team learn the system before adding automated hardware."
+        },
+        {
+          "q": "How does the technical WMS integration with SAP or ERP work?",
+          "a": "DELIE has native connectors for SAP (BAPI/RFC and SAP EWM), Oracle, Microsoft Dynamics and RESTful APIs for any other system. Integration includes item and location master synchronization, inbound/outbound orders and real-time confirmations. STOKA delivers complete technical documentation."
+        },
+        {
+          "q": "What happens to warehouse data if the WMS server goes down?",
+          "a": "The WMS has active-passive redundancy: if the primary server fails, the backup takes control in seconds with no data loss. Robots and conveyors have a short-term autonomous operation mode. All movements are recorded with timestamps and automatically synced when the system recovers."
+        }
+      ],
+      "sisterCats": [
+        {
+          "label": "AS/RS",
+          "desc": "Automated racking"
+        },
+        {
+          "label": "Handling robots",
+          "desc": "Stacker cranes, shuttles and AMR"
+        },
+        {
+          "label": "Vertical storage",
+          "desc": "VLM and intelligent carousels"
+        },
+        {
+          "label": "Transport equipment",
+          "desc": "Conveyors, lifters and palletizers"
+        }
+      ],
+      "metaTitle": "Warehouse Software | WMS, WCS & Control | STOKA",
+      "metaDesc": "CMMI Level 5 certified DELIE software: WMS, WCS, HMS and automated warehouse control. 6 integrated modules with local STOKA support in Argentina."
+    },
+    "autoStoreAlternativa": {
+      "breadcrumbAsrs": "ASRS",
+      "breadcrumbPage": "AutoStore Alternative",
+      "heroChip": "Cost-effective alternative · Local support",
+      "heroH1_a": "AutoStore Alternative",
+      "heroH1_b": "with local support in Argentina",
+      "heroSub": "DELIE ASRS systems offer comparable density and throughput to AutoStore at 30-50% lower cost, with 100% local engineering, installation and technical support through STOKA.",
+      "heroCta": "Get price & availability",
+      "heroLink": "View full ASRS catalog",
+      "stat1Label": "More affordable",
+      "stat2Label": "Technical support",
+      "stat3Label": "Turnkey project",
+      "stat4Label": "Spare parts response",
+      "compH2": "DELIE vs AutoStore",
+      "compSub": "Technical comparison for projects in Argentina and Chile",
+      "compFeature": "Feature",
+      "whyH2": "Why Argentine companies choose DELIE over AutoStore",
+      "why": [
+        {
+          "stat": "24h",
+          "label": "Local response time",
+          "title": "Technical support in Argentina",
+          "desc": "AutoStore has centralized support in Europe — days or weeks wait. STOKA resolves issues with local technicians and spare parts in less than 24 hours."
+        },
+        {
+          "stat": "40%",
+          "label": "Average savings vs AutoStore",
+          "title": "30-50% lower price",
+          "desc": "On USD 1M projects, DELIE means USD 300,000–500,000 savings on initial investment with equivalent throughput and capacity."
+        },
+        {
+          "stat": "1,500kg",
+          "label": "Max load per position",
+          "title": "No SKU size limit",
+          "desc": "AutoStore supports up to 30 kg and fixed container sizes. DELIE operates with pallets up to 1,500 kg and any load unit type."
+        }
+      ],
+      "productsH2": "DELIE systems that replace AutoStore",
+      "viewSystem": "View system",
+      "faqH2": "Frequently asked questions about AutoStore alternatives in Argentina",
+      "faq": [
+        {
+          "q": "Is DELIE an alternative to AutoStore in Argentina?",
+          "a": "Yes. DELIE manufactures ASRS cube storage, shuttle and stacker crane systems that compete directly with AutoStore. The main difference is price: DELIE systems are 30-50% more affordable than AutoStore for equivalent projects, with local technical support in Argentina through STOKA."
+        },
+        {
+          "q": "What is the technical difference between AutoStore and DELIE systems?",
+          "a": "AutoStore uses grid robots operating on a modular grid. DELIE offers shuttle and stacker crane systems that in many configurations achieve comparable or superior densities, especially in warehouses with more than 8 meters of available height. DELIE also handles larger and heavier SKUs."
+        },
+        {
+          "q": "How much does an AutoStore alternative system cost in Argentina?",
+          "a": "A DELIE system equivalent to a medium AutoStore installation (1,000–3,000 positions) in Argentina can cost between USD 600,000 and USD 1,500,000 complete (equipment + racking + WCS + integration). AutoStore typically costs 30-50% more for equivalent configurations, plus the cost of imported technical support."
+        },
+        {
+          "q": "Does STOKA have experience installing systems in operations similar to AutoStore?",
+          "a": "Yes. STOKA has installed DELIE systems in e-commerce, 3PL logistics, pharma and manufacturing operations in Argentina with throughput profiles similar to those typically automated with AutoStore. We can show sector references at the first technical meeting."
+        }
+      ],
+      "parcial": "partial",
+      "metaTitle": "AutoStore Alternative in Argentina | DELIE ASRS | STOKA",
+      "metaDesc": "AutoStore alternative with comparable density and throughput at a lower cost. DELIE ASRS systems with local engineering and support in Argentina by STOKA."
+    },
+    "recursosHub": {
+      "metaTitle": "ASRS Technical Resources | Articles, Tools & Glossary",
+      "metaDesc": "STOKA technical resource center: articles on logistics automation, ROI calculator, system comparator, and technical glossary for Argentina and Chile.",
+      "breadcrumb": "Resources",
+      "heroTag": "Articles · Tools · Glossary · Argentina",
+      "heroH1_a": "Technical",
+      "heroH1_b": "resource center",
+      "heroSub": "Technical articles, comparisons and interactive tools to make better decisions about logistics automation in Argentina and Chile.",
+      "toolsH2": "Tools & references",
+      "articlesH2": "Technical articles",
+      "viewMore": "View more",
+      "readArticle": "Read"
+    },
+    "glosario": {
+      "metaTitle": "ASRS & Warehouse Automation Glossary | STOKA",
+      "metaDesc": "Over 60 technical terms about ASRS, AGV, WMS, WCS and logistics automation explained in plain language. Reference for engineers and logistics directors.",
+      "breadcrumb": "Technical glossary",
+      "heroTag": "ASRS · WMS · WCS · AGV · Logistics automation",
+      "heroH1_a": "Technical",
+      "heroH1_b": "glossary",
+      "heroSub": "Over 60 technical terms explained so you can evaluate and specify automation systems with confidence.",
+      "searchPlaceholder": "Search term…",
+      "allCats": "All",
+      "cats": {
+        "asrs": "ASRS",
+        "transporte": "Transport",
+        "robots": "Robots",
+        "software": "Software",
+        "operaciones": "Operations",
+        "finanzas": "Finance"
+      },
+      "noResults": "No terms match your search."
+    },
+    "roi": {
+      "metaTitle": "Warehouse Automation ROI Calculator | STOKA",
+      "metaDesc": "Calculate the ROI of automating your warehouse. Estimated annual savings, payback period, and RIMI tax benefit in seconds.",
+      "breadcrumb": "ROI Calculator",
+      "heroTag": "ROI · Payback · RIMI · Annual savings · Interactive tool",
+      "heroH1_a": "Automation",
+      "heroH1_b": "ROI calculator",
+      "heroSub": "Select your operation parameters and get estimated annual savings, payback period and projected ROI.",
+      "inputsH2": "Your current operation",
+      "inputsSub": "Select the option closest to your situation.",
+      "labelOperarios": "Warehouse operators",
+      "sublabelOperarios": "Picking, receiving and shipping staff",
+      "labelMovimientos": "Daily movements",
+      "sublabelMovimientos": "Combined inbound + outbound",
+      "labelCosto": "Monthly cost per operator",
+      "sublabelCosto": "Salary + social contributions + estimated severance",
+      "labelInversion": "Estimated investment in ASRS",
+      "sublabelInversion": "Equipment + racking + WCS + integration",
+      "howCalc": "How do we calculate this?",
+      "resultAhorroNeto": "Estimated net annual savings",
+      "resultAhorroSub": "after maintenance costs",
+      "resultPayback": "Payback period",
+      "resultPaybackAdjust": "Adjust parameters",
+      "resultRoi": "Annual ROI",
+      "desgloseH": "Savings breakdown",
+      "desgloseLaboral": "Headcount reduction (45%)",
+      "desgloseErrores": "Error reduction (85%)",
+      "desgloseMantenimiento": "Annual maintenance",
+      "rimiTag": "RIMI tax benefit 2025",
+      "rimiText": "With RIMI you can depreciate 100% in the first fiscal year, reducing the net cost by",
+      "ctaWpp": "Consult via WhatsApp with my data",
+      "ctaDisclaimer": "Indicative estimate ±30%. STOKA performs the real analysis at no cost.",
+      "faqH2": "Frequently asked questions about automation ROI",
+      "meses": "months",
+      "anos": "years"
+    },
+    "comparador": {
+      "metaTitle": "ASRS System Comparator | Which one do you need? | STOKA",
+      "metaDesc": "Select your load type, height and throughput and we recommend the ideal automated storage system for your operation.",
+      "breadcrumb": "Comparator",
+      "heroTag": "Stacker crane · Shuttle · VLM · AGV · 5 questions",
+      "heroH1_a": "Find the right",
+      "heroH1_b": "ASRS system",
+      "heroSub": "Answer 5 questions about your operation and receive a personalized technical recommendation.",
+      "preguntaLabel": "Question",
+      "de": "of",
+      "recTag": "Your recommendation",
+      "verFicha": "View technical sheet",
+      "consultarWpp": "Consult via WhatsApp",
+      "altTag": "Alternative to consider",
+      "validarCTA": "Want to validate this recommendation with real data from your operation?",
+      "validarDesc": "A STOKA engineer will analyze your real throughput and respond within 24 hours.",
+      "validarBtn": "Request free technical analysis",
+      "volverPregunta": "Back to previous question",
+      "empezarNuevo": "Start over"
+    },
+    "articulo": {
+      "breadcrumb": "Resources",
+      "lectura": "read",
+      "preguntasFrecuentes": "Frequently asked questions",
+      "articulosRelacionados": "Related articles",
+      "notFound": "Article not found",
+      "verRecursos": "View all resources"
+    },
+    "beneficiosFiscales": {
+      "metaTitle": "Tax Benefits for Automation 2026 | RIMI | STOKA",
+      "metaDesc": "RIMI 2026, RIGI, accelerated depreciation and early VAT recovery: up to 6 tax benefits to reduce the cost of your ASRS in Argentina. Updated guide 2026.",
+      "breadcrumb": "Tax Benefits",
+      "heroTag": "Regulatory framework · Argentina",
+      "heroUpdated": "Updated June 2026",
+      "heroH1_a": "Tax Benefits to",
+      "heroH1_b": "Automate Your Warehouse",
+      "heroH1_c": "in Argentina",
+      "heroSub": "Argentina has at least <strong>6 fiscal tools</strong> that can reduce the real cost of your ASRS system by 15% to 40%. It's not just RIGI — there are options from USD 150,000 in investment.",
+      "mapaTag": "Quick reference · June 2026",
+      "mapaH2": "Available benefits map",
+      "mapaDisclaimer": "* This table is indicative. The applicability of each tool depends on the company's tax profile and project structure.",
+      "colHerramienta": "Tool",
+      "colMonto": "Minimum amount",
+      "colQuien": "Who it's for",
+      "colBeneficio": "Main benefit",
+      "rimiSectionH2": "RIMI — Depreciate your ASRS system in 2 years and recover VAT",
+      "rimiTableCat": "Category",
+      "rimiTableMonto": "Maximum cumulative investment",
+      "rimiTableEquiv": "Approx. equivalent",
+      "rimiTableNote": "Investments are cumulative within the 2 consecutive fiscal year period.",
+      "rimiCalificaH3": "Does an imported ASRS system qualify?",
+      "faqH2": "Frequently asked questions about tax benefits",
+      "formH2": "Evaluate your case with a specialist",
+      "formSub": "No commitment · We respond within 24 business hours",
+      "formNombre": "Full name",
+      "formEmpresa": "Company",
+      "formEmail": "Corporate email",
+      "formTelefono": "Phone",
+      "formMonto": "Estimated investment amount",
+      "formProvincia": "Operating province",
+      "formSelectMonto": "Select a range",
+      "formSelectProvincia": "Select a province",
+      "formBtn": "Request free evaluation",
+      "formDisclaimer": "No commitment · We respond within 24 business hours",
+      "formThanks": "Thank you!",
+      "formThanksSub": "We redirected you to WhatsApp. If it didn't open, write to us at consultas@stokagroup.com",
+      "formVerCatalogo": "View systems catalog →",
+      "heroTagNorm": "Regulatory framework · Argentina",
+      "heroSubA": "Argentina has at least",
+      "heroSubBold": "6 tax tools",
+      "heroSubB": "that can reduce the real cost of your",
+      "heroSubLink": "ASRS system",
+      "heroSubC": "by 15% to 40%. It is not just RIGI — there are options from USD 150,000 of investment.",
+      "heroChips": [
+        "RIMI — Ley 27.802",
+        "RIGI — Ley 27.742",
+        "0% Tariff",
+        "10.5% VAT",
+        "Leasing",
+        "BICE Line",
+        "Knowledge Economy",
+        "Provincial regimes"
+      ],
+      "mapaRows": [
+        {
+          "herramienta": "RIMI",
+          "monto": "From USD 150,000",
+          "quien": "SMEs",
+          "beneficio": "Accelerated depreciation in 2 years + VAT refund"
+        },
+        {
+          "herramienta": "RIGI",
+          "monto": "USD 200,000,000",
+          "quien": "Large investments",
+          "beneficio": "Income tax at 25% + full import tariff exemption"
+        },
+        {
+          "herramienta": "Reduced tariffs",
+          "monto": "No minimum",
+          "quien": "Any importer",
+          "beneficio": "0%–14% tariff for capital goods"
+        },
+        {
+          "herramienta": "Reduced VAT",
+          "monto": "No minimum",
+          "quien": "Capital goods buyers",
+          "beneficio": "VAT at 10.5% instead of 21%"
+        },
+        {
+          "herramienta": "Leasing",
+          "monto": "No minimum",
+          "quien": "Any company",
+          "beneficio": "Deferred VAT + deductible installments"
+        },
+        {
+          "herramienta": "Knowledge Economy",
+          "monto": "No minimum",
+          "quien": "Technology buyers",
+          "beneficio": "FONPEC tax credit"
+        },
+        {
+          "herramienta": "Provincial regimes",
+          "monto": "Variable",
+          "quien": "By location",
+          "beneficio": "Exemptions on IIBB, Property and Stamp taxes"
+        }
+      ],
+      "rimiIntro": "The Manufacturing and Industry Incentive Regime (RIMI), created by Ley 27.802 Title XXIII and regulated by Decreto 242/2026 and Joint General Resolution ARCA 5849/2026, allows Argentine SMEs to depreciate capital goods in 2 years (instead of their accounting useful life) and recover paid VAT in advance. It applies to companies holding a valid MiPyME certificate.",
+      "rimiMontosH3": "Maximum amounts per MiPyME category",
+      "rimiMontosRows": [
+        {
+          "cat": "Micro",
+          "monto": "USD 150,000",
+          "equiv": "~1 basic miniload or industrial VLM"
+        },
+        {
+          "cat": "Small",
+          "monto": "USD 600,000",
+          "equiv": "~1 compact shuttle system"
+        },
+        {
+          "cat": "Medium Tier 1",
+          "monto": "USD 3,500,000",
+          "equiv": "~1 unit-load ASRS with 2 aisles"
+        },
+        {
+          "cat": "Medium Tier 2",
+          "monto": "USD 9,000,000",
+          "equiv": "~complete ASRS project with WCS"
+        }
+      ],
+      "rimiCalificaP": "Yes. ASRS systems —stacker cranes, shuttles, miniloads, carousels and palletizing robots— qualify as Capital Goods (BK) or Technological Infrastructure Goods (BIT) under the RIMI classification. Warehouse management software (WMS) and the warehouse control system (WCS) qualify as BIT when acquired as an integral part of the project.",
+      "rimiCalificaItems": [
+        {
+          "label": "Stacker cranes / Shuttles / Miniloads",
+          "tipo": "BK"
+        },
+        {
+          "label": "Palletizing and picking robots",
+          "tipo": "BK"
+        },
+        {
+          "label": "WMS / WCS integrated into the project",
+          "tipo": "BIT"
+        }
+      ],
+      "rimiB1H3": "Benefit 1 — Accelerated depreciation in Income Tax",
+      "rimiB1P": "Instead of depreciating the asset over its accounting useful life (typically 5 to 10 years), RIMI allows deducting 100% of the acquisition value in 2 equal annual installments of Income Tax. The actual saving depends on the rate applicable to the company.",
+      "rimiB1ColEscenario": "Scenario",
+      "rimiB1ColPlazo": "Depreciation period",
+      "rimiB1ColDed": "Year 1 deduction",
+      "rimiB1Row1": [
+        "Without RIMI (general regime)",
+        "5–10 years",
+        "10–20% of value"
+      ],
+      "rimiB1Row2": [
+        "With RIMI",
+        "2 annual installments",
+        "50% of value"
+      ],
+      "ejemploNum": "Numerical example",
+      "rimiB1Ej1": "Investment in ASRS system: USD 2,000,000.",
+      "rimiB1Ej2Label": "With RIMI:",
+      "rimiB1Ej2": "USD 1,000,000 is deducted in the first fiscal year (35% rate → ~USD 350,000 saving in Income Tax).",
+      "rimiB1Ej3Label": "Without RIMI:",
+      "rimiB1Ej3": "deduction of USD 200,000/year → ~USD 70,000 saving in Income Tax over the same period.",
+      "rimiB2H3": "Benefit 2 — Early VAT refund",
+      "rimiB2P": "The VAT paid on the import or local purchase of capital goods can be recovered within 9 months: ARCA/AFIP has 3 months to process the request and 6 additional months to make the refund. The credit can be applied against other national taxes, collected in cash or transferred to third parties.",
+      "rimiB2Ej1": "Import of an ASRS system for USD 2,000,000.",
+      "rimiB2Ej2": "VAT at 21% on CIF value: ≈ USD 420,000 recoverable in ≤9 months.",
+      "rimiB2Ej3": "Without RIMI, that tax credit is gradually absorbed against future debits, immobilizing working capital for years.",
+      "rimiLimitH3": "RIMI limitations to consider",
+      "rimiLimits": [
+        {
+          "title": "Budget quota",
+          "desc": "RIMI operates with an annual quota assigned by ARCA. 50% of the quota is reserved for projects approved in previous rounds; the remaining 50% is assigned by order of submission. We recommend starting the process in the first quarter of the fiscal year."
+        },
+        {
+          "title": "SGI (Incentive Management System)",
+          "desc": "The filing platform may have closing or maintenance periods. Check the current opening window on the ARCA website before starting the documentation."
+        },
+        {
+          "title": "Equity seniority",
+          "desc": "The company must prove at least 2 years of activity with positive net worth at the time of submission. Recently incorporated companies may not qualify."
+        }
+      ],
+      "rimiLegal": "Regulations: Ley 27.802 Title XXIII · Decreto 242/2026 · Joint GR ARCA 5849/2026. Applicability depends on the tax profile and project structure. Consult your accountant.",
+      "rigiH2": "RIGI — If your project exceeds USD 200 million",
+      "rigiIntro": "The Large Investment Incentive Regime (RIGI), created by Ley 27.742 and regulated by Decreto 749/2024, is designed for strategic projects of USD 200M or more in mining, oil and gas, energy, technology and infrastructure. A typical ASRS system (USD 500K–5M) does not reach that threshold on its own — but if your company already has a project enrolled in RIGI, the warehouse automation component can be included as part of the approved promoted investment.",
+      "rigiIntro2": "To date, 27 projects worth over USD 25,000M have been submitted. The regime was extended until July 2027. Enrolled provinces include: Mendoza, San Juan, Neuquén, Salta, Río Negro, Chubut, Santa Cruz, CABA, Córdoba and Buenos Aires, among others.",
+      "rigiTableH3": "Benefits for enrolled projects",
+      "rigiColBen": "Benefit",
+      "rigiColRigi": "With RIGI",
+      "rigiColGen": "General regime",
+      "rigiRows": [
+        {
+          "beneficio": "Income Tax",
+          "rigi": "25%",
+          "general": "35%"
+        },
+        {
+          "beneficio": "Import duties",
+          "rigi": "Full exemption",
+          "general": "0–18% (Decreto 513 ≠ exemption)"
+        },
+        {
+          "beneficio": "VAT on imports",
+          "rigi": "Tax Credit Certificates",
+          "general": "Deferred tax credit"
+        },
+        {
+          "beneficio": "Regulatory stability",
+          "rigi": "30 years from enrollment",
+          "general": "No guarantee"
+        },
+        {
+          "beneficio": "Distributed dividends",
+          "rigi": "7% (3.5% after 7 years)",
+          "general": "13%"
+        }
+      ],
+      "rigiKeyTag": "Key message for large industries",
+      "rigiKeyP": "If your company has a project enrolled in RIGI, your ASRS system is part of the promoted investment package. We help you structure the technical documentation of the automation component so it is correctly included in the approved file.",
+      "rigiLegal": "Regulations: Ley 27.742 · Decreto 749/2024. Enrollment in RIGI is voluntary and entails minimum investment commitments. Verify eligibility with a specialized legal advisor.",
+      "arancelH2": "Reduced import tariffs for capital goods",
+      "arancelIntro": "Decreto 513/2025 established the tariff reduction for 27 categories of capital goods, including logistics and industrial automation systems. The general tariff for new imported machinery ranges between 0% and 14%, depending on the NCM classification of the component.",
+      "arancelKeyTag": "Key point for ASRS systems",
+      "arancelKeyP": "There are no Argentine manufacturers of stacker cranes or ASRS systems. This enables the \"capital good not produced locally\" argument to classify the equipment under the NCM position with a 0% tariff, provided the classification is validated by the customs broker before importation.",
+      "arancelRefTag": "Tariff reference",
+      "arancelRefRows": [
+        {
+          "desc": "Automation systems (Decreto 513)",
+          "arancel": "12.6% reduced"
+        },
+        {
+          "desc": "Capital goods not produced locally",
+          "arancel": "0% (specific NCM)"
+        },
+        {
+          "desc": "General imported machinery",
+          "arancel": "0%–14%"
+        },
+        {
+          "desc": "ASRS parts and components",
+          "arancel": "Variable by NCM"
+        }
+      ],
+      "arancelWarn": "The exact tariff depends on the NCM classification of each component. We help you verify it with your customs broker before importation to maximize the benefit.",
+      "arancelLegal": "Regulations: Decreto 513/2025 (National Executive Branch). Validity subject to annual review. Verify NCM classification with an authorized broker.",
+      "ivaH2": "VAT reduced to 10.5% for capital goods",
+      "ivaIntro": "The VAT Law (art. 28, Ley 23.966) sets a differential rate of 10.5% —instead of the general 21%— for capital goods included in the specific Executive Branch list. Applicability depends on the NCM tariff classification of the equipment imported or acquired locally.",
+      "ivaImpactTag": "Impact on a USD 2,000,000 project",
+      "ivaGenLabel": "General VAT (21%)",
+      "ivaRedLabel": "Reduced VAT (10.5%)",
+      "ivaSaveLabel": "Direct saving",
+      "ivaWarn": "Does not apply if the operation is structured via leasing. When the acquisition is channeled through a leasing contract, the VAT on installments is settled at the general 21% rate.",
+      "ivaLegal": "Regulations: Ley 23.966 art. 28 · Annex of capital goods with reduced rate. Applicability depends on the NCM classification of the equipment.",
+      "leasingH2": "Capital goods leasing: finance without immobilizing capital",
+      "leasingIntro": "Financial leasing (Ley 25.248) allows acquiring an ASRS system financing 100% of the asset value, including VAT, through periodic installments. It is the alternative for companies that prefer to preserve liquidity and not commit conventional credit lines.",
+      "leasingCards": [
+        {
+          "title": "100% financing",
+          "desc": "Covers the full asset value plus VAT. No mandatory down payment or initial payment."
+        },
+        {
+          "title": "Deductible installments",
+          "desc": "Each installment is deducted as an Income Tax expense, generating tax savings from the first month."
+        },
+        {
+          "title": "Deferred VAT",
+          "desc": "VAT is split across the installments, avoiding a concentrated outlay at the start."
+        },
+        {
+          "title": "No accounting debt",
+          "desc": "The asset is not recorded as debt on the balance sheet until the purchase option is exercised."
+        },
+        {
+          "title": "Technological flexibility",
+          "desc": "Option to return or renew the equipment if technology evolves before the contract ends."
+        },
+        {
+          "title": "De facto depreciation",
+          "desc": "The installment scheme replicates the effect of accelerated depreciation on cash flow."
+        }
+      ],
+      "leasingEntTag": "Financing entities",
+      "leasingEnt": [
+        {
+          "ent": "BICE",
+          "detalle": "Fixed rate from 19.45% per year in USD"
+        },
+        {
+          "ent": "Banco Nación",
+          "detalle": "SME lines with subsidized rates"
+        },
+        {
+          "ent": "BBVA",
+          "detalle": "Leasing for capital goods"
+        }
+      ],
+      "leasingWarnLabel": "Compatibility with RIMI:",
+      "leasingWarn": "RIMI requires keeping the asset in the company's equity for at least 2 years from the investment. In leasing, legal ownership of the asset belongs to the bank until the purchase option is exercised. Consult your tax advisor on the optimal structure before combining both regimes.",
+      "leasingLegal": "Regulations: Ley 25.248 (Leasing). Rates and terms are indicative and subject to update by each entity.",
+      "ecBadge": "Ley 27.506 — Knowledge Economy",
+      "ecBadge2": "Registration in progress",
+      "ecH2": "Knowledge Economy: tax benefit when buying from us",
+      "ecIntro": "STOKA, as an industrial automation technology integrator (Industry 4.0), is in the process of registering in the Knowledge Economy Regime (Ley 27.506). Once registered, companies that acquire digital transformation and Industry 4.0 solutions from certified providers can access FONPEC: a tax credit credited directly in ARCA, under Resolution 8/2026.",
+      "ecFonpecTag": "What is FONPEC?",
+      "ecFonpecP": "The Knowledge Economy Promotion Fund (FONPEC) is a tax credit equivalent to a percentage of the contract, credited to the client's ARCA account. It can be applied against national taxes: Income Tax, VAT, employer contributions. It is a benefit received by the buyer for contracting with a registered provider.",
+      "ecWhyTag": "Why it matters for your purchase decision",
+      "ecWhyItems": [
+        "Buying from a provider registered in the Knowledge Economy generates extra tax credit for your company",
+        "Resolution 8/2026: instrument to promote investment in Industry 4.0",
+        "The same project can combine FONPEC + RIMI + Decreto 513",
+        "Differentiator: registered KE provider vs. non-registered = different real cost"
+      ],
+      "ecLegal": "Regulations: Ley 27.506 (Knowledge Economy) · FONPEC Resolution 8/2026. Status: STOKA registration in progress. Check the benefit's validity at the time of the operation.",
+      "provTag": "Provincial Regimes",
+      "provH2": "Tax benefits by province",
+      "provIntro": "Provincial benefits are complementary to the national ones (RIMI, RIGI, tariffs). The optimal combination depends on the province where your company operates. We help you map the incentives available for your case.",
+      "provCards": [
+        {
+          "prov": "Buenos Aires (Province)",
+          "badge": "RPIE · Ley 15.510",
+          "items": [
+            "Projects from USD 5 million",
+            "USD 5–50M: 30% exemption on IIBB, Property and Stamp taxes for 5 years",
+            "USD 50–200M: 25% exemption for 4 years",
+            "+USD 200M: 20% for 3 years + tax stability up to 30 years",
+            "Additional benefits for technological innovation and import substitution"
+          ]
+        },
+        {
+          "prov": "CABA",
+          "badge": "Leyes 6.949 y 6.950",
+          "items": [
+            "Enrollment in national RIGI (Ley 6.949)",
+            "Local RIMI (Ley 6.950): from USD 100,000 of investment",
+            "Stamp and ABL exemption for promoted projects",
+            "Up to 25% tax credit on Gross Income (IIBB)"
+          ]
+        },
+        {
+          "prov": "Córdoba",
+          "badge": "Leyes 5.319 y 10.792",
+          "items": [
+            "Provincial Industrial Promotion Law",
+            "Tax exemptions for capital goods investment projects",
+            "Monetary subsidies for industries located in promoted areas"
+          ]
+        },
+        {
+          "prov": "Santa Fe",
+          "badge": "Industrial Promotion Regime",
+          "items": [
+            "Benefits for new productive units",
+            "Exemptions for fixed-asset expansions",
+            "Incentives for increasing staff headcount"
+          ]
+        },
+        {
+          "prov": "Mendoza",
+          "badge": "Enrolled in RIGI",
+          "items": [
+            "Enrolled in national RIGI",
+            "Multi-year plan to reduce Gross Income tax rates",
+            "Stamp Tax: 1% in 2026, target 0% in 2030"
+          ]
+        },
+        {
+          "prov": "San Juan",
+          "badge": "Enrolled in RIGI · Mining",
+          "items": [
+            "USD 6,278M in approved RIGI projects in mining alone",
+            "Tax benefits for suppliers to the mining sector",
+            "Direct opportunity: warehouse automation in mining operations"
+          ]
+        },
+        {
+          "prov": "Neuquén",
+          "badge": "Enrolled in RIGI · Vaca Muerta",
+          "items": [
+            "Approved RIGI projects: Vaca Muerta Sur (USD 2,486M), pipeline, plants",
+            "Investment promotion in the Vaca Muerta basin",
+            "High demand for automation in upstream logistics"
+          ]
+        }
+      ],
+      "provMineLink": "Operating in mining or oil & gas? See specific benefits for the mining-energy sector →",
+      "provOtrasTag": "Other provinces enrolled in RIGI",
+      "provOtras": [
+        "Catamarca",
+        "Chaco",
+        "Chubut",
+        "Corrientes",
+        "Entre Ríos",
+        "Jujuy",
+        "Misiones",
+        "Río Negro",
+        "Salta",
+        "San Luis",
+        "Santa Cruz",
+        "Tucumán"
+      ],
+      "biceTag": "BICE Line",
+      "biceSubtitle": "Investment and Foreign Trade Bank",
+      "biceTitle": "Preferential Financing for Industrial Automation",
+      "biceMonto": "Up to 80% of the project",
+      "bicePerfil": "SMEs and large companies",
+      "biceDesc": "BICE offers a specific line for modernization and automation projects of productive and logistics processes. With terms of up to 10 years and a 2-year grace period, it is the most convenient financing instrument in the Argentine market for productive capital goods investment projects.",
+      "biceItems": [
+        "Financing of up to 80% of the total project value",
+        "Terms of up to 10 years for industrial automation projects",
+        "Grace period of up to 2 years on principal",
+        "Preferential interest rate based on the project's credit profile",
+        "Applicable to SMEs and large companies via an enrolled commercial bank",
+        "STOKA supports the preparation of the technical project required by the bank",
+        "Compatible with the 0% tariff of Decreto 513/2025 and RIMI in the same operation"
+      ],
+      "biceAhorroLabel": "Saving/amount:",
+      "bicePerfilLabel": "Profile:",
+      "pymeTag": "General SME Benefits",
+      "pymeH2": "Additional benefits for registered SMEs",
+      "pymeIntro": "Beyond the investment regimes, SMEs with a valid MiPyME certificate access a series of operational benefits that improve cash flow during and after importation.",
+      "pymeCards": [
+        {
+          "title": "VAT creditable at 90 days",
+          "desc": "The tax credit for VAT paid on importation can be computed at 90 days, improving the cash position in the quarter of the operation."
+        },
+        {
+          "title": "20% advance on capital goods imports",
+          "desc": "Advance payment reduced to 20% of the asset value over the total import, instead of the standard percentage."
+        },
+        {
+          "title": "Simplified VAT non-withholding certificate",
+          "desc": "Simplified process to obtain the certificate that avoids withholding at source, reducing administrative work."
+        },
+        {
+          "title": "Exemption from import perceptions",
+          "desc": "Temporary exemption from VAT and IIBB perceptions on imports for qualified SMEs. Verify validity with ARCA at the time of the operation."
+        },
+        {
+          "title": "Check tax as payment on account",
+          "desc": "Micro companies can compute 30% of the Bank Debits and Credits Tax as payment on account of employer contributions, reducing the monthly labor burden."
+        }
+      ],
+      "aplicaTag": "Quick applicability guide",
+      "aplicaH2": "Which benefits apply to your company?",
+      "aplicaColBen": "Benefit",
+      "aplicaColMicro": "Micro SME",
+      "aplicaColMicroSub": "USD 150K–600K",
+      "aplicaColMed": "Medium SME",
+      "aplicaColMedSub": "USD 600K–9M",
+      "aplicaColGran": "Large company",
+      "aplicaColGranSub": "No limit",
+      "aplicaColRigi": "RIGI project",
+      "aplicaColRigiSub": "+USD 200M",
+      "aplicaRows": [
+        {
+          "beneficio": "RIMI",
+          "cols": [
+            "✅",
+            "✅",
+            "—",
+            "—"
+          ]
+        },
+        {
+          "beneficio": "RIGI",
+          "cols": [
+            "—",
+            "—",
+            "—",
+            "✅"
+          ]
+        },
+        {
+          "beneficio": "Reduced tariffs",
+          "cols": [
+            "✅",
+            "✅",
+            "✅",
+            "✅ Full exemption"
+          ]
+        },
+        {
+          "beneficio": "VAT 10.5%",
+          "cols": [
+            "✅",
+            "✅",
+            "✅",
+            "✅"
+          ]
+        },
+        {
+          "beneficio": "Leasing",
+          "cols": [
+            "✅",
+            "✅",
+            "✅",
+            "Possible"
+          ]
+        },
+        {
+          "beneficio": "KE / FONPEC",
+          "cols": [
+            "✅",
+            "✅",
+            "✅",
+            "✅"
+          ]
+        },
+        {
+          "beneficio": "General SME",
+          "cols": [
+            "✅",
+            "✅",
+            "—",
+            "—"
+          ]
+        },
+        {
+          "beneficio": "Provincial",
+          "cols": [
+            "By location",
+            "By location",
+            "By location",
+            "✅ + provincial"
+          ]
+        }
+      ],
+      "aplicaNote": "— = does not apply directly · ✅ = applies · The optimal combination depends on the tax profile, corporate structure and location of the company.",
+      "casoTag": "Case study",
+      "casoH2": "How much does the real cost drop with all benefits combined?",
+      "casoCards": [
+        {
+          "label": "Project value",
+          "value": "USD 1,000,000",
+          "desc": "Complete ASRS system: stacker cranes, shuttle robots, WMS and conveyors for a distribution warehouse."
+        },
+        {
+          "label": "0% tariff saving",
+          "value": "− USD 150,000",
+          "desc": "Decreto 513/2025 eliminates the 15% tariff on CIF value. Direct saving in the initial outlay."
+        },
+        {
+          "label": "VAT 10.5% vs 21%",
+          "value": "− USD 52,500",
+          "desc": "Differential VAT on the equipment's taxable base (saving of 10.5 percentage points on USD 500,000 of qualified components)."
+        },
+        {
+          "label": "BICE financing",
+          "value": "USD 800,000",
+          "desc": "80% of the project over 10 years. Estimated installment: USD 8,500/month, lower than the monthly labor cost replaced."
+        }
+      ],
+      "casoResH3": "The result on first-year cash flow",
+      "casoResP1": "With a 0% tariff and 80% BICE financing, the company disburses USD 50,000 of its own capital in the first year (USD 200,000 net contribution from the USD 150,000 tariff saving). The monthly BICE installments are lower than the labor cost the system replaces.",
+      "casoResP2": "On that scenario, RIMI allows deducting 100% of the asset value in the first fiscal year, reducing the Income Tax base for the year of the investment. In companies with a high tax burden, this benefit can equal an additional tax saving of USD 80,000 to USD 120,000.",
+      "casoResRows": [
+        {
+          "label": "Net own capital first year",
+          "val": "~ USD 50,000",
+          "note": "After tariff saving"
+        },
+        {
+          "label": "Income Tax base reduction",
+          "val": "USD 1,000,000",
+          "note": "Accelerated RIMI depreciation 100%"
+        },
+        {
+          "label": "Estimated tax saving (Income Tax 35%)",
+          "val": "~ USD 120,000",
+          "note": "Varies by tax profile"
+        },
+        {
+          "label": "Total reduction on list cost",
+          "val": "15% – 40%",
+          "note": "Combining all benefits"
+        }
+      ],
+      "casoNote": "* Values are indicative estimates. The actual benefit depends on the company's tax profile, the project structure and the regimes it enrolls in. STOKA analyzes each specific project free of charge.",
+      "ctx2026Tag": "The 2026 context",
+      "ctx2026H2": "Why 2026 is a window of opportunity to automate",
+      "ctx2026P": [
+        "The convergence of three factors makes 2025–2026 a unique window to invest in warehouse automation in Argentina. For the first time in decades, long-term regulatory stability, elimination of import tariffs and access to preferential financing combine simultaneously.",
+        "RIGI offers 30 years of tax stability: Income Tax at 25%, fixed tariffs and free availability of foreign currency from the third year. For companies automating today, this horizon of certainty makes it easier to calculate the 10-year TCO and present the project to the board or financiers.",
+        "Decreto 513/2025 eliminates the 15% tariff: on a USD 800,000 project, that is USD 120,000 less in initial outlay. With no additional management by the company: it applies automatically when importing DELIE equipment.",
+        "The combination of BICE + RIMI + 0% tariff transforms the investment equation: the monthly financing installment falls below the monthly labor cost being replaced, making the system pay for itself from the first year of operation."
+      ],
+      "faqTag": "Frequently asked questions",
+      "faqItems": [
+        {
+          "q": "Does an imported ASRS system qualify as a capital good for RIMI?",
+          "a": "Yes. Decreto 242/2026 includes new imported movable goods classified as Capital Goods (BK). An ASRS system (stacker cranes, robots, conveyors) fits this definition. WMS/WCS software could be classified as an Informatics and Telecommunications Good (BIT)."
+        },
+        {
+          "q": "How much can I really save?",
+          "a": "It depends on the amount, your company's tax structure and the applicable regimes. As a reference: on a USD 2M project, RIMI's accelerated depreciation can represent an estimated financial saving of USD 280,000 in the first 2 years, and the reduced VAT rate a direct saving of USD 210,000 if the 10.5% rate applies."
+        },
+        {
+          "q": "Does STOKA handle the tax procedure?",
+          "a": "No. STOKA supports with the equipment's technical documentation (datasheets, NCM classifications, capital good classification). Enrollment in RIMI/RIGI and the tax procedures are handled by your accountant or tax advisor."
+        },
+        {
+          "q": "Can I combine RIMI + Leasing?",
+          "a": "It is a legal gray area. RIMI requires the asset to be in the beneficiary's equity for 2 years; in leasing, ownership belongs to the bank. We recommend consulting your tax advisor to define the optimal structure."
+        },
+        {
+          "q": "What if my company is not an SME?",
+          "a": "If you are not an SME and your project does not reach USD 200M (RIGI), you can still take advantage of: reduced tariffs, VAT 10.5% (if the NCM qualifies), leasing and provincial benefits depending on your location."
+        },
+        {
+          "q": "Do RIGI benefits apply to the ASRS within a mining or oil project?",
+          "a": "Yes. If your company has a project enrolled in RIGI, the project's capital goods (including an ASRS) enjoy full exemption from import duties, VAT with tax credit certificates and accelerated depreciation."
+        }
+      ],
+      "ctaTag": "Free assessment",
+      "ctaP": "Every company has a different tax structure. Our team supports you with the technical documentation of the ASRS system and connects you with the benefits that apply to your case. The final tax advice is defined by your accountant — we provide the engineering.",
+      "ctaDirectTag": "Or contact us directly",
+      "disclaimerTag": "Important legal notice",
+      "disclaimerP": "The information on this page is general in nature and based on regulations in force as of June 2026. It does not constitute tax, legal or financial advice. Tax benefits are subject to current regulations, budget quotas and eligibility requirements that may vary. Consult your accountant or tax advisor on the applicability to your particular case. Last updated: June 2026. STOKA is not responsible for decisions made based on this information without independent professional advice.",
+      "normativaTag": "Cited regulations",
+      "normativaItems": [
+        {
+          "ref": "Ley 27.802, Title XXIII (RIMI)",
+          "fecha": "March 2026"
+        },
+        {
+          "ref": "Decreto 242/2026 (RIMI Regulation)",
+          "fecha": "April 2026"
+        },
+        {
+          "ref": "Joint GR ARCA 5849/2026 (RIMI Procedure)",
+          "fecha": "May 2026"
+        },
+        {
+          "ref": "Ley 27.742, Title VII (RIGI)",
+          "fecha": "July 2024"
+        },
+        {
+          "ref": "Decreto 749/2024 (RIGI Regulation)",
+          "fecha": "September 2024"
+        },
+        {
+          "ref": "Decreto 105/2026 (RIGI Extension)",
+          "fecha": "February 2026"
+        },
+        {
+          "ref": "Decreto 513/2025 (Capital goods tariff reduction)",
+          "fecha": "2025"
+        },
+        {
+          "ref": "Decreto 557/23, Annex I (BK and BIT list)",
+          "fecha": "2023"
+        },
+        {
+          "ref": "Ley 25.248 (Leasing)",
+          "fecha": ""
+        },
+        {
+          "ref": "Ley 23.349, art. 28 (Reduced VAT rate)",
+          "fecha": ""
+        },
+        {
+          "ref": "Ley 27.264 (SME Benefits)",
+          "fecha": ""
+        },
+        {
+          "ref": "Ley 27.506 + 27.570 (Knowledge Economy)",
+          "fecha": ""
+        },
+        {
+          "ref": "Resolution 8/2026 Industry Secretariat (FONPEC)",
+          "fecha": "2026"
+        },
+        {
+          "ref": "Leyes 6.949 and 6.950 CABA (RIGI and local RIMI)",
+          "fecha": ""
+        },
+        {
+          "ref": "Ley 15.510 Buenos Aires (RPIE)",
+          "fecha": ""
+        },
+        {
+          "ref": "Leyes 5.319 and 10.792 Córdoba (Industrial Promotion)",
+          "fecha": ""
+        }
+      ]
+    },
+    "producto": {
+      "notFound": "Product not found",
+      "verCatalogo": "View catalog",
+      "breadcrumbHome": "Home",
+      "breadcrumbCatalog": "Catalog",
+      "especificaciones": "Technical specifications",
+      "aplicaciones": "Industrial applications",
+      "industrias": "Industries",
+      "ventajas": "Key advantages",
+      "faqH2": "Frequently asked questions",
+      "verIndustria": "View industry →",
+      "consultarWpp": "Consult via WhatsApp",
+      "solicitarProyecto": "Request project",
+      "descargarFicha": "Download technical sheet",
+      "imagenes": "Image gallery",
+      "verMas": "View more"
+    },
+    "alternativeDelie": {
+      "metaTitle": "DELIE in Argentina | DELIE ASRS Systems | STOKA",
+      "metaDesc": "Official DELIE representatives in Argentina. ASRS systems, stacker cranes, robots and WMS/WCS software with 100% local engineering and support by STOKA."
+    }
+  }
+}

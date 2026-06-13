@@ -1,51 +1,40 @@
 import { motion } from 'framer-motion';
 import { Shield, Percent, Building2, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useLangNavigate } from '../lib/i18n-utils';
 
-const ITEMS = [
-  {
-    icon: Shield,
-    tag: 'RIGI',
-    title: 'Estabilidad fiscal 30 años',
-    body: 'Amortización acelerada, estabilidad tributaria por 3 décadas y deducción inmediata de IVA para proyectos de automatización industrial.',
-  },
-  {
-    icon: Percent,
-    tag: 'Decreto 513/2025',
-    title: 'Aranceles reducidos para bienes de capital',
-    body: 'Los sistemas ASRS y equipos de automatización pueden acceder a aranceles reducidos o nulos según su clasificación arancelaria (Decreto 513/2025).',
-  },
-  {
-    icon: Building2,
-    tag: 'Línea BICE',
-    title: 'Financiamiento hasta 10 años',
-    body: 'Línea del Banco de Inversión con tasas preferenciales y plazos de hasta 10 años para proyectos de automatización industrial.',
-  },
-];
+const ICONS = [Shield, Percent, Building2];
+const TAGS  = ['RIGI', 'Decreto 513/2025', 'Línea BICE'];
 
 export const BeneficiosBanner = () => {
-  const navigate = useNavigate();
+  const { t } = useTranslation();
+  const langNavigate = useLangNavigate();
+
+  const ITEMS = [
+    { icon: ICONS[0], tag: TAGS[0], title: t('benefits.rigiTitle'),    body: t('benefits.rigiBody') },
+    { icon: ICONS[1], tag: TAGS[1], title: t('benefits.decretoTitle'), body: t('benefits.decretoBody') },
+    { icon: ICONS[2], tag: TAGS[2], title: t('benefits.biceTitle'),    body: t('benefits.biceBody') },
+  ];
 
   return (
     <section className="relative py-24 px-6 z-20 bg-white overflow-hidden">
-
       <div className="max-w-6xl mx-auto relative">
 
         <div className="mb-12 text-center">
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">
-            Beneficios fiscales · Argentina 2026
+            {t('benefits.tag')}
           </p>
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter leading-none">
-            Invertí con el{' '}
+            {t('benefits.h2_a')}{' '}
             <span
               className="text-transparent bg-clip-text"
               style={{ backgroundImage: 'linear-gradient(to right, #22d3ee, #60a5fa)' }}
             >
-              Estado a favor
+              {t('benefits.h2_b')}
             </span>
           </h2>
           <p className="mt-5 text-gray-500 max-w-xl mx-auto font-light leading-relaxed">
-            El marco normativo argentino en 2026 crea condiciones únicas para automatizar tu operación logística.
+            {t('benefits.sub')}
           </p>
         </div>
 
@@ -73,7 +62,6 @@ export const BeneficiosBanner = () => {
           ))}
         </div>
 
-        {/* Concrete savings example */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,17 +69,17 @@ export const BeneficiosBanner = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mb-10 border border-gray-200 rounded-2xl p-6 bg-gray-100 text-center"
         >
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.4em] uppercase mb-4">Beneficios combinables en el mismo proyecto</p>
-          <p className="text-gray-600 text-base leading-relaxed mb-2">El ahorro real depende de la estructura fiscal de cada empresa.</p>
-          <p className="text-gray-400 text-sm">Te ayudamos a evaluarlo sin cargo.</p>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.4em] uppercase mb-4">{t('benefits.combinableTag')}</p>
+          <p className="text-gray-600 text-base leading-relaxed mb-2">{t('benefits.combinableText')}</p>
+          <p className="text-gray-400 text-sm">{t('benefits.combinableSub')}</p>
         </motion.div>
 
         <div className="text-center">
           <button
-            onClick={() => navigate('/beneficios-fiscales')}
+            onClick={() => langNavigate('/beneficios-fiscales')}
             className="inline-flex items-center gap-2 px-8 py-3 border border-gray-300 rounded-xl text-gray-600 text-sm font-bold hover:bg-gray-200 hover:text-gray-900 transition-all group"
           >
-            Ver guía completa de beneficios
+            {t('benefits.viewGuide')}
             <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
           </button>
         </div>

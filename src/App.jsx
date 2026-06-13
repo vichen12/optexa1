@@ -1,7 +1,8 @@
 import { useEffect, lazy, Suspense } from 'react';
-import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, Outlet, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Hero } from './components/hero';
@@ -14,6 +15,9 @@ import { ROISection } from './components/ROISection';
 import { BeneficiosBanner } from './components/BeneficiosBanner';
 import { Process } from './components/Process';
 import { CTABanner } from './components/CTABanner';
+import { LangLink } from './lib/i18n-utils';
+import { SeoHead } from './lib/SeoHead';
+
 const CatalogPage = lazy(() => import('./pages/CatalogPage').then(m => ({ default: m.CatalogPage })));
 const SolucionesPage = lazy(() => import('./pages/SolucionesPage').then(m => ({ default: m.SolucionesPage })));
 const NosotrosPage = lazy(() => import('./pages/NosotrosPage').then(m => ({ default: m.NosotrosPage })));
@@ -39,7 +43,7 @@ const ROIPage = lazy(() => import('./pages/recursos/ROIPage').then(m => ({ defau
 const AutoStoreAlternativaPage = lazy(() => import('./pages/catalogo/AutoStoreAlternativaPage').then(m => ({ default: m.AutoStoreAlternativaPage })));
 const ChilePage = lazy(() => import('./pages/ChilePage').then(m => ({ default: m.ChilePage })));
 
-const ORGANIZATION_SCHEMA = {
+export const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness"],
   "@id": "https://www.stokagroup.com/#organization",
@@ -59,68 +63,61 @@ const ORGANIZATION_SCHEMA = {
     "postalCode": "5515",
     "addressCountry": "AR"
   },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -32.9468,
-    "longitude": -68.4081
-  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -32.9468, "longitude": -68.4081 },
   "areaServed": [
     { "@type": "Country", "name": "Argentina" },
     { "@type": "Country", "name": "Chile" }
   ],
-
-  "knowsAbout": [
-    "Sistemas ASRS",
-    "Automatización de almacenes",
-    "Transelevadores",
-    "Robots AMR",
-    "Software WMS",
-    "Software WCS",
-    "VLM",
-    "Carruseles verticales"
-  ],
+  "knowsAbout": ["Sistemas ASRS", "Automatización de almacenes", "Transelevadores", "Robots AMR", "Software WMS", "Software WCS", "VLM", "Carruseles verticales"],
   "foundingDate": "2025",
   "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2 },
   "priceRange": "$$$$"
 };
 
-function HomePage() {
+/* Language layout — reads lang prefix from URL and syncs i18n */
+function LangLayout({ lang }) {
+  const { i18n } = useTranslation();
+  const location = useLocation();
+
+  useEffect(() => {
+    const target = lang || (
+      location.pathname.startsWith('/en') ? 'en' :
+      location.pathname.startsWith('/zh') ? 'zh' : 'es'
+    );
+    if (i18n.language !== target) i18n.changeLanguage(target);
+  }, [lang, location.pathname, i18n]);
+
+  return <Outlet />;
+}
+
+export function HomePage() {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const handleVisibilityChange = () => {
       document.title = document.visibilityState === 'hidden'
-        ? '¡Volvé! Te esperamos 👋'
-        : 'Sistemas ASRS y Automatización de Almacenes en Argentina | STOKA';
+        ? t('home.tabAway')
+        : t('home.pageTitle');
     };
     document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
-  }, []);
+  }, [t]);
 
   return (
     <div className="min-h-screen relative text-white selection:bg-cyan-400 selection:text-slate-900 bg-zinc-950">
+      <SeoHead
+        title={t('home.pageTitle')}
+        description={t('home.metaDesc')}
+        basePath={'/'}
+      />
       <Helmet>
-        <title>Sistemas ASRS y Automatización de Almacenes en Argentina | STOKA</title>
-        <meta name="robots" content="index, follow" />
-        <meta name="description" content="Sistemas ASRS para automatización de almacenes, bodegas y depósitos en Argentina. Transelevadores, pallet shuttle, robots y WMS/WCS DELIE. 30–50% más económico que Europa. Soporte local STOKA." />
-        <meta property="og:title" content="Sistemas ASRS y Automatización de Almacenes en Argentina | STOKA" />
-        <meta property="og:description" content="Automatización de almacenes, bodegas y depósitos en Argentina con tecnología DELIE. Transelevadores, robots shuttle, VLM y software WMS/WCS. Integración local STOKA." />
-        <meta property="og:image" content="https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png" />
-        <meta property="og:url" content="https://www.stokagroup.com/" />
-        <link rel="canonical" href="https://www.stokagroup.com/" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "STOKA — Automatización de Almacenes",
           "url": "https://www.stokagroup.com",
-          "description": "Representantes oficiales exclusivos de DELIE en Argentina. Sistemas ASRS y automatización de almacenes.",
-          "publisher": { "@type": "Organization", "name": "STOKA" },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://www.stokagroup.com/recursos?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
+          "description": "Representantes oficiales exclusivos de DELIE en Argentina.",
+          "publisher": { "@type": "Organization", "name": "STOKA" }
         })}</script>
         <script type="application/ld+json">{JSON.stringify(ORGANIZATION_SCHEMA)}</script>
       </Helmet>
@@ -140,23 +137,20 @@ function HomePage() {
         <Process />
       </main>
 
-      {/* SEO content block — home */}
+      {/* SEO content block */}
       <section className="bg-white py-16 px-6 border-t border-gray-100">
         <div className="max-w-5xl mx-auto space-y-12">
 
-          {/* Header + stats */}
           <div>
-            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">STOKA · Representantes DELIE en Argentina</p>
-            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-3 max-w-3xl">Automatización de almacenes, bodegas y depósitos industriales en Argentina y Chile</h2>
-            <p className="text-gray-500 text-sm leading-relaxed max-w-2xl">
-              Representante oficial exclusivo de DELIE — uno de los fabricantes de sistemas ASRS de mayor escala global. Ingeniería, instalación y soporte 100% local en Argentina y Chile.
-            </p>
+            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{t('home.seoTag')}</p>
+            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-3 max-w-3xl">{t('home.h2')}</h2>
+            <p className="text-gray-500 text-sm leading-relaxed max-w-2xl">{t('home.seoPara')}</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
               {[
-                { label: '+1.000', desc: 'Instalaciones globales DELIE' },
-                { label: '+30',    desc: 'Países con presencia' },
-                { label: '40 m',   desc: 'Altura máx. de rack' },
-                { label: 'CMMI 5', desc: 'Certificación software WMS/WCS' },
+                { label: '+1.000', desc: t('home.stats.installations') },
+                { label: '+30',    desc: t('home.stats.countries') },
+                { label: '40 m',   desc: t('home.stats.height') },
+                { label: 'CMMI 5', desc: t('home.stats.cert') },
               ].map((s, i) => (
                 <div key={i} className="bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 text-center">
                   <p className="text-xl font-black text-cyan-500 leading-none mb-1">{s.label}</p>
@@ -166,15 +160,10 @@ function HomePage() {
             </div>
           </div>
 
-          {/* 3 desafíos resueltos */}
           <div>
-            <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-5">3 desafíos históricos · 3 soluciones concretas</p>
+            <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-5">{t('home.challengesTag')}</p>
             <div className="grid md:grid-cols-3 gap-4">
-              {[
-                { num: '01', challenge: 'Costo de importación', solution: 'El Decreto 513/2025 elimina los aranceles para sistemas ASRS — ahorro del 12% al 18% sobre el valor del equipo.' },
-                { num: '02', challenge: 'Sin soporte técnico local', solution: 'El equipo de ingeniería de STOKA está en Argentina para proyecto, instalación y posventa. No hay intermediarios.' },
-                { num: '03', challenge: 'Incertidumbre regulatoria', solution: 'El RIGI ofrece 30 años de estabilidad fiscal. El RIMI permite amortizar el 100% del bien en el primer ejercicio.' },
-              ].map((item) => (
+              {t('home.challenges', { returnObjects: true }).map((item) => (
                 <div key={item.num} className="rounded-2xl border border-gray-100 bg-gray-50/50 p-5">
                   <span className="text-[10px] font-black text-gray-300 font-mono">//{item.num}</span>
                   <p className="font-black text-gray-900 text-sm uppercase tracking-tight mt-2 mb-2">{item.challenge}</p>
@@ -184,11 +173,9 @@ function HomePage() {
             </div>
           </div>
 
-          {/* Equipos + ROI */}
           <div className="grid md:grid-cols-2 gap-4">
-            {/* Equipos */}
             <div className="rounded-2xl border border-gray-100 bg-gray-50/50 p-6">
-              <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-4">Sistemas que instalamos</p>
+              <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-4">{t('home.systemsTag')}</p>
               <div className="flex flex-wrap gap-2">
                 {['ASRS alta densidad 7–40 m', 'Transelevador MiniLoad', 'Transelevador de paletas', 'Robot shuttle 2 vías', 'Robot shuttle 4 vías', 'VLM', 'Carrusel vertical', 'Transportador de cadena', 'Transportador de rodillos', 'Paletizador automático', 'WMS', 'WCS', 'HMS'].map((tag) => (
                   <span key={tag} className="text-[11px] font-semibold text-gray-600 bg-white border border-gray-200 px-3 py-1 rounded-full">{tag}</span>
@@ -196,16 +183,15 @@ function HomePage() {
               </div>
             </div>
 
-            {/* Proceso y ROI */}
             <div className="rounded-2xl bg-slate-900 p-6 flex flex-col gap-5">
               <div>
-                <p className="text-[10px] font-mono text-cyan-400 tracking-[0.4em] uppercase mb-2">Retorno de inversión típico</p>
-                <p className="text-4xl font-black text-white leading-none">18–36 <span className="text-lg font-bold text-gray-400">meses</span></p>
-                <p className="text-gray-400 text-xs mt-1">Primera consulta sin costo · Respuesta en menos de 24 hs</p>
+                <p className="text-[10px] font-mono text-cyan-400 tracking-[0.4em] uppercase mb-2">{t('home.roiTag')}</p>
+                <p className="text-4xl font-black text-white leading-none">18–36 <span className="text-lg font-bold text-gray-400">{t('home.roiMonths')}</span></p>
+                <p className="text-gray-400 text-xs mt-1">{t('home.roiSub')}</p>
               </div>
               <div className="border-t border-white/10 pt-4 space-y-2">
-                <p className="text-[10px] font-mono text-gray-500 tracking-[0.3em] uppercase mb-3">Nuestro proceso</p>
-                {['Diagnóstico de throughput y perfil de SKUs', 'Análisis de picos y restricciones de layout', 'TCO a 10 años con supuestos verificables', 'Simulación de flujos y ROI proyectado'].map((step, i) => (
+                <p className="text-[10px] font-mono text-gray-500 tracking-[0.3em] uppercase mb-3">{t('home.processTag')}</p>
+                {t('home.processSteps', { returnObjects: true }).map((step, i) => (
                   <div key={i} className="flex items-start gap-2">
                     <span className="text-cyan-400 font-black text-xs mt-0.5 shrink-0">{i + 1}.</span>
                     <p className="text-gray-300 text-xs leading-relaxed">{step}</p>
@@ -215,15 +201,10 @@ function HomePage() {
             </div>
           </div>
 
-          {/* Contexto fiscal */}
           <div className="rounded-2xl border border-cyan-100 bg-cyan-50/50 p-6">
-            <p className="text-[10px] font-mono text-cyan-600 tracking-[0.4em] uppercase mb-4">Contexto fiscal · Argentina 2026</p>
+            <p className="text-[10px] font-mono text-cyan-600 tracking-[0.4em] uppercase mb-4">{t('home.fiscalTag')}</p>
             <div className="grid sm:grid-cols-3 gap-4">
-              {[
-                { label: 'Decreto 513/2025', detail: 'Aranceles reducidos o nulos para equipos ASRS · ahorro del 12% al 18%' },
-                { label: 'RIMI · Ley 27.802', detail: 'Amortización del bien de capital en el primer ejercicio fiscal' },
-                { label: 'Línea BICE', detail: 'Hasta 80% de financiamiento a 10 años · cuota menor al costo laboral reemplazado' },
-              ].map((item, i) => (
+              {t('home.fiscal', { returnObjects: true }).map((item, i) => (
                 <div key={i} className="flex gap-3">
                   <div className="w-1 rounded-full bg-cyan-400 shrink-0 mt-1" />
                   <div>
@@ -233,41 +214,35 @@ function HomePage() {
                 </div>
               ))}
             </div>
-            <Link to="/beneficios-fiscales" className="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-600 hover:text-cyan-500 mt-5 transition-colors">
-              Ver guía completa de beneficios fiscales <span>›</span>
-            </Link>
+            <LangLink to="/beneficios-fiscales" className="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-600 hover:text-cyan-500 mt-5 transition-colors">
+              {t('home.fiscalLink')} <span>›</span>
+            </LangLink>
           </div>
 
-          {/* Chile */}
           <div>
-            <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-5">Operaciones en Chile</p>
+            <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-5">{t('home.chileTag')}</p>
             <div className="grid md:grid-cols-3 gap-4">
-              {[
-                { ind: 'Minería', desc: 'Bodegas de repuestos en zonas remotas con acceso restringido. Alta densidad, inventario crítico.' },
-                { ind: 'Vitivinícola', desc: 'Almacenes de alta densidad sin ampliar footprint. FIFO y trazabilidad por lote y añada.' },
-                { ind: 'Agroindustria exportadora', desc: 'Cadena de frío con FIFO automático para certificación de origen. Cumplimiento normativa fitosanitaria.' },
-              ].map((item, i) => (
+              {t('home.chile', { returnObjects: true }).map((item, i) => (
                 <div key={i} className="rounded-2xl border border-gray-100 p-5">
                   <p className="font-black text-gray-900 text-sm uppercase tracking-tight mb-2">{item.ind}</p>
                   <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
-            <p className="text-gray-400 text-xs mt-4">Los sistemas DELIE cumplen normativas locales de Chile en seguridad eléctrica e importación de bienes de capital.</p>
+            <p className="text-gray-400 text-xs mt-4">{t('home.chileNote')}</p>
           </div>
 
-          {/* Links útiles */}
           <div className="flex flex-wrap gap-3 pt-2 border-t border-gray-100">
             {[
-              { to: '/casos-de-exito', label: 'Casos de éxito reales' },
-              { to: '/recursos/glosario', label: 'Glosario técnico' },
-              { to: '/recursos/comparador-sistemas', label: 'Comparador de sistemas' },
-              { to: '/beneficios-fiscales', label: 'Beneficios fiscales 2026' },
+              { to: '/casos-de-exito',              label: t('home.links.cases') },
+              { to: '/recursos/glosario',            label: t('home.links.glossary') },
+              { to: '/recursos/comparador-sistemas', label: t('home.links.comparator') },
+              { to: '/beneficios-fiscales',          label: t('home.links.fiscalBenefits') },
             ].map((l) => (
-              <Link key={l.to} to={l.to}
+              <LangLink key={l.to} to={l.to}
                 className="text-xs font-bold text-gray-500 hover:text-cyan-600 border border-gray-200 hover:border-cyan-300 px-4 py-2 rounded-full transition-all">
                 {l.label}
-              </Link>
+              </LangLink>
             ))}
           </div>
 
@@ -282,6 +257,36 @@ function HomePage() {
 }
 
 function App() {
+  /* Shared inner routes — reused for /, /en, /zh */
+  const inner = [
+    <Route key="home" index element={<HomePage />} />,
+    <Route key="catalogo" path="catalogo" element={<CatalogPage />} />,
+    <Route key="catalogo-asrs" path="catalogo/asrs" element={<CatalogoASRSPage />} />,
+    <Route key="catalogo-robots" path="catalogo/robots-manipulacion" element={<CatalogoRobotsPage />} />,
+    <Route key="catalogo-vertical" path="catalogo/almacenamiento-vertical" element={<CatalogoVerticalPage />} />,
+    <Route key="catalogo-transport" path="catalogo/equipo-transporte" element={<CatalogoTransportePage />} />,
+    <Route key="catalogo-software" path="catalogo/software" element={<CatalogoSoftwarePage />} />,
+    <Route key="catalogo-producto" path="catalogo/:categoria/:producto" element={<ProductoPage />} />,
+    <Route key="soluciones" path="soluciones" element={<SolucionesPage />} />,
+    <Route key="industrias" path="industrias" element={<IndustriasPage />} />,
+    <Route key="industria-detail" path="industrias/:slug" element={<IndustriaDetailPage />} />,
+    <Route key="beneficios" path="beneficios-fiscales" element={<BeneficiosFiscalesPage />} />,
+    <Route key="como-trabajamos" path="como-trabajamos" element={<ComoTrabajamosPage />} />,
+    <Route key="nosotros" path="nosotros" element={<NosotrosPage />} />,
+    <Route key="contacto" path="contacto" element={<ContactPage />} />,
+    <Route key="delie-ar" path="delie-argentina" element={<AlternativaDeliePage />} />,
+    <Route key="alt-asrs" path="alternativa-economica-asrs" element={<AlternativaEconomicaASRSPage />} />,
+    <Route key="alt-delie-redir" path="alternativa-delie-argentina" element={<Navigate to="delie-argentina" replace />} />,
+    <Route key="casos" path="casos-de-exito" element={<CasosDeExitoPage />} />,
+    <Route key="recursos" path="recursos" element={<RecursosHub />} />,
+    <Route key="glosario" path="recursos/glosario" element={<GlosarioPage />} />,
+    <Route key="comparador" path="recursos/comparador-sistemas" element={<ComparadorPage />} />,
+    <Route key="roi" path="recursos/roi-automatizacion" element={<ROIPage />} />,
+    <Route key="articulo" path="recursos/:slug" element={<ArticuloPage />} />,
+    <Route key="autostore" path="catalogo/asrs/autostore-alternativa" element={<AutoStoreAlternativaPage />} />,
+    <Route key="chile" path="chile" element={<ChilePage />} />,
+  ];
+
   return (
     <>
       <Helmet>
@@ -289,32 +294,18 @@ function App() {
       </Helmet>
       <Suspense fallback={<div className="min-h-screen bg-zinc-950" />}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/catalogo" element={<CatalogPage />} />
-          <Route path="/catalogo/asrs" element={<CatalogoASRSPage />} />
-          <Route path="/catalogo/robots-manipulacion" element={<CatalogoRobotsPage />} />
-          <Route path="/catalogo/almacenamiento-vertical" element={<CatalogoVerticalPage />} />
-          <Route path="/catalogo/equipo-transporte" element={<CatalogoTransportePage />} />
-          <Route path="/catalogo/software" element={<CatalogoSoftwarePage />} />
-          <Route path="/catalogo/:categoria/:producto" element={<ProductoPage />} />
-          <Route path="/soluciones" element={<SolucionesPage />} />
-          <Route path="/industrias" element={<IndustriasPage />} />
-          <Route path="/industrias/:slug" element={<IndustriaDetailPage />} />
-          <Route path="/beneficios-fiscales" element={<BeneficiosFiscalesPage />} />
-          <Route path="/como-trabajamos" element={<ComoTrabajamosPage />} />
-          <Route path="/nosotros" element={<NosotrosPage />} />
-          <Route path="/contacto" element={<ContactPage />} />
-          <Route path="/delie-argentina" element={<AlternativaDeliePage />} />
-          <Route path="/alternativa-economica-asrs" element={<AlternativaEconomicaASRSPage />} />
-          <Route path="/alternativa-delie-argentina" element={<Navigate to="/delie-argentina" replace />} />
-          <Route path="/casos-de-exito" element={<CasosDeExitoPage />} />
-          <Route path="/recursos" element={<RecursosHub />} />
-          <Route path="/recursos/glosario" element={<GlosarioPage />} />
-          <Route path="/recursos/comparador-sistemas" element={<ComparadorPage />} />
-          <Route path="/recursos/roi-automatizacion" element={<ROIPage />} />
-          <Route path="/recursos/:slug" element={<ArticuloPage />} />
-          <Route path="/catalogo/asrs/autostore-alternativa" element={<AutoStoreAlternativaPage />} />
-          <Route path="/chile" element={<ChilePage />} />
+          {/* Spanish (default) */}
+          <Route path="/" element={<LangLayout lang="es" />}>
+            {inner}
+          </Route>
+          {/* English */}
+          <Route path="/en" element={<LangLayout lang="en" />}>
+            {inner}
+          </Route>
+          {/* Chinese */}
+          <Route path="/zh" element={<LangLayout lang="zh" />}>
+            {inner}
+          </Route>
         </Routes>
       </Suspense>
       <LeadPopup />

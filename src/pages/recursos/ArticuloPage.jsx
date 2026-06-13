@@ -1,4 +1,6 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { LangLink } from '../../lib/i18n-utils';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Clock, ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
@@ -7,8 +9,11 @@ import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
 import { getArticulo } from '../../data/articulosData';
+import { SeoHead } from '../../lib/SeoHead';
 
 export const ArticuloPage = () => {
+  const { t } = useTranslation();
+  const p = (k) => t(`pages.articulo.${k}`, { returnObjects: true });
   const { slug } = useParams();
   const art = getArticulo(slug);
 
@@ -18,8 +23,8 @@ export const ArticuloPage = () => {
         <Navbar />
         <div className="text-center">
           <p className="text-5xl font-black text-cyan-500 mb-4">404</p>
-          <p className="text-xl text-gray-600 mb-6">Artículo no encontrado</p>
-          <Link to="/recursos" className="text-cyan-600 underline">Ver todos los recursos</Link>
+          <p className="text-xl text-gray-600 mb-6">{p('notFound')}</p>
+          <LangLink to="/recursos" className="text-cyan-600 underline">{p('verRecursos')}</LangLink>
         </div>
       </div>
     );
@@ -68,16 +73,14 @@ export const ArticuloPage = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      <SeoHead
+        title={art.metaTitle}
+        description={art.metaDesc}
+        ogImage={`https://www.stokagroup.com${art.heroImg}`}
+        basePath={`/recursos/${art.slug}`}
+      />
       <Helmet>
-        <title>{art.metaTitle}</title>
-        <meta name="description" content={art.metaDesc} />
-        <meta property="og:title" content={art.metaTitle} />
-        <meta property="og:description" content={art.metaDesc} />
-        <meta property="og:image" content={`https://www.stokagroup.com${art.heroImg}`} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="article" />
-        <link rel="canonical" href={canonical} />
-        <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
+                                                        <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
@@ -88,14 +91,14 @@ export const ArticuloPage = () => {
       <section className="bg-white pt-36 pb-10 px-6 border-b border-gray-100">
         <div className="max-w-5xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
-            <Link to="/" className="hover:text-cyan-500 transition-colors">Inicio</Link>
+            <LangLink to="/" className="hover:text-cyan-500 transition-colors">{t('nav.home')}</LangLink>
             <span>/</span>
-            <Link to="/recursos" className="hover:text-cyan-500 transition-colors">Recursos</Link>
+            <LangLink to="/recursos" className="hover:text-cyan-500 transition-colors">{p('breadcrumb')}</LangLink>
             <span>/</span>
             <span className="text-gray-600">{art.categoria}</span>
           </nav>
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-5">
-            {art.categoria} · <Clock size={10} className="inline mb-0.5" /> {art.readTime} de lectura
+            {art.categoria} · <Clock size={10} className="inline mb-0.5" /> {art.readTime} {p('lectura')}
           </p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -143,7 +146,7 @@ export const ArticuloPage = () => {
 
             {/* FAQ */}
             <section className="mb-12">
-              <h2 className="text-xl font-black text-gray-900 mb-6">Preguntas frecuentes</h2>
+              <h2 className="text-xl font-black text-gray-900 mb-6">{p('preguntasFrecuentes')}</h2>
               <div className="space-y-3">
                 {art.faq.map((f, i) => (
                   <details key={i} className="group bg-gray-50 border border-gray-200 rounded-xl">
@@ -159,17 +162,17 @@ export const ArticuloPage = () => {
 
             {/* Related articles */}
             <section>
-              <h2 className="text-lg font-black text-gray-900 mb-4">Artículos relacionados</h2>
+              <h2 className="text-lg font-black text-gray-900 mb-4">{p('articulosRelacionados')}</h2>
               <div className="grid sm:grid-cols-3 gap-3">
                 {art.relacionados.map((r, i) => (
-                  <Link
+                  <LangLink
                     key={i}
                     to={`/recursos/${r.slug}`}
                     className="group flex items-center gap-2 bg-gray-50 border border-gray-200 hover:border-cyan-300 rounded-xl px-4 py-3 transition-colors"
                   >
                     <ArrowRight size={14} className="text-cyan-500 shrink-0 group-hover:translate-x-0.5 transition-transform" />
                     <span className="text-sm text-gray-700 group-hover:text-gray-900 transition-colors leading-tight">{r.titulo}</span>
-                  </Link>
+                  </LangLink>
                 ))}
               </div>
             </section>
@@ -181,28 +184,28 @@ export const ArticuloPage = () => {
             <div className="sticky top-24 bg-cyan-50 border border-cyan-200 rounded-2xl p-6">
               <h3 className="text-base font-black text-gray-900 mb-2 leading-tight">{art.cta.heading}</h3>
               <p className="text-sm text-gray-600 mb-5 leading-relaxed">{art.cta.text}</p>
-              <Link
+              <LangLink
                 to={art.cta.btnPrimary.url}
                 className="block w-full bg-cyan-500 hover:bg-cyan-400 text-white font-bold text-sm text-center px-4 py-3 rounded-xl transition-colors mb-3"
               >
                 {art.cta.btnPrimary.label}
-              </Link>
-              <Link
+              </LangLink>
+              <LangLink
                 to={art.cta.btnSecondary.url}
                 className="block w-full border border-gray-300 hover:border-cyan-400 text-gray-600 hover:text-gray-900 font-medium text-sm text-center px-4 py-3 rounded-xl transition-colors"
               >
                 {art.cta.btnSecondary.label}
-              </Link>
+              </LangLink>
             </div>
 
             {/* Back to resources */}
-            <Link
+            <LangLink
               to="/recursos"
               className="flex items-center gap-2 text-sm text-gray-400 hover:text-cyan-600 transition-colors"
             >
               <ArrowLeft size={14} />
               Ver todos los recursos
-            </Link>
+            </LangLink>
           </aside>
         </div>
         </div>

@@ -1,0 +1,3037 @@
+{
+  "nav": {
+    "home": "首页",
+    "catalog": "产品目录",
+    "industries": "行业应用",
+    "taxBenefits": "税收优惠",
+    "howWeWork": "工作方式",
+    "aboutUs": "关于我们",
+    "resources": "资源中心",
+    "viewCatalog": "查看完整目录 →",
+    "consult": "咨询",
+    "closeMenu": "关闭菜单",
+    "openMenu": "打开菜单",
+    "catalogCategories": {
+      "asrs": "AS/RS系统",
+      "robots": "搬运机器人",
+      "vertical": "垂直存储",
+      "transport": "输送设备",
+      "software": "智能软件"
+    },
+    "resourcesItems": {
+      "roi": "ROI计算器",
+      "comparator": "系统比较器",
+      "blog": "博客与文章",
+      "cases": "成功案例",
+      "glossary": "技术术语表"
+    },
+    "menu": "菜单",
+    "language": "选择语言"
+  },
+  "hero": {
+    "badge": "DELIE官方代表 · 阿根廷",
+    "h1_line1": "仓库自动化",
+    "h1_line2": "采用DELIE",
+    "h1_line3": "先进技术",
+    "h1_line4": "在阿根廷。",
+    "sub": "世界级技术，价格实惠。面向需要提升运营效率、无需支付欧洲价格的企业的AS/RS系统、机器人和软件。",
+    "cta1": "申请技术咨询",
+    "cta2": "查看解决方案目录",
+    "stats": {
+      "installations": "全球AS/RS安装数量",
+      "years": "DELIE发展历程",
+      "cheaper": "比欧洲更经济实惠",
+      "cert": "工业认证标准"
+    }
+  },
+  "roi": {
+    "tag": "投资回报",
+    "h2_a": "自动化",
+    "h2_b": "可以自我回收成本",
+    "sub": "一家使用DELIE实现自动化的企业的真实数字。",
+    "exampleTag": "真实案例 · 配送仓库",
+    "space": "使用面积",
+    "before": "改造前 m²",
+    "after": "改造后 m²",
+    "spaceSaving": "–85% 占地面积",
+    "rentSaving": "每月租金节省",
+    "perMonth": "每月",
+    "payback": "投资回报",
+    "months": "个月",
+    "noExpand": "无需扩建厂房",
+    "note": "基于工业租金 <strong>USD 8/m²/月</strong> 和24/7运营计算。",
+    "metrics": {
+      "costLabel": "成本降低",
+      "costDesc": "更少错误，更少劳动密集，更少损耗。",
+      "accuracyLabel": "库存准确率",
+      "accuracyDesc": "按批次全面追溯，保证先进先出(FIFO)。",
+      "densityLabel": "存储密度",
+      "densityDesc": "相同物理空间，SKU容量最多提高3倍。",
+      "paybackLabel": "回收期（月）",
+      "paybackDesc": "在真实运营中经过验证的投资回报。"
+    }
+  },
+  "catalog": {
+    "tag": "解决方案目录 — DELIE技术",
+    "h2_a": "我们的",
+    "h2_b": "产品类别",
+    "viewAll": "查看完整目录",
+    "viewProducts": "查看产品",
+    "youtube": {
+      "title": "DELIE YouTube频道",
+      "desc": "真实安装现场、演示视频和全球应用案例。",
+      "cta": "查看频道"
+    },
+    "categories": {
+      "asrsDesc": "7至40米高AS/RS货架系统。直入式、穿梭式、夹层式。",
+      "verticalDesc": "垂直旋转仓和VLM模块。最多节省90%地面空间。",
+      "robotsDesc": "堆垛机、MiniLoad堆垛机、穿梭机器人和AMR。",
+      "transportDesc": "提升机、链式输送机、辊式输送机和码垛机。",
+      "softwareDesc": "WMS、WCS、HMS和3D可视化，实现仓库全面控制。"
+    }
+  },
+  "value": {
+    "tag": "为什么选择STOKA",
+    "h2_a": "真正重要的",
+    "h2_b": "差异",
+    "pillars": {
+      "p1title": "直接制造商",
+      "p1body": "DELIE制造，STOKA集成。直接对接制造商，无中间商：原厂质保、原装零部件及阿根廷本地技术支持。",
+      "p1stat": "全球安装数量",
+      "p2title": "比欧洲便宜30–50%",
+      "p2body": "与欧美相同的技术，配以中国制造成本和本地销售渠道。价格不再是障碍。",
+      "p2stat": "相比欧洲解决方案",
+      "p3title": "本地工程团队",
+      "p3body": "阿根廷团队驻场。交钥匙工程：设计、安装、WMS/WCS集成、培训及售后支持，全程使用您的语言。",
+      "p3stat": "本地技术支持"
+    }
+  },
+  "industries": {
+    "tag": "我们服务的行业",
+    "h2_a": "我们赋能的",
+    "h2_b": "行业",
+    "viewAll": "查看所有行业",
+    "viewSolutions": "查看解决方案",
+    "items": {
+      "ecommerceDesc": "速度、精准度，应对需求峰值的强大能力。",
+      "logisticsDesc": "多客户、多产品。最大运营灵活性。",
+      "manufacturingDesc": "准时制（JIT）和自动化看板，全力支持生产。",
+      "foodDesc": "保证先进先出(FIFO)和按批次全面追溯。",
+      "pharmaDesc": "GMP、FIFO/FEFO及经认证的受控温度管理。",
+      "miningDesc": "关键备件24/7无差错即时供应。",
+      "coldDesc": "机器人在-30°C环境中运行，无需员工进入。"
+    }
+  },
+  "benefits": {
+    "tag": "税收优惠 · 阿根廷2026",
+    "h2_a": "借助国家政策",
+    "h2_b": "实现智慧投资",
+    "sub": "阿根廷2026年监管框架为物流运营自动化创造了独特条件。",
+    "rigiTitle": "30年财税稳定性",
+    "rigiBody": "加速折旧、三十年税收稳定性，以及工业自动化项目即时增值税抵扣。",
+    "decretoTitle": "资本货物关税减免",
+    "decretoBody": "AS/RS系统及自动化设备可根据其关税分类享受减免或零关税（第513/2025号法令）。",
+    "biceTitle": "最长10年融资方案",
+    "biceBody": "投资银行专项信贷，优惠利率，工业自动化项目融资期限最长10年。",
+    "combinableTag": "同一项目可叠加享受的优惠",
+    "combinableText": "实际节省金额取决于各公司的税务结构。",
+    "combinableSub": "我们提供免费评估服务。",
+    "viewGuide": "查看完整优惠政策指南"
+  },
+  "process": {
+    "tag": "工作方法论",
+    "h2_a": "从咨询到",
+    "h2_b": "投入运营",
+    "viewFull": "查看完整方法论",
+    "viewDetail": "查看各阶段详情",
+    "steps": {
+      "s1title": "初步咨询",
+      "s1sub": "免费 · 24小时响应",
+      "s2title": "技术诊断",
+      "s2sub": "现场勘察",
+      "s3title": "设计与方案",
+      "s3sub": "选型 + ROI分析",
+      "s4title": "安装实施",
+      "s4sub": "工程 + 安装调试",
+      "s5title": "调试启动",
+      "s5sub": "协助投产",
+      "s6title": "持续支持",
+      "s6sub": "售后服务24/7"
+    }
+  },
+  "cta": {
+    "ready": "准备好开始了吗？",
+    "heading": "免费",
+    "headingAccent": "咨询服务",
+    "sub": "24小时内获得我们团队的专业技术回复。",
+    "btn1": "申请技术咨询",
+    "btn2": "查看完整目录"
+  },
+  "footer": {
+    "tagline": "DELIE在阿根廷和智利的官方独家代理商。100%本地技术支持。",
+    "catalog": "产品目录",
+    "industries": "行业应用",
+    "resources": "资源中心",
+    "company": "公司信息",
+    "location": "地址 — 门多萨，阿根廷",
+    "copyright": "© {{year}} STOKA — DELIE阿根廷官方代理商",
+    "address": "Carril Rodríguez Peña 35, Maipú, Mendoza",
+    "catalogLinks": {
+      "asrs": "AS/RS系统",
+      "robots": "搬运机器人",
+      "vertical": "垂直存储设备",
+      "transport": "输送设备",
+      "software": "WMS / WCS软件"
+    },
+    "industriesLinks": {
+      "ecommerce": "电商与零售",
+      "logistics": "3PL物流",
+      "manufacturing": "制造业",
+      "food": "食品与饮料",
+      "pharma": "制药行业",
+      "mining": "矿业与油气",
+      "cold": "冷链物流"
+    },
+    "resourcesLinks": {
+      "roi": "ROI计算器",
+      "comparator": "系统比较器",
+      "blog": "博客与文章",
+      "cases": "成功案例",
+      "glossary": "技术术语表"
+    },
+    "companyLinks": {
+      "about": "关于我们",
+      "howWeWork": "工作方式",
+      "taxBenefits": "税收优惠",
+      "contact": "联系我们",
+      "delie": "DELIE阿根廷",
+      "chile": "智利自动化"
+    }
+  },
+  "wpp": {
+    "writeUs": "通过WhatsApp联系我们",
+    "namePlaceholder": "您的姓名 *",
+    "companyPlaceholder": "公司（可选）",
+    "phonePlaceholder": "您的电话 *",
+    "msgPlaceholder": "留言（可选）",
+    "openWhatsApp": "打开WhatsApp",
+    "writeEmail": "发送电子邮件",
+    "openGmail": "打开Gmail",
+    "directWpp": "直接联系WhatsApp",
+    "emailSubject": "来自stokagroup.com的咨询",
+    "emailBody": "您好STOKA团队，\n\n我通过官网联系您，希望咨询仓库自动化相关事宜。\n\n姓名：\n电话：\n公司：\n\n咨询内容："
+  },
+  "leadPopup": {
+    "title": "快速联系",
+    "sub": "我们将在2小时内回复",
+    "close": "关闭",
+    "selectedProduct": "已选产品",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "您的邮箱",
+    "sectorPlaceholder": "您的行业/产业",
+    "submit": "发送并打开WhatsApp",
+    "done": "完成！",
+    "opening": "正在打开WhatsApp..."
+  },
+  "contact": {
+    "tag": "联系我们",
+    "h2_a": "开启您的",
+    "h2_b": "项目",
+    "wppTag": "直接WhatsApp",
+    "online": "现在在线",
+    "name": "全名",
+    "company": "公司名称",
+    "email": "企业邮箱",
+    "phone": "电话 / WhatsApp",
+    "country": "国家",
+    "province": "省份 / 州",
+    "sector": "行业",
+    "queryType": "咨询类型",
+    "message": "留言",
+    "howFound": "您如何了解到我们的？",
+    "submit": "发送咨询",
+    "successMsg": "咨询已收到！我们的团队将在2小时内回复您。",
+    "errorMsg": "发送失败，请重试或通过WhatsApp联系我们。",
+    "sectors": [
+      "电商与零售",
+      "3PL物流",
+      "工业制造",
+      "食品与饮料",
+      "制药行业",
+      "矿业与油气",
+      "冷链物流",
+      "其他"
+    ],
+    "queryTypes": [
+      "AS/RS系统报价",
+      "技术咨询",
+      "WMS/WCS与ERP集成",
+      "工厂技术参观",
+      "税收优惠信息",
+      "BICE融资",
+      "其他"
+    ],
+    "howFoundOptions": [
+      "谷歌/网络搜索",
+      "LinkedIn",
+      "同行推荐",
+      "展会或工业活动",
+      "社交媒体",
+      "其他"
+    ],
+    "techInquiries": "技术咨询",
+    "responseTime": "2小时内回复",
+    "freeConsult": "首次技术咨询免费。我们的工程师为每个案例进行个性化分析。",
+    "namePlaceholder": "您的姓名",
+    "companyPlaceholder": "您的公司",
+    "countryPlaceholder": "国家",
+    "provincePlaceholder": "省份/州",
+    "selectPlaceholder": "请选择",
+    "queryTypePlaceholder": "您需要什么？",
+    "messagePlaceholder": "描述您的运营情况、SKU量、可用面积...",
+    "sending": "发送中...",
+    "successTitle": "咨询已收到！"
+  },
+  "home": {
+    "seoTag": "STOKA · DELIE阿根廷代理商",
+    "h2": "阿根廷和智利工业仓库自动化解决方案",
+    "seoPara": "DELIE官方独家代理商 — 全球规模最大的AS/RS系统制造商之一。在阿根廷和智利提供100%本地工程、安装和技术支持。",
+    "stats": {
+      "installations": "DELIE全球安装数量",
+      "countries": "覆盖国家数",
+      "height": "货架最大高度",
+      "cert": "WMS/WCS软件认证"
+    },
+    "challengesTag": "3大历史挑战 · 3个具体解决方案",
+    "challenges": [
+      {
+        "num": "01",
+        "challenge": "进口成本",
+        "solution": "第513/2025号法令取消了AS/RS系统的进口关税 — 设备价值节省12%至18%。"
+      },
+      {
+        "num": "02",
+        "challenge": "缺乏本地技术支持",
+        "solution": "STOKA工程团队驻扎阿根廷，负责项目实施、安装及售后服务，无中间商。"
+      },
+      {
+        "num": "03",
+        "challenge": "监管政策不确定性",
+        "solution": "RIGI提供30年税收稳定性保障。RIMI允许在第一个财政年度对资产进行100%折旧。"
+      }
+    ],
+    "systemsTag": "我们安装的系统",
+    "roiTag": "典型投资回报周期",
+    "roiMonths": "个月",
+    "roiSub": "首次咨询免费 · 24小时内响应",
+    "processTag": "我们的工作流程",
+    "processSteps": [
+      "吞吐量与SKU配置诊断",
+      "峰值分析与布局约束评估",
+      "10年TCO（含可验证假设）",
+      "流程模拟与预测ROI"
+    ],
+    "fiscalTag": "税收背景 · 阿根廷2026",
+    "fiscal": [
+      {
+        "label": "第513/2025号法令",
+        "detail": "AS/RS设备关税减免或为零 · 节省12%至18%"
+      },
+      {
+        "label": "RIMI · 第27.802号法律",
+        "detail": "资本资产在第一个财政年度全额摊销"
+      },
+      {
+        "label": "BICE信贷额度",
+        "detail": "最高80%融资，期限10年 · 月供低于被替代的劳动力成本"
+      }
+    ],
+    "fiscalLink": "查看完整税收优惠指南",
+    "chileTag": "智利业务",
+    "chile": [
+      {
+        "ind": "矿业",
+        "desc": "偏远地区的备件仓库，访问受限。高密度存储，关键库存管理。"
+      },
+      {
+        "ind": "葡萄酒行业",
+        "desc": "不扩展占地面积的高密度仓库。按批次和年份进行FIFO与可追溯管理。"
+      },
+      {
+        "ind": "出口农业",
+        "desc": "具备自动FIFO功能的冷链，用于原产地认证。符合植物检疫法规要求。"
+      }
+    ],
+    "chileNote": "DELIE系统符合智利关于电气安全和资本货物进口的当地法规。",
+    "links": {
+      "cases": "真实成功案例",
+      "glossary": "技术术语表",
+      "comparator": "系统比较器",
+      "fiscalBenefits": "2026年税收优惠"
+    },
+    "tabAway": "我们在等您！快回来 👋",
+    "pageTitle": "阿根廷AS/RS系统与仓库自动化 | STOKA",
+    "metaDesc": "阿根廷和智利仓库自动化的ASRS系统。DELIE堆垛机、穿梭机器人、VLM及WMS/WCS软件，配备STOKA本地技术支持。"
+  },
+  "pages": {
+    "breadcrumb": {
+      "home": "首页"
+    },
+    "nosotros": {
+      "metaTitle": "STOKA集团 | 阿根廷AS/RS工程 | 关于我们",
+      "metaDesc": "STOKA：为阿根廷和智利的AS/RS系统提供100%本地工程、安装和技术支持。DELIE独家代理商。交钥匙工程。",
+      "breadcrumb": "关于我们",
+      "whoWeAre": "我们是谁",
+      "h1_a": "STOKA",
+      "h1_b": "阿根廷",
+      "tagline": "DELIE在阿根廷的官方独家代理商。世界级仓库自动化技术，配以100%本地工程和技术支持。",
+      "stats": {
+        "installations": "DELIE全球安装数量",
+        "countries": "覆盖国家数",
+        "local": "本地工程与技术支持",
+        "founded": "DELIE成立年份"
+      },
+      "officialRep": "官方代理商",
+      "officialRepCountry": "阿根廷",
+      "missionTag": "我们的使命",
+      "missionH2": "让物流自动化在阿根廷触手可及",
+      "missionPara": "任何企业都不应因无法获得过去仅为跨国公司保留的技术而丧失竞争力。世界级AS/RS系统现已向阿根廷工业开放：配送仓库、制造仓储和3PL仓库。",
+      "quote": "\"亚洲顶级制造 + 本地工程和技术支持 = 阿根廷最智慧的自动化方式：最高技术水准，最低实施风险。\"",
+      "requirementsTag": "阿根廷AS/RS集成商必须保证的事项",
+      "requirements": [
+        {
+          "label": "本地法规合规",
+          "desc": "现行关税、AFIP及税收优惠政策。"
+        },
+        {
+          "label": "进口事务管理",
+          "desc": "海关手续及进口物流。"
+        },
+        {
+          "label": "当日技术支持",
+          "desc": "技术人员驻扎阿根廷，不依赖工厂远程支持。"
+        },
+        {
+          "label": "行业专业知识",
+          "desc": "深度了解国内运营的约束与实际情况。"
+        }
+      ],
+      "delieTag": "DELIE · 阿根廷和智利独家代理",
+      "deliePara": "STOKA是DELIE在阿根廷和智利的独家代理商。世界顶级AS/RS技术，价格比欧洲替代方案便宜30-50%，并提供阿根廷本地100%技术支持保障。",
+      "valuesTag": "我们的工作方式",
+      "valuesH2": "我们的核心价值观",
+      "values": [
+        {
+          "title": "应用工程",
+          "desc": "我们不卖现成产品。我们为每个运营场景量身设计解决方案，在任何投资之前提供ROI测算和3D布局设计。"
+        },
+        {
+          "title": "完全透明",
+          "desc": "从方案阶段起，价格清晰、工期真实、10年TCO一目了然。安装和售后无任何隐藏费用。"
+        },
+        {
+          "title": "本地快速响应",
+          "desc": "阿根廷本地技术支持，解决任何问题无需依赖工厂时差或等待时间。"
+        },
+        {
+          "title": "世界级技术",
+          "desc": "获得与全球大型跨国公司相同的技术，价格比欧洲替代方案便宜30-50%。"
+        }
+      ],
+      "ourManufacturer": "我们的制造商",
+      "delieH2_a": "DELIE —",
+      "delieH2_b": "全球AS/RS制造商",
+      "deliePara2": "DELIE成立于2003年，是全球领先的自动化仓储系统制造商之一。在超过30个国家拥有1,000多个安装案例，融合了工业级可靠性、自主研发的WMS/WCS软件和完整的产品线：堆垛机、穿梭机器人、AMR、VLM、输送机及最高40米的货架系统。",
+      "delieRegions": "亚洲 · 欧洲 · 美洲 · 中东",
+      "delieStats": {
+        "founded": "DELIE成立年份",
+        "installations": "全球安装数量",
+        "countries": "覆盖国家数",
+        "height": "最大安装高度"
+      }
+    },
+    "howWeWork": {
+      "metaTitle": "工作方式 | AS/RS交钥匙项目 | STOKA",
+      "metaDesc": "6步方法论：咨询、工程、安装和售后支持。在阿根廷和智利的AS/RS交钥匙项目。",
+      "breadcrumb": "工作方式",
+      "methodologyTag": "方法论 · 6个阶段",
+      "h1_a": "从咨询",
+      "h1_b": "到投产",
+      "intro": "结构化6阶段流程，保证可预期的结果，无意外，每个环节均有本地技术支持。",
+      "readyTag": "准备好开始了吗？",
+      "readyH2_a": "免费",
+      "readyH2_b": "咨询服务",
+      "readyPara": "24小时内获得我们工程团队的专业技术回复，无需任何承诺。",
+      "btn1": "申请技术咨询",
+      "btn2": "查看完整目录",
+      "steps": [
+        {
+          "tag": "第01阶段",
+          "title": "初步咨询",
+          "subtitle": "免费 · 24小时内响应",
+          "detail": "填写联系表格或直接联系我们。不到24小时，一位工程师将回复您，深入了解您的运营情况：仓库类型、SKU量、吞吐量和自动化目标。",
+          "logs": [
+            "与技术团队进行30分钟会议或电话沟通",
+            "通过邮件发送初步技术调查问卷",
+            "提供无义务、无成本的初步技术方向建议"
+          ]
+        },
+        {
+          "tag": "第02阶段",
+          "title": "技术诊断",
+          "subtitle": "现场或远程勘察",
+          "detail": "我们分析历史移动数据、SKU目录、需求峰值和现有仓库布局。测量当前KPI以建立项目基准，识别真正的瓶颈。",
+          "logs": [
+            "分析SKU历史记录和每日吞吐量",
+            "测量当前KPI：错误率、时效、空间使用率",
+            "记录现有布局的约束条件"
+          ]
+        },
+        {
+          "tag": "第03阶段",
+          "title": "设计与方案",
+          "subtitle": "技术选型 + 预测ROI",
+          "detail": "根据运营配置评估技术替代方案。计算10年TCO和预测投资回报以选择最优解决方案。方案包含3D布局和流程模拟。",
+          "logs": [
+            "评估适用于该案例的AS/RS技术",
+            "计算10年TCO和ROI（含透明假设条件）",
+            "提供含3D布局的完整技术与商业方案"
+          ]
+        },
+        {
+          "tag": "第04阶段",
+          "title": "安装实施",
+          "subtitle": "详细工程 + 认证安装",
+          "detail": "我们协调详细工程、机电安装、与现有ERP/WMS的集成，以及启动前的工厂验收测试(FAT)和现场验收测试(SAT)。",
+          "logs": [
+            "由认证团队完成机械和电气安装",
+            "与客户ERP/WMS集成（SAP、Oracle等）",
+            "启动前在工厂和现场完成FAT和SAT测试"
+          ]
+        },
+        {
+          "tag": "第05阶段",
+          "title": "调试启动",
+          "subtitle": "协助投入运营",
+          "detail": "我们全程提供直接技术支持，实时调整参数。初始几天驻场陪同，确保平稳过渡并对人员进行培训。",
+          "logs": [
+            "初始运营阶段驻场技术支持",
+            "系统参数调整与精细校准",
+            "对运营人员和主管进行最终培训"
+          ]
+        },
+        {
+          "tag": "第06阶段",
+          "title": "持续支持与优化",
+          "subtitle": "永久售后服务",
+          "detail": "KPI远程监控、定期预防性维护和24/7本地技术支持。持续分析真实运营数据，优化系统，在设备整个使用寿命内最大化回报。",
+          "logs": [
+            "24/7 KPI远程监控和早期预警",
+            "使用本地零部件进行计划性预防维护",
+            "基于真实运营数据持续优化系统"
+          ]
+        }
+      ]
+    },
+    "contactPage": {
+      "metaTitle": "联系我们 | 申请AS/RS咨询 | STOKA阿根廷",
+      "metaDesc": "联系STOKA，为您的阿根廷仓库报价AS/RS系统、机器人和WMS/WCS软件。"
+    },
+    "catalog": {
+      "metaTitle": "自动化产品目录 | DELIE AS/RS系统 | STOKA阿根廷",
+      "metaDesc": "完整的AS/RS系统、机器人、垂直存储、输送设备和DELIE WMS/WCS软件目录，用于阿根廷仓库自动化。",
+      "tag": "产品目录",
+      "h1": "自动化产品目录",
+      "stats": {
+        "categories": "产品类别",
+        "products": "产品数量",
+        "projects": "全球项目数"
+      },
+      "heroTag": "DELIE官方代理商 · 阿根廷",
+      "heroH1_a": "自动化",
+      "heroH1_b": "产品目录",
+      "heroSub": "世界级AS/RS系统、垂直存储、机器人和软件 — 配备阿根廷本地技术支持。",
+      "faqTag": "常见问题",
+      "faqH2": "阿根廷自动化产品目录",
+      "faq": [
+        {
+          "q": "我可以在同一仓库中组合不同类别的系统吗？",
+          "a": "可以，这在复杂项目中最为常见。例如：用于大批量存储区域的单元货物堆垛机 + 用于高周转率SKU的穿梭机器人 + 用于备件或低周转率SKU的VLM，全部由DELIE WMS统一协调。系统集成是交钥匙项目的一部分。"
+        },
+        {
+          "q": "实现自动化所需的最小仓库面积是多少？",
+          "a": "没有最低平方米要求。决定可行性的是移动量（通常每天超过300-500次移动）、当前手工操作成本以及可用净高。STOKA在任何提案之前免费进行ROI分析。"
+        },
+        {
+          "q": "目录中的所有产品在阿根廷都有供应吗？",
+          "a": "是的。STOKA是DELIE在阿根廷和智利的独家代理商。目录中的所有系统——堆垛机、穿梭机器人、VLM、输送机和WMS/WCS软件——均可在当地安装，并提供100%本地工程、安装和技术支持。"
+        },
+        {
+          "q": "目录是否包含管理软件，还是仅包含物理设备？",
+          "a": "两者都包含。DELIE拥有自己的WMS（库存和订单管理）和WCS（物理设备控制），均通过CMMI 5级认证，可与您现有的ERP集成。还提供3D可视化解决方案和AMR机器人车队的HMS模块。"
+        },
+        {
+          "q": "未来可以在不停止运营的情况下扩展系统吗？",
+          "a": "是的，所有DELIE系统都是模块化的。仓库可以从2条堆垛机通道开始，扩展到10条，而不会中断运营。WMS对现有运营透明地管理容量扩展。"
+        }
+      ],
+      "consultarWpp": "通过WhatsApp咨询",
+      "categoriesH2_a": "我们的",
+      "categoriesH2_b": "产品分类",
+      "allCategories": "所有分类",
+      "allShort": "全部"
+    },
+    "solutions": {
+      "metaTitle": "针对您行业的AS/RS解决方案 | STOKA阿根廷",
+      "metaDesc": "面向电商、物流、制造、食品和制药行业的AS/RS仓库自动化解决方案（阿根廷）。"
+    },
+    "beneficios": {
+      "metaTitle": "自动化税收优惠 | RIGI, RIMI, BICE | STOKA阿根廷",
+      "metaDesc": "利用第513/2025号法令、RIGI和RIMI节省AS/RS系统进口成本。STOKA帮助您充分利用所有税收优惠。",
+      "h1": "税收优惠",
+      "breadcrumb": "税收优惠"
+    },
+    "industrias": {
+      "metaTitle": "按行业分类的自动化 | 针对您行业的AS/RS | STOKA阿根廷",
+      "metaDesc": "面向电商、3PL物流、制造、食品、制药、矿业和冷链的AS/RS系统和仓库自动化解决方案（阿根廷）。",
+      "h1": "行业应用",
+      "breadcrumb": "行业应用",
+      "heroTag": "我们服务的行业 · 阿根廷",
+      "heroH1_a": "专为",
+      "heroH1_b": "您的行业定制",
+      "heroSub": "每个行业都有其独特的仓储挑战。了解DELIE技术如何通过本地工程团队解决这些问题。",
+      "heroStats": {
+        "industries": "行业",
+        "projects": "全球项目",
+        "operation": "持续运营"
+      },
+      "pillars": [
+        {
+          "title": "本地实施",
+          "desc": "阿根廷本地工程、安装和技术支持，无需等待工厂响应时间。"
+        },
+        {
+          "title": "ISO 9001 · CE认证",
+          "desc": "DELIE制造商在30个国家拥有超过1,000个项目，并获得双重认证。"
+        },
+        {
+          "title": "已验证的ROI",
+          "desc": "根据行业和规模，平均投资回报期为18至36个月。"
+        }
+      ],
+      "sectorTag": "7大行业 · DELIE阿根廷",
+      "sectorH2": "选择您的行业",
+      "ctaTag": "没有找到您的行业？",
+      "ctaH2_a": "我们服务",
+      "ctaH2_b": "任何行业",
+      "ctaSub": "如果列表中没有您的行业，请随时咨询我们。DELIE系统可为几乎任何类型的存储需求进行配置。",
+      "ctaBtn": "咨询我的需求",
+      "industriesList": {
+        "e-commerce-retail": {
+          "tagline": "速度和精准度，应对需求峰值。",
+          "desc": "在黑色星期五或网络星期一等关键日期，无需增加人手即可将拣货速度提升三倍。",
+          "name": "电商与零售"
+        },
+        "logistica-3pl": {
+          "tagline": "多客户、多产品。最大灵活性。",
+          "desc": "在同一仓库中为多个客户运营，配备动态货位和实时客户报表。",
+          "name": "物流与第三方物流"
+        },
+        "manufactura": {
+          "tagline": "准时制与自动化看板。",
+          "desc": "将原材料仓库与生产线同步，消除因材料短缺导致的停线。",
+          "name": "制造业"
+        },
+        "alimentos-bebidas": {
+          "tagline": "保证先进先出。全面追溯。",
+          "desc": "自动先进先出、实时批次追溯和到期预警，实现零损耗。",
+          "name": "食品与饮料"
+        },
+        "farmaceutica": {
+          "tagline": "GMP、FEFO和受控温度。",
+          "desc": "符合GMP要求、自动FEFO及完整审计追踪，满足ANMAT、FDA等国际法规。",
+          "name": "制药"
+        },
+        "mineria-oil-gas": {
+          "tagline": "关键备件24/7即时供应。",
+          "desc": "数秒内定位任何备件，消除因库存找不到而导致的设备停机。",
+          "name": "采矿、石油与天然气"
+        },
+        "cadena-frio": {
+          "tagline": "机器人在-30°C环境运行，无人员暴露。",
+          "desc": "最大化每立方米冷藏空间的利用率，同时消除员工在极端低温下的作业风险。",
+          "name": "冷链"
+        }
+      }
+    },
+    "casos": {
+      "metaTitle": "成功案例 | DELIE AS/RS安装 | STOKA阿根廷",
+      "metaDesc": "制造、物流和电商AS/RS项目的真实成果。DELIE全球1,000+安装案例。",
+      "h1": "成功案例",
+      "breadcrumb": "成功案例",
+      "statsTag": "1,000+安装案例",
+      "casesTitle": "9个有力证明"
+    },
+    "chile": {
+      "metaTitle": "智利仓库自动化 | ASRS DELIE系统 | STOKA",
+      "metaDesc": "适用于智利仓库的DELIE物流自动化系统。ASRS、操控机器人和WMS软件，提供本地技术支持。申请免费诊断。",
+      "h1": "智利自动化",
+      "breadcrumb": "智利",
+      "breadcrumbHome": "首页",
+      "heroTag": "智利·仓库自动化",
+      "heroH1_a": "智利",
+      "heroH1_b": "自动化",
+      "heroSub": "适用于智利仓库的DELIE ASRS系统和操控机器人。在国内提供诊断、工程和实施技术支持。",
+      "heroBtnPrimary": "预约诊断",
+      "heroBtnSecondary": "查看产品目录",
+      "stats": [
+        {
+          "v": "2+",
+          "l": "智利项目"
+        },
+        {
+          "v": "24/7",
+          "l": "技术支持"
+        },
+        {
+          "v": "-60%",
+          "l": "成本降低"
+        },
+        {
+          "v": "10+",
+          "l": "年经验"
+        }
+      ],
+      "whyTag": "本地优势",
+      "whyH2": "为什么在智利选择STOKA？",
+      "whyItems": [
+        "全程西班牙语诊断和工程项目，无需国际中间商。",
+        "直接从DELIE工厂进口，本地清关管理，无额外费用。",
+        "圣地亚哥、瓦尔帕莱索、康塞普西翁等城市提供现场技术支持。",
+        "符合智利工业安全法规（SUSESO等）要求。",
+        "与智利使用的ERP和WMS系统（SAP、Oracle、本地系统）集成。",
+        "与生产投资促进法兼容的融资方案。"
+      ],
+      "sectorsTag": "行业",
+      "sectorsH2": "我们在智利自动化的行业",
+      "sectorViewSolution": "查看解决方案",
+      "sectors": [
+        {
+          "title": "矿业与供应",
+          "desc": "大型矿业运营的备件、耗材和PPE管理。",
+          "url": "/industrias/manufactura"
+        },
+        {
+          "title": "食品零售",
+          "desc": "新鲜、冷冻和大众消费品配送中心。",
+          "url": "/industrias/alimentos-bebidas"
+        },
+        {
+          "title": "制药健康",
+          "desc": "药品和医疗器械的批次、有效期和冷链控制。",
+          "url": "/industrias/farmaceutica"
+        },
+        {
+          "title": "物流配送",
+          "desc": "寻求为多个客户自动化其设施的物流运营商。",
+          "url": "/industrias/distribucion"
+        },
+        {
+          "title": "工业制造",
+          "desc": "连续制造工厂的原材料、成品和在制品仓库。",
+          "url": "/industrias/manufactura"
+        },
+        {
+          "title": "葡萄酒饮料",
+          "desc": "葡萄酒和饮料行业的瓶装、箱装和散装仓库。",
+          "url": "/industrias/alimentos-bebidas"
+        }
+      ],
+      "systemsTag": "可用系统",
+      "systemsH2": "智利可用技术",
+      "systems": [
+        {
+          "name": "AS/RS单元负载（堆垛机）",
+          "desc": "适用于标准托盘。中大型仓库的高密度和吞吐量。"
+        },
+        {
+          "name": "迷你货架AS/RS",
+          "desc": "适用于箱子、托盘和大批量拣选。制药、电商和备件的理想选择。"
+        },
+        {
+          "name": "托盘穿梭系统",
+          "desc": "同质产品的高密度存储。根据运营选择FIFO或LIFO。"
+        },
+        {
+          "name": "WMS/管理软件",
+          "desc": "可与SAP、Oracle和其他市场ERP集成的仓库管理软件。"
+        }
+      ],
+      "faqH2": "常见问题——智利",
+      "faq": [
+        {
+          "q": "STOKA在智利有实体存在吗？",
+          "a": "是的。我们在智利拥有商业和技术代表处，负责诊断、销售、安装和售后支持。无需从阿根廷管理。"
+        },
+        {
+          "q": "DELIE系统是否符合智利法规？",
+          "a": "是的。系统适应智利现行工业安全和建筑标准，包括永久性装置的特定抗震要求。"
+        },
+        {
+          "q": "智利项目的交货时间是多少？",
+          "a": "取决于规模。中型项目（5,000-20,000个位置）从签订合同到交货需要8-14个月，包括制造、进口和安装。"
+        },
+        {
+          "q": "可以在智利为自动化项目融资吗？",
+          "a": "可以。我们提供租赁、银行信贷选项，以及在某些情况下提供CORFO和其他公共机构的投资促进信贷额度。"
+        }
+      ]
+    },
+    "delie": {
+      "metaTitle": "DELIE阿根廷 | 官方代表 | STOKA",
+      "metaDesc": "STOKA是DELIE在阿根廷和智利的独家代理商。全球领先的ASRS系统，提供本地技术支持、本地融资和工厂质保。",
+      "h1": "DELIE在阿根廷",
+      "breadcrumb": "DELIE阿根廷",
+      "breadcrumbHome": "首页",
+      "heroTag": "DELIE在阿根廷·独家代理",
+      "heroH1_a": "DELIE技术",
+      "heroH1_b": "本地支持",
+      "heroSub": "我们在阿根廷和智利进口、实施并支持DELIE ASRS系统。直接访问制造商，提供一流的本地技术支持。",
+      "metrics": [
+        {
+          "value": "30+",
+          "label": "DELIE所在国家"
+        },
+        {
+          "value": "2,000+",
+          "label": "已安装项目"
+        },
+        {
+          "value": "30年",
+          "label": "全球经验"
+        },
+        {
+          "value": "100%",
+          "label": "本地支持"
+        }
+      ],
+      "capacidadesTag": "DELIE能力",
+      "capacidadesH2": "完整自动化产品线",
+      "capacidadesSub": "DELIE为物流自动化全领域制造和设计解决方案。",
+      "capacidades": [
+        {
+          "title": "托盘和箱子AS/RS",
+          "desc": "堆垛机、托盘穿梭和迷你货架，用于任何规模的自动化高密度存储。"
+        },
+        {
+          "title": "集成WMS软件",
+          "desc": "可与SAP、Oracle和任何ERP集成的专有WMS。实时控制库存、批次和可追溯性。"
+        },
+        {
+          "title": "经认证的全球存在",
+          "desc": "在欧洲、亚洲、美洲和大洋洲获得认证的装置。超过2,000个项目，可用性超过99%。"
+        },
+        {
+          "title": "温控解决方案",
+          "desc": "用于正负冷、制药冷链和低温存储的ASRS系统。"
+        }
+      ],
+      "globalTag": "全球存在",
+      "globalPresence": "DELIE在5大洲30多个国家运营",
+      "globalStats": [
+        {
+          "value": "30+",
+          "label": "国家"
+        },
+        {
+          "value": "2,000+",
+          "label": "项目"
+        },
+        {
+          "value": "30年",
+          "label": "经验"
+        },
+        {
+          "value": "5",
+          "label": "大洲"
+        }
+      ],
+      "whyTag": "本地优势",
+      "whyH2": "为什么选择有本地支持的DELIE",
+      "whyItems": [
+        {
+          "label": "无国际中间商",
+          "desc": "直接从独家代理商购买。无分销商加价，享有工厂价格和直接支持。"
+        },
+        {
+          "label": "用您的语言进行工程",
+          "desc": "整个过程——诊断、工程、安装和支持——全程西班牙语，由本地工程师操作。"
+        },
+        {
+          "label": "备件库存充足",
+          "desc": "我们在阿根廷保持关键备件库存，以最小化任何故障造成的停机时间。"
+        },
+        {
+          "label": "与本地系统集成",
+          "desc": "拥有与阿根廷和智利最广泛使用的ERP和会计系统（SAP、Oracle、Tango等）集成的经验。"
+        }
+      ],
+      "tcoTag": "TCO/投资回报",
+      "tcoText": "具有本地支持的DELIE系统的总拥有成本（TCO）明显低于同等的欧洲或北美系统，特别是考虑到响应时间、技术人员差旅费和备件可用性。",
+      "comparativaTag": "比较",
+      "comparativaH2": "DELIE与全球替代品对比",
+      "comparativaColAspect": "方面",
+      "comparativaColDelie": "DELIE + STOKA",
+      "comparativaColOther": "其他品牌",
+      "comparativaNote": "* 基于在拉美实施的项目。结果可能因规模和运营类型而异。",
+      "comparativa": [
+        {
+          "aspecto": "阿根廷本地技术支持",
+          "delie": true,
+          "otro": false
+        },
+        {
+          "aspecto": "本地备件库存",
+          "delie": true,
+          "otro": false
+        },
+        {
+          "aspecto": "西班牙语工程服务",
+          "delie": true,
+          "otro": "部分"
+        },
+        {
+          "aspecto": "本地货币融资",
+          "delie": true,
+          "otro": false
+        },
+        {
+          "aspecto": "直接工厂质保",
+          "delie": true,
+          "otro": "部分"
+        },
+        {
+          "aspecto": "本地ERP集成（SAP、Tango）",
+          "delie": true,
+          "otro": "部分"
+        },
+        {
+          "aspecto": "对拉美有竞争力的价格",
+          "delie": true,
+          "otro": false
+        },
+        {
+          "aspecto": "符合IRAM/本地法规",
+          "delie": true,
+          "otro": "部分"
+        },
+        {
+          "aspecto": "超过2,000个已安装项目",
+          "delie": true,
+          "otro": "不定"
+        },
+        {
+          "aspecto": "现场操作员培训",
+          "delie": true,
+          "otro": false
+        }
+      ],
+      "faqTag": "常见问题",
+      "faqH2": "DELIE在阿根廷——常见问题",
+      "faq": [
+        {
+          "q": "STOKA是DELIE在阿根廷的唯一代理商吗？",
+          "a": "是的。STOKA集团是DELIE在阿根廷和智利的独家代理和分销商。这些国家中任何DELIE系统的报价都必须通过STOKA进行。"
+        },
+        {
+          "q": "DELIE系统在阿根廷有工厂质保吗？",
+          "a": "是的。通过STOKA购买可获得本地支持的工厂质保。我们直接与DELIE处理任何质保索赔，无需额外中间商。"
+        },
+        {
+          "q": "我可以参观阿根廷的参考装置吗？",
+          "a": "我们在拉丁美洲和亚洲有可供参观的项目参考。根据客户及其NDA，我们协调技术参观，让您可以看到系统的实际运行情况。"
+        },
+        {
+          "q": "DELIE与其他亚洲品牌有什么区别？",
+          "a": "DELIE有30多年的历史，拥有国际认证（CE、ISO），并在欧洲和日本等苛刻市场运营，这些市场要求与传统欧洲品牌相同的标准。差异在于成本结构，而非技术质量。"
+        }
+      ]
+    },
+    "alternativeAsrs": {
+      "metaTitle": "欧洲AS/RS系统的经济替代方案 | STOKA",
+      "metaDesc": "DELIE：欧洲和日本AS/RS系统的世界级替代方案。相同技术，价格便宜30-50%。",
+      "h1": "经济实惠的AS/RS替代方案"
+    },
+    "recursos": {
+      "hub": {
+        "metaTitle": "技术资源中心 | AS/RS阿根廷 | STOKA",
+        "metaDesc": "ROI计算器、系统比较器、技术术语表和阿根廷仓库自动化文章。",
+        "h1_a": "技术",
+        "h1_b": "资源中心",
+        "sub": "技术文章、比较分析和交互工具，帮助您在阿根廷和智利做出更明智的物流自动化决策。",
+        "toolsTag": "工具与参考资料",
+        "roiTitle": "ROI计算器",
+        "roiDesc": "输入人员数量、移动次数和预估投资，秒速获取年度节省额、回收期和预测ROI。",
+        "roiCta": "了解更多",
+        "glossaryTitle": "AS/RS术语表",
+        "glossaryDesc": "60余个自动化与物流技术术语的中文定义。",
+        "comparatorTitle": "系统比较器",
+        "comparatorDesc": "回答5个关于您运营的问题，获取最适合的DELIE技术推荐。",
+        "articlesTitle": "技术文章",
+        "read": "阅读",
+        "toolBadge": "工具",
+        "glossaryBadge": "术语表"
+      },
+      "roi": {
+        "metaTitle": "自动化ROI计算器 | STOKA阿根廷",
+        "metaDesc": "计算在阿根廷用AS/RS系统自动化仓库的投资回报。",
+        "h1": "自动化ROI计算器",
+        "sub": "选择您的运营参数，获取预估年度节省额、回收期和预测ROI。",
+        "operationTag": "您当前的运营情况",
+        "operationSub": "选择最接近您实际情况的选项。"
+      },
+      "comparador": {
+        "metaTitle": "AS/RS系统比较器 | STOKA阿根廷",
+        "metaDesc": "适用于您运营场景的AS/RS系统、机器人和垂直存储的交互式比较器。"
+      },
+      "glosario": {
+        "metaTitle": "AS/RS与物流技术术语表 | STOKA阿根廷",
+        "metaDesc": "60余个仓库自动化和物流技术术语的术语表。"
+      },
+      "articulo": {
+        "notFound": "文章未找到",
+        "viewAll": "查看所有资源",
+        "related": "相关文章"
+      }
+    },
+    "soluciones": {
+      "metaTitle": "物流自动化解决方案 | STOKA",
+      "metaDesc": "探索STOKA的仓库自动化解决方案：ASRS、机器人、WMS软件等。在阿根廷和智利提供本地技术支持的实施服务。",
+      "breadcrumbHome": "首页",
+      "breadcrumb": "解决方案",
+      "heroTag": "综合解决方案",
+      "heroH1_a": "定制化",
+      "heroH1_b": "自动化",
+      "heroSub": "从诊断到启动：我们设计、集成并支持改变您物流运营的系统。",
+      "heroBtnPrimary": "咨询我的案例",
+      "heroBtnSecondary": "查看产品目录",
+      "problemasTag": "诊断",
+      "problemasH2": "我们解决什么问题？",
+      "problemas": [
+        {
+          "num": "01",
+          "problema": "空间不足",
+          "descripcion": "库存增长超过仓库容量，扩建不可行。",
+          "solucion": "高密度ASRS系统，无需扩建面积即可成倍提升容量。",
+          "link": "/catalogo/asrs",
+          "linkLabel": "查看ASRS系统"
+        },
+        {
+          "num": "02",
+          "problema": "拣选错误",
+          "descripcion": "订单准备错误导致退货、损失和客户不满。",
+          "solucion": "机器人和WMS软件，实时控制，完整追踪每个动作。",
+          "link": "/catalogo/software/wms",
+          "linkLabel": "查看WMS"
+        },
+        {
+          "num": "03",
+          "problema": "劳动力成本上升",
+          "descripcion": "手动操作人员代表仓库最大的可变成本。",
+          "solucion": "重复性动作自动化，解放团队专注更高价值的任务。",
+          "link": "/como-trabajamos",
+          "linkLabel": "查看方法论"
+        },
+        {
+          "num": "04",
+          "problema": "零可追溯性",
+          "descripcion": "没有实时可见性，库存管理依赖缓慢的手动流程。",
+          "solucion": "WMS + ERP集成，从收货到发货全程可见。",
+          "link": "/catalogo/software",
+          "linkLabel": "查看软件"
+        }
+      ],
+      "metodologiaTag": "方法论",
+      "metodologiaH2": "我们如何实施",
+      "stepLabel": "步骤",
+      "metodologia": [
+        {
+          "paso": "01",
+          "titulo": "诊断",
+          "desc": "调查您当前的运营：流程、数量、SKU、需求峰值和建筑限制。"
+        },
+        {
+          "paso": "02",
+          "titulo": "设计",
+          "desc": "定制解决方案工程：布局、技术选择、流程仿真和预计ROI。"
+        },
+        {
+          "paso": "03",
+          "titulo": "实施",
+          "desc": "安装、与现有系统集成，以及运营团队培训下的启动。"
+        },
+        {
+          "paso": "04",
+          "titulo": "支持",
+          "desc": "预防性和纠正性维护、软件更新，在阿根廷和智利提供24/7支持。"
+        }
+      ],
+      "ctaTag": "立即开始",
+      "ctaBannerTitle": "准备好自动化了吗？",
+      "ctaBannerSub": "我们的工程师团队评估您的运营并免费提供定制解决方案。",
+      "ctaBannerBtn": "预约免费诊断",
+      "casosTag": "应用案例",
+      "casosH2": "按行业的解决方案",
+      "casosSub": "不同行业的真实实施案例，具有可衡量的成果。",
+      "casosViewSolution": "查看解决方案 →",
+      "casosViewAll": "查看所有成功案例 →",
+      "casosUso": [
+        {
+          "operacion": "制药与实验室",
+          "desc": "温度控制、批次和有效期管理，全程可追溯。",
+          "soluciones": [
+            "迷你货架ASRS",
+            "制药WMS"
+          ],
+          "industria": "制药"
+        },
+        {
+          "operacion": "食品饮料",
+          "desc": "自动化冷藏室、FIFO和易腐品管理。",
+          "soluciones": [
+            "托盘穿梭",
+            "冷链存储"
+          ],
+          "industria": "食品"
+        },
+        {
+          "operacion": "化工行业",
+          "desc": "危险材料安全存储，自动隔离。",
+          "soluciones": [
+            "ASRS单元负载",
+            "货架"
+          ],
+          "industria": "化工"
+        },
+        {
+          "operacion": "电商零售",
+          "desc": "高精度大批量分拣，准确率超过99.9%。",
+          "soluciones": [
+            "料箱穿梭",
+            "亮灯拣选"
+          ],
+          "industria": "零售"
+        },
+        {
+          "operacion": "汽车与制造",
+          "desc": "生产线零件准时制管理。",
+          "soluciones": [
+            "AGV",
+            "迷你货架"
+          ],
+          "industria": "汽车"
+        },
+        {
+          "operacion": "纺织服装",
+          "desc": "高SKU变化性和周转率的存储。",
+          "soluciones": [
+            "垂直存储",
+            "WMS"
+          ],
+          "industria": "纺织"
+        }
+      ],
+      "whyTag": "为什么选择STOKA",
+      "whyH2": "差异化优势",
+      "whyItems": [
+        {
+          "label": "DELIE官方代表处",
+          "desc": "直接访问制造商：无中间商，享有工厂保修和原装零件。"
+        },
+        {
+          "label": "本地工程",
+          "desc": "在阿根廷和智利的工程师团队，负责设计、实施和售后支持。"
+        },
+        {
+          "label": "本地融资",
+          "desc": "利用当地市场可用的金融工具为每个项目构建方案。"
+        },
+        {
+          "label": "完整集成",
+          "desc": "不中断运营地将系统连接到您现有的ERP/WMS。"
+        }
+      ],
+      "linkHowWeWork": "/como-trabajamos",
+      "linkCases": "/casos-de-exito",
+      "linkCatalog": "/catalogo",
+      "linkFiscal": "/beneficios-fiscales",
+      "faqTag": "常见问题",
+      "faqH2": "我们解答您的疑问",
+      "faq": [
+        {
+          "q": "实施ASRS系统需要多长时间？",
+          "a": "这取决于规模。中型系统（5,000–20,000个位置）通常从签订合同到启动需要6-12个月。大型项目可能需要18-24个月。"
+        },
+        {
+          "q": "实施自动化系统需要更换ERP吗？",
+          "a": "不需要。我们的系统通过标准API与市场上主要的ERP（SAP、Oracle、Microsoft Dynamics等）集成。集成是项目范围的一部分。"
+        },
+        {
+          "q": "停电或技术故障怎么办？",
+          "a": "DELIE系统具有紧急操作协议、UPS和可选发电机。WMS保留库存状态，设备自动从中断处恢复。"
+        },
+        {
+          "q": "可以在阿根廷为项目融资吗？",
+          "a": "可以。我们使用本地融资工具：租赁、银行信贷，以及在某些情况下获得生产投资促进信贷额度。"
+        }
+      ]
+    },
+    "casosDeExito": {
+      "metaTitle": "成功案例 | 物流自动化 | STOKA",
+      "metaDesc": "了解DELIE ASRS系统在制药、化工、纺织等行业的真实实施案例。效率和ROI方面的可衡量结果。",
+      "breadcrumbHome": "首页",
+      "breadcrumb": "成功案例",
+      "heroTag": "真实成果",
+      "heroH1_a": "成功",
+      "heroH1_b": "案例",
+      "heroSub": "DELIE系统在不同国家和行业的真实实施案例，具有经过验证的指标和具体结果。",
+      "stats": [
+        {
+          "num": "9+",
+          "label": "记录案例"
+        },
+        {
+          "num": "5",
+          "label": "国家"
+        },
+        {
+          "num": "7",
+          "label": "行业"
+        },
+        {
+          "num": "99%",
+          "label": "平均准确率"
+        }
+      ],
+      "portfolioTag": "案例集",
+      "portfolioH2": "精选实施案例",
+      "portfolioNote": "客户数据仅供参考。部分细节可能因保密协议而有所不同。",
+      "trustTag": "信任",
+      "trustH2": "为什么信任这些结果",
+      "trustItems": [
+        {
+          "title": "经过验证的数据",
+          "desc": "所有指标均由客户自行报告或由我们的售后工程团队验证。"
+        },
+        {
+          "title": "全球验证的技术",
+          "desc": "DELIE在30多个国家运营，安装了2,000多个项目，确保了可靠性和可预测性。"
+        },
+        {
+          "title": "持续支持",
+          "desc": "售后陪伴使我们能够记录和衡量每个实施方案随时间产生的真实影响。"
+        }
+      ],
+      "ctaTag": "下一步",
+      "ctaH2_a": "想成为",
+      "ctaH2_b": "下一个案例？",
+      "ctaSub": "我们评估您的运营并免费提供带有ROI预测的解决方案。",
+      "ctaBtnPrimary": "立即咨询",
+      "ctaBtnSecondary": "查看产品目录",
+      "showRelevance": "查看对LATAM的相关性",
+      "hideRelevance": "隐藏相关性",
+      "relevanceLabel": "对阿根廷/拉丁美洲的相关性",
+      "casos": [
+        {
+          "id": "alfombras-tailandia",
+          "industria": "纺织/地毯",
+          "ubicacion": "泰国",
+          "titulo": "大型地毯制造商自动化仓库",
+          "empresa": "领先纺织制造商·亚太地区",
+          "sistema": "AS/RS单元负载 + DELIE堆垛机",
+          "resumen": "一家大型地毯制造商需要在不扩建面积的情况下将存储容量提高三倍。实施了配备4台双柱堆垛机的ASRS系统，并集成到现有ERP的WMS。",
+          "metricas": [
+            {
+              "val": "×3",
+              "sub": "容量"
+            },
+            {
+              "val": "99.7%",
+              "sub": "准确率"
+            },
+            {
+              "val": "-60%",
+              "sub": "占地面积"
+            }
+          ],
+          "tecnologias": [
+            "DELIE堆垛机",
+            "集成WMS",
+            "标准托盘"
+          ],
+          "relevancia": "阿根廷纺织业，尤其是科尔多瓦和布宜诺斯艾利斯，面临同样的密度挑战。此案例证明了2,000-8,000平方米仓库的可行性。"
+        },
+        {
+          "id": "licores-china",
+          "industria": "饮料/烈酒",
+          "ubicacion": "中国",
+          "titulo": "高端烈酒仓库自动化配送中心",
+          "empresa": "高端烈酒生产商·中国",
+          "sistema": "托盘穿梭 + DELIE迷你货架",
+          "resumen": "在15,000平方米配送中心整合了组合ASRS系统（大批量库存用托盘穿梭，箱拣选用迷你货架）。发货时间减少75%。",
+          "metricas": [
+            {
+              "val": "-75%",
+              "sub": "发货时间"
+            },
+            {
+              "val": "15K",
+              "sub": "位置"
+            },
+            {
+              "val": "24/7",
+              "sub": "运营"
+            }
+          ],
+          "tecnologias": [
+            "DELIE托盘穿梭",
+            "迷你货架",
+            "输送机",
+            "WMS"
+          ],
+          "relevancia": "门多萨、圣胡安和库约的葡萄酒和饮料行业可以复制此模式，用于高季节性分销。"
+        },
+        {
+          "id": "farmaceutica-tcm",
+          "industria": "制药/传统医学",
+          "ubicacion": "中国",
+          "titulo": "传统医学实验室自动化仓库",
+          "empresa": "认证制药实验室·中国",
+          "sistema": "迷你货架AS/RS + DELIE制药WMS",
+          "resumen": "在GMP法规下实施带有批次和有效期控制的迷你货架。从原材料入库到成品发货的全程可追溯。",
+          "metricas": [
+            {
+              "val": "100%",
+              "sub": "可追溯性"
+            },
+            {
+              "val": "-40%",
+              "sub": "错误"
+            },
+            {
+              "val": "GMP",
+              "sub": "合规"
+            }
+          ],
+          "tecnologias": [
+            "迷你货架ASRS",
+            "GMP WMS",
+            "批次追踪",
+            "温度控制"
+          ],
+          "relevancia": "阿根廷制药实验室（ANMAT）需要同等的可追溯性。该系统无需重大重新设计即可适应当地法规。"
+        },
+        {
+          "id": "farmaceutica-temperatura",
+          "industria": "制药/冷链",
+          "ubicacion": "欧洲",
+          "titulo": "制药配送冷链仓库",
+          "empresa": "跨国制药分销商·欧洲",
+          "sistema": "DELIE冷链ASRS",
+          "resumen": "专为2-8°C存储设计的ASRS系统，每个位置实时温度控制。与同等手动存储相比，能耗减少45%。",
+          "metricas": [
+            {
+              "val": "2–8°C",
+              "sub": "精确控制"
+            },
+            {
+              "val": "-45%",
+              "sub": "能耗"
+            },
+            {
+              "val": "99.9%",
+              "sub": "可用性"
+            }
+          ],
+          "tecnologias": [
+            "冷链ASRS",
+            "物联网监控",
+            "制药WMS"
+          ],
+          "relevancia": "阿根廷制药冷链至关重要。此案例直接适用于布宜诺斯艾利斯市、大布宜诺斯艾利斯和科尔多瓦的分销商和实验室。"
+        },
+        {
+          "id": "quimica-sulfato",
+          "industria": "工业化工",
+          "ubicacion": "中国",
+          "titulo": "散装工业化工原料自动化管理",
+          "empresa": "工业硫酸盐生产商·中国",
+          "sistema": "DELIE重型单元负载AS/RS",
+          "resumen": "大包和托盘格式原材料的自动化存储，用于连续生产。系统管理自动FIFO和无需手动干预的生产线补货。",
+          "metricas": [
+            {
+              "val": "-50%",
+              "sub": "周期时间"
+            },
+            {
+              "val": "FIFO",
+              "sub": "自动"
+            },
+            {
+              "val": "+35%",
+              "sub": "吞吐量"
+            }
+          ],
+          "tecnologias": [
+            "单元负载ASRS",
+            "大包处理",
+            "集成WMS"
+          ],
+          "relevancia": "巴伊亚布兰卡和罗萨里奥的石化和化工行业可以实施此模式，用于原材料管理和向生产的发货。"
+        },
+        {
+          "id": "quimica-peligrosos",
+          "industria": "化工/危险材料",
+          "ubicacion": "欧洲",
+          "titulo": "ATEX危险品自动化仓库",
+          "empresa": "化工特种品制造商·欧洲",
+          "sistema": "DELIE ATEX ASRS + 隔离系统",
+          "resumen": "ATEX认证的ASRS系统，用于储存易燃和有毒产品。包括按危险等级自动隔离和不相容性管理。",
+          "metricas": [
+            {
+              "val": "ATEX",
+              "sub": "认证"
+            },
+            {
+              "val": "0",
+              "sub": "事故"
+            },
+            {
+              "val": "-70%",
+              "sub": "操作员风险"
+            }
+          ],
+          "tecnologias": [
+            "ATEX ASRS",
+            "自动隔离",
+            "危险品WMS"
+          ],
+          "relevancia": "阿根廷危险材料法规（IRAM、APN）需要类似控制。大布宜诺斯艾利斯和科尔多瓦的化工、油漆和农化行业。"
+        },
+        {
+          "id": "titanio",
+          "industria": "冶金/特种材料",
+          "ubicacion": "亚洲",
+          "titulo": "钛和合金管理自动化仓库",
+          "empresa": "航空航天材料供应商·亚洲",
+          "sistema": "垂直存储 + DELIE ASRS",
+          "resumen": "按材料证书追踪的钛和特种合金型材、管材和板材的管理。控制环境条件，每件产品全程可追溯。",
+          "metricas": [
+            {
+              "val": "100%",
+              "sub": "可追溯性"
+            },
+            {
+              "val": "-55%",
+              "sub": "搜索时间"
+            },
+            {
+              "val": "∞",
+              "sub": "安全性"
+            }
+          ],
+          "tecnologias": [
+            "垂直存储",
+            "二维码/RFID",
+            "材料WMS"
+          ],
+          "relevancia": "对于阿根廷冶金行业（Tenaris等）和航空航天供应商：带有质量证书的材料可追溯性。"
+        },
+        {
+          "id": "lubricantes",
+          "industria": "润滑油/石化",
+          "ubicacion": "亚洲",
+          "titulo": "工业润滑油自动化配送中心",
+          "empresa": "工业润滑油分销商·亚洲",
+          "sistema": "托盘穿梭 + DELIE输送机",
+          "resumen": "多格式容器（桶、铁桶、IBC）润滑油高速分销。系统以99.8%的准确率处理每小时1,200次移动。",
+          "metricas": [
+            {
+              "val": "1,200",
+              "sub": "次/小时"
+            },
+            {
+              "val": "99.8%",
+              "sub": "准确率"
+            },
+            {
+              "val": "-40%",
+              "sub": "人员"
+            }
+          ],
+          "tecnologias": [
+            "托盘穿梭",
+            "输送系统",
+            "多格式WMS"
+          ],
+          "relevancia": "阿根廷中大型规模润滑油和石化产品分销商。"
+        },
+        {
+          "id": "manufactura-gran-escala",
+          "industria": "制造/大规模生产",
+          "ubicacion": "中国",
+          "titulo": "大规模准时制制造中央仓库",
+          "empresa": "跨国零部件制造商·中国",
+          "sistema": "完整AS/RS + AGV + DELIE WMS",
+          "resumen": "集成物流中心为12条生产线提供准时制供应。WMS协调AGV、ASRS和输送机，确保生产线零部件的延迟低于15分钟。",
+          "metricas": [
+            {
+              "val": "<15分钟",
+              "sub": "JIT延迟"
+            },
+            {
+              "val": "12",
+              "sub": "JIT生产线"
+            },
+            {
+              "val": "-65%",
+              "sub": "在制品"
+            }
+          ],
+          "tecnologias": [
+            "ASRS单元负载",
+            "AGV车队",
+            "集成输送机",
+            "JIT WMS"
+          ],
+          "relevancia": "布宜诺斯艾利斯、科尔多瓦和罗萨里奥的串行生产工业园区可以实施此模式，减少在制品并改善OEE。"
+        }
+      ]
+    },
+    "alternativaEconomica": {
+      "metaTitle": "欧洲ASRS系统经济替代品 | STOKA",
+      "metaDesc": "DELIE ASRS系统与欧洲品牌技术相同，但对阿根廷和拉美地区价格更具竞争力。含本地融资和技术支持。",
+      "breadcrumbHome": "首页",
+      "breadcrumb": "ASRS经济替代品",
+      "heroTag": "欧洲ASRS替代品",
+      "heroH1_a": "相同技术",
+      "heroH1_b": "更低",
+      "heroH1_c": "总成本",
+      "heroSub": "DELIE ASRS系统提供与欧洲领先品牌相同的功能和可靠性，采购成本低至40%，并在阿根廷提供本地技术支持。",
+      "heroStats": [
+        {
+          "n": "-40%",
+          "l": "相比欧洲品牌"
+        },
+        {
+          "n": "99%+",
+          "l": "可用性"
+        },
+        {
+          "n": "30+",
+          "l": "国家"
+        },
+        {
+          "n": "2,000+",
+          "l": "项目"
+        }
+      ],
+      "heroBtnPrimary": "申请报价",
+      "heroBtnSecondary": "查看产品目录",
+      "whyTag": "为什么更贵",
+      "whyH2": "为什么欧洲系统在阿根廷更贵？",
+      "whyCosts": [
+        {
+          "title": "间接分销",
+          "desc": "许多欧洲品牌通过区域分销商销售，额外加价使最终价格上涨。"
+        },
+        {
+          "title": "物流和关税",
+          "desc": "从欧洲进口的成本包括高关税、长期保险和更昂贵的运费。"
+        },
+        {
+          "title": "高成本支持",
+          "desc": "售后支持需要从欧洲带来技术人员，或向对系统没有真正专业知识的本地代表付费。"
+        }
+      ],
+      "comparisonTag": "技术比较",
+      "comparisonH2": "DELIE与欧洲品牌对比",
+      "comparisonSub": "阿根廷和拉美项目的技术和商业特点比较。",
+      "comparisonColOther": "欧洲品牌",
+      "comparisonPartial": "部分",
+      "comparisonNote": "* 基于拉美可比项目。结果因规模和运营类型而异。",
+      "comparison": [
+        {
+          "label": "可用性>99%",
+          "europeo": true
+        },
+        {
+          "label": "本地24/7技术支持",
+          "europeo": false
+        },
+        {
+          "label": "对拉美有竞争力的价格",
+          "europeo": false
+        },
+        {
+          "label": "阿根廷备件库存",
+          "europeo": false
+        },
+        {
+          "label": "本地货币融资",
+          "europeo": false
+        },
+        {
+          "label": "本地ERP集成（SAP、Tango）",
+          "europeo": "parcial"
+        }
+      ],
+      "productsTag": "产品",
+      "productsH2": "阿根廷可用系统",
+      "productsViewAll": "查看完整产品目录 →",
+      "products": [
+        {
+          "name": "单元负载AS/RS",
+          "tag": "托盘",
+          "specs": [
+            "最高30米",
+            "双深度",
+            "高速"
+          ]
+        },
+        {
+          "name": "托盘穿梭",
+          "tag": "高密度",
+          "specs": [
+            "FIFO / LIFO",
+            "多深度",
+            "无中间通道"
+          ]
+        },
+        {
+          "name": "迷你货架AS/RS",
+          "tag": "箱子/拣选",
+          "specs": [
+            "自动拣选",
+            "高精度",
+            "制药和电商"
+          ]
+        },
+        {
+          "name": "查看完整产品目录",
+          "tag": "全部",
+          "specs": [
+            "垂直",
+            "AGV",
+            "WMS软件",
+            "咨询"
+          ]
+        }
+      ],
+      "tcoTag": "TCO/ROI",
+      "tcoH2_a": "最低",
+      "tcoH2_b": "总",
+      "tcoH2_c": "拥有成本",
+      "tcoSub": "不只是购买价格：考虑15-20年运营的总成本。有本地支持和现货备件，DELIE系统的TCO明显更低。",
+      "tcoLinkLabel": "查看可用税收优惠 →",
+      "tcoStats": [
+        {
+          "num": "-40%",
+          "desc": "与阿根廷项目同等欧洲品牌相比的采购价格"
+        },
+        {
+          "num": "-60%",
+          "desc": "售后支持成本：本地技术人员vs.从欧洲差旅"
+        },
+        {
+          "num": "+20%",
+          "desc": "本地货币融资和可用本地税收优惠带来的额外ROI"
+        }
+      ],
+      "faqTag": "常见问题",
+      "faqH2": "关于比较的问题",
+      "faq": [
+        {
+          "q": "DELIE与SSI Schäfer或Mecalux等欧洲品牌质量相同吗？",
+          "a": "是的。DELIE有30多年历史，拥有CE和ISO认证，并在欧洲和日本等市场运营，这些市场要求与传统欧洲品牌相同的标准。差异在于成本结构，而非技术质量。"
+        },
+        {
+          "q": "长期技术支持怎么样？",
+          "a": "STOKA在阿根廷维持一支经DELIE认证的本地工程师团队，并备有关键备件库存。售后支持在本地得到保障，无需依赖海外技术人员。"
+        },
+        {
+          "q": "决定之前可以参观参考装置吗？",
+          "a": "可以。我们可以协调在阿根廷和拉丁美洲参考装置的技术参观，需事先与客户达成协议。我们也有欧洲和亚洲的项目参考。"
+        },
+        {
+          "q": "阿根廷税收优惠适用于DELIE系统吗？",
+          "a": "是的。DELIE系统符合加速折旧制度、租赁资格，很多情况下还符合资本货物法的税收抵免。我们的团队就每种情况下的可用选项提供建议。"
+        },
+        {
+          "q": "获得报价的流程是什么？",
+          "a": "流程从对您的运营进行免费诊断开始（流程、数量、SKU）。有了这些信息，我们准备详细的技术商业提案，含预计ROI，无需任何费用或承诺。"
+        }
+      ]
+    },
+    "industriaDetail": {
+      "notFound": "未找到该行业。",
+      "viewAll": "查看所有行业",
+      "backToAll": "所有行业",
+      "breadcrumbHome": "首页",
+      "breadcrumbIndustrias": "行业",
+      "challengeLabel": "挑战",
+      "whyAutomate": "为何自动化",
+      "keyBenefits": "核心优势",
+      "beforeAfter": "前后对比",
+      "withoutAutomation": "无自动化",
+      "withStoka": "使用 STOKA · DELIE",
+      "automationContext": "自动化背景",
+      "automationH2": "{{industry}}仓库自动化",
+      "recommendedTag": "推荐设备",
+      "recommendedH2": "适用本行业的产品",
+      "viewCatalog": "查看完整目录",
+      "taxBenefits": "可用税收优惠 →",
+      "successCases": "查看成功案例 →",
+      "faqTag": "常见问题",
+      "faqH2": "自动化常见问题解答",
+      "exploreMore": "继续探索",
+      "otherIndustries": "其他行业",
+      "ctaTag": "准备好自动化了吗？",
+      "ctaH2_a": "免费咨询。",
+      "ctaH2_b": "24小时内回复。",
+      "ctaSub": "我们的技术团队分析您的运营并提出最合适的解决方案，无需承诺。",
+      "ctaBtn": "申请咨询",
+      "viewCatalogBtn": "查看完整目录"
+    },
+    "catalogoAsrs": {
+      "metaTitle": "阿根廷ASRS系统 | 自动化AS/RS | STOKA",
+      "metaDesc": "阿根廷DELIE ASRS与AS/RS：货架式堆垛机、托盘穿梭机和miniload，高度7至40米，比欧洲供应商便宜30-50%。",
+      "breadcrumbCat": "AS/RS",
+      "heroTag": "ASRS系统 · DELIE代理商 · 阿根廷",
+      "heroH1_a": "AS/RS系统",
+      "heroH1_b": "自动化货架",
+      "heroSub": "DELIE AS/RS货架，高度7至40米。驶入式、穿梭式、夹层和自动选择性货架，在阿根廷提供本地支持。",
+      "heroStat1Label": "型号",
+      "heroStat2Label": "最大高度",
+      "heroStat3Label": "精度",
+      "whatIsTag": "什么是AS/RS系统",
+      "whatIsH2": "自动化存取系统（AS/RS）：高密度ASRS",
+      "stat1Label": "最大高度",
+      "stat1Sub": "充分利用垂直空间",
+      "stat2Label": "加工精度",
+      "stat2Sub": "机器人无磨损无停机",
+      "stat3Label": "比欧洲更经济",
+      "stat3Sub": "DELIE工厂直供价格",
+      "stat4Label": "ROI月数",
+      "stat4Sub": "实际运营验证",
+      "guideTag": "选型指南 — 您需要哪种AS/RS系统？",
+      "guide": [
+        {
+          "type": "Unit Load",
+          "sub": "托盘堆垛机",
+          "badge": "最通用",
+          "cases": [
+            "多SKU托盘",
+            "FIFO/LIFO混合操作",
+            "净高12米以上"
+          ],
+          "note": "单桅或双桅堆垛机"
+        },
+        {
+          "type": "Shuttle",
+          "sub": "穿梭机器人",
+          "badge": "更高密度",
+          "cases": [
+            "同质产品高密度存储",
+            "每SKU大容量",
+            "最大化每平方米利用率"
+          ],
+          "note": "双向或四向"
+        },
+        {
+          "type": "MiniLoad",
+          "sub": "箱子和托盘",
+          "badge": "最高速度",
+          "cases": [
+            "电商和制药",
+            "货到人拣选",
+            "小中型SKU"
+          ],
+          "note": "单深或双深"
+        }
+      ],
+      "fabTag": "DELIE制造",
+      "fiscalTag": "阿根廷2026 — 税收组合",
+      "fiscalItems": [
+        {
+          "label": "第513/2025号法令",
+          "desc": "ASRS设备进口关税0%"
+        },
+        {
+          "label": "RIMI",
+          "desc": "第一财年100%加速折旧"
+        },
+        {
+          "label": "BICE",
+          "desc": "10年融资含宽限期"
+        }
+      ],
+      "fiscalRoi": "中等规模运营ROI {{value}}个月回收。",
+      "fiscalLink": "查看所有税收优惠",
+      "catalogTag": "完整目录",
+      "catalogH2": "12款AS/RS货架型号",
+      "viewFullCatalog": "查看完整目录",
+      "sisterTag": "继续探索",
+      "sisterH2": "其他目录类别",
+      "exploreTag": "按类型探索",
+      "exploreH2": "可用AS/RS系统",
+      "exploreItems": [
+        {
+          "nombre": "Unit-Load堆垛机",
+          "desc": "托盘高度达40米"
+        },
+        {
+          "nombre": "MiniLoad堆垛机",
+          "desc": "箱子和托盘，高速拣选"
+        },
+        {
+          "nombre": "穿梭机器人",
+          "desc": "自主机器人高密度存储"
+        },
+        {
+          "nombre": "冷库AS/RS",
+          "desc": "运行温度低至-30°C"
+        }
+      ],
+      "viewDetail": "查看详情",
+      "faqTag": "常见问题",
+      "faqH2": "运营总监常问的问题",
+      "faq": [
+        {
+          "q": "AS/RS系统在我的仓库中能利用多少垂直空间？",
+          "a": "DELIE AS/RS系统可利用7至40米的净高。在12米高的仓库中，存储量是传统4-5米货架的5倍。关键在于根据可用高度和货物类型设计结构。"
+        },
+        {
+          "q": "驶入式、穿梭式和MiniLoad货架有什么区别？",
+          "a": "驶入式货架使用普通叉车：成本最低，适合高密度LIFO。穿梭货架结合穿梭机器人，速度更快，支持选择性FIFO/LIFO。MiniLoad适用于带堆垛机的容器和托盘：最高速度和精度，适合电商、制药和高周转仓库。"
+        },
+        {
+          "q": "在现有仓库中安装AS/RS系统需要多长时间？",
+          "a": "AS/RS货架的机械安装需要4至10周，具体取决于型号。如果建筑需要，前期土建改造（平整地面、照明）可能增加4-6周。STOKA在阿根廷协调所有详细工程、安装和认证调试。"
+        },
+        {
+          "q": "DELIE货架是否适用于阿根廷第513/2025号法令的0%进口关税？",
+          "a": "是的。自动化系统用AS/RS货架包含在第513/2025号法令的税则号中。STOKA免费核查每个项目的确切税则号，确保从进口第一天起享受优惠。"
+        }
+      ],
+      "footerLinks": [
+        {
+          "label": "2026年税收优惠"
+        },
+        {
+          "label": "搬运机器人"
+        },
+        {
+          "label": "WMS/WCS软件"
+        },
+        {
+          "label": "我们的工作方式"
+        }
+      ],
+      "alsoInterest": "您可能也感兴趣",
+      "autostoreH3": "评估过AutoStore？了解DELIE替代方案",
+      "autostoreDesc": "相同存储密度，经济30-50%，在阿根廷提供本地技术支持。",
+      "autostoreLink": "查看比较",
+      "sisterCats": [
+        {
+          "label": "搬运机器人",
+          "desc": "堆垛机、穿梭机和AMR"
+        },
+        {
+          "label": "垂直存储",
+          "desc": "VLM和智能转盘"
+        },
+        {
+          "label": "输送设备",
+          "desc": "输送机、提升机和码垛机"
+        },
+        {
+          "label": "智能软件",
+          "desc": "WMS、WCS和仓库控制"
+        }
+      ]
+    },
+    "catalogoRobots": {
+      "breadcrumbCat": "搬运机器人",
+      "heroTag": "堆垛机 · 穿梭机 · AMR · DELIE",
+      "heroH1_a": "搬运机器人",
+      "heroH1_b": "堆垛机、穿梭机和AMR",
+      "heroSub": "14款DELIE仓库机器人：堆垛机、MiniLoad堆垛机、四向穿梭机和托盘机器人。阿根廷24/7技术支持。",
+      "statsTag": "DELIE仓库机器人",
+      "statsH2": "堆垛机、穿梭机器人、AMR、自动码垛机和货到人自动拣选",
+      "stat1Label": "可用型号",
+      "stat1Sub": "市场最全产品线",
+      "stat2Label": "最高速度",
+      "stat2Sub": "DELIE MiniLoad堆垛机",
+      "stat3Label": "精度",
+      "stat3Sub": "绝对位置控制",
+      "stat4Label": "最低温度",
+      "stat4Sub": "认证冷链",
+      "catalogTag": "完整目录",
+      "catalogH2": "14款搬运机器人型号",
+      "viewFullCatalog": "查看完整目录",
+      "faqTag": "常见问题",
+      "faqH2": "运营总监常问的问题",
+      "faq": [
+        {
+          "q": "仓库中堆垛机和穿梭机器人有什么区别？",
+          "a": "堆垛机占用整个货架通道，用单台设备移动托盘或托盘箱。穿梭机器人在货架内不同层级间以更高速度运行，无需专用通道。对于高周转、多SKU的仓库，穿梭机通常每平方米吞吐量更高。"
+        },
+        {
+          "q": "DELIE机器人能在冷库中运行吗？",
+          "a": "可以。DELIE制造经认证的冷链版本，穿梭机器人可在-25°C运行，堆垛机可在-30°C运行。具有气密防冷凝密封、特殊润滑和冷库材料。可在无人员进入冷库的情况下自主运行。"
+        },
+        {
+          "q": "我的操作吞吐量需要多少台机器人？",
+          "a": "取决于所需吞吐量（行/小时或托盘/小时）、SKU数量、仓库布局和需求峰值。在诊断阶段，STOKA进行流量模拟，确定覆盖峰值而不过度投资的最优机器人数量。"
+        },
+        {
+          "q": "仓库机器人需要什么预防性维护？",
+          "a": "DELIE机器人每台每月需要2-4小时预防性维护。WCS实时监控每台机器人状态并发出早期预警。高磨损部件是模块化的，无需专业工具即可更换。STOKA在阿根廷维持本地备件库存。"
+        }
+      ],
+      "sisterCats": [
+        {
+          "label": "AS/RS",
+          "desc": "自动化货架"
+        },
+        {
+          "label": "垂直存储",
+          "desc": "VLM和智能转盘"
+        },
+        {
+          "label": "输送设备",
+          "desc": "输送机、提升机和码垛机"
+        },
+        {
+          "label": "智能软件",
+          "desc": "WMS、WCS和仓库控制"
+        }
+      ],
+      "metaTitle": "搬运机器人 | 堆垛机与AMR | STOKA",
+      "metaDesc": "DELIE仓储机器人目录：堆垛机、MiniLoad堆垛机、穿梭机器人和AMR。14款机型，STOKA提供阿根廷与智利本地技术支持。"
+    },
+    "catalogoVertical": {
+      "breadcrumbCat": "垂直存储",
+      "heroTag": "VLM · 垂直转盘 · DELIE",
+      "heroH1_a": "垂直存储",
+      "heroH1_b": "VLM和智能垂直转盘",
+      "heroSub": "节省高达90%的地面空间。符合人体工程学的\"货到人\"拣选，在操作员高度，无需走动。与ERP和MES集成。",
+      "statsTag": "VLM vs 垂直转盘",
+      "statsH2": "自动垂直仓库：VLM、转盘和存储塔，优化空间",
+      "stat1Label": "空间节省",
+      "stat1Sub": "减少地面占用面积",
+      "stat2Label": "节省时间",
+      "stat2Sub": "减少搜索时间",
+      "stat3Label": "最大高度",
+      "stat3Sub": "充分利用天花板高度",
+      "stat4Label": "总容量",
+      "stat4Sub": "可配置垂直转盘",
+      "catalogTag": "完整目录",
+      "catalogH2": "2种垂直存储解决方案",
+      "viewFullCatalog": "查看完整目录",
+      "techTag": "您需要哪种技术？",
+      "techItems": [
+        {
+          "name": "VLM — 垂直提升模块",
+          "badge": "随机存取",
+          "desc": "智能提取器独立取出任意托盘。适合SKU种类繁多、操作员每个周期需要不同产品的场景。",
+          "best": "制药 · 备件 · 多SKU电商"
+        },
+        {
+          "name": "智能垂直转盘",
+          "badge": "高周转",
+          "desc": "内部循环托架系统。对顺序存取即可满足的高周转重复SKU更高效。",
+          "best": "制造业 · 汽车 · 高周转配送"
+        }
+      ],
+      "sharedBenefits": "共同优势",
+      "benefitsList": [
+        "高达90%节省地面空间",
+        "在操作员高度拣选",
+        "WMS/ERP/MES集成",
+        "集成称重和扫描",
+        "节省70%搜索时间",
+        "每次提取全程可追溯",
+        "操作员无需走动"
+      ],
+      "faqTag": "常见问题",
+      "faqH2": "垂直存储常见问题",
+      "faq": [
+        {
+          "q": "何时选VLM，何时选垂直转盘？",
+          "a": "当SKU种类多且需要随机存取时选VLM：每个周期可独立取出任意托盘。转盘对顺序存取的高周转SKU更高效。对于制药、备件和多SKU电商仓库，VLM通常是最佳选择。"
+        },
+        {
+          "q": "VLM能为我节省多少地面空间？",
+          "a": "与传统货架相比，通常节省70%至90%。10米高的VLM占用5-8平方米地面，存储量相当于30-50平方米传统货架。在有净高的建筑中，每平方米地面的存储密度可提高4至8倍。"
+        },
+        {
+          "q": "VLM如何与现有ERP或WMS集成？",
+          "a": "通过标准RESTful API或DELIE的WMS接口。如果已有第三方WMS（SAP EWM、Manhattan等），VLM可作为接收提取订单的从属子系统运行。如果没有WMS，DELIE模块可自主管理仓库库存并与ERP集成。"
+        },
+        {
+          "q": "VLM或垂直转盘可以在温控环境中运行吗？",
+          "a": "垂直转盘在-5°C至+40°C之间运行，兼容正温冷库。VLM有适用于2°C至25°C环境的版本，适合制药和冷藏产品。对于负温冷冻储存，建议使用DELIE AS/RS专用堆垛机。"
+        }
+      ],
+      "sisterCats": [
+        {
+          "label": "AS/RS",
+          "desc": "自动化货架"
+        },
+        {
+          "label": "搬运机器人",
+          "desc": "堆垛机、穿梭机和AMR"
+        },
+        {
+          "label": "输送设备",
+          "desc": "输送机、提升机和码垛机"
+        },
+        {
+          "label": "智能软件",
+          "desc": "WMS、WCS和仓库控制"
+        }
+      ],
+      "metaTitle": "垂直存储 | VLM与智能回转柜 | STOKA",
+      "metaDesc": "DELIE垂直存储系统：VLM和智能回转柜。采用货到人拣选，节省高达90%的占地空间。STOKA提供阿根廷本地技术支持。"
+    },
+    "catalogoTransporte": {
+      "breadcrumbCat": "输送设备",
+      "heroTag": "输送机 · 提升机 · 码垛机 · DELIE",
+      "heroH1_a": "输送设备 —",
+      "heroH1_b": "输送机、提升机和码垛机",
+      "heroSub": "10款输送设备型号，连接自动化仓库的每个节点。从链式输送机到具有WCS集成的自动码垛机。",
+      "statsTag": "DELIE输送设备",
+      "statsH2": "自动化仓库的连接组织 — WCS集成的输送机、提升机和码垛机",
+      "stat1Label": "可用型号",
+      "stat1Sub": "完整输送产品线",
+      "stat2Label": "每托盘最大载荷",
+      "stat2Sub": "链式和滚轮",
+      "stat3Label": "最高速度",
+      "stat3Sub": "托盘提升机",
+      "stat4Label": "最低温度",
+      "stat4Sub": "冷链版本",
+      "catalogTag": "完整目录",
+      "catalogH2": "10款自动化输送设备",
+      "viewFullCatalog": "查看完整目录",
+      "faqTag": "常见问题",
+      "faqH2": "运营总监常问的问题",
+      "faq": [
+        {
+          "q": "3000公斤托盘需要什么类型的输送机？",
+          "a": "对于每托盘3000公斤的载荷，DELIE的链式或滚轮输送机是正确选择。两者均配有变频器实现平稳启动。链式和滚轮的选择取决于托盘易碎性以及是否需要仓库分区积累。"
+        },
+        {
+          "q": "我可以将仓库现有输送机与DELIE系统集成吗？",
+          "a": "许多情况下可以。DELIE的WCS可控制其他品牌的标准控制接口输送机（Profibus、Profinet等PLC）。STOKA在技术诊断期间进行兼容性审核，确定哪些现有输送机可重复使用以降低总投资。"
+        },
+        {
+          "q": "DELIE输送机需要什么维护？",
+          "a": "DELIE输送机每季度进行预防性维护：链条或滚轮润滑、张紧轮检查和传感器检查。磨损部件已标准化，在阿根廷可供应。WCS监控仓库每个区段并在故障发生前发出预警。"
+        },
+        {
+          "q": "DELIE输送机能在冷库负温环境中工作吗？",
+          "a": "是的。冷链链式输送机在-25°C下运行，使用特殊润滑剂、防冻材料和密封设计。与DELIE冷链系列堆垛机和穿梭机器人集成，创建完全自动化的冷藏系统。"
+        }
+      ],
+      "sisterCats": [
+        {
+          "label": "AS/RS",
+          "desc": "自动化货架"
+        },
+        {
+          "label": "搬运机器人",
+          "desc": "堆垛机、穿梭机和AMR"
+        },
+        {
+          "label": "垂直存储",
+          "desc": "VLM和智能转盘"
+        },
+        {
+          "label": "智能软件",
+          "desc": "WMS、WCS和仓库控制"
+        }
+      ],
+      "metaTitle": "输送设备 | 输送机与提升机 | STOKA",
+      "metaDesc": "DELIE输送设备目录：输送机、提升机、码垛机和移载机。10款机型，STOKA提供阿根廷与智利本地工程支持。"
+    },
+    "catalogoSoftware": {
+      "breadcrumbCat": "智能软件",
+      "heroTag": "WMS · WCS · HMS · ECS · DELIE",
+      "heroH1_a": "智能软件 —",
+      "heroH1_b": "WMS、WCS和仓库控制",
+      "heroSub": "6个DELIE软件模块，CMMI 5级认证。与SAP、Oracle和任何ERP集成，全面控制自动化仓库。内置3D数字孪生。",
+      "stat1Label": "软件模块",
+      "stat2Label": "最高认证",
+      "stat3Label": "原生集成",
+      "stat4Label": "含数字孪生",
+      "catalogTag": "完整目录",
+      "catalogH2": "6个仓库软件模块",
+      "viewFullCatalog": "查看完整目录",
+      "seoTag": "了解仓库软件",
+      "seoH2": "WMS vs WCS：区别与互补性",
+      "seoSub": "在仓库管理中",
+      "nivel": "层级",
+      "integraWith": "集成对象",
+      "benefitsTag": "DELIE技术栈的核心优势",
+      "errorTag": "AS/RS项目中最常见的错误",
+      "errorH3": "实施硬件而不设计软件层。",
+      "errorBody": "没有适当WCS的堆垛机如同手动设备运行：物理移动高效但缺乏协调组合周期、实时管理库存和ERP集成的智能。DELIE的WMS和WCS被设计为集成技术栈：同一数据库、同一界面、仓库库存的唯一真实来源。",
+      "argTag": "阿根廷和智利 — 遗留WMS",
+      "comparison": [
+        {
+          "system": "WMS",
+          "full": "仓库管理系统",
+          "role": "管理什么：库存、位置、订单、可追溯性。",
+          "integra": "ERP, SAP, TMS, OMS, MES",
+          "nivel": "业务层"
+        },
+        {
+          "system": "WCS",
+          "full": "仓库控制系统",
+          "role": "管理如何：实时协调机器人、堆垛机和输送机。",
+          "integra": "WMS、机器人、堆垛机、AMR、RGV",
+          "nivel": "运营层"
+        },
+        {
+          "system": "HMS",
+          "full": "人机系统",
+          "role": "现场操作员和主管的界面。",
+          "integra": "WCS, WMS",
+          "nivel": "最终用户层"
+        },
+        {
+          "system": "ECS",
+          "full": "电子控制系统",
+          "role": "电机、变频器和传感器的电气控制。",
+          "integra": "WCS, WMS",
+          "nivel": "硬件层"
+        }
+      ],
+      "benefits": [
+        "CMMI 5级认证",
+        "原生SAP WMS集成（BAPI/RFC）",
+        "WMS+WCS同一集成技术栈",
+        "已记录的RESTful API",
+        "内置3D数字孪生",
+        "无额外ERP集成费用",
+        "主备冗余",
+        "本地售后技术支持"
+      ],
+      "faqTag": "常见问题",
+      "faqH2": "运营总监常问的问题",
+      "faq": [
+        {
+          "q": "在我的仓库中实施WMS需要多长时间？",
+          "a": "基础WMS实施需要4至12周，具体取决于ERP集成复杂度。在DELIE硬件项目中，WMS与机械安装同步配置，不增加总体进度时间。STOKA作为交钥匙项目的一部分管理软件实施。"
+        },
+        {
+          "q": "WMS可以管理手动仓库（无机器人）吗？",
+          "a": "是的。WMS可作为数字化第一步部署在手动仓库，在自动化之前。管理实时库存、基于列表或pick-to-light拣选、FIFO/FEFO和班次报告。这种方式让团队在添加自动化硬件前先熟悉系统。"
+        },
+        {
+          "q": "WMS与SAP或ERP的技术集成如何工作？",
+          "a": "DELIE有适用于SAP（BAPI/RFC和SAP EWM）、Oracle、Microsoft Dynamics的原生连接器以及适用于任何其他系统的RESTful API。集成包括物料和位置主数据同步、入库/出库订单和实时确认。STOKA提供完整的技术文档。"
+        },
+        {
+          "q": "如果WMS服务器宕机，仓库数据会怎样？",
+          "a": "WMS具有主备冗余：如果主服务器故障，备用服务器在数秒内无数据丢失地接管控制。机器人和输送机有短期自主运行模式。所有移动记录都有时间戳，系统恢复后自动同步。"
+        }
+      ],
+      "sisterCats": [
+        {
+          "label": "AS/RS",
+          "desc": "自动化货架"
+        },
+        {
+          "label": "搬运机器人",
+          "desc": "堆垛机、穿梭机和AMR"
+        },
+        {
+          "label": "垂直存储",
+          "desc": "VLM和智能转盘"
+        },
+        {
+          "label": "输送设备",
+          "desc": "输送机、提升机和码垛机"
+        }
+      ],
+      "metaTitle": "仓储软件 | WMS、WCS与控制系统 | STOKA",
+      "metaDesc": "DELIE软件通过CMMI五级认证：WMS、WCS、HMS及自动化仓库控制。6个集成模块，STOKA提供阿根廷本地技术支持。"
+    },
+    "autoStoreAlternativa": {
+      "breadcrumbAsrs": "ASRS",
+      "breadcrumbPage": "AutoStore替代方案",
+      "heroChip": "经济替代方案 · 本地支持",
+      "heroH1_a": "AutoStore替代方案",
+      "heroH1_b": "在阿根廷提供本地支持",
+      "heroSub": "DELIE ASRS系统提供与AutoStore相当的密度和吞吐量，成本低30-50%，通过STOKA提供100%本地工程、安装和技术支持。",
+      "heroCta": "获取价格和供货信息",
+      "heroLink": "查看完整ASRS目录",
+      "stat1Label": "更经济",
+      "stat2Label": "技术支持",
+      "stat3Label": "交钥匙项目",
+      "stat4Label": "备件响应",
+      "compH2": "DELIE vs AutoStore",
+      "compSub": "阿根廷和智利项目技术比较",
+      "compFeature": "特性",
+      "whyH2": "阿根廷企业为何选择DELIE而非AutoStore",
+      "why": [
+        {
+          "stat": "24h",
+          "label": "本地响应时间",
+          "title": "阿根廷技术支持",
+          "desc": "AutoStore在欧洲集中支持 — 需等待数天或数周。STOKA通过本地技术人员和备件在24小时内解决问题。"
+        },
+        {
+          "stat": "40%",
+          "label": "相比AutoStore平均节省",
+          "title": "价格低30-50%",
+          "desc": "在100万美元项目中，DELIE意味着以同等吞吐量和容量节省30万至50万美元初始投资。"
+        },
+        {
+          "stat": "1500kg",
+          "label": "每位置最大载荷",
+          "title": "无SKU尺寸限制",
+          "desc": "AutoStore最多支持30公斤和固定容器尺寸。DELIE可操作高达1500公斤的托盘和任何类型的装载单元。"
+        }
+      ],
+      "productsH2": "替代AutoStore的DELIE系统",
+      "viewSystem": "查看系统",
+      "faqH2": "关于阿根廷AutoStore替代方案的常见问题",
+      "faq": [
+        {
+          "q": "DELIE是阿根廷AutoStore的替代方案吗？",
+          "a": "是的。DELIE制造ASRS立方存储、穿梭和堆垛机系统，与AutoStore直接竞争。主要区别在于价格：DELIE系统对于同等项目比AutoStore便宜30-50%，并通过STOKA在阿根廷提供本地技术支持。"
+        },
+        {
+          "q": "AutoStore和DELIE系统在技术上有什么区别？",
+          "a": "AutoStore使用在模块化网格上运行的网格机器人。DELIE提供穿梭和堆垛机系统，在许多配置中实现相当甚至更高的密度，特别是在可用高度超过8米的仓库中。DELIE还支持更大更重的SKU。"
+        },
+        {
+          "q": "在阿根廷AutoStore替代系统的成本是多少？",
+          "a": "相当于中型AutoStore安装（1000-3000个位置）的DELIE系统在阿根廷可能花费60万至150万美元（设备+货架+WCS+集成）。对于同等配置，AutoStore通常贵30-50%，加上进口技术支持费用。"
+        },
+        {
+          "q": "STOKA有在类似AutoStore的运营中安装系统的经验吗？",
+          "a": "是的。STOKA已在阿根廷的电商、3PL物流、制药和制造运营中安装了DELIE系统，这些运营的吞吐量与通常使用AutoStore自动化的运营类似。我们可以在第一次技术会议上展示行业参考案例。"
+        }
+      ],
+      "parcial": "部分",
+      "metaTitle": "阿根廷AutoStore替代方案 | DELIE ASRS | STOKA",
+      "metaDesc": "密度和吞吐量可媲美AutoStore，成本更低的替代方案。DELIE自动化立体仓库系统，由STOKA提供阿根廷本地工程与技术支持。"
+    },
+    "recursosHub": {
+      "metaTitle": "ASRS技术资源 | 文章、工具与词汇表 | STOKA",
+      "metaDesc": "STOKA技术资源中心：物流自动化文章、ROI计算器、系统比较器和技术词汇表，服务于阿根廷和智利。",
+      "breadcrumb": "资源",
+      "heroTag": "文章 · 工具 · 词汇表 · 阿根廷",
+      "heroH1_a": "技术",
+      "heroH1_b": "资源中心",
+      "heroSub": "技术文章、对比分析和交互工具，帮助您在阿根廷和智利就物流自动化做出更好的决策。",
+      "toolsH2": "工具与参考资料",
+      "articlesH2": "技术文章",
+      "viewMore": "查看更多",
+      "readArticle": "阅读"
+    },
+    "glosario": {
+      "metaTitle": "ASRS与仓储自动化技术词汇表 | STOKA",
+      "metaDesc": "超过60个ASRS、AGV、WMS、WCS和物流自动化技术术语的详细解释。工程师与物流总监参考手册。",
+      "breadcrumb": "技术词汇表",
+      "heroTag": "ASRS · WMS · WCS · AGV · 物流自动化",
+      "heroH1_a": "技术",
+      "heroH1_b": "词汇表",
+      "heroSub": "超过60个技术术语解释，帮助您专业地评估和规范自动化系统。",
+      "searchPlaceholder": "搜索术语…",
+      "allCats": "全部",
+      "cats": {
+        "asrs": "ASRS",
+        "transporte": "运输",
+        "robots": "机器人",
+        "software": "软件",
+        "operaciones": "运营",
+        "finanzas": "财务"
+      },
+      "noResults": "没有符合您搜索的术语。"
+    },
+    "roi": {
+      "metaTitle": "仓库自动化ROI计算器 | STOKA",
+      "metaDesc": "计算仓库自动化的ROI。几秒钟内获得估算年节省、回收期和RIMI税收优惠。",
+      "breadcrumb": "ROI计算器",
+      "heroTag": "ROI · 回收期 · RIMI · 年节省 · 交互工具",
+      "heroH1_a": "自动化",
+      "heroH1_b": "ROI计算器",
+      "heroSub": "选择您的运营参数，获取估算年节省、回收期和预测ROI。",
+      "inputsH2": "您当前的运营情况",
+      "inputsSub": "选择最接近您实际情况的选项。",
+      "labelOperarios": "仓库操作人员",
+      "sublabelOperarios": "拣货、收货和发货人员",
+      "labelMovimientos": "每日移动量",
+      "sublabelMovimientos": "入库+出库合计",
+      "labelCosto": "每名操作员月成本",
+      "sublabelCosto": "薪资+社会保险+预计遣散费",
+      "labelInversion": "ASRS预估投资",
+      "sublabelInversion": "设备+货架+WCS+集成",
+      "howCalc": "我们如何计算？",
+      "resultAhorroNeto": "估算年净节省",
+      "resultAhorroSub": "扣除维护成本后",
+      "resultPayback": "回收期",
+      "resultPaybackAdjust": "调整参数",
+      "resultRoi": "年ROI",
+      "desgloseH": "节省明细",
+      "desgloseLaboral": "人员减少（45%）",
+      "desgloseErrores": "错误减少（85%）",
+      "desgloseMantenimiento": "年度维护",
+      "rimiTag": "RIMI税收优惠 2025",
+      "rimiText": "通过RIMI，您可以在第一个财年内折旧100%，将净成本降低",
+      "ctaWpp": "通过WhatsApp发送我的数据咨询",
+      "ctaDisclaimer": "估算误差±30%。STOKA免费进行真实分析。",
+      "faqH2": "关于自动化ROI的常见问题",
+      "meses": "个月",
+      "anos": "年"
+    },
+    "comparador": {
+      "metaTitle": "ASRS系统比较器 | 您需要哪个？| STOKA",
+      "metaDesc": "选择您的货物类型、高度和吞吐量，我们推荐适合您运营的理想自动化存储系统。",
+      "breadcrumb": "系统比较器",
+      "heroTag": "堆垛机 · 穿梭车 · VLM · AGV · 5个问题",
+      "heroH1_a": "找到正确的",
+      "heroH1_b": "ASRS系统",
+      "heroSub": "回答5个关于您运营的问题，获得个性化技术建议。",
+      "preguntaLabel": "问题",
+      "de": "共",
+      "recTag": "您的推荐",
+      "verFicha": "查看技术说明书",
+      "consultarWpp": "通过WhatsApp咨询",
+      "altTag": "可考虑的替代方案",
+      "validarCTA": "想用您运营的真实数据验证这个推荐吗？",
+      "validarDesc": "STOKA工程师将分析您的真实吞吐量，并在24小时内回复。",
+      "validarBtn": "申请免费技术分析",
+      "volverPregunta": "返回上一个问题",
+      "empezarNuevo": "重新开始"
+    },
+    "articulo": {
+      "breadcrumb": "资源",
+      "lectura": "阅读",
+      "preguntasFrecuentes": "常见问题",
+      "articulosRelacionados": "相关文章",
+      "notFound": "文章未找到",
+      "verRecursos": "查看所有资源"
+    },
+    "beneficiosFiscales": {
+      "metaTitle": "2026年自动化税收优惠 | RIMI | STOKA",
+      "metaDesc": "RIMI 2026、RIGI、加速折旧和预付增值税退还：多达6项税收优惠，可将您在阿根廷ASRS的成本降低15-40%。2026年更新指南。",
+      "breadcrumb": "税收优惠",
+      "heroTag": "法规框架 · 阿根廷",
+      "heroUpdated": "2026年6月更新",
+      "heroH1_a": "自动化您的仓库",
+      "heroH1_b": "可享受的税收优惠",
+      "heroH1_c": "（阿根廷）",
+      "heroSub": "阿根廷至少有<strong>6项财政工具</strong>可将您ASRS系统的实际成本降低15%至40%。不仅仅是RIGI——从USD 150,000的投资就有方案可用。",
+      "mapaTag": "快速参考 · 2026年6月",
+      "mapaH2": "可用优惠地图",
+      "mapaDisclaimer": "* 此表格仅供参考。每项工具的适用性取决于企业的税务情况和项目结构。",
+      "colHerramienta": "工具",
+      "colMonto": "最低金额",
+      "colQuien": "适用对象",
+      "colBeneficio": "主要优惠",
+      "rimiSectionH2": "RIMI — 2年内折旧您的ASRS系统并回收增值税",
+      "rimiTableCat": "类别",
+      "rimiTableMonto": "最高累计投资",
+      "rimiTableEquiv": "大约等值",
+      "rimiTableNote": "投资可在连续2个财年内累计。",
+      "rimiCalificaH3": "进口ASRS系统符合条件吗？",
+      "faqH2": "关于税收优惠的常见问题",
+      "formH2": "与专家评估您的案例",
+      "formSub": "无需承诺 · 24个工作小时内回复",
+      "formNombre": "姓名",
+      "formEmpresa": "公司",
+      "formEmail": "企业邮箱",
+      "formTelefono": "电话",
+      "formMonto": "预估投资金额",
+      "formProvincia": "运营省份",
+      "formSelectMonto": "选择范围",
+      "formSelectProvincia": "选择省份",
+      "formBtn": "申请免费评估",
+      "formDisclaimer": "无需承诺 · 24个工作小时内回复",
+      "formThanks": "谢谢！",
+      "formThanksSub": "我们已为您跳转至WhatsApp。如未打开，请发邮件至 consultas@stokagroup.com",
+      "formVerCatalogo": "查看系统目录 →",
+      "heroTagNorm": "监管框架 · 阿根廷",
+      "heroSubA": "阿根廷至少有",
+      "heroSubBold": "6种税收工具",
+      "heroSubB": "可将您的",
+      "heroSubLink": "ASRS系统",
+      "heroSubC": "实际成本降低15%至40%。不仅是RIGI——从15万美元投资起即有适用方案。",
+      "heroChips": [
+        "RIMI — Ley 27.802",
+        "RIGI — Ley 27.742",
+        "0%关税",
+        "增值税10.5%",
+        "融资租赁",
+        "BICE贷款",
+        "知识经济",
+        "省级制度"
+      ],
+      "mapaRows": [
+        {
+          "herramienta": "RIMI",
+          "monto": "15万美元起",
+          "quien": "中小企业",
+          "beneficio": "2年加速折旧 + 增值税退还"
+        },
+        {
+          "herramienta": "RIGI",
+          "monto": "2亿美元",
+          "quien": "大型投资",
+          "beneficio": "所得税25% + 进口关税全额豁免"
+        },
+        {
+          "herramienta": "关税减免",
+          "monto": "无最低限额",
+          "quien": "任何进口商",
+          "beneficio": "资本货物关税0%–14%"
+        },
+        {
+          "herramienta": "增值税减免",
+          "monto": "无最低限额",
+          "quien": "资本货物买家",
+          "beneficio": "增值税10.5%（而非21%）"
+        },
+        {
+          "herramienta": "融资租赁",
+          "monto": "无最低限额",
+          "quien": "任何企业",
+          "beneficio": "增值税递延 + 租金可抵扣"
+        },
+        {
+          "herramienta": "知识经济",
+          "monto": "无最低限额",
+          "quien": "技术采购方",
+          "beneficio": "FONPEC税收抵免"
+        },
+        {
+          "herramienta": "省级制度",
+          "monto": "可变",
+          "quien": "视所在地而定",
+          "beneficio": "免除IIBB、不动产税、印花税"
+        }
+      ],
+      "rimiIntro": "制造业与工业激励制度（RIMI）由Ley 27.802第二十三编创设，并由Decreto 242/2026及ARCA联合一般决议5849/2026予以规范，允许阿根廷中小企业在2年内（而非会计使用寿命内）对资本货物进行折旧，并提前收回已缴纳的增值税。适用于持有有效MiPyME证书的企业。",
+      "rimiMontosH3": "按MiPyME类别的最高金额",
+      "rimiMontosRows": [
+        {
+          "cat": "微型",
+          "monto": "USD 150.000",
+          "equiv": "约1台基础miniload或工业VLM"
+        },
+        {
+          "cat": "小型",
+          "monto": "USD 600.000",
+          "equiv": "约1套紧凑型shuttle系统"
+        },
+        {
+          "cat": "中型 第1档",
+          "monto": "USD 3.500.000",
+          "equiv": "约1套2巷道unit-load ASRS"
+        },
+        {
+          "cat": "中型 第2档",
+          "monto": "USD 9.000.000",
+          "equiv": "约1个含WCS的完整ASRS项目"
+        }
+      ],
+      "rimiCalificaP": "是的。ASRS系统——堆垛机、shuttle、miniload、回转柜和码垛机器人——根据RIMI分类目录归为资本货物（BK）或技术基础设施货物（BIT）。仓库管理软件（WMS）和仓库控制系统（WCS）在作为项目不可分割组成部分采购时，归为BIT。",
+      "rimiCalificaItems": [
+        {
+          "label": "堆垛机 / Shuttle / Miniload",
+          "tipo": "BK"
+        },
+        {
+          "label": "码垛与拣选机器人",
+          "tipo": "BK"
+        },
+        {
+          "label": "集成于项目的WMS / WCS",
+          "tipo": "BIT"
+        }
+      ],
+      "rimiB1H3": "优惠1 — 所得税加速折旧",
+      "rimiB1P": "RIMI允许在2年内分两期等额抵扣所得税中100%的购置价值，而非在会计使用寿命（通常5至10年）内折旧。实际节省取决于企业适用的税率。",
+      "rimiB1ColEscenario": "情形",
+      "rimiB1ColPlazo": "折旧期限",
+      "rimiB1ColDed": "第1年抵扣",
+      "rimiB1Row1": [
+        "无RIMI（一般制度）",
+        "5–10年",
+        "价值的10–20%"
+      ],
+      "rimiB1Row2": [
+        "有RIMI",
+        "2期年度分摊",
+        "价值的50%"
+      ],
+      "ejemploNum": "数值示例",
+      "rimiB1Ej1": "ASRS系统投资：USD 2.000.000。",
+      "rimiB1Ej2Label": "有RIMI：",
+      "rimiB1Ej2": "第一个纳税年度抵扣USD 1.000.000（税率35% → 所得税节省约USD 350.000）。",
+      "rimiB1Ej3Label": "无RIMI：",
+      "rimiB1Ej3": "每年抵扣USD 200.000 → 同期所得税节省约USD 70.000。",
+      "rimiB2H3": "优惠2 — 增值税提前退还",
+      "rimiB2P": "进口或本地采购资本货物所缴纳的增值税可在9个月内收回：ARCA/AFIP有3个月处理申请，另有6个月办理退还。该抵免可用于抵扣其他国家税、以现金收取或转让给第三方。",
+      "rimiB2Ej1": "进口一套ASRS系统，价值USD 2.000.000。",
+      "rimiB2Ej2": "按CIF价值征收21%增值税：约USD 420.000，可在9个月内收回。",
+      "rimiB2Ej3": "若无RIMI，该税收抵免将逐步抵销未来的销项税，多年内冻结营运资金。",
+      "rimiLimitH3": "需考虑的RIMI限制",
+      "rimiLimits": [
+        {
+          "title": "预算配额",
+          "desc": "RIMI按ARCA分配的年度配额运作。50%的配额预留给前几轮已批准的项目；其余50%按提交顺序分配。建议在纳税年度的第一季度启动申请。"
+        },
+        {
+          "title": "SGI（激励管理系统）",
+          "desc": "档案上传平台可能存在关闭或维护期。在开始整理文件前，请在ARCA网站核实当前的开放窗口。"
+        },
+        {
+          "title": "资产存续年限",
+          "desc": "企业在提交时须证明至少有2年经营活动且净资产为正。新成立的企业可能不符合资格。"
+        }
+      ],
+      "rimiLegal": "法规：Ley 27.802第二十三编 · Decreto 242/2026 · ARCA联合一般决议5849/2026。适用性取决于税务状况和项目结构。请咨询您的会计师。",
+      "rigiH2": "RIGI — 如果您的项目超过2亿美元",
+      "rigiIntro": "大型投资激励制度（RIGI）由Ley 27.742创设，并由Decreto 749/2024予以规范，专为采矿、油气、能源、技术和基础设施领域USD 200M（含）以上的战略项目设计。典型的ASRS系统（USD 500K–5M）单独无法达到该门槛——但如果您的公司已有项目加入RIGI，仓库自动化部分可作为已批准的受促进投资的一部分纳入。",
+      "rigiIntro2": "目前已提交27个项目，总额超过USD 25.000M。该制度已延期至2027年7月。已加入的省份包括：门多萨、圣胡安、内乌肯、萨尔塔、内格罗河、丘布特、圣克鲁斯、布宜诺斯艾利斯自治市、科尔多瓦和布宜诺斯艾利斯等。",
+      "rigiTableH3": "已加入项目的优惠",
+      "rigiColBen": "优惠",
+      "rigiColRigi": "有RIGI",
+      "rigiColGen": "一般制度",
+      "rigiRows": [
+        {
+          "beneficio": "所得税",
+          "rigi": "25%",
+          "general": "35%"
+        },
+        {
+          "beneficio": "进口关税",
+          "rigi": "全额豁免",
+          "general": "0–18%（Decreto 513 ≠ 豁免）"
+        },
+        {
+          "beneficio": "进口增值税",
+          "rigi": "税收抵免凭证",
+          "general": "递延税收抵免"
+        },
+        {
+          "beneficio": "法规稳定性",
+          "rigi": "自加入起30年",
+          "general": "无保障"
+        },
+        {
+          "beneficio": "分配股息",
+          "rigi": "7%（7年后3.5%）",
+          "general": "13%"
+        }
+      ],
+      "rigiKeyTag": "面向大型企业的关键信息",
+      "rigiKeyP": "如果您的公司有项目加入RIGI，您的ASRS系统即属于受促进投资方案的一部分。我们协助您整理自动化部分的技术文件，使其正确纳入已批准的档案。",
+      "rigiLegal": "法规：Ley 27.742 · Decreto 749/2024。加入RIGI为自愿行为，并涉及最低投资承诺。请向专业法律顾问核实资格。",
+      "arancelH2": "资本货物进口关税减免",
+      "arancelIntro": "Decreto 513/2025对27类资本货物设立了关税减免，其中包括物流与工业自动化系统。新进口机械的一般关税介于0%至14%之间，取决于部件的NCM分类。",
+      "arancelKeyTag": "ASRS系统的关键要点",
+      "arancelKeyP": "阿根廷没有堆垛机或ASRS系统的本地制造商。这使得可以援引\"本地未生产的资本货物\"理由，将设备归入0%关税的NCM税则号，前提是该分类在进口前由报关行核实。",
+      "arancelRefTag": "关税参考",
+      "arancelRefRows": [
+        {
+          "desc": "自动化系统（Decreto 513）",
+          "arancel": "减免后12.6%"
+        },
+        {
+          "desc": "本地未生产的资本货物",
+          "arancel": "0%（特定NCM）"
+        },
+        {
+          "desc": "一般进口机械",
+          "arancel": "0%–14%"
+        },
+        {
+          "desc": "ASRS零部件",
+          "arancel": "按NCM可变"
+        }
+      ],
+      "arancelWarn": "确切关税取决于各部件的NCM分类。我们协助您在进口前与报关行核实，以最大化优惠。",
+      "arancelLegal": "法规：Decreto 513/2025（国家行政部门）。有效性须经年度审查。请向有资质的报关行核实NCM分类。",
+      "ivaH2": "资本货物增值税降至10.5%",
+      "ivaIntro": "增值税法（Ley 23.966第28条）对纳入行政部门专门清单的资本货物设立10.5%的差别税率——而非一般的21%。适用性取决于进口或本地采购设备的NCM税则分类。",
+      "ivaImpactTag": "对USD 2.000.000项目的影响",
+      "ivaGenLabel": "一般增值税（21%）",
+      "ivaRedLabel": "减免增值税（10.5%）",
+      "ivaSaveLabel": "直接节省",
+      "ivaWarn": "若通过融资租赁架构操作则不适用。当采购通过融资租赁合同进行时，租金上的增值税按一般21%税率结算。",
+      "ivaLegal": "法规：Ley 23.966第28条 · 减免税率资本货物附录。适用性取决于设备的NCM分类。",
+      "leasingH2": "资本货物融资租赁：融资而不冻结资金",
+      "leasingIntro": "融资租赁（Ley 25.248）允许通过定期租金对ASRS系统进行100%（含增值税）融资购置。对于希望保留流动性、不占用常规信贷额度的企业，这是一种替代方案。",
+      "leasingCards": [
+        {
+          "title": "100%融资",
+          "desc": "涵盖资产全部价值加增值税。无需预付款或强制首付。"
+        },
+        {
+          "title": "租金可抵扣",
+          "desc": "每期租金作为所得税费用抵扣，从首月起即产生税收节省。"
+        },
+        {
+          "title": "增值税递延",
+          "desc": "增值税分摊到各期租金中，避免期初集中支出。"
+        },
+        {
+          "title": "无账面负债",
+          "desc": "在行使购买选择权之前，该资产不作为负债列入资产负债表。"
+        },
+        {
+          "title": "技术灵活性",
+          "desc": "若技术在到期前更新，可选择退还或更新设备。"
+        },
+        {
+          "title": "事实上的折旧",
+          "desc": "租金方案在现金流上复制了加速折旧的效果。"
+        }
+      ],
+      "leasingEntTag": "融资机构",
+      "leasingEnt": [
+        {
+          "ent": "BICE",
+          "detalle": "美元固定利率年化19.45%起"
+        },
+        {
+          "ent": "Banco Nación",
+          "detalle": "中小企业贷款，利率有补贴"
+        },
+        {
+          "ent": "BBVA",
+          "detalle": "资本货物融资租赁"
+        }
+      ],
+      "leasingWarnLabel": "与RIMI的兼容性：",
+      "leasingWarn": "RIMI要求自投资之日起至少2年内将资产保留在企业资产中。在融资租赁中，资产的法律所有权在行使购买选择权前归银行所有。在结合两种制度前，请咨询您的税务顾问以确定最优架构。",
+      "leasingLegal": "法规：Ley 25.248（融资租赁）。利率和条件为参考性质，可能由各机构更新。",
+      "ecBadge": "Ley 27.506 — 知识经济",
+      "ecBadge2": "注册办理中",
+      "ecH2": "知识经济：向我们采购可享税收优惠",
+      "ecIntro": "STOKA作为工业自动化技术集成商（工业4.0），正在办理加入知识经济制度（Ley 27.506）的注册。注册完成后，向已认证供应商采购数字化转型和工业4.0解决方案的企业可获得FONPEC：一项依据Resolution 8/2026直接计入ARCA的税收抵免。",
+      "ecFonpecTag": "什么是FONPEC？",
+      "ecFonpecP": "知识经济促进基金（FONPEC）是相当于合同一定比例的税收抵免，计入客户的ARCA账户。可用于抵缴国家税：所得税、增值税、雇主缴款。这是买方因与已注册供应商签约而获得的优惠。",
+      "ecWhyTag": "为何对您的采购决策重要",
+      "ecWhyItems": [
+        "向已注册知识经济制度的供应商采购，可为您的企业带来额外税收抵免",
+        "Resolution 8/2026：促进工业4.0投资的工具",
+        "同一项目可结合FONPEC + RIMI + Decreto 513",
+        "差异化因素：已注册知识经济供应商 vs. 未注册 = 实际成本不同"
+      ],
+      "ecLegal": "法规：Ley 27.506（知识经济）· FONPEC Resolution 8/2026。状态：STOKA注册办理中。请在操作时核实优惠的有效性。",
+      "provTag": "省级制度",
+      "provH2": "各省税收优惠",
+      "provIntro": "省级优惠是对国家优惠（RIMI、RIGI、关税）的补充。最优组合取决于贵公司所在的省份。我们协助您梳理适用于您情况的激励措施。",
+      "provCards": [
+        {
+          "prov": "布宜诺斯艾利斯省",
+          "badge": "RPIE · Ley 15.510",
+          "items": [
+            "项目从USD 5百万起",
+            "USD 5–50M：5年内免除30%的IIBB、不动产税和印花税",
+            "USD 50–200M：4年内免除25%",
+            "+USD 200M：3年内免除20% + 最长30年税收稳定",
+            "技术创新和进口替代的额外优惠"
+          ]
+        },
+        {
+          "prov": "布宜诺斯艾利斯自治市（CABA）",
+          "badge": "Leyes 6.949 y 6.950",
+          "items": [
+            "加入国家RIGI（Ley 6.949）",
+            "本地RIMI（Ley 6.950）：从USD 100.000投资起",
+            "受促进项目免除印花税和ABL",
+            "总收入税（IIBB）最高25%税收抵免"
+          ]
+        },
+        {
+          "prov": "科尔多瓦",
+          "badge": "Leyes 5.319 y 10.792",
+          "items": [
+            "省级工业促进法",
+            "资本货物投资项目的税收豁免",
+            "对设在受促进地区的工业提供货币补贴"
+          ]
+        },
+        {
+          "prov": "圣菲",
+          "badge": "工业促进制度",
+          "items": [
+            "对新生产单位的优惠",
+            "固定资产扩建的豁免",
+            "增加员工编制的激励"
+          ]
+        },
+        {
+          "prov": "门多萨",
+          "badge": "已加入RIGI",
+          "items": [
+            "已加入国家RIGI",
+            "总收入税税率多年下调计划",
+            "印花税：2026年1%，目标2030年0%"
+          ]
+        },
+        {
+          "prov": "圣胡安",
+          "badge": "已加入RIGI · 采矿",
+          "items": [
+            "仅采矿业即有USD 6.278M已批准的RIGI项目",
+            "采矿业供应商的税收优惠",
+            "直接机遇：采矿作业的仓库自动化"
+          ]
+        },
+        {
+          "prov": "内乌肯",
+          "badge": "已加入RIGI · Vaca Muerta",
+          "items": [
+            "已批准的RIGI项目：Vaca Muerta Sur（USD 2.486M）、输油管道、工厂",
+            "Vaca Muerta盆地投资促进",
+            "上游作业物流的自动化需求旺盛"
+          ]
+        }
+      ],
+      "provMineLink": "在采矿或油气领域经营？查看采矿—能源行业的专属优惠 →",
+      "provOtrasTag": "其他已加入RIGI的省份",
+      "provOtras": [
+        "卡塔马卡",
+        "查科",
+        "丘布特",
+        "科连特斯",
+        "恩特雷里奥斯",
+        "胡胡伊",
+        "米西奥内斯",
+        "内格罗河",
+        "萨尔塔",
+        "圣路易斯",
+        "圣克鲁斯",
+        "图库曼"
+      ],
+      "biceTag": "BICE贷款",
+      "biceSubtitle": "投资与对外贸易银行",
+      "biceTitle": "工业自动化优惠融资",
+      "biceMonto": "最高项目的80%",
+      "bicePerfil": "中小企业和大型企业",
+      "biceDesc": "BICE为生产和物流流程的现代化与自动化项目提供专门贷款。期限最长10年，宽限期2年，是阿根廷市场上生产性资本货物投资项目最优惠的融资工具。",
+      "biceItems": [
+        "最高可融资项目总值的80%",
+        "工业自动化项目期限最长10年",
+        "本金宽限期最长2年",
+        "根据项目信用状况提供优惠利率",
+        "通过已加入的商业银行适用于中小企业和大型企业",
+        "STOKA协助编制银行所需的技术项目方案",
+        "可在同一操作中与Decreto 513/2025的0%关税及RIMI兼容"
+      ],
+      "biceAhorroLabel": "节省/金额：",
+      "bicePerfilLabel": "适用对象：",
+      "pymeTag": "中小企业一般优惠",
+      "pymeH2": "已注册中小企业的额外优惠",
+      "pymeIntro": "除投资制度外，持有有效MiPyME证书的中小企业还可享受一系列改善进口期间及之后现金流的运营优惠。",
+      "pymeCards": [
+        {
+          "title": "增值税90天可抵扣",
+          "desc": "进口已缴增值税的税收抵免可在90天后计算，改善操作所在季度的现金状况。"
+        },
+        {
+          "title": "资本货物进口20%预付",
+          "desc": "进口总额上的预付款降至资产价值的20%，而非标准比例。"
+        },
+        {
+          "title": "简化的增值税不预扣证明",
+          "desc": "简化流程以获取避免源头预扣的证明，减少行政工作。"
+        },
+        {
+          "title": "进口预征豁免",
+          "desc": "对合格中小企业的进口暂时免除增值税和IIBB预征。请在操作时向ARCA核实有效性。"
+        },
+        {
+          "title": "支票税作为预缴",
+          "desc": "微型企业可将银行借贷税的30%作为雇主缴款的预缴，降低每月用工负担。"
+        }
+      ],
+      "aplicaTag": "快速适用性指南",
+      "aplicaH2": "哪些优惠适用于您的企业？",
+      "aplicaColBen": "优惠",
+      "aplicaColMicro": "微型中小企业",
+      "aplicaColMicroSub": "USD 150K–600K",
+      "aplicaColMed": "中型中小企业",
+      "aplicaColMedSub": "USD 600K–9M",
+      "aplicaColGran": "大型企业",
+      "aplicaColGranSub": "无上限",
+      "aplicaColRigi": "RIGI项目",
+      "aplicaColRigiSub": "+USD 200M",
+      "aplicaRows": [
+        {
+          "beneficio": "RIMI",
+          "cols": [
+            "✅",
+            "✅",
+            "—",
+            "—"
+          ]
+        },
+        {
+          "beneficio": "RIGI",
+          "cols": [
+            "—",
+            "—",
+            "—",
+            "✅"
+          ]
+        },
+        {
+          "beneficio": "关税减免",
+          "cols": [
+            "✅",
+            "✅",
+            "✅",
+            "✅ 全额豁免"
+          ]
+        },
+        {
+          "beneficio": "增值税10.5%",
+          "cols": [
+            "✅",
+            "✅",
+            "✅",
+            "✅"
+          ]
+        },
+        {
+          "beneficio": "融资租赁",
+          "cols": [
+            "✅",
+            "✅",
+            "✅",
+            "可能"
+          ]
+        },
+        {
+          "beneficio": "知识经济 / FONPEC",
+          "cols": [
+            "✅",
+            "✅",
+            "✅",
+            "✅"
+          ]
+        },
+        {
+          "beneficio": "中小企业一般",
+          "cols": [
+            "✅",
+            "✅",
+            "—",
+            "—"
+          ]
+        },
+        {
+          "beneficio": "省级",
+          "cols": [
+            "视所在地",
+            "视所在地",
+            "视所在地",
+            "✅ + 省级"
+          ]
+        }
+      ],
+      "aplicaNote": "— = 不直接适用 · ✅ = 适用 · 最优组合取决于企业的税务状况、公司结构和所在地。",
+      "casoTag": "实践案例",
+      "casoH2": "结合所有优惠后实际成本能降低多少？",
+      "casoCards": [
+        {
+          "label": "项目价值",
+          "value": "USD 1.000.000",
+          "desc": "完整ASRS系统：堆垛机、shuttle机器人、WMS和输送机，用于配送仓库。"
+        },
+        {
+          "label": "0%关税节省",
+          "value": "− USD 150.000",
+          "desc": "Decreto 513/2025取消CIF价值15%的关税。期初支出直接节省。"
+        },
+        {
+          "label": "增值税10.5% vs 21%",
+          "value": "− USD 52.500",
+          "desc": "设备计税基础上的差别增值税（在USD 500.000的合格部件上节省10.5个百分点）。"
+        },
+        {
+          "label": "BICE融资",
+          "value": "USD 800.000",
+          "desc": "项目的80%，期限10年。预估月供：USD 8.500/月，低于所替代的每月用工成本。"
+        }
+      ],
+      "casoResH3": "第一年现金流的结果",
+      "casoResP1": "在0%关税和80% BICE融资下，企业第一年自有资金支出USD 50.000（来自USD 150.000关税节省的USD 200.000净投入）。BICE的月供低于该系统所替代的用工成本。",
+      "casoResP2": "在此情形下，RIMI允许在第一个纳税年度抵扣资产100%的价值，降低投资当年的所得税基础。对于税负较高的企业，该优惠可相当于额外节省USD 80.000至USD 120.000的税款。",
+      "casoResRows": [
+        {
+          "label": "第一年净自有资金",
+          "val": "~ USD 50.000",
+          "note": "扣除关税节省后"
+        },
+        {
+          "label": "所得税基础减少",
+          "val": "USD 1.000.000",
+          "note": "RIMI加速折旧100%"
+        },
+        {
+          "label": "预估税款节省（所得税35%）",
+          "val": "~ USD 120.000",
+          "note": "因税务状况而异"
+        },
+        {
+          "label": "相对标价的总降幅",
+          "val": "15% – 40%",
+          "note": "结合所有优惠"
+        }
+      ],
+      "casoNote": "* 数值为指示性估算。实际优惠取决于企业的税务状况、项目结构及所加入的制度。STOKA免费分析每个具体项目。",
+      "ctx2026Tag": "2026年背景",
+      "ctx2026H2": "为何2026年是自动化的机遇窗口",
+      "ctx2026P": [
+        "三大因素的汇聚使2025–2026年成为在阿根廷投资仓库自动化的独特窗口。数十年来首次，长期法规稳定、取消进口关税和获得优惠融资同时具备。",
+        "RIGI提供30年税收稳定：所得税25%、关税固定、自第三年起外汇自由支配。对于今天实施自动化的企业，这一确定性前景便于计算10年TCO并向董事会或融资方提交项目。",
+        "Decreto 513/2025取消15%关税：在USD 800.000的项目上，即期初支出减少USD 120.000。企业无需额外办理：进口DELIE设备时自动适用。",
+        "BICE + RIMI + 0%关税的组合改变了投资等式：每月融资月供低于所替代的每月用工成本，使系统自运营第一年起即可自我偿付。"
+      ],
+      "faqTag": "常见问题",
+      "faqItems": [
+        {
+          "q": "进口的ASRS系统是否符合RIMI的资本货物条件？",
+          "a": "是的。Decreto 242/2026包括归类为资本货物（BK）的新进口动产。ASRS系统（堆垛机、机器人、输送机）符合该定义。WMS/WCS软件可归类为信息与电信货物（BIT）。"
+        },
+        {
+          "q": "我实际能节省多少？",
+          "a": "取决于金额、贵公司的税务结构及适用制度。作为参考：在USD 2M的项目上，RIMI的加速折旧在前2年可带来约USD 280.000的预估财务节省，若适用10.5%增值税率则可直接节省USD 210.000。"
+        },
+        {
+          "q": "STOKA办理税务手续吗？",
+          "a": "不办理。STOKA协助提供设备的技术文件（技术规格、NCM税则、资本货物分类）。加入RIMI/RIGI及税务手续由您的会计师或税务顾问办理。"
+        },
+        {
+          "q": "我可以结合RIMI + 融资租赁吗？",
+          "a": "这是一个法律灰色地带。RIMI要求资产在受益人资产中保留2年；在融资租赁中所有权归银行。我们建议咨询您的税务顾问以确定最优架构。"
+        },
+        {
+          "q": "如果我的公司不是中小企业怎么办？",
+          "a": "如果您不是中小企业且项目未达USD 200M（RIGI），您仍可享受：关税减免、增值税10.5%（若NCM符合）、融资租赁以及视所在地而定的省级优惠。"
+        },
+        {
+          "q": "RIGI优惠是否适用于采矿或石油项目内的ASRS？",
+          "a": "是的。如果您的公司有项目加入RIGI，项目的资本货物（包括ASRS）享受进口关税全额豁免、带税收抵免凭证的增值税及加速折旧。"
+        }
+      ],
+      "ctaTag": "免费评估",
+      "ctaP": "每家公司的税务结构各不相同。我们的团队为您提供ASRS系统的技术文件，并为您对接适用于您情况的优惠。最终税务建议由您的会计师确定——我们提供工程方案。",
+      "ctaDirectTag": "或直接联系我们",
+      "disclaimerTag": "重要法律声明",
+      "disclaimerP": "本页信息为一般性内容，基于截至2026年6月有效的法规。不构成税务、法律或财务建议。税收优惠受现行法规、预算配额及可能变动的资格要求约束。请就适用于您具体情况的事项咨询您的会计师或税务顾问。最后更新：2026年6月。STOKA对未经独立专业建议而基于本信息所做的决定不承担责任。",
+      "normativaTag": "所引用法规",
+      "normativaItems": [
+        {
+          "ref": "Ley 27.802, 第二十三编 (RIMI)",
+          "fecha": "2026年3月"
+        },
+        {
+          "ref": "Decreto 242/2026 (RIMI实施细则)",
+          "fecha": "2026年4月"
+        },
+        {
+          "ref": "ARCA联合一般决议5849/2026 (RIMI程序)",
+          "fecha": "2026年5月"
+        },
+        {
+          "ref": "Ley 27.742, 第七编 (RIGI)",
+          "fecha": "2024年7月"
+        },
+        {
+          "ref": "Decreto 749/2024 (RIGI实施细则)",
+          "fecha": "2024年9月"
+        },
+        {
+          "ref": "Decreto 105/2026 (RIGI延期)",
+          "fecha": "2026年2月"
+        },
+        {
+          "ref": "Decreto 513/2025 (资本货物关税减免)",
+          "fecha": "2025"
+        },
+        {
+          "ref": "Decreto 557/23, 附件I (BK与BIT清单)",
+          "fecha": "2023"
+        },
+        {
+          "ref": "Ley 25.248 (融资租赁)",
+          "fecha": ""
+        },
+        {
+          "ref": "Ley 23.349, 第28条 (增值税减免税率)",
+          "fecha": ""
+        },
+        {
+          "ref": "Ley 27.264 (中小企业优惠)",
+          "fecha": ""
+        },
+        {
+          "ref": "Ley 27.506 + 27.570 (知识经济)",
+          "fecha": ""
+        },
+        {
+          "ref": "Resolution 8/2026 工业部 (FONPEC)",
+          "fecha": "2026"
+        },
+        {
+          "ref": "Leyes 6.949 和 6.950 CABA (RIGI与本地RIMI)",
+          "fecha": ""
+        },
+        {
+          "ref": "Ley 15.510 布宜诺斯艾利斯 (RPIE)",
+          "fecha": ""
+        },
+        {
+          "ref": "Leyes 5.319 和 10.792 科尔多瓦 (工业促进)",
+          "fecha": ""
+        }
+      ]
+    },
+    "producto": {
+      "notFound": "未找到产品",
+      "verCatalogo": "查看目录",
+      "breadcrumbHome": "首页",
+      "breadcrumbCatalog": "目录",
+      "especificaciones": "技术规格",
+      "aplicaciones": "工业应用",
+      "industrias": "行业",
+      "ventajas": "核心优势",
+      "faqH2": "常见问题",
+      "verIndustria": "查看行业 →",
+      "consultarWpp": "通过WhatsApp咨询",
+      "solicitarProyecto": "申请项目",
+      "descargarFicha": "下载技术说明书",
+      "imagenes": "图片库",
+      "verMas": "查看更多"
+    },
+    "alternativeDelie": {
+      "metaTitle": "阿根廷DELIE | DELIE自动化立体仓库系统 | STOKA",
+      "metaDesc": "STOKA是DELIE在阿根廷的官方代表。提供ASRS系统、堆垛机、机器人及WMS/WCS软件，配备100%本地工程与技术支持。"
+    }
+  }
+}

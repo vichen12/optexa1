@@ -1,7 +1,9 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, ChevronLeft, CheckCircle2, ArrowLeft, LayoutGrid } from 'lucide-react';
-import { useSearchParams, Link, useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useLangNavigate } from '../lib/i18n-utils';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
 const img = (cat, prod, file) => `/productos-delie/${cat}/${seg(prod)}/${file}`;
@@ -105,6 +107,8 @@ const CATALOG = [
 ];
 
 function ProductModal({ product, onClose }) {
+  const { t } = useTranslation();
+  const ct = (k) => t(`pages.catalog.${k}`);
   const [imgIdx, setImgIdx] = useState(0);
   if (!product) return null;
 
@@ -122,6 +126,9 @@ function ProductModal({ product, onClose }) {
       >
         <motion.div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
         <motion.div
+          role="dialog"
+          aria-modal="true"
+          aria-label={product?.name}
           className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[92vh] overflow-y-auto z-10 flex flex-col"
           initial={{ scale: 0.96, y: 16, opacity: 0 }}
           animate={{ scale: 1, y: 0, opacity: 1 }}
@@ -196,7 +203,7 @@ function ProductModal({ product, onClose }) {
                     i === imgIdx ? 'border-cyan-500' : 'border-transparent opacity-60 hover:opacity-100'
                   }`}
                 >
-                  <img src={src} alt={`${product.name} — imagen ${i + 1}`} className="w-full h-full object-contain bg-gray-50" />
+                  <img loading="lazy" src={src} alt={`${product.name} — imagen ${i + 1}`} className="w-full h-full object-contain bg-gray-50" />
                 </button>
               ))}
             </div>
@@ -224,7 +231,7 @@ function ProductModal({ product, onClose }) {
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-500 hover:bg-green-400 text-white font-semibold text-sm rounded-xl transition-colors"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Consultar por WhatsApp
+              {ct('consultarWpp')}
             </button>
           </div>
         </motion.div>
@@ -234,8 +241,10 @@ function ProductModal({ product, onClose }) {
 }
 
 export const ProductCatalog = () => {
+  const { t } = useTranslation();
+  const ct = (k) => t(`pages.catalog.${k}`);
   const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
+  const langNavigate = useLangNavigate();
   const catParam = searchParams.get('cat');
   const initialCat = catParam ? CATALOG.find(c => c.id === catParam) || null : null;
 
@@ -244,7 +253,7 @@ export const ProductCatalog = () => {
   const topRef = useRef(null);
 
   const goTocat = (cat) => {
-    if (cat.href) { navigate(cat.href); return; }
+    if (cat.href) { langNavigate(cat.href); return; }
     setActiveCat(cat);
     setTimeout(() => topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
   };
@@ -262,12 +271,12 @@ export const ProductCatalog = () => {
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">
             DELIE · Fabricante certificado ISO 9001 · CE
           </p>
-          <h1 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter leading-none">
-            Nuestras{' '}
+          <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter leading-none">
+            {ct('categoriesH2_a')}{' '}
             <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, #22d3ee, #60a5fa)' }}>
-              Categorías
+              {ct('categoriesH2_b')}
             </span>
-          </h1>
+          </h2>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -282,7 +291,7 @@ export const ProductCatalog = () => {
               className="text-left rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md hover:border-cyan-300 transition-all duration-300 group"
             >
               <div className="aspect-video overflow-hidden bg-gray-100 relative">
-                <img
+                <img loading="lazy"
                   src={cat.cover}
                   alt={cat.label}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -315,7 +324,7 @@ export const ProductCatalog = () => {
           >
             <div className="aspect-video flex items-center justify-center bg-slate-800 relative overflow-hidden">
               <div className="absolute inset-0 bg-linear-to-br from-slate-700 to-slate-900" />
-              <img src="/image.png" alt="DELIE — Fabricante de sistemas ASRS" className="relative z-10 w-28 object-contain" />
+              <img loading="lazy" src="/image.png" alt="DELIE — Fabricante de sistemas ASRS" className="relative z-10 w-28 object-contain" />
               <div className="absolute top-3 right-3 w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center">
                 <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6a3 3 0 0 0-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
               </div>
@@ -347,7 +356,7 @@ export const ProductCatalog = () => {
             className="flex items-center gap-1.5 hover:text-cyan-500 transition-colors font-semibold"
           >
             <LayoutGrid size={13} />
-            Todas las categorías
+            {ct('allCategories')}
           </button>
           <ChevronRight size={12} className="text-gray-300" />
           <span className="text-gray-700 font-bold uppercase tracking-wide">{activeCat.label}</span>
@@ -362,7 +371,7 @@ export const ProductCatalog = () => {
       </div>
 
       {/* BARRA DE CATEGORÍAS STICKY */}
-      <div className="sticky top-[72px] z-30 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
+      <div className="sticky top-18 z-30 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-2 overflow-x-auto scrollbar-none">
           {/* Botón "Todas" */}
           <button
@@ -371,7 +380,7 @@ export const ProductCatalog = () => {
             className="flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide border border-gray-200 bg-white text-gray-500 hover:border-cyan-300 hover:text-gray-800 transition-all shrink-0"
           >
             <LayoutGrid size={12} />
-            Todas
+            {ct('allShort')}
           </button>
 
           <div className="w-px h-5 bg-gray-200 shrink-0" />
@@ -412,7 +421,7 @@ export const ProductCatalog = () => {
                 style={{ outline: 'none' }}
                 className="text-left bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-cyan-300 hover:shadow-md transition-all duration-200 group"
               >
-                <div className="aspect-[4/3] bg-gray-50 overflow-hidden flex items-center justify-center">
+                <div className="aspect-4/3 bg-gray-50 overflow-hidden flex items-center justify-center">
                   <img
                     src={product.image}
                     alt={product.name}

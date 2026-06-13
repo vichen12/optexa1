@@ -1,11 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { LangLink } from '../../lib/i18n-utils';
 import { CheckCircle2, XCircle, ArrowRight, Phone } from 'lucide-react';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
+import { SeoHead } from '../../lib/SeoHead';
 
 const canonical = 'https://www.stokagroup.com/catalogo/asrs/autostore-alternativa';
 
@@ -72,7 +74,7 @@ const PRODUCTS = [
   {
     name: 'Robot Lanzadera Shuttle',
     desc: 'Alta densidad para cajas y contenedores ligeros con throughput paralelo por nivel.',
-    img: '/productos-delie/asrs/pallet-shuttle-asrs-robot2d69d.webp',
+    img: '/productos-delie/asrs/Estanter%C3%ADas%20rob%C3%B3ticas%20con%20lanzadera%20para%20pal%C3%A9s/pallet-shuttle-robot-racking13c59.webp',
     url: '/catalogo/asrs/shuttle',
   },
   {
@@ -89,23 +91,24 @@ const PRODUCTS = [
   },
 ];
 
-const CheckIcon = ({ value }) => {
+const CheckIcon = ({ value, parcialLabel }) => {
   if (value === true) return <CheckCircle2 size={18} className="text-cyan-400 mx-auto" />;
   if (value === false) return <XCircle size={18} className="text-slate-600 mx-auto" />;
-  return <span className="text-yellow-400 text-xs font-mono mx-auto block text-center">parcial</span>;
+  return <span className="text-yellow-400 text-xs font-mono mx-auto block text-center">{parcialLabel || 'parcial'}</span>;
 };
 
 export const AutoStoreAlternativaPage = () => {
+  const { t } = useTranslation();
+  const p = (k) => t(`pages.autoStoreAlternativa.${k}`, { returnObjects: true });
   return (
     <div className="min-h-screen bg-zinc-950 text-white">
+      <SeoHead
+        title={p('metaTitle')}
+        description={p('metaDesc')}
+        basePath={'/catalogo/asrs/autostore-alternativa'}
+      />
       <Helmet>
-        <title>Alternativa a AutoStore Argentina | ASRS DELIE | STOKA</title>
-        <meta name="description" content="Alternativa a AutoStore en Argentina: ASRS DELIE 30-50% más económico, soporte local y proyecto llave en mano. Evaluación técnica gratuita." />
-        <meta property="og:title" content="Alternativa a AutoStore en Argentina | ASRS DELIE | STOKA" />
-        <meta property="og:description" content="Sistemas ASRS DELIE como alternativa a AutoStore: 30-50% más económico, soporte local en Argentina. Proyecto llave en mano." />
-        <meta property="og:url" content={canonical} />
-        <link rel="canonical" href={canonical} />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+                                        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
       </Helmet>
@@ -115,8 +118,8 @@ export const AutoStoreAlternativaPage = () => {
       {/* Hero */}
       <section className="relative pt-24 pb-0 overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="/productos-delie/asrs/pallet-shuttle-asrs-robot2d69d.webp"
+          <img loading="lazy"
+            src="/productos-delie/asrs/Estanter%C3%ADas%20rob%C3%B3ticas%20con%20lanzadera%20para%20pal%C3%A9s/pallet-shuttle-robot-racking13c59.webp"
             alt="Alternativa a AutoStore Argentina — Sistema ASRS DELIE"
             className="w-full h-full object-cover opacity-20"
           />
@@ -124,16 +127,16 @@ export const AutoStoreAlternativaPage = () => {
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 py-20">
           <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6">
-            <Link to="/" className="hover:text-cyan-400 transition-colors">Inicio</Link>
+            <LangLink to="/" className="hover:text-cyan-400 transition-colors">{t('nav.home')}</LangLink>
             <span>/</span>
-            <Link to="/catalogo" className="hover:text-cyan-400 transition-colors">Catálogo</Link>
+            <LangLink to="/catalogo" className="hover:text-cyan-400 transition-colors">{t('nav.catalog')}</LangLink>
             <span>/</span>
-            <Link to="/catalogo/asrs" className="hover:text-cyan-400 transition-colors">ASRS</Link>
+            <LangLink to="/catalogo/asrs" className="hover:text-cyan-400 transition-colors">{p('breadcrumbAsrs')}</LangLink>
             <span>/</span>
-            <span className="text-slate-400">Alternativa AutoStore</span>
+            <span className="text-slate-400">{p('breadcrumbPage')}</span>
           </nav>
           <div className="inline-block bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 text-xs font-mono px-4 py-1.5 rounded-full uppercase tracking-widest mb-5">
-            Alternativa económica · Soporte local
+            {p('heroChip')}
           </div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -141,28 +144,28 @@ export const AutoStoreAlternativaPage = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight text-white mb-5"
           >
-            Alternativa a AutoStore<br />
-            <span className="text-cyan-400">con soporte local en Argentina</span>
+            {p('heroH1_a')}<br />
+            <span className="text-cyan-400">{p('heroH1_b')}</span>
           </motion.h1>
           <p className="text-slate-300 text-lg max-w-2xl leading-relaxed mb-8">
-            Los sistemas ASRS DELIE ofrecen densidad y throughput comparables a AutoStore a un costo 30-50% menor, con ingeniería, instalación y soporte técnico 100% local a través de STOKA.
+            {p('heroSub')}
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link to="/contacto" className="inline-flex items-center gap-2 bg-cyan-400 hover:bg-cyan-300 text-slate-900 font-bold px-6 py-3 rounded-xl transition-colors">
-              <Phone size={16} /> Consultar precio y disponibilidad
-            </Link>
-            <Link to="/catalogo/asrs" className="inline-flex items-center gap-2 border border-slate-600 hover:border-cyan-400/50 text-slate-300 hover:text-white font-medium px-6 py-3 rounded-xl transition-colors">
-              Ver catálogo ASRS completo <ArrowRight size={15} />
-            </Link>
+            <LangLink to="/contacto" className="inline-flex items-center gap-2 bg-cyan-400 hover:bg-cyan-300 text-slate-900 font-bold px-6 py-3 rounded-xl transition-colors">
+              <Phone size={16} /> {p('heroCta')}
+            </LangLink>
+            <LangLink to="/catalogo/asrs" className="inline-flex items-center gap-2 border border-slate-600 hover:border-cyan-400/50 text-slate-300 hover:text-white font-medium px-6 py-3 rounded-xl transition-colors">
+              {p('heroLink')} <ArrowRight size={15} />
+            </LangLink>
           </div>
 
           {/* Stats chips */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10">
             {[
-              { v: '30-50%', l: 'Más económico' },
-              { v: 'Local', l: 'Soporte técnico' },
-              { v: '100%', l: 'Proyecto llave en mano' },
-              { v: '<24h', l: 'Respuesta de repuestos' },
+              { v: '30-50%', l: p('stat1Label') },
+              { v: 'Local', l: p('stat2Label') },
+              { v: '100%', l: p('stat3Label') },
+              { v: '<24h', l: p('stat4Label') },
             ].map((s, i) => (
               <div key={i} className="bg-slate-900/60 border border-slate-700 rounded-xl px-4 py-3 text-center">
                 <p className="text-xl font-black text-cyan-400">{s.v}</p>
@@ -176,13 +179,13 @@ export const AutoStoreAlternativaPage = () => {
       {/* Comparison table */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <h2 className="text-2xl font-black text-white mb-2 text-center">DELIE vs AutoStore</h2>
-          <p className="text-slate-400 text-center mb-8">Comparativa técnica para proyectos en Argentina y Chile</p>
+          <h2 className="text-2xl font-black text-white mb-2 text-center">{p('compH2')}</h2>
+          <p className="text-slate-400 text-center mb-8">{p('compSub')}</p>
           <div className="overflow-x-auto rounded-2xl border border-slate-700">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-slate-800 border-b border-slate-700">
-                  <th className="text-left px-5 py-4 text-slate-400 font-semibold">Característica</th>
+                  <th className="text-left px-5 py-4 text-slate-400 font-semibold">{p('compFeature')}</th>
                   <th className="text-center px-5 py-4 text-cyan-400 font-black">DELIE / STOKA</th>
                   <th className="text-center px-5 py-4 text-slate-500 font-semibold">AutoStore</th>
                 </tr>
@@ -191,8 +194,8 @@ export const AutoStoreAlternativaPage = () => {
                 {COMPARISON.map((row, i) => (
                   <tr key={i} className={`border-b border-slate-800 ${i % 2 === 0 ? 'bg-slate-900' : 'bg-zinc-950'}`}>
                     <td className="px-5 py-3.5 text-slate-300">{row.feature}</td>
-                    <td className="px-5 py-3.5"><CheckIcon value={row.delie} /></td>
-                    <td className="px-5 py-3.5"><CheckIcon value={row.autostore} /></td>
+                    <td className="px-5 py-3.5"><CheckIcon value={row.delie} parcialLabel={p('parcial')} /></td>
+                    <td className="px-5 py-3.5"><CheckIcon value={row.autostore} parcialLabel={p('parcial')} /></td>
                   </tr>
                 ))}
               </tbody>
@@ -204,36 +207,17 @@ export const AutoStoreAlternativaPage = () => {
       {/* Why DELIE over AutoStore */}
       <section className="relative overflow-hidden bg-slate-900 py-16">
         <div className="absolute inset-0 opacity-10">
-          <img
+          <img loading="lazy"
             src="/productos-delie/asrs/Transelevador%20Gr%C3%BAa%20+%20Estanter%C3%ADa%20Robot%20Lanzadera/pallet-stacker-crane-shuttle-robot-racking89e90.webp"
-            alt=""
+            alt="Sistema ASRS DELIE con transelevador y robot lanzadera — alternativa a AutoStore"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-slate-900/70" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-black text-white mb-10">Por qué empresas argentinas eligen DELIE sobre AutoStore</h2>
+          <h2 className="text-2xl font-black text-white mb-10">{p('whyH2')}</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                stat: '24h',
-                label: 'Tiempo de respuesta local',
-                title: 'Soporte técnico en Argentina',
-                desc: 'AutoStore tiene soporte centralizado en Europa — días o semanas de espera. STOKA resuelve con técnicos y repuestos locales en menos de 24 horas.',
-              },
-              {
-                stat: '40%',
-                label: 'Ahorro promedio vs AutoStore',
-                title: 'Precio 30-50% menor',
-                desc: 'En proyectos de USD 1M, DELIE significa entre USD 300.000 y USD 500.000 de ahorro en la inversión inicial con throughput y capacidad equivalente.',
-              },
-              {
-                stat: '1.500kg',
-                label: 'Carga máxima por posición',
-                title: 'Sin límite de tamaño de SKU',
-                desc: 'AutoStore soporta hasta 30 kg y tamaños fijos de contenedor. DELIE opera con paletas de hasta 1.500 kg y cualquier tipo de unidad de carga.',
-              },
-            ].map((c, i) => (
+            {p('why').map((c, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 16 }}
@@ -254,9 +238,9 @@ export const AutoStoreAlternativaPage = () => {
 
       {/* Products */}
       <section className="max-w-4xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-black text-white mb-8">Sistemas DELIE que reemplazan a AutoStore</h2>
+        <h2 className="text-2xl font-black text-white mb-8">{p('productsH2')}</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          {PRODUCTS.map((p, i) => (
+          {PRODUCTS.map((prod, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 16 }}
@@ -264,22 +248,22 @@ export const AutoStoreAlternativaPage = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.07 }}
             >
-              <Link
-                to={p.url}
+              <LangLink
+                to={prod.url}
                 className="group flex flex-col bg-slate-900 border border-slate-700 hover:border-cyan-400/40 rounded-2xl overflow-hidden transition-colors h-full"
               >
                 <div className="relative h-40 overflow-hidden">
-                  <img src={p.img} alt={p.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500" />
+                  <img loading="lazy" src={prod.img} alt={prod.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500" />
                   <div className="absolute inset-0 bg-linear-to-t from-slate-900 to-transparent" />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-base font-black text-white mb-2">{p.name}</h3>
-                  <p className="text-sm text-slate-400 leading-relaxed flex-1">{p.desc}</p>
+                  <h3 className="text-base font-black text-white mb-2">{prod.name}</h3>
+                  <p className="text-sm text-slate-400 leading-relaxed flex-1">{prod.desc}</p>
                   <div className="flex items-center gap-1 mt-4 text-cyan-400 text-sm font-medium group-hover:gap-2 transition-all">
-                    Ver sistema <ArrowRight size={13} />
+                    {p('viewSystem')} <ArrowRight size={13} />
                   </div>
                 </div>
-              </Link>
+              </LangLink>
             </motion.div>
           ))}
         </div>
@@ -287,14 +271,9 @@ export const AutoStoreAlternativaPage = () => {
 
       {/* FAQ */}
       <section className="max-w-3xl mx-auto px-6 pb-16">
-        <h2 className="text-xl font-black text-white mb-6">Preguntas frecuentes sobre alternativas a AutoStore en Argentina</h2>
+        <h2 className="text-xl font-black text-white mb-6">{p('faqH2')}</h2>
         <div className="space-y-4">
-          {[
-            { q: '¿DELIE es una alternativa a AutoStore en Argentina?', a: 'Sí. DELIE fabrica sistemas ASRS cube storage, shuttle y transelevadores que compiten directamente con AutoStore. La principal diferencia es el precio: los sistemas DELIE son entre un 30% y un 50% más económicos que AutoStore para proyectos equivalentes, y tienen soporte técnico local en Argentina a través de STOKA.' },
-            { q: '¿Qué diferencia técnica hay entre AutoStore y los sistemas DELIE?', a: 'AutoStore usa robots de rejilla (grid robots) que operan sobre una grilla modular. DELIE ofrece sistemas shuttle y de transelevadores que en muchas configuraciones logran densidades comparables o superiores, especialmente en depósitos con altura disponible mayor a 8 metros. El sistema DELIE también permite SKUs de mayor tamaño y peso.' },
-            { q: '¿Cuánto cuesta un sistema alternativo a AutoStore en Argentina?', a: 'Un sistema DELIE equivalente a una instalación AutoStore mediana (1.000-3.000 posiciones) en Argentina puede costar entre USD 600.000 y USD 1.500.000 completo (equipos + estanterías + WCS + integración). AutoStore suele costar entre un 30% y 50% más para configuraciones equivalentes, más el costo del soporte técnico importado.' },
-            { q: '¿STOKA tiene experiencia instalando sistemas en operaciones similares a las de AutoStore?', a: 'Sí. STOKA ha instalado sistemas DELIE en operaciones de e-commerce, logística 3PL, farmacéutica y manufactura en Argentina con perfiles de throughput similares a los que suelen automatizarse con AutoStore. Podemos mostrar referencias del sector en la primera reunión técnica.' },
-          ].map((f, i) => (
+          {p('faq').map((f, i) => (
             <details key={i} className="group bg-slate-900 border border-slate-700 rounded-xl">
               <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                 <span className="font-semibold text-white pr-4">{f.q}</span>

@@ -1,12 +1,14 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { LangLink } from '../../lib/i18n-utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search } from 'lucide-react';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
+import { SeoHead } from '../../lib/SeoHead';
 
 const CATS = [
   { id: 'todos',       label: 'Todos' },
@@ -130,6 +132,8 @@ const TERMINOS = [
 ];
 
 export const GlosarioPage = () => {
+  const { t } = useTranslation();
+  const p = (k) => t(`pages.glosario.${k}`, { returnObjects: true });
   const [query, setQuery] = useState('');
   const [catActiva, setCatActiva] = useState('todos');
   const canonical = 'https://www.stokagroup.com/recursos/glosario';
@@ -158,14 +162,13 @@ export const GlosarioPage = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      <SeoHead
+        title={p('metaTitle')}
+        description={p('metaDesc')}
+        basePath={'/recursos/glosario'}
+      />
       <Helmet>
-        <title>Glosario de Intralogística y Automatización | STOKA</title>
-        <meta name="description" content={`${TERMINOS.length}+ términos de automatización de almacenes: ASRS, WMS, transelevador, AGV, shuttle y más. La referencia técnica en español.`} />
-        <meta property="og:title" content="Glosario de Intralogística y Automatización | STOKA" />
-        <meta property="og:url" content={canonical} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={canonical} />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+                                        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <Navbar />
@@ -174,27 +177,27 @@ export const GlosarioPage = () => {
       <section className="bg-white pt-36 pb-10 px-6 border-b border-gray-100">
         <div className="max-w-4xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
-            <Link to="/" className="hover:text-cyan-500 transition-colors">Inicio</Link>
+            <LangLink to="/" className="hover:text-cyan-500 transition-colors">{t('nav.home')}</LangLink>
             <span>/</span>
-            <Link to="/recursos" className="hover:text-cyan-500 transition-colors">Recursos</Link>
+            <LangLink to="/recursos" className="hover:text-cyan-500 transition-colors">{t('nav.resources')}</LangLink>
             <span>/</span>
-            <span className="text-gray-600">Glosario</span>
+            <span className="text-gray-600">{p('breadcrumb')}</span>
           </nav>
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-5">
-            ASRS · WMS · AGV · AMR · SHUTTLE · {TERMINOS.length}+ términos
+            {p('heroTag')} · {TERMINOS.length}+
           </p>
           <h1 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-6">
-            Glosario de<br />
-            <span className="text-cyan-500">automatización</span>
+            {p('heroH1_a')}<br />
+            <span className="text-cyan-500">{p('heroH1_b')}</span>
           </h1>
           <p className="text-gray-500 text-lg max-w-xl mx-auto mb-8">
-            La referencia en español para ASRS, WMS, transelevadores, robots shuttle y todo el vocabulario de la intralogística moderna.
+            {p('heroSub')}
           </p>
           <div className="relative max-w-sm mx-auto">
             <Search size={15} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
             <input
               type="text"
-              placeholder="Buscar término..."
+              placeholder={p('searchPlaceholder')}
               value={query}
               onChange={e => setQuery(e.target.value)}
               className="w-full bg-white border border-gray-200 focus:border-cyan-400 rounded-xl pl-10 pr-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition-colors text-sm shadow-sm"
@@ -263,7 +266,7 @@ export const GlosarioPage = () => {
           </AnimatePresence>
 
           {filtered.length === 0 && (
-            <p className="text-gray-400 text-center py-16">No se encontraron términos para "<strong>{query}</strong>".</p>
+            <p className="text-gray-400 text-center py-16">{p('noResults')}</p>
           )}
         </section>
       </div>

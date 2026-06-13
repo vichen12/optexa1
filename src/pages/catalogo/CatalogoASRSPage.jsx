@@ -1,12 +1,14 @@
 import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { useNavigate, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useLangNavigate, LangLink } from '../../lib/i18n-utils';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
 import { ArrowRight, ChevronRight, Maximize2 } from 'lucide-react';
+import { SeoHead } from '../../lib/SeoHead';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
 const img = (prod, file) => `/productos-delie/asrs/${seg(prod)}/${file}`;
@@ -41,20 +43,20 @@ const SISTER_CATS = [
 ];
 
 export const CatalogoASRSPage = () => {
-  const navigate = useNavigate();
+  const langNavigate = useLangNavigate();
+  const { t } = useTranslation();
+  const p = (k) => t(`pages.catalogoAsrs.${k}`, { returnObjects: true });
   const videoRef = useRef(null);
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
+      <SeoHead
+        title={p('metaTitle')}
+        description={p('metaDesc')}
+        basePath={'/catalogo/asrs'}
+      />
       <Helmet>
-        <title>Sistemas ASRS Argentina | AS/RS Automatizados | STOKA</title>
-        <meta name="robots" content="index, follow" />
-        <meta name="description" content="ASRS y AS/RS DELIE en Argentina: transelevadores, pallet shuttle y miniload de 7 a 40 m de altura. 30–50% más económico que proveedores europeos." />
-        <meta property="og:title" content="Sistemas ASRS Argentina | Almacén Automatizado AS/RS | STOKA" />
-        <meta property="og:description" content="Sistema de almacenamiento y recuperación automatizado (AS/RS) DELIE. 7 a 40 metros, drive-in, shuttle, miniload. Representantes oficiales en Argentina y Chile." />
-        <meta property="og:url" content="https://www.stokagroup.com/catalogo/asrs" />
-        <link rel="canonical" href="https://www.stokagroup.com/catalogo/asrs" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
@@ -103,38 +105,38 @@ export const CatalogoASRSPage = () => {
       <Navbar />
 
       {/* HERO — video de fondo */}
-      <div className="relative mt-20 h-[70vh] min-h-[480px] flex items-end overflow-hidden">
+      <div className="relative mt-20 h-[70vh] min-h-120 flex items-end overflow-hidden">
         <video
-          src="/productos-delie/bannervideo2.mp4"
+          src="/bannervideo2-compressed.mp4"
           autoPlay muted loop playsInline
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-linear-to-r from-slate-950/80 via-slate-950/30 to-transparent" />
         <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-transparent to-transparent" />
-        <div className="absolute top-0 left-0 right-0 h-[3px] bg-cyan-500" />
+        <div className="absolute top-0 left-0 right-0 h-0.75 bg-cyan-500" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-20">
           <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut' }}>
             {/* Breadcrumb visual */}
             <nav className="flex items-center gap-2 text-xs text-gray-400 mb-4">
-              <button onClick={() => navigate('/')} className="hover:text-cyan-400 transition-colors">Inicio</button>
+              <button onClick={() => langNavigate('/')} className="hover:text-cyan-400 transition-colors">{t('nav.home')}</button>
               <ChevronRight size={12} />
-              <button onClick={() => navigate('/catalogo')} className="hover:text-cyan-400 transition-colors">Catálogo</button>
+              <button onClick={() => langNavigate('/catalogo')} className="hover:text-cyan-400 transition-colors">{t('nav.catalog')}</button>
               <ChevronRight size={12} />
-              <span className="text-cyan-400">AS/RS</span>
+              <span className="text-cyan-400">{p('breadcrumbCat')}</span>
             </nav>
             <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.35em] mb-4">
-              Sistema ASRS · Representantes DELIE · Argentina
+              {p('heroTag')}
             </p>
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black italic uppercase leading-[1.05] tracking-tight mb-5">
-              Sistemas AS/RS<br />
-              <span className="text-cyan-400">Estanterías automatizadas</span>
+              {p('heroH1_a')}<br />
+              <span className="text-cyan-400">{p('heroH1_b')}</span>
             </h1>
             <p className="text-gray-300 text-base md:text-lg max-w-xl leading-relaxed mb-8">
-              Estanterías AS/RS DELIE de 7 a 40 metros de altura. Drive-in, shuttle, mezzanine y rack selectivo automatizado con soporte local en Argentina.
+              {p('heroSub')}
             </p>
             <div className="flex flex-wrap gap-6">
-              {[{ value: '12', label: 'Modelos' }, { value: '40m', label: 'Altura máx.' }, { value: '±0,1mm', label: 'Precisión' }].map(s => (
+              {[{ value: '12', label: p('heroStat1Label') }, { value: '40m', label: p('heroStat2Label') }, { value: '±0,1mm', label: p('heroStat3Label') }].map(s => (
                 <div key={s.label} className="flex flex-col">
                   <span className="text-2xl font-black text-white italic">{s.value}</span>
                   <span className="text-[11px] text-gray-400 uppercase tracking-widest">{s.label}</span>
@@ -151,17 +153,17 @@ export const CatalogoASRSPage = () => {
 
           {/* Header */}
           <div>
-            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Qué son los sistemas AS/RS</p>
-            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter">Sistemas de almacenamiento y recuperación automatizados (AS/RS): ASRS de alta densidad</h2>
+            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('whatIsTag')}</p>
+            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter">{p('whatIsH2')}</h2>
           </div>
 
           {/* Stat badges */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              { value: '40 m', label: 'Altura máxima', sub: 'Uso total del espacio vertical' },
-              { value: '±0,1 mm', label: 'Precisión de mecanizado', sub: 'Robots sin desgaste ni paradas' },
-              { value: '30–50%', label: 'Más económico que Europa', sub: 'Precio directo de fábrica DELIE' },
-              { value: '18–36', label: 'Meses de ROI', sub: 'Comprobado en operaciones reales' },
+              { value: '40 m', label: p('stat1Label'), sub: p('stat1Sub') },
+              { value: '±0,1 mm', label: p('stat2Label'), sub: p('stat2Sub') },
+              { value: '30–50%', label: p('stat3Label'), sub: p('stat3Sub') },
+              { value: '18–36', label: p('stat4Label'), sub: p('stat4Sub') },
             ].map(s => (
               <div key={s.label} className="bg-gray-50 border border-gray-200 rounded-2xl p-4 text-center">
                 <p className="text-2xl font-black text-gray-900 leading-none mb-1">{s.value}</p>
@@ -175,9 +177,9 @@ export const CatalogoASRSPage = () => {
           <div className="relative rounded-2xl overflow-hidden border border-gray-200 bg-black group">
             <video
               ref={videoRef}
-              src="/bannervideo1.mp4"
+              src="/bannervideo1-compressed.mp4"
               autoPlay muted loop playsInline
-              className="w-full max-h-[360px] object-cover"
+              className="w-full max-h-90 object-cover"
             />
             <button
               onClick={() => videoRef.current?.requestFullscreen()}
@@ -190,33 +192,12 @@ export const CatalogoASRSPage = () => {
 
           {/* System selection guide */}
           <div>
-            <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-4">Guía de selección — ¿Qué sistema AS/RS necesitás?</p>
+            <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-4">{p('guideTag')}</p>
             <div className="grid sm:grid-cols-3 gap-4">
               {[
-                {
-                  type: 'Unit Load',
-                  sub: 'Transelevador de paletas',
-                  badge: 'Más versátil',
-                  badgeColor: 'bg-blue-50 text-blue-600 border-blue-200',
-                  cases: ['Paletas con muchos SKUs distintos', 'Operaciones FIFO / LIFO mixtas', 'Altura libre desde 12 m'],
-                  note: 'Transelevador de 1 o 2 mástiles'
-                },
-                {
-                  type: 'Shuttle',
-                  sub: 'Robot lanzadera',
-                  badge: 'Mayor densidad',
-                  badgeColor: 'bg-emerald-50 text-emerald-600 border-emerald-200',
-                  cases: ['Alta densidad con producto homogéneo', 'Gran volumen por SKU', 'Máximo aprovechamiento del m²'],
-                  note: 'Bidireccional o 4 vías'
-                },
-                {
-                  type: 'MiniLoad',
-                  sub: 'Cajas y totes',
-                  badge: 'Máxima velocidad',
-                  badgeColor: 'bg-violet-50 text-violet-600 border-violet-200',
-                  cases: ['E-commerce y farmacéutica', 'Picking goods-to-person', 'SKUs pequeños y medianos'],
-                  note: 'Simple o doble profundidad'
-                },
+                { ...p('guide')[0], badgeColor: 'bg-blue-50 text-blue-600 border-blue-200' },
+                { ...p('guide')[1], badgeColor: 'bg-emerald-50 text-emerald-600 border-emerald-200' },
+                { ...p('guide')[2], badgeColor: 'bg-violet-50 text-violet-600 border-violet-200' },
               ].map(s => (
                 <div key={s.type} className="bg-gray-50 border border-gray-200 rounded-2xl p-5 flex flex-col gap-3">
                   <div>
@@ -242,7 +223,7 @@ export const CatalogoASRSPage = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Fabricación DELIE */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-              <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-4">Fabricación DELIE</p>
+              <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-4">{p('fabTag')}</p>
               <div className="flex flex-wrap gap-2">
                 {[
                   'Acero de acerías certificadas',
@@ -264,13 +245,9 @@ export const CatalogoASRSPage = () => {
 
             {/* Fiscal 2026 */}
             <div className="bg-slate-900 rounded-2xl p-6 flex flex-col gap-4">
-              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.4em] uppercase">Argentina 2026 — Combinación fiscal</p>
+              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.4em] uppercase">{p('fiscalTag')}</p>
               <div className="space-y-2.5">
-                {[
-                  { label: 'Decreto 513/2025', desc: 'Arancel 0% en importación de equipos ASRS' },
-                  { label: 'RIMI', desc: 'Amortización acelerada del 100% en el 1er ejercicio' },
-                  { label: 'BICE', desc: 'Financiamiento a 10 años con período de gracia' },
-                ].map(item => (
+                {p('fiscalItems').map(item => (
                   <div key={item.label} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
                     <div>
@@ -281,10 +258,10 @@ export const CatalogoASRSPage = () => {
                 ))}
               </div>
               <p className="text-sm font-black text-white leading-tight border-t border-white/10 pt-4">
-                ROI en <span className="text-cyan-400">18–36 meses</span> en operaciones de mediana escala.
+                {t('pages.catalogoAsrs.fiscalRoi', { value: '18–36' })}
               </p>
-              <button onClick={() => navigate('/beneficios-fiscales')} className="mt-auto text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">
-                Ver todos los beneficios fiscales <ArrowRight size={12} />
+              <button onClick={() => langNavigate('/beneficios-fiscales')} className="mt-auto text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">
+                {p('fiscalLink')} <ArrowRight size={12} />
               </button>
             </div>
           </div>
@@ -295,14 +272,14 @@ export const CatalogoASRSPage = () => {
       {/* PRODUCTOS */}
       <section className="py-14 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Catálogo completo</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">12 modelos de estanterías AS/RS</h2>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('catalogTag')}</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">{p('catalogH2')}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {PRODUCTS.map((p, i) => (
-              <motion.button key={i} onClick={() => navigate(p.link)} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+              <motion.button key={i} onClick={() => langNavigate(p.link)} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
                 className="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-sm transition-all group">
                 <div className="aspect-4/3 overflow-hidden bg-gray-100">
-                  <img src={p.image} alt={`${p.name} — sistema AS/RS DELIE`}
+                  <img loading="lazy" src={p.image} alt={`${p.name} — sistema AS/RS DELIE`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-4">
@@ -313,8 +290,8 @@ export const CatalogoASRSPage = () => {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <button onClick={() => navigate('/catalogo')} className="inline-flex items-center gap-2 px-8 py-3 bg-white border border-gray-200 rounded-xl text-gray-600 text-sm font-bold hover:border-cyan-300 hover:text-gray-900 transition-all">
-              Ver catálogo completo <ArrowRight size={14} />
+            <button onClick={() => langNavigate('/catalogo')} className="inline-flex items-center gap-2 px-8 py-3 bg-white border border-gray-200 rounded-xl text-gray-600 text-sm font-bold hover:border-cyan-300 hover:text-gray-900 transition-all">
+              {p('viewFullCatalog')} <ArrowRight size={14} />
             </button>
           </div>
         </div>
@@ -323,11 +300,11 @@ export const CatalogoASRSPage = () => {
       {/* OTRAS CATEGORÍAS */}
       <section className="py-12 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Seguir explorando</p>
-          <h2 className="text-xl font-black text-gray-900 uppercase tracking-tighter mb-6">Otras categorías del catálogo</h2>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('sisterTag')}</p>
+          <h2 className="text-xl font-black text-gray-900 uppercase tracking-tighter mb-6">{p('sisterH2')}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {SISTER_CATS.map(c => (
-              <button key={c.href} onClick={() => navigate(c.href)}
+            {p('sisterCats').map((c, i) => (
+              <button key={i} onClick={() => langNavigate(SISTER_CATS[i].href)}
                 className="text-left p-4 bg-gray-50 border border-gray-200 rounded-xl hover:border-cyan-300 hover:bg-cyan-50/50 transition-all group">
                 <p className="font-bold text-gray-900 text-sm mb-0.5 group-hover:text-cyan-600 transition-colors">{c.label}</p>
                 <p className="text-gray-500 text-xs">{c.desc}</p>
@@ -341,14 +318,14 @@ export const CatalogoASRSPage = () => {
       {/* Explorar por tipo — product child links */}
       <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Explorar por tipo</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Sistemas AS/RS disponibles</h2>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('exploreTag')}</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">{p('exploreH2')}</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { nombre: 'Transelevador Unit-Load', desc: 'Paletas hasta 40 m de altura', url: '/catalogo/asrs/unit-load' },
-              { nombre: 'Transelevador MiniLoad', desc: 'Cajas y totes, picking a alta velocidad', url: '/catalogo/asrs/miniload' },
-              { nombre: 'Robot Lanzadera Shuttle', desc: 'Alta densidad con robots autónomos', url: '/catalogo/asrs/shuttle' },
-              { nombre: 'AS/RS Cámara Fría', desc: 'Operación desde -30 °C', url: '/catalogo/asrs/camara-frio' },
+              { ...p('exploreItems')[0], url: '/catalogo/asrs/unit-load' },
+              { ...p('exploreItems')[1], url: '/catalogo/asrs/miniload' },
+              { ...p('exploreItems')[2], url: '/catalogo/asrs/shuttle' },
+              { ...p('exploreItems')[3], url: '/catalogo/asrs/camara-frio' },
             ].map((item, i) => (
               <motion.a key={i} href={item.url}
                 initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
@@ -356,7 +333,7 @@ export const CatalogoASRSPage = () => {
                 <h3 className="font-black text-gray-900 text-sm mb-2 group-hover:text-cyan-600 transition-colors">{item.nombre}</h3>
                 <p className="text-gray-500 text-xs leading-relaxed mb-3">{item.desc}</p>
                 <span className="inline-flex items-center gap-1 text-xs text-cyan-500 font-bold">
-                  Ver detalle <ChevronRight size={12} />
+                  {p('viewDetail')} <ChevronRight size={12} />
                 </span>
               </motion.a>
             ))}
@@ -366,10 +343,10 @@ export const CatalogoASRSPage = () => {
 
       <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Preguntas frecuentes</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Lo que pregunta un Director de Operaciones</h2>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('faqTag')}</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">{p('faqH2')}</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            {FAQ.map((item, i) => (
+            {p('faq').map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                 className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:border-cyan-300 transition-colors">
                 <h3 className="font-black text-gray-900 text-sm mb-3">{item.q}</h3>
@@ -384,12 +361,12 @@ export const CatalogoASRSPage = () => {
       <section className="py-8 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto flex flex-wrap gap-3">
           {[
-            { label: 'Beneficios fiscales 2026', href: '/beneficios-fiscales' },
-            { label: 'Robots de manipulación', href: '/catalogo/robots-manipulacion' },
-            { label: 'Software WMS/WCS', href: '/catalogo/software' },
-            { label: 'Cómo trabajamos', href: '/como-trabajamos' },
+            { label: p('footerLinks')[0].label, href: '/beneficios-fiscales' },
+            { label: p('footerLinks')[1].label, href: '/catalogo/robots-manipulacion' },
+            { label: p('footerLinks')[2].label, href: '/catalogo/software' },
+            { label: p('footerLinks')[3].label, href: '/como-trabajamos' },
           ].map(l => (
-            <button key={l.href} onClick={() => navigate(l.href)}
+            <button key={l.href} onClick={() => langNavigate(l.href)}
               className="text-xs font-bold text-gray-600 border border-gray-200 px-4 py-2 rounded-full hover:border-cyan-300 hover:text-cyan-600 transition-all bg-gray-50">
               {l.label}
             </button>
@@ -400,21 +377,21 @@ export const CatalogoASRSPage = () => {
       {/* También te puede interesar */}
       <section className="py-10 px-6 bg-slate-950">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.4em] uppercase mb-4">También te puede interesar</p>
-          <Link
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.4em] uppercase mb-4">{p('alsoInterest')}</p>
+          <LangLink
             to="/catalogo/asrs/autostore-alternativa"
             className="group flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-slate-900 border border-slate-700 hover:border-cyan-400/50 rounded-2xl p-6 transition-colors"
           >
             <div>
               <h3 className="text-base font-black text-white mb-1 group-hover:text-cyan-50 transition-colors">
-                ¿Evaluaste AutoStore? Conocé la alternativa DELIE
+                {p('autostoreH3')}
               </h3>
-              <p className="text-sm text-slate-400">Misma densidad de almacenamiento, 30-50% más económico y con soporte técnico local en Argentina.</p>
+              <p className="text-sm text-slate-400">{p('autostoreDesc')}</p>
             </div>
             <span className="shrink-0 flex items-center gap-1 text-cyan-400 text-sm font-bold group-hover:gap-2 transition-all">
-              Ver comparativa <ArrowRight size={15} />
+              {p('autostoreLink')} <ArrowRight size={15} />
             </span>
-          </Link>
+          </LangLink>
         </div>
       </section>
 

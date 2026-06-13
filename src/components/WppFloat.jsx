@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const GS_URL = 'https://script.google.com/macros/s/AKfycbzhg3lF1NXpxytuxno8XakeIYEA_iMEomRYK5jNIdpbM8vGDufWx-MepBKodQEMAhReOw/exec';
 const WPP_NUMBER = '5492612071048';
@@ -13,6 +14,7 @@ const WaIcon = ({ size = 32 }) => (
 );
 
 export const WppFloat = () => {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [emailOpen, setEmailOpen] = useState(false);
   const [name, setName] = useState('');
@@ -35,7 +37,6 @@ export const WppFloat = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Fire and forget — no await so WhatsApp abre instantáneo
     fetch(GS_URL, {
       method: 'POST',
       mode: 'no-cors',
@@ -66,7 +67,6 @@ export const WppFloat = () => {
 
   return (
     <div ref={ref} className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 z-100">
-      {/* Mini form popup */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -80,22 +80,21 @@ export const WppFloat = () => {
             <div className="flex items-center justify-between bg-[#25D366] px-4 py-3">
               <div className="flex items-center gap-2">
                 <WaIcon size={18} />
-                <span className="text-white font-black text-sm">Escribinos por WhatsApp</span>
+                <span className="text-white font-black text-sm">{t('wpp.writeUs')}</span>
               </div>
               <button
                 onClick={() => setOpen(false)}
                 className="text-white/70 hover:text-white transition-colors"
-                aria-label="Cerrar"
+                aria-label={t('leadPopup.close')}
               >
                 <X size={16} />
               </button>
             </div>
 
-            {/* Form */}
             <form onSubmit={handleSubmit} className="p-4 space-y-3">
               <input
                 type="text"
-                placeholder="Tu nombre *"
+                placeholder={t('wpp.namePlaceholder')}
                 value={name}
                 onChange={e => setName(e.target.value)}
                 required
@@ -103,21 +102,21 @@ export const WppFloat = () => {
               />
               <input
                 type="text"
-                placeholder="Empresa (opcional)"
+                placeholder={t('wpp.companyPlaceholder')}
                 value={empresa}
                 onChange={e => setEmpresa(e.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#25D366] transition-colors"
               />
               <input
                 type="tel"
-                placeholder="Tu teléfono *"
+                placeholder={t('wpp.phonePlaceholder')}
                 value={phone}
                 onChange={e => setPhone(e.target.value)}
                 required
                 className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#25D366] transition-colors"
               />
               <textarea
-                placeholder="Mensaje (opcional)"
+                placeholder={t('wpp.msgPlaceholder')}
                 value={msg}
                 onChange={e => setMsg(e.target.value)}
                 rows={2}
@@ -127,10 +126,9 @@ export const WppFloat = () => {
                 type="submit"
                 className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold text-sm py-2.5 rounded-xl transition-colors"
               >
-                <Send size={14} /> Abrir WhatsApp
+                <Send size={14} /> {t('wpp.openWhatsApp')}
               </button>
 
-              {/* Email alt */}
               <a
                 href={`mailto:${EMAIL}`}
                 className="flex items-center justify-center gap-1.5 text-[11px] text-gray-400 hover:text-gray-600 transition-colors"
@@ -143,14 +141,14 @@ export const WppFloat = () => {
         )}
       </AnimatePresence>
 
-      {/* Floating buttons row */}
+      {/* Floating buttons */}
       <motion.div
         initial={{ opacity: 0, scale: 0.5, y: 100 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ delay: 1.5, type: 'spring', stiffness: 260, damping: 20 }}
         className="flex flex-col items-end gap-3"
       >
-        {/* Email button — encima, un poco más chico */}
+        {/* Email button */}
         <div className="relative flex items-center justify-end">
           <AnimatePresence>
             {emailOpen && (
@@ -161,21 +159,21 @@ export const WppFloat = () => {
                 transition={{ duration: 0.15 }}
                 className="absolute right-14 bg-white rounded-2xl shadow-xl border border-gray-100 px-4 py-3 w-52"
               >
-                <p className="text-[11px] text-gray-400 mb-1">Escribinos por mail</p>
+                <p className="text-[11px] text-gray-400 mb-1">{t('wpp.writeEmail')}</p>
                 <p className="text-xs font-bold text-gray-700 mb-3">{EMAIL}</p>
                 <a
-                  href={`mailto:${EMAIL}?subject=${encodeURIComponent('Consulta desde stokagroup.com')}&body=${encodeURIComponent('Hola equipo STOKA,\n\nMe contacto desde el sitio web para consultar sobre automatización de almacenes.\n\nNombre: \nTeléfono: \nEmpresa: \n\nConsulta: ')}`}
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(t('wpp.emailSubject'))}&body=${encodeURIComponent(t('wpp.emailBody'))}`}
                   className="flex items-center justify-center gap-2 w-full bg-blue-500 hover:bg-blue-400 text-white text-xs font-bold py-2 rounded-xl transition-colors"
                   onClick={() => setEmailOpen(false)}
                 >
-                  <Mail size={12} /> Abrir Gmail
+                  <Mail size={12} /> {t('wpp.openGmail')}
                 </a>
               </motion.div>
             )}
           </AnimatePresence>
           <motion.button
             onClick={() => { setEmailOpen(o => !o); setOpen(false); }}
-            aria-label="Enviar email"
+            aria-label={t('wpp.writeEmail')}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.8, type: 'spring', stiffness: 260, damping: 20 }}
@@ -187,18 +185,18 @@ export const WppFloat = () => {
 
         {/* WhatsApp button */}
         <div className="group relative">
-        <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-25 group-hover:opacity-40 transition-opacity duration-1000" />
-        <button
-          onClick={() => setOpen(o => !o)}
-          aria-label="Contactar por WhatsApp"
-          className="relative flex items-center gap-3 bg-[#25D366] text-white p-4 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:shadow-[#25D366]/60 transition-all duration-500 active:scale-90"
-        >
-          <WaIcon size={32} />
-          <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out font-black uppercase text-[10px] tracking-widest whitespace-nowrap italic px-0 group-hover:px-2">
-            WhatsApp Directo
-          </span>
-          <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 border-2 border-white rounded-full shadow-[0_0_10px_#4ade80]" />
-        </button>
+          <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-25 group-hover:opacity-40 transition-opacity duration-1000" />
+          <button
+            onClick={() => setOpen(o => !o)}
+            aria-label="Contactar por WhatsApp"
+            className="relative flex items-center gap-3 bg-[#25D366] text-white p-4 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:shadow-[#25D366]/60 transition-all duration-500 active:scale-90"
+          >
+            <WaIcon size={32} />
+            <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out font-black uppercase text-[10px] tracking-widest whitespace-nowrap italic px-0 group-hover:px-2">
+              {t('wpp.directWpp')}
+            </span>
+            <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 border-2 border-white rounded-full shadow-[0_0_10px_#4ade80]" />
+          </button>
         </div>
       </motion.div>
     </div>

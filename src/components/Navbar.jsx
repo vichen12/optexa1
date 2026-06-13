@@ -1,46 +1,62 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, ChevronRight, ChevronDown, X } from "lucide-react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { Menu, ChevronRight, ChevronDown, X, Globe } from "lucide-react";
+import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useLangNavigate, useLangPath } from "../lib/i18n-utils";
 
 const cx = (...cls) => cls.filter(Boolean).join(" ");
 
-const CATALOG_CATEGORIES = [
-  { name: "Sistemas AS/RS",          href: "/catalogo/asrs" },
-  { name: "Robots de Manipulación",  href: "/catalogo/robots-manipulacion" },
-  { name: "Almacenamiento Vertical", href: "/catalogo/almacenamiento-vertical" },
-  { name: "Equipo de Transporte",    href: "/catalogo/equipo-transporte" },
-  { name: "Software Inteligente",    href: "/catalogo/software" },
-];
-
-const RECURSOS_ITEMS = [
-  { name: "Calculadora ROI",        href: "/recursos/roi-automatizacion" },
-  { name: "Comparador de sistemas", href: "/recursos/comparador-sistemas" },
-  { name: "Blog y artículos",       href: "/recursos" },
-  { name: "Casos de éxito",         href: "/casos-de-exito" },
-  { name: "Glosario técnico",       href: "/recursos/glosario" },
-];
-
-const ALL_NAV = [
-  { name: "Inicio",             href: "#inicio",              type: "scroll"            },
-  { name: "Catálogo",           href: "/catalogo",            type: "dropdown-catalogo" },
-  { name: "Industrias",         href: "/industrias",          type: "page"              },
-  { name: "Beneficios fiscales", href: "/beneficios-fiscales", type: "page"             },
-  { name: "Cómo Trabajamos",    href: "/como-trabajamos",     type: "page"              },
-  { name: "Nosotros",           href: "/nosotros",            type: "page"              },
-  { name: "Recursos",           href: "/recursos",            type: "dropdown-recursos" },
+const LANGS = [
+  { code: 'es', label: 'ES', full: 'Español' },
+  { code: 'en', label: 'EN', full: 'English' },
+  { code: 'zh', label: '中文', full: '中文' },
 ];
 
 export const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [catalogOpen, setCatalogOpen] = useState(false);
-  const [recursosOpen, setRecursosOpen] = useState(false);
-  const catalogRef = useRef(null);
-  const recursosRef = useRef(null);
-  const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+  const langNavigate = useLangNavigate();
+  const langPath = useLangPath();
   const location = useLocation();
-  const isHome = location.pathname === "/";
+
+  const [scrolled, setScrolled]       = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [catalogOpen, setCatalogOpen]   = useState(false);
+  const [recursosOpen, setRecursosOpen] = useState(false);
+  const [langOpen, setLangOpen]         = useState(false);
+  const catalogRef  = useRef(null);
+  const recursosRef = useRef(null);
+  const langRef     = useRef(null);
+
+  const isHome = location.pathname === "/" ||
+    location.pathname === "/en" || location.pathname === "/en/" ||
+    location.pathname === "/zh" || location.pathname === "/zh/";
+
+  const CATALOG_CATEGORIES = [
+    { name: t('nav.catalogCategories.asrs'),      href: "/catalogo/asrs" },
+    { name: t('nav.catalogCategories.robots'),    href: "/catalogo/robots-manipulacion" },
+    { name: t('nav.catalogCategories.vertical'),  href: "/catalogo/almacenamiento-vertical" },
+    { name: t('nav.catalogCategories.transport'), href: "/catalogo/equipo-transporte" },
+    { name: t('nav.catalogCategories.software'),  href: "/catalogo/software" },
+  ];
+
+  const RECURSOS_ITEMS = [
+    { name: t('nav.resourcesItems.roi'),        href: "/recursos/roi-automatizacion" },
+    { name: t('nav.resourcesItems.comparator'), href: "/recursos/comparador-sistemas" },
+    { name: t('nav.resourcesItems.blog'),       href: "/recursos" },
+    { name: t('nav.resourcesItems.cases'),      href: "/casos-de-exito" },
+    { name: t('nav.resourcesItems.glossary'),   href: "/recursos/glosario" },
+  ];
+
+  const ALL_NAV = [
+    { name: t('nav.home'),       href: "#inicio",              type: "scroll"            },
+    { name: t('nav.catalog'),    href: "/catalogo",            type: "dropdown-catalogo" },
+    { name: t('nav.industries'), href: "/industrias",          type: "page"              },
+    { name: t('nav.taxBenefits'), href: "/beneficios-fiscales", type: "page"             },
+    { name: t('nav.howWeWork'),  href: "/como-trabajamos",     type: "page"              },
+    { name: t('nav.aboutUs'),    href: "/nosotros",            type: "page"              },
+    { name: t('nav.resources'),  href: "/recursos",            type: "dropdown-recursos" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -50,8 +66,9 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (catalogRef.current && !catalogRef.current.contains(e.target)) setCatalogOpen(false);
+      if (catalogRef.current  && !catalogRef.current.contains(e.target))  setCatalogOpen(false);
       if (recursosRef.current && !recursosRef.current.contains(e.target)) setRecursosOpen(false);
+      if (langRef.current     && !langRef.current.contains(e.target))     setLangOpen(false);
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -68,7 +85,7 @@ export const Navbar = () => {
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     } else {
-      navigate("/");
+      langNavigate("/");
       setTimeout(() => {
         const el = document.querySelector(anchor);
         if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -81,7 +98,7 @@ export const Navbar = () => {
     setMobileMenuOpen(false);
     setCatalogOpen(false);
     setRecursosOpen(false);
-    navigate(href);
+    langNavigate(href);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -97,6 +114,26 @@ export const Navbar = () => {
       setCatalogOpen(false);
     } else handlePageNav(e, item.href);
   };
+
+  /* Switch language and navigate to equivalent page */
+  const switchLang = (newLang) => {
+    setLangOpen(false);
+    const currentLang = i18n.language;
+    if (currentLang === newLang) return;
+
+    // Determine current path without language prefix
+    let currentPath = location.pathname;
+    if (currentPath.startsWith('/en')) currentPath = currentPath.slice(3) || '/';
+    else if (currentPath.startsWith('/zh')) currentPath = currentPath.slice(3) || '/';
+    if (!currentPath.startsWith('/')) currentPath = '/' + currentPath;
+
+    // Build target URL
+    const targetPath = newLang === 'es' ? currentPath : `/${newLang}${currentPath === '/' ? '' : currentPath}`;
+    i18n.changeLanguage(newLang);
+    window.location.assign(targetPath);
+  };
+
+  const currentLang = LANGS.find(l => l.code === i18n.language) || LANGS[0];
 
   return (
     <>
@@ -128,22 +165,23 @@ export const Navbar = () => {
               scrolled ? "w-32 h-14" : "w-40 h-16",
             )}>
               <img
-                src="/stoka_logo_sin_fondo.png"
+                src="/stoka_logo_sin_fondo.webp"
                 alt="STOKA — Representantes oficiales DELIE en Argentina"
+                width="160" height="64"
                 fetchpriority="high"
                 className="w-full h-full object-contain scale-[2] group-hover:scale-[2.1] active:scale-[1.9] transition-transform duration-300"
               />
             </div>
           </a>
 
-          {/* DESKTOP NAV — "Inicio" se omite, el logo lo cubre */}
+          {/* DESKTOP NAV */}
           <ul className="hidden lg:flex items-center gap-0">
             {ALL_NAV.filter(i => i.type !== "scroll").map((item) => {
-              const isCatalog = item.type === "dropdown-catalogo";
+              const isCatalog  = item.type === "dropdown-catalogo";
               const isRecursos = item.type === "dropdown-recursos";
               const isDropdown = isCatalog || isRecursos;
-              const isOpen = isCatalog ? catalogOpen : isRecursos ? recursosOpen : false;
-              const itemRef = isCatalog ? catalogRef : isRecursos ? recursosRef : undefined;
+              const isOpen     = isCatalog ? catalogOpen : isRecursos ? recursosOpen : false;
+              const itemRef    = isCatalog ? catalogRef  : isRecursos ? recursosRef  : undefined;
               return (
                 <li key={item.name} className="relative flex items-center" ref={itemRef}>
                   {isDropdown ? (
@@ -170,17 +208,17 @@ export const Navbar = () => {
                               {isCatalog && (
                                 <>
                                   <a
-                                    href="/catalogo"
+                                    href={langPath("/catalogo")}
                                     onClick={(e) => handlePageNav(e, "/catalogo")}
                                     className="block px-4 py-2.5 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-cyan-500 transition-colors rounded-xl hover:bg-gray-50"
                                   >
-                                    Ver catálogo completo →
+                                    {t('nav.viewCatalog')}
                                   </a>
                                   <div className="border-t border-gray-100 my-1" />
                                   {CATALOG_CATEGORIES.map((cat) => (
                                     <a
                                       key={cat.href}
-                                      href={cat.href}
+                                      href={langPath(cat.href)}
                                       onClick={(e) => handlePageNav(e, cat.href)}
                                       className="flex items-center justify-between px-4 py-2.5 text-[11px] font-bold text-gray-700 hover:text-cyan-600 hover:bg-cyan-50 rounded-xl transition-colors group"
                                     >
@@ -193,7 +231,7 @@ export const Navbar = () => {
                               {isRecursos && RECURSOS_ITEMS.map((rec) => (
                                 <a
                                   key={rec.href}
-                                  href={rec.href}
+                                  href={langPath(rec.href)}
                                   onClick={(e) => handlePageNav(e, rec.href)}
                                   className="flex items-center justify-between px-4 py-2.5 text-[11px] font-bold text-gray-700 hover:text-cyan-600 hover:bg-cyan-50 rounded-xl transition-colors group"
                                 >
@@ -208,7 +246,7 @@ export const Navbar = () => {
                     </>
                   ) : (
                     <a
-                      href={item.href}
+                      href={langPath(item.href)}
                       onClick={(e) => handleNavClick(e, item)}
                       className="relative flex items-center px-2.5 h-9 text-[10.5px] font-black uppercase tracking-[0.06em] transition-colors duration-300 group italic whitespace-nowrap text-gray-600 hover:text-gray-900"
                     >
@@ -221,15 +259,64 @@ export const Navbar = () => {
             })}
           </ul>
 
-          {/* DESKTOP CTA */}
-          <div className="hidden md:block">
+          {/* DESKTOP RIGHT: LANG SWITCHER + CTA */}
+          <div className="hidden md:flex items-center gap-2">
+            {/* Language switcher */}
+            <div className="relative" ref={langRef}>
+              <button
+                onClick={() => setLangOpen(v => !v)}
+                aria-label={t('nav.language')}
+                aria-expanded={langOpen}
+                aria-haspopup="menu"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-[10.5px] font-black text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-all italic tracking-[0.06em]"
+              >
+                <Globe size={13} />
+                <span>{currentLang.label}</span>
+                <ChevronDown size={9} className={cx("transition-transform duration-200", langOpen ? "rotate-180" : "")} />
+              </button>
+              <AnimatePresence>
+                {langOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 6, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 6, scale: 0.97 }}
+                    transition={{ duration: 0.13 }}
+                    className="absolute top-full right-0 mt-2 w-36 bg-white border border-gray-200 rounded-2xl shadow-xl overflow-hidden z-60"
+                  >
+                    <div className="p-1.5">
+                      {LANGS.map((lang) => (
+                        <button
+                          key={lang.code}
+                          onClick={() => switchLang(lang.code)}
+                          lang={lang.code}
+                          aria-current={i18n.language === lang.code ? 'true' : undefined}
+                          className={cx(
+                            "w-full text-left flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-xl transition-colors",
+                            i18n.language === lang.code
+                              ? "text-cyan-600 bg-cyan-50"
+                              : "text-gray-700 hover:text-cyan-600 hover:bg-cyan-50"
+                          )}
+                        >
+                          <span>{lang.full}</span>
+                          {i18n.language === lang.code && (
+                            <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* CTA button */}
             <button
-              onClick={() => { navigate('/contacto'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              onClick={() => { langNavigate('/contacto'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className="relative group overflow-hidden bg-cyan-500 text-white px-5 py-2.5 rounded-xl font-black text-[10.5px] tracking-[0.08em] shadow-[0_4px_16px_rgba(6,182,212,0.35)] hover:bg-cyan-400 transition-all active:scale-95 italic"
             >
               <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12" />
               <span className="flex items-center gap-2">
-                Consultar <ChevronRight size={16} />
+                {t('nav.consult')} <ChevronRight size={16} />
               </span>
             </button>
           </div>
@@ -237,11 +324,11 @@ export const Navbar = () => {
           {/* MOBILE TRIGGER */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-label={mobileMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
             aria-expanded={mobileMenuOpen}
             className={cx(
               "lg:hidden p-2 rounded-xl transition-colors",
-              scrolled ? "text-gray-600 hover:text-gray-900" : "text-gray-600 hover:text-gray-900",
+              "text-gray-600 hover:text-gray-900",
             )}
           >
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -256,10 +343,14 @@ export const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            role="dialog"
+            aria-modal="true"
+            aria-label={t('nav.menu')}
             className="fixed inset-0 z-60 bg-white flex flex-col items-center justify-center p-8 overflow-hidden font-sans"
           >
             <button
               onClick={() => setMobileMenuOpen(false)}
+              aria-label={t('nav.closeMenu')}
               className="absolute top-8 right-8 text-slate-400 hover:text-slate-900 p-2 transition-colors"
             >
               <X size={32} />
@@ -272,7 +363,7 @@ export const Navbar = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  href={item.href}
+                  href={langPath(item.href)}
                   onClick={(e) => (item.type === "dropdown-catalogo" || item.type === "dropdown-recursos") ? handlePageNav(e, item.href) : handleNavClick(e, item)}
                   className="text-4xl font-black text-slate-900 uppercase tracking-tighter hover:text-cyan-500 transition-all italic flex flex-col items-center"
                 >
@@ -283,15 +374,40 @@ export const Navbar = () => {
                 </motion.a>
               ))}
 
+              {/* Language switcher mobile */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="flex items-center justify-center gap-2 mt-2"
+              >
+                {LANGS.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => { setMobileMenuOpen(false); switchLang(lang.code); }}
+                    lang={lang.code}
+                    aria-current={i18n.language === lang.code ? 'true' : undefined}
+                    className={cx(
+                      "px-4 py-2 rounded-xl text-sm font-black transition-all",
+                      i18n.language === lang.code
+                        ? "bg-cyan-500 text-white"
+                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    )}
+                  >
+                    {lang.label}
+                  </button>
+                ))}
+              </motion.div>
+
               <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.35 }}
-                onClick={() => { setMobileMenuOpen(false); navigate('/contacto'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                onClick={() => { setMobileMenuOpen(false); langNavigate('/contacto'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                 style={{ outline: "none" }}
                 className="mt-6 bg-cyan-500 text-white px-12 py-5 rounded-2xl font-black text-xl italic shadow-[0_4px_24px_rgba(6,182,212,0.3)]"
               >
-                Consultar
+                {t('nav.consult')}
               </motion.button>
             </nav>
           </motion.div>

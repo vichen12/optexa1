@@ -1,45 +1,36 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Clock, Building2, User, MessageSquare, Send, Loader2, Phone, MapPin, Briefcase, HelpCircle, Globe, ArrowRight } from 'lucide-react';
-
-const SECTORES = [
-  'E-commerce & Retail', 'Logística 3PL', 'Manufactura Industrial',
-  'Alimentos & Bebidas', 'Farmacéutica', 'Minería & Oil & Gas',
-  'Cadena de Frío', 'Otro',
-];
-const TIPOS_CONSULTA = [
-  'Cotización de sistema ASRS', 'Consulta técnica general',
-  'Integración WMS/WCS con mi ERP', 'Visita técnica a mi planta',
-  'Información sobre beneficios fiscales', 'Financiamiento BICE', 'Otro',
-];
-const COMO_CONOCIO = [
-  'Google / búsqueda web', 'LinkedIn', 'Referido por un colega',
-  'Feria o evento industrial', 'Redes sociales', 'Otro',
-];
+import { useTranslation } from 'react-i18next';
 
 const inp = "w-full bg-white border border-gray-200 rounded-lg pl-8 pr-3 py-2 text-gray-900 text-xs placeholder:text-gray-400 focus:outline-none focus:border-slate-400 transition-all";
 const sel = "w-full bg-white border border-gray-200 rounded-lg pl-8 pr-3 py-2 text-gray-900 text-xs focus:outline-none focus:border-slate-400 transition-all appearance-none";
 
 export const Contact = () => {
+  const { t } = useTranslation();
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState(null);
+
+  const sectors      = t('contact.sectors',          { returnObjects: true });
+  const queryTypes   = t('contact.queryTypes',        { returnObjects: true });
+  const howFoundOpts = t('contact.howFoundOptions',   { returnObjects: true });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
     setStatus(null);
     const data = {
-      name: e.target.name.value,
-      company: e.target.company.value,
-      email: e.target.email.value,
-      phone: e.target.phone.value,
-      country: e.target.country.value,
-      province: e.target.province.value,
-      sector: e.target.sector.value,
+      name:          e.target.name.value,
+      company:       e.target.company.value,
+      email:         e.target.email.value,
+      phone:         e.target.phone.value,
+      country:       e.target.country.value,
+      province:      e.target.province.value,
+      sector:        e.target.sector.value,
       tipo_consulta: e.target.tipo_consulta.value,
-      como_conocio: e.target.como_conocio.value,
-      message: e.target.message.value,
-      source: 'contact_page',
+      como_conocio:  e.target.como_conocio.value,
+      message:       e.target.message.value,
+      source:        'contact_page',
     };
     try {
       await fetch(
@@ -56,13 +47,13 @@ export const Contact = () => {
 
         {/* Header */}
         <div className="mb-10">
-          <p className="text-[10px] font-mono text-slate-400 tracking-[0.4em] uppercase mb-2">Contacto</p>
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter leading-none">
-            Iniciá tu{' '}
+          <p className="text-[10px] font-mono text-slate-400 tracking-[0.4em] uppercase mb-2">{t('contact.tag')}</p>
+          <h1 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter leading-none">
+            {t('contact.h2_a')}{' '}
             <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, #22d3ee, #60a5fa)' }}>
-              Proyecto
+              {t('contact.h2_b')}
             </span>
-          </h2>
+          </h1>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-5">
@@ -70,7 +61,7 @@ export const Contact = () => {
           {/* LEFT — contacto */}
           <div className="lg:col-span-2 flex flex-col gap-3">
 
-            {/* WhatsApp — destacado */}
+            {/* WhatsApp */}
             <div className="rounded-2xl overflow-hidden border border-[#25D366]/40 bg-white">
               <div className="px-5 py-4 border-b border-gray-100 flex items-center gap-2.5">
                 <div className="w-7 h-7 rounded-lg bg-[#25D366] flex items-center justify-center shrink-0">
@@ -79,10 +70,10 @@ export const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-[#25D366] text-[10px] font-black uppercase tracking-widest">WhatsApp directo</p>
+                  <p className="text-[#25D366] text-[10px] font-black uppercase tracking-widest">{t('contact.wppTag')}</p>
                   <div className="flex items-center gap-1.5 mt-0.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-                    <span className="text-gray-400 text-[10px]">En línea ahora</span>
+                    <span className="text-gray-400 text-[10px]">{t('contact.online')}</span>
                   </div>
                 </div>
               </div>
@@ -104,7 +95,7 @@ export const Contact = () => {
                   className="flex items-center justify-between group px-4 py-2.5 rounded-xl bg-gray-50 hover:bg-[#25D366]/8 border border-gray-200 hover:border-[#25D366]/30 transition-all"
                 >
                   <div>
-                    <p className="text-gray-400 text-[9px] uppercase tracking-wider font-bold mb-0.5">Consultas técnicas</p>
+                    <p className="text-gray-400 text-[9px] uppercase tracking-wider font-bold mb-0.5">{t('contact.techInquiries')}</p>
                     <p className="text-gray-800 font-mono text-xs font-bold">+54 9 261 207-1048</p>
                   </div>
                   <ArrowRight size={12} className="text-[#25D366] group-hover:translate-x-0.5 transition-transform" />
@@ -113,7 +104,7 @@ export const Contact = () => {
               <div className="px-5 pb-4">
                 <div className="flex items-center gap-2 pt-2 border-t border-gray-100">
                   <Clock size={11} className="text-gray-400" />
-                  <span className="text-gray-400 text-[10px]">Respuesta en menos de 2 horas</span>
+                  <span className="text-gray-400 text-[10px]">{t('contact.responseTime')}</span>
                 </div>
               </div>
             </div>
@@ -131,10 +122,8 @@ export const Contact = () => {
               </div>
             </a>
 
-
-
             <p className="text-gray-400 text-[11px] leading-relaxed px-1">
-              Primera consulta técnica sin costo. Nuestros ingenieros analizan cada caso de forma personalizada.
+              {t('contact.freeConsult')}
             </p>
           </div>
 
@@ -144,31 +133,31 @@ export const Contact = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Nombre</label>
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">{t('contact.name')}</label>
                   <div className="relative">
                     <User size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
-                    <input name="name" type="text" required placeholder="Tu nombre" className={inp} />
+                    <input name="name" type="text" required placeholder={t('contact.namePlaceholder')} className={inp} />
                   </div>
                 </div>
                 <div>
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Empresa</label>
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">{t('contact.company')}</label>
                   <div className="relative">
                     <Building2 size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
-                    <input name="company" type="text" placeholder="Tu organización" className={inp} />
+                    <input name="company" type="text" placeholder={t('contact.companyPlaceholder')} className={inp} />
                   </div>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Email</label>
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">{t('contact.email')}</label>
                   <div className="relative">
                     <Mail size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
                     <input name="email" type="email" required placeholder="ejemplo@correo.com" className={inp} />
                   </div>
                 </div>
                 <div>
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Teléfono</label>
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">{t('contact.phone')}</label>
                   <div className="relative">
                     <Phone size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
                     <input name="phone" type="tel" placeholder="+54 9 261..." className={inp} />
@@ -178,61 +167,61 @@ export const Contact = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">País</label>
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">{t('contact.country')}</label>
                   <div className="relative">
                     <MapPin size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
-                    <input name="country" type="text" placeholder="Argentina" className={inp} />
+                    <input name="country" type="text" placeholder={t('contact.countryPlaceholder')} className={inp} />
                   </div>
                 </div>
                 <div>
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Provincia</label>
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">{t('contact.province')}</label>
                   <div className="relative">
                     <MapPin size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
-                    <input name="province" type="text" placeholder="Mendoza" className={inp} />
+                    <input name="province" type="text" placeholder={t('contact.provincePlaceholder')} className={inp} />
                   </div>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Sector</label>
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">{t('contact.sector')}</label>
                   <div className="relative">
                     <Briefcase size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
                     <select name="sector" className={sel} defaultValue="">
-                      <option value="" disabled>Seleccioná</option>
-                      {SECTORES.map((s) => <option key={s} value={s}>{s}</option>)}
+                      <option value="" disabled>{t('contact.selectPlaceholder')}</option>
+                      {Array.isArray(sectors) && sectors.map((s) => <option key={s} value={s}>{s}</option>)}
                     </select>
                   </div>
                 </div>
                 <div>
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Tipo consulta</label>
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">{t('contact.queryType')}</label>
                   <div className="relative">
                     <HelpCircle size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
                     <select name="tipo_consulta" className={sel} defaultValue="">
-                      <option value="" disabled>¿Qué necesitás?</option>
-                      {TIPOS_CONSULTA.map((t) => <option key={t} value={t}>{t}</option>)}
+                      <option value="" disabled>{t('contact.queryTypePlaceholder')}</option>
+                      {Array.isArray(queryTypes) && queryTypes.map((q) => <option key={q} value={q}>{q}</option>)}
                     </select>
                   </div>
                 </div>
               </div>
 
               <div>
-                <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">¿En qué podemos ayudarte?</label>
+                <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">{t('contact.message')}</label>
                 <div className="relative">
                   <MessageSquare size={12} className="absolute left-2.5 top-3 text-gray-400" />
                   <textarea name="message" rows="3" required
-                    placeholder="Describí tu operación, volumen de SKUs, m² disponibles..."
+                    placeholder={t('contact.messagePlaceholder')}
                     className="w-full bg-white border border-gray-200 rounded-lg pl-8 pr-3 py-2 text-gray-900 text-xs placeholder:text-gray-400 focus:outline-none focus:border-slate-400 transition-all resize-none" />
                 </div>
               </div>
 
               <div>
-                <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">¿Cómo nos conociste?</label>
+                <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">{t('contact.howFound')}</label>
                 <div className="relative">
                   <Globe size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
                   <select name="como_conocio" className={sel} defaultValue="">
-                    <option value="" disabled>Seleccioná una opción</option>
-                    {COMO_CONOCIO.map((c) => <option key={c} value={c}>{c}</option>)}
+                    <option value="" disabled>{t('contact.selectPlaceholder')}</option>
+                    {Array.isArray(howFoundOpts) && howFoundOpts.map((c) => <option key={c} value={c}>{c}</option>)}
                   </select>
                 </div>
               </div>
@@ -240,7 +229,7 @@ export const Contact = () => {
               <button type="submit" disabled={sending}
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-black uppercase tracking-widest text-xs transition-all bg-cyan-500 hover:bg-cyan-400 text-white shadow-[0_4px_20px_rgba(6,182,212,0.3)] active:scale-[0.99] disabled:opacity-50 disabled:cursor-wait">
                 {sending ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
-                {sending ? 'Enviando...' : 'Enviar consulta'}
+                {sending ? t('contact.sending') : t('contact.submit')}
               </button>
 
               <AnimatePresence>
@@ -253,15 +242,15 @@ export const Contact = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-white font-black text-sm leading-none mb-0.5">¡Consulta recibida!</p>
-                      <p className="text-white/75 text-xs">Nuestro equipo te responde en menos de 2 hs.</p>
+                      <p className="text-white font-black text-sm leading-none mb-0.5">{t('contact.successTitle')}</p>
+                      <p className="text-white/75 text-xs">{t('contact.successMsg')}</p>
                     </div>
                   </motion.div>
                 )}
                 {status === 'err' && (
                   <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                     className="text-center text-red-500 text-xs font-medium py-2.5 bg-red-50 border border-red-200 rounded-xl">
-                    ✕ Error al enviar. Por favor, reintentá más tarde.
+                    {t('contact.errorMsg')}
                   </motion.p>
                 )}
               </AnimatePresence>
