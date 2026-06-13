@@ -38,7 +38,16 @@
       "Bash(awk '{print $1\" artículos/recursos\"}')",
       "Bash(grep -oE \">[A-ZÁÉÍÓÚ][a-záéíóúñ][^<>{}]{30,}<\" src/pages/BeneficiosFiscalesPage.jsx)",
       "Bash(node scripts/merge-beneficios-i18n.mjs)",
-      "Bash(grep -E \"\\\\.\\(jsx|js|json|html|toml|mjs\\)$\")"
+      "Bash(grep -E \"\\\\.\\(jsx|js|json|html|toml|mjs\\)$\")",
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate,bit_rate,duration -of default=noprint_wrappers=1 public/bannervideo1-compressed.mp4)",
+      "Bash(ffprobe -v trace public/bannervideo1-compressed.mp4)",
+      "Bash(ffmpeg -y -i public/bannervideo1-compressed.mp4 -vf \"fps=24,scale=1280:-2\" -c:v libx264 -crf 30 -preset slow -profile:v main -pix_fmt yuv420p -an -movflags +faststart public/bannervideo1-hero.mp4 -loglevel error)",
+      "Bash(ffmpeg -y -i public/bannervideo1-compressed.mp4 -vf \"fps=24,scale=1280:-2\" -c:v libvpx-vp9 -crf 36 -b:v 0 -an -row-mt 1 public/bannervideo1-hero.webm -loglevel error)",
+      "Bash(rm -f public/bannervideo1-hero.webm)",
+      "Bash(ffmpeg -y -i public/bannervideo1-compressed.mp4 -vf \"fps=24,scale=1280:-2\" -c:v libx264 -crf 32 -preset slow -profile:v main -pix_fmt yuv420p -an -movflags +faststart public/bannervideo1-hero-v2.mp4 -loglevel error)",
+      "Bash(ffprobe -v trace public/bannervideo1-hero.mp4)",
+      "Bash(ffmpeg -y -i public/bannervideo1-hero.mp4 -frames:v 1 -q:v 3 public/bannervideo1-poster.webp -loglevel error)",
+      "Bash(awk '{print \"poster webp:\", int\\($5/1024\\)\"KB\"}')"
     ]
   }
 }

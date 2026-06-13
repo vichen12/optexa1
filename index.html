@@ -27,7 +27,10 @@
     <meta name="google-site-verification" content="kd-KonV-yocHh087iNCH3SM941M7_8QFhVfGgOm1LIQ" />
 
     <link rel="preload" as="image" href="/stoka_logo_sin_fondo.webp">
-    <link rel="preload" as="image" href="/bannervideo1-poster.jpg">
+    <!-- Poster del hero: se muestra al instante mientras carga el video -->
+    <link rel="preload" as="image" href="/bannervideo1-poster.jpg" fetchpriority="high">
+    <!-- Video del hero (LCP): se descarga con prioridad alta -->
+    <link rel="preload" as="video" href="/bannervideo1-hero.mp4" type="video/mp4" fetchpriority="high">
     <link rel="preload" as="image" href="/image.png">
 
     <!--- Google Analytics — diferido para no competir con el render inicial --->

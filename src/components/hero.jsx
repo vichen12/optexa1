@@ -29,10 +29,11 @@ export const Hero = () => {
       {/* VIDEO BG */}
       <div className="absolute inset-0 overflow-hidden">
         <video
-          src="/bannervideo1-compressed.mp4"
+          src="/bannervideo1-hero.mp4"
           poster="/bannervideo1-poster.jpg"
           autoPlay muted loop playsInline
-          width="1920" height="1080"
+          preload="auto"
+          width="1280" height="720"
           className="w-full h-full object-cover"
         >
           <track kind="captions" src="" label="Sin audio" default />
