@@ -42,6 +42,7 @@ const CasosDeExitoPage = lazy(() => import('./pages/CasosDeExitoPage').then(m =>
 const ROIPage = lazy(() => import('./pages/recursos/ROIPage').then(m => ({ default: m.ROIPage })));
 const AutoStoreAlternativaPage = lazy(() => import('./pages/catalogo/AutoStoreAlternativaPage').then(m => ({ default: m.AutoStoreAlternativaPage })));
 const ChilePage = lazy(() => import('./pages/ChilePage').then(m => ({ default: m.ChilePage })));
+const ZonaPage = lazy(() => import('./pages/ZonaPage').then(m => ({ default: m.ZonaPage })));
 
 export const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
@@ -235,6 +236,28 @@ export function HomePage() {
             <p className="text-gray-400 text-xs mt-4">{t('home.chileNote')}</p>
           </div>
 
+          {/* Cobertura geográfica — automatización por zona */}
+          <div className="pt-2 border-t border-gray-100">
+            <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{t('home.zonasTag')}</p>
+            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-3 max-w-3xl">{t('home.zonasH2')}</h2>
+            <p className="text-gray-500 text-sm leading-relaxed max-w-2xl mb-6">{t('home.zonasPara')}</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { to: '/automatizacion-almacenes-buenos-aires', key: 'buenosAires' },
+                { to: '/automatizacion-almacenes-cordoba',      key: 'cordoba' },
+                { to: '/automatizacion-almacenes-rosario',      key: 'rosario' },
+                { to: '/automatizacion-almacenes-mendoza',      key: 'mendoza' },
+              ].map((z) => (
+                <LangLink key={z.to} to={z.to}
+                  className="group flex flex-col rounded-2xl border border-gray-200 hover:border-cyan-300 bg-gray-50/50 hover:bg-cyan-50/40 p-5 transition-all">
+                  <span className="font-black text-gray-900 text-sm uppercase tracking-tight mb-1 group-hover:text-cyan-600 transition-colors">{t(`home.zonas.${z.key}.title`)}</span>
+                  <span className="text-gray-500 text-xs leading-relaxed flex-1">{t(`home.zonas.${z.key}.desc`)}</span>
+                  <span className="inline-flex items-center gap-1 text-xs font-bold text-cyan-600 mt-3 group-hover:gap-2 transition-all">{t('home.zonasCta')} ›</span>
+                </LangLink>
+              ))}
+            </div>
+          </div>
+
           <div className="flex flex-wrap gap-3 pt-2 border-t border-gray-100">
             {[
               { to: '/casos-de-exito',              label: t('home.links.cases') },
@@ -325,6 +348,10 @@ function App() {
     <Route key="articulo" path="recursos/:slug" element={<ArticuloPage />} />,
     <Route key="autostore" path="catalogo/asrs/autostore-alternativa" element={<AutoStoreAlternativaPage />} />,
     <Route key="chile" path="chile" element={<ChilePage />} />,
+    <Route key="zona-bsas" path="automatizacion-almacenes-buenos-aires" element={<ZonaPage zona="buenos-aires" />} />,
+    <Route key="zona-mendoza" path="automatizacion-almacenes-mendoza" element={<ZonaPage zona="mendoza" />} />,
+    <Route key="zona-cordoba" path="automatizacion-almacenes-cordoba" element={<ZonaPage zona="cordoba" />} />,
+    <Route key="zona-rosario" path="automatizacion-almacenes-rosario" element={<ZonaPage zona="rosario" />} />,
   ];
 
   return (

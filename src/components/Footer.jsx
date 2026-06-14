@@ -53,6 +53,13 @@ const EMPRESA_PATHS = [
   { key: 'chile',       href: '/chile' },
 ];
 
+const ZONA_PATHS = [
+  { key: 'buenosAires', href: '/automatizacion-almacenes-buenos-aires' },
+  { key: 'cordoba',     href: '/automatizacion-almacenes-cordoba' },
+  { key: 'rosario',     href: '/automatizacion-almacenes-rosario' },
+  { key: 'mendoza',     href: '/automatizacion-almacenes-mendoza' },
+];
+
 const MAPS_EMBED = "https://maps.google.com/maps?q=Carril+Rodr%C3%ADguez+Pe%C3%B1a+35+Maip%C3%BA+Mendoza+Argentina&output=embed";
 const MAPS_LINK  = "https://maps.google.com/maps?q=Carril+Rodr%C3%ADguez+Pe%C3%B1a+35+Maip%C3%BA+Mendoza+Argentina";
 
@@ -134,6 +141,23 @@ export const Footer = () => {
             <FooterLinkGroup title={t('footer.industries')} items={INDUSTRIAS_PATHS} ns="industriesLinks" />
             <FooterLinkGroup title={t('footer.resources')}  items={RECURSOS_PATHS}   ns="resourcesLinks" />
             <FooterLinkGroup title={t('footer.company')}    items={EMPRESA_PATHS}    ns="companyLinks" />
+          </div>
+        </div>
+
+        {/* COBERTURA / ZONAS */}
+        <div className="mb-8 pt-6 border-t border-gray-200">
+          <p className="text-gray-900 text-[10px] font-black uppercase tracking-[0.3em] mb-4">{t('footer.coverage')}</p>
+          <div className="flex flex-wrap gap-2">
+            {ZONA_PATHS.map((z) => (
+              <LangLink
+                key={z.href}
+                to={z.href}
+                className="inline-flex items-center gap-1.5 text-gray-500 hover:text-cyan-600 bg-white border border-gray-200 hover:border-cyan-300 transition-colors text-xs rounded-full px-3 py-1.5"
+              >
+                <MapPin size={11} className="text-cyan-500 shrink-0" />
+                {t(`footer.zonaLinks.${z.key}`)}
+              </LangLink>
+            ))}
           </div>
         </div>
 

@@ -237,6 +237,30 @@ export const SolucionesPage = () => {
         </div>
       </section>
 
+      {/* Cobertura geográfica — automatización por zona */}
+      <section className="bg-gray-50 py-16 px-6 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{t('home.zonasTag')}</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-3 max-w-3xl">{t('home.zonasH2')}</h2>
+          <p className="text-gray-500 text-sm leading-relaxed max-w-2xl mb-6">{t('home.zonasPara')}</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { to: '/automatizacion-almacenes-buenos-aires', key: 'buenosAires' },
+              { to: '/automatizacion-almacenes-cordoba',      key: 'cordoba' },
+              { to: '/automatizacion-almacenes-rosario',      key: 'rosario' },
+              { to: '/automatizacion-almacenes-mendoza',      key: 'mendoza' },
+            ].map((z) => (
+              <LangLink key={z.to} to={z.to}
+                className="group flex flex-col rounded-2xl border border-gray-200 hover:border-cyan-300 bg-white hover:bg-cyan-50/40 p-5 transition-all">
+                <span className="font-black text-gray-900 text-sm uppercase tracking-tight mb-1 group-hover:text-cyan-600 transition-colors">{t(`home.zonas.${z.key}.title`)}</span>
+                <span className="text-gray-500 text-xs leading-relaxed flex-1">{t(`home.zonas.${z.key}.desc`)}</span>
+                <span className="inline-flex items-center gap-1 text-xs font-bold text-cyan-600 mt-3 group-hover:gap-2 transition-all">{t('home.zonasCta')} <ArrowRight size={12} /></span>
+              </LangLink>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-white py-20 px-6 border-t border-gray-100">
         <div className="max-w-3xl mx-auto">

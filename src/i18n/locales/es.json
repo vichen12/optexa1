@@ -206,6 +206,13 @@
       "contact": "Contacto",
       "delie": "DELIE en Argentina",
       "chile": "Automatización Chile"
+    },
+    "coverage": "Cobertura",
+    "zonaLinks": {
+      "buenosAires": "Buenos Aires",
+      "cordoba": "Córdoba",
+      "rosario": "Rosario",
+      "mendoza": "Mendoza"
     }
   },
   "wpp": {
@@ -388,7 +395,29 @@
       }
     ],
     "faqTag": "Preguntas frecuentes",
-    "faqH2": "Preguntas frecuentes sobre automatización de almacenes"
+    "faqH2": "Preguntas frecuentes sobre automatización de almacenes",
+    "zonasTag": "Cobertura geográfica",
+    "zonasH2": "Automatización de almacenes en toda Argentina",
+    "zonasPara": "STOKA implementa sistemas ASRS, robots y software de gestión en los principales polos industriales y logísticos del país, con soporte técnico local y repuestos en Argentina.",
+    "zonasCta": "Ver zona",
+    "zonas": {
+      "buenosAires": {
+        "title": "Buenos Aires",
+        "desc": "Parques logísticos del GBA, e-commerce y distribución metropolitana."
+      },
+      "cordoba": {
+        "title": "Córdoba",
+        "desc": "Industria automotriz, metalmecánica y agroindustria del centro del país."
+      },
+      "rosario": {
+        "title": "Rosario",
+        "desc": "Puerto y agroexportación del cordón industrial sobre el Paraná."
+      },
+      "mendoza": {
+        "title": "Mendoza",
+        "desc": "Vitivinícola y agroindustria de Cuyo. Base local de STOKA en Maipú."
+      }
+    }
   },
   "pages": {
     "breadcrumb": {
@@ -3931,6 +3960,404 @@
     "alternativeDelie": {
       "metaTitle": "DELIE en Argentina | Sistemas ASRS DELIE | STOKA",
       "metaDesc": "Representantes oficiales de DELIE en Argentina. Sistemas ASRS, transelevadores, robots y software WMS/WCS con ingeniería y soporte 100% local de STOKA."
+    },
+    "zonas": {
+      "buenos-aires": {
+        "metaTitle": "Automatización de Almacenes en Buenos Aires | ASRS y Robots — STOKA",
+        "metaDesc": "Sistemas ASRS, transelevadores y robots para almacenes en Buenos Aires y el GBA. Parques logísticos, e-commerce y distribución. Integración WMS/WCS con soporte local.",
+        "heroTag": "Buenos Aires · AMBA",
+        "heroH1_a": "Automatización de almacenes",
+        "heroH1_b": "en Buenos Aires",
+        "heroSub": "El mayor polo logístico de Argentina concentra el grueso del consumo y la distribución nacional. STOKA implementa sistemas ASRS, robots lanzadera y software de gestión en parques logísticos del Gran Buenos Aires, con soporte técnico local.",
+        "breadcrumbLabel": "Automatización de almacenes en Buenos Aires",
+        "areaName": "Buenos Aires, Argentina",
+        "stats": [
+          {
+            "v": "40%+",
+            "l": "del consumo nacional se distribuye desde el AMBA"
+          },
+          {
+            "v": "24/7",
+            "l": "operación continua en centros de distribución"
+          },
+          {
+            "v": "±2 mm",
+            "l": "precisión de posicionamiento de los robots"
+          },
+          {
+            "v": "100%",
+            "l": "soporte técnico local en Argentina"
+          }
+        ],
+        "introH2": "El corazón logístico del país",
+        "introP1": "El Área Metropolitana de Buenos Aires (AMBA) es el principal nodo de consumo, distribución y comercio exterior de la Argentina. Los grandes parques logísticos —en zonas como Tigre, Garín, Pilar, Tortuguitas, Esteban Echeverría y el corredor de la Ruta Panamericana y la Autopista Buenos Aires–La Plata— alojan centros de distribución de retail, e-commerce, alimentos, farmacéutica y autopartes. La presión sobre la productividad por metro cuadrado es máxima: el suelo industrial cerca de la Capital es caro y escaso, lo que vuelve a la automatización densa (AS/RS, shuttle, VLM) la respuesta natural para crecer sin mudarse ni ampliar el footprint.",
+        "introP2": "En este contexto, los operadores logísticos y las cadenas de retail del GBA enfrentan picos de demanda muy marcados (hot sales, fechas comerciales, cyber events) que exigen throughput elevado y trazabilidad total. STOKA acompaña proyectos de automatización en Buenos Aires de punta a punta: diagnóstico con simulación de flujos, dimensionamiento del sistema, integración con el ERP/WMS existente, instalación y soporte posventa con repuestos disponibles localmente.",
+        "whyTag": "Por qué STOKA en Buenos Aires",
+        "whyH2": "Automatización pensada para el AMBA",
+        "whyItems": [
+          "Máxima densidad de almacenaje para aprovechar el suelo industrial escaso y caro del GBA.",
+          "Sistemas dimensionados para los picos de demanda del e-commerce y el retail metropolitano.",
+          "Integración con los WMS y ERP que ya operan en los centros de distribución del corredor Panamericana.",
+          "Soporte técnico local y repuestos en Argentina: tiempos de respuesta cortos sin depender de importación urgente.",
+          "Operación 24/7 con seguridad redundante para centros de distribución de alto volumen.",
+          "Compatibilidad con frío para alimentos y farmacéutica del cinturón logístico bonaerense."
+        ],
+        "sectorsTag": "Sectores en Buenos Aires",
+        "sectorsH2": "Industrias que automatizan en el AMBA",
+        "sectors": [
+          {
+            "title": "E-commerce y distribución",
+            "desc": "Picking de alta rotación y throughput para los grandes centros de fulfillment del GBA. Goods-to-person con robots tote.",
+            "url": "/industrias/ecommerce"
+          },
+          {
+            "title": "Retail y consumo masivo",
+            "desc": "Centros de distribución de cadenas que abastecen el consumo metropolitano con sistemas AS/RS de alta densidad.",
+            "url": "/industrias/retail"
+          },
+          {
+            "title": "Alimentos y bebidas",
+            "desc": "Cadena de frío automatizada y trazabilidad para plantas y depósitos del cinturón industrial bonaerense.",
+            "url": "/industrias/alimentos"
+          }
+        ],
+        "systemsTag": "Sistemas recomendados",
+        "systemsH2": "Tecnología para almacenes en Buenos Aires",
+        "systems": [
+          {
+            "name": "Transelevadores AS/RS",
+            "desc": "Máxima densidad vertical para aprovechar el suelo caro del AMBA. De 7 a 40 metros de altura."
+          },
+          {
+            "name": "Robots lanzadera (shuttle)",
+            "desc": "Throughput elevado para los picos de e-commerce y retail metropolitano. Plug-and-play."
+          },
+          {
+            "name": "Software WMS + WCS",
+            "desc": "Trazabilidad total e integración con el ERP existente en los centros de distribución del GBA."
+          },
+          {
+            "name": "Transportadores y sorters",
+            "desc": "Clasificación automática para el alto volumen de despacho de los parques logísticos."
+          }
+        ],
+        "faqH2": "Preguntas sobre automatización en Buenos Aires",
+        "faq": [
+          {
+            "q": "¿STOKA instala sistemas de automatización en el Gran Buenos Aires?",
+            "a": "Sí. STOKA implementa sistemas ASRS, robots y software de gestión en parques logísticos y centros de distribución de todo el AMBA: Tigre, Garín, Pilar, Tortuguitas, Esteban Echeverría y el corredor Panamericana, entre otros. El soporte técnico y los repuestos están disponibles localmente en Argentina."
+          },
+          {
+            "q": "¿Conviene automatizar un depósito en Buenos Aires por el costo del suelo?",
+            "a": "Es justamente donde más conviene. El suelo industrial cercano a la Capital es caro y escaso, por lo que los sistemas de alta densidad (AS/RS, shuttle, VLM) permiten multiplicar la capacidad de almacenaje sobre la misma superficie, evitando mudanzas o ampliaciones costosas."
+          },
+          {
+            "q": "¿Los sistemas soportan los picos de demanda del e-commerce metropolitano?",
+            "a": "Sí. En la fase de diagnóstico, STOKA realiza una simulación de flujos que dimensiona el sistema para los picos reales de demanda (hot sales, cyber events), garantizando el throughput necesario sin sobredimensionar la inversión."
+          }
+        ],
+        "heroBtnPrimary": "Hablar con un especialista",
+        "heroBtnSecondary": "Ver catálogo",
+        "breadcrumbHome": "Inicio",
+        "sectorViewSolution": "Ver solución"
+      },
+      "mendoza": {
+        "metaTitle": "Automatización de Almacenes en Mendoza | ASRS y Robots — STOKA",
+        "metaDesc": "Sistemas ASRS y robots para bodegas vitivinícolas, agroindustria y logística en Mendoza. STOKA tiene base en Maipú, Mendoza: soporte técnico cercano y proyectos llave en mano.",
+        "heroTag": "Mendoza · Cuyo",
+        "heroH1_a": "Automatización de almacenes",
+        "heroH1_b": "en Mendoza",
+        "heroSub": "Capital del vino de Argentina y polo agroindustrial de Cuyo. STOKA tiene su base en Maipú, Mendoza: automatizamos bodegas, depósitos de agroindustria y centros de distribución con soporte técnico cercano y conocimiento del territorio.",
+        "breadcrumbLabel": "Automatización de almacenes en Mendoza",
+        "areaName": "Mendoza, Argentina",
+        "stats": [
+          {
+            "v": "70%+",
+            "l": "del vino argentino se produce en Mendoza"
+          },
+          {
+            "v": "Local",
+            "l": "base STOKA en Maipú, Mendoza"
+          },
+          {
+            "v": "-25°C",
+            "l": "sistemas aptos para frío y conservación"
+          },
+          {
+            "v": "24/7",
+            "l": "operación en plena vendimia y picos de cosecha"
+          }
+        ],
+        "introH2": "El polo vitivinícola y agroindustrial de Cuyo",
+        "introP1": "Mendoza es el principal centro vitivinícola de Argentina y uno de los polos agroindustriales más relevantes del país. Maipú, Luján de Cuyo, San Martín, Rivadavia y el Valle de Uco concentran cientos de bodegas, plantas de fraccionamiento, depósitos de insumos enológicos y logística de exportación de vino. A esto se suman la conserva, la fruta deshidratada, el aceite de oliva y los productos regionales. La estacionalidad es fuerte: durante la vendimia el flujo de mercadería se multiplica y los depósitos deben absorber picos sin perder trazabilidad ni control de inventario.",
+        "introP2": "STOKA tiene su base operativa en Maipú, Mendoza, lo que se traduce en una ventaja concreta para los proyectos locales: cercanía para el diagnóstico, la instalación y el soporte posventa, y conocimiento directo del territorio y de las necesidades de la industria del vino y la agroindustria cuyana. Implementamos sistemas AS/RS, robots lanzadera, almacenamiento vertical (VLM) y software de gestión adaptados a la operación estacional y a los requerimientos de conservación de la región.",
+        "whyTag": "Por qué STOKA en Mendoza",
+        "whyH2": "Base local en el corazón de Cuyo",
+        "whyItems": [
+          "Base operativa de STOKA en Maipú, Mendoza: soporte técnico cercano y tiempos de respuesta cortos.",
+          "Conocimiento directo de la industria vitivinícola y la agroindustria de Cuyo.",
+          "Sistemas dimensionados para la estacionalidad: absorben los picos de vendimia y cosecha.",
+          "Compatibilidad con frío y conservación para bodegas, alimentos y productos regionales.",
+          "Trazabilidad total para exportación de vino y cumplimiento normativo.",
+          "Almacenamiento vertical (VLM) ideal para insumos enológicos y repuestos con alta variedad de SKU."
+        ],
+        "sectorsTag": "Sectores en Mendoza",
+        "sectorsH2": "Industrias que automatizan en Cuyo",
+        "sectors": [
+          {
+            "title": "Bodegas y vitivinícola",
+            "desc": "Trazabilidad de exportación, gestión de insumos enológicos y depósitos de producto terminado con AS/RS y VLM.",
+            "url": "/industrias/alimentos"
+          },
+          {
+            "title": "Agroindustria",
+            "desc": "Conserva, fruta deshidratada, aceite de oliva y productos regionales con automatización adaptada a la estacionalidad.",
+            "url": "/industrias/alimentos"
+          },
+          {
+            "title": "Distribución regional",
+            "desc": "Centros de distribución de Cuyo que abastecen el oeste argentino con sistemas de alta densidad.",
+            "url": "/industrias/retail"
+          }
+        ],
+        "systemsTag": "Sistemas recomendados",
+        "systemsH2": "Tecnología para almacenes en Mendoza",
+        "systems": [
+          {
+            "name": "Módulos VLM y carruseles verticales",
+            "desc": "Ideales para insumos enológicos y repuestos con alta variedad de SKU. Hasta 90% menos espacio de suelo."
+          },
+          {
+            "name": "Transelevadores AS/RS",
+            "desc": "Alta densidad para depósitos de producto terminado y exportación de vino."
+          },
+          {
+            "name": "Robots lanzadera para frío",
+            "desc": "Operación hasta -25°C para conservación de alimentos y productos regionales."
+          },
+          {
+            "name": "Software WMS + WCS",
+            "desc": "Trazabilidad total para exportación y gestión del inventario estacional."
+          }
+        ],
+        "faqH2": "Preguntas sobre automatización en Mendoza",
+        "faq": [
+          {
+            "q": "¿STOKA tiene base en Mendoza?",
+            "a": "Sí. STOKA tiene su base operativa en Maipú, Mendoza. Esto significa cercanía para el diagnóstico, la instalación y el soporte posventa, además de conocimiento directo de la industria vitivinícola y la agroindustria de Cuyo."
+          },
+          {
+            "q": "¿Qué sistema conviene para una bodega o depósito de insumos enológicos?",
+            "a": "Para insumos enológicos y repuestos con alta variedad de SKU, los módulos VLM y carruseles verticales suelen ser la mejor opción por su acceso aleatorio y ahorro de espacio. Para producto terminado y exportación, los sistemas AS/RS de alta densidad maximizan la capacidad. STOKA define la combinación óptima en el diagnóstico."
+          },
+          {
+            "q": "¿Los sistemas soportan los picos de la vendimia?",
+            "a": "Sí. STOKA dimensiona los sistemas para la estacionalidad de la región: durante la vendimia y la cosecha el flujo de mercadería se multiplica, y la automatización absorbe esos picos manteniendo la trazabilidad y el control de inventario."
+          }
+        ],
+        "heroBtnPrimary": "Hablar con un especialista",
+        "heroBtnSecondary": "Ver catálogo",
+        "breadcrumbHome": "Inicio",
+        "sectorViewSolution": "Ver solución"
+      },
+      "cordoba": {
+        "metaTitle": "Automatización de Almacenes en Córdoba | ASRS y Robots — STOKA",
+        "metaDesc": "Sistemas ASRS, transelevadores y robots para almacenes en Córdoba. Industria automotriz, metalmecánica, agroindustria y autopartes. Integración WMS/WCS con soporte local.",
+        "heroTag": "Córdoba · Centro",
+        "heroH1_a": "Automatización de almacenes",
+        "heroH1_b": "en Córdoba",
+        "heroSub": "Segundo polo industrial de Argentina, con fuerte presencia automotriz, metalmecánica y agroindustrial. STOKA implementa sistemas ASRS, robots y software de gestión para la industria y la logística cordobesa.",
+        "breadcrumbLabel": "Automatización de almacenes en Córdoba",
+        "areaName": "Córdoba, Argentina",
+        "stats": [
+          {
+            "v": "2°",
+            "l": "polo industrial de Argentina"
+          },
+          {
+            "v": "24/7",
+            "l": "operación continua en plantas industriales"
+          },
+          {
+            "v": "±2 mm",
+            "l": "precisión de posicionamiento de los robots"
+          },
+          {
+            "v": "100%",
+            "l": "soporte técnico local en Argentina"
+          }
+        ],
+        "introH2": "El segundo polo industrial del país",
+        "introP1": "Córdoba es el segundo centro industrial de Argentina y un nodo clave del corazón productivo del país. Su perfil combina una fuerte industria automotriz y de autopartes —con terminales y proveedores radicados en la provincia—, metalmecánica, maquinaria agrícola y una agroindustria potente apoyada en la producción de granos del centro argentino. Los parques industriales de la ciudad de Córdoba, Villa María, Río Cuarto y San Francisco concentran plantas que necesitan gestionar inventarios de componentes, materias primas y producto terminado con alta exigencia de trazabilidad y just-in-time.",
+        "introP2": "La industria automotriz y metalmecánica cordobesa opera con cadenas de suministro complejas, miles de SKU de componentes y requerimientos de entrega secuenciada a línea de producción. STOKA implementa en Córdoba sistemas de automatización pensados para ese entorno: AS/RS para producto terminado y materias primas, almacenamiento vertical (VLM) para la enorme variedad de componentes y repuestos, y software WMS/WCS que se integra con los sistemas de planificación de planta. Todo con soporte técnico local y repuestos disponibles en Argentina.",
+        "whyTag": "Por qué STOKA en Córdoba",
+        "whyH2": "Automatización para la industria cordobesa",
+        "whyItems": [
+          "Sistemas pensados para la industria automotriz y metalmecánica: trazabilidad y entrega secuenciada a línea.",
+          "Almacenamiento vertical (VLM) ideal para la enorme variedad de componentes y repuestos.",
+          "Integración con los sistemas de planificación de planta (ERP/MES) ya instalados.",
+          "Soporte técnico local y repuestos en Argentina: respuesta rápida para operaciones just-in-time.",
+          "AS/RS de alta densidad para materias primas y producto terminado de la agroindustria.",
+          "Operación 24/7 con seguridad redundante para plantas industriales de turno continuo."
+        ],
+        "sectorsTag": "Sectores en Córdoba",
+        "sectorsH2": "Industrias que automatizan en Córdoba",
+        "sectors": [
+          {
+            "title": "Automotriz y autopartes",
+            "desc": "Entrega secuenciada a línea, gestión de miles de SKU de componentes y trazabilidad para terminales y proveedores.",
+            "url": "/industrias/automotriz"
+          },
+          {
+            "title": "Metalmecánica",
+            "desc": "Gestión de materias primas, semielaborados y producto terminado con AS/RS y almacenamiento vertical.",
+            "url": "/industrias/manufactura"
+          },
+          {
+            "title": "Agroindustria",
+            "desc": "Depósitos de insumos y producto terminado de la potente agroindustria del centro argentino.",
+            "url": "/industrias/alimentos"
+          }
+        ],
+        "systemsTag": "Sistemas recomendados",
+        "systemsH2": "Tecnología para almacenes en Córdoba",
+        "systems": [
+          {
+            "name": "Módulos VLM y carruseles verticales",
+            "desc": "Ideales para la enorme variedad de componentes y repuestos automotrices. Acceso aleatorio y ahorro de espacio."
+          },
+          {
+            "name": "Transelevadores AS/RS",
+            "desc": "Alta densidad para materias primas y producto terminado de la industria y la agroindustria."
+          },
+          {
+            "name": "Software WMS + WCS",
+            "desc": "Integración con ERP/MES de planta y trazabilidad para operaciones just-in-time."
+          },
+          {
+            "name": "Transportadores y AGV/AMR",
+            "desc": "Transporte interno automatizado entre estaciones de la línea de producción."
+          }
+        ],
+        "faqH2": "Preguntas sobre automatización en Córdoba",
+        "faq": [
+          {
+            "q": "¿STOKA instala sistemas de automatización en Córdoba?",
+            "a": "Sí. STOKA implementa sistemas ASRS, robots y software de gestión en plantas y centros de distribución de Córdoba: la ciudad capital, Villa María, Río Cuarto, San Francisco y los principales parques industriales. El soporte técnico y los repuestos están disponibles localmente en Argentina."
+          },
+          {
+            "q": "¿Qué sistema conviene para una planta automotriz o de autopartes?",
+            "a": "Para la enorme variedad de componentes y repuestos, los módulos VLM y carruseles verticales son ideales por su acceso aleatorio. Para materias primas y producto terminado, los sistemas AS/RS de alta densidad maximizan la capacidad. El software WMS/WCS habilita la entrega secuenciada a línea. STOKA define la combinación óptima en el diagnóstico."
+          },
+          {
+            "q": "¿La automatización se integra con los sistemas de planta existentes?",
+            "a": "Sí. El software de DELIE se integra con los ERP y MES de planta mediante APIs documentadas y conectores nativos (SAP, Oracle, Microsoft Dynamics). STOKA gestiona la integración técnica como parte del proyecto llave en mano."
+          }
+        ],
+        "heroBtnPrimary": "Hablar con un especialista",
+        "heroBtnSecondary": "Ver catálogo",
+        "breadcrumbHome": "Inicio",
+        "sectorViewSolution": "Ver solución"
+      },
+      "rosario": {
+        "metaTitle": "Automatización de Almacenes en Rosario, Santa Fe | ASRS — STOKA",
+        "metaDesc": "Sistemas ASRS y robots para almacenes en Rosario y el Gran Rosario, Santa Fe. Puerto, agroexportación y logística del cordón industrial. Integración WMS/WCS con soporte local.",
+        "heroTag": "Rosario · Santa Fe",
+        "heroH1_a": "Automatización de almacenes",
+        "heroH1_b": "en Rosario",
+        "heroSub": "El principal nodo agroexportador de Argentina sobre el río Paraná. STOKA implementa sistemas ASRS, robots y software de gestión para la logística portuaria, la agroindustria y la distribución del Gran Rosario, Santa Fe.",
+        "breadcrumbLabel": "Automatización de almacenes en Rosario, Santa Fe",
+        "areaName": "Rosario, Santa Fe, Argentina",
+        "stats": [
+          {
+            "v": "#1",
+            "l": "nodo agroexportador de Argentina"
+          },
+          {
+            "v": "Paraná",
+            "l": "cordón industrial y portuario sobre el río"
+          },
+          {
+            "v": "24/7",
+            "l": "operación continua en plena campaña"
+          },
+          {
+            "v": "100%",
+            "l": "soporte técnico local en Argentina"
+          }
+        ],
+        "introH2": "El polo agroexportador del Paraná",
+        "introP1": "Rosario y el cordón industrial que la rodea —desde San Lorenzo y Puerto General San Martín hasta Villa Gobernador Gálvez— conforman el principal complejo agroexportador de Argentina. Sobre el río Paraná se concentran terminales portuarias, plantas de molienda de oleaginosas, acopios de granos y una densa actividad de agroindustria y logística. Es el punto de salida de buena parte de la exportación de granos, harinas y aceites del país, lo que genera flujos logísticos enormes y muy estacionales, ligados a la campaña agrícola.",
+        "introP2": "A la actividad agroexportadora se suman la industria metalmecánica, alimenticia y un creciente sector de distribución que abastece el centro del país. En este entorno, los depósitos y centros logísticos del Gran Rosario necesitan absorber picos de campaña, gestionar insumos y producto terminado con trazabilidad, y operar en condiciones exigentes. STOKA implementa en Rosario sistemas AS/RS de alta densidad, robots lanzadera, almacenamiento vertical y software WMS/WCS, con soporte técnico local y repuestos disponibles en Argentina.",
+        "whyTag": "Por qué STOKA en Rosario",
+        "whyH2": "Automatización para el Gran Rosario",
+        "whyItems": [
+          "Sistemas dimensionados para los picos de la campaña agrícola y la logística portuaria.",
+          "AS/RS de alta densidad para insumos, producto terminado y materiales de exportación.",
+          "Trazabilidad total para agroexportación y cumplimiento normativo.",
+          "Integración con los WMS y ERP de plantas agroindustriales y centros logísticos del cordón.",
+          "Soporte técnico local y repuestos en Argentina: respuesta rápida en plena campaña.",
+          "Compatibilidad con frío para alimentos y productos perecederos de la región."
+        ],
+        "sectorsTag": "Sectores en Rosario",
+        "sectorsH2": "Industrias que automatizan en el Gran Rosario",
+        "sectors": [
+          {
+            "title": "Agroindustria y agroexportación",
+            "desc": "Gestión de insumos, producto terminado y trazabilidad para el principal complejo exportador del Paraná.",
+            "url": "/industrias/alimentos"
+          },
+          {
+            "title": "Logística y distribución",
+            "desc": "Centros de distribución que abastecen el centro del país, dimensionados para picos de campaña.",
+            "url": "/industrias/retail"
+          },
+          {
+            "title": "Metalmecánica e industria",
+            "desc": "Gestión de materias primas y producto terminado del cordón industrial con AS/RS y VLM.",
+            "url": "/industrias/manufactura"
+          }
+        ],
+        "systemsTag": "Sistemas recomendados",
+        "systemsH2": "Tecnología para almacenes en Rosario",
+        "systems": [
+          {
+            "name": "Transelevadores AS/RS",
+            "desc": "Alta densidad para insumos, producto terminado y materiales de exportación del cordón portuario."
+          },
+          {
+            "name": "Robots lanzadera (shuttle)",
+            "desc": "Throughput elevado para absorber los picos de la campaña agrícola."
+          },
+          {
+            "name": "Software WMS + WCS",
+            "desc": "Trazabilidad total para agroexportación e integración con los ERP de planta."
+          },
+          {
+            "name": "Transportadores y paletizadores",
+            "desc": "Manejo automatizado de alto volumen para la logística portuaria y agroindustrial."
+          }
+        ],
+        "faqH2": "Preguntas sobre automatización en Rosario",
+        "faq": [
+          {
+            "q": "¿STOKA instala sistemas de automatización en Rosario y Santa Fe?",
+            "a": "Sí. STOKA implementa sistemas ASRS, robots y software de gestión en plantas, depósitos y centros logísticos del Gran Rosario: Rosario, San Lorenzo, Puerto General San Martín, Villa Gobernador Gálvez y el cordón industrial sobre el Paraná. El soporte técnico y los repuestos están disponibles localmente en Argentina."
+          },
+          {
+            "q": "¿Los sistemas soportan los picos de la campaña agrícola?",
+            "a": "Sí. STOKA dimensiona los sistemas para la fuerte estacionalidad de la región agroexportadora: durante la campaña el flujo de mercadería se multiplica, y la automatización absorbe esos picos manteniendo la trazabilidad y el control de inventario."
+          },
+          {
+            "q": "¿Qué sistema conviene para una planta agroindustrial o un centro logístico?",
+            "a": "Para insumos, producto terminado y materiales de exportación, los sistemas AS/RS de alta densidad maximizan la capacidad. Los robots lanzadera aportan throughput para los picos de campaña, y el software WMS/WCS garantiza la trazabilidad. STOKA define la combinación óptima en el diagnóstico con simulación de flujos."
+          }
+        ],
+        "heroBtnPrimary": "Hablar con un especialista",
+        "heroBtnSecondary": "Ver catálogo",
+        "breadcrumbHome": "Inicio",
+        "sectorViewSolution": "Ver solución"
+      }
     }
   }
 }

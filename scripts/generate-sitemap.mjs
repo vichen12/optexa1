@@ -19,6 +19,10 @@ const STATIC_ROUTES = [
   '/recursos', '/recursos/glosario', '/recursos/comparador-sistemas',
   '/recursos/roi-automatizacion', '/catalogo/asrs/autostore-alternativa',
   '/chile',
+  '/automatizacion-almacenes-buenos-aires',
+  '/automatizacion-almacenes-mendoza',
+  '/automatizacion-almacenes-cordoba',
+  '/automatizacion-almacenes-rosario',
 ];
 
 const { PRODUCTOS } = await import('../src/data/productosData.js');
@@ -40,6 +44,8 @@ function meta(route) {
   if (route === '/') return { freq: 'weekly', prio: '1.0' };
   if (route === '/soluciones' || route === '/catalogo' || route === '/industrias')
     return { freq: 'weekly', prio: '0.9' };
+  if (route.startsWith('/automatizacion-almacenes-'))
+    return { freq: 'monthly', prio: '0.8' }; // zona geográfica
   if (route.startsWith('/catalogo/') && route.split('/').length === 4)
     return { freq: 'monthly', prio: '0.7' }; // producto
   if (route.startsWith('/recursos/')) return { freq: 'monthly', prio: '0.6' };

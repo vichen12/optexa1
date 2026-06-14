@@ -31,6 +31,7 @@ import { CasosDeExitoPage } from './pages/CasosDeExitoPage';
 import { ROIPage } from './pages/recursos/ROIPage';
 import { AutoStoreAlternativaPage } from './pages/catalogo/AutoStoreAlternativaPage';
 import { ChilePage } from './pages/ChilePage';
+import { ZonaPage } from './pages/ZonaPage';
 
 function App() {
   const lang = i18next.language;
@@ -62,6 +63,10 @@ function App() {
     <Route key="articulo" path="recursos/:slug" element={<ArticuloPage />} />,
     <Route key="autostore" path="catalogo/asrs/autostore-alternativa" element={<AutoStoreAlternativaPage />} />,
     <Route key="chile" path="chile" element={<ChilePage />} />,
+    <Route key="zona-bsas" path="automatizacion-almacenes-buenos-aires" element={<ZonaPage zona="buenos-aires" />} />,
+    <Route key="zona-mendoza" path="automatizacion-almacenes-mendoza" element={<ZonaPage zona="mendoza" />} />,
+    <Route key="zona-cordoba" path="automatizacion-almacenes-cordoba" element={<ZonaPage zona="cordoba" />} />,
+    <Route key="zona-rosario" path="automatizacion-almacenes-rosario" element={<ZonaPage zona="rosario" />} />,
   ];
 
   return (

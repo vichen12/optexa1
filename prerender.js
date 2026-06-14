@@ -29,6 +29,10 @@ const STATIC_ROUTES = [
   '/recursos/roi-automatizacion',
   '/catalogo/asrs/autostore-alternativa',
   '/chile',
+  '/automatizacion-almacenes-buenos-aires',
+  '/automatizacion-almacenes-mendoza',
+  '/automatizacion-almacenes-cordoba',
+  '/automatizacion-almacenes-rosario',
 ];
 
 // Rutas dinámicas derivadas de los datos — así nunca se desincronizan

@@ -206,6 +206,13 @@
       "contact": "Contact",
       "delie": "DELIE in Argentina",
       "chile": "Chile Automation"
+    },
+    "coverage": "Coverage",
+    "zonaLinks": {
+      "buenosAires": "Buenos Aires",
+      "cordoba": "Córdoba",
+      "rosario": "Rosario",
+      "mendoza": "Mendoza"
     }
   },
   "wpp": {
@@ -388,7 +395,29 @@
       }
     ],
     "faqTag": "Frequently asked questions",
-    "faqH2": "Frequently asked questions about warehouse automation"
+    "faqH2": "Frequently asked questions about warehouse automation",
+    "zonasTag": "Geographic coverage",
+    "zonasH2": "Warehouse automation across Argentina",
+    "zonasPara": "STOKA implements ASRS systems, robots and management software in the country's main industrial and logistics hubs, with local technical support and parts in Argentina.",
+    "zonasCta": "View zone",
+    "zonas": {
+      "buenosAires": {
+        "title": "Buenos Aires",
+        "desc": "Greater Buenos Aires logistics parks, e-commerce and metropolitan distribution."
+      },
+      "cordoba": {
+        "title": "Córdoba",
+        "desc": "Automotive, metalworking and agro-industry of central Argentina."
+      },
+      "rosario": {
+        "title": "Rosario",
+        "desc": "Port and agro-export of the industrial belt on the Paraná."
+      },
+      "mendoza": {
+        "title": "Mendoza",
+        "desc": "Wine and agro-industry of Cuyo. STOKA local base in Maipú."
+      }
+    }
   },
   "pages": {
     "breadcrumb": {
@@ -3931,6 +3960,404 @@
     "alternativeDelie": {
       "metaTitle": "DELIE in Argentina | DELIE ASRS Systems | STOKA",
       "metaDesc": "Official DELIE representatives in Argentina. ASRS systems, stacker cranes, robots and WMS/WCS software with 100% local engineering and support by STOKA."
+    },
+    "zonas": {
+      "buenos-aires": {
+        "metaTitle": "Warehouse Automation in Buenos Aires | ASRS & Robots — STOKA",
+        "metaDesc": "ASRS systems, stacker cranes and robots for warehouses in Buenos Aires and Greater Buenos Aires. Logistics parks, e-commerce and distribution. WMS/WCS integration with local support.",
+        "heroTag": "Buenos Aires · AMBA",
+        "heroH1_a": "Warehouse automation",
+        "heroH1_b": "in Buenos Aires",
+        "heroSub": "Argentina's largest logistics hub concentrates the bulk of national consumption and distribution. STOKA implements ASRS systems, shuttle robots and management software in Greater Buenos Aires logistics parks, with local technical support.",
+        "breadcrumbLabel": "Warehouse automation in Buenos Aires",
+        "areaName": "Buenos Aires, Argentina",
+        "stats": [
+          {
+            "v": "40%+",
+            "l": "of national consumption is distributed from AMBA"
+          },
+          {
+            "v": "24/7",
+            "l": "continuous operation in distribution centers"
+          },
+          {
+            "v": "±2 mm",
+            "l": "robot positioning accuracy"
+          },
+          {
+            "v": "100%",
+            "l": "local technical support in Argentina"
+          }
+        ],
+        "introH2": "The country's logistics heart",
+        "introP1": "The Buenos Aires Metropolitan Area (AMBA) is Argentina's main node of consumption, distribution and foreign trade. Large logistics parks —in areas such as Tigre, Garín, Pilar, Tortuguitas, Esteban Echeverría and the Panamericana / Buenos Aires–La Plata corridor— host distribution centers for retail, e-commerce, food, pharma and auto parts. Pressure on productivity per square meter is maximal: industrial land near the capital is expensive and scarce, making dense automation (AS/RS, shuttle, VLM) the natural answer to grow without relocating or expanding the footprint.",
+        "introP2": "In this context, logistics operators and retail chains in Greater Buenos Aires face very sharp demand peaks (hot sales, commercial dates, cyber events) that require high throughput and full traceability. STOKA supports automation projects in Buenos Aires end to end: diagnosis with flow simulation, system sizing, integration with the existing ERP/WMS, installation and after-sales support with parts available locally.",
+        "whyTag": "Why STOKA in Buenos Aires",
+        "whyH2": "Automation designed for AMBA",
+        "whyItems": [
+          "Maximum storage density to make the most of the scarce, expensive industrial land in Greater Buenos Aires.",
+          "Systems sized for the demand peaks of metropolitan e-commerce and retail.",
+          "Integration with the WMS and ERP already running in the distribution centers of the Panamericana corridor.",
+          "Local technical support and parts in Argentina: short response times without relying on urgent imports.",
+          "24/7 operation with redundant safety for high-volume distribution centers.",
+          "Cold-chain compatibility for food and pharma in the Buenos Aires logistics belt."
+        ],
+        "sectorsTag": "Sectors in Buenos Aires",
+        "sectorsH2": "Industries automating in AMBA",
+        "sectors": [
+          {
+            "title": "E-commerce & distribution",
+            "desc": "High-rotation picking and throughput for the large fulfillment centers of Greater Buenos Aires. Goods-to-person with tote robots.",
+            "url": "/industrias/ecommerce"
+          },
+          {
+            "title": "Retail & mass consumption",
+            "desc": "Distribution centers of chains supplying metropolitan consumption with high-density AS/RS systems.",
+            "url": "/industrias/retail"
+          },
+          {
+            "title": "Food & beverage",
+            "desc": "Automated cold chain and traceability for plants and depots in the Buenos Aires industrial belt.",
+            "url": "/industrias/alimentos"
+          }
+        ],
+        "systemsTag": "Recommended systems",
+        "systemsH2": "Technology for warehouses in Buenos Aires",
+        "systems": [
+          {
+            "name": "AS/RS stacker cranes",
+            "desc": "Maximum vertical density to leverage AMBA's expensive land. From 7 to 40 meters high."
+          },
+          {
+            "name": "Shuttle robots",
+            "desc": "High throughput for metropolitan e-commerce and retail peaks. Plug-and-play."
+          },
+          {
+            "name": "WMS + WCS software",
+            "desc": "Full traceability and integration with the existing ERP in Greater Buenos Aires distribution centers."
+          },
+          {
+            "name": "Conveyors & sorters",
+            "desc": "Automatic sortation for the high dispatch volume of logistics parks."
+          }
+        ],
+        "faqH2": "Questions about automation in Buenos Aires",
+        "faq": [
+          {
+            "q": "Does STOKA install automation systems in Greater Buenos Aires?",
+            "a": "Yes. STOKA implements ASRS systems, robots and management software in logistics parks and distribution centers across AMBA: Tigre, Garín, Pilar, Tortuguitas, Esteban Echeverría and the Panamericana corridor, among others. Technical support and parts are available locally in Argentina."
+          },
+          {
+            "q": "Is it worth automating a depot in Buenos Aires given land costs?",
+            "a": "That is exactly where it pays off most. Industrial land near the capital is expensive and scarce, so high-density systems (AS/RS, shuttle, VLM) multiply storage capacity on the same surface, avoiding costly relocations or expansions."
+          },
+          {
+            "q": "Do the systems handle metropolitan e-commerce demand peaks?",
+            "a": "Yes. In the diagnosis phase, STOKA runs a flow simulation that sizes the system for real demand peaks (hot sales, cyber events), guaranteeing the required throughput without oversizing the investment."
+          }
+        ],
+        "heroBtnPrimary": "Talk to a specialist",
+        "heroBtnSecondary": "View catalog",
+        "breadcrumbHome": "Home",
+        "sectorViewSolution": "View solution"
+      },
+      "mendoza": {
+        "metaTitle": "Warehouse Automation in Mendoza | ASRS & Robots — STOKA",
+        "metaDesc": "ASRS systems and robots for wineries, agro-industry and logistics in Mendoza. STOKA is based in Maipú, Mendoza: nearby technical support and turnkey projects.",
+        "heroTag": "Mendoza · Cuyo",
+        "heroH1_a": "Warehouse automation",
+        "heroH1_b": "in Mendoza",
+        "heroSub": "Argentina's wine capital and the agro-industrial hub of Cuyo. STOKA is based in Maipú, Mendoza: we automate wineries, agro-industry depots and distribution centers with nearby technical support and territory knowledge.",
+        "breadcrumbLabel": "Warehouse automation in Mendoza",
+        "areaName": "Mendoza, Argentina",
+        "stats": [
+          {
+            "v": "70%+",
+            "l": "of Argentine wine is produced in Mendoza"
+          },
+          {
+            "v": "Local",
+            "l": "STOKA base in Maipú, Mendoza"
+          },
+          {
+            "v": "-25°C",
+            "l": "systems suitable for cold and preservation"
+          },
+          {
+            "v": "24/7",
+            "l": "operation during harvest and peak season"
+          }
+        ],
+        "introH2": "The wine and agro-industrial hub of Cuyo",
+        "introP1": "Mendoza is Argentina's main wine center and one of the country's most relevant agro-industrial hubs. Maipú, Luján de Cuyo, San Martín, Rivadavia and the Uco Valley concentrate hundreds of wineries, bottling plants, oenological-input depots and wine export logistics. Add to this canning, dried fruit, olive oil and regional products. Seasonality is strong: during the harvest, goods flow multiplies and depots must absorb peaks without losing traceability or inventory control.",
+        "introP2": "STOKA has its operating base in Maipú, Mendoza, which translates into a concrete advantage for local projects: proximity for diagnosis, installation and after-sales support, and direct knowledge of the territory and the needs of the Cuyo wine and agro-industry. We implement AS/RS systems, shuttle robots, vertical storage (VLM) and management software adapted to seasonal operation and the region's preservation requirements.",
+        "whyTag": "Why STOKA in Mendoza",
+        "whyH2": "Local base in the heart of Cuyo",
+        "whyItems": [
+          "STOKA operating base in Maipú, Mendoza: nearby technical support and short response times.",
+          "Direct knowledge of the Cuyo wine industry and agro-industry.",
+          "Systems sized for seasonality: they absorb harvest and crop peaks.",
+          "Cold and preservation compatibility for wineries, food and regional products.",
+          "Full traceability for wine export and regulatory compliance.",
+          "Vertical storage (VLM) ideal for oenological inputs and parts with high SKU variety."
+        ],
+        "sectorsTag": "Sectors in Mendoza",
+        "sectorsH2": "Industries automating in Cuyo",
+        "sectors": [
+          {
+            "title": "Wineries & wine",
+            "desc": "Export traceability, oenological-input management and finished-product depots with AS/RS and VLM.",
+            "url": "/industrias/alimentos"
+          },
+          {
+            "title": "Agro-industry",
+            "desc": "Canning, dried fruit, olive oil and regional products with automation adapted to seasonality.",
+            "url": "/industrias/alimentos"
+          },
+          {
+            "title": "Regional distribution",
+            "desc": "Cuyo distribution centers supplying western Argentina with high-density systems.",
+            "url": "/industrias/retail"
+          }
+        ],
+        "systemsTag": "Recommended systems",
+        "systemsH2": "Technology for warehouses in Mendoza",
+        "systems": [
+          {
+            "name": "VLM modules & vertical carousels",
+            "desc": "Ideal for oenological inputs and parts with high SKU variety. Up to 90% less floor space."
+          },
+          {
+            "name": "AS/RS stacker cranes",
+            "desc": "High density for finished-product depots and wine export."
+          },
+          {
+            "name": "Cold-storage shuttle robots",
+            "desc": "Operation down to -25°C for food and regional product preservation."
+          },
+          {
+            "name": "WMS + WCS software",
+            "desc": "Full traceability for export and seasonal inventory management."
+          }
+        ],
+        "faqH2": "Questions about automation in Mendoza",
+        "faq": [
+          {
+            "q": "Is STOKA based in Mendoza?",
+            "a": "Yes. STOKA has its operating base in Maipú, Mendoza. This means proximity for diagnosis, installation and after-sales support, plus direct knowledge of the Cuyo wine industry and agro-industry."
+          },
+          {
+            "q": "Which system suits a winery or oenological-input depot?",
+            "a": "For oenological inputs and parts with high SKU variety, VLM modules and vertical carousels are usually the best option thanks to random access and space savings. For finished product and export, high-density AS/RS systems maximize capacity. STOKA defines the optimal mix during the diagnosis."
+          },
+          {
+            "q": "Do the systems handle harvest peaks?",
+            "a": "Yes. STOKA sizes the systems for the region's seasonality: during the harvest and crop, goods flow multiplies, and automation absorbs those peaks while keeping traceability and inventory control."
+          }
+        ],
+        "heroBtnPrimary": "Talk to a specialist",
+        "heroBtnSecondary": "View catalog",
+        "breadcrumbHome": "Home",
+        "sectorViewSolution": "View solution"
+      },
+      "cordoba": {
+        "metaTitle": "Warehouse Automation in Córdoba | ASRS & Robots — STOKA",
+        "metaDesc": "ASRS systems, stacker cranes and robots for warehouses in Córdoba. Automotive, metalworking, agro-industry and auto parts. WMS/WCS integration with local support.",
+        "heroTag": "Córdoba · Center",
+        "heroH1_a": "Warehouse automation",
+        "heroH1_b": "in Córdoba",
+        "heroSub": "Argentina's second industrial hub, with a strong automotive, metalworking and agro-industrial presence. STOKA implements ASRS systems, robots and management software for Córdoba's industry and logistics.",
+        "breadcrumbLabel": "Warehouse automation in Córdoba",
+        "areaName": "Córdoba, Argentina",
+        "stats": [
+          {
+            "v": "2nd",
+            "l": "industrial hub of Argentina"
+          },
+          {
+            "v": "24/7",
+            "l": "continuous operation in industrial plants"
+          },
+          {
+            "v": "±2 mm",
+            "l": "robot positioning accuracy"
+          },
+          {
+            "v": "100%",
+            "l": "local technical support in Argentina"
+          }
+        ],
+        "introH2": "The country's second industrial hub",
+        "introP1": "Córdoba is Argentina's second industrial center and a key node of the country's productive heartland. Its profile combines a strong automotive and auto-parts industry —with terminals and suppliers located in the province—, metalworking, agricultural machinery and a powerful agro-industry supported by the grain production of central Argentina. The industrial parks of the city of Córdoba, Villa María, Río Cuarto and San Francisco concentrate plants that need to manage inventories of components, raw materials and finished products with high demands for traceability and just-in-time.",
+        "introP2": "Córdoba's automotive and metalworking industry operates with complex supply chains, thousands of component SKUs and sequenced delivery requirements to the production line. STOKA implements automation systems in Córdoba designed for that environment: AS/RS for finished products and raw materials, vertical storage (VLM) for the huge variety of components and parts, and WMS/WCS software that integrates with plant planning systems. All with local technical support and parts available in Argentina.",
+        "whyTag": "Why STOKA in Córdoba",
+        "whyH2": "Automation for Córdoba's industry",
+        "whyItems": [
+          "Systems designed for automotive and metalworking: traceability and sequenced line delivery.",
+          "Vertical storage (VLM) ideal for the huge variety of components and parts.",
+          "Integration with the plant planning systems (ERP/MES) already installed.",
+          "Local technical support and parts in Argentina: fast response for just-in-time operations.",
+          "High-density AS/RS for raw materials and finished agro-industry products.",
+          "24/7 operation with redundant safety for continuous-shift industrial plants."
+        ],
+        "sectorsTag": "Sectors in Córdoba",
+        "sectorsH2": "Industries automating in Córdoba",
+        "sectors": [
+          {
+            "title": "Automotive & auto parts",
+            "desc": "Sequenced line delivery, management of thousands of component SKUs and traceability for terminals and suppliers.",
+            "url": "/industrias/automotriz"
+          },
+          {
+            "title": "Metalworking",
+            "desc": "Management of raw materials, semi-finished and finished products with AS/RS and vertical storage.",
+            "url": "/industrias/manufactura"
+          },
+          {
+            "title": "Agro-industry",
+            "desc": "Input and finished-product depots of central Argentina's powerful agro-industry.",
+            "url": "/industrias/alimentos"
+          }
+        ],
+        "systemsTag": "Recommended systems",
+        "systemsH2": "Technology for warehouses in Córdoba",
+        "systems": [
+          {
+            "name": "VLM modules & vertical carousels",
+            "desc": "Ideal for the huge variety of automotive components and parts. Random access and space savings."
+          },
+          {
+            "name": "AS/RS stacker cranes",
+            "desc": "High density for raw materials and finished products of industry and agro-industry."
+          },
+          {
+            "name": "WMS + WCS software",
+            "desc": "Integration with plant ERP/MES and traceability for just-in-time operations."
+          },
+          {
+            "name": "Conveyors & AGV/AMR",
+            "desc": "Automated internal transport between production-line stations."
+          }
+        ],
+        "faqH2": "Questions about automation in Córdoba",
+        "faq": [
+          {
+            "q": "Does STOKA install automation systems in Córdoba?",
+            "a": "Yes. STOKA implements ASRS systems, robots and management software in plants and distribution centers in Córdoba: the capital city, Villa María, Río Cuarto, San Francisco and the main industrial parks. Technical support and parts are available locally in Argentina."
+          },
+          {
+            "q": "Which system suits an automotive or auto-parts plant?",
+            "a": "For the huge variety of components and parts, VLM modules and vertical carousels are ideal thanks to random access. For raw materials and finished products, high-density AS/RS systems maximize capacity. WMS/WCS software enables sequenced line delivery. STOKA defines the optimal mix during the diagnosis."
+          },
+          {
+            "q": "Does automation integrate with existing plant systems?",
+            "a": "Yes. DELIE software integrates with plant ERP and MES through documented APIs and native connectors (SAP, Oracle, Microsoft Dynamics). STOKA manages the technical integration as part of the turnkey project."
+          }
+        ],
+        "heroBtnPrimary": "Talk to a specialist",
+        "heroBtnSecondary": "View catalog",
+        "breadcrumbHome": "Home",
+        "sectorViewSolution": "View solution"
+      },
+      "rosario": {
+        "metaTitle": "Warehouse Automation in Rosario, Santa Fe | ASRS — STOKA",
+        "metaDesc": "ASRS systems and robots for warehouses in Rosario and Greater Rosario, Santa Fe. Port, agro-export and industrial-belt logistics. WMS/WCS integration with local support.",
+        "heroTag": "Rosario · Santa Fe",
+        "heroH1_a": "Warehouse automation",
+        "heroH1_b": "in Rosario",
+        "heroSub": "Argentina's main agro-export hub on the Paraná River. STOKA implements ASRS systems, robots and management software for port logistics, agro-industry and distribution in Greater Rosario, Santa Fe.",
+        "breadcrumbLabel": "Warehouse automation in Rosario, Santa Fe",
+        "areaName": "Rosario, Santa Fe, Argentina",
+        "stats": [
+          {
+            "v": "#1",
+            "l": "agro-export hub of Argentina"
+          },
+          {
+            "v": "Paraná",
+            "l": "industrial and port belt on the river"
+          },
+          {
+            "v": "24/7",
+            "l": "continuous operation during the campaign"
+          },
+          {
+            "v": "100%",
+            "l": "local technical support in Argentina"
+          }
+        ],
+        "introH2": "The Paraná agro-export hub",
+        "introP1": "Rosario and the industrial belt around it —from San Lorenzo and Puerto General San Martín to Villa Gobernador Gálvez— form Argentina's main agro-export complex. On the Paraná River, port terminals, oilseed crushing plants, grain storage and dense agro-industry and logistics activity are concentrated. It is the exit point for much of the country's grain, flour and oil exports, generating enormous and highly seasonal logistics flows tied to the agricultural campaign.",
+        "introP2": "In addition to agro-export activity, there is metalworking, food industry and a growing distribution sector supplying the center of the country. In this environment, the depots and logistics centers of Greater Rosario need to absorb campaign peaks, manage inputs and finished products with traceability, and operate under demanding conditions. STOKA implements high-density AS/RS systems, shuttle robots, vertical storage and WMS/WCS software in Rosario, with local technical support and parts available in Argentina.",
+        "whyTag": "Why STOKA in Rosario",
+        "whyH2": "Automation for Greater Rosario",
+        "whyItems": [
+          "Systems sized for the peaks of the agricultural campaign and port logistics.",
+          "High-density AS/RS for inputs, finished products and export materials.",
+          "Full traceability for agro-export and regulatory compliance.",
+          "Integration with the WMS and ERP of agro-industrial plants and belt logistics centers.",
+          "Local technical support and parts in Argentina: fast response during the campaign.",
+          "Cold-chain compatibility for food and perishable products of the region."
+        ],
+        "sectorsTag": "Sectors in Rosario",
+        "sectorsH2": "Industries automating in Greater Rosario",
+        "sectors": [
+          {
+            "title": "Agro-industry & agro-export",
+            "desc": "Input and finished-product management and traceability for the main export complex of the Paraná.",
+            "url": "/industrias/alimentos"
+          },
+          {
+            "title": "Logistics & distribution",
+            "desc": "Distribution centers supplying the center of the country, sized for campaign peaks.",
+            "url": "/industrias/retail"
+          },
+          {
+            "title": "Metalworking & industry",
+            "desc": "Management of raw materials and finished products of the industrial belt with AS/RS and VLM.",
+            "url": "/industrias/manufactura"
+          }
+        ],
+        "systemsTag": "Recommended systems",
+        "systemsH2": "Technology for warehouses in Rosario",
+        "systems": [
+          {
+            "name": "AS/RS stacker cranes",
+            "desc": "High density for inputs, finished products and export materials of the port belt."
+          },
+          {
+            "name": "Shuttle robots",
+            "desc": "High throughput to absorb the peaks of the agricultural campaign."
+          },
+          {
+            "name": "WMS + WCS software",
+            "desc": "Full traceability for agro-export and integration with plant ERPs."
+          },
+          {
+            "name": "Conveyors & palletizers",
+            "desc": "Automated high-volume handling for port and agro-industrial logistics."
+          }
+        ],
+        "faqH2": "Questions about automation in Rosario",
+        "faq": [
+          {
+            "q": "Does STOKA install automation systems in Rosario and Santa Fe?",
+            "a": "Yes. STOKA implements ASRS systems, robots and management software in plants, depots and logistics centers of Greater Rosario: Rosario, San Lorenzo, Puerto General San Martín, Villa Gobernador Gálvez and the industrial belt on the Paraná. Technical support and parts are available locally in Argentina."
+          },
+          {
+            "q": "Do the systems handle agricultural campaign peaks?",
+            "a": "Yes. STOKA sizes the systems for the strong seasonality of the agro-export region: during the campaign, goods flow multiplies, and automation absorbs those peaks while keeping traceability and inventory control."
+          },
+          {
+            "q": "Which system suits an agro-industrial plant or a logistics center?",
+            "a": "For inputs, finished products and export materials, high-density AS/RS systems maximize capacity. Shuttle robots add throughput for campaign peaks, and WMS/WCS software guarantees traceability. STOKA defines the optimal mix during the diagnosis with flow simulation."
+          }
+        ],
+        "heroBtnPrimary": "Talk to a specialist",
+        "heroBtnSecondary": "View catalog",
+        "breadcrumbHome": "Home",
+        "sectorViewSolution": "View solution"
+      }
     }
   }
 }
