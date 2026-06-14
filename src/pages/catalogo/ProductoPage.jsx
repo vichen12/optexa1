@@ -9,7 +9,7 @@ import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
-import { PRODUCTOS } from '../../data/productosData';
+import { PRODUCTOS, getProducto } from '../../data/productosData';
 import { SeoHead } from '../../lib/SeoHead';
 
 const INDUSTRY_ICONS = {
@@ -33,12 +33,15 @@ const INDUSTRY_SLUGS = {
 };
 
 export const ProductoPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const p = (k) => t(`pages.producto.${k}`, { returnObjects: true });
   const { categoria, producto } = useParams();
   const langNavigate = useLangNavigate();
   const key = `${categoria}/${producto}`;
-  const data = PRODUCTOS[key];
+  const data = getProducto(key, i18n.language);
+  // Industrias en español (ficha base) para resolver icono/slug por índice,
+  // independientemente del idioma en que se muestre el texto.
+  const industriasBase = PRODUCTOS[key]?.industrias || [];
   const [lightboxIdx, setLightboxIdx] = useState(null);
 
   useEffect(() => { window.scrollTo(0, 0); }, [key]);
@@ -93,6 +96,7 @@ export const ProductoPage = () => {
     ],
     "serviceType": "Automatización de almacenes industriales",
     "url": canonicalUrl,
+    "inLanguage": i18n.language,
   };
 
   // URL absoluta de la imagen para Product/OG (heroImg viene como ruta relativa)
@@ -109,6 +113,7 @@ export const ProductoPage = () => {
     "brand": { "@type": "Brand", "name": "DELIE" },
     "category": data.categoriaLabel,
     "url": canonicalUrl,
+    "inLanguage": i18n.language,
     "manufacturer": { "@type": "Organization", "name": "DELIE" },
     // Sin precio público: ofertamos consulta/cotización con priceSpecification.
     // Evita el warning de "missing price" declarando que el precio es a consultar.
@@ -132,6 +137,7 @@ export const ProductoPage = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "inLanguage": i18n.language,
     "mainEntity": data.faq.map(item => ({
       "@type": "Question",
       "name": item.q,
@@ -229,9 +235,11 @@ export const ProductoPage = () => {
             <div className="bg-white border border-gray-200 rounded-2xl p-5">
               <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('industrias')}</p>
               <div className="flex flex-wrap gap-2">
-                {data.industrias.map((ind) => {
-                  const Icon = INDUSTRY_ICONS[ind] || Factory;
-                  const slug = INDUSTRY_SLUGS[ind];
+                {data.industrias.map((ind, idx) => {
+                  // icono/slug por el nombre ES base (índice estable en los 3 idiomas)
+                  const indEs = industriasBase[idx] || ind;
+                  const Icon = INDUSTRY_ICONS[indEs] || Factory;
+                  const slug = INDUSTRY_SLUGS[indEs];
                   const chip = (
                     <div className="flex items-center gap-1.5 text-xs font-bold text-gray-600 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full hover:border-cyan-300 hover:text-cyan-600 transition-all">
                       <Icon size={11} className="text-cyan-500 shrink-0" />
@@ -239,9 +247,9 @@ export const ProductoPage = () => {
                     </div>
                   );
                   return slug ? (
-                    <LangLink key={ind} to={`/industrias/${slug}`}>{chip}</LangLink>
+                    <LangLink key={idx} to={`/industrias/${slug}`}>{chip}</LangLink>
                   ) : (
-                    <div key={ind}>{chip}</div>
+                    <div key={idx}>{chip}</div>
                   );
                 })}
               </div>

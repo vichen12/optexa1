@@ -1,3 +1,5 @@
+import { PRODUCTOS_I18N } from './productosI18n.js';
+
 export const PRODUCTOS = {
   'asrs/unit-load': {
     categoria: 'asrs',
@@ -2189,4 +2191,44 @@ export const PRODUCTOS = {
       { nombre: 'WCS — Sistema de control', url: '/catalogo/software/wcs' },
     ],
   },
+};
+
+/* Combina la ficha ES base con la variante traducida (en/zh), preservando
+   los campos comunes (slug, urls, heroImg, specs[].valor, relacionados[].url)
+   y reemplazando solo el texto traducible por índice de array. */
+const mergeProducto = (base, tr) => {
+  if (!tr) return base;
+  const out = { ...base };
+  // campos string simples
+  for (const k of ['nombre', 'metaTitle', 'metaDesc', 'heroAlt', 'tagline', 'descripcion', 'porQueDelie', 'categoriaLabel']) {
+    if (tr[k] != null) out[k] = tr[k];
+  }
+  // comoFunciona: { titulo, texto } por índice
+  if (tr.comoFunciona && base.comoFunciona) {
+    out.comoFunciona = base.comoFunciona.map((c, i) => ({ ...c, ...(tr.comoFunciona[i] || {}) }));
+  }
+  // specs: solo param (valor queda)
+  if (tr.specs && base.specs) {
+    out.specs = base.specs.map((s, i) => ({ ...s, ...(tr.specs[i] ? { param: tr.specs[i].param ?? tr.specs[i] } : {}) }));
+  }
+  // industrias: array de strings
+  if (Array.isArray(tr.industrias)) out.industrias = tr.industrias;
+  // faq: { q, a } por índice
+  if (tr.faq && base.faq) {
+    out.faq = base.faq.map((f, i) => ({ ...f, ...(tr.faq[i] || {}) }));
+  }
+  // relacionados: solo nombre (url queda)
+  if (tr.relacionados && base.relacionados) {
+    out.relacionados = base.relacionados.map((r, i) => ({ ...r, ...(tr.relacionados[i] ? { nombre: tr.relacionados[i].nombre ?? tr.relacionados[i] } : {}) }));
+  }
+  return out;
+};
+
+/* Devuelve la ficha de producto resuelta al idioma de la página.
+   Si no hay traducción para ese slug/idioma, devuelve la versión ES. */
+export const getProducto = (key, lang = 'es') => {
+  const base = PRODUCTOS[key];
+  if (!base || lang === 'es') return base;
+  const tr = PRODUCTOS_I18N[key]?.[lang];
+  return mergeProducto(base, tr);
 };
