@@ -2223,7 +2223,633 @@
       "ctaH2_b": "Response in 24 hrs.",
       "ctaSub": "Our technical team analyzes your operation and proposes the most suitable solution with no commitment.",
       "ctaBtn": "Request consultation",
-      "viewCatalogBtn": "View full catalog"
+      "viewCatalogBtn": "View full catalog",
+      "data": {
+        "e-commerce-retail": {
+          "metaTitle": "E-commerce Fulfillment Automation | STOKA",
+          "metaDesc": "Automated fulfillment center for e-commerce in Argentina: order picking 3x faster, 99.9% accuracy. Shuttle robots, WMS and turnkey ASRS.",
+          "hero": "Automated fulfillment for the demand peak.",
+          "description": "E-commerce demands speed, accuracy and instant scalability. On Black Friday, demand can multiply 5x in hours. A manual fulfillment center cannot respond — an automated fulfillment center with ASRS can, without hiring extra staff.",
+          "highlight": "\"The difference between selling during a demand peak and losing sales is in dispatch speed.\"",
+          "benefits": [
+            {
+              "title": "Order picking 3x faster",
+              "desc": "Shuttle robots and AMR eliminate travel and cut ecommerce order picking time per order."
+            },
+            {
+              "title": "99.9% accuracy",
+              "desc": "WMS with automatic confirmation and pick-to-light eliminates human errors in each order."
+            },
+            {
+              "title": "Instant scaling",
+              "desc": "Absorb seasonal peaks without hiring extra staff. The fulfillment center scales on its own."
+            },
+            {
+              "title": "Automated returns",
+              "desc": "Returns management with automatic relocation into real-time inventory."
+            }
+          ],
+          "challenges": [
+            "Extreme demand peaks impossible to cover with staff",
+            "High error rate in ecommerce order picking with similar SKUs",
+            "Disorganized returns that generate losses",
+            "Labor cost growing at the same pace as volume",
+            "Lack of space to expand the fulfillment center catalog"
+          ],
+          "solutions": [
+            "Shuttle robots and AMR for high-speed automated fulfillment",
+            "WMS with pick-to-light and automatic confirmation",
+            "Automatic returns management and real-time inventory",
+            "Scalability without new hires",
+            "Vertical storage that multiplies capacity per m²"
+          ],
+          "stats": [
+            {
+              "label": "Picking speed"
+            },
+            {
+              "label": "Order accuracy"
+            },
+            {
+              "label": "Labor cost"
+            },
+            {
+              "label": "Storage density"
+            }
+          ],
+          "products": [
+            {
+              "name": "Shuttle Robot"
+            },
+            {
+              "name": "MiniLoad Stacker Crane"
+            },
+            {
+              "name": "Goods-to-Person Picking System"
+            },
+            {
+              "name": "WMS — Management software"
+            }
+          ],
+          "seo": "The online channel in Argentina and Chile grew more than 40% per year between 2020 and 2024. That growth is not just opportunity: it is pressure on automated fulfillment centers and distribution centers that must dispatch orders ever faster and at an ever lower cost per unit. Automated ecommerce order picking —the most labor-intensive process of e-commerce— benefits most from fulfillment automation: an ASRS system with shuttle robots and MiniLoad stacker cranes multiplies throughput without multiplying headcount.\n\nDELIE systems for e-commerce include automatic returns management —one of the channel's biggest pains—, dynamic slotting that optimizes SKU location based on real-time sales history, and a WMS interface that integrates directly with the e-commerce platforms most used in the region. For companies running a micro fulfillment center or an automated dark store, the DELIE system offers the density and speed those formats demand. The result: the fulfillment center processes the same volume with fewer staff, fewer errors and faster dispatch. During seasonal peaks like Hot Sale or Black Friday, the system scales without hiring extra staff.",
+          "faq": [
+            {
+              "q": "How long does it take to implement an ASRS system for e-commerce?",
+              "a": "An e-commerce fulfillment automation project takes between 4 and 8 months from the initial consultation to operational start-up. The engineering phase runs in parallel with equipment manufacturing, which compresses timelines. STOKA manages the turnkey project from design to staff training."
+            },
+            {
+              "q": "How does the fulfillment center handle demand peaks like Black Friday?",
+              "a": "The ASRS does not require hiring extra staff to absorb peaks. Throughput increases by activating more robots or picking stations. An automated fulfillment center can handle 5x the usual volume with no infrastructure changes, something impossible with manual operation in the same timeframe."
+            },
+            {
+              "q": "What real order picking speed can I expect?",
+              "a": "Depending on the SKU profile, DELIE systems reach between 800 and 1,200 lines per hour per station, compared with 150-200 lines in manual picking."
+            },
+            {
+              "q": "Does the DELIE WMS integrate with my ERP or e-commerce platform?",
+              "a": "Yes. The WMS has native connectors for SAP, Oracle, Microsoft Dynamics and RESTful APIs for any system. Integration with platforms like Shopify, VTEX or Magento is possible through standard middleware."
+            }
+          ]
+        },
+        "logistica-3pl": {
+          "metaTitle": "3PL Automation | Multi-client WMS | STOKA",
+          "metaDesc": "Automation for 3PL logistics operators: multi-client WMS for a multi-client warehouse, cross docking and 24/7 operation. DELIE ASRS and robots.",
+          "hero": "Multi-client operation with maximum efficiency.",
+          "description": "3PL operators need extreme flexibility: multiple clients, multiple product types and changing contracts. Logistics operator automation lets you offer more value to each client without scaling fixed costs.",
+          "highlight": "\"An automated 3PL operator can serve twice as many clients with the same infrastructure.\"",
+          "benefits": [
+            {
+              "title": "Multi-client warehouse",
+              "desc": "WMS with logical and physical segregation for multiple clients in the same multi-client warehouse, with no mixing or errors."
+            },
+            {
+              "title": "Dynamic slots",
+              "desc": "Reconfigure space allocations without physically moving the goods."
+            },
+            {
+              "title": "Per-client reports",
+              "desc": "Real-time dashboard with individual KPIs per client for greater transparency."
+            },
+            {
+              "title": "24/7 operation",
+              "desc": "Robots that do not tire or vary their productivity on the night shift."
+            }
+          ],
+          "challenges": [
+            "Managing multiple clients in the same multi-client warehouse without mixing",
+            "Short-term contracts requiring fast reconfiguration",
+            "Margin pressure from growing competition",
+            "Need for real-time per-client reports",
+            "Staff hard to retain in high season"
+          ],
+          "solutions": [
+            "Multi-client WMS with logical and physical segregation",
+            "Dynamic slots without physical movement",
+            "Per-client dashboard with real-time KPIs",
+            "Robots operating 24/7 with no productivity variation",
+            "Scalability without investing in new m²"
+          ],
+          "stats": [
+            {
+              "label": "Space reduction"
+            },
+            {
+              "label": "Storage density"
+            },
+            {
+              "label": "Continuous operation"
+            },
+            {
+              "label": "Operating cost"
+            }
+          ],
+          "products": [
+            {
+              "name": "MiniLoad Stacker Crane"
+            },
+            {
+              "name": "Pallet Shuttle — Shuttle Robot"
+            },
+            {
+              "name": "WMS — Multi-client management"
+            },
+            {
+              "name": "Conveyors and Sorters"
+            }
+          ],
+          "seo": "3PL logistics operators in Argentina and Chile face constant pressure: clients demand more services, more visibility and lower costs while margins compress. A logistics operator's real competitive differentiation in this context comes from logistics operator automation: warehouse automation 3PL —real-time inventory visibility, per-client reports and 24/7 operation— has a value proposition the rest cannot match with manual infrastructure.\n\nAutomating the multi-client warehouse also enables value-added services that were previously inaccessible: high-speed unit picking, e-commerce returns management, temperature picking for fresh or pharmaceutical products, and cross docking automation for high-rotation flows with no intermediate storage. DELIE's multi-client WMS lets one multi-client warehouse simultaneously serve clients with very different operating profiles —mass consumption, pharma, textile— with fully segregated inventories and no mixing. This flexibility turns the logistics operator into a strategic partner of the client, not just a space provider.",
+          "faq": [
+            {
+              "q": "Can I manage multiple clients in the same automated multi-client warehouse?",
+              "a": "Yes. The WMS supports multi-client logical and physical segregation in the same multi-client warehouse. Each client has its own inventory, reports and separate KPIs without physically separating the zones."
+            },
+            {
+              "q": "What happens if I lose a client or the contract changes?",
+              "a": "Slots are dynamic: you can reassign space between clients without physically moving the goods. If a client reduces volume, that space becomes available automatically."
+            },
+            {
+              "q": "How do I bill space and movements to each client?",
+              "a": "The WMS generates detailed per-client reports: occupied positions, inbound, outbound and processed orders. This data is exported in standard formats for billing."
+            },
+            {
+              "q": "How much does automation reduce the operating cost of a 3PL logistics operator?",
+              "a": "In typical 3PL operations, automation reduces labor cost by 40% to 55%. The system operates 24/7 with no productivity variation or extra cost in high season."
+            }
+          ]
+        },
+        "manufactura": {
+          "metaTitle": "Automated Plant Logistics | JIT | STOKA",
+          "metaDesc": "Automated plant logistics for manufacturing in Argentina: line feeding, automated just in time and lot traceability for zero line stoppages.",
+          "hero": "Plant logistics synchronized with your production line.",
+          "description": "In manufacturing, every minute of line stoppage carries a huge cost. Plant logistics automation guarantees just-in-time line feeding to each station with no errors or delays.",
+          "highlight": "\"Each line stoppage due to missing materials costs between $500 and $5,000 USD per hour.\"",
+          "benefits": [
+            {
+              "title": "Automated just in time",
+              "desc": "Plant warehouse synchronized with MES/ERP for on-demand line feeding to each station."
+            },
+            {
+              "title": "Digital kanban",
+              "desc": "Automatic input replenishment with no manual orders or stockout risk."
+            },
+            {
+              "title": "Lot traceability",
+              "desc": "Serial and lot number recorded in every movement for full quality audits."
+            },
+            {
+              "title": "WIP reduction",
+              "desc": "Work-in-process stock minimized with precise line feeding exactly when the line needs it."
+            }
+          ],
+          "challenges": [
+            "Line stoppages due to missing inputs or parts",
+            "Time lost searching for materials in plant logistics",
+            "Difficulty implementing kanban and automated just in time with manual stock",
+            "Incomplete production lot traceability",
+            "Immobilized stock and excessive WIP"
+          ],
+          "solutions": [
+            "Plant warehouse synchronized with MES/ERP",
+            "Automated on-demand line feeding",
+            "Digital kanban with automatic replenishment",
+            "Serial and lot number traceability in every movement",
+            "WIP and immobilized stock reduction"
+          ],
+          "stats": [
+            {
+              "label": "Search time"
+            },
+            {
+              "label": "Lot traceability"
+            },
+            {
+              "label": "Plant OEE"
+            },
+            {
+              "label": "WIP stock"
+            }
+          ],
+          "products": [
+            {
+              "name": "Unit-Load Stacker Crane"
+            },
+            {
+              "name": "MiniLoad Stacker Crane"
+            },
+            {
+              "name": "WCS — Warehouse control"
+            },
+            {
+              "name": "Industrial Conveyors"
+            }
+          ],
+          "seo": "In the manufacturing industry of Argentina and Chile, plant logistics —the plant's internal logistics— is the bottleneck that most affects productive efficiency. The automated raw-material warehouse and automated line feeding eliminate stoppages: a production line that stops for lack of inputs loses between USD 500 and USD 5,000 per hour. The production buffer synchronized with the MES, the basis of automated just in time, eliminates that risk.\n\nThe automated finished-goods warehouse solves the other end: agile and accurate dispatch of orders to the distribution channel. With plant logistics synchronized with the ERP via WCS, load preparation starts automatically without human intervention. Lot and serial number traceability is recorded in every depot movement, speeding up audits and market recalls.",
+          "faq": [
+            {
+              "q": "Can I integrate plant logistics directly with my production line?",
+              "a": "Yes. DELIE systems integrate with the plant MES (Manufacturing Execution System). When the line needs an input, the MES automatically sends the order to the depot WCS, enabling automated just in time."
+            },
+            {
+              "q": "What happens if there is a power outage during operation?",
+              "a": "DELIE systems have integrated UPS and automatic recovery protocols. In case of an outage, the system records the exact position of each robot and recovers from the interruption point with no data loss."
+            },
+            {
+              "q": "Can I implement the system in phases without stopping production?",
+              "a": "Yes. Phased implementation is the usual strategy: first the raw-material or finished-goods warehouse, without touching the production line."
+            },
+            {
+              "q": "What level of maintenance does the in-plant system require?",
+              "a": "Preventive maintenance equals 2-4 hours per month for a standard system. The WCS monitors each component and issues early alerts before a failure occurs."
+            }
+          ]
+        },
+        "alimentos-bebidas": {
+          "metaTitle": "Automated Food Logistics | FIFO | STOKA",
+          "metaDesc": "Automated food logistics in Argentina: automatic FIFO, food traceability and cold storage warehouse. GS1 and FSSC 22000 compatible. DELIE ASRS systems.",
+          "hero": "Automatic FIFO and food safety in every movement.",
+          "description": "Food logistics has non-negotiable safety requirements. Automatic FIFO, lot-level food traceability and expiry alerts are native in DELIE systems.",
+          "highlight": "\"A well-managed market recall with full traceability can be the difference between a fine and a shutdown.\"",
+          "benefits": [
+            {
+              "title": "Automatic FIFO 100%",
+              "desc": "The WMS ensures the oldest product always leaves first (automatic FIFO), without relying on the operator."
+            },
+            {
+              "title": "Lot-level food traceability",
+              "desc": "Track any unit from receipt to dispatch with date, lot and destination."
+            },
+            {
+              "title": "Expiry alerts",
+              "desc": "The system automatically prioritizes products nearing expiry to eliminate waste."
+            },
+            {
+              "title": "Audit-ready",
+              "desc": "Automatic GS1-format records for FSSC 22000 and BRC certifications."
+            }
+          ],
+          "challenges": [
+            "Maintaining automatic FIFO in manual warehouses with high rotation",
+            "Lot-level food traceability for market recalls",
+            "Temperature control in the cold storage warehouse",
+            "Certifications requiring exhaustive records",
+            "Waste from expiry of non-rotated products"
+          ],
+          "solutions": [
+            "Automatic FIFO guaranteed by the WMS at every dispatch",
+            "Complete food traceability by lot, production and expiry",
+            "Robots operating in the cold storage warehouse between -5°C and +10°C",
+            "Automatic records for audits",
+            "Expiry alerts and automatic prioritization"
+          ],
+          "stats": [
+            {
+              "label": "Guaranteed 100%"
+            },
+            {
+              "label": "Expiry waste"
+            },
+            {
+              "label": "Compatible"
+            },
+            {
+              "label": "Audit-ready"
+            }
+          ],
+          "products": [
+            {
+              "name": "Cold Room AS/RS"
+            },
+            {
+              "name": "WMS with automatic FEFO/FIFO"
+            },
+            {
+              "name": "Industrial Conveyors"
+            },
+            {
+              "name": "VLM modules for picking"
+            }
+          ],
+          "seo": "Food logistics in Argentina and Chile operates under permanent tension between storage cost and safety requirements. Large chains demand complete food traceability, guaranteed expiry dates and zero identification errors. The automated food warehouse and the automated cold storage warehouse for beverages are the only way to guarantee that consistently at industrial scale.\n\nDELIE ASRS systems for food logistics include a native FEFO (First Expired, First Out) module in the WMS, a complement to automatic FIFO: at every dispatch, the system automatically selects the product with the nearest expiry without relying on the operator's judgment. This eliminates expiry waste, reduces recall risk and guarantees compliance with the food traceability requirements of large buyers.",
+          "faq": [
+            {
+              "q": "Does the system guarantee automatic FIFO in food logistics?",
+              "a": "Yes, automatic FIFO is native. The WMS records the production and expiry date of each lot at receipt. At every dispatch, the system automatically selects the product with the oldest receipt date without relying on the operator."
+            },
+            {
+              "q": "At what temperatures do robots operate in the cold storage warehouse?",
+              "a": "DELIE stacker cranes and shuttle robots operate between -5°C and +10°C in refrigerated format and down to -25°C in frozen format in the cold storage warehouse. They feature anti-condensation hermetic sealing and special cold lubrication."
+            },
+            {
+              "q": "How does the system speed up a market recall?",
+              "a": "With complete food traceability, a recall that normally takes days is executed in minutes. The WMS locates all depots holding goods from the affected lot and automatically blocks dispatches of the compromised stock."
+            },
+            {
+              "q": "What quality certifications does the system have for food logistics?",
+              "a": "DELIE systems are compatible with GS1, FSSC 22000 and BRC. The WMS generates audit-ready records that meet the requirements of these certifications."
+            }
+          ]
+        },
+        "farmaceutica": {
+          "metaTitle": "GMP Pharma Logistics | Traceability | STOKA",
+          "metaDesc": "Automated pharmaceutical logistics: GMP warehouse, automatic FEFO, medicine traceability and ANMAT serialization for a pharma depot. DELIE Argentina.",
+          "hero": "GMP warehouse, FEFO and native regulatory traceability.",
+          "description": "Pharmaceutical logistics operates under the world's most demanding regulations. DELIE systems for the GMP warehouse are designed to comply with GMP, 21 CFR Part 11 and ANMAT regulations with no additional configuration.",
+          "highlight": "\"In pharma, compliance is not optional. The system has to guarantee it by design, not by process.\"",
+          "benefits": [
+            {
+              "title": "GMP warehouse by design",
+              "desc": "Automatic recording of every movement with user, timestamp and location for a complete, immutable audit trail."
+            },
+            {
+              "title": "Automatic FEFO",
+              "desc": "The system prioritizes by expiry date at every dispatch with no operator intervention. 100% guaranteed compliance."
+            },
+            {
+              "title": "Controlled temperature",
+              "desc": "Differentiated zones for refrigerated (2-8°C), controlled (15-25°C) and frozen (-20°C) within the same pharma depot."
+            },
+            {
+              "title": "Role-based access control",
+              "desc": "Access restricted by zone and operation type with second factor for controlled products. 21 CFR Part 11 compatible."
+            },
+            {
+              "title": "ANMAT serialization",
+              "desc": "Unit-level medicine traceability module that meets ANMAT pharmaceutical serialization requirements in Argentina."
+            },
+            {
+              "title": "IQ/OQ/PQ documentation",
+              "desc": "DELIE delivers pre-built DQ, FS and DS. STOKA supports the qualification process to meet regulatory deadlines."
+            }
+          ],
+          "challenges": [
+            "GMP compliance with immutable audit trail in every GMP warehouse movement",
+            "Strict FEFO with multiple lots and expiry dates",
+            "Temperature and humidity control with continuous records",
+            "Controlled access and medicine/operator traceability for 21 CFR",
+            "Unit serialization for ANMAT medicine traceability",
+            "Long and costly IQ/OQ/PQ qualification process"
+          ],
+          "solutions": [
+            "GMP-compliant WMS with user and timestamp audit trail",
+            "Automatic FEFO with lot-level expiry alerts",
+            "Differentiated temperature zones with continuous monitoring",
+            "Role-based access control with second factor for controlled products",
+            "Unit serialization module compatible with ANMAT",
+            "DQ/FS/DS validation documentation pre-built by DELIE"
+          ],
+          "stats": [
+            {
+              "label": "Compliant"
+            },
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "Documented"
+            },
+            {
+              "label": "Audit trail"
+            }
+          ],
+          "products": [
+            {
+              "name": "Cold Room AS/RS (GxP)"
+            },
+            {
+              "name": "MiniLoad Stacker Crane"
+            },
+            {
+              "name": "WMS with GMP module"
+            },
+            {
+              "name": "VLM modules for controlled goods"
+            }
+          ],
+          "seo": "The pharmaceutical warehouse is the most regulated environment in pharmaceutical logistics. National (ANMAT in Argentina) and international (FDA, EMA, WHO GDP) regulations require complete medicine traceability of each unit from receipt to dispatch, temperature and humidity control with continuous records, and role-based controlled access with an immutable audit trail in the GMP warehouse.\n\nDELIE's GMP-compliant WMS meets 21 CFR Part 11, EU GMP Annex 11 and ANMAT requirements. For laboratories, drug wholesalers and pharmaceutical distributors in Argentina and Chile, automating the pharma depot with STOKA includes pre-built IQ/OQ/PQ documentation that significantly reduces the time and cost of the regulatory qualification process.",
+          "faq": [
+            {
+              "q": "Does the system comply with GMP and ANMAT regulations for the GMP warehouse?",
+              "a": "Yes. The WMS includes a GMP module that records every movement with user, timestamp, origin and destination location. This audit trail complies with 21 CFR Part 11, EU GMP Annex 11 and ANMAT requirements."
+            },
+            {
+              "q": "How does role-based access control work in the pharma depot?",
+              "a": "Each operator has unique credentials with permissions by zone, operation type and product. The system records who did what and when in every movement, guaranteeing medicine traceability."
+            },
+            {
+              "q": "Can differentiated temperature zones be created in the same depot?",
+              "a": "Yes. The system allows defining logical zones with specific temperature requirements (2-8°C, 15-25°C, -20°C) within the same GMP warehouse. Temperature monitoring is continuous with automatic alerts on deviations."
+            },
+            {
+              "q": "How long does it take to validate the system for GMP in a pharma depot?",
+              "a": "IQ/OQ/PQ validation takes between 3 and 6 months post-installation. DELIE delivers validation documentation (DQ, FS, DS) with the system."
+            },
+            {
+              "q": "Does the system manage the unit serialization required by ANMAT?",
+              "a": "Yes. The WMS serialization module reads and records the barcode or 2D DataMatrix of each unit in receiving, storage and dispatch operations, ensuring medicine traceability."
+            },
+            {
+              "q": "Can the system be used in a wholesaler with GDP authorization?",
+              "a": "Yes. The DELIE WMS has been qualified in facilities with GDP authorization in Latin America."
+            },
+            {
+              "q": "How are expired or recalled medicines handled?",
+              "a": "The WMS has a specific quarantine and destruction flow: blocked products are logically segregated, with automatic dispatch blocking and notification to the regulatory officer."
+            }
+          ]
+        },
+        "mineria-oil-gas": {
+          "metaTitle": "Mining Logistics | MRO Spare Parts Warehouse | STOKA",
+          "metaDesc": "Mining and oil & gas logistics in Argentina: mining spare parts warehouse and MRO management with VLM and WMS. Critical part located in under 2 seconds.",
+          "hero": "Critical spare parts available in minutes, not hours.",
+          "description": "In mining logistics and oil & gas, every hour of equipment downtime can cost tens of thousands of dollars. Immediate availability of critical spare parts in the mining spare parts warehouse is the difference between a profitable operation and a crisis.",
+          "highlight": "\"Mining equipment downtime costs between $10,000 and $100,000 USD per hour. The automated mining spare parts warehouse prevents it.\"",
+          "benefits": [
+            {
+              "title": "Search in seconds",
+              "desc": "The WMS locates any spare part among thousands of MRO management SKUs in under 2 seconds."
+            },
+            {
+              "title": "Centralized stock",
+              "desc": "Real-time visibility of all inventory, eliminating duplicates and phantom stock in the oil supplies depot."
+            },
+            {
+              "title": "Extreme conditions",
+              "desc": "Systems certified for dust, vibration and extreme temperatures typical of the mining sector."
+            },
+            {
+              "title": "Minimal staff",
+              "desc": "Automated dispatch operating with very few staff even at remote sites."
+            }
+          ],
+          "challenges": [
+            "Thousands of spare-part SKUs hard to locate in MRO management",
+            "Equipment downtime due to parts not found in time",
+            "Duplicate stock from lack of centralized visibility",
+            "Operation in extreme weather conditions",
+            "Scarce staff at remote locations"
+          ],
+          "solutions": [
+            "WMS with spare-part search in under 2 seconds",
+            "Mining spare parts warehouse with centralized real-time stock",
+            "Elimination of duplicates and phantom stock",
+            "Systems certified for harsh environments",
+            "Automated dispatch with minimal staff"
+          ],
+          "stats": [
+            {
+              "label": "Dispatch errors"
+            },
+            {
+              "label": "Immobilized stock"
+            },
+            {
+              "label": "Availability"
+            },
+            {
+              "label": "Recovery time"
+            }
+          ],
+          "products": [
+            {
+              "name": "VLM modules — high density"
+            },
+            {
+              "name": "Automated Vertical Carousel"
+            },
+            {
+              "name": "WMS for spare-parts management"
+            },
+            {
+              "name": "Unit-Load Stacker Crane"
+            }
+          ],
+          "seo": "Mining and oil & gas logistics in Argentina (Vaca Muerta, mining in Mendoza, San Juan, Catamarca) and in Chile (mining north: regions I to IV) shares a specific logistics challenge: automated MRO warehouses and oil supplies depots at remote locations, with scarce staff and high turnover. MRO management of mining spare parts is critical: equipment downtime for lack of a part can cost USD 10,000 to USD 100,000 per hour.\n\nDELIE's VLM and vertical carousel systems for the mining spare parts warehouse solve three problems at once: they densify storage in the available space, reduce the staff needed to operate the oil supplies depot, and locate any spare part among thousands of SKUs in under 30 seconds.",
+          "faq": [
+            {
+              "q": "Does the system work in environments with dust, vibration and extreme temperatures?",
+              "a": "Yes. DELIE equipment for mining and oil & gas logistics has IP54 to IP65 protection rating, is certified for vibration per IEC and operates between -20°C and +50°C. For explosion-risk areas, a certified ATEX version is available."
+            },
+            {
+              "q": "How long does it take to locate a critical part among 50,000 SKUs in MRO management?",
+              "a": "The WMS locates any spare part in under 2 seconds. For VLMs and vertical carousels, the material reaches the operator window in under 30 seconds from the request."
+            },
+            {
+              "q": "How much immobilized stock can I reduce in my mining spare parts warehouse?",
+              "a": "With full real-time inventory visibility, clients reduce immobilized stock by 25% to 40%."
+            },
+            {
+              "q": "Can the system be installed at a remote location without nearby technical support?",
+              "a": "Yes. The WCS includes 24/7 remote monitoring. Most issues are diagnosed and resolved without an on-site visit. STOKA keeps local spare parts in Argentina."
+            }
+          ]
+        },
+        "cadena-frio": {
+          "metaTitle": "Automated Cold Storage −30°C | STOKA",
+          "metaDesc": "Refrigerated logistics and automated frozen warehouse down to −30°C. Automated cold depot with stacker cranes, shuttle robots, FIFO and energy savings.",
+          "hero": "Robots operating at -30°C with no staff exposure.",
+          "description": "The frozen warehouse is expensive to build and dangerous for staff. DELIE systems for refrigerated logistics maximize every cubic meter of the automated cold depot while eliminating operator exposure to extreme cold.",
+          "highlight": "\"Each chamber door opening loses between 5% and 15% of accumulated energy. Automating it cuts that cost by 40%.\"",
+          "benefits": [
+            {
+              "title": "Operation at -30°C",
+              "desc": "Robots and stacker cranes certified to run in the frozen warehouse with no human presence."
+            },
+            {
+              "title": "Maximum density",
+              "desc": "Vertical storage that triples the capacity per square meter of the existing automated cold depot."
+            },
+            {
+              "title": "Fewer openings",
+              "desc": "Door opening reduction up to 90%, with energy savings of up to 40%."
+            },
+            {
+              "title": "FIFO in cold",
+              "desc": "Automatic FIFO without the operator having to enter the chamber to check dates."
+            }
+          ],
+          "challenges": [
+            "High energy cost of an underused frozen warehouse",
+            "Staff exposure to temperatures from -18°C to -30°C",
+            "Waste from frequent chamber openings to check stock",
+            "FIFO impossible to control manually in refrigerated logistics",
+            "High cost of building new chambers"
+          ],
+          "solutions": [
+            "Certified robots operating at -30°C in the automated cold depot with no human presence",
+            "Vertical storage that triples the capacity of the existing frozen warehouse",
+            "Door opening reduction up to 90%",
+            "Automatic FIFO guaranteed by the WMS",
+            "Energy savings of up to 40% from less thermal exchange"
+          ],
+          "stats": [
+            {
+              "label": "Minimum temperature"
+            },
+            {
+              "label": "Exposed staff"
+            },
+            {
+              "label": "Chamber use"
+            },
+            {
+              "label": "Energy consumption"
+            }
+          ],
+          "products": [
+            {
+              "name": "Cold Room AS/RS (-30°C)"
+            },
+            {
+              "name": "Pallet Shuttle — Shuttle Robot"
+            },
+            {
+              "name": "WMS with automatic FIFO/FEFO"
+            },
+            {
+              "name": "Unit-Load Stacker Crane"
+            }
+          ],
+          "seo": "Refrigerated logistics is one of the fastest-growing sectors in logistics automation. The automated frozen warehouse and the automated cold depot are the answer to the rising cost of labor in extreme cold.\n\nDELIE's frozen ASRS —the system for a frozen warehouse at -30 degrees— operates with no operators inside the chamber. The stacker cranes and shuttle robots have a special design: anti-condensation hermetic sealing, extreme-cold lubrication and internal electronics heating, keys to high-performance refrigerated logistics.",
+          "faq": [
+            {
+              "q": "What minimum temperature do DELIE robots operate at in the frozen warehouse?",
+              "a": "DELIE stacker cranes and shuttle robots for refrigerated logistics are certified down to -30°C. They feature anti-condensation hermetic sealing, special lubricants and remote diagnosis."
+            },
+            {
+              "q": "What real energy savings can I expect in my automated cold depot?",
+              "a": "Typical energy savings are 30% to 40%. The main source is reduced door openings: a manual warehouse requires 50-100 openings per shift, while the automated system works internally."
+            },
+            {
+              "q": "How much additional space do I gain by automating an existing frozen warehouse?",
+              "a": "With automated vertical storage, you can triple the frozen warehouse capacity without building new facilities. The system operates in 900 mm aisles (vs. 3-4 meters for forklifts)."
+            },
+            {
+              "q": "How do I eliminate staff exposure to extreme cold in the depot?",
+              "a": "The automated cold depot operates autonomously inside the chamber. Operators work at ambient-temperature stations, where goods arrive through an insulated window."
+            }
+          ]
+        }
+      }
     },
     "catalogoAsrs": {
       "metaTitle": "ASRS Systems Argentina | Automated AS/RS | STOKA",

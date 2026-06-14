@@ -2223,7 +2223,633 @@
       "ctaH2_b": "Respuesta en 24 hs.",
       "ctaSub": "Nuestro equipo técnico analiza tu operación y te propone la solución más adecuada sin compromiso.",
       "ctaBtn": "Solicitar consulta",
-      "viewCatalogBtn": "Ver catálogo completo"
+      "viewCatalogBtn": "Ver catálogo completo",
+      "data": {
+        "e-commerce-retail": {
+          "metaTitle": "Automatización de Fulfillment E-commerce | STOKA",
+          "metaDesc": "Centro de fulfillment automatizado para e-commerce: preparación de pedidos 3x más rápida y 99,9% de exactitud. Robots shuttle, WMS y ASRS llave en mano.",
+          "hero": "Fulfillment automatizado para el pico de demanda.",
+          "description": "El e-commerce exige velocidad, exactitud y escalabilidad instantánea. En Black Friday, la demanda puede multiplicarse 5x en horas. Un centro de fulfillment manual no puede responder — un centro de fulfillment automatizado con ASRS sí, sin contratar personal extra.",
+          "highlight": "\"La diferencia entre vender en un pico de demanda y perder ventas está en la velocidad de despacho.\"",
+          "benefits": [
+            {
+              "title": "Preparación de pedidos 3x más rápida",
+              "desc": "Robots lanzadera y AMR eliminan los recorridos y reducen el tiempo de preparación de pedidos ecommerce por orden."
+            },
+            {
+              "title": "99,9% exactitud",
+              "desc": "WMS con confirmación automática y pick-to-light elimina errores humanos en la selección de cada pedido."
+            },
+            {
+              "title": "Escalado instantáneo",
+              "desc": "Absorbé picos estacionales sin contratar personal adicional. El centro de fulfillment escala solo."
+            },
+            {
+              "title": "Devoluciones automáticas",
+              "desc": "Gestión de devoluciones con reubicación automática en inventario en tiempo real."
+            }
+          ],
+          "challenges": [
+            "Picos de demanda extremos imposibles de cubrir con personal",
+            "Alta tasa de error en la preparación de pedidos ecommerce con SKUs similares",
+            "Devoluciones desorganizadas que generan pérdidas",
+            "Costo de mano de obra que crece igual que el volumen",
+            "Falta de espacio para ampliar el catálogo del centro de fulfillment"
+          ],
+          "solutions": [
+            "Robots lanzadera y AMR para fulfillment automatizado de alta velocidad",
+            "WMS con pick-to-light y confirmación automática",
+            "Gestión automática de devoluciones e inventario en tiempo real",
+            "Escalabilidad sin nuevas contrataciones",
+            "Almacenamiento vertical que multiplica la capacidad del m²"
+          ],
+          "stats": [
+            {
+              "label": "Velocidad de picking"
+            },
+            {
+              "label": "Exactitud de órdenes"
+            },
+            {
+              "label": "Costo de labor"
+            },
+            {
+              "label": "Densidad de almacenaje"
+            }
+          ],
+          "products": [
+            {
+              "name": "Robot Lanzadera Shuttle"
+            },
+            {
+              "name": "Transelevador MiniLoad"
+            },
+            {
+              "name": "Sistema de Picking Goods-to-Person"
+            },
+            {
+              "name": "WMS — Software de gestión"
+            }
+          ],
+          "seo": "El canal online en Argentina y Chile creció más del 40% anual entre 2020 y 2024. Ese crecimiento no es solo oportunidad: es presión sobre los centros de fulfillment automatizados y los centros de distribución que tienen que despachar pedidos cada vez más rápido y a un costo por unidad cada vez menor. La preparación de pedidos ecommerce automatizada —el proceso más intensivo en labor del e-commerce— es la que más se beneficia de la automatización fulfillment: un sistema ASRS con robots lanzadera y transelevadores MiniLoad permite multiplicar el throughput sin multiplicar el plantel.\n\nLos sistemas DELIE para e-commerce incluyen gestión de devoluciones automática —uno de los mayores dolores del canal online—, slotting dinámico que optimiza la ubicación de SKUs según el historial de ventas en tiempo real, y una interfaz WMS que se integra directamente con las plataformas de e-commerce más usadas en la región. Para empresas que operan un micro fulfillment center o una dark store automatizada, el sistema DELIE ofrece la densidad y velocidad que esos formatos exigen. El resultado: el centro de fulfillment procesa el mismo volumen con menos personal, menos errores y más velocidad de despacho. En picos estacionales como Hot Sale o Black Friday, el sistema escala sin contratar personal de refuerzo.",
+          "faq": [
+            {
+              "q": "¿Cuánto tiempo lleva implementar un sistema ASRS para e-commerce?",
+              "a": "Un proyecto de automatización de fulfillment para e-commerce toma entre 4 y 8 meses desde la consulta inicial hasta el arranque operativo. La fase de ingeniería es simultánea a la fabricación del equipo, lo que comprime los plazos. STOKA gestiona el proyecto llave en mano desde el diseño hasta la capacitación del personal."
+            },
+            {
+              "q": "¿Cómo maneja el centro de fulfillment los picos de demanda como Black Friday?",
+              "a": "El ASRS no requiere contratar personal adicional para absorber picos. El throughput se incrementa activando más robots o estaciones de picking. Un centro de fulfillment automatizado puede gestionar 5x el volumen habitual sin cambios de infraestructura, algo imposible de lograr con operación manual en el mismo plazo."
+            },
+            {
+              "q": "¿Qué velocidad de preparación de pedidos real puedo esperar?",
+              "a": "Dependiendo del perfil de SKUs, los sistemas DELIE alcanzan entre 800 y 1.200 líneas por hora por estación, comparado con 150-200 líneas en picking manual."
+            },
+            {
+              "q": "¿El WMS de DELIE se integra con mi ERP o plataforma de e-commerce?",
+              "a": "Sí. El WMS tiene conectores nativos para SAP, Oracle, Microsoft Dynamics y APIs RESTful para cualquier sistema. La integración con plataformas como Shopify, VTEX o Magento es posible mediante middleware estándar."
+            }
+          ]
+        },
+        "logistica-3pl": {
+          "metaTitle": "Automatización 3PL | WMS Multicliente | STOKA",
+          "metaDesc": "Automatización para operador logístico 3PL: WMS multicliente para almacén multicliente, cross docking y operación 24/7. Sistemas ASRS y robots DELIE.",
+          "hero": "Operación multicliente con máxima eficiencia.",
+          "description": "Los operadores 3PL necesitan flexibilidad extrema: múltiples clientes, múltiples tipos de producto y contratos cambiantes. La automatización del operador logístico permite ofrecer más valor a cada cliente sin escalar costos fijos.",
+          "highlight": "\"Un operador 3PL automatizado puede servir el doble de clientes con la misma infraestructura.\"",
+          "benefits": [
+            {
+              "title": "Almacén multicliente",
+              "desc": "WMS con segregación lógica y física para múltiples clientes en el mismo almacén multicliente, sin mezclas ni errores."
+            },
+            {
+              "title": "Slots dinámicos",
+              "desc": "Reconfigurá asignaciones de espacio sin mover físicamente la mercadería."
+            },
+            {
+              "title": "Reportes por cliente",
+              "desc": "Dashboard en tiempo real con KPIs individuales por cliente para mayor transparencia."
+            },
+            {
+              "title": "Operación 24/7",
+              "desc": "Robots que no se cansan ni varían su productividad en el turno nocturno."
+            }
+          ],
+          "challenges": [
+            "Gestión de múltiples clientes en el mismo almacén multicliente sin mezclas",
+            "Contratos de corto plazo que requieren reconfiguración rápida",
+            "Presión de márgenes por competencia creciente",
+            "Necesidad de reportes por cliente en tiempo real",
+            "Personal difícil de retener en temporada alta"
+          ],
+          "solutions": [
+            "WMS multicliente con segregación lógica y física",
+            "Slots dinámicos sin movimiento físico",
+            "Dashboard por cliente con KPIs en tiempo real",
+            "Robots que operan 24/7 sin variación de productividad",
+            "Escalabilidad sin inversión en nuevos m²"
+          ],
+          "stats": [
+            {
+              "label": "Reducción de espacio"
+            },
+            {
+              "label": "Densidad de almacenaje"
+            },
+            {
+              "label": "Operación continua"
+            },
+            {
+              "label": "Costo operativo"
+            }
+          ],
+          "products": [
+            {
+              "name": "Transelevador MiniLoad"
+            },
+            {
+              "name": "Pallet Shuttle — Robot Lanzadera"
+            },
+            {
+              "name": "WMS — Gestión multicliente"
+            },
+            {
+              "name": "Transportadores y Sorters"
+            }
+          ],
+          "seo": "Los operadores logísticos 3PL en Argentina y Chile enfrentan una presión constante: los clientes exigen más servicios, más visibilidad y menores costos, mientras los márgenes se comprimen. La diferenciación competitiva real de un operador logístico en este contexto viene de la automatización del operador logístico: el warehouse automation 3PL —visibilidad de inventario en tiempo real, reportes por cliente y operación 24/7— tiene una propuesta de valor que el resto no puede igualar con infraestructura manual.\n\nLa automatización del almacén multicliente permite además ofrecer servicios de valor agregado que antes eran inaccesibles: picking unitario a alta velocidad, gestión de devoluciones e-commerce, picking por temperatura para productos frescos o farmacéuticos, y automatización cross docking para flujos de alta rotación sin almacenaje intermedio. El WMS multicliente de DELIE permite que un mismo almacén multicliente atienda simultáneamente a clientes con perfiles operativos muy distintos —consumo masivo, farmacéutica, textil— con inventarios completamente segregados y sin mezclas. Esta flexibilidad convierte al operador logístico en un socio estratégico del cliente, no en un simple proveedor de espacio.",
+          "faq": [
+            {
+              "q": "¿Puedo gestionar múltiples clientes en el mismo almacén multicliente automatizado?",
+              "a": "Sí. El WMS soporta segregación lógica y física multi-cliente en el mismo almacén multicliente. Cada cliente tiene su propio inventario, reportes y KPIs separados sin necesidad de separar físicamente las zonas."
+            },
+            {
+              "q": "¿Qué pasa si pierdo un cliente o cambia el contrato?",
+              "a": "Los slots son dinámicos: podés reasignar espacio entre clientes sin mover físicamente la mercadería. Si un cliente disminuye su volumen, ese espacio queda disponible automáticamente."
+            },
+            {
+              "q": "¿Cómo facturo el espacio y los movimientos a cada cliente?",
+              "a": "El WMS genera reportes detallados por cliente: posiciones ocupadas, entradas, salidas y órdenes procesadas. Estos datos se exportan en formatos estándar para facturación."
+            },
+            {
+              "q": "¿Cuánto reduce la automatización el costo operativo de un operador logístico 3PL?",
+              "a": "En operaciones 3PL típicas, la automatización reduce el costo de labor entre 40% y 55%. El sistema opera 24/7 sin variación de productividad ni costo adicional en temporada alta."
+            }
+          ]
+        },
+        "manufactura": {
+          "metaTitle": "Logística de Planta Automatizada | JIT | STOKA",
+          "metaDesc": "Logística de planta automatizada para manufactura: abastecimiento a línea, just in time automatizado y trazabilidad de lotes para cero paradas de línea.",
+          "hero": "Logística de planta sincronizada con tu línea de producción.",
+          "description": "En manufactura, cada minuto de parada de línea tiene un costo enorme. La automatización de la logística de planta garantiza el abastecimiento a línea just-in-time a cada estación sin errores ni demoras.",
+          "highlight": "\"Cada parada de línea por falta de materiales cuesta entre $500 y $5.000 USD por hora.\"",
+          "benefits": [
+            {
+              "title": "Just in time automatizado",
+              "desc": "Almacén de planta sincronizado con MES/ERP para abastecimiento a línea bajo demanda a cada estación."
+            },
+            {
+              "title": "Kanban digital",
+              "desc": "Reposición automática de insumos sin órdenes manuales ni riesgo de quiebre de stock."
+            },
+            {
+              "title": "Trazabilidad de lotes",
+              "desc": "Número de serie y lote registrado en cada movimiento para auditorías de calidad totales."
+            },
+            {
+              "title": "Reducción de WIP",
+              "desc": "Stock en proceso minimizado con abastecimiento a línea preciso y en el momento exacto que la línea lo necesita."
+            }
+          ],
+          "challenges": [
+            "Paradas de línea por falta de insumos o repuestos",
+            "Tiempo perdido buscando materiales en la logística de planta",
+            "Dificultad para implementar kanban y just in time automatizado con stock manual",
+            "Trazabilidad de lotes de producción incompleta",
+            "Stock inmovilizado y WIP excesivo"
+          ],
+          "solutions": [
+            "Almacén de planta sincronizado con MES/ERP",
+            "Abastecimiento a línea automatizado bajo demanda",
+            "Kanban digital con reposición automática",
+            "Trazabilidad de número de serie y lote en cada movimiento",
+            "Reducción de WIP y stock inmovilizado"
+          ],
+          "stats": [
+            {
+              "label": "Tiempo de búsqueda"
+            },
+            {
+              "label": "Trazabilidad de lotes"
+            },
+            {
+              "label": "OEE de planta"
+            },
+            {
+              "label": "Stock WIP"
+            }
+          ],
+          "products": [
+            {
+              "name": "Transelevador Unit-Load"
+            },
+            {
+              "name": "Transelevador MiniLoad"
+            },
+            {
+              "name": "WCS — Control de almacén"
+            },
+            {
+              "name": "Transportadores Industriales"
+            }
+          ],
+          "seo": "En la industria manufacturera de Argentina y Chile, la logística de planta —la logística interna de la planta— es el cuello de botella que más impacta la eficiencia productiva. El almacén de materia prima automatizado y el abastecimiento a línea automatizado eliminan las paradas: una línea de producción que para por falta de insumos pierde entre USD 500 y USD 5.000 por hora. El buffer de producción sincronizado con el MES, base del just in time automatizado, elimina ese riesgo.\n\nEl almacén o bodega de producto terminado automatizado resuelve el otro extremo: el despacho ágil y exacto de pedidos al canal de distribución. Con la logística de planta sincronizada con el ERP vía WCS, la preparación de cargas se inicia automáticamente sin intervención humana. La trazabilidad de lote y número de serie queda registrada en cada movimiento del depósito, agilizando auditorías y retiros de mercado.",
+          "faq": [
+            {
+              "q": "¿Puedo integrar la logística de planta directamente con mi línea de producción?",
+              "a": "Sí. Los sistemas DELIE se integran con el MES (Manufacturing Execution System) de la planta. Cuando la línea necesita un insumo, el MES envía la orden al WCS del depósito automáticamente, habilitando el just in time automatizado."
+            },
+            {
+              "q": "¿Qué pasa si hay un corte de energía durante la operación?",
+              "a": "Los sistemas DELIE cuentan con UPS integrada y protocolos de recuperación automática. En caso de corte, el sistema registra la posición exacta de cada robot y se recupera desde el punto de interrupción sin pérdida de datos."
+            },
+            {
+              "q": "¿Puedo implementar el sistema por fases sin parar la producción?",
+              "a": "Sí. La implementación por fases es la estrategia habitual: primero el almacén de materias primas o el de producto terminado, sin tocar la línea de producción."
+            },
+            {
+              "q": "¿Qué nivel de mantenimiento requiere el sistema en planta?",
+              "a": "El mantenimiento preventivo equivale a 2-4 horas por mes para un sistema estándar. El WCS monitorea el estado de cada componente y emite alertas tempranas antes de que ocurra una falla."
+            }
+          ]
+        },
+        "alimentos-bebidas": {
+          "metaTitle": "Logística Alimentaria Automatizada | FIFO | STOKA",
+          "metaDesc": "Logística alimentaria automatizada: FIFO automático, trazabilidad de alimentos y almacén frigorífico. Compatible GS1 y FSSC 22000. Sistemas DELIE.",
+          "hero": "FIFO automático e inocuidad en cada movimiento.",
+          "description": "La logística alimentaria tiene requisitos de inocuidad no negociables. El FIFO automático, la trazabilidad de alimentos por lote y las alertas de vencimiento son nativas en los sistemas DELIE.",
+          "highlight": "\"Un retiro de mercado bien gestionado con trazabilidad completa puede ser la diferencia entre una multa y un cierre.\"",
+          "benefits": [
+            {
+              "title": "FIFO automático 100%",
+              "desc": "El WMS asegura que siempre sale primero el producto más antiguo (FIFO automático), sin depender del operario."
+            },
+            {
+              "title": "Trazabilidad de alimentos por lote",
+              "desc": "Rastreá cualquier unidad desde su ingreso hasta su despacho con fecha, lote y destino."
+            },
+            {
+              "title": "Alertas de vencimiento",
+              "desc": "El sistema prioriza automáticamente productos próximos a vencer para eliminar mermas."
+            },
+            {
+              "title": "Audit-ready",
+              "desc": "Registros automáticos en formato GS1 para certificaciones FSSC 22000 y BRC."
+            }
+          ],
+          "challenges": [
+            "Mantenimiento del FIFO automático en almacenes manuales con alta rotación",
+            "Trazabilidad de alimentos por lote para retiros de mercado",
+            "Control de temperatura en el almacén frigorífico",
+            "Certificaciones que requieren registros exhaustivos",
+            "Mermas por vencimiento de productos no rotados"
+          ],
+          "solutions": [
+            "FIFO automático garantizado por el WMS en cada salida",
+            "Trazabilidad de alimentos completa por lote, elaboración y vencimiento",
+            "Robots que operan en el almacén frigorífico entre -5°C y +10°C",
+            "Registros automáticos para auditorías",
+            "Alertas de vencimiento y priorización automática"
+          ],
+          "stats": [
+            {
+              "label": "Garantizado 100%"
+            },
+            {
+              "label": "Mermas por vencimiento"
+            },
+            {
+              "label": "Compatible"
+            },
+            {
+              "label": "Audit-ready"
+            }
+          ],
+          "products": [
+            {
+              "name": "AS/RS Cámara Fría"
+            },
+            {
+              "name": "WMS con FEFO/FIFO automático"
+            },
+            {
+              "name": "Transportadores Industriales"
+            },
+            {
+              "name": "Módulos VLM para picking"
+            }
+          ],
+          "seo": "La logística alimentaria en Argentina y Chile opera bajo una tensión permanente entre el costo de almacenamiento y los requisitos de inocuidad. Las grandes cadenas exigen trazabilidad de alimentos completa, fechas de vencimiento garantizadas y cero errores de identificación. El almacén automatizado de alimentos y el almacén frigorífico automatizado de bebidas son la única forma de garantizar eso de forma consistente a escala industrial.\n\nLos sistemas ASRS de DELIE para logística alimentaria incluyen módulo FEFO (First Expired, First Out) nativo en el WMS, complemento del FIFO automático: en cada salida, el sistema elige automáticamente el producto con vencimiento más próximo sin depender del criterio del operario. Esto elimina las mermas por vencimiento, reduce el riesgo de recall y garantiza el cumplimiento de los requisitos de trazabilidad de alimentos de los grandes compradores.",
+          "faq": [
+            {
+              "q": "¿El sistema garantiza el FIFO automático en la logística alimentaria?",
+              "a": "Sí, el FIFO automático es nativo. El WMS registra fecha de elaboración y vencimiento de cada lote al ingreso. En cada salida, el sistema elige automáticamente el producto con fecha de ingreso más antigua sin depender del criterio del operario."
+            },
+            {
+              "q": "¿A qué temperaturas operan los robots en el almacén frigorífico?",
+              "a": "Los transelevadores y robots lanzadera de DELIE operan entre -5°C y +10°C en formato refrigerado y hasta -25°C en formato congelado en el almacén frigorífico. Cuentan con sellado hermético anticondensación y lubricación especial para frío."
+            },
+            {
+              "q": "¿Cómo agiliza el sistema un retiro de mercado (recall)?",
+              "a": "Con trazabilidad de alimentos completa, un recall que normalmente toma días se ejecuta en minutos. El WMS localiza todos los depósitos con mercadería del lote afectado y bloquea automáticamente las salidas del stock comprometido."
+            },
+            {
+              "q": "¿Qué certificaciones de calidad tiene el sistema para la logística alimentaria?",
+              "a": "Los sistemas DELIE son compatibles con GS1, FSSC 22000 y BRC. El WMS genera registros en formato audit-ready que cumplen los requisitos de estas certificaciones."
+            }
+          ]
+        },
+        "farmaceutica": {
+          "metaTitle": "Logística Farmacéutica GMP | Trazabilidad | STOKA",
+          "metaDesc": "Logística farmacéutica: almacén GMP, FEFO automático, trazabilidad de medicamentos y serialización ANMAT para depósito droguería. DELIE Argentina.",
+          "hero": "Almacén GMP, FEFO y trazabilidad regulatoria nativa.",
+          "description": "La logística farmacéutica opera bajo las regulaciones más exigentes del mundo. Los sistemas DELIE para el almacén GMP están diseñados para cumplir con GMP, 21 CFR Part 11 y las normativas de ANMAT sin configuración adicional.",
+          "highlight": "\"En farmacéutica, el compliance no es opcional. El sistema tiene que garantizarlo por diseño, no por proceso.\"",
+          "benefits": [
+            {
+              "title": "Almacén GMP by design",
+              "desc": "Registro automático de cada movimiento con usuario, timestamp y ubicación para audit trail completo e inmutable."
+            },
+            {
+              "title": "FEFO automático",
+              "desc": "El sistema prioriza por fecha de vencimiento en cada egreso sin intervención del operario. Cumplimiento garantizado 100%."
+            },
+            {
+              "title": "Temperatura controlada",
+              "desc": "Zonas diferenciadas para refrigerados (2-8°C), controlados (15-25°C) y congelados (-20°C) dentro del mismo depósito droguería."
+            },
+            {
+              "title": "Control de acceso por rol",
+              "desc": "Acceso restringido por zona y tipo de operación con segundo factor para productos controlados. Compatible con 21 CFR Part 11."
+            },
+            {
+              "title": "Serialización ANMAT",
+              "desc": "Módulo de trazabilidad de medicamentos unitaria que cumple los requisitos de serialización farmacéutica de ANMAT en Argentina."
+            },
+            {
+              "title": "Documentación IQ/OQ/PQ",
+              "desc": "DELIE entrega DQ, FS y DS preelaborados. STOKA acompaña el proceso de calificación para cumplir plazos regulatorios."
+            }
+          ],
+          "challenges": [
+            "Cumplimiento GMP con audit trail inmutable en cada movimiento del almacén GMP",
+            "FEFO estricto con múltiples lotes y fechas de vencimiento",
+            "Control de temperatura y humedad con registros continuos",
+            "Acceso controlado y trazabilidad de medicamentos y operadores para 21 CFR",
+            "Serialización por unidad para trazabilidad de medicamentos ANMAT",
+            "Proceso de calificación IQ/OQ/PQ largo y costoso"
+          ],
+          "solutions": [
+            "WMS GMP-compliant con audit trail de usuario y timestamp",
+            "FEFO automático con alertas de vencimiento por lote",
+            "Zonas de temperatura diferenciada con monitoreo continuo",
+            "Control de acceso por rol con segundo factor para controlados",
+            "Módulo de serialización unitaria compatible con ANMAT",
+            "Documentación de validación DQ/FS/DS preelaborada por DELIE"
+          ],
+          "stats": [
+            {
+              "label": "Compliant"
+            },
+            {
+              "label": "Automático"
+            },
+            {
+              "label": "Documentado"
+            },
+            {
+              "label": "Audit trail"
+            }
+          ],
+          "products": [
+            {
+              "name": "AS/RS Cámara Fría (GxP)"
+            },
+            {
+              "name": "Transelevador MiniLoad"
+            },
+            {
+              "name": "WMS con módulo GMP"
+            },
+            {
+              "name": "Módulos VLM para controlados"
+            }
+          ],
+          "seo": "El almacén farmacéutico es el entorno más regulado de la logística farmacéutica. Las normativas nacionales (ANMAT en Argentina) e internacionales (FDA, EMA, WHO GDP) exigen trazabilidad de medicamentos completa de cada unidad desde su recepción hasta su despacho, control de temperatura y humedad con registros continuos, y acceso controlado por rol con audit trail inmutable en el almacén GMP.\n\nEl WMS GMP-compliant de DELIE cumple con 21 CFR Part 11, EU GMP Annex 11 y los requisitos de ANMAT. Para laboratorios, droguerías y distribuidores farmacéuticos en Argentina y Chile, la automatización del depósito droguería con STOKA incluye documentación IQ/OQ/PQ preelaborada que reduce significativamente el tiempo y el costo del proceso de calificación regulatoria.",
+          "faq": [
+            {
+              "q": "¿El sistema cumple con GMP y las normativas de ANMAT para el almacén GMP?",
+              "a": "Sí. El WMS incluye módulo GMP que registra cada movimiento con usuario, timestamp, ubicación de origen y destino. Este audit trail cumple con 21 CFR Part 11, EU GMP Annex 11 y los requisitos de ANMAT."
+            },
+            {
+              "q": "¿Cómo funciona el control de acceso por rol en el depósito droguería?",
+              "a": "Cada operario tiene credenciales únicas con permisos por zona, tipo de operación y producto. El sistema registra quién hizo qué y cuándo en cada movimiento, garantizando la trazabilidad de medicamentos."
+            },
+            {
+              "q": "¿Se pueden crear zonas de temperatura diferenciada en el mismo depósito?",
+              "a": "Sí. El sistema permite definir zonas lógicas con requisitos de temperatura específicos (2-8°C, 15-25°C, -20°C) dentro del mismo almacén GMP. El monitoreo de temperatura es continuo con alertas automáticas ante desvíos."
+            },
+            {
+              "q": "¿Cuánto tiempo lleva validar el sistema para GMP en un depósito droguería?",
+              "a": "La validación IQ/OQ/PQ toma entre 3 y 6 meses post-instalación. DELIE entrega documentación de validación (DQ, FS, DS) con el sistema."
+            },
+            {
+              "q": "¿El sistema gestiona la serialización unitaria requerida por ANMAT?",
+              "a": "Sí. El módulo de serialización del WMS lee y registra el código de barras o DataMatrix 2D de cada unidad en las operaciones de recepción, almacenamiento y despacho, asegurando la trazabilidad de medicamentos."
+            },
+            {
+              "q": "¿Puede usarse el sistema en una droguería con habilitación GDP?",
+              "a": "Sí. El WMS de DELIE ha sido calificado en instalaciones con habilitación GDP en Latinoamérica."
+            },
+            {
+              "q": "¿Cómo se maneja la devolución de medicamentos vencidos o retirados del mercado?",
+              "a": "El WMS tiene flujo específico de cuarentena y destrucción: los productos bloqueados se segregan lógicamente, con bloqueo de despacho automático y notificación al responsable regulatorio."
+            }
+          ]
+        },
+        "mineria-oil-gas": {
+          "metaTitle": "Logística Minera | Almacén de Repuestos MRO | STOKA",
+          "metaDesc": "Logística minera y oil & gas: almacén de repuestos de minería y gestión MRO con VLM y WMS. Repuesto crítico localizado en menos de 2 segundos.",
+          "hero": "Repuestos críticos disponibles en minutos, no horas.",
+          "description": "En logística minera y oil & gas, cada hora de equipo parado puede costar decenas de miles de dólares. La disponibilidad inmediata de repuestos críticos en el almacén de repuestos de minería es la diferencia entre una operación rentable y una crisis.",
+          "highlight": "\"Una parada de equipos mineros cuesta entre $10.000 y $100.000 USD por hora. El almacén de repuestos de minería automatizado lo previene.\"",
+          "benefits": [
+            {
+              "title": "Búsqueda en segundos",
+              "desc": "El WMS localiza cualquier repuesto entre miles de SKUs de la gestión MRO en menos de 2 segundos."
+            },
+            {
+              "title": "Stock centralizado",
+              "desc": "Visibilidad en tiempo real de todo el inventario, eliminando duplicados y stock fantasma en el depósito de insumos petroleros."
+            },
+            {
+              "title": "Condiciones extremas",
+              "desc": "Sistemas certificados para polvo, vibración y temperaturas extremas propias del sector minero."
+            },
+            {
+              "title": "Mínimo personal",
+              "desc": "Despacho automatizado que opera con muy poco personal incluso en locaciones remotas."
+            }
+          ],
+          "challenges": [
+            "Miles de SKUs de repuestos difíciles de localizar en la gestión MRO",
+            "Paradas de equipos por repuestos no encontrados a tiempo",
+            "Stock duplicado por falta de visibilidad centralizada",
+            "Operación en condiciones climáticas extremas",
+            "Personal escaso en ubicaciones remotas"
+          ],
+          "solutions": [
+            "WMS con búsqueda de repuesto en menos de 2 segundos",
+            "Almacén de repuestos de minería con stock centralizado en tiempo real",
+            "Eliminación de duplicados y stock fantasma",
+            "Sistemas certificados para entornos severos",
+            "Despacho automatizado con mínimo personal"
+          ],
+          "stats": [
+            {
+              "label": "Errores de despacho"
+            },
+            {
+              "label": "Stock inmovilizado"
+            },
+            {
+              "label": "Disponibilidad"
+            },
+            {
+              "label": "Tiempo de recupero"
+            }
+          ],
+          "products": [
+            {
+              "name": "Módulos VLM — alta densidad"
+            },
+            {
+              "name": "Carrusel Vertical automatizado"
+            },
+            {
+              "name": "WMS para gestión de repuestos"
+            },
+            {
+              "name": "Transelevador Unit-Load"
+            }
+          ],
+          "seo": "La logística minera y de oil & gas en Argentina (Vaca Muerta, minería en Mendoza, San Juan, Catamarca) y en Chile (norte minero: I a IV Región) comparte un desafío logístico específico: almacenes MRO automatizados y depósitos de insumos petroleros en ubicaciones remotas, con personal escaso y rotación alta. La gestión MRO de repuestos en minería es crítica: una parada de equipo por falta de pieza puede costar USD 10.000 a USD 100.000 por hora.\n\nLos sistemas VLM y carrusel vertical de DELIE para el almacén de repuestos de minería resuelven tres problemas simultáneamente: densifican el almacenamiento en el espacio disponible, reducen el personal necesario para operar el depósito de insumos petroleros, y localizan cualquier repuesto entre miles de SKUs en menos de 30 segundos.",
+          "faq": [
+            {
+              "q": "¿El sistema funciona en ambientes con polvo, vibración y temperaturas extremas?",
+              "a": "Sí. Los equipos DELIE para logística minera y oil & gas tienen grado de protección IP54 a IP65, están certificados para vibración conforme a IEC y operan entre -20°C y +50°C. Para zonas con riesgo de explosión, existe la versión ATEX certificada."
+            },
+            {
+              "q": "¿Cuánto tarda en localizar un repuesto crítico entre 50.000 SKUs en la gestión MRO?",
+              "a": "El WMS localiza cualquier repuesto en menos de 2 segundos. Para los VLM y carruseles verticales, el material llega a la ventanilla del operario en menos de 30 segundos desde la solicitud."
+            },
+            {
+              "q": "¿Cuánto stock inmovilizado puedo reducir en mi almacén de repuestos de minería?",
+              "a": "Con visibilidad total del inventario en tiempo real, los clientes reducen el stock inmovilizado entre 25% y 40%."
+            },
+            {
+              "q": "¿Se puede instalar el sistema en una ubicación remota sin soporte técnico cercano?",
+              "a": "Sí. El WCS incluye monitoreo remoto 24/7. La mayoría de los problemas se diagnostican y resuelven sin visita in-situ. STOKA mantiene repuestos locales en Argentina."
+            }
+          ]
+        },
+        "cadena-frio": {
+          "metaTitle": "Almacén Frigorífico Automatizado −30°C | STOKA",
+          "metaDesc": "Logística refrigerada y almacén congelado automatizado hasta −30°C. Depósito frío con transelevadores, robots shuttle, FIFO y ahorro energético.",
+          "hero": "Robots que operan a -30°C sin exposición de personal.",
+          "description": "El almacén congelado es caro de construir y peligroso para el personal. Los sistemas DELIE para logística refrigerada permiten maximizar cada metro cúbico del depósito frío automatizado mientras eliminan la exposición de operarios al frío extremo.",
+          "highlight": "\"Cada apertura de puerta de cámara pierde entre 5% y 15% de la energía acumulada. Automatizarlo reduce ese costo un 40%.\"",
+          "benefits": [
+            {
+              "title": "Operación a -30°C",
+              "desc": "Robots y transelevadores certificados para funcionar en el almacén congelado sin presencia humana."
+            },
+            {
+              "title": "Máxima densidad",
+              "desc": "Almacenaje vertical que triplica la capacidad del metro cuadrado del depósito frío automatizado existente."
+            },
+            {
+              "title": "Menos aperturas",
+              "desc": "Reducción de aperturas de puerta hasta el 90%, con ahorro energético de hasta 40%."
+            },
+            {
+              "title": "FIFO en frío",
+              "desc": "FIFO automático sin que el operario tenga que ingresar a la cámara para verificar fechas."
+            }
+          ],
+          "challenges": [
+            "Alto costo energético del almacén congelado subutilizado",
+            "Exposición del personal a temperaturas de -18°C a -30°C",
+            "Mermas por apertura frecuente de cámaras para verificar stock",
+            "FIFO imposible de controlar manualmente en la logística refrigerada",
+            "Costo elevado de construcción de nuevas cámaras"
+          ],
+          "solutions": [
+            "Robots certificados que operan a -30°C en el depósito frío automatizado sin presencia humana",
+            "Almacenaje vertical que triplica la capacidad del almacén congelado existente",
+            "Reducción de aperturas de puerta hasta el 90%",
+            "FIFO automático garantizado por el WMS",
+            "Ahorro energético de hasta 40% por menor intercambio térmico"
+          ],
+          "stats": [
+            {
+              "label": "Temperatura mínima"
+            },
+            {
+              "label": "Personal expuesto"
+            },
+            {
+              "label": "Uso de cámara"
+            },
+            {
+              "label": "Consumo energético"
+            }
+          ],
+          "products": [
+            {
+              "name": "AS/RS Cámara Fría (-30°C)"
+            },
+            {
+              "name": "Pallet Shuttle — Robot Lanzadera"
+            },
+            {
+              "name": "WMS con FIFO/FEFO automático"
+            },
+            {
+              "name": "Transelevador Unit-Load"
+            }
+          ],
+          "seo": "La logística refrigerada es uno de los sectores de más rápido crecimiento en automatización logística. El almacén frigorífico automatizado y el depósito frío automatizado son la respuesta al costo creciente de la mano de obra en frío extremo.\n\nEl ASRS congelado de DELIE —el sistema para almacén congelado a -30 grados— opera sin presencia de operarios dentro de la cámara. Los transelevadores y robots lanzadera tienen diseño especial: sellado hermético anticondensación, lubricación para frío extremo y calefacción interna de la electrónica, claves para la logística refrigerada de alto rendimiento.",
+          "faq": [
+            {
+              "q": "¿A qué temperatura mínima operan los robots de DELIE en el almacén congelado?",
+              "a": "Los transelevadores y robots lanzadera para logística refrigerada están certificados hasta -30°C. Cuentan con sellado hermético anticondensación, lubricantes especiales y diagnóstico remoto."
+            },
+            {
+              "q": "¿Cuánto ahorro energético real puedo esperar en mi depósito frío automatizado?",
+              "a": "El ahorro energético típico es del 30% al 40%. La principal fuente es la reducción de aperturas de puerta: un almacén manual requiere 50-100 aperturas por turno, mientras que el sistema automatizado trabaja internamente."
+            },
+            {
+              "q": "¿Cuánto espacio adicional gano al automatizar un almacén congelado existente?",
+              "a": "Con almacenamiento vertical automatizado, podés triplicar la capacidad del almacén congelado sin construir nuevas instalaciones. El sistema opera en pasillos de 900 mm (vs. 3-4 metros para autoelevadores)."
+            },
+            {
+              "q": "¿Cómo elimino la exposición del personal al frío extremo en el depósito?",
+              "a": "El depósito frío automatizado opera de forma autónoma dentro de la cámara. Los operarios trabajan en estaciones a temperatura ambiente, donde la mercadería llega a través de una ventanilla aislada."
+            }
+          ]
+        }
+      }
     },
     "catalogoAsrs": {
       "metaTitle": "Sistemas ASRS Argentina | AS/RS Automatizados | STOKA",
