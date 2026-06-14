@@ -2303,7 +2303,8 @@
         "operaciones": "Operations",
         "finanzas": "Finance"
       },
-      "noResults": "No terms match your search."
+      "noResults": "No terms match your search.",
+      "resultsFor": "{{count}} result(s) for"
     },
     "roi": {
       "metaTitle": "Warehouse Automation ROI Calculator | STOKA",

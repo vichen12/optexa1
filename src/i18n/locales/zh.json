@@ -2303,7 +2303,8 @@
         "operaciones": "运营",
         "finanzas": "财务"
       },
-      "noResults": "没有符合您搜索的术语。"
+      "noResults": "没有符合您搜索的术语。",
+      "resultsFor": "{{count}}个搜索结果："
     },
     "roi": {
       "metaTitle": "仓库自动化ROI计算器 | STOKA",

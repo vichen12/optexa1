@@ -2303,7 +2303,8 @@
         "operaciones": "Operaciones",
         "finanzas": "Finanzas"
       },
-      "noResults": "No hay términos que coincidan con tu búsqueda."
+      "noResults": "No hay términos que coincidan con tu búsqueda.",
+      "resultsFor": "{{count}} resultado(s) para"
     },
     "roi": {
       "metaTitle": "Calculadora ROI Automatización de Almacén | STOKA",

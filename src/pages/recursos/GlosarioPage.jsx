@@ -117,7 +117,7 @@ export const GlosarioPage = () => {
         <section className="max-w-4xl mx-auto px-6 py-8 pb-20">
           {buscando && (
             <p className="text-sm text-gray-400 mb-6">
-              {filtered.length} resultado{filtered.length !== 1 ? 's' : ''} para "<strong className="text-gray-700">{query}</strong>"
+              {t('pages.glosario.resultsFor', { count: filtered.length })} "<strong className="text-gray-700">{query}</strong>"
             </p>
           )}
 
