@@ -32,7 +32,9 @@ const FAQ = [
   { q: '¿Cuánto espacio vertical aprovecha un sistema AS/RS en mi almacén, bodega o depósito?', a: 'Los sistemas AS/RS DELIE aprovechan desde 7 hasta 40 metros de altura libre. En un almacén con 12 metros de altura, podés almacenar hasta 5 veces más que con estanterías convencionales de 4-5 metros. La clave está en diseñar la estructura según la altura disponible y el tipo de carga.' },
   { q: '¿Cuál es la diferencia entre estanterías drive-in, shuttle y MiniLoad?', a: 'Las estanterías drive-in usan carretillas convencionales: las más económicas, ideales para LIFO de alta densidad. Las shuttle combinan estanterías con robots lanzadera para mayor velocidad y FIFO/LIFO selectivo. Las MiniLoad son para contenedores y totes con transelevadores: máxima velocidad y precisión para e-commerce, farmacéutica y bodega de alta rotación.' },
   { q: '¿Cuánto tiempo lleva instalar un sistema AS/RS en un almacén o depósito existente?', a: 'La instalación mecánica de estanterías AS/RS toma 4 a 10 semanas según el modelo. La adecuación civil previa (losa plana, iluminación) puede añadir 4-6 semanas si el edificio lo requiere. STOKA coordina toda la ingeniería de detalle, el montaje y la puesta en marcha certificada en Argentina.' },
-  { q: '¿Las estanterías DELIE aplican al Decreto 513/2025 de arancel 0% en Argentina?', a: 'Sí. Las estanterías AS/RS para sistemas automatizados están incluidas en las posiciones arancelarias del Decreto 513/2025. STOKA verifica la posición arancelaria exacta para cada proyecto sin costo adicional, garantizando que aprovechés el beneficio desde el primer día de importación.' },
+  { q: '¿Las estanterías DELIE aplican al Decreto 513/2025 de arancel reducido en Argentina?', a: 'Sí. Las estanterías AS/RS para sistemas automatizados están incluidas en las posiciones arancelarias del Decreto 513/2025, que reduce los aranceles de importación según la clasificación NCM de cada componente. STOKA verifica la posición arancelaria exacta para cada proyecto sin costo adicional, garantizando que aprovechés el beneficio desde el primer día de importación.' },
+  { q: '¿Qué es un depósito inteligente y en qué se diferencia de un almacén tradicional?', a: 'Un depósito inteligente es un almacén automatizado que integra sistemas ASRS, robótica y software de gestión para operar con mínima intervención humana. A diferencia de un almacén tradicional —con operarios, montacargas y estanterías estáticas—, el depósito inteligente lleva la mercadería hasta el operario (goods-to-person), multiplica la densidad por metro cuadrado y opera 24/7 con trazabilidad total. Es la base de la logística 4.0 y la intralogística moderna.' },
+  { q: '¿Cuánto espacio ahorra un sistema ASRS en un centro de distribución?', a: 'Un sistema ASRS aprovecha la altura de la nave —de 7 a 40 metros— y elimina los pasillos anchos de los montacargas. En la práctica, un almacén robotizado de alta densidad puede almacenar entre 3 y 5 veces más mercadería en el mismo metro cuadrado que una estantería convencional, liberando superficie o evitando una ampliación edilicia del centro de distribución.' },
 ];
 
 const SISTER_CATS = [
@@ -155,6 +157,7 @@ export const CatalogoASRSPage = () => {
           <div>
             <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('whatIsTag')}</p>
             <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter">{p('whatIsH2')}</h2>
+            <p className="text-gray-500 text-sm leading-relaxed max-w-3xl mt-4">{t('pages.catalogoAsrs.vocabPara')}</p>
           </div>
 
           {/* Stat badges */}

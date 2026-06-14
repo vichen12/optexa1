@@ -371,7 +371,24 @@
     },
     "tabAway": "We miss you! Come back 👋",
     "pageTitle": "ASRS Systems and Warehouse Automation in Argentina | STOKA",
-    "metaDesc": "ASRS systems for warehouse automation in Argentina and Chile. DELIE stacker cranes, shuttle robots, VLM and WMS/WCS software with local STOKA support."
+    "metaDesc": "ASRS systems for warehouse automation in Argentina and Chile. DELIE stacker cranes, shuttle robots, VLM and WMS/WCS software with local STOKA support.",
+    "vocabPara": "STOKA's solutions cover smart logistics end to end: from high-density automated warehouses to Logistics 4.0 distribution centers with industrial robotics and management software. We turn traditional warehouses and industrial facilities into automated, intelligent operations —smart warehouses, robotized storage and digitalized logistics plants— combining stacker cranes, autonomous vehicles (AGV/AMR) and automatic storage systems to maximize space utilization.",
+    "faq": [
+      {
+        "q": "What is a smart warehouse?",
+        "a": "A smart warehouse is a facility that integrates automation, robotics and management software to operate with minimal human intervention. It combines automatic storage systems (ASRS), stacker cranes, robots and real-time data to maximize density, traceability and speed. It is the evolution of the traditional warehouse toward Logistics 4.0."
+      },
+      {
+        "q": "What is the difference between an automated warehouse and a traditional one?",
+        "a": "A traditional warehouse relies on manual work: operators walking, forklifts and static racking. An automated warehouse replaces those journeys with stacker cranes, robots and software that bring goods to the operator (goods-to-person). The result is higher density per square meter, up to 99.9% accuracy, 24/7 operation and vertical space utilization impossible to achieve manually."
+      },
+      {
+        "q": "Is automation worthwhile for SMEs?",
+        "a": "Yes. There are scalable automation solutions from USD 150,000, and in Argentina SMEs access tax benefits (RIMI, reduced tariff by NCM, 10.5% VAT, BICE financing) that improve ROI. You don't need to automate everything at once: you can start with one module —a VLM, a miniload or a picking system— and scale as the operation grows."
+      }
+    ],
+    "faqTag": "Frequently asked questions",
+    "faqH2": "Frequently asked questions about warehouse automation"
   },
   "pages": {
     "breadcrumb": {
@@ -579,7 +596,8 @@
       "categoriesH2_a": "Our",
       "categoriesH2_b": "Categories",
       "allCategories": "All categories",
-      "allShort": "All"
+      "allShort": "All",
+      "vocabPara": "Our catalog covers the entire logistics automation chain: automated warehouses, robotized storage, stacker cranes and warehouse cranes, logistics robots (AGV/AMR), vertical storage and management software. Intralogistics and Warehouse 4.0 solutions for distribution centers, smart warehouses and industrial facilities of any scale."
     },
     "solutions": {
       "metaTitle": "ASRS Solutions for your Industry | STOKA Argentina",
@@ -1183,8 +1201,21 @@
         {
           "q": "Can you finance the project in Argentina?",
           "a": "Yes. We work with local financing tools: leasing, bank credit, and in some cases access to productive investment promotion lines."
+        },
+        {
+          "q": "What is Logistics 4.0?",
+          "a": "Logistics 4.0 is the application of Industry 4.0 technologies —automation, IoT, artificial intelligence and data analytics— to warehouse operations and the supply chain. It lets warehouses, stacker cranes, robots and software communicate with each other for a connected, autonomous and self-optimizing operation. In practice, it turns a traditional warehouse into a smart warehouse."
+        },
+        {
+          "q": "How much space does an ASRS system save?",
+          "a": "An ASRS system uses the height of the building —from 7 up to 40 meters— and eliminates the wide aisles forklifts require. In practice, a high-density automated warehouse can store 3 to 5 times more goods in the same square meter than conventional racking, freeing up space or avoiding a building expansion."
+        },
+        {
+          "q": "What is intralogistics?",
+          "a": "Intralogistics is the set of material and information flow processes inside a warehouse or plant: receiving, storage, order picking and dispatch. Automated intralogistics —with stacker cranes, robots and management software— is the heart of smart logistics and the Warehouse 4.0."
         }
-      ]
+      ],
+      "vocabPara": "We design tailored Logistics 4.0 and intralogistics solutions: logistics automation for distribution centers, smart warehouses and logistics plants seeking digitalization and efficiency. We integrate robotized storage, autonomous vehicles and management software to turn any warehouse or industrial facility into a smart, scalable and connected logistics operation."
     },
     "casosDeExito": {
       "metaTitle": "Success Cases | Logistics Automation | STOKA",
@@ -1859,7 +1890,8 @@
           "label": "Smart software",
           "desc": "WMS, WCS and warehouse control"
         }
-      ]
+      ],
+      "vocabPara": "An ASRS system —also called an automated warehouse, robotized warehouse or automatic storage system— replaces manual handling with stacker cranes (warehouse cranes), logistics robots and control software. It is the core of modern intralogistics and of any Warehouse 4.0 project: it lets you run a smart warehouse with maximum density, full traceability and vertical use of space in industrial facilities and distribution centers."
     },
     "catalogoRobots": {
       "breadcrumbCat": "Handling robots",
@@ -2937,6 +2969,14 @@
         {
           "q": "Do RIGI benefits apply to the ASRS within a mining or oil project?",
           "a": "Yes. If your company has a project enrolled in RIGI, the project's capital goods (including an ASRS) enjoy full exemption from import duties, VAT with tax credit certificates and accelerated depreciation."
+        },
+        {
+          "q": "How much does it cost to automate a warehouse?",
+          "a": "It depends on the technology, the required throughput and the warehouse size. As a reference: a VLM module or a picking system can start from USD 150,000; a compact shuttle system is around USD 600,000; and a complete unit-load ASRS with software can exceed USD 3,000,000. In Argentina, tax benefits (RIMI, reduced tariff by NCM, 10.5% VAT and BICE financing) can reduce the real cost by 15% to 40%."
+        },
+        {
+          "q": "Should I automate my warehouse now or wait?",
+          "a": "The combination of benefits in force in 2025–2026 makes this a favorable window: RIGI offers 30 years of tax stability, Decreto 513/2025 reduces import tariffs based on NCM classification, and the BICE line finances up to 80% of the project over 10 years. This convergence of stability, tariff reduction and preferential financing is not always available simultaneously."
         }
       ],
       "ctaTag": "Free assessment",

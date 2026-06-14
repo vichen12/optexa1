@@ -70,6 +70,13 @@ export const CatalogPage = () => {
       {/* CATALOG */}
       <ProductCatalog />
 
+      {/* Vocabulario / contexto SEO */}
+      <section className="bg-gray-50 py-12 px-6 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-gray-500 text-sm leading-relaxed text-center">{t(`${ns}.vocabPara`)}</p>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-white py-20 px-6 border-t border-gray-100">
         <div className="max-w-3xl mx-auto">

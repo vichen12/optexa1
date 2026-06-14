@@ -98,7 +98,8 @@ export const SolucionesPage = () => {
       <section className="bg-white py-20 px-6 border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{t(`${ns}.problemasTag`)}</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-10">{t(`${ns}.problemasH2`)}</h2>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-4">{t(`${ns}.problemasH2`)}</h2>
+          <p className="text-gray-500 text-sm leading-relaxed max-w-3xl mb-10">{t(`${ns}.vocabPara`)}</p>
 
           <div className="grid md:grid-cols-2 gap-5">
             {Array.isArray(problemas) && problemas.map((p, i) => (

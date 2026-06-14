@@ -147,6 +147,7 @@ export function HomePage() {
             <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{t('home.seoTag')}</p>
             <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-3 max-w-3xl">{t('home.h2')}</h2>
             <p className="text-gray-500 text-sm leading-relaxed max-w-2xl">{t('home.seoPara')}</p>
+            <p className="text-gray-500 text-sm leading-relaxed max-w-2xl mt-3">{t('home.vocabPara')}</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
               {[
                 { label: '+1.000', desc: t('home.stats.installations') },
@@ -250,6 +251,41 @@ export function HomePage() {
 
         </div>
       </section>
+
+      {/* FAQ con lenguaje de búsqueda + FAQPage schema */}
+      {(() => {
+        const faqItems = t('home.faq', { returnObjects: true });
+        const list = Array.isArray(faqItems) ? faqItems : [];
+        if (list.length === 0) return null;
+        return (
+          <section className="bg-slate-900 py-16 px-6">
+            <Helmet>
+              <script type="application/ld+json">{JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "inLanguage": lang,
+                "mainEntity": list.map((f) => ({
+                  "@type": "Question",
+                  "name": f.q,
+                  "acceptedAnswer": { "@type": "Answer", "text": f.a },
+                })),
+              })}</script>
+            </Helmet>
+            <div className="max-w-5xl mx-auto">
+              <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.4em] mb-3">{t('home.faqTag')}</p>
+              <h2 className="text-white text-2xl md:text-3xl font-black uppercase tracking-tighter mb-10">{t('home.faqH2')}</h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {list.map((item, i) => (
+                  <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6">
+                    <h3 className="text-white font-bold text-sm leading-snug mb-2">{item.q}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{item.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
 
       <CTABanner />
       <WppFloat />

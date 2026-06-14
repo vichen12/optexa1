@@ -371,7 +371,24 @@
     },
     "tabAway": "¡Volvé! Te esperamos 👋",
     "pageTitle": "Sistemas ASRS y Automatización de Almacenes | STOKA",
-    "metaDesc": "Sistemas ASRS para automatización de almacenes en Argentina y Chile. Transelevadores, robots shuttle, VLM y software WMS/WCS DELIE con soporte local STOKA."
+    "metaDesc": "Sistemas ASRS para automatización de almacenes en Argentina y Chile. Transelevadores, robots shuttle, VLM y software WMS/WCS DELIE con soporte local STOKA.",
+    "vocabPara": "Las soluciones de STOKA abarcan la logística inteligente de extremo a extremo: desde depósitos automáticos de alta densidad hasta centros de distribución 4.0 con robótica industrial y software de gestión. Transformamos almacenes tradicionales y naves industriales en operaciones automatizadas e inteligentes —depósitos inteligentes, almacenes robotizados y plantas logísticas digitalizadas— combinando transelevadores, vehículos autónomos (AGV/AMR) y sistemas de almacenamiento automático para maximizar el aprovechamiento del espacio.",
+    "faq": [
+      {
+        "q": "¿Qué es un depósito inteligente?",
+        "a": "Un depósito inteligente es un almacén que integra automatización, robótica y software de gestión para operar con mínima intervención humana. Combina sistemas de almacenamiento automático (ASRS), transelevadores, robots y datos en tiempo real para maximizar la densidad, la trazabilidad y la velocidad. Es la evolución del depósito tradicional hacia la logística 4.0."
+      },
+      {
+        "q": "¿Qué diferencia hay entre un almacén automatizado y uno tradicional?",
+        "a": "Un almacén tradicional depende del trabajo manual: operarios que caminan, montacargas y estanterías estáticas. Un almacén automatizado reemplaza esos recorridos por transelevadores, robots y software que llevan la mercadería hasta el operario (goods-to-person). El resultado es más densidad por metro cuadrado, hasta 99,9% de exactitud, operación 24/7 y un aprovechamiento del espacio vertical imposible de lograr manualmente."
+      },
+      {
+        "q": "¿La automatización conviene para pymes?",
+        "a": "Sí. Existen soluciones de automatización escalables desde USD 150.000, y en Argentina las pymes acceden a beneficios fiscales (RIMI, arancel reducido según NCM, IVA 10,5%, financiamiento BICE) que mejoran el ROI. No hace falta automatizar todo de golpe: se puede empezar por un módulo —un VLM, un miniload o un sistema de picking— y escalar según crece la operación."
+      }
+    ],
+    "faqTag": "Preguntas frecuentes",
+    "faqH2": "Preguntas frecuentes sobre automatización de almacenes"
   },
   "pages": {
     "breadcrumb": {
@@ -579,7 +596,8 @@
       "categoriesH2_a": "Nuestras",
       "categoriesH2_b": "Categorías",
       "allCategories": "Todas las categorías",
-      "allShort": "Todas"
+      "allShort": "Todas",
+      "vocabPara": "Nuestro catálogo cubre toda la cadena de la automatización logística: depósitos automáticos, almacenes robotizados, transelevadores y grúas de almacén, robots logísticos (AGV/AMR), almacenamiento vertical y software de gestión. Soluciones de intralogística y almacén 4.0 para centros de distribución, depósitos inteligentes y naves industriales de cualquier escala."
     },
     "solutions": {
       "metaTitle": "Soluciones ASRS para tu Industria | STOKA Argentina",
@@ -1183,8 +1201,21 @@
         {
           "q": "¿Pueden financiar el proyecto en Argentina?",
           "a": "Sí. Trabajamos con herramientas de financiamiento local: leasing, créditos bancarios y en algunos casos accedemos a líneas de fomento a la inversión productiva."
+        },
+        {
+          "q": "¿Qué es la logística 4.0?",
+          "a": "La logística 4.0 es la aplicación de las tecnologías de la Industria 4.0 —automatización, IoT, inteligencia artificial y análisis de datos— a la operación de almacenes y la cadena de suministro. Permite que depósitos, transelevadores, robots y software se comuniquen entre sí para una operación conectada, autónoma y autooptimizada. En la práctica, transforma un almacén tradicional en un depósito inteligente."
+        },
+        {
+          "q": "¿Cuánto espacio ahorra un sistema ASRS?",
+          "a": "Un sistema ASRS aprovecha la altura de la nave —de 7 hasta 40 metros— y elimina los pasillos anchos que requieren los montacargas. En la práctica, un depósito automático de alta densidad puede almacenar entre 3 y 5 veces más mercadería en el mismo metro cuadrado que una estantería convencional, liberando espacio o evitando una ampliación edilicia."
+        },
+        {
+          "q": "¿Qué es la intralogística?",
+          "a": "La intralogística es el conjunto de procesos de flujo de materiales e información dentro de un almacén o planta: recepción, almacenamiento, preparación de pedidos y expedición. La intralogística automatizada —con transelevadores, robots y software de gestión— es el corazón de la logística inteligente y del almacén 4.0."
         }
-      ]
+      ],
+      "vocabPara": "Diseñamos soluciones de logística 4.0 e intralogística a medida: automatización logística para centros de distribución, depósitos inteligentes y plantas logísticas que buscan digitalización y eficiencia. Integramos almacenamiento robotizado, vehículos autónomos y software de gestión para convertir cualquier almacén o nave industrial en una operación de logística inteligente, escalable y conectada."
     },
     "casosDeExito": {
       "metaTitle": "Casos de Éxito | Automatización Logística | STOKA",
@@ -1859,7 +1890,8 @@
           "label": "Software inteligente",
           "desc": "WMS, WCS y control de almacén"
         }
-      ]
+      ],
+      "vocabPara": "Un sistema ASRS —también llamado depósito automático, almacén robotizado o sistema de almacenamiento automático— reemplaza el manejo manual por transelevadores (grúas de almacén), robots logísticos y software de control. Es el núcleo de la intralogística moderna y de cualquier proyecto de almacén 4.0: permite operar un depósito inteligente con máxima densidad, trazabilidad total y aprovechamiento vertical del espacio en naves industriales y centros de distribución."
     },
     "catalogoRobots": {
       "breadcrumbCat": "Robots de manipulación",
@@ -2937,6 +2969,14 @@
         {
           "q": "¿Los beneficios del RIGI aplican al ASRS dentro de un proyecto minero o petrolero?",
           "a": "Sí. Si tu empresa tiene un proyecto adherido al RIGI, los bienes de capital del proyecto (incluido un ASRS) gozan de exención total de derechos de importación, IVA con certificados de crédito fiscal y amortización acelerada."
+        },
+        {
+          "q": "¿Cuánto cuesta automatizar un depósito?",
+          "a": "Depende de la tecnología, el throughput requerido y el tamaño del depósito. Como referencia: un módulo VLM o un sistema de picking puede arrancar desde USD 150.000; un sistema shuttle compacto ronda los USD 600.000; y un ASRS unit-load completo con software puede superar los USD 3.000.000. En Argentina, los beneficios fiscales (RIMI, arancel reducido según NCM, IVA 10,5% y financiamiento BICE) pueden reducir el costo real entre un 15% y un 40%."
+        },
+        {
+          "q": "¿Conviene automatizar mi almacén ahora o esperar?",
+          "a": "La combinación de beneficios vigentes en 2025–2026 hace de este momento una ventana favorable: el RIGI ofrece estabilidad fiscal por 30 años, el Decreto 513/2025 reduce los aranceles de importación según la clasificación NCM, y la línea BICE financia hasta el 80% del proyecto a 10 años. Esta convergencia de estabilidad, reducción arancelaria y financiamiento preferencial no siempre está disponible en simultáneo."
         }
       ],
       "ctaTag": "Evaluación sin cargo",
