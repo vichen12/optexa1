@@ -449,5 +449,28 @@ export const ARTICULOS = [
   },
 ];
 
-export const getArticulo = (slug) => ARTICULOS.find(a => a.slug === slug);
-export const getArticulosByCategoria = (cat) => ARTICULOS.filter(a => a.categoria === cat);
+import { ARTICULOS_SPRINT2 } from './articulosSprint2.js';
+
+/* Todos los artículos = los originales (monolingües ES) + los nuevos
+   (con variantes por idioma en .i18n). */
+export const TODOS_ARTICULOS = [...ARTICULOS, ...ARTICULOS_SPRINT2];
+
+/* Resuelve un artículo al idioma pedido. Si tiene .i18n[lang] aplana esa
+   variante sobre el objeto base (slug/heroImg/categoria/etc. son comunes);
+   si no, devuelve el artículo tal cual (ES, comportamiento original). */
+const resolveArticulo = (art, lang = 'es') => {
+  if (!art || !art.i18n) return art;
+  const variant = art.i18n[lang] || art.i18n.es;
+  const base = { ...art };
+  delete base.i18n;
+  return { ...base, ...variant };
+};
+
+export const getArticulo = (slug, lang = 'es') =>
+  resolveArticulo(TODOS_ARTICULOS.find(a => a.slug === slug), lang);
+
+export const getArticulosByCategoria = (cat, lang = 'es') =>
+  TODOS_ARTICULOS.filter(a => a.categoria === cat).map(a => resolveArticulo(a, lang));
+
+/* Slugs de todos los artículos (para prerender/sitemap, sin importar idioma). */
+export const ALL_ARTICULO_SLUGS = TODOS_ARTICULOS.map(a => a.slug);

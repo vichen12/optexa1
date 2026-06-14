@@ -35,7 +35,8 @@ const STATIC_ROUTES = [
 // al agregar productos, artículos o industrias.
 // productosData/articulosData son JS de datos puros (sin JSX) → importables en Node.
 const { PRODUCTOS } = await import('./src/data/productosData.js');
-const { ARTICULOS } = await import('./src/data/articulosData.js');
+// ALL_ARTICULO_SLUGS incluye los artículos originales + los del Sprint 2 (multiidioma).
+const { ALL_ARTICULO_SLUGS } = await import('./src/data/articulosData.js');
 
 // Slugs de industria: leídos del JSON i18n (sin tocar el componente JSX).
 const esLocale = JSON.parse(
@@ -44,7 +45,7 @@ const esLocale = JSON.parse(
 const INDUSTRY_SLUGS = Object.keys(esLocale.pages.industrias.industriesList);
 
 const PRODUCT_ROUTES = Object.keys(PRODUCTOS).map((k) => `/catalogo/${k}`);
-const ARTICLE_ROUTES = ARTICULOS.map((a) => `/recursos/${a.slug}`);
+const ARTICLE_ROUTES = ALL_ARTICULO_SLUGS.map((slug) => `/recursos/${slug}`);
 const INDUSTRY_ROUTES = INDUSTRY_SLUGS.map((s) => `/industrias/${s}`);
 
 const ROUTES = [

@@ -22,7 +22,7 @@ const STATIC_ROUTES = [
 ];
 
 const { PRODUCTOS } = await import('../src/data/productosData.js');
-const { ARTICULOS } = await import('../src/data/articulosData.js');
+const { ALL_ARTICULO_SLUGS } = await import('../src/data/articulosData.js');
 const esLocale = JSON.parse(
   readFileSync(join(ROOT, 'src/i18n/locales/es.json'), 'utf-8')
 );
@@ -32,7 +32,7 @@ const ROUTES = [
   ...STATIC_ROUTES,
   ...INDUSTRY_SLUGS.map((s) => `/industrias/${s}`),
   ...Object.keys(PRODUCTOS).map((k) => `/catalogo/${k}`),
-  ...ARTICULOS.map((a) => `/recursos/${a.slug}`),
+  ...ALL_ARTICULO_SLUGS.map((slug) => `/recursos/${slug}`),
 ];
 
 // Prioridad/frecuencia por tipo de página

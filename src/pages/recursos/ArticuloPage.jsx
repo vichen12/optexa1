@@ -12,10 +12,10 @@ import { getArticulo } from '../../data/articulosData';
 import { SeoHead } from '../../lib/SeoHead';
 
 export const ArticuloPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const p = (k) => t(`pages.articulo.${k}`, { returnObjects: true });
   const { slug } = useParams();
-  const art = getArticulo(slug);
+  const art = getArticulo(slug, i18n.language);
 
   if (!art) {
     return (
@@ -49,6 +49,7 @@ export const ArticuloPage = () => {
     "image": `https://www.stokagroup.com${art.heroImg}`,
     "articleSection": art.categoria,
     "wordCount": art.wordCount,
+    "inLanguage": i18n.language,
   };
 
   const breadcrumbSchema = {

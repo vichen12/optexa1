@@ -7,7 +7,7 @@ import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
-import { ARTICULOS } from '../../data/articulosData';
+import { TODOS_ARTICULOS } from '../../data/articulosData';
 import { SeoHead } from '../../lib/SeoHead';
 
 const RECURSOS_EXTRA = [
@@ -35,9 +35,18 @@ const RECURSOS_EXTRA = [
 ];
 
 export const RecursosHub = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const p = (k) => t(`pages.recursosHub.${k}`, { returnObjects: true });
   const canonical = 'https://www.stokagroup.com/recursos';
+
+  /* Resolver cada artículo al idioma actual (los del Sprint 2 tienen .i18n). */
+  const lang = i18n.language;
+  const articulos = TODOS_ARTICULOS.map((a) => {
+    if (!a.i18n) return a;
+    const base = { ...a };
+    delete base.i18n;
+    return { ...base, ...(a.i18n[lang] || a.i18n.es) };
+  });
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -118,7 +127,7 @@ export const RecursosHub = () => {
         <section className="max-w-5xl mx-auto px-6 pb-20">
           <h2 className="text-lg font-black text-gray-900 uppercase tracking-widest mb-6">{p('articlesH2')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {ARTICULOS.map((art, i) => (
+            {articulos.map((art, i) => (
               <motion.div
                 key={art.slug}
                 initial={{ opacity: 0, y: 16 }}
