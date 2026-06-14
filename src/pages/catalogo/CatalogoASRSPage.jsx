@@ -28,15 +28,6 @@ const PRODUCTS = [
   { name: 'Drive-in racking', image: img('Conducir en estanterías', 'drive-in-rackinga817d.webp'), desc: 'La carretilla ingresa dentro. Hasta 80% de utilización del espacio. Sistema LIFO, apto para frío.', link: '/catalogo/asrs/drive-in-racking' },
 ];
 
-const FAQ = [
-  { q: '¿Cuánto espacio vertical aprovecha un sistema AS/RS en mi almacén, bodega o depósito?', a: 'Los sistemas AS/RS DELIE aprovechan desde 7 hasta 40 metros de altura libre. En un almacén con 12 metros de altura, podés almacenar hasta 5 veces más que con estanterías convencionales de 4-5 metros. La clave está en diseñar la estructura según la altura disponible y el tipo de carga.' },
-  { q: '¿Cuál es la diferencia entre estanterías drive-in, shuttle y MiniLoad?', a: 'Las estanterías drive-in usan carretillas convencionales: las más económicas, ideales para LIFO de alta densidad. Las shuttle combinan estanterías con robots lanzadera para mayor velocidad y FIFO/LIFO selectivo. Las MiniLoad son para contenedores y totes con transelevadores: máxima velocidad y precisión para e-commerce, farmacéutica y bodega de alta rotación.' },
-  { q: '¿Cuánto tiempo lleva instalar un sistema AS/RS en un almacén o depósito existente?', a: 'La instalación mecánica de estanterías AS/RS toma 4 a 10 semanas según el modelo. La adecuación civil previa (losa plana, iluminación) puede añadir 4-6 semanas si el edificio lo requiere. STOKA coordina toda la ingeniería de detalle, el montaje y la puesta en marcha certificada en Argentina.' },
-  { q: '¿Las estanterías DELIE aplican al Decreto 513/2025 de arancel reducido en Argentina?', a: 'Sí. Las estanterías AS/RS para sistemas automatizados están incluidas en las posiciones arancelarias del Decreto 513/2025, que reduce los aranceles de importación según la clasificación NCM de cada componente. STOKA verifica la posición arancelaria exacta para cada proyecto sin costo adicional, garantizando que aprovechés el beneficio desde el primer día de importación.' },
-  { q: '¿Qué es un depósito inteligente y en qué se diferencia de un almacén tradicional?', a: 'Un depósito inteligente es un almacén automatizado que integra sistemas ASRS, robótica y software de gestión para operar con mínima intervención humana. A diferencia de un almacén tradicional —con operarios, montacargas y estanterías estáticas—, el depósito inteligente lleva la mercadería hasta el operario (goods-to-person), multiplica la densidad por metro cuadrado y opera 24/7 con trazabilidad total. Es la base de la logística 4.0 y la intralogística moderna.' },
-  { q: '¿Cuánto espacio ahorra un sistema ASRS en un centro de distribución?', a: 'Un sistema ASRS aprovecha la altura de la nave —de 7 a 40 metros— y elimina los pasillos anchos de los montacargas. En la práctica, un almacén robotizado de alta densidad puede almacenar entre 3 y 5 veces más mercadería en el mismo metro cuadrado que una estantería convencional, liberando superficie o evitando una ampliación edilicia del centro de distribución.' },
-];
-
 const SISTER_CATS = [
   { label: 'Robots de manipulación', href: '/catalogo/robots-manipulacion', desc: 'Transelevadores, shuttles y AMR' },
   { label: 'Almacenamiento vertical', href: '/catalogo/almacenamiento-vertical', desc: 'VLM y carruseles inteligentes' },
@@ -46,8 +37,10 @@ const SISTER_CATS = [
 
 export const CatalogoASRSPage = () => {
   const langNavigate = useLangNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const p = (k) => t(`pages.catalogoAsrs.${k}`, { returnObjects: true });
+  const FAQ = p('faq');
+  const faqList = Array.isArray(FAQ) ? FAQ : [];
   const videoRef = useRef(null);
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
@@ -84,7 +77,8 @@ export const CatalogoASRSPage = () => {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          "mainEntity": FAQ.map(item => ({
+          "inLanguage": i18n.language,
+          "mainEntity": faqList.map(item => ({
             "@type": "Question",
             "name": item.q,
             "acceptedAnswer": { "@type": "Answer", "text": item.a }

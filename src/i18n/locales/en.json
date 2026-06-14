@@ -1839,20 +1839,28 @@
       "faqH2": "What an Operations Director asks",
       "faq": [
         {
-          "q": "How much vertical space does an AS/RS system use in my warehouse?",
-          "a": "DELIE AS/RS systems utilize from 7 to 40 meters of free height. In a warehouse with 12 meters, you can store up to 5 times more than with conventional 4-5 meter racking. The key is designing the structure according to available height and load type."
+          "q": "How much vertical space does an AS/RS system use in my warehouse or facility?",
+          "a": "DELIE AS/RS systems use from 7 to 40 meters of free height. In a warehouse with 12 meters of height, you can store up to 5 times more than with conventional 4-5 meter racking. The key is designing the structure based on the available height and the type of load."
         },
         {
-          "q": "What is the difference between drive-in, shuttle, and MiniLoad racking?",
-          "a": "Drive-in racking uses conventional forklifts: the most economical, ideal for high-density LIFO. Shuttle racking combines shelving with shuttle robots for higher speed and selective FIFO/LIFO. MiniLoad is for containers and totes with stacker cranes: maximum speed and precision for e-commerce, pharma and high-turnover warehouses."
+          "q": "What is the difference between drive-in, shuttle and MiniLoad racking?",
+          "a": "Drive-in racking uses conventional forklifts: the most economical, ideal for high-density LIFO. Shuttle racking combines racking with shuttle robots for higher speed and selective FIFO/LIFO. MiniLoad is for containers and totes with stacker cranes: maximum speed and precision for e-commerce, pharma and high-rotation facilities."
         },
         {
           "q": "How long does it take to install an AS/RS system in an existing warehouse?",
-          "a": "Mechanical installation of AS/RS racking takes 4 to 10 weeks depending on the model. Prior civil adaptation (flat slab, lighting) can add 4-6 weeks if the building requires it. STOKA coordinates all detailed engineering, assembly and certified commissioning in Argentina."
+          "a": "The mechanical installation of AS/RS racking takes 4 to 10 weeks depending on the model. Prior civil works (flat slab, lighting) can add 4-6 weeks if the building requires it. STOKA coordinates all detailed engineering, assembly and certified commissioning in Argentina."
         },
         {
-          "q": "Does DELIE racking qualify for Argentina's Decree 513/2025 0% import duty?",
-          "a": "Yes. AS/RS racking for automated systems is included in the tariff positions of Decree 513/2025. STOKA verifies the exact tariff position for each project at no extra cost, ensuring you benefit from the first day of import."
+          "q": "Does DELIE racking qualify for the reduced tariff under Decreto 513/2025 in Argentina?",
+          "a": "Yes. AS/RS racking for automated systems is included in the tariff positions of Decreto 513/2025, which reduces import tariffs based on the NCM classification of each component. STOKA verifies the exact tariff position for each project at no additional cost, ensuring you benefit from the first day of importation."
+        },
+        {
+          "q": "What is a smart warehouse and how does it differ from a traditional one?",
+          "a": "A smart warehouse is an automated warehouse that integrates ASRS systems, robotics and management software to operate with minimal human intervention. Unlike a traditional warehouse —with operators, forklifts and static racking—, the smart warehouse brings goods to the operator (goods-to-person), multiplies density per square meter and operates 24/7 with full traceability. It is the basis of Logistics 4.0 and modern intralogistics."
+        },
+        {
+          "q": "How much space does an ASRS system save in a distribution center?",
+          "a": "An ASRS system uses the height of the building —from 7 to 40 meters— and eliminates the wide forklift aisles. In practice, a high-density robotized warehouse can store 3 to 5 times more goods in the same square meter than conventional racking, freeing up floor space or avoiding a building expansion of the distribution center."
         }
       ],
       "footerLinks": [

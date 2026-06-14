@@ -1851,8 +1851,16 @@
           "a": "La instalación mecánica de estanterías AS/RS toma 4 a 10 semanas según el modelo. La adecuación civil previa (losa plana, iluminación) puede añadir 4-6 semanas si el edificio lo requiere. STOKA coordina toda la ingeniería de detalle, el montaje y la puesta en marcha certificada en Argentina."
         },
         {
-          "q": "¿Las estanterías DELIE aplican al Decreto 513/2025 de arancel 0% en Argentina?",
-          "a": "Sí. Las estanterías AS/RS para sistemas automatizados están incluidas en las posiciones arancelarias del Decreto 513/2025. STOKA verifica la posición arancelaria exacta para cada proyecto sin costo adicional, garantizando que aprovechés el beneficio desde el primer día de importación."
+          "q": "¿Las estanterías DELIE aplican al Decreto 513/2025 de arancel reducido en Argentina?",
+          "a": "Sí. Las estanterías AS/RS para sistemas automatizados están incluidas en las posiciones arancelarias del Decreto 513/2025, que reduce los aranceles de importación según la clasificación NCM de cada componente. STOKA verifica la posición arancelaria exacta para cada proyecto sin costo adicional, garantizando que aprovechés el beneficio desde el primer día de importación."
+        },
+        {
+          "q": "¿Qué es un depósito inteligente y en qué se diferencia de un almacén tradicional?",
+          "a": "Un depósito inteligente es un almacén automatizado que integra sistemas ASRS, robótica y software de gestión para operar con mínima intervención humana. A diferencia de un almacén tradicional —con operarios, montacargas y estanterías estáticas—, el depósito inteligente lleva la mercadería hasta el operario (goods-to-person), multiplica la densidad por metro cuadrado y opera 24/7 con trazabilidad total. Es la base de la logística 4.0 y la intralogística moderna."
+        },
+        {
+          "q": "¿Cuánto espacio ahorra un sistema ASRS en un centro de distribución?",
+          "a": "Un sistema ASRS aprovecha la altura de la nave —de 7 a 40 metros— y elimina los pasillos anchos de los montacargas. En la práctica, un almacén robotizado de alta densidad puede almacenar entre 3 y 5 veces más mercadería en el mismo metro cuadrado que una estantería convencional, liberando superficie o evitando una ampliación edilicia del centro de distribución."
         }
       ],
       "footerLinks": [
