@@ -307,7 +307,7 @@
       {
         "num": "01",
         "challenge": "Import cost",
-        "solution": "Decree 513/2025 eliminates tariffs for ASRS systems — savings of 12% to 18% on equipment value."
+        "solution": "Decree 513/2025 reduces tariffs for ASRS systems based on their NCM classification — savings of 12% to 18% on equipment value."
       },
       {
         "num": "02",
@@ -2865,7 +2865,7 @@
         {
           "label": "0% tariff saving",
           "value": "− USD 150,000",
-          "desc": "Decreto 513/2025 eliminates the 15% tariff on CIF value. Direct saving in the initial outlay."
+          "desc": "Decreto 513/2025 significantly reduces the import tariff on CIF value based on the NCM classification. Direct saving in the initial outlay."
         },
         {
           "label": "VAT 10.5% vs 21%",
@@ -2907,9 +2907,9 @@
       "ctx2026Tag": "The 2026 context",
       "ctx2026H2": "Why 2026 is a window of opportunity to automate",
       "ctx2026P": [
-        "The convergence of three factors makes 2025–2026 a unique window to invest in warehouse automation in Argentina. For the first time in decades, long-term regulatory stability, elimination of import tariffs and access to preferential financing combine simultaneously.",
+        "The convergence of three factors makes 2025–2026 a unique window to invest in warehouse automation in Argentina. For the first time in decades, long-term regulatory stability, reduction of import tariffs and access to preferential financing combine simultaneously.",
         "RIGI offers 30 years of tax stability: Income Tax at 25%, fixed tariffs and free availability of foreign currency from the third year. For companies automating today, this horizon of certainty makes it easier to calculate the 10-year TCO and present the project to the board or financiers.",
-        "Decreto 513/2025 eliminates the 15% tariff: on a USD 800,000 project, that is USD 120,000 less in initial outlay. With no additional management by the company: it applies automatically when importing DELIE equipment.",
+        "Decreto 513/2025 significantly reduces the tariff based on the NCM classification: on a USD 800,000 project, it can represent up to USD 120,000 less in initial outlay. With no additional management by the company: it applies automatically when importing DELIE equipment.",
         "The combination of BICE + RIMI + 0% tariff transforms the investment equation: the monthly financing installment falls below the monthly labor cost being replaced, making the system pay for itself from the first year of operation."
       ],
       "faqTag": "Frequently asked questions",

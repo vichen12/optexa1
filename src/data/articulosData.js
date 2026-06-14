@@ -54,7 +54,7 @@ export const ARTICULOS = [
     readTime: '8 min',
     publishDate: '2026-06-10',
     heroImg: '/gxo-2023.webp',
-    intro: 'La pregunta más frecuente en la primera reunión técnica es siempre la misma: ¿cuánto cuesta automatizar mi almacén? La respuesta honesta es que depende de muchos factores —tecnología elegida, throughput, altura, cantidad de SKUs y nivel de integración— pero sí existen rangos orientativos por tipo de proyecto. En Argentina, el panorama de costos de automatización cambió sustancialmente en 2025 y 2026: el Decreto 513/2025 elimina el arancel de importación para equipos ASRS y el RIMI (Ley 27.802) permite amortización acelerada en el primer ejercicio, mejorando el ROI de todos los proyectos de automatización de almacenes, bodegas y depósitos industriales.',
+    intro: 'La pregunta más frecuente en la primera reunión técnica es siempre la misma: ¿cuánto cuesta automatizar mi almacén? La respuesta honesta es que depende de muchos factores —tecnología elegida, throughput, altura, cantidad de SKUs y nivel de integración— pero sí existen rangos orientativos por tipo de proyecto. En Argentina, el panorama de costos de automatización cambió sustancialmente en 2025 y 2026: el Decreto 513/2025 reduce el arancel de importación para equipos ASRS según su clasificación NCM y el RIMI (Ley 27.802) permite amortización acelerada en el primer ejercicio, mejorando el ROI de todos los proyectos de automatización de almacenes, bodegas y depósitos industriales.',
     sections: [
       {
         h2: 'Rangos de inversión por tipo de sistema de automatización',
@@ -160,7 +160,7 @@ export const ARTICULOS = [
       },
       {
         h2: 'Combinación RIMI + Decreto 513/2025 + BICE: el escenario óptimo',
-        body: 'Los tres instrumentos son compatibles y se potencian mutuamente. El Decreto 513/2025 elimina el arancel de importación (ahorro del 12-18% sobre el valor CIF). El RIMI reduce la carga fiscal del primer año con amortización acelerada y devolución anticipada de IVA. La línea BICE financia hasta el 80% del proyecto a 10 años con tasa preferencial. En un proyecto representativo de USD 1.000.000: el arancel 0% ahorra USD 150.000, la amortización acelerada RIMI genera USD 350.000 de deducción impositiva en el año 1, y el BICE reduce el desembolso inicial a USD 200.000. El impacto sobre el flujo de caja del primer año es dramático: la empresa puede arrancar un sistema de un millón de dólares con un desembolso neto inicial que compite con el costo laboral que está reemplazando.',
+        body: 'Los tres instrumentos son compatibles y se potencian mutuamente. El Decreto 513/2025 reduce el arancel de importación según la clasificación NCM (ahorro variable según NCM). El RIMI reduce la carga fiscal del primer año con amortización acelerada y devolución anticipada de IVA. La línea BICE financia hasta el 80% del proyecto a 10 años con tasa preferencial. En un proyecto representativo de USD 1.000.000: el arancel 0% ahorra USD 150.000, la amortización acelerada RIMI genera USD 350.000 de deducción impositiva en el año 1, y el BICE reduce el desembolso inicial a USD 200.000. El impacto sobre el flujo de caja del primer año es dramático: la empresa puede arrancar un sistema de un millón de dólares con un desembolso neto inicial que compite con el costo laboral que está reemplazando.',
       },
     ],
     conclusionH2: 'El 2026 no se va a repetir',

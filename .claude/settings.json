@@ -47,7 +47,14 @@
       "Bash(ffmpeg -y -i public/bannervideo1-compressed.mp4 -vf \"fps=24,scale=1280:-2\" -c:v libx264 -crf 32 -preset slow -profile:v main -pix_fmt yuv420p -an -movflags +faststart public/bannervideo1-hero-v2.mp4 -loglevel error)",
       "Bash(ffprobe -v trace public/bannervideo1-hero.mp4)",
       "Bash(ffmpeg -y -i public/bannervideo1-hero.mp4 -frames:v 1 -q:v 3 public/bannervideo1-poster.webp -loglevel error)",
-      "Bash(awk '{print \"poster webp:\", int\\($5/1024\\)\"KB\"}')"
+      "Bash(awk '{print \"poster webp:\", int\\($5/1024\\)\"KB\"}')",
+      "Bash(awk '{print $9, int\\($5/1024\\)\"KB\"}')",
+      "Bash(curl -sS -o /dev/null -w \"sitemap.xml → HTTP %{http_code}\\\\n\" https://www.stokagroup.com/sitemap.xml)",
+      "Bash(curl -sS -o /dev/null -w \"robots.txt → HTTP %{http_code}\\\\n\" https://www.stokagroup.com/robots.txt)",
+      "Bash(curl -sS -o /dev/null -w \"home → HTTP %{http_code}\\\\n\" https://www.stokagroup.com/)",
+      "Bash(curl -sSk --ssl-no-revoke \"https://www.stokagroup.com/sitemap.xml\")",
+      "Bash(curl -sSk --ssl-no-revoke -o /dev/null -w \"Content-Type: %{content_type}\\\\n\" \"https://www.stokagroup.com/sitemap.xml\")",
+      "Bash(grep -n \"LANGS\\\\|for \\(const lang\\\\|const url =\\\\|/\\\\${lang}\" prerender.js)"
     ]
   }
 }

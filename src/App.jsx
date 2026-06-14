@@ -91,7 +91,8 @@ function LangLayout({ lang }) {
 }
 
 export function HomePage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
 
   useEffect(() => {
     const handleVisibilityChange = () => {
@@ -117,9 +118,10 @@ export function HomePage() {
           "name": "STOKA — Automatización de Almacenes",
           "url": "https://www.stokagroup.com",
           "description": "Representantes oficiales exclusivos de DELIE en Argentina.",
+          "inLanguage": lang,
           "publisher": { "@type": "Organization", "name": "STOKA" }
         })}</script>
-        <script type="application/ld+json">{JSON.stringify(ORGANIZATION_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify({ ...ORGANIZATION_SCHEMA, inLanguage: lang })}</script>
       </Helmet>
       <Navbar />
 
@@ -257,6 +259,8 @@ export function HomePage() {
 }
 
 function App() {
+  const { i18n } = useTranslation();
+  const lang = i18n.language;
   /* Shared inner routes — reused for /, /en, /zh */
   const inner = [
     <Route key="home" index element={<HomePage />} />,
@@ -290,7 +294,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <script type="application/ld+json">{JSON.stringify(ORGANIZATION_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify({ ...ORGANIZATION_SCHEMA, inLanguage: lang })}</script>
       </Helmet>
       <Suspense fallback={<div className="min-h-screen bg-zinc-950" />}>
         <Routes>

@@ -307,7 +307,7 @@
       {
         "num": "01",
         "challenge": "Costo de importación",
-        "solution": "El Decreto 513/2025 elimina los aranceles para sistemas ASRS — ahorro del 12% al 18% sobre el valor del equipo."
+        "solution": "El Decreto 513/2025 reduce los aranceles para sistemas ASRS según su clasificación NCM — ahorro del 12% al 18% sobre el valor del equipo."
       },
       {
         "num": "02",
@@ -2865,7 +2865,7 @@
         {
           "label": "Ahorro arancel 0%",
           "value": "− USD 150.000",
-          "desc": "Decreto 513/2025 elimina el 15% de arancel sobre valor CIF. Ahorro directo en el desembolso inicial."
+          "desc": "Decreto 513/2025 reduce significativamente el arancel sobre valor CIF según la posición NCM. Ahorro directo en el desembolso inicial."
         },
         {
           "label": "IVA 10,5% vs 21%",
@@ -2907,9 +2907,9 @@
       "ctx2026Tag": "El contexto 2026",
       "ctx2026H2": "Por qué 2026 es una ventana de oportunidad para automatizar",
       "ctx2026P": [
-        "La convergencia de tres factores hace de 2025–2026 una ventana única para invertir en automatización de almacenes en Argentina. Por primera vez en décadas se combinan estabilidad normativa de largo plazo, eliminación de aranceles de importación y acceso a financiamiento preferencial en simultáneo.",
+        "La convergencia de tres factores hace de 2025–2026 una ventana única para invertir en automatización de almacenes en Argentina. Por primera vez en décadas se combinan estabilidad normativa de largo plazo, reducción de aranceles de importación y acceso a financiamiento preferencial en simultáneo.",
         "El RIGI ofrece 30 años de estabilidad fiscal: Ganancias al 25%, aranceles fijos y libre disponibilidad de divisas desde el tercer año. Para empresas que automatizan hoy, este horizonte de certeza facilita el cálculo del TCO a 10 años y la presentación del proyecto ante directorio o financiadores.",
-        "El Decreto 513/2025 elimina el 15% de arancel: en un proyecto de USD 800.000, eso son USD 120.000 menos de desembolso inicial. Sin gestión adicional por parte de la empresa: aplica automáticamente al importar los equipos DELIE.",
+        "El Decreto 513/2025 reduce significativamente el arancel según la posición NCM: en un proyecto de USD 800.000, puede representar hasta USD 120.000 menos de desembolso inicial. Sin gestión adicional por parte de la empresa: aplica automáticamente al importar los equipos DELIE.",
         "La combinación de BICE + RIMI + arancel 0% transforma la ecuación de inversión: la cuota mensual del financiamiento queda por debajo del costo laboral mensual que se reemplaza, haciendo que el sistema se financie a sí mismo desde el primer año de operación."
       ],
       "faqTag": "Preguntas frecuentes",

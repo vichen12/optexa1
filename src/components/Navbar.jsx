@@ -115,22 +115,26 @@ export const Navbar = () => {
     } else handlePageNav(e, item.href);
   };
 
-  /* Switch language and navigate to equivalent page */
-  const switchLang = (newLang) => {
-    setLangOpen(false);
-    const currentLang = i18n.language;
-    if (currentLang === newLang) return;
-
-    // Determine current path without language prefix
+  /* URL equivalente de la página actual en OTRO idioma.
+     Se usa como href real del <a> del selector para que Googlebot la siga sin ejecutar JS. */
+  const langSwitchHref = (newLang) => {
     let currentPath = location.pathname;
     if (currentPath.startsWith('/en')) currentPath = currentPath.slice(3) || '/';
     else if (currentPath.startsWith('/zh')) currentPath = currentPath.slice(3) || '/';
     if (!currentPath.startsWith('/')) currentPath = '/' + currentPath;
+    return newLang === 'es' ? currentPath : `/${newLang}${currentPath === '/' ? '' : currentPath}`;
+  };
 
-    // Build target URL
-    const targetPath = newLang === 'es' ? currentPath : `/${newLang}${currentPath === '/' ? '' : currentPath}`;
+  /* Click en el selector: navegación SPA, conservando el href real del <a>. */
+  const handleLangClick = (e, newLang) => {
+    setLangOpen(false);
+    setMobileMenuOpen(false);
+    if (i18n.language === newLang) { e.preventDefault(); return; }
+    // dejar que clics modificados (ctrl/cmd/nueva pestaña) usen el href nativo
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+    e.preventDefault();
     i18n.changeLanguage(newLang);
-    window.location.assign(targetPath);
+    window.location.assign(langSwitchHref(newLang));
   };
 
   const currentLang = LANGS.find(l => l.code === i18n.language) || LANGS[0];
@@ -285,10 +289,12 @@ export const Navbar = () => {
                   >
                     <div className="p-1.5">
                       {LANGS.map((lang) => (
-                        <button
+                        <a
                           key={lang.code}
-                          onClick={() => switchLang(lang.code)}
+                          href={langSwitchHref(lang.code)}
+                          onClick={(e) => handleLangClick(e, lang.code)}
                           lang={lang.code}
+                          hrefLang={lang.code}
                           aria-current={i18n.language === lang.code ? 'true' : undefined}
                           className={cx(
                             "w-full text-left flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-xl transition-colors",
@@ -301,7 +307,7 @@ export const Navbar = () => {
                           {i18n.language === lang.code && (
                             <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
                           )}
-                        </button>
+                        </a>
                       ))}
                     </div>
                   </motion.div>
@@ -382,10 +388,12 @@ export const Navbar = () => {
                 className="flex items-center justify-center gap-2 mt-2"
               >
                 {LANGS.map((lang) => (
-                  <button
+                  <a
                     key={lang.code}
-                    onClick={() => { setMobileMenuOpen(false); switchLang(lang.code); }}
+                    href={langSwitchHref(lang.code)}
+                    onClick={(e) => handleLangClick(e, lang.code)}
                     lang={lang.code}
+                    hrefLang={lang.code}
                     aria-current={i18n.language === lang.code ? 'true' : undefined}
                     className={cx(
                       "px-4 py-2 rounded-xl text-sm font-black transition-all",
@@ -395,7 +403,7 @@ export const Navbar = () => {
                     )}
                   >
                     {lang.label}
-                  </button>
+                  </a>
                 ))}
               </motion.div>
 

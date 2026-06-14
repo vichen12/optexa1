@@ -33,6 +33,7 @@ import { AutoStoreAlternativaPage } from './pages/catalogo/AutoStoreAlternativaP
 import { ChilePage } from './pages/ChilePage';
 
 function App() {
+  const lang = i18next.language;
   /* Shared inner routes — reused for /, /en, /zh (same shape as App.jsx) */
   const inner = [
     <Route key="home" index element={<HomePage />} />,
@@ -66,7 +67,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <script type="application/ld+json">{JSON.stringify(ORGANIZATION_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify({ ...ORGANIZATION_SCHEMA, inLanguage: lang })}</script>
       </Helmet>
       <Routes>
         <Route path="/">{inner}</Route>

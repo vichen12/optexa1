@@ -1,6 +1,22 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import { LangLink } from '../lib/i18n-utils';
+
+const FOOTER_LANGS = [
+  { code: 'es', label: 'Español' },
+  { code: 'en', label: 'English' },
+  { code: 'zh', label: '中文' },
+];
+
+/* URL equivalente de la página actual en otro idioma (link estático rastreable). */
+const buildLangHref = (pathname, code) => {
+  let p = pathname;
+  if (p.startsWith('/en')) p = p.slice(3) || '/';
+  else if (p.startsWith('/zh')) p = p.slice(3) || '/';
+  if (!p.startsWith('/')) p = '/' + p;
+  return code === 'es' ? p : `/${code}${p === '/' ? '' : p}`;
+};
 
 const CATALOGO_PATHS = [
   { key: 'asrs',      href: '/catalogo/asrs' },
@@ -65,7 +81,8 @@ function FooterLinkGroup({ title, items, ns }) {
 }
 
 export const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
   const year = new Date().getFullYear();
 
   return (
@@ -138,6 +155,21 @@ export const Footer = () => {
         </div>
 
         {/* BOTTOM BAR */}
+        {/* Selector de idioma estático (links reales rastreables por Googlebot) */}
+        <nav aria-label={t('nav.language')} className="pt-6 border-t border-gray-200 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px]">
+          {FOOTER_LANGS.map((l) => (
+            <a
+              key={l.code}
+              href={buildLangHref(location.pathname, l.code)}
+              hrefLang={l.code}
+              lang={l.code}
+              aria-current={i18n.language === l.code ? 'true' : undefined}
+              className={i18n.language === l.code ? 'font-bold text-cyan-600' : 'text-gray-400 hover:text-cyan-600 transition-colors'}
+            >
+              {l.label}
+            </a>
+          ))}
+        </nav>
         <div className="pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-400">
           <span>{t('footer.copyright', { year })}</span>
           <span>{t('footer.address')}</span>
