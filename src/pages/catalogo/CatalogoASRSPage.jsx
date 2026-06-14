@@ -13,26 +13,27 @@ import { SeoHead } from '../../lib/SeoHead';
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
 const img = (prod, file) => `/productos-delie/asrs/${seg(prod)}/${file}`;
 
-const PRODUCTS = [
-  { name: 'Estanterías Pallet Shuttle', image: img('Estanterías robóticas con lanzadera para palés', 'pallet-shuttle-robot-racking13c59.webp'), desc: 'Estanterías de alta densidad para robots lanzadera de paletas. 7 a 40 metros de altura, precisión ±0,1 mm.', link: '/catalogo/asrs/pallet-shuttle-racking' },
-  { name: 'Estantería Tote Shuttle', image: img('Estantería del robot Tote Shuttle', 'tote-shuttle-robot-racking38678.webp'), desc: 'Para robots tote shuttle bidireccionales y 4 vías. Hasta 40 metros, anticorrosión de silano.', link: '/catalogo/asrs/tote-shuttle-racking' },
-  { name: 'Estanterías para grúa apiladora', image: img('Estanterías para grúa apiladora de paletas', 'pallet-stacker-crane-racking598c7.webp'), desc: 'Gran altura para transelevadores y grúas apiladoras. Compatible con grúas de 1 y 2 mástiles.', link: '/catalogo/asrs/pallet-stacker-crane-racking' },
-  { name: 'Mini-estantería Flybox', image: img('Mini-estantería Flybox', 'mini-flybox-racking93d5a.webp'), desc: 'Distancia ultra estrecha entre contenedores. Altura 550–12.000 mm. Ideal para e-commerce y farmacéutica.', link: '/catalogo/asrs/mini-flybox-racking' },
-  { name: 'Transelevador + Robot lanzadera', image: img('Transelevador Grúa + Estantería Robot Lanzadera', 'pallet-stacker-crane-shuttle-robot-racking89e90.webp'), desc: 'Sistema combinado de transelevadores y robots lanzadera. Máxima flexibilidad y eficiencia.', link: '/catalogo/asrs/stacker-crane-shuttle-racking' },
-  { name: 'Estanterías Miniload', image: img('Estanterías Miniload', 'miniload-rackinga0ea0.webp'), desc: 'Para transelevadores MiniLoad, simple y doble profundidad. Alta densidad de contenedores y totes.', link: '/catalogo/asrs/miniload-racking' },
-  { name: 'Estanterías de servicio pesado', image: img('Estanterías de servicio pesado', 'heavy-duty-racking9a1ae.webp'), desc: 'Hasta 2.000 kg por palé. Compatible con frío y trabajo pesado. Anticorrosión de silano.', link: '/catalogo/asrs/heavy-duty-racking' },
-  { name: 'Estanterías push-back', image: img('Estanterías push-para almacenamiento-de alta densidad', 'push-in-racking-for-high-density-storage2a4c0.webp'), desc: 'Alta densidad tipo push-back, sistema LIFO. Compatible con carretillas estándar.', link: '/catalogo/asrs/push-back-racking' },
-  { name: 'Estanterías de entresuelo', image: img('Estanterías de entresuelo', 'mezzanine-racking7da1b.webp'), desc: 'Plataforma elevada sobre estanterías para crear niveles adicionales de almacenamiento.', link: '/catalogo/asrs/mezzanine-racking' },
-  { name: 'Plataforma de estructura de acero', image: img('Plataforma de estructura de acero', 'steel-structure-platformfb756.webp'), desc: 'Plataforma elevada de acero personalizable para espacio adicional de almacenamiento.', link: '/catalogo/asrs/steel-platform' },
-  { name: 'Palé de almacenamiento de acero', image: img('Plataforma de almacenamiento de acero', 'steel-storage-palletce853.webp'), desc: 'Palé de acero resistente a humedad, frío y químicos. Compatible con sistemas automáticos.', link: '/catalogo/asrs/steel-pallet' },
-  { name: 'Drive-in racking', image: img('Conducir en estanterías', 'drive-in-rackinga817d.webp'), desc: 'La carretilla ingresa dentro. Hasta 80% de utilización del espacio. Sistema LIFO, apto para frío.', link: '/catalogo/asrs/drive-in-racking' },
+/* Solo imagen + link; name/desc desde i18n por índice. */
+const PRODUCT_MEDIA = [
+  { image: img('Estanterías robóticas con lanzadera para palés', 'pallet-shuttle-robot-racking13c59.webp'), link: '/catalogo/asrs/pallet-shuttle-racking' },
+  { image: img('Estantería del robot Tote Shuttle', 'tote-shuttle-robot-racking38678.webp'), link: '/catalogo/asrs/tote-shuttle-racking' },
+  { image: img('Estanterías para grúa apiladora de paletas', 'pallet-stacker-crane-racking598c7.webp'), link: '/catalogo/asrs/pallet-stacker-crane-racking' },
+  { image: img('Mini-estantería Flybox', 'mini-flybox-racking93d5a.webp'), link: '/catalogo/asrs/mini-flybox-racking' },
+  { image: img('Transelevador Grúa + Estantería Robot Lanzadera', 'pallet-stacker-crane-shuttle-robot-racking89e90.webp'), link: '/catalogo/asrs/stacker-crane-shuttle-racking' },
+  { image: img('Estanterías Miniload', 'miniload-rackinga0ea0.webp'), link: '/catalogo/asrs/miniload-racking' },
+  { image: img('Estanterías de servicio pesado', 'heavy-duty-racking9a1ae.webp'), link: '/catalogo/asrs/heavy-duty-racking' },
+  { image: img('Estanterías push-para almacenamiento-de alta densidad', 'push-in-racking-for-high-density-storage2a4c0.webp'), link: '/catalogo/asrs/push-back-racking' },
+  { image: img('Estanterías de entresuelo', 'mezzanine-racking7da1b.webp'), link: '/catalogo/asrs/mezzanine-racking' },
+  { image: img('Plataforma de estructura de acero', 'steel-structure-platformfb756.webp'), link: '/catalogo/asrs/steel-platform' },
+  { image: img('Plataforma de almacenamiento de acero', 'steel-storage-palletce853.webp'), link: '/catalogo/asrs/steel-pallet' },
+  { image: img('Conducir en estanterías', 'drive-in-rackinga817d.webp'), link: '/catalogo/asrs/drive-in-racking' },
 ];
 
-const SISTER_CATS = [
-  { label: 'Robots de manipulación', href: '/catalogo/robots-manipulacion', desc: 'Transelevadores, shuttles y AMR' },
-  { label: 'Almacenamiento vertical', href: '/catalogo/almacenamiento-vertical', desc: 'VLM y carruseles inteligentes' },
-  { label: 'Equipo de transporte', href: '/catalogo/equipo-transporte', desc: 'Conveyors, elevadores y paletizadores' },
-  { label: 'Software inteligente', href: '/catalogo/software', desc: 'WMS, WCS y control de almacén' },
+const SISTER_HREFS = [
+  '/catalogo/robots-manipulacion',
+  '/catalogo/almacenamiento-vertical',
+  '/catalogo/equipo-transporte',
+  '/catalogo/software',
 ];
 
 export const CatalogoASRSPage = () => {
@@ -41,6 +42,8 @@ export const CatalogoASRSPage = () => {
   const p = (k) => t(`pages.catalogoAsrs.${k}`, { returnObjects: true });
   const FAQ = p('faq');
   const faqList = Array.isArray(FAQ) ? FAQ : [];
+  const productsI18n = p('products');
+  const PRODUCTS = PRODUCT_MEDIA.map((m, i) => ({ ...m, ...((Array.isArray(productsI18n) ? productsI18n[i] : null) || {}) }));
   const videoRef = useRef(null);
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
@@ -64,13 +67,14 @@ export const CatalogoASRSPage = () => {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
-          "name": "Sistemas AS/RS DELIE — Estanterías automatizadas",
-          "numberOfItems": 12,
-          "itemListElement": PRODUCTS.map((p, i) => ({
+          "name": p('metaTitle'),
+          "numberOfItems": PRODUCTS.length,
+          "inLanguage": i18n.language,
+          "itemListElement": PRODUCTS.map((prod, i) => ({
             "@type": "ListItem",
             "position": i + 1,
-            "name": p.name,
-            "description": p.desc,
+            "name": prod.name,
+            "description": prod.desc,
             "url": "https://www.stokagroup.com/catalogo/asrs"
           }))
         })}</script>
@@ -87,8 +91,9 @@ export const CatalogoASRSPage = () => {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "name": "Sistemas ASRS — Almacenamiento Automatizado Argentina",
-          "description": "Sistemas de almacenamiento y recuperación automatizado (ASRS / AS/RS) DELIE para Argentina y Chile. Transelevadores, pallet shuttle, miniload y estanterías automatizadas de 7 a 40 m.",
+          "name": p('metaTitle'),
+          "description": p('metaDesc'),
+          "inLanguage": i18n.language,
           "provider": { "@id": "https://www.stokagroup.com/#organization" },
           "areaServed": [
             { "@type": "Country", "name": "Argentina" },
@@ -272,16 +277,16 @@ export const CatalogoASRSPage = () => {
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('catalogTag')}</p>
           <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">{p('catalogH2')}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {PRODUCTS.map((p, i) => (
-              <motion.button key={i} onClick={() => langNavigate(p.link)} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+            {PRODUCTS.map((prod, i) => (
+              <motion.button key={i} onClick={() => langNavigate(prod.link)} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
                 className="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-sm transition-all group">
                 <div className="aspect-4/3 overflow-hidden bg-gray-100">
-                  <img loading="lazy" src={p.image} alt={`${p.name} — sistema AS/RS DELIE`}
+                  <img loading="lazy" src={prod.image} alt={`${prod.name} — AS/RS DELIE`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-black text-gray-900 text-sm mb-1.5">{p.name}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed">{p.desc}</p>
+                  <h3 className="font-black text-gray-900 text-sm mb-1.5">{prod.name}</h3>
+                  <p className="text-gray-500 text-xs leading-relaxed">{prod.desc}</p>
                 </div>
               </motion.button>
             ))}
@@ -301,7 +306,7 @@ export const CatalogoASRSPage = () => {
           <h2 className="text-xl font-black text-gray-900 uppercase tracking-tighter mb-6">{p('sisterH2')}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {p('sisterCats').map((c, i) => (
-              <button key={i} onClick={() => langNavigate(SISTER_CATS[i].href)}
+              <button key={i} onClick={() => langNavigate(SISTER_HREFS[i])}
                 className="text-left p-4 bg-gray-50 border border-gray-200 rounded-xl hover:border-cyan-300 hover:bg-cyan-50/50 transition-all group">
                 <p className="font-bold text-gray-900 text-sm mb-0.5 group-hover:text-cyan-600 transition-colors">{c.label}</p>
                 <p className="text-gray-500 text-xs">{c.desc}</p>

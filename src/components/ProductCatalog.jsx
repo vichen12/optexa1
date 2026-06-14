@@ -138,7 +138,7 @@ function ProductModal({ product, onClose }) {
           {/* CLOSE */}
           <button
             onClick={onClose}
-            aria-label="Cerrar"
+            aria-label={ct('ariaClose')}
             className="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 hover:bg-gray-100 shadow transition-colors"
           >
             <X size={16} className="text-gray-600" />
@@ -165,14 +165,14 @@ function ProductModal({ product, onClose }) {
               <>
                 <button
                   onClick={prev}
-                  aria-label="Imagen anterior"
+                  aria-label={ct('ariaPrev')}
                   className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-white/90 shadow hover:bg-white transition-colors"
                 >
                   <ChevronLeft size={18} className="text-gray-700" />
                 </button>
                 <button
                   onClick={next}
-                  aria-label="Imagen siguiente"
+                  aria-label={ct('ariaNext')}
                   className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-white/90 shadow hover:bg-white transition-colors"
                 >
                   <ChevronRight size={18} className="text-gray-700" />
@@ -183,7 +183,7 @@ function ProductModal({ product, onClose }) {
                     <button
                       key={i}
                       onClick={() => setImgIdx(i)}
-                      aria-label={`Imagen ${i + 1}`}
+                      aria-label={`${ct('ariaImage')} ${i + 1}`}
                       className={`w-2 h-2 rounded-full transition-all ${i === imgIdx ? 'bg-cyan-500 w-5' : 'bg-gray-300'}`}
                     />
                   ))}
@@ -203,7 +203,7 @@ function ProductModal({ product, onClose }) {
                     i === imgIdx ? 'border-cyan-500' : 'border-transparent opacity-60 hover:opacity-100'
                   }`}
                 >
-                  <img loading="lazy" src={src} alt={`${product.name} — imagen ${i + 1}`} className="w-full h-full object-contain bg-gray-50" />
+                  <img loading="lazy" src={src} alt={`${product.name} — ${ct('ariaImage')} ${i + 1}`} className="w-full h-full object-contain bg-gray-50" />
                 </button>
               ))}
             </div>
@@ -240,13 +240,38 @@ function ProductModal({ product, onClose }) {
   );
 }
 
+/* Fusiona el CATALOG (imagen/href/id) con las traducciones de i18n por id:
+   categorías (label/desc) y productos (name/description/features). */
+const useLocalizedCatalog = (t) => {
+  const catsT = t('pages.catalog.cats', { returnObjects: true }) || {};
+  const itemsT = t('pages.catalog.items', { returnObjects: true }) || {};
+  return CATALOG.map((cat) => {
+    const ci = catsT[cat.id] || {};
+    return {
+      ...cat,
+      label: ci.label || cat.label,
+      desc: ci.desc || cat.desc,
+      products: cat.products.map((prod) => {
+        const pi = itemsT[prod.id] || {};
+        return {
+          ...prod,
+          name: pi.name || prod.name,
+          description: pi.description || prod.description,
+          features: pi.features || prod.features,
+        };
+      }),
+    };
+  });
+};
+
 export const ProductCatalog = () => {
   const { t } = useTranslation();
   const ct = (k) => t(`pages.catalog.${k}`);
+  const LOCALIZED = useLocalizedCatalog(t);
   const [searchParams] = useSearchParams();
   const langNavigate = useLangNavigate();
   const catParam = searchParams.get('cat');
-  const initialCat = catParam ? CATALOG.find(c => c.id === catParam) || null : null;
+  const initialCat = catParam ? LOCALIZED.find(c => c.id === catParam) || null : null;
 
   const [activeCat, setActiveCat] = useState(initialCat);
   const [selected, setSelected] = useState(null);
@@ -269,7 +294,7 @@ export const ProductCatalog = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">
-            DELIE · Fabricante certificado ISO 9001 · CE
+            {ct('certLine')}
           </p>
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter leading-none">
             {ct('categoriesH2_a')}{' '}
@@ -280,7 +305,7 @@ export const ProductCatalog = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {CATALOG.map((cat, i) => (
+          {LOCALIZED.map((cat, i) => (
             <motion.button
               key={cat.id}
               onClick={() => goTocat(cat)}
@@ -299,14 +324,14 @@ export const ProductCatalog = () => {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                 <span className="absolute bottom-3 right-3 text-xs font-mono text-white/80 bg-black/30 backdrop-blur-sm px-2 py-0.5 rounded-full">
-                  {cat.products.length} productos
+                  {cat.products.length} {ct('productsLabel')}
                 </span>
               </div>
               <div className="p-5">
                 <h3 className="text-gray-900 font-black text-base uppercase tracking-tight mb-1">{cat.label}</h3>
                 <p className="text-gray-500 text-xs leading-relaxed mb-3">{cat.desc}</p>
                 <span className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-500 group-hover:gap-2 transition-all">
-                  Ver productos <ChevronRight size={13} />
+                  {ct('verProductos')} <ChevronRight size={13} />
                 </span>
               </div>
             </motion.button>
@@ -319,7 +344,7 @@ export const ProductCatalog = () => {
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: CATALOG.length * 0.07 }}
+            transition={{ duration: 0.35, delay: LOCALIZED.length * 0.07 }}
             className="text-left rounded-2xl overflow-hidden border border-gray-200 bg-slate-900 shadow-sm hover:shadow-md hover:border-red-500/40 transition-all duration-300 group"
           >
             <div className="aspect-video flex items-center justify-center bg-slate-800 relative overflow-hidden">
@@ -330,10 +355,10 @@ export const ProductCatalog = () => {
               </div>
             </div>
             <div className="p-5">
-              <h3 className="text-white font-black text-base uppercase tracking-tight mb-1">DELIE en YouTube</h3>
-              <p className="text-gray-400 text-xs leading-relaxed mb-3">Instalaciones reales, demostraciones y casos de uso de los sistemas ASRS DELIE en todo el mundo.</p>
+              <h3 className="text-white font-black text-base uppercase tracking-tight mb-1">{ct('youtubeTitle')}</h3>
+              <p className="text-gray-400 text-xs leading-relaxed mb-3">{ct('youtubeDesc')}</p>
               <span className="inline-flex items-center gap-1 text-xs font-semibold text-red-400 group-hover:gap-2 transition-all">
-                Ver canal <ChevronRight size={13} />
+                {ct('verCanal')} <ChevronRight size={13} />
               </span>
             </div>
           </motion.a>
@@ -363,7 +388,7 @@ export const ProductCatalog = () => {
         </nav>
 
         <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-2">
-          DELIE · {activeCat.products.length} productos
+          DELIE · {activeCat.products.length} {ct('productsLabel')}
         </p>
         <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter">
           {activeCat.label}
@@ -385,7 +410,7 @@ export const ProductCatalog = () => {
 
           <div className="w-px h-5 bg-gray-200 shrink-0" />
 
-          {CATALOG.map((cat) => (
+          {LOCALIZED.map((cat) => (
             <button
               key={cat.id}
               onClick={() => goTocat(cat)}
@@ -433,7 +458,7 @@ export const ProductCatalog = () => {
                 <div className="px-3 py-3">
                   <p className="text-sm text-gray-800 font-semibold leading-snug">{product.name}</p>
                   <span className="inline-flex items-center gap-1 text-[11px] text-cyan-500 mt-1 font-medium">
-                    Ver detalle <ChevronRight size={11} />
+                    {ct('verDetalle')} <ChevronRight size={11} />
                   </span>
                 </div>
               </button>

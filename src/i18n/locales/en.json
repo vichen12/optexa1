@@ -597,7 +597,469 @@
       "categoriesH2_b": "Categories",
       "allCategories": "All categories",
       "allShort": "All",
-      "vocabPara": "Our catalog covers the entire logistics automation chain: automated warehouses, robotized storage, stacker cranes and warehouse cranes, logistics robots (AGV/AMR), vertical storage and management software. Intralogistics and Warehouse 4.0 solutions for distribution centers, smart warehouses and industrial facilities of any scale."
+      "vocabPara": "Our catalog covers the entire logistics automation chain: automated warehouses, robotized storage, stacker cranes and warehouse cranes, logistics robots (AGV/AMR), vertical storage and management software. Intralogistics and Warehouse 4.0 solutions for distribution centers, smart warehouses and industrial facilities of any scale.",
+      "verProductos": "View products",
+      "verDetalle": "View detail",
+      "verCanal": "View channel",
+      "youtubeTitle": "DELIE on YouTube",
+      "youtubeDesc": "Real installations, demos and use cases of DELIE ASRS systems worldwide.",
+      "certLine": "DELIE · ISO 9001 · CE certified manufacturer",
+      "cats": {
+        "estanterias": {
+          "label": "AS/RS",
+          "desc": "AS/RS racking from 7 to 40 meters. Drive-in, shuttle, mezzanine."
+        },
+        "vertical": {
+          "label": "Vertical storage",
+          "desc": "Vertical carousels and VLM modules. Up to 90% less floor space."
+        },
+        "robots": {
+          "label": "Handling robots",
+          "desc": "Stacker cranes, MiniLoad cranes, shuttle robots and AMR."
+        },
+        "transport": {
+          "label": "Transport equipment",
+          "desc": "Lifts, chain and roller conveyors and palletizers."
+        },
+        "sistema": {
+          "label": "Intelligent software",
+          "desc": "WMS, WCS, HMS and 3D visualization for full warehouse control."
+        }
+      },
+      "items": {
+        "e1": {
+          "name": "Pallet Shuttle Racking",
+          "description": "High-density racking for pallet shuttle robot systems. Maximum vertical utilization.",
+          "features": [
+            "7 to 40 meters high",
+            "Compatible with 4- and 2-way shuttles",
+            "Machining accuracy ±0.1 mm",
+            "Resistant to oxidation and salt mist",
+            "+1,000 projects"
+          ]
+        },
+        "e2": {
+          "name": "Tote Shuttle Racking",
+          "description": "High-density racking for tote shuttle robots, optimized for small and medium containers.",
+          "features": [
+            "4-way and bidirectional tote robots",
+            "±0.1 mm accuracy",
+            "Up to 40 meters",
+            "Silane anti-corrosion"
+          ]
+        },
+        "e3": {
+          "name": "Stacker crane racking",
+          "description": "Great height for stacker cranes. Maximum density in AS/RS systems.",
+          "features": [
+            "Up to 40 meters",
+            "Compatible with 1- and 2-mast cranes",
+            "±0.1 mm accuracy",
+            "Steel from certified major mills"
+          ]
+        },
+        "e4": {
+          "name": "Flybox mini-racking",
+          "description": "Compact racking with ultra-narrow distance between containers for maximum density in tight spaces.",
+          "features": [
+            "Ultra-narrow distance between containers",
+            "Compatible with Mini-Flybox robot",
+            "Height 550–12,000 mm",
+            "E-commerce, pharma, manufacturing"
+          ]
+        },
+        "e5": {
+          "name": "Stacker crane + Shuttle robot",
+          "description": "Combined system integrating stacker cranes with shuttle robots for maximum flexibility and efficiency.",
+          "features": [
+            "Combines stacker cranes and shuttle robots",
+            "Flexibility for different pallet types",
+            "Vertical and horizontal optimization",
+            "Coordinated management by WCS"
+          ]
+        },
+        "e6": {
+          "name": "Miniload racking",
+          "description": "For MiniLoad stacker cranes, high density of containers and totes.",
+          "features": [
+            "Compatible with single- and double-deep MiniLoad",
+            "±0.1 mm accuracy",
+            "Anti-corrosion",
+            "Pharma, e-commerce and manufacturing"
+          ]
+        },
+        "e7": {
+          "name": "Heavy-duty racking",
+          "description": "High capacity for manual or semi-automatic storage of heavy pallets.",
+          "features": [
+            "Up to 2,000 kg per pallet",
+            "Customizable design",
+            "Compatible with cold and heavy work",
+            "Silane anti-corrosion"
+          ]
+        },
+        "e8": {
+          "name": "Push-back racking",
+          "description": "High-density push-back with minimal access aisles. LIFO system.",
+          "features": [
+            "Maximum density with minimal aisles",
+            "LIFO system",
+            "Compatible with standard forklifts",
+            "Up to 2,000 kg per pallet"
+          ]
+        },
+        "e9": {
+          "name": "Mezzanine racking",
+          "description": "Raised platform over racking to create additional storage or work levels.",
+          "features": [
+            "Additional levels over racking",
+            "Customizable design",
+            "Access by stairs and lifts",
+            "High-strength steel"
+          ]
+        },
+        "e10": {
+          "name": "Steel structure platform",
+          "description": "Raised steel platform for additional storage or work space.",
+          "features": [
+            "High-strength steel",
+            "Customizable dimensions",
+            "Light and heavy loads",
+            "Low construction cost"
+          ]
+        },
+        "e11": {
+          "name": "Steel storage pallet",
+          "description": "Steel pallet for environments where wooden pallets are not suitable.",
+          "features": [
+            "Greater durability",
+            "Resistant to humidity, cold and chemicals",
+            "Compatible with automatic systems",
+            "Low maintenance"
+          ]
+        },
+        "e12": {
+          "name": "Drive-in racking",
+          "description": "The forklift enters inside the racking to deposit or retrieve pallets. Maximum space utilization.",
+          "features": [
+            "Up to 80% of storage area",
+            "LIFO system",
+            "Compatible with standard forklifts",
+            "Cold- and heavy-work suitable"
+          ]
+        },
+        "v1": {
+          "name": "Intelligent vertical carousel",
+          "description": "Automated vertical system that circulates carriers internally to bring materials to the operator.",
+          "features": [
+            "Height up to 17,580 mm",
+            "Max load per carrier: 180 kg",
+            "Total capacity: 6,000 kg",
+            "Configurable: light, medium or heavy"
+          ]
+        },
+        "v2": {
+          "name": "Vertical Lift Module (VLM)",
+          "description": "\"Goods-to-person\" solution with an intelligent extractor that places materials at the operator's window.",
+          "features": [
+            "Saves up to 90% of floor space",
+            "Compatible with ERP and MES",
+            "High precision by absolute positioning",
+            "Multiple simultaneous windows",
+            "Optional integrated weighing and scanner"
+          ]
+        },
+        "r1": {
+          "name": "Single-mast stacker crane",
+          "description": "AS/RS robot operating with vertical and horizontal movements to manage palletized products.",
+          "features": [
+            "Single, double and multiple depth",
+            "Suitable for cold, explosion-proof and clean rooms",
+            "High structural rigidity",
+            "Compatible with AGV/AMR, RGV and conveyors",
+            "CE and ISO 9001 certified"
+          ]
+        },
+        "r2": {
+          "name": "Double-mast stacker crane",
+          "description": "Double-mast configuration for greater stability at great heights and high load capacity.",
+          "features": [
+            "Greater stability at high elevations",
+            "Superior load capacity",
+            "WCS compatible",
+            "Optimized lifting speeds",
+            "CE and ISO 9001 certified"
+          ]
+        },
+        "r3": {
+          "name": "Heavy-duty stacker crane",
+          "description": "Reinforced version for high-weight loads in demanding industrial operations.",
+          "features": [
+            "Superior load capacity",
+            "Reinforced structure for 24/7",
+            "Redundant safety systems",
+            "Simplified preventive maintenance"
+          ]
+        },
+        "r4": {
+          "name": "Custom stacker crane",
+          "description": "Tailored solution for warehouses with specific dimension, load or environment requirements.",
+          "features": [
+            "Tailored design per project",
+            "Compatible with irregular warehouses",
+            "ERP, WMS, WCS integration",
+            "100% in-house production"
+          ]
+        },
+        "r5": {
+          "name": "Single-deep MiniLoad stacker crane",
+          "description": "High-performance AS/RS system for small and medium containers, boxes and totes.",
+          "features": [
+            "Up to 300 kg per unit",
+            "Max speed 360 m/min",
+            "±2 mm accuracy",
+            "Compatible with totes, cartons and trays"
+          ]
+        },
+        "r6": {
+          "name": "Double-deep MiniLoad stacker crane",
+          "description": "Double depth that maximizes storage density for containers and totes.",
+          "features": [
+            "Double depth for greater density",
+            "Up to 300 kg per unit",
+            "360 m/min speed",
+            "Independent modular components"
+          ]
+        },
+        "r7": {
+          "name": "Custom MiniLoad stacker crane",
+          "description": "Tailored MiniLoad solution adaptable to multiple operating environments.",
+          "features": [
+            "Custom design",
+            "Multiple container types",
+            "Direct WMS/WCS integration"
+          ]
+        },
+        "r8": {
+          "name": "4-way shuttle robot — pallets",
+          "description": "4-direction pallet robot with ultra-thin design. High density with high volume and few SKUs.",
+          "features": [
+            "Only 125 mm thick",
+            "1.5-tonne capacity",
+            "Multi-robot control by WCS",
+            "Operational at -25°C",
+            "Plug-and-play, fast installation"
+          ]
+        },
+        "r9": {
+          "name": "Bidirectional shuttle robot — pallets",
+          "description": "Two-way shuttle robot for high-efficiency linear aisles.",
+          "features": [
+            "Efficient bidirectional movement",
+            "1.5-tonne capacity",
+            "WCS integration",
+            "Low energy consumption"
+          ]
+        },
+        "r10": {
+          "name": "Mother-child shuttle robot",
+          "description": "Combined system where the mother robot transports child robots to access different levels.",
+          "features": [
+            "Autonomous access to multiple levels",
+            "Higher throughput in high density",
+            "Centralized WCS management"
+          ]
+        },
+        "r11": {
+          "name": "Shuttle robot — cold storage",
+          "description": "Version for cold chambers down to -25°C.",
+          "features": [
+            "Operational down to -25°C",
+            "Anti-condensation hermetic sealing",
+            "Remote diagnosis"
+          ]
+        },
+        "r12": {
+          "name": "Explosion-proof shuttle robot",
+          "description": "ATEX-certified version for explosion-risk areas.",
+          "features": [
+            "ATEX certification",
+            "Specially selected materials",
+            "Industrial safety standards"
+          ]
+        },
+        "r13": {
+          "name": "4-way tote shuttle robot",
+          "description": "High-speed AS/RS system for small items in containers.",
+          "features": [
+            "Up to 50 kg per container",
+            "5 m/s speed",
+            "±2 mm accuracy (99.99%)",
+            "-25°C to +45°C"
+          ]
+        },
+        "r14": {
+          "name": "Bidirectional tote robot",
+          "description": "Two-way tote robot for linear aisles, ideal for e-commerce and distribution.",
+          "features": [
+            "Bidirectional for linear aisles",
+            "Up to 50 kg per container",
+            "Multi-robot under WCS"
+          ]
+        },
+        "t1": {
+          "name": "Pallet lift",
+          "description": "Vertical pallet lifting between warehouse levels.",
+          "features": [
+            "Platform up to 1,200×1,600 mm",
+            "2,000 kg load",
+            "Up to 60 m/min",
+            "±2 mm accuracy"
+          ]
+        },
+        "t2": {
+          "name": "High-speed tote lift",
+          "description": "High-speed lifting for containers and totes between vertical levels.",
+          "features": [
+            "150 kg maximum load",
+            "5 m/s speed",
+            "3 m/s² acceleration",
+            "24/7 operation"
+          ]
+        },
+        "t3": {
+          "name": "Landing and lifting machine",
+          "description": "Modular component for vertical pallet transfer within transport lines.",
+          "features": [
+            "Up to 3,000 kg per pallet",
+            "Frequency drive",
+            "WMS/WCS integration"
+          ]
+        },
+        "t4": {
+          "name": "90° transfer machine",
+          "description": "Changes pallet direction 90° without interrupting flow.",
+          "features": [
+            "90° change without interruptions",
+            "Up to 3,000 kg per pallet",
+            "Smooth start"
+          ]
+        },
+        "t5": {
+          "name": "Tote transfer",
+          "description": "Direction change for containers and totes in high-speed lines.",
+          "features": [
+            "High-speed transfer",
+            "Multiple tote sizes",
+            "Modular design"
+          ]
+        },
+        "t6": {
+          "name": "Palletizer / Depalletizer",
+          "description": "Automatic pallet formation from product layers.",
+          "features": [
+            "Automatic palletizing and depalletizing",
+            "Direct WMS/WCS integration",
+            "Low maintenance"
+          ]
+        },
+        "t7": {
+          "name": "Chain conveyor",
+          "description": "Chain conveyor for efficient pallet movement.",
+          "features": [
+            "3,000 kg per pallet",
+            "Frequency drive",
+            "Operable at low temperature"
+          ]
+        },
+        "t8": {
+          "name": "Tote belt conveyor",
+          "description": "Modular belt for totes and containers between work stations.",
+          "features": [
+            "Straight and inclined line",
+            "Multiple tote sizes",
+            "24/7 operation"
+          ]
+        },
+        "t9": {
+          "name": "Roller conveyor — pallets",
+          "description": "Roller conveyor for horizontal pallet movement.",
+          "features": [
+            "3,000 kg per pallet",
+            "Configurable speed",
+            "WMS/WCS integration"
+          ]
+        },
+        "t10": {
+          "name": "Roller conveyor — totes",
+          "description": "Rollers with accumulation zones to manage tote flow.",
+          "features": [
+            "Accumulation for flow management",
+            "Multiple tote sizes",
+            "Compatible with MiniLoad and tote robots"
+          ]
+        },
+        "s1": {
+          "name": "WMS — Warehouse management",
+          "description": "CMMI Level 5-certified warehouse management software with real-time visibility and control.",
+          "features": [
+            "Inbound, outbound and inventory in real time",
+            "Connects with ERP, MES, SAP, TMS and OMS",
+            "3D Digital Twin for 360° visibility",
+            "Reduces bullwhip effect by up to 70%"
+          ]
+        },
+        "s2": {
+          "name": "WCS — Warehouse control",
+          "description": "Integrates and coordinates all equipment in real time: robots, stacker cranes, conveyors, AMR and RGV.",
+          "features": [
+            "Real-time 2D and 3D monitoring",
+            "Automatic task breakdown",
+            "Optimal route selection"
+          ]
+        },
+        "s3": {
+          "name": "HMS — Human-machine system",
+          "description": "Interface between operator and equipment for control and supervision of the logistics facility.",
+          "features": [
+            "Intuitive interface for operators",
+            "Real-time supervision",
+            "Compatible with mobile devices"
+          ]
+        },
+        "s4": {
+          "name": "ECS — Electronic control",
+          "description": "Comprehensive management of the coordinated operation of all electrical components.",
+          "features": [
+            "Monitoring of motors, drives and sensors",
+            "Predictive diagnosis",
+            "Integration with WCS and WMS"
+          ]
+        },
+        "s5": {
+          "name": "API Interface",
+          "description": "Integration layer to connect the warehouse system with external enterprise platforms.",
+          "features": [
+            "Integration with ERP, MES, SAP, TMS, OMS",
+            "Standard RESTful APIs",
+            "Complete technical documentation"
+          ]
+        },
+        "s6": {
+          "name": "Centralized 3D visualization",
+          "description": "Real-time three-dimensional representation of the entire warehouse.",
+          "features": [
+            "Real-time 3D representation",
+            "Digital Twin for simulation and optimization",
+            "Role-based dashboards"
+          ]
+        }
+      },
+      "productsLabel": "products",
+      "ariaClose": "Close",
+      "ariaPrev": "Previous image",
+      "ariaNext": "Next image",
+      "ariaImage": "Image"
     },
     "solutions": {
       "metaTitle": "ASRS Solutions for your Industry | STOKA Argentina",
@@ -1796,7 +2258,7 @@
       "fiscalItems": [
         {
           "label": "Decree 513/2025",
-          "desc": "0% import duty on ASRS equipment"
+          "desc": "Reduces the import tariff on ASRS equipment according to NCM classification"
         },
         {
           "label": "RIMI",
@@ -1899,7 +2361,57 @@
           "desc": "WMS, WCS and warehouse control"
         }
       ],
-      "vocabPara": "An ASRS system —also called an automated warehouse, robotized warehouse or automatic storage system— replaces manual handling with stacker cranes (warehouse cranes), logistics robots and control software. It is the core of modern intralogistics and of any Warehouse 4.0 project: it lets you run a smart warehouse with maximum density, full traceability and vertical use of space in industrial facilities and distribution centers."
+      "vocabPara": "An ASRS system —also called an automated warehouse, robotized warehouse or automatic storage system— replaces manual handling with stacker cranes (warehouse cranes), logistics robots and control software. It is the core of modern intralogistics and of any Warehouse 4.0 project: it lets you run a smart warehouse with maximum density, full traceability and vertical use of space in industrial facilities and distribution centers.",
+      "products": [
+        {
+          "name": "Pallet Shuttle Racking",
+          "desc": "High-density racking for pallet shuttle robots. 7 to 40 meters high, ±0.1 mm accuracy."
+        },
+        {
+          "name": "Tote Shuttle Racking",
+          "desc": "For bidirectional and 4-way tote shuttle robots. Up to 40 meters, silane anti-corrosion."
+        },
+        {
+          "name": "Stacker crane racking",
+          "desc": "Great height for stacker cranes. Compatible with 1- and 2-mast cranes."
+        },
+        {
+          "name": "Flybox mini-racking",
+          "desc": "Ultra-narrow distance between containers. Height 550–12,000 mm. Ideal for e-commerce and pharma."
+        },
+        {
+          "name": "Stacker crane + Shuttle robot",
+          "desc": "Combined system of stacker cranes and shuttle robots. Maximum flexibility and efficiency."
+        },
+        {
+          "name": "Miniload racking",
+          "desc": "For MiniLoad stacker cranes, single and double depth. High density of containers and totes."
+        },
+        {
+          "name": "Heavy-duty racking",
+          "desc": "Up to 2,000 kg per pallet. Compatible with cold and heavy work. Silane anti-corrosion."
+        },
+        {
+          "name": "Push-back racking",
+          "desc": "High-density push-back, LIFO system. Compatible with standard forklifts."
+        },
+        {
+          "name": "Mezzanine racking",
+          "desc": "Raised platform over racking to create additional storage levels."
+        },
+        {
+          "name": "Steel structure platform",
+          "desc": "Customizable raised steel platform for additional storage space."
+        },
+        {
+          "name": "Steel storage pallet",
+          "desc": "Steel pallet resistant to humidity, cold and chemicals. Compatible with automatic systems."
+        },
+        {
+          "name": "Drive-in racking",
+          "desc": "The forklift enters inside. Up to 80% space utilization. LIFO system, cold-suitable."
+        }
+      ]
     },
     "catalogoRobots": {
       "breadcrumbCat": "Handling robots",
@@ -1947,19 +2459,141 @@
         },
         {
           "label": "Vertical storage",
-          "desc": "VLM and intelligent carousels"
+          "desc": "VLM and smart carousels"
         },
         {
           "label": "Transport equipment",
-          "desc": "Conveyors, lifters and palletizers"
+          "desc": "Conveyors, lifts and palletizers"
         },
         {
-          "label": "Smart software",
+          "label": "Intelligent software",
           "desc": "WMS, WCS and warehouse control"
         }
       ],
       "metaTitle": "Handling Robots | Stacker Cranes & AMR | STOKA",
-      "metaDesc": "DELIE warehouse robot catalog: stacker cranes, MiniLoad cranes, shuttle robots and AMR. 14 models with local STOKA support in Argentina and Chile."
+      "metaDesc": "DELIE warehouse robot catalog: stacker cranes, MiniLoad cranes, shuttle robots and AMR. 14 models with local STOKA support in Argentina and Chile.",
+      "products": [
+        {
+          "name": "Single-mast stacker crane",
+          "desc": "AS/RS robot for palletized products. Single, double and multiple depth. Suitable for cold, explosion-proof and clean rooms. CE and ISO 9001 certified."
+        },
+        {
+          "name": "Double-mast stacker crane",
+          "desc": "Double-mast configuration for greater stability at great heights and high load capacity. CE and ISO 9001 certified."
+        },
+        {
+          "name": "Heavy-duty stacker crane",
+          "desc": "Reinforced version for high-weight loads in demanding industrial operations. 24/7 operation with redundant safety systems."
+        },
+        {
+          "name": "Custom stacker crane",
+          "desc": "Tailored solution for warehouses with specific dimension, load or environment requirements. ERP/WMS/WCS integration."
+        },
+        {
+          "name": "Single-deep MiniLoad stacker crane",
+          "desc": "High-performance AS/RS system for containers, boxes and totes. Up to 300 kg, max speed 360 m/min, ±2 mm accuracy."
+        },
+        {
+          "name": "Double-deep MiniLoad stacker crane",
+          "desc": "Double depth that maximizes storage density for containers and totes. Up to 300 kg per unit."
+        },
+        {
+          "name": "Custom MiniLoad stacker crane",
+          "desc": "Tailored MiniLoad solution adaptable to multiple operating environments. Direct WMS/WCS integration."
+        },
+        {
+          "name": "4-way shuttle robot — pallets",
+          "desc": "Only 125 mm thick, 1.5-tonne capacity. Operational at -25°C. Multi-robot control by WCS. Plug-and-play."
+        },
+        {
+          "name": "Bidirectional shuttle robot — pallets",
+          "desc": "Two-way shuttle robot for high-efficiency linear aisles. Low energy consumption."
+        },
+        {
+          "name": "Mother-child shuttle robot",
+          "desc": "Combined system: the mother robot transports child robots to autonomously access different levels. Higher throughput."
+        },
+        {
+          "name": "Shuttle robot — cold storage",
+          "desc": "Version for cold chambers down to -25°C. Anti-condensation hermetic sealing and remote diagnosis."
+        },
+        {
+          "name": "Explosion-proof shuttle robot",
+          "desc": "ATEX-certified version for explosion-risk areas. Specially selected materials."
+        },
+        {
+          "name": "4-way tote shuttle robot",
+          "desc": "High-speed AS/RS system for small items. Up to 50 kg, 5 m/s, ±2 mm accuracy. From -25°C to +45°C."
+        },
+        {
+          "name": "Bidirectional tote robot",
+          "desc": "Two-way tote robot for linear aisles. Ideal for e-commerce and distribution. Multi-robot under WCS."
+        },
+        {
+          "name": "4-way dual-station tote robot",
+          "desc": "World-first: handles 2 containers per cycle, +80-90% efficiency. Siemens PLC, ECBS algorithm. Up to 100 kg, 5 m/s, ±2 mm."
+        }
+      ],
+      "techTag": "Which technology do you need?",
+      "techCards": [
+        {
+          "name": "Stacker Crane / MiniLoad",
+          "badge": "High SKU variability",
+          "desc": "Occupies a full aisle and moves pallets or totes with a single piece of equipment. Up to 360 m/min, ±2 mm accuracy. More robust for warehouses with high reference variability.",
+          "best": "E-commerce · Pharma · Manufacturing with many SKUs"
+        },
+        {
+          "name": "Shuttle robot (4-way)",
+          "badge": "Maximum throughput",
+          "desc": "Circulates inside the racking with no dedicated aisle. Only 125 mm thick, 1.5 t load. Multiplies capacity without expanding the footprint. Plug-and-play.",
+          "best": "Mass distribution · Retail · Depots with homogeneous products"
+        }
+      ],
+      "specsTag": "Key specifications",
+      "specsChips": [
+        "Max speed 360 m/min",
+        "Max load 1.5 t per shuttle",
+        "±2 mm accuracy",
+        "Operation at -25°C",
+        "ATEX certification",
+        "Multi-robot under WCS",
+        "CE and ISO 9001",
+        "Typical ROI 18–24 months"
+      ],
+      "specsNote": "AGV for fixed flows · AMR for areas with high human interaction and changing layouts.",
+      "fiscalTag": "Argentina 2026 — Tax",
+      "fiscal": [
+        {
+          "label": "Decree 513/2025",
+          "desc": "Reduces the import tariff on warehouse robots according to NCM classification"
+        },
+        {
+          "label": "RIMI",
+          "desc": "100% accelerated depreciation in the first fiscal year"
+        },
+        {
+          "label": "BICE",
+          "desc": "10-year financing with a grace period"
+        }
+      ],
+      "fiscalCta": "See all tax benefits",
+      "explorarTag": "Explore by type",
+      "explorarH2": "Available robots",
+      "explorarTipo": [
+        {
+          "nombre": "Palletizer / Depalletizer",
+          "desc": "Automatic high-speed pallet formation"
+        },
+        {
+          "nombre": "Picking robot",
+          "desc": "Goods-to-person, up to 1,200 lines/hour"
+        },
+        {
+          "nombre": "AGV / AMR robots",
+          "desc": "Autonomous transport with no fixed infrastructure"
+        }
+      ],
+      "verDetalle": "See detail"
     },
     "catalogoVertical": {
       "breadcrumbCat": "Vertical storage",
@@ -2036,15 +2670,71 @@
         },
         {
           "label": "Transport equipment",
-          "desc": "Conveyors, lifters and palletizers"
+          "desc": "Conveyors, lifts and palletizers"
         },
         {
-          "label": "Smart software",
+          "label": "Intelligent software",
           "desc": "WMS, WCS and warehouse control"
         }
       ],
       "metaTitle": "Vertical Storage | VLM & Carousels | STOKA",
-      "metaDesc": "DELIE vertical storage systems: VLM and smart carousels. Save up to 90% floor space with goods-to-person picking. Local STOKA support in Argentina."
+      "metaDesc": "DELIE vertical storage systems: VLM and smart carousels. Save up to 90% floor space with goods-to-person picking. Local STOKA support in Argentina.",
+      "products": [
+        {
+          "name": "Intelligent vertical carousel",
+          "desc": "Automated vertical system that circulates carriers internally to bring materials to the operator. Height up to 17,580 mm, max load per carrier: 180 kg, total capacity: 6,000 kg.",
+          "features": [
+            "Height up to 17,580 mm",
+            "Max load 180 kg per carrier",
+            "Total capacity 6,000 kg",
+            "Configurable: light, medium or heavy",
+            "Integrable with WMS/WCS"
+          ],
+          "best_for": "High rotation of similar SKUs. Sectors: manufacturing, automotive, retail."
+        },
+        {
+          "name": "Vertical Lift Module (VLM)",
+          "desc": "\"Goods-to-person\" solution with an intelligent extractor that places materials at the operator's window. Saves up to 90% of floor space. Compatible with ERP and MES.",
+          "features": [
+            "Saves up to 90% of floor space",
+            "Compatible with ERP and MES",
+            "High precision by absolute positioning",
+            "Multiple simultaneous windows",
+            "Optional integrated weighing and scanner"
+          ],
+          "best_for": "High SKU variety with frequent picking. Sectors: pharma, e-commerce, spare parts."
+        }
+      ],
+      "densityNote": "A 10 m-high VLM in a 3×3 m footprint stores the equivalent of 50 linear meters of conventional racking.",
+      "fiscalTag": "Argentina 2026 — Tax",
+      "fiscal": [
+        {
+          "label": "Decree 513/2025",
+          "desc": "Reduces the import tariff on VLMs and carousels according to NCM classification"
+        },
+        {
+          "label": "RIMI",
+          "desc": "100% accelerated depreciation in the first fiscal year"
+        },
+        {
+          "label": "BICE",
+          "desc": "10-year financing with a grace period"
+        }
+      ],
+      "fiscalCta": "See all tax benefits",
+      "explorarTag": "Explore by type",
+      "explorarH2": "Vertical storage solutions",
+      "explorarTipo": [
+        {
+          "nombre": "VLM Module",
+          "desc": "Up to 90% less space. Random-access shuttle."
+        },
+        {
+          "nombre": "Vertical Carousel",
+          "desc": "The most compact solution for spare parts and small items."
+        }
+      ],
+      "verDetalle": "See detail"
     },
     "catalogoTransporte": {
       "breadcrumbCat": "Transport equipment",
@@ -2096,15 +2786,135 @@
         },
         {
           "label": "Vertical storage",
-          "desc": "VLM and intelligent carousels"
+          "desc": "VLM and smart carousels"
         },
         {
-          "label": "Smart software",
+          "label": "Intelligent software",
           "desc": "WMS, WCS and warehouse control"
         }
       ],
       "metaTitle": "Conveying Equipment | Conveyors & Lifts | STOKA",
-      "metaDesc": "DELIE conveying catalog: conveyors, lifts, palletizers and transfer machines. 10 models with local STOKA engineering in Argentina and Chile."
+      "metaDesc": "DELIE conveying catalog: conveyors, lifts, palletizers and transfer machines. 10 models with local STOKA engineering in Argentina and Chile.",
+      "products": [
+        {
+          "name": "Pallet lift",
+          "desc": "Vertical pallet lifting between levels. Platform up to 1,200×1,600 mm, 2,000 kg, up to 60 m/min, ±2 mm accuracy."
+        },
+        {
+          "name": "High-speed tote lift",
+          "desc": "150 kg maximum load, 5 m/s speed, 3 m/s² acceleration. 24/7 operation between vertical levels."
+        },
+        {
+          "name": "Landing and lifting machine",
+          "desc": "Vertical pallet transfer within transport lines. Up to 3,000 kg per pallet with frequency drive."
+        },
+        {
+          "name": "90° transfer machine",
+          "desc": "Changes pallet direction 90° without interrupting flow. Up to 3,000 kg per pallet, smooth start."
+        },
+        {
+          "name": "Tote transfer",
+          "desc": "Direction change for containers and totes in high-speed lines. Multiple tote sizes."
+        },
+        {
+          "name": "Palletizer / Depalletizer",
+          "desc": "Automatic pallet formation from product layers. Direct WMS/WCS integration, low maintenance."
+        },
+        {
+          "name": "Chain conveyor",
+          "desc": "3,000 kg per pallet, frequency drive, operable at low temperature. Efficient pallet transport."
+        },
+        {
+          "name": "Tote belt conveyor",
+          "desc": "Modular belt for totes and containers. Straight and inclined line, multiple sizes, 24/7 operation."
+        },
+        {
+          "name": "Roller conveyor — pallets",
+          "desc": "3,000 kg per pallet, configurable speed. Horizontal pallet movement with WMS/WCS integration."
+        },
+        {
+          "name": "Roller conveyor — totes",
+          "desc": "Rollers with accumulation zones to manage tote flow. Compatible with MiniLoad and tote robots."
+        }
+      ],
+      "seoTag": "Why internal transport matters",
+      "seoH2": "The backbone of the automated warehouse",
+      "palletTitle": "Pallet transport",
+      "palletList": [
+        [
+          "Chain conveyor",
+          "3,000 kg · frequency drive · cold -25°C"
+        ],
+        [
+          "Roller conveyor",
+          "3,000 kg · accumulation zones · native WCS"
+        ],
+        [
+          "90° transfer machine",
+          "Direction change without interrupting flow"
+        ],
+        [
+          "Pallet lift",
+          "Between levels · up to 2,000 kg · ±2 mm"
+        ],
+        [
+          "Palletizer / Depalletizer",
+          "Automatic formation · WMS/WCS integration"
+        ]
+      ],
+      "toteTitle": "Tote and container transport",
+      "toteList": [
+        [
+          "High-speed tote lift",
+          "150 kg · 5 m/s · 3 m/s² · 24/7 operation"
+        ],
+        [
+          "Tote belt conveyor",
+          "Straight and inclined · multiple sizes · 24/7"
+        ],
+        [
+          "Tote roller conveyor",
+          "Zone accumulation · MiniLoad and tote robots"
+        ],
+        [
+          "Tote transfer",
+          "High-speed direction change"
+        ],
+        [
+          "Landing and lifting machine",
+          "Up to 3,000 kg · frequency drive"
+        ]
+      ],
+      "benefitsTitle": "Why automate internal transport",
+      "benefitChips": [
+        "Native WCS integration",
+        "No bottlenecks between stages",
+        "Up to 3,000 kg per pallet",
+        "Up to 5 m/s for totes",
+        "Operation at -25°C",
+        "Modular and scalable",
+        "Quarterly preventive maintenance",
+        "Prior flow simulation",
+        "Spare parts available in Argentina"
+      ],
+      "benefitsBody": "In an automated warehouse, the conveyor is as critical as the stacker crane: a bottleneck in the conveyor can reduce the total system throughput even if the robots run at full capacity. That is why the internal transport network is designed with flow simulation before installation — the WCS virtually tests the system behavior under demand peaks to ensure there are no bottlenecks.",
+      "fiscalTag": "Decree 513/2025 — Tax benefit",
+      "fiscalH3": "Tariff reduced by NCM for conveyors and palletizers",
+      "fiscalBody": "DELIE industrial transport equipment may qualify for Decree 513/2025, which reduces the import tariff according to the NCM classification of industrial conveyors, lifts and automatic palletizers. STOKA manages the complete import from China to your plant in Argentina.",
+      "fiscalCta": "See tax benefits",
+      "explorarTag": "Explore by type",
+      "explorarH2": "Available transport equipment",
+      "explorarTipo": [
+        {
+          "nombre": "Industrial conveyors",
+          "desc": "Chain, roller and belt for continuous flows in warehouses and depots."
+        },
+        {
+          "nombre": "Sorters and classifiers",
+          "desc": "Automatic parcel sorter for sortation systems in distribution centers."
+        }
+      ],
+      "verDetalle": "See detail"
     },
     "catalogoSoftware": {
       "breadcrumbCat": "Smart software",
@@ -2200,15 +3010,55 @@
         },
         {
           "label": "Vertical storage",
-          "desc": "VLM and intelligent carousels"
+          "desc": "VLM and smart carousels"
         },
         {
           "label": "Transport equipment",
-          "desc": "Conveyors, lifters and palletizers"
+          "desc": "Conveyors, lifts and palletizers"
         }
       ],
       "metaTitle": "Warehouse Software | WMS, WCS & Control | STOKA",
-      "metaDesc": "CMMI Level 5 certified DELIE software: WMS, WCS, HMS and automated warehouse control. 6 integrated modules with local STOKA support in Argentina."
+      "metaDesc": "CMMI Level 5 certified DELIE software: WMS, WCS, HMS and automated warehouse control. 6 integrated modules with local STOKA support in Argentina.",
+      "products": [
+        {
+          "name": "WMS — Warehouse management",
+          "desc": "CMMI Level 5 certified. Inbound, outbound and inventory in real time. 3D Digital Twin. Reduces the bullwhip effect by up to 70%. ERP, MES, SAP, TMS and OMS integration."
+        },
+        {
+          "name": "WCS — Warehouse control",
+          "desc": "Coordinates robots, stacker cranes, conveyors, AMR and RGV in real time. 2D and 3D monitoring, automatic task breakdown and optimal route."
+        },
+        {
+          "name": "HMS — Human-machine system",
+          "desc": "Interface for operators and supervisors on the floor. Real-time control and supervision compatible with mobile devices and HMI screens."
+        },
+        {
+          "name": "ECS — Electronic control",
+          "desc": "Management of all electrical components. Monitoring of motors, drives and sensors with predictive diagnosis integrated with WCS and WMS."
+        },
+        {
+          "name": "API Interface",
+          "desc": "Integration layer with external enterprise platforms. Standard RESTful APIs compatible with ERP, MES, SAP, TMS and OMS."
+        },
+        {
+          "name": "Centralized 3D visualization",
+          "desc": "Real-time three-dimensional Digital Twin of the entire warehouse. Simulation, optimization and role-based dashboards."
+        }
+      ],
+      "argBody": "Many depot and warehouse operators already have a legacy WMS (or the ERP's WM module) and want to add a WCS to control the AS/RS equipment. The DELIE WCS integrates with any external WMS through documented APIs. <strong>STOKA manages the technical integration with the client's ERP as part of the turnkey contract, with no additional integration-consulting hourly costs.</strong>",
+      "verDetalle": "See detail",
+      "explorarTag": "Explore by type",
+      "explorarH2": "Available software",
+      "explorarTipo": [
+        {
+          "nombre": "WMS — Warehouse management",
+          "desc": "Real-time inventory, picking, dispatch. CMMI Level 5."
+        },
+        {
+          "nombre": "WCS — Warehouse control",
+          "desc": "Real-time control of stacker cranes, robots and conveyors."
+        }
+      ]
     },
     "autoStoreAlternativa": {
       "breadcrumbAsrs": "ASRS",

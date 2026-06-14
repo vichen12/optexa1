@@ -13,44 +13,30 @@ import { SeoHead } from '../../lib/SeoHead';
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
 const img = (prod, file) => `/productos-delie/almacenamiento-vertical/${seg(prod)}/${file}`;
 
-const PRODUCTS = [
-  {
-    name: 'Carrusel vertical inteligente',
-    image: img('Carrusel vertical inteligente para almacenamiento automatizado de alta-densidad', '2025112714330825019.webp'),
-    desc: 'Sistema vertical automatizado que circula transportadores internamente para llevar materiales al operario. Altura hasta 17.580 mm, carga máx. por transportador: 180 kg, capacidad total: 6.000 kg.',
-    features: ['Altura hasta 17.580 mm', 'Carga máx. 180 kg por transportador', 'Capacidad total 6.000 kg', 'Configurable: ligero, medio o pesado', 'Integrable con WMS/WCS'],
-    best_for: 'Alta rotación de SKUs similares. Sectores: manufactura, automotriz, retail.',
-    link: '/catalogo/almacenamiento-vertical/carruseles',
-  },
-  {
-    name: 'Módulo de elevación vertical (VLM)',
-    image: img('Solución de elevación vertical automatizada de mercancías-a-personas', '20251127144756e3768.webp'),
-    desc: 'Solución "mercancías a persona" con extractor inteligente que sitúa materiales en la ventanilla del operario. Ahorra hasta el 90% del espacio de suelo. Compatible con ERP y MES.',
-    features: ['Ahorra hasta 90% del espacio de suelo', 'Compatible con ERP y MES', 'Alta precisión por posición absoluta', 'Múltiples ventanillas simultáneas', 'Pesaje integrado y escáner opcionales'],
-    best_for: 'Alta variedad de SKUs con picking frecuente. Sectores: farmacéutica, e-commerce, repuestos.',
-    link: '/catalogo/almacenamiento-vertical/vlm',
-  },
+/* Solo imagen + link; name/desc/features/best_for desde i18n por índice. */
+const PRODUCT_MEDIA = [
+  { image: img('Carrusel vertical inteligente para almacenamiento automatizado de alta-densidad', '2025112714330825019.webp'), link: '/catalogo/almacenamiento-vertical/carruseles' },
+  { image: img('Solución de elevación vertical automatizada de mercancías-a-personas', '20251127144756e3768.webp'), link: '/catalogo/almacenamiento-vertical/vlm' },
 ];
 
-const FAQ = [
-  { q: '¿Cuándo conviene un VLM y cuándo un carrusel vertical para mi depósito o bodega?', a: 'El VLM conviene cuando tenés alta variedad de SKUs y necesitás acceso aleatorio: cada ciclo podés extraer cualquier bandeja del almacén de forma independiente. El carrusel es más eficiente para SKUs de alta rotación con acceso más secuencial. Para depósitos farmacéuticos, repuestos y e-commerce con muchos SKUs distintos, el VLM es generalmente la mejor opción.' },
-  { q: '¿Cuánto espacio de suelo ahorro con un VLM en mi almacén o bodega?', a: 'Típicamente entre el 70% y el 90% comparado con estanterías convencionales. Un VLM de 10 metros de altura ocupa 5-8 m² de superficie y almacena lo equivalente a 30-50 m² de estanterías convencionales. En edificios con altura libre, la densidad de almacenaje por m² de suelo se multiplica entre 4 y 8 veces.' },
-  { q: '¿Cómo se integra el VLM con mi ERP o WMS actual?', a: 'Mediante APIs estándar RESTful o la interfaz del WMS de DELIE. Si ya tenés un WMS de terceros (SAP EWM, Manhattan, etc.), el VLM puede operar como subsistema esclavo que recibe órdenes de extracción. Si no tenés WMS, el módulo de DELIE gestiona el inventario del depósito de forma autónoma con integración al ERP.' },
-  { q: '¿Puede operar el VLM o carrusel vertical en temperatura controlada?', a: 'El carrusel vertical opera entre -5°C y +40°C, compatible con cámaras de frío positivo. El VLM tiene versiones para entornos entre 2°C y 25°C, ideal para farmacéutica y productos refrigerados. Para frío negativo (bodega de congelados), se recomiendan los transelevadores especializados de la línea AS/RS de DELIE.' },
-];
-
-const SISTER_CATS = [
-  { label: 'AS/RS', href: '/catalogo/asrs', desc: 'Estanterías automatizadas' },
-  { label: 'Robots de manipulación', href: '/catalogo/robots-manipulacion', desc: 'Transelevadores, shuttles y AMR' },
-  { label: 'Equipo de transporte', href: '/catalogo/equipo-transporte', desc: 'Conveyors, elevadores y paletizadores' },
-  { label: 'Software inteligente', href: '/catalogo/software', desc: 'WMS, WCS y control de almacén' },
+const SISTER_HREFS = [
+  '/catalogo/asrs',
+  '/catalogo/robots-manipulacion',
+  '/catalogo/equipo-transporte',
+  '/catalogo/software',
 ];
 
 export const CatalogoVerticalPage = () => {
   const langNavigate = useLangNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const p = (k) => t(`pages.catalogoVertical.${k}`, { returnObjects: true });
   useEffect(() => { window.scrollTo(0, 0); }, []);
+
+  const productsI18n = p('products');
+  const PRODUCTS = PRODUCT_MEDIA.map((m, i) => ({ ...m, ...(productsI18n[i] || {}) }));
+  const FAQ = p('faq');
+  const fiscal = p('fiscal');
+  const explorar = p('explorarTipo');
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
@@ -72,16 +58,18 @@ export const CatalogoVerticalPage = () => {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
-          "name": "Almacenamiento vertical DELIE — VLM y carruseles",
-          "numberOfItems": 2,
-          "itemListElement": PRODUCTS.map((p, i) => ({
-            "@type": "ListItem", "position": i + 1, "name": p.name, "description": p.desc,
+          "name": p('metaTitle'),
+          "numberOfItems": PRODUCTS.length,
+          "inLanguage": i18n.language,
+          "itemListElement": PRODUCTS.map((prod, i) => ({
+            "@type": "ListItem", "position": i + 1, "name": prod.name, "description": prod.desc,
             "url": "https://www.stokagroup.com/catalogo/almacenamiento-vertical"
           }))
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
+          "inLanguage": i18n.language,
           "mainEntity": FAQ.map(item => ({
             "@type": "Question",
             "name": item.q,
@@ -91,8 +79,9 @@ export const CatalogoVerticalPage = () => {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "name": "Almacenamiento Vertical Automático VLM y Carrusel — DELIE Argentina",
-          "description": "Módulos VLM y carruseles verticales DELIE para almacenes en Argentina. Hasta 90% menos espacio de suelo. Goods-to-person automatizado con soporte local.",
+          "name": p('metaTitle'),
+          "description": p('metaDesc'),
+          "inLanguage": i18n.language,
           "provider": { "@id": "https://www.stokagroup.com/#organization" },
           "areaServed": [{ "@type": "Country", "name": "Argentina" }, { "@type": "Country", "name": "Chile" }],
           "serviceType": "Almacenamiento Vertical — Automatización de Almacenes",
@@ -155,19 +144,19 @@ export const CatalogoVerticalPage = () => {
           <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('catalogTag')}</p>
           <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">{p('catalogH2')}</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {PRODUCTS.map((p, i) => (
-              <motion.button key={i} onClick={() => langNavigate(p.link)}
+            {PRODUCTS.map((prod, i) => (
+              <motion.button key={i} onClick={() => langNavigate(prod.link)}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-md transition-all cursor-pointer group w-full">
                 <div className="aspect-video overflow-hidden bg-gray-100">
-                  <img loading="lazy" src={p.image} alt={`${p.name} — almacenamiento vertical DELIE`}
+                  <img loading="lazy" src={prod.image} alt={`${prod.name} — DELIE`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-black text-gray-900 text-lg mb-2 group-hover:text-cyan-600 transition-colors">{p.name}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{p.desc}</p>
+                  <h3 className="font-black text-gray-900 text-lg mb-2 group-hover:text-cyan-600 transition-colors">{prod.name}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{prod.desc}</p>
                   <div className="mb-4">
-                    {p.features.map(f => (
+                    {prod.features.map(f => (
                       <div key={f} className="flex items-start gap-2 mb-1.5">
                         <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0" />
                         <p className="text-sm text-gray-600">{f}</p>
@@ -175,7 +164,7 @@ export const CatalogoVerticalPage = () => {
                     ))}
                   </div>
                   <div className="bg-cyan-50 border border-cyan-200 rounded-lg p-3 flex items-center justify-between">
-                    <p className="text-xs text-cyan-700 font-bold">{p.best_for}</p>
+                    <p className="text-xs text-cyan-700 font-bold">{prod.best_for}</p>
                     <ArrowRight size={14} className="text-cyan-500 shrink-0 ml-2" />
                   </div>
                 </div>
@@ -220,16 +209,12 @@ export const CatalogoVerticalPage = () => {
                   <span key={b} className="text-[11px] bg-white border border-gray-200 text-gray-600 px-2.5 py-1 rounded-full">{b}</span>
                 ))}
               </div>
-              <p className="text-xs text-gray-500 mt-4 leading-relaxed">Un VLM de 10 m de altura en una huella de 3×3 m almacena el equivalente a 50 m lineales de estantería convencional.</p>
+              <p className="text-xs text-gray-500 mt-4 leading-relaxed">{p('densityNote')}</p>
             </div>
             <div className="bg-slate-900 rounded-2xl p-6 flex flex-col gap-4">
-              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.4em] uppercase">Argentina 2026 — Fiscal</p>
+              <p className="text-[10px] font-mono text-cyan-400 tracking-[0.4em] uppercase">{p('fiscalTag')}</p>
               <div className="space-y-2.5">
-                {[
-                  { label: 'Decreto 513/2025', desc: 'Arancel 0% en importación de VLM y carruseles' },
-                  { label: 'RIMI', desc: 'Amortización acelerada del 100% en el 1er ejercicio' },
-                  { label: 'BICE', desc: 'Financiamiento a 10 años con período de gracia' },
-                ].map(item => (
+                {fiscal.map(item => (
                   <div key={item.label} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
                     <div>
@@ -240,7 +225,7 @@ export const CatalogoVerticalPage = () => {
                 ))}
               </div>
               <button onClick={() => langNavigate('/beneficios-fiscales')} className="mt-auto text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors border-t border-white/10 pt-4">
-                Ver todos los beneficios fiscales <ArrowRight size={12} />
+                {p('fiscalCta')} <ArrowRight size={12} />
               </button>
             </div>
           </div>
@@ -254,7 +239,7 @@ export const CatalogoVerticalPage = () => {
           <h2 className="text-xl font-black text-gray-900 uppercase tracking-tighter mb-6">{t('pages.catalogoVertical.sisterH2', 'Otras categorías del catálogo')}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {p('sisterCats').map((c, i) => (
-              <button key={i} onClick={() => langNavigate(SISTER_CATS[i].href)}
+              <button key={i} onClick={() => langNavigate(SISTER_HREFS[i])}
                 className="text-left p-4 bg-gray-50 border border-gray-200 rounded-xl hover:border-cyan-300 hover:bg-cyan-50/50 transition-all group">
                 <p className="font-bold text-gray-900 text-sm mb-0.5 group-hover:text-cyan-600 transition-colors">{c.label}</p>
                 <p className="text-gray-500 text-xs">{c.desc}</p>
@@ -268,20 +253,17 @@ export const CatalogoVerticalPage = () => {
       {/* Explorar por tipo — product child links */}
       <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Explorar por tipo</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Soluciones de almacenamiento vertical</h2>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('explorarTag')}</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">{p('explorarH2')}</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            {[
-              { nombre: 'Módulo VLM', desc: 'Hasta 90% menos espacio. Lanzadera de acceso aleatorio.', url: '/catalogo/almacenamiento-vertical/vlm' },
-              { nombre: 'Carrusel Vertical', desc: 'La solución más compacta para repuestos y piezas pequeñas.', url: '/catalogo/almacenamiento-vertical/carruseles' },
-            ].map((item, i) => (
-              <motion.a key={i} href={item.url}
+            {explorar.map((item, i) => (
+              <motion.a key={i} href={['/catalogo/almacenamiento-vertical/vlm', '/catalogo/almacenamiento-vertical/carruseles'][i]}
                 initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
                 className="bg-white border border-gray-200 rounded-2xl p-5 hover:border-cyan-400 hover:shadow-sm transition-all group block">
                 <h3 className="font-black text-gray-900 text-sm mb-2 group-hover:text-cyan-600 transition-colors">{item.nombre}</h3>
                 <p className="text-gray-500 text-xs leading-relaxed mb-3">{item.desc}</p>
                 <span className="inline-flex items-center gap-1 text-xs text-cyan-500 font-bold">
-                  Ver detalle <ChevronRight size={12} />
+                  {p('verDetalle')} <ChevronRight size={12} />
                 </span>
               </motion.a>
             ))}

@@ -597,7 +597,469 @@
       "categoriesH2_b": "Categorías",
       "allCategories": "Todas las categorías",
       "allShort": "Todas",
-      "vocabPara": "Nuestro catálogo cubre toda la cadena de la automatización logística: depósitos automáticos, almacenes robotizados, transelevadores y grúas de almacén, robots logísticos (AGV/AMR), almacenamiento vertical y software de gestión. Soluciones de intralogística y almacén 4.0 para centros de distribución, depósitos inteligentes y naves industriales de cualquier escala."
+      "vocabPara": "Nuestro catálogo cubre toda la cadena de la automatización logística: depósitos automáticos, almacenes robotizados, transelevadores y grúas de almacén, robots logísticos (AGV/AMR), almacenamiento vertical y software de gestión. Soluciones de intralogística y almacén 4.0 para centros de distribución, depósitos inteligentes y naves industriales de cualquier escala.",
+      "verProductos": "Ver productos",
+      "verDetalle": "Ver detalle",
+      "verCanal": "Ver canal",
+      "youtubeTitle": "DELIE en YouTube",
+      "youtubeDesc": "Instalaciones reales, demostraciones y casos de uso de los sistemas ASRS DELIE en todo el mundo.",
+      "certLine": "DELIE · Fabricante certificado ISO 9001 · CE",
+      "cats": {
+        "estanterias": {
+          "label": "AS/RS",
+          "desc": "Estanterías AS/RS de 7 a 40 metros. Drive-in, shuttle, mezzanine."
+        },
+        "vertical": {
+          "label": "Almacenamiento vertical",
+          "desc": "Carruseles verticales y módulos VLM. Hasta 90% menos espacio de suelo."
+        },
+        "robots": {
+          "label": "Robots de manipulación",
+          "desc": "Grúas apiladoras, transelevadores MiniLoad, robots lanzadera y AMR."
+        },
+        "transport": {
+          "label": "Equipo de transporte",
+          "desc": "Elevadores, transportadores de cadena, rodillos y paletizadores."
+        },
+        "sistema": {
+          "label": "Software inteligente",
+          "desc": "WMS, WCS, HMS y visualización 3D para control total del almacén."
+        }
+      },
+      "items": {
+        "e1": {
+          "name": "Estanterías Pallet Shuttle",
+          "description": "Estanterías de alta densidad para sistemas de robot lanzadera de paletas. Máxima utilización vertical.",
+          "features": [
+            "7 a 40 metros de altura",
+            "Compatible con lanzaderas 4 y 2 vías",
+            "Precisión de mecanizado ±0,1 mm",
+            "Resistente a oxidación y niebla salina",
+            "+1.000 proyectos"
+          ]
+        },
+        "e2": {
+          "name": "Estantería Tote Shuttle",
+          "description": "Estanterías de alta densidad para robots tote shuttle, optimizadas para contenedores pequeños y medianos.",
+          "features": [
+            "Robots tote 4 vías y bidireccionales",
+            "Precisión ±0,1 mm",
+            "Hasta 40 metros",
+            "Anticorrosión de silano"
+          ]
+        },
+        "e3": {
+          "name": "Estanterías para grúa apiladora",
+          "description": "Gran altura para transelevadores y grúas apiladoras. Máxima densidad en sistemas AS/RS.",
+          "features": [
+            "Hasta 40 metros",
+            "Compatible con grúas de 1 y 2 mástiles",
+            "Precisión ±0,1 mm",
+            "Acero de grandes acerías certificadas"
+          ]
+        },
+        "e4": {
+          "name": "Mini-estantería Flybox",
+          "description": "Estantería compacta con distancia ultra estrecha entre contenedores para máxima densidad en espacios reducidos.",
+          "features": [
+            "Distancia ultra estrecha entre contenedores",
+            "Compatible con robot Mini-Flybox",
+            "Altura 550–12.000 mm",
+            "E-commerce, farmacéutica, manufactura"
+          ]
+        },
+        "e5": {
+          "name": "Transelevador + Robot lanzadera",
+          "description": "Sistema combinado que integra transelevadores con robots lanzadera para máxima flexibilidad y eficiencia.",
+          "features": [
+            "Combina transelevadores y robots lanzadera",
+            "Flexibilidad para distintos tipos de paleta",
+            "Optimización vertical y horizontal",
+            "Gestión coordinada por WCS"
+          ]
+        },
+        "e6": {
+          "name": "Estanterías Miniload",
+          "description": "Para transelevadores MiniLoad, alta densidad de contenedores y totes.",
+          "features": [
+            "Compatible con MiniLoad simple y doble profundidad",
+            "Precisión ±0,1 mm",
+            "Anticorrosión",
+            "Farmacéutica, e-commerce y manufactura"
+          ]
+        },
+        "e7": {
+          "name": "Estanterías de servicio pesado",
+          "description": "Alta capacidad para almacenamiento manual o semiautomático de paletas de gran peso.",
+          "features": [
+            "Hasta 2.000 kg por palé",
+            "Diseño personalizable",
+            "Compatible con frío y trabajo pesado",
+            "Anticorrosión de silano"
+          ]
+        },
+        "e8": {
+          "name": "Estanterías push-back",
+          "description": "Alta densidad tipo push-back con mínimos pasillos de acceso. Sistema LIFO.",
+          "features": [
+            "Máxima densidad con mínimos pasillos",
+            "Sistema LIFO",
+            "Compatible con carretillas estándar",
+            "Hasta 2.000 kg por palé"
+          ]
+        },
+        "e9": {
+          "name": "Estanterías de entresuelo",
+          "description": "Plataforma elevada sobre estanterías para crear niveles adicionales de almacenamiento o trabajo.",
+          "features": [
+            "Niveles adicionales sobre estanterías",
+            "Diseño personalizable",
+            "Acceso por escaleras y montacargas",
+            "Acero de alta resistencia"
+          ]
+        },
+        "e10": {
+          "name": "Plataforma de estructura de acero",
+          "description": "Plataforma elevada de acero para espacio adicional de almacenamiento o trabajo.",
+          "features": [
+            "Acero de alta resistencia",
+            "Personalizable en dimensiones",
+            "Cargas ligeras y pesadas",
+            "Bajo costo de construcción"
+          ]
+        },
+        "e11": {
+          "name": "Palé de almacenamiento de acero",
+          "description": "Palé de acero para entornos donde los palés de madera no son adecuados.",
+          "features": [
+            "Mayor durabilidad",
+            "Resistente a humedad, frío y químicos",
+            "Compatible con sistemas automáticos",
+            "Bajo mantenimiento"
+          ]
+        },
+        "e12": {
+          "name": "Drive-in racking",
+          "description": "La carretilla ingresa dentro de la estantería para depositar o retirar paletas. Máxima utilización del espacio.",
+          "features": [
+            "Hasta 80% del área de almacenamiento",
+            "Sistema LIFO",
+            "Compatible con carretillas estándar",
+            "Apto para frío y trabajo pesado"
+          ]
+        },
+        "v1": {
+          "name": "Carrusel vertical inteligente",
+          "description": "Sistema vertical automatizado que circula transportadores internamente para llevar materiales al operario.",
+          "features": [
+            "Altura hasta 17.580 mm",
+            "Carga máx. por transportador: 180 kg",
+            "Capacidad total: 6.000 kg",
+            "Configurable: ligero, medio o pesado"
+          ]
+        },
+        "v2": {
+          "name": "Módulo de elevación vertical (VLM)",
+          "description": "Solución \"mercancías a persona\" con extractor inteligente que sitúa materiales en la ventanilla del operario.",
+          "features": [
+            "Ahorra hasta el 90% del espacio de suelo",
+            "Compatible con ERP y MES",
+            "Alta precisión por posición absoluta",
+            "Múltiples ventanillas simultáneas",
+            "Pesaje integrado y escáner opcionales"
+          ]
+        },
+        "r1": {
+          "name": "Grúa apiladora mástil simple",
+          "description": "Robot AS/RS que opera con movimientos verticales y horizontales para gestionar productos paletizados.",
+          "features": [
+            "Profundidad simple, doble y múltiple",
+            "Apto para frío, antiexplosión y salas limpias",
+            "Alta rigidez estructural",
+            "Compatible con AGV/AMR, RGV y transportadores",
+            "Certificación CE e ISO 9001"
+          ]
+        },
+        "r2": {
+          "name": "Grúa apiladora doble mástil",
+          "description": "Configuración de doble mástil para mayor estabilidad en grandes alturas y alta capacidad de carga.",
+          "features": [
+            "Mayor estabilidad en alturas elevadas",
+            "Capacidad de carga superior",
+            "Compatible con WCS",
+            "Velocidades optimizadas de elevación",
+            "Certificación CE e ISO 9001"
+          ]
+        },
+        "r3": {
+          "name": "Grúa apiladora servicio pesado",
+          "description": "Versión reforzada para cargas de gran peso en operaciones industriales exigentes.",
+          "features": [
+            "Capacidad de carga superior",
+            "Estructura reforzada para 24/7",
+            "Sistemas de seguridad redundantes",
+            "Mantenimiento preventivo simplificado"
+          ]
+        },
+        "r4": {
+          "name": "Grúa apiladora personalizada",
+          "description": "Solución a medida para almacenes con requerimientos específicos de dimensiones, carga o entorno.",
+          "features": [
+            "Diseño a medida por proyecto",
+            "Compatible con almacenes irregulares",
+            "Integración con ERP, WMS, WCS",
+            "Producción 100% interna"
+          ]
+        },
+        "r5": {
+          "name": "Transelevador MiniLoad profundidad simple",
+          "description": "Sistema AS/RS de alto rendimiento para contenedores, cajas y totes de pequeño y mediano tamaño.",
+          "features": [
+            "Hasta 300 kg por unidad",
+            "Velocidad máx. 360 m/min",
+            "Precisión ±2 mm",
+            "Compatible con totes, cartones y bandejas"
+          ]
+        },
+        "r6": {
+          "name": "Transelevador MiniLoad doble profundidad",
+          "description": "Doble profundidad que maximiza la densidad de almacenamiento para contenedores y totes.",
+          "features": [
+            "Doble profundidad para mayor densidad",
+            "Hasta 300 kg por unidad",
+            "360 m/min de velocidad",
+            "Componentes modulares independientes"
+          ]
+        },
+        "r7": {
+          "name": "Transelevador MiniLoad personalizado",
+          "description": "Solución MiniLoad a medida adaptable a múltiples entornos operativos.",
+          "features": [
+            "Diseño personalizado",
+            "Múltiples tipos de contenedores",
+            "Integración directa con WMS/WCS"
+          ]
+        },
+        "r8": {
+          "name": "Robot lanzadera 4 vías — paletas",
+          "description": "Robot de paletas de 4 direcciones con diseño ultradelgado. Alta densidad con gran volumen y pocos SKU.",
+          "features": [
+            "Solo 125 mm de espesor",
+            "1,5 toneladas de capacidad",
+            "Control multi-robot por WCS",
+            "Operativo a -25°C",
+            "Plug-and-play, instalación rápida"
+          ]
+        },
+        "r9": {
+          "name": "Robot lanzadera bidireccional — paletas",
+          "description": "Robot lanzadera de dos vías para pasillos lineales de alta eficiencia.",
+          "features": [
+            "Movimiento bidireccional eficiente",
+            "1,5 toneladas de capacidad",
+            "Integración WCS",
+            "Bajo consumo energético"
+          ]
+        },
+        "r10": {
+          "name": "Robot lanzadera madre-hijo",
+          "description": "Sistema combinado donde el robot madre transporta robots hijo para acceder a distintos niveles.",
+          "features": [
+            "Acceso autónomo a múltiples niveles",
+            "Mayor throughput en alta densidad",
+            "Gestión centralizada WCS"
+          ]
+        },
+        "r11": {
+          "name": "Robot lanzadera — almacén en frío",
+          "description": "Versión para cámaras frigoríficas hasta -25°C.",
+          "features": [
+            "Operativo hasta -25°C",
+            "Sellado hermético anticondensación",
+            "Diagnóstico remoto"
+          ]
+        },
+        "r12": {
+          "name": "Robot lanzadera antiexplosión",
+          "description": "Versión certificada ATEX para zonas con riesgo de explosión.",
+          "features": [
+            "Certificación ATEX",
+            "Materiales especialmente seleccionados",
+            "Normativas de seguridad industrial"
+          ]
+        },
+        "r13": {
+          "name": "Robot tote lanzadera 4 vías",
+          "description": "Sistema AS/RS de alta velocidad para artículos pequeños en contenedores.",
+          "features": [
+            "Hasta 50 kg por contenedor",
+            "5 m/s de velocidad",
+            "Precisión ±2 mm (99,99%)",
+            "-25°C a +45°C"
+          ]
+        },
+        "r14": {
+          "name": "Robot tote bidireccional",
+          "description": "Robot tote de dos vías para pasillos lineales, ideal para e-commerce y distribución.",
+          "features": [
+            "Bidireccional para pasillos lineales",
+            "Hasta 50 kg por contenedor",
+            "Multi-robot bajo WCS"
+          ]
+        },
+        "t1": {
+          "name": "Elevador de paletas",
+          "description": "Elevación vertical de paletas entre niveles del almacén.",
+          "features": [
+            "Plataforma hasta 1.200×1.600 mm",
+            "2.000 kg de carga",
+            "Hasta 60 m/min",
+            "Precisión ±2 mm"
+          ]
+        },
+        "t2": {
+          "name": "Elevador de totes alta velocidad",
+          "description": "Elevación de alta velocidad para contenedores y totes entre niveles verticales.",
+          "features": [
+            "150 kg de carga máxima",
+            "5 m/s de velocidad",
+            "3 m/s² de aceleración",
+            "Operación 24/7"
+          ]
+        },
+        "t3": {
+          "name": "Máquina de aterrizaje y elevación",
+          "description": "Componente modular para transferencia vertical de paletas dentro de líneas de transporte.",
+          "features": [
+            "Hasta 3.000 kg por palé",
+            "Variador de frecuencia",
+            "Integración WMS/WCS"
+          ]
+        },
+        "t4": {
+          "name": "Máquina de transferencia 90°",
+          "description": "Cambia la dirección de paletas a 90° sin interrumpir el flujo.",
+          "features": [
+            "Cambio a 90° sin interrupciones",
+            "Hasta 3.000 kg por palé",
+            "Arranque suave"
+          ]
+        },
+        "t5": {
+          "name": "Transferencia de totes",
+          "description": "Cambio de dirección para contenedores y totes en líneas de alta velocidad.",
+          "features": [
+            "Alta velocidad de transferencia",
+            "Múltiples tamaños de totes",
+            "Diseño modular"
+          ]
+        },
+        "t6": {
+          "name": "Paletizador / Despaletizador",
+          "description": "Formación automática de paletas a partir de capas de producto.",
+          "features": [
+            "Paletizado y despaletizado automático",
+            "Integración directa WMS/WCS",
+            "Bajo mantenimiento"
+          ]
+        },
+        "t7": {
+          "name": "Transportador de cadena",
+          "description": "Transportador de cadena para el movimiento eficiente de paletas.",
+          "features": [
+            "3.000 kg por palé",
+            "Variador de frecuencia",
+            "Operable a baja temperatura"
+          ]
+        },
+        "t8": {
+          "name": "Cinta transportadora de totes",
+          "description": "Cinta modular para totes y contenedores entre estaciones de trabajo.",
+          "features": [
+            "Línea recta e inclinada",
+            "Múltiples tamaños de totes",
+            "Operación 24/7"
+          ]
+        },
+        "t9": {
+          "name": "Transportador de rodillos — paletas",
+          "description": "Transportador de rodillos para movimiento horizontal de paletas.",
+          "features": [
+            "3.000 kg por palé",
+            "Velocidad configurable",
+            "Integración con WMS/WCS"
+          ]
+        },
+        "t10": {
+          "name": "Transportador de rodillos — totes",
+          "description": "Rodillos con zonas de acumulación para gestionar el flujo de totes.",
+          "features": [
+            "Acumulación para gestión de flujo",
+            "Múltiples tamaños de totes",
+            "Compatible con MiniLoad y robots tote"
+          ]
+        },
+        "s1": {
+          "name": "WMS — Gestión de almacenes",
+          "description": "Software de gestión de almacén certificado CMMI Nivel 5 con visibilidad y control en tiempo real.",
+          "features": [
+            "Entradas, salidas e inventario en tiempo real",
+            "Conecta con ERP, MES, SAP, TMS y OMS",
+            "Digital Twin 3D para visibilidad 360°",
+            "Reduce efecto látigo hasta 70%"
+          ]
+        },
+        "s2": {
+          "name": "WCS — Control de almacén",
+          "description": "Integra y coordina en tiempo real todos los equipos: robots, transelevadores, transportadores, AMR y RGV.",
+          "features": [
+            "Monitoreo 2D y 3D en tiempo real",
+            "Descomposición automática de tareas",
+            "Selección de ruta óptima"
+          ]
+        },
+        "s3": {
+          "name": "HMS — Sistema hombre-máquina",
+          "description": "Interfaz entre operario y equipos para control y supervisión de la instalación logística.",
+          "features": [
+            "Interfaz intuitiva para operadores",
+            "Supervisión en tiempo real",
+            "Compatible con dispositivos móviles"
+          ]
+        },
+        "s4": {
+          "name": "ECS — Control electrónico",
+          "description": "Gestión integral del funcionamiento coordinado de todos los componentes eléctricos.",
+          "features": [
+            "Monitoreo de motores, variadores y sensores",
+            "Diagnóstico predictivo",
+            "Integración con WCS y WMS"
+          ]
+        },
+        "s5": {
+          "name": "Interfaz API",
+          "description": "Capa de integración para conectar el sistema de almacén con plataformas empresariales externas.",
+          "features": [
+            "Integración con ERP, MES, SAP, TMS, OMS",
+            "APIs RESTful estándar",
+            "Documentación técnica completa"
+          ]
+        },
+        "s6": {
+          "name": "Visualización 3D centralizada",
+          "description": "Representación tridimensional en tiempo real de todo el almacén.",
+          "features": [
+            "Representación 3D en tiempo real",
+            "Digital Twin para simulación y optimización",
+            "Dashboards por rol de usuario"
+          ]
+        }
+      },
+      "productsLabel": "productos",
+      "ariaClose": "Cerrar",
+      "ariaPrev": "Imagen anterior",
+      "ariaNext": "Imagen siguiente",
+      "ariaImage": "Imagen"
     },
     "solutions": {
       "metaTitle": "Soluciones ASRS para tu Industria | STOKA Argentina",
@@ -1796,7 +2258,7 @@
       "fiscalItems": [
         {
           "label": "Decreto 513/2025",
-          "desc": "Arancel 0% en importación de equipos ASRS"
+          "desc": "Reduce el arancel de importación de equipos ASRS según clasificación NCM"
         },
         {
           "label": "RIMI",
@@ -1899,7 +2361,57 @@
           "desc": "WMS, WCS y control de almacén"
         }
       ],
-      "vocabPara": "Un sistema ASRS —también llamado depósito automático, almacén robotizado o sistema de almacenamiento automático— reemplaza el manejo manual por transelevadores (grúas de almacén), robots logísticos y software de control. Es el núcleo de la intralogística moderna y de cualquier proyecto de almacén 4.0: permite operar un depósito inteligente con máxima densidad, trazabilidad total y aprovechamiento vertical del espacio en naves industriales y centros de distribución."
+      "vocabPara": "Un sistema ASRS —también llamado depósito automático, almacén robotizado o sistema de almacenamiento automático— reemplaza el manejo manual por transelevadores (grúas de almacén), robots logísticos y software de control. Es el núcleo de la intralogística moderna y de cualquier proyecto de almacén 4.0: permite operar un depósito inteligente con máxima densidad, trazabilidad total y aprovechamiento vertical del espacio en naves industriales y centros de distribución.",
+      "products": [
+        {
+          "name": "Estanterías Pallet Shuttle",
+          "desc": "Estanterías de alta densidad para robots lanzadera de paletas. 7 a 40 metros de altura, precisión ±0,1 mm."
+        },
+        {
+          "name": "Estantería Tote Shuttle",
+          "desc": "Para robots tote shuttle bidireccionales y 4 vías. Hasta 40 metros, anticorrosión de silano."
+        },
+        {
+          "name": "Estanterías para grúa apiladora",
+          "desc": "Gran altura para transelevadores y grúas apiladoras. Compatible con grúas de 1 y 2 mástiles."
+        },
+        {
+          "name": "Mini-estantería Flybox",
+          "desc": "Distancia ultra estrecha entre contenedores. Altura 550–12.000 mm. Ideal para e-commerce y farmacéutica."
+        },
+        {
+          "name": "Transelevador + Robot lanzadera",
+          "desc": "Sistema combinado de transelevadores y robots lanzadera. Máxima flexibilidad y eficiencia."
+        },
+        {
+          "name": "Estanterías Miniload",
+          "desc": "Para transelevadores MiniLoad, simple y doble profundidad. Alta densidad de contenedores y totes."
+        },
+        {
+          "name": "Estanterías de servicio pesado",
+          "desc": "Hasta 2.000 kg por palé. Compatible con frío y trabajo pesado. Anticorrosión de silano."
+        },
+        {
+          "name": "Estanterías push-back",
+          "desc": "Alta densidad tipo push-back, sistema LIFO. Compatible con carretillas estándar."
+        },
+        {
+          "name": "Estanterías de entresuelo",
+          "desc": "Plataforma elevada sobre estanterías para crear niveles adicionales de almacenamiento."
+        },
+        {
+          "name": "Plataforma de estructura de acero",
+          "desc": "Plataforma elevada de acero personalizable para espacio adicional de almacenamiento."
+        },
+        {
+          "name": "Palé de almacenamiento de acero",
+          "desc": "Palé de acero resistente a humedad, frío y químicos. Compatible con sistemas automáticos."
+        },
+        {
+          "name": "Drive-in racking",
+          "desc": "La carretilla ingresa dentro. Hasta 80% de utilización del espacio. Sistema LIFO, apto para frío."
+        }
+      ]
     },
     "catalogoRobots": {
       "breadcrumbCat": "Robots de manipulación",
@@ -1959,7 +2471,129 @@
         }
       ],
       "metaTitle": "Robots de Manipulación | Transelevadores y AMR | STOKA",
-      "metaDesc": "Catálogo de robots de almacén DELIE: grúas apiladoras, transelevadores MiniLoad, robots shuttle y AMR. 14 modelos con soporte local de STOKA en Argentina."
+      "metaDesc": "Catálogo de robots de almacén DELIE: grúas apiladoras, transelevadores MiniLoad, robots shuttle y AMR. 14 modelos con soporte local de STOKA en Argentina.",
+      "products": [
+        {
+          "name": "Grúa apiladora mástil simple",
+          "desc": "Robot AS/RS para productos paletizados. Profundidad simple, doble y múltiple. Apto para frío, antiexplosión y salas limpias. Certificación CE e ISO 9001."
+        },
+        {
+          "name": "Grúa apiladora doble mástil",
+          "desc": "Configuración de doble mástil para mayor estabilidad en grandes alturas y alta capacidad de carga. Certificación CE e ISO 9001."
+        },
+        {
+          "name": "Grúa apiladora servicio pesado",
+          "desc": "Versión reforzada para cargas de gran peso en operaciones industriales exigentes. Operación 24/7 con sistemas de seguridad redundantes."
+        },
+        {
+          "name": "Grúa apiladora personalizada",
+          "desc": "Solución a medida para almacenes con requerimientos específicos de dimensiones, carga o entorno. Integración ERP/WMS/WCS."
+        },
+        {
+          "name": "Transelevador MiniLoad profundidad simple",
+          "desc": "Sistema AS/RS de alto rendimiento para contenedores, cajas y totes. Hasta 300 kg, velocidad máx. 360 m/min, precisión ±2 mm."
+        },
+        {
+          "name": "Transelevador MiniLoad doble profundidad",
+          "desc": "Doble profundidad que maximiza la densidad de almacenamiento para contenedores y totes. Hasta 300 kg por unidad."
+        },
+        {
+          "name": "Transelevador MiniLoad personalizado",
+          "desc": "Solución MiniLoad a medida adaptable a múltiples entornos operativos. Integración directa con WMS/WCS."
+        },
+        {
+          "name": "Robot lanzadera 4 vías — paletas",
+          "desc": "Solo 125 mm de espesor, 1,5 toneladas de capacidad. Operativo a -25°C. Control multi-robot por WCS. Plug-and-play."
+        },
+        {
+          "name": "Robot lanzadera bidireccional — paletas",
+          "desc": "Robot lanzadera de dos vías para pasillos lineales de alta eficiencia. Bajo consumo energético."
+        },
+        {
+          "name": "Robot lanzadera madre-hijo",
+          "desc": "Sistema combinado: el robot madre transporta robots hijo para acceder a distintos niveles autónomamente. Mayor throughput."
+        },
+        {
+          "name": "Robot lanzadera — almacén en frío",
+          "desc": "Versión para cámaras frigoríficas hasta -25°C. Sellado hermético anticondensación y diagnóstico remoto."
+        },
+        {
+          "name": "Robot lanzadera antiexplosión",
+          "desc": "Versión certificada ATEX para zonas con riesgo de explosión. Materiales especialmente seleccionados."
+        },
+        {
+          "name": "Robot tote lanzadera 4 vías",
+          "desc": "Sistema AS/RS de alta velocidad para artículos pequeños. Hasta 50 kg, 5 m/s, precisión ±2 mm. De -25°C a +45°C."
+        },
+        {
+          "name": "Robot tote bidireccional",
+          "desc": "Robot tote de dos vías para pasillos lineales. Ideal para e-commerce y distribución. Multi-robot bajo WCS."
+        },
+        {
+          "name": "Robot tote doble estación 4 vías",
+          "desc": "Primicia mundial: maneja 2 contenedores por ciclo, eficiencia +80-90%. PLC Siemens, algoritmo ECBS. Hasta 100 kg, 5 m/s, ±2 mm."
+        }
+      ],
+      "techTag": "¿Cuál tecnología necesitás?",
+      "techCards": [
+        {
+          "name": "Transelevador (Stacker Crane / MiniLoad)",
+          "badge": "Alta variabilidad SKUs",
+          "desc": "Ocupa un pasillo completo y mueve paletas o totes con un único equipo. Hasta 360 m/min, precisión ±2 mm. Más robusto para almacenes con alta variabilidad de referencias.",
+          "best": "E-commerce · Farmacéutica · Manufactura con muchos SKUs"
+        },
+        {
+          "name": "Robot lanzadera (Shuttle 4 vías)",
+          "badge": "Máximo throughput",
+          "desc": "Circula dentro de la estantería sin pasillo dedicado. Solo 125 mm de espesor, 1,5 t de carga. Multiplica la capacidad sin ampliar el footprint. Plug-and-play.",
+          "best": "Distribución masiva · Retail · Depósitos productos homogéneos"
+        }
+      ],
+      "specsTag": "Especificaciones clave",
+      "specsChips": [
+        "Velocidad máx. 360 m/min",
+        "Carga máx. 1,5 t por shuttle",
+        "Precisión ±2 mm",
+        "Operación a -25°C",
+        "Certificación ATEX",
+        "Multi-robot bajo WCS",
+        "CE e ISO 9001",
+        "ROI típico 18–24 meses"
+      ],
+      "specsNote": "AGV para flujos fijos · AMR para zonas con alta interacción humana y layouts cambiantes.",
+      "fiscalTag": "Argentina 2026 — Fiscal",
+      "fiscal": [
+        {
+          "label": "Decreto 513/2025",
+          "desc": "Reduce el arancel de importación de robots de almacén según clasificación NCM"
+        },
+        {
+          "label": "RIMI",
+          "desc": "Amortización acelerada del 100% en el 1er ejercicio"
+        },
+        {
+          "label": "BICE",
+          "desc": "Financiamiento a 10 años con período de gracia"
+        }
+      ],
+      "fiscalCta": "Ver todos los beneficios fiscales",
+      "explorarTag": "Explorar por tipo",
+      "explorarH2": "Robots disponibles",
+      "explorarTipo": [
+        {
+          "nombre": "Paletizador / Despaletizador",
+          "desc": "Formación automática de paletas a alta velocidad"
+        },
+        {
+          "nombre": "Robot de Picking",
+          "desc": "Goods-to-person, hasta 1.200 líneas/hora"
+        },
+        {
+          "nombre": "Robots AGV / AMR",
+          "desc": "Transporte autónomo sin infraestructura fija"
+        }
+      ],
+      "verDetalle": "Ver detalle"
     },
     "catalogoVertical": {
       "breadcrumbCat": "Almacenamiento vertical",
@@ -2044,7 +2678,63 @@
         }
       ],
       "metaTitle": "Almacenamiento Vertical | VLM y Carruseles | STOKA",
-      "metaDesc": "Sistemas de almacenamiento vertical DELIE: VLM y carruseles inteligentes. Ahorrá hasta 90% de espacio con picking goods-to-person. Soporte local STOKA."
+      "metaDesc": "Sistemas de almacenamiento vertical DELIE: VLM y carruseles inteligentes. Ahorrá hasta 90% de espacio con picking goods-to-person. Soporte local STOKA.",
+      "products": [
+        {
+          "name": "Carrusel vertical inteligente",
+          "desc": "Sistema vertical automatizado que circula transportadores internamente para llevar materiales al operario. Altura hasta 17.580 mm, carga máx. por transportador: 180 kg, capacidad total: 6.000 kg.",
+          "features": [
+            "Altura hasta 17.580 mm",
+            "Carga máx. 180 kg por transportador",
+            "Capacidad total 6.000 kg",
+            "Configurable: ligero, medio o pesado",
+            "Integrable con WMS/WCS"
+          ],
+          "best_for": "Alta rotación de SKUs similares. Sectores: manufactura, automotriz, retail."
+        },
+        {
+          "name": "Módulo de elevación vertical (VLM)",
+          "desc": "Solución \"mercancías a persona\" con extractor inteligente que sitúa materiales en la ventanilla del operario. Ahorra hasta el 90% del espacio de suelo. Compatible con ERP y MES.",
+          "features": [
+            "Ahorra hasta 90% del espacio de suelo",
+            "Compatible con ERP y MES",
+            "Alta precisión por posición absoluta",
+            "Múltiples ventanillas simultáneas",
+            "Pesaje integrado y escáner opcionales"
+          ],
+          "best_for": "Alta variedad de SKUs con picking frecuente. Sectores: farmacéutica, e-commerce, repuestos."
+        }
+      ],
+      "densityNote": "Un VLM de 10 m de altura en una huella de 3×3 m almacena el equivalente a 50 m lineales de estantería convencional.",
+      "fiscalTag": "Argentina 2026 — Fiscal",
+      "fiscal": [
+        {
+          "label": "Decreto 513/2025",
+          "desc": "Reduce el arancel de importación de VLM y carruseles según clasificación NCM"
+        },
+        {
+          "label": "RIMI",
+          "desc": "Amortización acelerada del 100% en el 1er ejercicio"
+        },
+        {
+          "label": "BICE",
+          "desc": "Financiamiento a 10 años con período de gracia"
+        }
+      ],
+      "fiscalCta": "Ver todos los beneficios fiscales",
+      "explorarTag": "Explorar por tipo",
+      "explorarH2": "Soluciones de almacenamiento vertical",
+      "explorarTipo": [
+        {
+          "nombre": "Módulo VLM",
+          "desc": "Hasta 90% menos espacio. Lanzadera de acceso aleatorio."
+        },
+        {
+          "nombre": "Carrusel Vertical",
+          "desc": "La solución más compacta para repuestos y piezas pequeñas."
+        }
+      ],
+      "verDetalle": "Ver detalle"
     },
     "catalogoTransporte": {
       "breadcrumbCat": "Equipo de transporte",
@@ -2104,7 +2794,127 @@
         }
       ],
       "metaTitle": "Equipo de Transporte | Conveyors y Elevadores | STOKA",
-      "metaDesc": "Catálogo de transporte DELIE: transportadores, elevadores, paletizadores y máquinas de transferencia. 10 modelos con ingeniería local de STOKA en Argentina."
+      "metaDesc": "Catálogo de transporte DELIE: transportadores, elevadores, paletizadores y máquinas de transferencia. 10 modelos con ingeniería local de STOKA en Argentina.",
+      "products": [
+        {
+          "name": "Elevador de paletas",
+          "desc": "Elevación vertical de paletas entre niveles. Plataforma hasta 1.200×1.600 mm, 2.000 kg, hasta 60 m/min, precisión ±2 mm."
+        },
+        {
+          "name": "Elevador de totes alta velocidad",
+          "desc": "150 kg de carga máxima, 5 m/s de velocidad, 3 m/s² de aceleración. Operación 24/7 entre niveles verticales."
+        },
+        {
+          "name": "Máquina de aterrizaje y elevación",
+          "desc": "Transferencia vertical de paletas dentro de líneas de transporte. Hasta 3.000 kg por palé con variador de frecuencia."
+        },
+        {
+          "name": "Máquina de transferencia 90°",
+          "desc": "Cambia la dirección de paletas a 90° sin interrumpir el flujo. Hasta 3.000 kg por palé, arranque suave."
+        },
+        {
+          "name": "Transferencia de totes",
+          "desc": "Cambio de dirección para contenedores y totes en líneas de alta velocidad. Múltiples tamaños de totes."
+        },
+        {
+          "name": "Paletizador / Despaletizador",
+          "desc": "Formación automática de paletas a partir de capas de producto. Integración directa WMS/WCS, bajo mantenimiento."
+        },
+        {
+          "name": "Transportador de cadena",
+          "desc": "3.000 kg por palé, variador de frecuencia, operable a baja temperatura. Transporte eficiente de paletas."
+        },
+        {
+          "name": "Cinta transportadora de totes",
+          "desc": "Cinta modular para totes y contenedores. Línea recta e inclinada, múltiples tamaños, operación 24/7."
+        },
+        {
+          "name": "Transportador de rodillos — paletas",
+          "desc": "3.000 kg por palé, velocidad configurable. Movimiento horizontal de paletas con integración WMS/WCS."
+        },
+        {
+          "name": "Transportador de rodillos — totes",
+          "desc": "Rodillos con zonas de acumulación para gestionar flujo de totes. Compatible con MiniLoad y robots tote."
+        }
+      ],
+      "seoTag": "Por qué el transporte interno importa",
+      "seoH2": "La columna vertebral del almacén automatizado",
+      "palletTitle": "Transporte de paletas",
+      "palletList": [
+        [
+          "Transportador de cadena",
+          "3.000 kg · variador de frecuencia · frío -25°C"
+        ],
+        [
+          "Transportador de rodillos",
+          "3.000 kg · zonas de acumulación · WCS nativo"
+        ],
+        [
+          "Máquina de transferencia 90°",
+          "Cambio de dirección sin interrumpir el flujo"
+        ],
+        [
+          "Elevador de paletas",
+          "Entre niveles · hasta 2.000 kg · ±2 mm"
+        ],
+        [
+          "Paletizador / Despaletizador",
+          "Formación automática · integración WMS/WCS"
+        ]
+      ],
+      "toteTitle": "Transporte de totes y contenedores",
+      "toteList": [
+        [
+          "Elevador de totes alta velocidad",
+          "150 kg · 5 m/s · 3 m/s² · operación 24/7"
+        ],
+        [
+          "Cinta transportadora de totes",
+          "Recta e inclinada · múltiples tamaños · 24/7"
+        ],
+        [
+          "Transportador de rodillos totes",
+          "Acumulación por zonas · MiniLoad y robots tote"
+        ],
+        [
+          "Transferencia de totes",
+          "Cambio de dirección en alta velocidad"
+        ],
+        [
+          "Máquina de aterrizaje y elevación",
+          "Hasta 3.000 kg · variador de frecuencia"
+        ]
+      ],
+      "benefitsTitle": "Por qué automatizar el transporte interno",
+      "benefitChips": [
+        "Integración WCS nativa",
+        "Sin cuellos de botella entre etapas",
+        "Hasta 3.000 kg por palé",
+        "Hasta 5 m/s en totes",
+        "Operación a -25°C",
+        "Modular y escalable",
+        "Mantenimiento preventivo trimestral",
+        "Simulación de flujos previa",
+        "Repuestos disponibles en Argentina"
+      ],
+      "benefitsBody": "En un almacén automatizado, el transportador es tan crítico como el transelevador: un cuello de botella en el conveyor puede reducir el throughput total del sistema aunque los robots funcionen a máxima capacidad. Por eso el diseño de la red de transporte interno se realiza con simulación de flujos antes de la instalación — el WCS prueba virtualmente el comportamiento del sistema bajo picos de demanda para garantizar que no existan cuellos de botella.",
+      "fiscalTag": "Decreto 513/2025 — Beneficio fiscal",
+      "fiscalH3": "Arancel reducido según NCM para conveyors y paletizadores",
+      "fiscalBody": "Los equipos de transporte industrial DELIE pueden aplicar al Decreto 513/2025, que reduce el arancel de importación según la clasificación NCM de transportadores industriales, elevadores y paletizadores automáticos. STOKA gestiona la importación completa desde China hasta tu planta en Argentina.",
+      "fiscalCta": "Ver beneficios fiscales",
+      "explorarTag": "Explorar por tipo",
+      "explorarH2": "Equipo de transporte disponible",
+      "explorarTipo": [
+        {
+          "nombre": "Transportadores Industriales",
+          "desc": "Cadena, rodillos y banda para flujos continuos en almacenes y depósitos."
+        },
+        {
+          "nombre": "Sorters y Clasificadores",
+          "desc": "Clasificador automático de paquetes para sistemas de sortación en centros de distribución."
+        }
+      ],
+      "verDetalle": "Ver detalle"
     },
     "catalogoSoftware": {
       "breadcrumbCat": "Software inteligente",
@@ -2208,7 +3018,47 @@
         }
       ],
       "metaTitle": "Software de Almacén | WMS, WCS y Control | STOKA",
-      "metaDesc": "Software DELIE certificado CMMI Nivel 5: WMS, WCS, HMS y control de almacén automatizado. 6 módulos integrados con soporte local de STOKA en Argentina."
+      "metaDesc": "Software DELIE certificado CMMI Nivel 5: WMS, WCS, HMS y control de almacén automatizado. 6 módulos integrados con soporte local de STOKA en Argentina.",
+      "products": [
+        {
+          "name": "WMS — Gestión de almacenes",
+          "desc": "Certificado CMMI Nivel 5. Entradas, salidas e inventario en tiempo real. Digital Twin 3D. Reduce efecto látigo hasta 70%. Integración ERP, MES, SAP, TMS y OMS."
+        },
+        {
+          "name": "WCS — Control de almacén",
+          "desc": "Coordina en tiempo real robots, transelevadores, transportadores, AMR y RGV. Monitoreo 2D y 3D, descomposición automática de tareas y ruta óptima."
+        },
+        {
+          "name": "HMS — Sistema hombre-máquina",
+          "desc": "Interfaz para operarios y supervisores en planta. Control y supervisión en tiempo real compatible con dispositivos móviles y pantallas HMI."
+        },
+        {
+          "name": "ECS — Control electrónico",
+          "desc": "Gestión de todos los componentes eléctricos. Monitoreo de motores, variadores y sensores con diagnóstico predictivo integrado con WCS y WMS."
+        },
+        {
+          "name": "Interfaz API",
+          "desc": "Capa de integración con plataformas empresariales externas. APIs RESTful estándar compatibles con ERP, MES, SAP, TMS y OMS."
+        },
+        {
+          "name": "Visualización 3D centralizada",
+          "desc": "Digital Twin tridimensional en tiempo real de todo el almacén. Simulación, optimización y dashboards diferenciados por rol de usuario."
+        }
+      ],
+      "argBody": "Muchos operadores de depósitos y almacenes ya tienen un WMS heredado (o el módulo WM del ERP) y buscan agregar un WCS para controlar el equipamiento AS/RS. El WCS de DELIE se integra con cualquier WMS externo mediante APIs documentadas. <strong>STOKA gestiona la integración técnica con el ERP del cliente como parte del contrato llave en mano, sin costos adicionales por hora de consultoría de integración.</strong>",
+      "verDetalle": "Ver detalle",
+      "explorarTag": "Explorar por tipo",
+      "explorarH2": "Software disponible",
+      "explorarTipo": [
+        {
+          "nombre": "WMS — Gestión de almacenes",
+          "desc": "Inventario en tiempo real, picking, expedición. CMMI Nivel 5."
+        },
+        {
+          "nombre": "WCS — Control del almacén",
+          "desc": "Control en tiempo real de transelevadores, robots y transportadores."
+        }
+      ]
     },
     "autoStoreAlternativa": {
       "breadcrumbAsrs": "ASRS",
