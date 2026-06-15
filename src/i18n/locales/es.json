@@ -314,7 +314,7 @@
       {
         "num": "01",
         "challenge": "Costo de importación",
-        "solution": "El Decreto 513/2025 reduce los aranceles para sistemas ASRS según su clasificación NCM — ahorro del 12% al 18% sobre el valor del equipo."
+        "solution": "El Decreto 513/2025 reduce los aranceles de importación para sistemas ASRS según su clasificación arancelaria NCM."
       },
       {
         "num": "02",
@@ -324,7 +324,7 @@
       {
         "num": "03",
         "challenge": "Incertidumbre regulatoria",
-        "solution": "El RIGI ofrece 30 años de estabilidad fiscal. El RIMI permite amortizar el 100% del bien en el primer ejercicio."
+        "solution": "El RIGI ofrece 30 años de estabilidad fiscal. El RIMI permite amortización acelerada del bien de capital en 2 cuotas anuales (o 100% el primer año para bienes de alta eficiencia energética)."
       }
     ],
     "systemsTag": "Sistemas que instalamos",
@@ -342,11 +342,11 @@
     "fiscal": [
       {
         "label": "Decreto 513/2025",
-        "detail": "Aranceles reducidos o nulos para equipos ASRS · ahorro del 12% al 18%"
+        "detail": "Aranceles reducidos o nulos para equipos ASRS según clasificación NCM"
       },
       {
         "label": "RIMI · Ley 27.802",
-        "detail": "Amortización del bien de capital en el primer ejercicio fiscal"
+        "detail": "Amortización acelerada del bien de capital (2 cuotas anuales)"
       },
       {
         "label": "Línea BICE",
@@ -2917,7 +2917,7 @@
         },
         {
           "label": "RIMI",
-          "desc": "Amortización acelerada del 100% en el 1er ejercicio"
+          "desc": "Amortización acelerada en 2 cuotas anuales (100% el 1er año en bienes de alta eficiencia energética)"
         },
         {
           "label": "BICE",
@@ -3224,7 +3224,7 @@
         },
         {
           "label": "RIMI",
-          "desc": "Amortización acelerada del 100% en el 1er ejercicio"
+          "desc": "Amortización acelerada en 2 cuotas anuales (100% el 1er año en bienes de alta eficiencia energética)"
         },
         {
           "label": "BICE",
@@ -3369,7 +3369,7 @@
         },
         {
           "label": "RIMI",
-          "desc": "Amortización acelerada del 100% en el 1er ejercicio"
+          "desc": "Amortización acelerada en 2 cuotas anuales (100% el 1er año en bienes de alta eficiencia energética)"
         },
         {
           "label": "BICE",
@@ -3840,7 +3840,7 @@
       "desgloseErrores": "Reducción de errores (85%)",
       "desgloseMantenimiento": "Mantenimiento anual",
       "rimiTag": "Beneficio fiscal RIMI 2025",
-      "rimiText": "Con el RIMI podés amortizar el 100% en el primer año fiscal, reduciendo el costo neto entre",
+      "rimiText": "Con el RIMI podés amortizar de forma acelerada en 2 cuotas anuales (100% el primer año en bienes de alta eficiencia energética), reduciendo el costo neto entre",
       "ctaWpp": "Consultar por WhatsApp con mis datos",
       "ctaDisclaimer": "Estimación orientativa ±30%. STOKA realiza el análisis real sin costo.",
       "faqH2": "Preguntas frecuentes sobre el ROI de la automatización",
@@ -4426,7 +4426,7 @@
       ],
       "casoResH3": "El resultado en flujo de caja del primer año",
       "casoResP1": "Con arancel 0% y financiamiento BICE del 80%, la empresa desembolsa USD 50.000 de capital propio en el primer año (USD 200.000 de aporte neto del ahorro arancelario de USD 150.000). Las cuotas mensuales del BICE son inferiores al costo de labor que el sistema reemplaza.",
-      "casoResP2": "Sobre ese escenario, el RIMI permite deducir el 100% del valor del bien en el primer ejercicio fiscal, reduciendo la base imponible de Ganancias del año de la inversión. En empresas con alta carga impositiva, este beneficio puede equivaler a un ahorro fiscal adicional de USD 80.000 a USD 120.000.",
+      "casoResP2": "Sobre ese escenario, el RIMI permite deducir el 100% del valor del bien de forma acelerada en 2 cuotas anuales (o en el primer ejercicio para bienes de alta eficiencia energética), reduciendo la base imponible de Ganancias. En empresas con alta carga impositiva, este beneficio puede equivaler a un ahorro fiscal adicional de USD 80.000 a USD 120.000.",
       "casoResRows": [
         {
           "label": "Capital propio neto primer año",
@@ -4436,7 +4436,7 @@
         {
           "label": "Reducción base imponible Ganancias",
           "val": "USD 1.000.000",
-          "note": "Amortización acelerada RIMI 100%"
+          "note": "Amortización acelerada RIMI (2 cuotas)"
         },
         {
           "label": "Ahorro fiscal estimado (Ganancias 35%)",

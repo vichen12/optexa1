@@ -314,7 +314,7 @@
       {
         "num": "01",
         "challenge": "Import cost",
-        "solution": "Decree 513/2025 reduces tariffs for ASRS systems based on their NCM classification — savings of 12% to 18% on equipment value."
+        "solution": "Decree 513/2025 reduces import tariffs for ASRS systems based on their NCM tariff classification."
       },
       {
         "num": "02",
@@ -324,7 +324,7 @@
       {
         "num": "03",
         "challenge": "Regulatory uncertainty",
-        "solution": "The RIGI offers 30 years of tax stability. RIMI allows 100% depreciation of the asset in the first fiscal year."
+        "solution": "The RIGI offers 30 years of tax stability. RIMI allows accelerated depreciation of the capital asset in 2 annual installments (or 100% in the first year for high energy-efficiency assets)."
       }
     ],
     "systemsTag": "Systems we install",
@@ -342,11 +342,11 @@
     "fiscal": [
       {
         "label": "Decree 513/2025",
-        "detail": "Reduced or zero tariffs for ASRS equipment · savings of 12% to 18%"
+        "detail": "Reduced or zero tariffs for ASRS equipment based on NCM classification"
       },
       {
         "label": "RIMI · Law 27.802",
-        "detail": "Capital asset depreciation in the first fiscal year"
+        "detail": "Accelerated capital asset depreciation (2 annual installments)"
       },
       {
         "label": "BICE Credit Line",
@@ -2917,7 +2917,7 @@
         },
         {
           "label": "RIMI",
-          "desc": "100% accelerated depreciation in first fiscal year"
+          "desc": "Accelerated depreciation in 2 annual installments (100% in year 1 for high energy-efficiency assets)"
         },
         {
           "label": "BICE",
@@ -3224,7 +3224,7 @@
         },
         {
           "label": "RIMI",
-          "desc": "100% accelerated depreciation in the first fiscal year"
+          "desc": "Accelerated depreciation in 2 annual installments (100% in year 1 for high energy-efficiency assets)"
         },
         {
           "label": "BICE",
@@ -3369,7 +3369,7 @@
         },
         {
           "label": "RIMI",
-          "desc": "100% accelerated depreciation in the first fiscal year"
+          "desc": "Accelerated depreciation in 2 annual installments (100% in year 1 for high energy-efficiency assets)"
         },
         {
           "label": "BICE",
@@ -3840,7 +3840,7 @@
       "desgloseErrores": "Error reduction (85%)",
       "desgloseMantenimiento": "Annual maintenance",
       "rimiTag": "RIMI tax benefit 2025",
-      "rimiText": "With RIMI you can depreciate 100% in the first fiscal year, reducing the net cost by",
+      "rimiText": "With RIMI you can apply accelerated depreciation in 2 annual installments (100% in year 1 for high energy-efficiency assets), reducing the net cost by",
       "ctaWpp": "Consult via WhatsApp with my data",
       "ctaDisclaimer": "Indicative estimate ±30%. STOKA performs the real analysis at no cost.",
       "faqH2": "Frequently asked questions about automation ROI",
@@ -4426,7 +4426,7 @@
       ],
       "casoResH3": "The result on first-year cash flow",
       "casoResP1": "With a 0% tariff and 80% BICE financing, the company disburses USD 50,000 of its own capital in the first year (USD 200,000 net contribution from the USD 150,000 tariff saving). The monthly BICE installments are lower than the labor cost the system replaces.",
-      "casoResP2": "On that scenario, RIMI allows deducting 100% of the asset value in the first fiscal year, reducing the Income Tax base for the year of the investment. In companies with a high tax burden, this benefit can equal an additional tax saving of USD 80,000 to USD 120,000.",
+      "casoResP2": "On that scenario, RIMI allows deducting 100% of the asset value via accelerated depreciation in 2 annual installments (or in the first fiscal year for high energy-efficiency assets), reducing the Income Tax base. In companies with a high tax burden, this benefit can equal an additional tax saving of USD 80,000 to USD 120,000.",
       "casoResRows": [
         {
           "label": "Net own capital first year",
@@ -4436,7 +4436,7 @@
         {
           "label": "Income Tax base reduction",
           "val": "USD 1,000,000",
-          "note": "Accelerated RIMI depreciation 100%"
+          "note": "Accelerated RIMI depreciation (2 installments)"
         },
         {
           "label": "Estimated tax saving (Income Tax 35%)",
