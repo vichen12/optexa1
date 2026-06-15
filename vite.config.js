@@ -24,7 +24,7 @@ export default defineConfig(({ isSsrBuild }) => ({
           }
           /* Datos de producto (ficha ES + traducciones) en su propio chunk
              cacheable: evita re-descarga al navegar entre fichas y no contamina
-             los bundles de las páginas de categoría. */
+             los bundles de las páginas de categoría (ProductoPage 573KB → 15KB). */
           if (id.includes('/src/data/productosI18n') || id.includes('/src/data/productosData')) {
             return 'productos-data';
           }
