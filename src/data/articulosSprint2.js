@@ -19,8 +19,8 @@ export const ARTICULOS_SPRINT2 = [
     heroImg: IMG_ASRS,
     i18n: {
       es: {
-        metaTitle: 'Cómo Aprovechar el Espacio de un Almacén | 7 Estrategias | STOKA',
-        metaDesc: 'Guía práctica para optimizar el espacio de tu almacén o depósito: aprovechamiento vertical, alta densidad y automatización. Multiplicá la capacidad sin mudarte.',
+        metaTitle: 'Cómo Aprovechar el Espacio de un Almacén | STOKA',
+        metaDesc: 'Guía práctica para optimizar el espacio de tu almacén: aprovechamiento vertical, alta densidad y automatización. Multiplicá la capacidad sin mudarte.',
         h1: 'Cómo aprovechar el espacio de un almacén: 7 estrategias que funcionan',
         intro: 'Tu almacén está lleno, pero mudarte o ampliar el edificio cuesta una fortuna y lleva meses. Es uno de los problemas más frecuentes en logística: la mercadería crece más rápido que los metros cuadrados disponibles. La buena noticia es que la mayoría de los depósitos usa menos del 30% de su volumen real, porque almacena en superficie y desperdicia la altura. En esta guía repasamos siete estrategias concretas para aprovechar mejor el espacio de un almacén, desde reorganizar el layout hasta automatizar con sistemas de alta densidad que multiplican la capacidad sin sumar un solo metro cuadrado.',
         sections: [
@@ -128,7 +128,7 @@ export const ARTICULOS_SPRINT2 = [
     i18n: {
       es: {
         metaTitle: 'Cómo Reducir Costos Logísticos | Guía Práctica 2026 | STOKA',
-        metaDesc: 'Estrategias concretas para bajar los costos de almacenamiento y logística: mano de obra, errores, espacio y energía. Cómo la automatización reduce el costo por pedido.',
+        metaDesc: 'Estrategias para bajar los costos de almacenamiento y logística: mano de obra, errores, espacio y energía. Cómo la automatización reduce el costo por pedido.',
         h1: 'Cómo reducir costos logísticos: dónde se va el dinero y cómo recuperarlo',
         intro: 'El costo logístico puede representar entre el 8% y el 15% de las ventas de una empresa, y en operaciones de almacén manual ese número solo crece. La presión por reducir costos de almacenamiento es constante, pero muchas empresas atacan los síntomas equivocados. Antes de recortar, conviene entender dónde se va realmente el dinero en un depósito: mano de obra, errores, uso ineficiente del espacio, energía y stock inmovilizado. En esta guía analizamos los cinco grandes focos de costo logístico y cómo la automatización ataca cada uno para bajar el costo por pedido de forma estructural, no con recortes temporales.',
         sections: [
@@ -233,7 +233,7 @@ export const ARTICULOS_SPRINT2 = [
     i18n: {
       es: {
         metaTitle: 'Mi Depósito No Tiene Más Espacio: 6 Soluciones Reales | STOKA',
-        metaDesc: 'Tu depósito está al límite y mudarte no es opción. Soluciones concretas a la falta de espacio: alta densidad, almacenamiento vertical y automatización sin ampliar.',
+        metaDesc: 'Tu depósito está al límite y mudarte no es opción. Soluciones a la falta de espacio: alta densidad, almacenamiento vertical y automatización sin ampliar.',
         h1: 'Mi depósito no tiene más espacio: soluciones reales antes de mudarse',
         intro: '"No entra más nada." Es la frase que dispara la decisión de muchas empresas de buscar un depósito más grande, mudarse o construir. Pero mudar una operación logística es caro, lento y arriesgado: implica parar, trasladar, reacomodar y volver a operar, además del costo del nuevo edificio. Antes de tomar esa decisión, vale la pena saber que la falta de espacio casi siempre tiene solución dentro del mismo depósito. En este artículo repasamos seis soluciones concretas a la falta de espacio, ordenadas de la más simple a la más transformadora, para que sumes capacidad sin sumar metros cuadrados.',
         sections: [
@@ -264,7 +264,7 @@ export const ARTICULOS_SPRINT2 = [
       },
       en: {
         metaTitle: 'My Warehouse Has No More Space: 6 Real Solutions | STOKA',
-        metaDesc: 'Your warehouse is at its limit and relocating is not an option. Concrete solutions to lack of space: high density, vertical storage and automation without expanding.',
+        metaDesc: 'Your warehouse is at its limit and relocating is not an option. Solutions to lack of space: high density, vertical storage and automation without expanding.',
         h1: 'My warehouse has no more space: real solutions before relocating',
         intro: '"Nothing else fits." It is the phrase that triggers many companies\' decision to look for a larger warehouse, relocate or build. But moving a logistics operation is expensive, slow and risky: it means stopping, relocating, rearranging and operating again, plus the cost of the new building. Before making that decision, it is worth knowing that lack of space almost always has a solution within the same warehouse. In this article we review six concrete solutions to lack of space, from the simplest to the most transformative, so you add capacity without adding square meters.',
         sections: [
@@ -337,7 +337,7 @@ export const ARTICULOS_SPRINT2 = [
     heroImg: IMG_ASRS,
     i18n: {
       es: {
-        metaTitle: 'Cuándo Conviene Automatizar un Almacén | Señales Clave | STOKA',
+        metaTitle: 'Cuándo Conviene Automatizar un Almacén | STOKA',
         metaDesc: '¿Conviene automatizar tu depósito ahora o esperar? Las señales que indican que llegó el momento, el ROI esperado y cómo evaluar la decisión sin sobreinvertir.',
         h1: 'Cuándo conviene automatizar un almacén: señales, ROI y cómo decidir',
         intro: 'Automatizar un almacén es una de las decisiones de inversión más importantes para una operación logística, y también una de las más postergadas. "¿Es el momento?" es la pregunta que se hacen muchas empresas mientras siguen sumando costos de mano de obra, errores y espacio. La respuesta no es universal: depende del volumen, los picos de demanda, el costo laboral y los objetivos de crecimiento. En este artículo repasamos las señales concretas que indican que conviene automatizar, cómo estimar el retorno de inversión y cómo evitar tanto automatizar demasiado pronto como esperar demasiado.',
@@ -369,7 +369,7 @@ export const ARTICULOS_SPRINT2 = [
       },
       en: {
         metaTitle: 'When to Automate a Warehouse | Key Signals | STOKA',
-        metaDesc: 'Should you automate your warehouse now or wait? The signals that indicate the time has come, the expected ROI and how to evaluate the decision without overinvesting.',
+        metaDesc: 'Should you automate your warehouse now or wait? The signals that the time has come, the expected ROI and how to evaluate the decision without overinvesting.',
         h1: 'When to automate a warehouse: signals, ROI and how to decide',
         intro: 'Automating a warehouse is one of the most important investment decisions for a logistics operation, and also one of the most postponed. "Is it time?" is the question many companies ask while they keep piling up labor costs, errors and space issues. The answer is not universal: it depends on volume, demand peaks, labor cost and growth goals. In this article we review the concrete signals that indicate it is worth automating, how to estimate the return on investment and how to avoid both automating too early and waiting too long.',
         sections: [
@@ -442,7 +442,7 @@ export const ARTICULOS_SPRINT2 = [
     heroImg: IMG_WMS,
     i18n: {
       es: {
-        metaTitle: 'Qué es la Logística Inteligente y la Logística 4.0 | Guía | STOKA',
+        metaTitle: 'Qué es la Logística Inteligente y la Logística 4.0 | STOKA',
         metaDesc: 'Qué es la logística inteligente y la logística 4.0, cómo funciona un depósito inteligente y qué tecnologías la hacen posible. Guía clara con ejemplos reales.',
         h1: 'Qué es la logística inteligente (y por qué la logística 4.0 cambia las reglas)',
         intro: 'Logística inteligente, logística 4.0, almacén 4.0, depósito inteligente: son términos que aparecen cada vez más, pero pocas veces se explican con claridad. ¿Es solo marketing o hay algo concreto detrás? En este artículo aclaramos qué es realmente la logística inteligente, en qué se diferencia de la logística tradicional, qué tecnologías la hacen posible y qué resultados concretos genera. Si tu empresa está evaluando modernizar su operación, entender estos conceptos es el primer paso para tomar buenas decisiones.',
