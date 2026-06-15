@@ -262,13 +262,13 @@ export const ProductoPage = () => {
 
             {/* Descripción */}
             <div>
-              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">Descripción técnica</p>
+              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('descripcionTecnica')}</p>
               <p className="text-gray-700 text-base leading-relaxed">{data.descripcion}</p>
             </div>
 
             {/* Cómo funciona */}
             <div>
-              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-4">Funcionamiento</p>
+              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-4">{p('funcionamiento')}</p>
               <div className="space-y-4">
                 {data.comoFunciona.map((item, i) => (
                   <div key={i} className="flex gap-4">
@@ -286,7 +286,7 @@ export const ProductoPage = () => {
 
             {/* Especificaciones */}
             <div>
-              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-4">Ficha técnica</p>
+              <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-4">{p('fichaTecnica')}</p>
               <div className="overflow-hidden rounded-2xl border border-gray-200">
                 <table className="w-full text-sm">
                   <tbody>
@@ -309,8 +309,8 @@ export const ProductoPage = () => {
       <section className="bg-slate-900 py-16 px-6 border-b border-white/5">
         <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_2fr] gap-10 items-start">
           <div>
-            <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">Tecnología DELIE en Argentina</p>
-            <h2 className="text-2xl font-black text-white uppercase tracking-tighter">DELIE — representación oficial STOKA</h2>
+            <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">{p('delieTag')}</p>
+            <h2 className="text-2xl font-black text-white uppercase tracking-tighter">{p('delieH2')}</h2>
           </div>
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="space-y-5">
@@ -319,11 +319,9 @@ export const ProductoPage = () => {
               <p className="text-gray-300 text-base leading-relaxed">{data.porQueDelie}</p>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed border-t border-white/10 pt-5">
-              DELIE fabrica más de 1.000 instalaciones activas en +30 países. STOKA es el representante
-              exclusivo en Argentina: ingeniería, instalación y soporte técnico local sin depender de
-              tiempos de fábrica en el exterior. Tecnología de clase mundial, precio para el mercado LATAM.
+              {p('delieParrafo')}
               {' '}<LangLink to="/delie-argentina" className="text-cyan-400 hover:underline font-medium">
-                Ver más sobre DELIE en Argentina →
+                {p('verMasDelie')}
               </LangLink>
             </p>
           </motion.div>
@@ -350,8 +348,8 @@ export const ProductoPage = () => {
       {/* PRODUCTOS RELACIONADOS */}
       <section className="bg-gray-50 py-16 px-6 border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">También te puede interesar</p>
-          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">Productos relacionados</h2>
+          <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('relacionadosTag')}</p>
+          <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-8">{p('relacionadosH2')}</h2>
           <div className="flex flex-wrap gap-3">
             {data.relacionados.map((rel, i) => (
               <LangLink key={i} to={rel.url}
@@ -361,7 +359,7 @@ export const ProductoPage = () => {
             ))}
             <LangLink to={data.categoriaUrl}
               className="inline-flex items-center gap-2 px-5 py-3 bg-cyan-50 border border-cyan-200 rounded-xl text-cyan-700 text-sm font-bold hover:bg-cyan-100 transition-all">
-              Ver toda la categoría: {data.categoriaLabel} <ChevronRight size={14} />
+              {p('verCategoria')}: {data.categoriaLabel} <ChevronRight size={14} />
             </LangLink>
           </div>
         </div>
@@ -370,22 +368,22 @@ export const ProductoPage = () => {
       {/* CTA */}
       <section className="bg-white py-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-cyan-500 text-[11px] font-black uppercase tracking-[0.4em] mb-4">¿Listo para el siguiente paso?</p>
+          <p className="text-cyan-500 text-[11px] font-black uppercase tracking-[0.4em] mb-4">{p('ctaTag')}</p>
           <h2 className="text-gray-900 text-3xl md:text-4xl font-black italic uppercase tracking-tighter mb-5">
-            Consulta técnica<br />
-            <span className="text-cyan-500">sin costo</span>
+            {p('ctaH2_a')}<br />
+            <span className="text-cyan-500">{p('ctaH2_b')}</span>
           </h2>
           <p className="text-gray-500 text-base max-w-xl mx-auto mb-8 leading-relaxed">
-            Un ingeniero de STOKA analiza tu almacén, bodega o depósito y te responde en menos de 24 horas con orientación técnica inicial y estimación de ROI.
+            {p('ctaSub')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button onClick={() => langNavigate('/contacto')}
               className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-cyan-500 text-white font-black text-sm uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
-              Consultar sobre {data.nombre} <ArrowRight size={14} />
+              {p('consultarSobre')} {data.nombre} <ArrowRight size={14} />
             </button>
             <button onClick={() => langNavigate(data.categoriaUrl)}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-600 text-sm font-bold hover:border-cyan-300 hover:text-gray-900 transition-all">
-              Ver categoría completa
+              {p('verCategoriaCompleta')}
             </button>
           </div>
         </div>
@@ -401,7 +399,7 @@ export const ProductoPage = () => {
             <div className="relative max-w-4xl w-full" onClick={e => e.stopPropagation()}>
               <img loading="lazy"
                 src={allImgs[lightboxIdx]}
-                alt="Vista ampliada"
+                alt={p('vistaAmpliada')}
                 className="w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl"
               />
               {/* X — dentro del marco, esquina superior derecha */}
