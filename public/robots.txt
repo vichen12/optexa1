@@ -1,4 +1,12 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
+
+# Banners de fondo decorativos (no son videos de contenido):
+# se bloquea solo el bot de video para que Google no los trate como
+# videos SEO indexables. No afecta el rastreo normal de las páginas.
+User-agent: Googlebot-Video
+Disallow: /bannervideo1-hero.mp4
+Disallow: /bannervideo1-compressed.mp4
+Disallow: /bannervideo2-compressed.mp4
 
 Sitemap: https://www.stokagroup.com/sitemap.xml

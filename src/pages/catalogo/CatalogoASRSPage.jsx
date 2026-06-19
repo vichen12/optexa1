@@ -110,7 +110,9 @@ export const CatalogoASRSPage = () => {
         <video
           src="/bannervideo2-compressed.mp4"
           autoPlay muted loop playsInline
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          aria-hidden="true"
+          tabIndex={-1}
+          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
         />
         <div className="absolute inset-0 bg-linear-to-r from-slate-950/80 via-slate-950/30 to-transparent" />
         <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-transparent to-transparent" />

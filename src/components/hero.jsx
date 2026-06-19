@@ -34,10 +34,10 @@ export const Hero = () => {
           autoPlay muted loop playsInline
           preload="auto"
           width="1280" height="720"
-          className="w-full h-full object-cover"
-        >
-          <track kind="captions" src="" label="Sin audio" default />
-        </video>
+          aria-hidden="true"
+          tabIndex={-1}
+          className="w-full h-full object-cover pointer-events-none"
+        />
         <div className="absolute inset-0 bg-black/55" />
         <div className="absolute top-0 left-0 right-0 h-28 bg-linear-to-b from-black/50 to-transparent pointer-events-none" />
       </div>
