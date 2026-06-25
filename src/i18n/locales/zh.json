@@ -1243,7 +1243,7 @@
         {
           "title": "物流配送",
           "desc": "寻求为多个客户自动化其设施的物流运营商。",
-          "url": "/industrias/distribucion"
+          "url": "/industrias/logistica-3pl"
         },
         {
           "title": "工业制造",
@@ -4651,17 +4651,17 @@
           {
             "title": "电商与配送",
             "desc": "为大布宜诺斯艾利斯大型履约中心提供高周转拣选和吞吐量。料箱机器人货到人。",
-            "url": "/industrias/ecommerce"
+            "url": "/industrias/e-commerce-retail"
           },
           {
             "title": "零售与大众消费",
             "desc": "用高密度AS/RS系统供应大都会消费的连锁配送中心。",
-            "url": "/industrias/retail"
+            "url": "/industrias/e-commerce-retail"
           },
           {
             "title": "食品饮料",
             "desc": "为布宜诺斯艾利斯工业带的工厂和库房提供自动化冷链和可追溯性。",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           }
         ],
         "systemsTag": "推荐系统",
@@ -4750,17 +4750,17 @@
           {
             "title": "葡萄酒厂与葡萄酒",
             "desc": "用AS/RS和VLM实现出口可追溯性、酿酒原料管理和成品库房。",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           },
           {
             "title": "农业工业",
             "desc": "罐头、干果、橄榄油和地区产品，自动化适应季节性。",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           },
           {
             "title": "区域配送",
             "desc": "用高密度系统供应阿根廷西部的Cuyo配送中心。",
-            "url": "/industrias/retail"
+            "url": "/industrias/e-commerce-retail"
           }
         ],
         "systemsTag": "推荐系统",
@@ -4849,7 +4849,7 @@
           {
             "title": "汽车与汽车零部件",
             "desc": "向生产线顺序交付、管理数千个零部件SKU以及为整车厂和供应商提供可追溯性。",
-            "url": "/industrias/automotriz"
+            "url": "/industrias/manufactura"
           },
           {
             "title": "金属加工",
@@ -4859,7 +4859,7 @@
           {
             "title": "农业工业",
             "desc": "阿根廷中部强大农业工业的原料和成品库房。",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           }
         ],
         "systemsTag": "推荐系统",
@@ -4948,12 +4948,12 @@
           {
             "title": "农业工业与农业出口",
             "desc": "为巴拉那主要出口综合体提供原料、成品管理和可追溯性。",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           },
           {
             "title": "物流与配送",
             "desc": "供应该国中部的配送中心，为旺季高峰设计规模。",
-            "url": "/industrias/retail"
+            "url": "/industrias/e-commerce-retail"
           },
           {
             "title": "金属加工与工业",

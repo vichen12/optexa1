@@ -7,7 +7,15 @@ const LANGS = ['es', 'en', 'zh'];
 export function useLangPath() {
   const { i18n } = useTranslation();
   const lang = i18n.language;
-  return (path) => (lang === 'es' ? path : `/${lang}${path}`);
+  return (path) => {
+    // Defensa: garantizar que el path empiece con '/' (un argumento sin barra
+    // produciría /enXxx en EN/ZH → 404).
+    const p = typeof path === 'string' && path.startsWith('/') ? path : `/${path || ''}`;
+    if (lang === 'es') return p;
+    // La home '/' debe quedar como '/en' (no '/en/'): con cleanUrls de Vercel,
+    // '/en/' redirige 308 a '/en'. Se quita la barra final del prefijo de idioma.
+    return p === '/' ? `/${lang}` : `/${lang}${p}`;
+  };
 }
 
 export function useLangNavigate() {

@@ -12,6 +12,18 @@ import { SeoHead } from '../lib/SeoHead';
 
 const METODOLOGIA_ICONS = [Search, FileText, Wrench, HeadphonesIcon];
 
+/* Slug de industria real por índice de casosUso (el array i18n trae solo la
+   etiqueta visible, no la ruta). Mapea cada caso a una página de industria
+   existente para evitar 404s (antes el LangLink recibía la etiqueta). */
+const CASO_INDUSTRIA_SLUGS = [
+  'farmaceutica',       // Farmacéutica y laboratorios
+  'alimentos-bebidas',  // Alimentos y bebidas
+  'manufactura',        // Industria química
+  'e-commerce-retail',  // E-commerce y retail
+  'manufactura',        // Automotriz y manufactura
+  'manufactura',        // Textil y calzado
+];
+
 export const SolucionesPage = () => {
   const { t } = useTranslation();
   const ns = 'pages.soluciones';
@@ -183,7 +195,7 @@ export const SolucionesPage = () => {
                     <span key={s} className="text-[10px] font-bold text-cyan-600 bg-cyan-50 border border-cyan-100 px-2.5 py-1 rounded-full">{s}</span>
                   ))}
                 </div>
-                <LangLink to={c.industria} className="text-[11px] font-bold text-gray-400 hover:text-cyan-500 flex items-center gap-1 transition-colors">
+                <LangLink to={`/industrias/${CASO_INDUSTRIA_SLUGS[i] || 'manufactura'}`} className="text-[11px] font-bold text-gray-400 hover:text-cyan-500 flex items-center gap-1 transition-colors">
                   {t(`${ns}.casosViewSolution`)} <ArrowRight size={11} />
                 </LangLink>
               </motion.div>

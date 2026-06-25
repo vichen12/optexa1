@@ -55,20 +55,27 @@ function meta(route) {
 const enc = (s) =>
   s.split('/').map((seg) => encodeURIComponent(seg)).join('/');
 
-function urlBlock(route) {
+/* Cada versión de idioma se emite como su PROPIA <url> con <loc>, y todas
+   comparten el mismo set de alternates hreflang recíprocos (es/en/zh/x-default).
+   Así los crawlers (Ahrefs/SE Ranking) no marcan las /en y /zh como
+   "indexable page not in sitemap", y Google recibe la señal hreflang completa. */
+function urlBlocks(route) {
   const path = route === '/' ? '' : enc(route);
   const es = `${BASE}${path || '/'}`;
   const en = `${BASE}/en${path}`;
   const zh = `${BASE}/zh${path}`;
   const { freq, prio } = meta(route);
-  return `  <url>
-    <loc>${es}</loc>
-    <lastmod>${TODAY}</lastmod><changefreq>${freq}</changefreq><priority>${prio}</priority>
-    <xhtml:link rel="alternate" hreflang="es"        href="${es}"/>
+  const alternates = `    <xhtml:link rel="alternate" hreflang="es"        href="${es}"/>
     <xhtml:link rel="alternate" hreflang="en"        href="${en}"/>
     <xhtml:link rel="alternate" hreflang="zh"        href="${zh}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${es}"/>
-  </url>`;
+    <xhtml:link rel="alternate" hreflang="x-default" href="${es}"/>`;
+  // La versión EN/ZH hereda prioridad ligeramente menor que la canónica ES.
+  const prioAlt = (Math.max(0.1, parseFloat(prio) - 0.1)).toFixed(1);
+  return [es, en, zh].map((loc, i) => `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${TODAY}</lastmod><changefreq>${freq}</changefreq><priority>${i === 0 ? prio : prioAlt}</priority>
+${alternates}
+  </url>`).join('\n');
 }
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -76,10 +83,10 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-${ROUTES.map(urlBlock).join('\n')}
+${ROUTES.map(urlBlocks).join('\n')}
 </urlset>
 `;
 
 const out = join(ROOT, 'public/sitemap.xml');
 writeFileSync(out, xml, 'utf-8');
-console.log(`✓ sitemap.xml — ${ROUTES.length} URLs (× 3 idiomas vía hreflang)`);
+console.log(`✓ sitemap.xml — ${ROUTES.length} rutas × 3 idiomas = ${ROUTES.length * 3} <loc>`);

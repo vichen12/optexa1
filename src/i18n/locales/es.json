@@ -1243,7 +1243,7 @@
         {
           "title": "Logística y distribución",
           "desc": "Operadores logísticos que buscan automatizar sus instalaciones para múltiples clientes.",
-          "url": "/industrias/distribucion"
+          "url": "/industrias/logistica-3pl"
         },
         {
           "title": "Manufactura industrial",
@@ -4651,17 +4651,17 @@
           {
             "title": "E-commerce y distribución",
             "desc": "Picking de alta rotación y throughput para los grandes centros de fulfillment del GBA. Goods-to-person con robots tote.",
-            "url": "/industrias/ecommerce"
+            "url": "/industrias/e-commerce-retail"
           },
           {
             "title": "Retail y consumo masivo",
             "desc": "Centros de distribución de cadenas que abastecen el consumo metropolitano con sistemas AS/RS de alta densidad.",
-            "url": "/industrias/retail"
+            "url": "/industrias/e-commerce-retail"
           },
           {
             "title": "Alimentos y bebidas",
             "desc": "Cadena de frío automatizada y trazabilidad para plantas y depósitos del cinturón industrial bonaerense.",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           }
         ],
         "systemsTag": "Sistemas recomendados",
@@ -4750,17 +4750,17 @@
           {
             "title": "Bodegas y vitivinícola",
             "desc": "Trazabilidad de exportación, gestión de insumos enológicos y depósitos de producto terminado con AS/RS y VLM.",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           },
           {
             "title": "Agroindustria",
             "desc": "Conserva, fruta deshidratada, aceite de oliva y productos regionales con automatización adaptada a la estacionalidad.",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           },
           {
             "title": "Distribución regional",
             "desc": "Centros de distribución de Cuyo que abastecen el oeste argentino con sistemas de alta densidad.",
-            "url": "/industrias/retail"
+            "url": "/industrias/e-commerce-retail"
           }
         ],
         "systemsTag": "Sistemas recomendados",
@@ -4849,7 +4849,7 @@
           {
             "title": "Automotriz y autopartes",
             "desc": "Entrega secuenciada a línea, gestión de miles de SKU de componentes y trazabilidad para terminales y proveedores.",
-            "url": "/industrias/automotriz"
+            "url": "/industrias/manufactura"
           },
           {
             "title": "Metalmecánica",
@@ -4859,7 +4859,7 @@
           {
             "title": "Agroindustria",
             "desc": "Depósitos de insumos y producto terminado de la potente agroindustria del centro argentino.",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           }
         ],
         "systemsTag": "Sistemas recomendados",
@@ -4948,12 +4948,12 @@
           {
             "title": "Agroindustria y agroexportación",
             "desc": "Gestión de insumos, producto terminado y trazabilidad para el principal complejo exportador del Paraná.",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           },
           {
             "title": "Logística y distribución",
             "desc": "Centros de distribución que abastecen el centro del país, dimensionados para picos de campaña.",
-            "url": "/industrias/retail"
+            "url": "/industrias/e-commerce-retail"
           },
           {
             "title": "Metalmecánica e industria",

@@ -1965,7 +1965,7 @@ export const PRODUCTOS = {
     nombre: 'WCS — Sistema de Control del Almacén',
     metaTitle: 'Software WCS | Control de Automatización | STOKA',
     metaDesc: 'Software WCS para control en tiempo real de ASRS, sorters y transportadores. El cerebro de tu almacén automatizado. STOKA Argentina.',
-    heroImg: '/productos-delie/software-inteligente/%28WCS%29%20Sistema%20de%20control%20de%20alm%C3%A1cen/202511271540270edaa.webp',
+    heroImg: '/productos-delie/software-inteligente/%28WCS%29%20Sistema%20de%20control%20de%20almac%C3%A9n/202511271540270edaa.webp',
     heroAlt: 'WCS Sistema de control de almacén DELIE',
     tagline: 'Control en tiempo real de todos los equipos del almacén',
     descripcion: 'El WCS (Warehouse Control System) de DELIE es el cerebro en tiempo real que controla y coordina todos los equipos de automatización del almacén: transelevadores, shuttles, transportadores, robots AGV/AMR, paletizadores y VLM. Opera como capa de control entre el WMS (gestión) y los PLC (hardware), traduciendo las órdenes de negocio en comandos de equipos con latencias menores a 50 ms. El WCS de DELIE es el único del mercado desarrollado por el mismo fabricante que los equipos que controla, garantizando la integración más profunda y confiable.',

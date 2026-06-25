@@ -1243,7 +1243,7 @@
         {
           "title": "Logistics & distribution",
           "desc": "Logistics operators looking to automate their facilities for multiple clients.",
-          "url": "/industrias/distribucion"
+          "url": "/industrias/logistica-3pl"
         },
         {
           "title": "Industrial manufacturing",
@@ -4651,17 +4651,17 @@
           {
             "title": "E-commerce & distribution",
             "desc": "High-rotation picking and throughput for the large fulfillment centers of Greater Buenos Aires. Goods-to-person with tote robots.",
-            "url": "/industrias/ecommerce"
+            "url": "/industrias/e-commerce-retail"
           },
           {
             "title": "Retail & mass consumption",
             "desc": "Distribution centers of chains supplying metropolitan consumption with high-density AS/RS systems.",
-            "url": "/industrias/retail"
+            "url": "/industrias/e-commerce-retail"
           },
           {
             "title": "Food & beverage",
             "desc": "Automated cold chain and traceability for plants and depots in the Buenos Aires industrial belt.",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           }
         ],
         "systemsTag": "Recommended systems",
@@ -4750,17 +4750,17 @@
           {
             "title": "Wineries & wine",
             "desc": "Export traceability, oenological-input management and finished-product depots with AS/RS and VLM.",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           },
           {
             "title": "Agro-industry",
             "desc": "Canning, dried fruit, olive oil and regional products with automation adapted to seasonality.",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           },
           {
             "title": "Regional distribution",
             "desc": "Cuyo distribution centers supplying western Argentina with high-density systems.",
-            "url": "/industrias/retail"
+            "url": "/industrias/e-commerce-retail"
           }
         ],
         "systemsTag": "Recommended systems",
@@ -4849,7 +4849,7 @@
           {
             "title": "Automotive & auto parts",
             "desc": "Sequenced line delivery, management of thousands of component SKUs and traceability for terminals and suppliers.",
-            "url": "/industrias/automotriz"
+            "url": "/industrias/manufactura"
           },
           {
             "title": "Metalworking",
@@ -4859,7 +4859,7 @@
           {
             "title": "Agro-industry",
             "desc": "Input and finished-product depots of central Argentina's powerful agro-industry.",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           }
         ],
         "systemsTag": "Recommended systems",
@@ -4948,12 +4948,12 @@
           {
             "title": "Agro-industry & agro-export",
             "desc": "Input and finished-product management and traceability for the main export complex of the Paraná.",
-            "url": "/industrias/alimentos"
+            "url": "/industrias/alimentos-bebidas"
           },
           {
             "title": "Logistics & distribution",
             "desc": "Distribution centers supplying the center of the country, sized for campaign peaks.",
-            "url": "/industrias/retail"
+            "url": "/industrias/e-commerce-retail"
           },
           {
             "title": "Metalworking & industry",

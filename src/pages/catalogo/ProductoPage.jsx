@@ -115,22 +115,19 @@ export const ProductoPage = () => {
     "url": canonicalUrl,
     "inLanguage": i18n.language,
     "manufacturer": { "@type": "Organization", "name": "DELIE" },
-    // Sin precio público: ofertamos consulta/cotización con priceSpecification.
-    // Evita el warning de "missing price" declarando que el precio es a consultar.
+    // Producto a cotización (sin precio público). Un único price resoluble
+    // (price + priceCurrency + priceValidUntil) es válido y suficiente. NO se
+    // incluye un priceSpecification sin price: un PriceSpecification vacío hace
+    // que el validador no pueda resolver un precio y marque error.
     "offers": {
       "@type": "Offer",
       "url": canonicalUrl,
       "priceCurrency": "USD",
       "price": "0",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "priceCurrency": "USD",
-        "valueAddedTaxIncluded": false,
-      },
+      "priceValidUntil": "2026-12-31",
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",
       "seller": { "@id": `${baseUrl}/#organization` },
-      "areaServed": ["AR", "CL"],
     },
   };
 
