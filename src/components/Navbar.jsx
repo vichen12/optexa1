@@ -169,7 +169,7 @@ export const Navbar = () => {
               scrolled ? "w-32 h-14" : "w-40 h-16",
             )}>
               <img
-                src="/stoka_logo_sin_fondo.webp"
+                src="/stoka_logo_sin_fondo-sm.webp"
                 alt="STOKA — Representantes oficiales DELIE en Argentina"
                 width="160" height="64"
                 fetchpriority="high"

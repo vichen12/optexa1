@@ -196,7 +196,7 @@ export const AlternativaEconomicaASRSPage = () => {
           <div className="grid grid-cols-3 gap-3 mb-2">
             <div />
             <div className="bg-cyan-400 rounded-xl px-4 py-3 flex items-center justify-center">
-              <img loading="lazy" src="/image.png" alt="DELIE" className="h-5 object-contain" />
+              <img loading="lazy" src="/image.webp" alt="DELIE" className="h-5 object-contain" />
             </div>
             <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-center">
               <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest leading-tight">{t(`${ns}.comparisonColOther`)}</p>

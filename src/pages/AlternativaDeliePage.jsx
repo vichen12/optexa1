@@ -99,7 +99,7 @@ export const AlternativaDeliePage = () => {
             >
               <div className="w-full max-w-[360px] bg-slate-50 border border-gray-100 rounded-3xl p-8 shadow-sm flex flex-col items-center justify-center aspect-[4/3]">
                 <img loading="lazy"
-                  src="/image.png"
+                  src="/image.webp"
                   alt="DELIE Logo"
                   className="w-full h-auto object-contain max-h-[140px]"
                 />

@@ -66,7 +66,7 @@ export const Hero = () => {
           className="mb-5"
         >
           <img
-            src="/image.png"
+            src="/image.webp"
             alt="Sistemas ASRS DELIE para automatización de almacenes industriales"
             width="400" height="51"
             fetchpriority="high"

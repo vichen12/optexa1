@@ -222,7 +222,7 @@ export const ProductoPage = () => {
               );
             })()}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
-              <img loading="lazy" src="/image.png" alt="DELIE" className="h-7 object-contain mb-3" />
+              <img loading="lazy" src="/image.webp" alt="DELIE" className="h-7 object-contain mb-3" />
               <p className="text-gray-500 text-sm leading-relaxed mb-4">
                 STOKA es el representante oficial exclusivo de DELIE en Argentina y Chile.
               </p>
