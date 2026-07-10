@@ -272,9 +272,9 @@ export const ARTICULOS = [
   {
     slug: 'automatizacion-bodegas-chile',
     h1: 'Automatización de bodegas en Chile: la oportunidad de la industria minera y agroindustrial',
-    metaTitle: 'Automatización de Bodegas Chile | ASRS para Minería y',
+    metaTitle: 'Automatización de Bodegas en Chile: Guía 2026 | STOKA',
     wordCount: 1700,
-    metaDesc: 'Automatización de bodegas y almacenes en Chile para minería, vitivinicultura y agroindustria. Sistemas ASRS DELIE con ingeniería y soporte local en Chile',
+    metaDesc: 'Cómo automatizar tu bodega en Chile: sistemas, costos y beneficios. Tecnología DELIE con soporte local. Reducí espacio y errores en tu operación.',
     categoria: 'Mercados regionales',
     readTime: '7 min',
     publishDate: '2026-06-10',
@@ -362,7 +362,7 @@ export const ARTICULOS = [
     slug: 'que-es-un-transelevador',
     h1: 'Qué es un transelevador y cómo funciona en un almacén automático',
     metaTitle: '¿Qué es un Transelevador? Tipos, Funcionamiento y Costos',
-    wordCount: 1600,
+    wordCount: 1950,
     metaDesc: 'Guía completa sobre transelevadores: tipos (unit-load, miniload), cómo funcionan, diferencias con shuttle y cuándo conviene instalar uno en tu almacén',
     categoria: 'Fundamentos ASRS',
     readTime: '7 min',
@@ -370,6 +370,10 @@ export const ARTICULOS = [
     heroImg: '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
     intro: 'Un transelevador es el componente central de la mayoría de los sistemas ASRS (sistemas de almacenamiento y recuperación automatizados). Es una grúa automatizada que se desplaza dentro de un pasillo de estanterías, capturando y depositando paletas, cajas o contenedores con precisión milimétrica. Si alguna vez viste imágenes de un almacén moderno con estanterías de 20 o 30 metros y máquinas moviéndose entre ellas sin operarios — eso es un transelevador. En Argentina y Chile, la creciente adopción de automatización industrial hace que cada vez más empresas de logística, manufactura, alimentos y farmacéutica evalúen esta tecnología para sus almacenes, bodegas y depósitos.',
     sections: [
+      {
+        h2: 'En criollo: qué hace un transelevador y para qué te sirve',
+        body: 'Pensá en un transelevador como un robot que hace el trabajo del autoelevador y del operario, pero solo, sin parar y sin equivocarse. Se mueve por un pasillo entre estanterías altas, sube hasta la posición exacta, agarra la paleta o la caja y la lleva hasta donde tenés que armar el pedido. Vos no mandás a nadie a buscar mercadería ni a subir 15 metros con una máquina: el sistema trae el producto hasta el operario (lo que se llama goods-to-person). ¿Para qué te sirve en concreto? Para las tres cosas que duelen en cualquier depósito: ganás espacio (guardás en altura, hasta 3 veces más en los mismos metros cuadrados), ganás tiempo (el robot no camina kilómetros como un operario) y dejás de equivocarte (cada movimiento lo controla el software, con exactitud por encima del 99,9%). Por eso el transelevador es el corazón de la mayoría de los depósitos automáticos: es lo que convierte una nave llena de estanterías en una operación que trabaja sola las 24 horas.',
+      },
       {
         h2: 'Tipos de transelevador: unit-load y miniload',
         body: 'Existen dos grandes familias de transelevadores. El transelevador unit-load (o de paletas) está diseñado para manejar unidades de carga pesadas: paletas EURO, ISO o americanas de hasta 1.500 kg. Opera en pasillos de almacenes o bodegas de gran altura (7 a 40 metros), con velocidades de traslación de hasta 160 metros por minuto. Es el sistema de referencia para distribuidores, operadores 3PL y plantas de manufactura que manejan grandes volúmenes de paletas. El transelevador miniload, por su parte, está optimizado para cargas más pequeñas: cajas, totes y bandejas de hasta 50 kg. Opera en pasillos más estrechos (600 a 800 mm) y alcanza velocidades de hasta 180 metros por minuto en traslación. Es el sistema habitual para picking de alta velocidad en e-commerce, farmacéutica y manufactura con muchos SKUs. Ambos comparten la misma arquitectura básica pero tienen especificaciones de estructura, horquilla y control completamente diferentes.',
@@ -386,6 +390,10 @@ export const ARTICULOS = [
         h2: 'Cuánto cuesta un transelevador y cuál es el ROI en Argentina',
         body: 'El costo de un transelevador unitload DELIE para un pasillo de almacén de mediana escala (15 metros de altura, 500 posiciones de paleta) ronda los USD 180.000 a USD 280.000, sin incluir las estanterías ni el WCS. Un proyecto completo de 2 pasillos con transportadores, estanterías, WCS e integración con el ERP existente en un almacén o bodega en Argentina oscila entre USD 800.000 y USD 1.500.000. Con el Decreto 513/2025 (arancel 0% para equipos ASRS) y el RIMI (amortización acelerada del 100% en el primer ejercicio), el costo neto de un proyecto se reduce entre un 25% y un 35%. El ROI típico de un proyecto de transelevadores en Argentina está entre 18 y 36 meses, dependiendo del costo laboral actual de la operación manual que reemplaza.',
       },
+      {
+        h2: '¿Un transelevador sirve para un depósito chico o mediano?',
+        body: 'Es una de las preguntas más comunes, y la respuesta corta es: importa más la altura que los metros cuadrados. Un transelevador necesita al menos 7 metros de altura libre para que valga la pena; si tenés esa altura, no hace falta que el depósito sea enorme. Para operaciones chicas o medianas que manejan cajas y no paletas, el miniload es la puerta de entrada: ocupa pasillos angostos y arranca en una escala más accesible que un sistema de paletas completo. Y no hace falta automatizar todo de una: podés empezar por un pasillo o un módulo y crecer después, sumando pasillos a medida que crece la operación. La regla práctica es simple: si tu depósito se quedó sin lugar a lo ancho pero tenés altura para aprovechar, un transelevador —o un miniload— casi siempre entra en la conversación. El diagnóstico gratuito de STOKA te dice en la primera consulta si tu caso conviene o no.',
+      },
     ],
     conclusionH2: 'El primer paso es un diagnóstico gratuito',
     conclusion: 'La decisión de instalar un transelevador en tu almacén, bodega o depósito no empieza por el presupuesto: empieza por entender si el sistema es el correcto para tu operación. STOKA realiza el diagnóstico técnico —análisis de throughput, perfil de SKUs, altura disponible y proyección de ROI— sin costo y sin compromiso. Si el transelevador no es lo que necesitás, lo decimos. Si lo es, armamos la propuesta técnica completa en 2 a 4 semanas.',
@@ -394,6 +402,9 @@ export const ARTICULOS = [
       { q: '¿Qué pasa si el transelevador falla en el medio de la operación?', a: 'Los transelevadores DELIE tienen un MTBF (tiempo medio entre fallas) mayor a 8.000 horas de operación. Si se produce una falla, el pasillo puede operarse en modo manual de emergencia con carretilla elevadora mientras se resuelve. STOKA tiene repuestos en Argentina para resolver la mayoría de las fallas en menos de 24 horas.' },
       { q: '¿Cuántos pasillos de transelevador necesito para mi operación?', a: 'El número de pasillos depende del throughput requerido (movimientos por hora) y de la capacidad de almacenamiento necesaria (número de posiciones de paleta o contenedor). Con esos dos datos, STOKA dimensiona el sistema en la primera consulta técnica gratuita.' },
       { q: '¿El transelevador se integra con mi WMS o ERP existente?', a: 'Sí. El WCS de DELIE se conecta a cualquier WMS o ERP vía API REST, SOAP o EDI. Integraciones certificadas con SAP, Oracle, Microsoft Dynamics e Infor. STOKA gestiona la integración técnica como parte del proyecto llave en mano sin costo adicional.' },
+      { q: '¿Qué diferencia hay entre un transelevador y un autoelevador?', a: 'El autoelevador (o montacargas) lo maneja una persona y sirve para mover paletas de a una, a baja altura. El transelevador es automático: no lo maneja nadie, opera dentro de un pasillo fijo de estanterías, llega a alturas de hasta 40 metros y trabaja las 24 horas sin errores ni descansos. En criollo: el autoelevador es una herramienta que usa un operario; el transelevador es un robot que reemplaza el recorrido manual y guarda en altura mucho más de lo que llega un autoelevador.' },
+      { q: '¿Cuánto cuesta un transelevador?', a: 'Depende del tipo y de la escala, así que va como rango y no como número cerrado: un transelevador unit-load (para paletas) de mediana escala ronda los USD 180.000 a USD 280.000 sin estanterías ni software. Un proyecto completo de varios pasillos, con estanterías, control e integración, suele ir de USD 800.000 a USD 1.500.000. Con el arancel reducido (Decreto 513/2025) y el RIMI, el costo neto baja bastante. El número para TU caso sale del diagnóstico gratuito, según tu operación.' },
+      { q: '¿Sirve para un depósito chico?', a: 'Sí, siempre que tengas altura libre (idealmente 7 metros o más): lo que manda no son los metros cuadrados sino la altura que podés aprovechar. Para depósitos chicos o medianos que mueven cajas, el miniload es la opción más accesible, y podés empezar por un solo pasillo y crecer después. Si te quedaste sin lugar a lo ancho pero tenés altura, casi seguro entra en la conversación.' },
     ],
     cta: { heading: 'Evaluamos si un transelevador es lo correcto para tu operación', text: 'Diagnóstico técnico gratuito con análisis de throughput y estimación de ROI incluida.', btnPrimary: { label: 'Solicitar diagnóstico gratuito', url: '/contacto' }, btnSecondary: { label: 'Ver transelevadores unit-load', url: '/catalogo/asrs/unit-load' } },
     relacionados: [

@@ -453,8 +453,8 @@
       "home": "Inicio"
     },
     "nosotros": {
-      "metaTitle": "STOKA Group | Ingeniería ASRS Argentina | Nosotros",
-      "metaDesc": "STOKA: ingeniería, instalación y soporte 100% local para sistemas ASRS en Argentina y Chile. Aliado estratégico de DELIE. Proyectos llave en mano.",
+      "metaTitle": "Aliado Estratégico Oficial de DELIE en Argentina | STOKA",
+      "metaDesc": "Aliado estratégico oficial de DELIE en Argentina y Chile. 15+ años de tecnología, 1.000+ instalaciones globales. Automatizá tu depósito con respaldo local.",
       "breadcrumb": "Nosotros",
       "whoWeAre": "Quiénes somos",
       "h1_a": "STOKA",
@@ -526,8 +526,8 @@
       }
     },
     "howWeWork": {
-      "metaTitle": "Cómo Trabajamos | Proyecto ASRS Llave en Mano | STOKA",
-      "metaDesc": "Metodología de 6 pasos: consulta, ingeniería, instalación y soporte posventa. Proyectos ASRS llave en mano en Argentina y Chile.",
+      "metaTitle": "Cómo Automatizamos tu Depósito: de Plano a Arranque | STOKA",
+      "metaDesc": "Nuestro proceso para automatizar tu almacén: relevamiento, ingeniería, instalación y soporte. Proyecto llave en mano con tecnología DELIE en Argentina.",
       "breadcrumb": "Cómo trabajamos",
       "methodologyTag": "Metodología · 6 fases",
       "h1_a": "De la consulta",
@@ -609,8 +609,8 @@
       ]
     },
     "contactPage": {
-      "metaTitle": "Contacto | Solicitar consulta ASRS | STOKA Argentina",
-      "metaDesc": "Contactá a STOKA para cotizar sistemas ASRS, robots y software WMS/WCS para tu almacén en Argentina."
+      "metaTitle": "Cotizá la Automatización de tu Depósito | STOKA",
+      "metaDesc": "Pedí tu evaluación sin cargo. Te asesoramos sobre sistemas ASRS, robots y software para tu depósito en Argentina y Chile. Respondemos en 24hs."
     },
     "catalog": {
       "metaTitle": "Catálogo de Automatización | Sistemas ASRS DELIE | STOKA",
@@ -2341,8 +2341,8 @@
           ]
         },
         "logistica-3pl": {
-          "metaTitle": "Automatización 3PL | WMS Multicliente | STOKA",
-          "metaDesc": "Automatización para operador logístico 3PL: WMS multicliente para almacén multicliente, cross docking y operación 24/7. Sistemas ASRS y robots DELIE.",
+          "metaTitle": "Automatización para Operadores Logísticos 3PL | STOKA",
+          "metaDesc": "Más pedidos por hora y menos errores en tu operación 3PL. Automatización para depósitos multicliente en Argentina. Tecnología DELIE.",
           "hero": "Operación multicliente con máxima eficiencia.",
           "description": "Los operadores 3PL necesitan flexibilidad extrema: múltiples clientes, múltiples tipos de producto y contratos cambiantes. La automatización del operador logístico permite ofrecer más valor a cada cliente sin escalar costos fijos.",
           "highlight": "\"Un operador 3PL automatizado puede servir el doble de clientes con la misma infraestructura.\"",
@@ -3905,8 +3905,8 @@
       "verRecursos": "Ver todos los recursos"
     },
     "beneficiosFiscales": {
-      "metaTitle": "Beneficios Fiscales Automatización 2026 | RIMI | STOKA",
-      "metaDesc": "RIMI 2026, RIGI, amortización acelerada e IVA anticipado: hasta 6 beneficios fiscales para reducir el costo de tu ASRS en Argentina. Guía actualizada 2026.",
+      "metaTitle": "Automatizá tu Depósito y Ahorrá con RIMI 2026 | STOKA",
+      "metaDesc": "Recuperá el IVA y amortizá tu inversión en automatización. Descubrí los beneficios fiscales (RIMI, RIGI) para tu depósito en Argentina.",
       "breadcrumb": "Beneficios Fiscales",
       "heroTag": "Marco normativo · Argentina",
       "heroUpdated": "Actualizado junio 2026",

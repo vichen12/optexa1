@@ -60,6 +60,12 @@ export const ProblemasSection = () => {
             );
           })}
         </div>
+
+        <p className="text-white/40 text-sm mt-8 max-w-3xl">
+          ¿No sabés por dónde empezar? Entendé qué es un{' '}
+          <LangLink to="/recursos/que-es-un-transelevador" className="font-semibold text-cyan-400 underline underline-offset-2 hover:text-cyan-300">transelevador</LangLink>{' '}
+          y cómo automatiza tu depósito.
+        </p>
       </div>
     </section>
   );

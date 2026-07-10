@@ -159,6 +159,12 @@ export const CatalogoASRSPage = () => {
             <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('whatIsTag')}</p>
             <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter">{p('whatIsH2')}</h2>
             <p className="text-gray-500 text-sm leading-relaxed max-w-3xl mt-4">{t('pages.catalogoAsrs.vocabPara')}</p>
+            {i18n.language === 'es' && (
+              <p className="text-gray-500 text-sm leading-relaxed max-w-3xl mt-3">
+                El equipo central de casi todos los AS/RS es el{' '}
+                <LangLink to="/recursos/que-es-un-transelevador" className="text-cyan-600 font-semibold underline underline-offset-2 hover:text-cyan-500">transelevador</LangLink>: una grúa automática que guarda y recupera la mercadería en altura, sin operarios.
+              </p>
+            )}
           </div>
 
           {/* Stat badges */}

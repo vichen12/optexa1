@@ -21,7 +21,7 @@ export const GLOSARIO = [
     es: 'Variante ortográfica de ASRS con barras separadoras. Se usa indistintamente; el estándar ISO prefiere "ASRS" pero "AS/RS" es más frecuente en documentación técnica americana.',
     en: 'Spelling variant of ASRS with separating slashes. Used interchangeably; the ISO standard prefers "ASRS" but "AS/RS" is more common in American technical documentation.',
     zh: 'ASRS的拼写变体，带分隔斜杠。可互换使用；ISO标准偏好"ASRS"，但"AS/RS"在美国技术文档中更常见。' } },
-  { term: 'Transelevador', id: 'transelevador', cat: 'sistemas', def: {
+  { term: 'Transelevador', id: 'transelevador', cat: 'sistemas', articulo: 'que-es-un-transelevador', def: {
     es: 'Grúa automatizada que se desplaza dentro de un pasillo de estanterías, en rieles instalados en el piso y el techo, para almacenar y recuperar paletas. Capacidades hasta 1.500 kg y alturas de hasta 40 metros.',
     en: 'Automated crane that travels within a racking aisle, on rails installed on the floor and ceiling, to store and retrieve pallets. Capacities up to 1,500 kg and heights up to 40 meters.',
     zh: '堆垛机：在货架巷道内沿地面和顶部安装的导轨行驶，用于存储和检索托盘的自动化起重机。承载能力可达1500公斤，高度可达40米。' } },
@@ -483,7 +483,7 @@ export const GLOSARIO = [
 
 /* Resuelve términos y categorías al idioma de la página. */
 export const getGlosario = (lang = 'es') =>
-  GLOSARIO.map((t) => ({ term: t.term, id: t.id, cat: t.cat, def: t.def[lang] || t.def.es }));
+  GLOSARIO.map((t) => ({ term: t.term, id: t.id, cat: t.cat, def: t.def[lang] || t.def.es, articulo: t.articulo }));
 
 export const getGlosarioCats = (lang = 'es') =>
   GLOSARIO_CATS.map((c) => ({ id: c.id, label: c.label[lang] || c.label.es }));
