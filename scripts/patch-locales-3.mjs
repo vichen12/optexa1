@@ -1,3 +1,4 @@
+// OBSOLETO - no re-ejecutar: revierte los cambios de "aliado estratégico". Ver informe-maestro-reposicionamiento-stoka.md
 import { readFileSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 

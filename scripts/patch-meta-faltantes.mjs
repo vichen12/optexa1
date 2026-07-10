@@ -1,3 +1,4 @@
+// OBSOLETO - no re-ejecutar: revierte los cambios de "aliado estratégico". Ver informe-maestro-reposicionamiento-stoka.md
 /* Agrega metaTitle + metaDesc faltantes a 6 páginas (catálogo + landings)
    en es/en/zh. Sin estas claves, SeoHead mostraba la clave i18n cruda
    (ej. "pages.catalogoVertical.metaDesc") en el <meta description>.

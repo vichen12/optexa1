@@ -221,7 +221,7 @@ export const ProductoPage = () => {
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
               <img loading="lazy" src="/image.webp" alt="DELIE" className="h-7 object-contain mb-3" />
               <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                STOKA es el representante oficial exclusivo de DELIE en Argentina y Chile.
+                STOKA es el aliado estratégico oficial y exclusivo de DELIE en Argentina y Chile.
               </p>
               <button onClick={() => langNavigate('/contacto')}
                 className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">

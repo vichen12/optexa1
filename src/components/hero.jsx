@@ -11,7 +11,7 @@ export const Hero = () => {
   useEffect(() => {
     document.title = t('home.pageTitle');
     const m = document.querySelector('meta[name="description"]');
-    if (m) m.setAttribute("content", "Sistemas ASRS, robots y software WMS/WCS para automatización de almacenes en Argentina. Tecnología DELIE, integración local STOKA. 30-50% más económico que Europa.");
+    if (m) m.setAttribute("content", t('home.metaDesc'));
   }, [t]);
 
   const STATS = [

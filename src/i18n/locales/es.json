@@ -29,13 +29,13 @@
     "language": "Seleccionar idioma"
   },
   "hero": {
-    "badge": "Representación Oficial DELIE · Argentina",
-    "h1_line1": "Automatización",
-    "h1_line2": "de almacenes con",
-    "h1_line3": "tecnología DELIE",
-    "h1_line4": "en Argentina.",
-    "sub": "Tecnología de clase mundial, precio accesible. Sistemas ASRS, robots y software para empresas que necesitan operar mejor sin pagar precios europeos.",
-    "cta1": "Solicitar consulta técnica",
+    "badge": "Aliado Estratégico Oficial DELIE · Argentina",
+    "h1_line1": "Automatizá tu depósito:",
+    "h1_line2": "más espacio,",
+    "h1_line3": "menos costos",
+    "h1_line4": "y cero errores.",
+    "sub": "Aprovechá hasta 3 veces más tu espacio, ganá tiempo y reducí errores con sistemas automáticos de almacenamiento. Tecnología DELIE de clase mundial, a precio accesible y con soporte en Argentina.",
+    "cta1": "Quiero automatizar mi depósito",
     "cta2": "Ver catálogo de soluciones",
     "stats": {
       "installations": "Instalaciones ASRS globales",
@@ -45,7 +45,7 @@
     }
   },
   "roi": {
-    "tag": "Retorno de inversión",
+    "tag": "Cuánto ahorrás en serio",
     "h2_a": "La automatización",
     "h2_b": "se paga sola",
     "sub": "Los números reales de una operación que automatizó con DELIE.",
@@ -73,8 +73,8 @@
   },
   "catalog": {
     "tag": "Catálogo de soluciones — Tecnología DELIE",
-    "h2_a": "Nuestras",
-    "h2_b": "Categorías",
+    "h2_a": "Qué podemos automatizar",
+    "h2_b": "en tu depósito",
     "viewAll": "Ver catálogo completo",
     "viewProducts": "Ver productos",
     "youtube": {
@@ -83,11 +83,11 @@
       "cta": "Ver canal"
     },
     "categories": {
-      "asrsDesc": "Estanterías AS/RS de 7 a 40 metros. Drive-in, shuttle, mezzanine.",
-      "verticalDesc": "Carruseles verticales y módulos VLM. Hasta 90% menos espacio de suelo.",
-      "robotsDesc": "Grúas apiladoras, transelevadores MiniLoad, robots lanzadera y AMR.",
-      "transportDesc": "Elevadores, transportadores de cadena, rodillos y paletizadores.",
-      "softwareDesc": "WMS, WCS, HMS y visualización 3D para control total del almacén."
+      "asrsDesc": "Guardá más en el mismo espacio. Estanterías AS/RS de 7 a 40 metros: drive-in, shuttle, mezzanine.",
+      "verticalDesc": "Torres automáticas que liberan hasta 90% del piso. Carruseles verticales y módulos VLM.",
+      "robotsDesc": "Robots que llevan la mercadería hasta el operario. Grúas apiladoras, transelevadores MiniLoad, robots lanzadera y AMR.",
+      "transportDesc": "La mercadería se mueve sola entre zonas. Elevadores, transportadores de cadena, rodillos y paletizadores.",
+      "softwareDesc": "Control total del stock en tiempo real, sin planillas. WMS, WCS, HMS y visualización 3D."
     }
   },
   "value": {
@@ -95,8 +95,8 @@
     "h2_a": "La diferencia que",
     "h2_b": "importa",
     "pillars": {
-      "p1title": "Fabricante directo",
-      "p1body": "DELIE fabrica, STOKA integra. Acceso directo al fabricante sin cadena de intermediarios: garantía de fábrica, piezas originales y soporte técnico local en Argentina.",
+      "p1title": "Aliado directo del fabricante",
+      "p1body": "DELIE fabrica, STOKA integra como su aliado estratégico oficial en Argentina: garantía de fábrica, piezas originales y soporte técnico local, sin cadena de intermediarios.",
       "p1stat": "instalaciones en el mundo",
       "p2title": "30–50% más económico",
       "p2body": "Misma tecnología que Europa y EE.UU., con los costos de manufactura china y comercialización local. El precio deja de ser la barrera.",
@@ -163,18 +163,18 @@
     "ready": "¿Listo para empezar?",
     "heading": "Consulta",
     "headingAccent": "sin costo",
-    "sub": "En 24 hs tenés respuesta técnica de nuestro equipo.",
+    "sub": "Contanos qué problema tenés en tu depósito y en 24 hs te decimos si la automatización te conviene y cuánto ahorrarías.",
     "btn1": "Solicitar consulta técnica",
     "btn2": "Ver catálogo completo"
   },
   "footer": {
-    "tagline": "Representantes oficiales exclusivos de DELIE en Argentina y Chile. Soporte técnico 100% local.",
+    "tagline": "Aliado estratégico oficial y exclusivo de DELIE en Argentina y Chile. Soporte técnico 100% local.",
     "catalog": "Catálogo",
     "industries": "Industrias",
     "resources": "Recursos",
     "company": "Empresa",
     "location": "Ubicación — Mendoza, Argentina",
-    "copyright": "© {{year}} STOKA — Representación oficial DELIE en Argentina",
+    "copyright": "© {{year}} STOKA — Aliado estratégico oficial de DELIE en Argentina",
     "address": "Carril Rodríguez Peña 35, Maipú, Mendoza",
     "catalogLinks": {
       "asrs": "Sistemas AS/RS",
@@ -300,9 +300,34 @@
     "successTitle": "¡Consulta recibida!"
   },
   "home": {
-    "seoTag": "STOKA · Representantes DELIE en Argentina",
+    "seoTag": "STOKA · Aliado estratégico de DELIE en Argentina",
     "h2": "Automatización de almacenes, bodegas y depósitos industriales en Argentina y Chile",
-    "seoPara": "Representante oficial exclusivo de DELIE — uno de los fabricantes de sistemas ASRS de mayor escala global. Ingeniería, instalación y soporte 100% local en Argentina y Chile.",
+    "seoPara": "Aliado estratégico oficial y exclusivo de DELIE — uno de los fabricantes de sistemas ASRS de mayor escala global. Ingeniería, instalación y soporte 100% local en Argentina y Chile.",
+    "problemas": {
+      "tag": "El costo oculto de tu depósito",
+      "h2": "¿Tu depósito llegó al límite?",
+      "sub": "Si te pasa alguna de estas tres cosas, la automatización se paga sola. En Argentina, los costos logísticos representan entre el 20% y el 30% del valor final de un producto — el depósito es el costo oculto más grande de tu operación.",
+      "cards": [
+        {
+          "title": "No te entra más nada",
+          "body": "Tu depósito se quedó chico y ampliar o mudarte cuesta una fortuna. Los sistemas automáticos aprovechan la altura: hasta 3 veces más mercadería en los mismos metros cuadrados, sin obra.",
+          "to": "/recursos/falta-de-espacio-deposito-soluciones",
+          "linkLabel": "Ver soluciones de espacio"
+        },
+        {
+          "title": "Perdés tiempo y aparecen errores",
+          "body": "Buscar productos a mano, preparar pedidos caminando kilómetros, equivocarse en los envíos. Un depósito automatizado lleva la mercadería hasta el operario y prepara pedidos con 99,9% de exactitud, las 24 horas.",
+          "to": "/recursos/reducir-costos-logisticos",
+          "linkLabel": "Reducir tiempos y errores"
+        },
+        {
+          "title": "El alquiler te come la rentabilidad",
+          "body": "Pagás cada vez más metros para guardar lo mismo. Con almacenamiento de alta densidad guardás lo mismo en hasta 85% menos superficie y dejás de pagar espacio de más.",
+          "to": "/recursos/como-aprovechar-espacio-almacen",
+          "linkLabel": "Bajar el costo por metro"
+        }
+      ]
+    },
     "stats": {
       "installations": "Instalaciones globales DELIE",
       "countries": "Países con presencia",
@@ -377,9 +402,9 @@
       "fiscalBenefits": "Beneficios fiscales 2026"
     },
     "tabAway": "¡Volvé! Te esperamos 👋",
-    "pageTitle": "Sistemas ASRS y Automatización de Almacenes | STOKA",
-    "metaDesc": "Sistemas ASRS para automatización de almacenes en Argentina y Chile. Transelevadores, robots shuttle, VLM y software WMS/WCS DELIE con soporte local STOKA.",
-    "vocabPara": "Las soluciones de STOKA abarcan la logística inteligente de extremo a extremo: desde depósitos automáticos de alta densidad hasta centros de distribución 4.0 con robótica industrial y software de gestión. Transformamos almacenes tradicionales y naves industriales en operaciones automatizadas e inteligentes —depósitos inteligentes, almacenes robotizados y plantas logísticas digitalizadas— combinando transelevadores, vehículos autónomos (AGV/AMR) y sistemas de almacenamiento automático para maximizar el aprovechamiento del espacio.",
+    "pageTitle": "Automatizá tu Depósito: Más Espacio y Menos Costos | STOKA",
+    "metaDesc": "Automatizá tu depósito y aprovechá 3x más espacio. Reducí costos, errores y tiempos con almacenamiento automático. Tecnología DELIE, soporte en Argentina.",
+    "vocabPara": "Las soluciones de STOKA abarcan la logística inteligente de extremo a extremo: desde depósitos automáticos de alta densidad hasta centros de distribución 4.0 con robótica industrial y software de gestión. Transformamos almacenes tradicionales y naves industriales en operaciones automatizadas e inteligentes —depósitos inteligentes, almacenes robotizados y plantas logísticas digitalizadas— combinando transelevadores, vehículos autónomos (AGV/AMR) y sistemas de almacenamiento automático para maximizar el aprovechamiento del espacio. Si tu depósito se quedó chico, si perdés tiempo preparando pedidos o si el costo del alquiler no para de subir, la automatización deja de ser un lujo: es la forma más rápida de ordenar el depósito, ganar espacio y bajar costos sin mudarte ni ampliar.",
     "faq": [
       {
         "q": "¿Qué es un depósito inteligente?",
@@ -392,6 +417,10 @@
       {
         "q": "¿La automatización conviene para pymes?",
         "a": "Sí. Existen soluciones de automatización escalables desde USD 150.000, y en Argentina las pymes acceden a beneficios fiscales (RIMI, arancel reducido según NCM, IVA 10,5%, financiamiento BICE) que mejoran el ROI. No hace falta automatizar todo de golpe: se puede empezar por un módulo —un VLM, un miniload o un sistema de picking— y escalar según crece la operación."
+      },
+      {
+        "q": "¿Cuánto cuesta automatizar un depósito?",
+        "a": "Depende del tamaño y del sistema. Hay soluciones escalables desde USD 150.000 (un módulo VLM o miniload) hasta proyectos integrales. Lo importante: con los beneficios fiscales vigentes (RIMI, aranceles reducidos) y el ahorro en alquiler y errores, el retorno típico es de 18 a 36 meses. Pedí una evaluación sin cargo y te damos el número para TU caso."
       }
     ],
     "faqTag": "Preguntas frecuentes",
@@ -425,19 +454,19 @@
     },
     "nosotros": {
       "metaTitle": "STOKA Group | Ingeniería ASRS Argentina | Nosotros",
-      "metaDesc": "STOKA: ingeniería, instalación y soporte 100% local para sistemas ASRS en Argentina y Chile. Representantes exclusivos de DELIE. Proyectos llave en mano.",
+      "metaDesc": "STOKA: ingeniería, instalación y soporte 100% local para sistemas ASRS en Argentina y Chile. Aliado estratégico de DELIE. Proyectos llave en mano.",
       "breadcrumb": "Nosotros",
       "whoWeAre": "Quiénes somos",
       "h1_a": "STOKA",
       "h1_b": "Argentina",
-      "tagline": "Representantes oficiales exclusivos de DELIE en Argentina. Tecnología de automatización de almacenes de clase mundial, con ingeniería y soporte 100% local.",
+      "tagline": "Aliado estratégico oficial y exclusivo de DELIE en Argentina. Tecnología de automatización de almacenes de clase mundial, con ingeniería y soporte 100% local.",
       "stats": {
         "installations": "Instalaciones globales DELIE",
         "countries": "Países con presencia",
         "local": "Ingeniería y soporte local",
         "founded": "Año de fundación DELIE"
       },
-      "officialRep": "Representación oficial",
+      "officialRep": "Aliado estratégico oficial",
       "officialRepCountry": "Argentina",
       "missionTag": "Nuestra misión",
       "missionH2": "Democratizar la automatización logística en Argentina",
@@ -462,8 +491,8 @@
           "desc": "Restricciones y realidades de la operación nacional."
         }
       ],
-      "delieTag": "DELIE · Representación exclusiva Argentina y Chile",
-      "deliePara": "STOKA es el representante exclusivo de DELIE en Argentina y Chile. Tecnología ASRS de primer nivel mundial con precios 30–50% más accesibles que las alternativas europeas, y soporte técnico 100% local garantizado desde Argentina.",
+      "delieTag": "DELIE · Aliado estratégico exclusivo Argentina y Chile",
+      "deliePara": "STOKA es el aliado estratégico exclusivo de DELIE en Argentina y Chile. Tecnología ASRS de primer nivel mundial con precios 30–50% más accesibles que las alternativas europeas, y soporte técnico 100% local garantizado desde Argentina.",
       "valuesTag": "Cómo trabajamos",
       "valuesH2": "Nuestros valores",
       "values": [
@@ -593,7 +622,7 @@
         "products": "Productos",
         "projects": "Proyectos globales"
       },
-      "heroTag": "Representantes oficiales DELIE · Argentina",
+      "heroTag": "Aliado estratégico oficial DELIE · Argentina",
       "heroH1_a": "Catálogo de",
       "heroH1_b": "Automatización",
       "heroSub": "Sistemas AS/RS, almacenamiento vertical, robots y software de clase mundial — con soporte local en Argentina.",
@@ -610,7 +639,7 @@
         },
         {
           "q": "¿Todos los productos del catálogo están disponibles en Argentina?",
-          "a": "Sí. STOKA es el representante exclusivo de DELIE en Argentina y Chile. Todos los sistemas del catálogo — transelevadores, robots shuttle, VLM, transportadores y software WMS/WCS — se pueden instalar en el país con ingeniería, instalación y soporte 100% local."
+          "a": "Sí. STOKA es el aliado estratégico oficial y representante exclusivo de DELIE en Argentina y Chile. Todos los sistemas del catálogo — transelevadores, robots shuttle, VLM, transportadores y software WMS/WCS — se pueden instalar en el país con ingeniería, instalación y soporte 100% local."
         },
         {
           "q": "¿El catálogo incluye el software de gestión o solo los equipos físicos?",
@@ -1280,7 +1309,7 @@
       "faq": [
         {
           "q": "¿STOKA tiene presencia física en Chile?",
-          "a": "Sí. Contamos con representación comercial y técnica en Chile para diagnóstico, venta, instalación y soporte post-venta. No es necesario gestionar desde Argentina."
+          "a": "Sí. Contamos con presencia comercial y técnica en Chile para diagnóstico, venta, instalación y soporte post-venta. No es necesario gestionar desde Argentina."
         },
         {
           "q": "¿Los sistemas DELIE cumplen con normativa chilena?",
@@ -1297,12 +1326,12 @@
       ]
     },
     "delie": {
-      "metaTitle": "DELIE Argentina | Representante Oficial | STOKA",
-      "metaDesc": "STOKA es el representante exclusivo de DELIE en Argentina y Chile. Sistemas ASRS líderes globales con soporte técnico local, financiamiento en pesos y",
+      "metaTitle": "DELIE Argentina | Aliado Estratégico Oficial | STOKA",
+      "metaDesc": "STOKA, aliado estratégico exclusivo de DELIE en Argentina y Chile. Sistemas ASRS líderes globales con soporte técnico local y financiamiento en pesos.",
       "h1": "DELIE en Argentina",
       "breadcrumb": "DELIE Argentina",
       "breadcrumbHome": "Inicio",
-      "heroTag": "DELIE EN ARGENTINA · REPRESENTACIÓN EXCLUSIVA",
+      "heroTag": "DELIE EN ARGENTINA · ALIADO ESTRATÉGICO EXCLUSIVO",
       "heroH1_a": "TECNOLOGÍA DELIE",
       "heroH1_b": "CON SOPORTE LOCAL",
       "heroSub": "Importamos, implementamos y soportamos los sistemas ASRS de DELIE en Argentina y Chile. Acceso directo al fabricante con acompañamiento técnico local de primer nivel.",
@@ -1370,7 +1399,7 @@
       "whyItems": [
         {
           "label": "Sin intermediarios internacionales",
-          "desc": "Comprá directo al representante exclusivo. Sin markups de distribuidores, con precio de fábrica y soporte directo."
+          "desc": "Comprá directo al aliado estratégico exclusivo. Sin markups de distribuidores, con precio de fábrica y soporte directo."
         },
         {
           "label": "Ingeniería en tu idioma",
@@ -1450,7 +1479,7 @@
       "faq": [
         {
           "q": "¿STOKA es el único representante de DELIE en Argentina?",
-          "a": "Sí. STOKA Group es el representante y distribuidor exclusivo de DELIE para Argentina y Chile. Cualquier cotización de sistemas DELIE en estos países debe pasar por STOKA."
+          "a": "Sí. STOKA Group es el aliado estratégico oficial y representante exclusivo de DELIE para Argentina y Chile. Cualquier cotización de sistemas DELIE en estos países debe pasar por STOKA."
         },
         {
           "q": "¿Los sistemas DELIE tienen garantía de fábrica en Argentina?",
@@ -1654,7 +1683,7 @@
       "whyH2": "VENTAJAS DIFERENCIALES",
       "whyItems": [
         {
-          "label": "Representación oficial DELIE",
+          "label": "Aliado estratégico oficial DELIE",
           "desc": "Acceso directo al fabricante: sin intermediarios, con garantía de fábrica y piezas originales."
         },
         {
@@ -2855,7 +2884,7 @@
       "metaTitle": "Sistemas ASRS Argentina | AS/RS Automatizados | STOKA",
       "metaDesc": "ASRS y AS/RS DELIE en Argentina: transelevadores, pallet shuttle y miniload de 7 a 40 m de altura. 30–50% más económico que proveedores europeos.",
       "breadcrumbCat": "AS/RS",
-      "heroTag": "Sistema ASRS · Representantes DELIE · Argentina",
+      "heroTag": "Sistema ASRS · Aliado estratégico DELIE · Argentina",
       "heroH1_a": "Sistemas AS/RS",
       "heroH1_b": "Estanterías automatizadas",
       "heroSub": "Estanterías AS/RS DELIE de 7 a 40 metros de altura. Drive-in, shuttle, mezzanine y rack selectivo automatizado con soporte local en Argentina.",
@@ -4586,8 +4615,8 @@
       "funcionamiento": "Funcionamiento",
       "fichaTecnica": "Ficha técnica",
       "delieTag": "Tecnología DELIE en Argentina",
-      "delieH2": "DELIE — representación oficial STOKA",
-      "delieParrafo": "DELIE fabrica más de 1.000 instalaciones activas en +30 países. STOKA es el representante exclusivo en Argentina: ingeniería, instalación y soporte técnico local sin depender de tiempos de fábrica en el exterior. Tecnología de clase mundial, precio para el mercado LATAM.",
+      "delieH2": "DELIE — aliado estratégico oficial STOKA",
+      "delieParrafo": "DELIE fabrica más de 1.000 instalaciones activas en +30 países. STOKA es el aliado estratégico exclusivo en Argentina: ingeniería, instalación y soporte técnico local sin depender de tiempos de fábrica en el exterior. Tecnología de clase mundial, precio para el mercado LATAM.",
       "verMasDelie": "Ver más sobre DELIE en Argentina →",
       "relacionadosTag": "También te puede interesar",
       "relacionadosH2": "Productos relacionados",
@@ -4602,7 +4631,7 @@
     },
     "alternativeDelie": {
       "metaTitle": "DELIE en Argentina | Sistemas ASRS DELIE | STOKA",
-      "metaDesc": "Representantes oficiales de DELIE en Argentina. Sistemas ASRS, transelevadores, robots y software WMS/WCS con ingeniería y soporte 100% local de STOKA."
+      "metaDesc": "Aliado estratégico oficial de DELIE en Argentina. Sistemas ASRS, transelevadores, robots y software WMS/WCS con ingeniería y soporte 100% local de STOKA."
     },
     "zonas": {
       "buenos-aires": {

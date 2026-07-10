@@ -9,6 +9,7 @@ import { Hero } from './components/hero';
 import { WppFloat } from './components/WppFloat';
 import { LeadPopup } from './components/LeadPopup';
 import { CatalogPreview } from './components/CatalogPreview';
+import { ProblemasSection } from './components/ProblemasSection';
 import { PropuestaDeValor } from './components/PropuestaDeValor';
 import { IndustriasPreview } from './components/IndustriasPreview';
 import { ROISection } from './components/ROISection';
@@ -50,7 +51,7 @@ export const ORGANIZATION_SCHEMA = {
   "@id": "https://www.stokagroup.com/#organization",
   "name": "STOKA",
   "legalName": "STOKA",
-  "description": "Representantes oficiales exclusivos de DELIE en Argentina. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales.",
+  "description": "Aliado estratégico oficial y exclusivo de DELIE en Argentina. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales.",
   "url": "https://www.stokagroup.com",
   "logo": "https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png",
   "image": "https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png",
@@ -118,7 +119,7 @@ export function HomePage() {
           "@type": "WebSite",
           "name": "STOKA — Automatización de Almacenes",
           "url": "https://www.stokagroup.com",
-          "description": "Representantes oficiales exclusivos de DELIE en Argentina.",
+          "description": "Aliado estratégico oficial y exclusivo de DELIE en Argentina.",
           "inLanguage": lang,
           "publisher": { "@type": "Organization", "name": "STOKA" }
         })}</script>
@@ -132,6 +133,7 @@ export function HomePage() {
             <Hero />
           </motion.div>
         </section>
+        <ProblemasSection />
         <ROISection />
         <CatalogPreview />
         <PropuestaDeValor />
