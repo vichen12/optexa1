@@ -61,7 +61,7 @@ export const IndustriasPreview = () => {
               <div className="h-36 overflow-hidden bg-gray-100 relative">
                 <img loading="lazy"
                   src={ind.image}
-                  alt={ind.label}
+                  alt={t(`industries.labels.${ind.descKey.replace('Desc', '')}`)}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   onError={(ev) => { ev.currentTarget.style.display = 'none'; }}
                 />
@@ -72,7 +72,7 @@ export const IndustriasPreview = () => {
               </div>
 
               <div className="p-4">
-                <h3 className="text-gray-900 font-bold text-sm leading-tight mb-1">{ind.label}</h3>
+                <h3 className="text-gray-900 font-bold text-sm leading-tight mb-1">{t(`industries.labels.${ind.descKey.replace('Desc', '')}`)}</h3>
                 <p className="text-gray-500 text-xs leading-relaxed">{t(`industries.items.${ind.descKey}`)}</p>
                 <div className="mt-3 flex items-center gap-1 text-[11px] text-cyan-500 font-semibold group-hover:gap-2 transition-all">
                   {t('industries.viewSolutions')} <ArrowRight size={10} />

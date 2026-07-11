@@ -144,10 +144,10 @@ export const GlosarioPage = () => {
                     )}
                   </div>
                   <dd className="text-gray-500 text-sm leading-relaxed mt-1">{t.def}</dd>
-                  {t.articulo && i18n.language === 'es' && (
+                  {t.articulo && (
                     <dd className="mt-1.5">
                       <LangLink to={`/recursos/${t.articulo}`} className="inline-flex items-center gap-1 text-xs font-bold text-cyan-600 hover:text-cyan-500">
-                        Leé la guía completa: qué es un transelevador →
+                        {p('verArticulo')}
                       </LangLink>
                     </dd>
                   )}

@@ -117,13 +117,13 @@ export function HomePage() {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": "STOKA — Automatización de Almacenes",
+          "name": t('schema.siteName'),
           "url": "https://www.stokagroup.com",
-          "description": "Aliado estratégico oficial y exclusivo de DELIE en Argentina.",
+          "description": t('schema.orgDesc'),
           "inLanguage": lang,
           "publisher": { "@type": "Organization", "name": "STOKA" }
         })}</script>
-        <script type="application/ld+json">{JSON.stringify({ ...ORGANIZATION_SCHEMA, inLanguage: lang })}</script>
+        <script type="application/ld+json">{JSON.stringify({ ...ORGANIZATION_SCHEMA, inLanguage: lang, description: t('schema.orgDesc'), knowsAbout: t('schema.knowsAbout', { returnObjects: true }) })}</script>
       </Helmet>
       <Navbar />
 
@@ -320,7 +320,7 @@ export function HomePage() {
 }
 
 function App() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const lang = i18n.language;
   /* Shared inner routes — reused for /, /en, /zh */
   const inner = [
@@ -359,7 +359,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <script type="application/ld+json">{JSON.stringify({ ...ORGANIZATION_SCHEMA, inLanguage: lang })}</script>
+        <script type="application/ld+json">{JSON.stringify({ ...ORGANIZATION_SCHEMA, inLanguage: lang, description: t('schema.orgDesc'), knowsAbout: t('schema.knowsAbout', { returnObjects: true }) })}</script>
       </Helmet>
       <Suspense fallback={<div className="min-h-screen bg-zinc-950" />}>
         <Routes>

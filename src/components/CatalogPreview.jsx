@@ -105,7 +105,7 @@ export const CatalogPreview = () => {
               <div className="aspect-video overflow-hidden bg-gray-200">
                 <img loading="lazy"
                   src={cat.image}
-                  alt={cat.label}
+                  alt={t(`catalog.labels.${cat.descKey.replace('Desc', '')}`)}
                   className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
                   onError={(ev) => { ev.currentTarget.style.opacity = '0'; }}
                 />
@@ -113,7 +113,7 @@ export const CatalogPreview = () => {
               <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <div className="flex items-start justify-between gap-2 mb-1.5">
-                  <h3 className="text-white font-bold text-base leading-tight">{cat.label}</h3>
+                  <h3 className="text-white font-bold text-base leading-tight">{t(`catalog.labels.${cat.descKey.replace('Desc', '')}`)}</h3>
                   <span className="shrink-0 text-[11px] font-mono text-cyan-300 bg-cyan-400/15 border border-cyan-400/25 px-2 py-0.5 rounded-full mt-0.5">
                     {cat.count}
                   </span>
@@ -139,7 +139,7 @@ export const CatalogPreview = () => {
           >
             <div className="aspect-video flex items-center justify-center bg-slate-800 relative overflow-hidden">
               <div className="absolute inset-0 bg-linear-to-br from-slate-700 to-slate-900" />
-              <img loading="lazy" src="/image.webp" alt="DELIE en YouTube — Instalaciones reales y casos de uso globales" width="400" height="51" className="relative z-10 w-32 object-contain" style={{ filter: 'brightness(1.1) saturate(1.2)' }} />
+              <img loading="lazy" src="/image.webp" alt={t('catalog.youtube.alt')} width="400" height="51" className="relative z-10 w-32 object-contain" style={{ filter: 'brightness(1.1) saturate(1.2)' }} />
               <div className="absolute top-3 right-3 w-9 h-9 bg-red-600 rounded-xl flex items-center justify-center shadow-lg">
                 <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4">
                   <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6a3 3 0 0 0-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/>

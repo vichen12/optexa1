@@ -109,7 +109,7 @@ export const Footer = () => {
           <div className="space-y-4 lg:w-64 shrink-0">
             <img
               src="/stoka_deliecn_logo_sin_fondo.webp"
-              alt="Logo STOKA — Aliado estratégico de DELIE en Argentina"
+              alt={t('footer.logoAlt')}
               width="224" height="118"
               loading="lazy"
               className="w-56 h-auto object-contain"

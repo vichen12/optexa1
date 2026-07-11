@@ -170,7 +170,7 @@ export const Navbar = () => {
             )}>
               <img
                 src="/stoka_logo_sin_fondo-sm.webp"
-                alt="STOKA — Aliado estratégico oficial de DELIE en Argentina"
+                alt={t('nav.logoAlt')}
                 width="160" height="64"
                 fetchpriority="high"
                 className="w-full h-full object-contain scale-[2] group-hover:scale-[2.1] active:scale-[1.9] transition-transform duration-300"

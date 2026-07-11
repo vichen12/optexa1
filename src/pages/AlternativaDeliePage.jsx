@@ -13,7 +13,7 @@ import { SeoHead } from '../lib/SeoHead';
 const CAPACIDAD_ICONS = [Layers, Cpu, Globe, Thermometer];
 
 export const AlternativaDeliePage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const langNavigate = useLangNavigate();
   const ns = 'pages.delie';
 
@@ -79,11 +79,9 @@ export const AlternativaDeliePage = () => {
                 {t(`${ns}.heroSub`)}
               </p>
 
-              {i18n.language === 'es' && (
-                <p className="text-slate-700 text-base leading-relaxed mb-10 border-l-2 border-cyan-500 pl-4">
-                  {t(`${ns}.criolloBajada`)}
-                </p>
-              )}
+              <p className="text-slate-700 text-base leading-relaxed mb-10 border-l-2 border-cyan-500 pl-4">
+                {t(`${ns}.criolloBajada`)}
+              </p>
 
               <div className="w-full h-[1px] bg-gray-100 mb-8" />
 

@@ -461,10 +461,14 @@ export const ARTICULOS = [
 ];
 
 import { ARTICULOS_SPRINT2 } from './articulosSprint2.js';
+import { ARTICULOS_I18N } from './articulosI18n.js';
 
-/* Todos los artículos = los originales (monolingües ES) + los nuevos
-   (con variantes por idioma en .i18n). */
-export const TODOS_ARTICULOS = [...ARTICULOS, ...ARTICULOS_SPRINT2];
+/* Todos los artículos = los originales (ES) + los del Sprint 2 (ya con .i18n).
+   A los originales sin .i18n les adjuntamos las traducciones EN/ZH (Sprint 4);
+   para 'es' no hay variante, así que resolveArticulo devuelve el base ES. */
+export const TODOS_ARTICULOS = [...ARTICULOS, ...ARTICULOS_SPRINT2].map((a) =>
+  a.i18n || !ARTICULOS_I18N[a.slug] ? a : { ...a, i18n: ARTICULOS_I18N[a.slug] }
+);
 
 /* Resuelve un artículo al idioma pedido. Si tiene .i18n[lang] aplana esa
    variante sobre el objeto base (slug/heroImg/categoria/etc. son comunes);

@@ -72,7 +72,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <script type="application/ld+json">{JSON.stringify({ ...ORGANIZATION_SCHEMA, inLanguage: lang })}</script>
+        <script type="application/ld+json">{JSON.stringify({ ...ORGANIZATION_SCHEMA, inLanguage: lang, description: i18next.t('schema.orgDesc'), knowsAbout: i18next.t('schema.knowsAbout', { returnObjects: true }) })}</script>
       </Helmet>
       <Routes>
         <Route path="/">{inner}</Route>

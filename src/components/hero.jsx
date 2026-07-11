@@ -67,7 +67,7 @@ export const Hero = () => {
         >
           <img
             src="/image.webp"
-            alt="Sistemas ASRS DELIE para automatización de almacenes industriales"
+            alt={t('hero.delieAlt')}
             width="400" height="51"
             fetchpriority="high"
             className="h-10 object-contain mx-auto"

@@ -6,12 +6,7 @@ import { LangLink } from '../lib/i18n-utils';
 const ICONS = [Layers3, Clock, CircleDollarSign];
 
 export const ProblemasSection = () => {
-  const { t, i18n } = useTranslation();
-
-  /* Solo español en esta fase. EN/ZH se suman en la réplica de idiomas
-     (Sprint 4); hasta entonces esta sección no se muestra en /en ni /zh
-     para no filtrar texto ES por el fallbackLng. */
-  if (i18n.language !== 'es') return null;
+  const { t } = useTranslation();
 
   const cards = t('home.problemas.cards', { returnObjects: true });
   const list = Array.isArray(cards) ? cards : [];
@@ -62,9 +57,9 @@ export const ProblemasSection = () => {
         </div>
 
         <p className="text-white/40 text-sm mt-8 max-w-3xl">
-          ¿No sabés por dónde empezar? Entendé qué es un{' '}
-          <LangLink to="/recursos/que-es-un-transelevador" className="font-semibold text-cyan-400 underline underline-offset-2 hover:text-cyan-300">transelevador</LangLink>{' '}
-          y cómo automatiza tu depósito.
+          {t('home.problemas.transPre')}
+          <LangLink to="/recursos/que-es-un-transelevador" className="font-semibold text-cyan-400 underline underline-offset-2 hover:text-cyan-300">{t('home.problemas.transAnchor')}</LangLink>
+          {t('home.problemas.transPost')}
         </p>
       </div>
     </section>

@@ -26,7 +26,8 @@
       "glossary": "Glosario técnico"
     },
     "menu": "Menú",
-    "language": "Seleccionar idioma"
+    "language": "Seleccionar idioma",
+    "logoAlt": "STOKA — Aliado estratégico oficial de DELIE en Argentina"
   },
   "hero": {
     "badge": "Aliado Estratégico Oficial DELIE · Argentina",
@@ -42,7 +43,8 @@
       "years": "Trayectoria DELIE",
       "cheaper": "Más económico que Europa",
       "cert": "Certificación industrial"
-    }
+    },
+    "delieAlt": "Sistemas ASRS DELIE para automatización de almacenes industriales"
   },
   "roi": {
     "tag": "Cuánto ahorrás en serio",
@@ -80,7 +82,8 @@
     "youtube": {
       "title": "DELIE en YouTube",
       "desc": "Instalaciones reales, demos y casos de uso globales.",
-      "cta": "Ver canal"
+      "cta": "Ver canal",
+      "alt": "DELIE en YouTube — Instalaciones reales y casos de uso globales"
     },
     "categories": {
       "asrsDesc": "Guardá más en el mismo espacio. Estanterías AS/RS de 7 a 40 metros: drive-in, shuttle, mezzanine.",
@@ -88,6 +91,13 @@
       "robotsDesc": "Robots que llevan la mercadería hasta el operario. Grúas apiladoras, transelevadores MiniLoad, robots lanzadera y AMR.",
       "transportDesc": "La mercadería se mueve sola entre zonas. Elevadores, transportadores de cadena, rodillos y paletizadores.",
       "softwareDesc": "Control total del stock en tiempo real, sin planillas. WMS, WCS, HMS y visualización 3D."
+    },
+    "labels": {
+      "asrs": "AS/RS",
+      "vertical": "Almacenamiento vertical",
+      "robots": "Robots de manipulación",
+      "transport": "Equipo de transporte",
+      "software": "Software inteligente"
     }
   },
   "value": {
@@ -120,6 +130,15 @@
       "pharmaDesc": "GMP, FIFO/FEFO y temperatura controlada certificada.",
       "miningDesc": "Repuestos críticos disponibles 24/7 sin errores.",
       "coldDesc": "Robots que operan a -30°C sin exposición de personal."
+    },
+    "labels": {
+      "ecommerce": "E-commerce & Retail",
+      "logistics": "Logística 3PL",
+      "manufacturing": "Manufactura Industrial",
+      "food": "Alimentos & Bebidas",
+      "pharma": "Farmacéutica",
+      "mining": "Minería & Oil & Gas",
+      "cold": "Cadena de Frío"
     }
   },
   "benefits": {
@@ -213,7 +232,8 @@
       "cordoba": "Córdoba",
       "rosario": "Rosario",
       "mendoza": "Mendoza"
-    }
+    },
+    "logoAlt": "Logo STOKA — Aliado estratégico de DELIE en Argentina"
   },
   "wpp": {
     "writeUs": "Escribinos por WhatsApp",
@@ -289,6 +309,7 @@
     "techInquiries": "Consultas técnicas",
     "responseTime": "Respuesta en menos de 2 horas",
     "freeConsult": "Primera consulta técnica sin costo. Nuestros ingenieros analizan cada caso de forma personalizada.",
+    "problemLine": "Contanos tu problema: ¿falta de espacio, errores, costos? No hace falta que sepas qué sistema necesitás — para eso estamos nosotros.",
     "namePlaceholder": "Tu nombre",
     "companyPlaceholder": "Tu organización",
     "countryPlaceholder": "Argentina",
@@ -307,6 +328,9 @@
       "tag": "El costo oculto de tu depósito",
       "h2": "¿Tu depósito llegó al límite?",
       "sub": "Si te pasa alguna de estas tres cosas, la automatización se paga sola. En Argentina, los costos logísticos representan entre el 20% y el 30% del valor final de un producto — el depósito es el costo oculto más grande de tu operación.",
+      "transPre": "¿No sabés por dónde empezar? Entendé qué es un ",
+      "transAnchor": "transelevador",
+      "transPost": " y cómo automatiza tu depósito.",
       "cards": [
         {
           "title": "No te entra más nada",
@@ -2879,6 +2903,9 @@
       "metaDesc": "ASRS y AS/RS DELIE en Argentina: transelevadores, pallet shuttle y miniload de 7 a 40 m de altura. 30–50% más económico que proveedores europeos.",
       "breadcrumbCat": "AS/RS",
       "heroTag": "Sistema ASRS · Aliado estratégico DELIE · Argentina",
+      "transPre": "El equipo central de casi todos los AS/RS es el ",
+      "transAnchor": "transelevador",
+      "transPost": ": una grúa automática que guarda y recupera la mercadería en altura, sin operarios.",
       "heroH1_a": "Sistemas AS/RS",
       "heroH1_b": "Estanterías automatizadas",
       "heroSub": "Estanterías AS/RS DELIE de 7 a 40 metros de altura. Drive-in, shuttle, mezzanine y rack selectivo automatizado con soporte local en Argentina.",
@@ -3089,7 +3116,8 @@
           "name": "Drive-in racking",
           "desc": "La carretilla ingresa dentro. Hasta 80% de utilización del espacio. Sistema LIFO, apto para frío."
         }
-      ]
+      ],
+      "serviceType": "Sistemas ASRS — Automatización de Almacenes"
     },
     "catalogoRobots": {
       "breadcrumbCat": "Robots de manipulación",
@@ -3815,6 +3843,7 @@
     },
     "glosario": {
       "metaTitle": "Glosario técnico ASRS y automatización de almacenes | STOKA",
+      "verArticulo": "Leé la guía completa: qué es un transelevador →",
       "metaDesc": "Más de 60 términos técnicos de ASRS, AGV, WMS, WCS y automatización logística explicados en español. Referencia para ingenieros y directores de logística.",
       "breadcrumb": "Glosario técnico",
       "heroTag": "ASRS · WMS · WCS · AGV · Automatización logística",
@@ -5025,5 +5054,19 @@
         "sectorViewSolution": "Ver solución"
       }
     }
+  },
+  "schema": {
+    "siteName": "STOKA — Automatización de Almacenes",
+    "orgDesc": "Aliado estratégico oficial y exclusivo de DELIE en Argentina. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales.",
+    "knowsAbout": [
+      "Sistemas ASRS",
+      "Automatización de almacenes",
+      "Transelevadores",
+      "Robots AMR",
+      "Software WMS",
+      "Software WCS",
+      "VLM",
+      "Carruseles verticales"
+    ]
   }
 }
