@@ -7,7 +7,7 @@ const inp = "w-full bg-white border border-gray-200 rounded-lg pl-8 pr-3 py-2 te
 const sel = "w-full bg-white border border-gray-200 rounded-lg pl-8 pr-3 py-2 text-gray-900 text-xs focus:outline-none focus:border-slate-400 transition-all appearance-none";
 
 export const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState(null);
 
@@ -54,6 +54,11 @@ export const Contact = () => {
               {t('contact.h2_b')}
             </span>
           </h1>
+          {i18n.language === 'es' && (
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed max-w-2xl mt-5">
+              Contanos tu problema: ¿falta de espacio, errores, costos? No hace falta que sepas qué sistema necesitás — para eso estamos nosotros.
+            </p>
+          )}
         </div>
 
         <div className="grid lg:grid-cols-5 gap-5">

@@ -471,6 +471,7 @@
       "missionTag": "Nuestra misión",
       "missionH2": "Democratizar la automatización logística en Argentina",
       "missionPara": "Que ninguna empresa pierda competitividad por no poder acceder a tecnología que hasta hoy estaba reservada para las multinacionales. Los sistemas ASRS de clase mundial ya son accesibles para la industria argentina: almacenes de distribución, bodegas de manufactura y depósitos 3PL.",
+      "criolloBajada": "En criollo: hacemos que automatizar tu depósito deje de ser cosa de multinacionales. Traemos la tecnología de DELIE —de primer nivel mundial— y la ponemos a tu alcance, con gente que te atiende acá, en tu idioma y a tu hora.",
       "quote": "\"Fabricación asiática de primer nivel + ingeniería y soporte local = la forma más inteligente de automatizar en Argentina: máxima tecnología, mínimo riesgo.\"",
       "requirementsTag": "Lo que un integrador ASRS en Argentina debe garantizar",
       "requirements": [
@@ -1335,6 +1336,7 @@
       "heroH1_a": "TECNOLOGÍA DELIE",
       "heroH1_b": "CON SOPORTE LOCAL",
       "heroSub": "Importamos, implementamos y soportamos los sistemas ASRS de DELIE en Argentina y Chile. Acceso directo al fabricante con acompañamiento técnico local de primer nivel.",
+      "criolloBajada": "En criollo: DELIE fabrica los equipos y nosotros los hacemos andar en tu depósito, acá. No tratás con una fábrica del otro lado del mundo: tratás con un equipo local que entiende tu operación y te banca después de la venta.",
       "metrics": [
         {
           "value": "30+",
@@ -1543,50 +1545,42 @@
       }
     },
     "soluciones": {
-      "metaTitle": "Soluciones de Automatización Logística | STOKA",
-      "metaDesc": "Descubrí todas las soluciones de automatización de almacenes de STOKA: ASRS, robots, software WMS y más. Implementación con soporte técnico local en",
+      "metaTitle": "Soluciones para Automatizar tu Depósito | STOKA",
+      "metaDesc": "Resolvé los 3 problemas de tu depósito: falta de espacio, errores y costos. Diseñamos la solución de automatización justa, con ingeniería y soporte local.",
       "breadcrumbHome": "Inicio",
       "breadcrumb": "Soluciones",
-      "heroTag": "SOLUCIONES INTEGRALES",
-      "heroH1_a": "AUTOMATIZACIÓN",
-      "heroH1_b": "A MEDIDA",
-      "heroSub": "Desde el diagnóstico hasta la puesta en marcha: diseñamos, integramos y soportamos sistemas que transforman la logística de tu operación.",
-      "heroBtnPrimary": "Consultar mi caso",
+      "heroTag": "SOLUCIONES A TU MEDIDA",
+      "heroH1_a": "SOLUCIONES PARA AUTOMATIZAR",
+      "heroH1_b": "TU DEPÓSITO",
+      "heroSub": "Automatizar no es comprar máquinas: es resolver los tres problemas que frenan a cualquier depósito —la falta de espacio, el tiempo perdido con errores y los costos que no paran de subir—. Escuchamos tu caso, entendemos cuál es tu cuello de botella y armamos la solución justa: la tecnología necesaria y ni una máquina de más.",
+      "heroBtnPrimary": "Contanos tu problema",
       "heroBtnSecondary": "Ver catálogo",
-      "problemasTag": "DIAGNÓSTICO",
-      "problemasH2": "¿QUÉ PROBLEMA RESOLVEMOS?",
+      "problemasTag": "LOS 3 PROBLEMAS",
+      "problemasH2": "LOS 3 PROBLEMAS QUE FRENAN TU DEPÓSITO",
       "problemas": [
         {
           "num": "01",
-          "problema": "Espacio insuficiente",
-          "descripcion": "El crecimiento del stock supera la capacidad del depósito y ampliar no es viable.",
-          "solucion": "Sistemas ASRS de alta densidad que multiplican la capacidad sin ampliar superficie.",
+          "problema": "No te entra más nada",
+          "descripcion": "El stock crece, los pasillos se achican y el depósito se quedó sin lugar. Ampliar o mudarte cuesta una fortuna, y cada metro nuevo es alquiler o inversión que no querías hacer.",
+          "solucion": "Almacenamiento de alta densidad que aprovecha la altura —sistemas ASRS, transelevadores y torres VLM— para guardar hasta 3 veces más en los mismos metros, sin obra ni mudanza.",
           "link": "/catalogo/asrs",
-          "linkLabel": "Ver sistemas ASRS"
+          "linkLabel": "Ver sistemas de alta densidad"
         },
         {
           "num": "02",
-          "problema": "Errores de picking",
-          "descripcion": "Los errores en preparación de pedidos generan devoluciones, pérdidas y clientes insatisfechos.",
-          "solucion": "Robots y software WMS con control en tiempo real y trazabilidad total de cada movimiento.",
-          "link": "/catalogo/software/wms",
-          "linkLabel": "Ver WMS"
+          "problema": "Perdés tiempo y se cuelan errores",
+          "descripcion": "Operarios que caminan kilómetros buscando productos, pedidos que salen mal, devoluciones que cuestan plata y clientes. A mano, el depósito es lento y se equivoca más de lo que parece.",
+          "solucion": "Robots que llevan la mercadería hasta el operario y un software (WMS) que controla cada movimiento: pedidos con 99,9% de exactitud, más rápido y las 24 horas.",
+          "link": "/catalogo/robots-manipulacion",
+          "linkLabel": "Ver robótica y software"
         },
         {
           "num": "03",
-          "problema": "Costos laborales en alza",
-          "descripcion": "El personal para operaciones manuales representa el mayor costo variable del depósito.",
-          "solucion": "Automatización de movimientos repetitivos que libera a tu equipo para tareas de mayor valor.",
-          "link": "/como-trabajamos",
-          "linkLabel": "Ver metodología"
-        },
-        {
-          "num": "04",
-          "problema": "Trazabilidad nula",
-          "descripcion": "Sin visibilidad en tiempo real, la gestión de inventario depende de procesos manuales lentos.",
-          "solucion": "Integración WMS + ERP con visibilidad total desde recepción hasta expedición.",
-          "link": "/catalogo/software",
-          "linkLabel": "Ver software"
+          "problema": "Los costos te comen el margen",
+          "descripcion": "El alquiler sube, la mano de obra es cada vez más cara y difícil de conseguir, y el stock inmovilizado es plata quieta. El depósito suele ser el costo oculto más grande de la operación.",
+          "solucion": "Automatizar baja el costo por pedido de forma estructural y, con los beneficios fiscales vigentes (RIMI, aranceles reducidos), el retorno típico es de 18 a 36 meses.",
+          "link": "/beneficios-fiscales",
+          "linkLabel": "Ver cómo se paga sola"
         }
       ],
       "metodologiaTag": "METODOLOGÍA",
@@ -1735,7 +1729,7 @@
           "a": "La intralogística es el conjunto de procesos de flujo de materiales e información dentro de un almacén o planta: recepción, almacenamiento, preparación de pedidos y expedición. La intralogística automatizada —con transelevadores, robots y software de gestión— es el corazón de la logística inteligente y del almacén 4.0."
         }
       ],
-      "vocabPara": "Diseñamos soluciones de logística 4.0 e intralogística a medida: automatización logística para centros de distribución, depósitos inteligentes y plantas logísticas que buscan digitalización y eficiencia. Integramos almacenamiento robotizado, vehículos autónomos y software de gestión para convertir cualquier almacén o nave industrial en una operación de logística inteligente, escalable y conectada."
+      "vocabPara": "No hace falta que sepas qué sistema necesitás: vos nos contás qué te está frenando —falta de espacio, tiempo perdido, errores o costos— y nosotros diseñamos el cómo. Detrás hay tecnología de logística 4.0 e intralogística (almacenamiento robotizado, vehículos autónomos AGV/AMR y software de gestión), pero eso es lo nuestro; lo que te llevás es un depósito que rinde más, con la solución justa y retorno medible."
     },
     "casosDeExito": {
       "metaTitle": "Casos de Éxito | Automatización Logística | STOKA",

@@ -12,7 +12,7 @@ import { LangLink } from '../lib/i18n-utils';
 const VALUE_ICONS = [Target, Shield, Zap, Globe];
 
 export const NosotrosPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   const ns = 'pages.nosotros';
@@ -93,6 +93,12 @@ export const NosotrosPage = () => {
             </div>
             <p className="text-gray-300 text-lg leading-relaxed">{t(`${ns}.missionPara`)}</p>
           </div>
+
+          {i18n.language === 'es' && (
+            <p className="text-gray-300 text-base leading-relaxed max-w-3xl mb-12">
+              {t(`${ns}.criolloBajada`)}
+            </p>
+          )}
 
           <blockquote className="border-l-4 border-cyan-500 pl-6 py-1 mb-12">
             <p className="text-white text-lg italic leading-relaxed">{t(`${ns}.quote`)}</p>
