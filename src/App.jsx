@@ -194,6 +194,7 @@ export function HomePage() {
                 <p className="text-[10px] font-mono text-cyan-400 tracking-[0.4em] uppercase mb-2">{t('home.roiTag')}</p>
                 <p className="text-4xl font-black text-white leading-none">18–36 <span className="text-lg font-bold text-gray-400">{t('home.roiMonths')}</span></p>
                 <p className="text-gray-400 text-xs mt-1">{t('home.roiSub')}</p>
+                <p className="text-gray-500 text-[11px] mt-1">{t('home.roiSub2')}</p>
               </div>
               <div className="border-t border-white/10 pt-4 space-y-2">
                 <p className="text-[10px] font-mono text-gray-500 tracking-[0.3em] uppercase mb-3">{t('home.processTag')}</p>
@@ -258,6 +259,7 @@ export function HomePage() {
                 </LangLink>
               ))}
             </div>
+            <p className="text-gray-400 text-xs mt-4">{t('home.zonasNote')}</p>
           </div>
 
           <div className="flex flex-wrap gap-3 pt-2 border-t border-gray-100">

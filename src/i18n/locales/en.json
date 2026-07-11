@@ -51,7 +51,7 @@
     "h2_a": "Automation",
     "h2_b": "pays for itself",
     "sub": "Real numbers from an operation that automated with DELIE.",
-    "exampleTag": "Real example · Distribution warehouse",
+    "exampleTag": "Illustrative example · Distribution warehouse",
     "space": "Space used",
     "before": "m² before",
     "after": "m² after",
@@ -61,7 +61,7 @@
     "payback": "Return on investment",
     "months": "months",
     "noExpand": "Without expanding the facility",
-    "note": "Based on industrial rent rate of <strong>USD 8/m²/month</strong> and 24/7 operation.",
+    "note": "Based on industrial rent rate of <strong>USD 8/m²/month</strong> and 24/7 operation. Every operation is different; results vary by volume, industry and current costs.",
     "metrics": {
       "costLabel": "Cost reduction",
       "costDesc": "Fewer errors, less labor intensive, less waste.",
@@ -70,7 +70,7 @@
       "densityLabel": "Storage density",
       "densityDesc": "Same physical space, up to 3x more SKUs.",
       "paybackLabel": "Months to payback",
-      "paybackDesc": "ROI proven in real operations."
+      "paybackDesc": "Indicative range depending on the type of operation."
     }
   },
   "catalog": {
@@ -349,7 +349,7 @@
       }
     ],
     "systemsTag": "Systems we install",
-    "roiTag": "Typical return on investment",
+    "roiTag": "Indicative return on investment",
     "roiMonths": "months",
     "roiSub": "First consultation free · Response in less than 24 hours",
     "processTag": "Our process",
@@ -416,14 +416,14 @@
       },
       {
         "q": "How much does it cost to automate a warehouse?",
-        "a": "It depends on the size and the system. There are scalable solutions from USD 150,000 (a VLM or miniload module) up to full-scale projects. What matters: with the current tax benefits (RIMI, reduced tariffs) and the savings on rent and errors, the typical return is 18 to 36 months. Ask for a free assessment and we’ll give you the number for YOUR case."
+        "a": "It depends on the size and the system. There are scalable solutions from USD 150,000 (a VLM or miniload module) up to full-scale projects. What matters: with the current tax benefits (RIMI, reduced tariffs) and the savings on rent and errors, the return usually falls between 18 and 36 months depending on the case. Ask for a free assessment and we’ll give you the number for YOUR case."
       }
     ],
     "faqTag": "Frequently asked questions",
     "faqH2": "Frequently asked questions about warehouse automation",
     "zonasTag": "Geographic coverage",
     "zonasH2": "Warehouse automation across Argentina",
-    "zonasPara": "STOKA implements ASRS systems, robots and management software in the country's main industrial and logistics hubs, with local technical support and parts in Argentina.",
+    "zonasPara": "We work throughout the country and in Chile. These are some of the hubs where we already operate, but we reach any point in Argentina with ASRS systems, robots and management software, local technical support and spare parts.",
     "zonasCta": "View zone",
     "zonas": {
       "buenosAires": {
@@ -470,7 +470,9 @@
       "transPre": "Not sure where to start? Learn what a ",
       "transAnchor": "stacker crane",
       "transPost": " is and how it automates your warehouse."
-    }
+    },
+    "roiSub2": "It depends on your operation — we calculate it with your numbers.",
+    "zonasNote": "Is your operation in another province? We reach there too."
   },
   "pages": {
     "breadcrumb": {
@@ -1602,7 +1604,7 @@
           "num": "03",
           "problema": "Costs are eating your margin",
           "descripcion": "Rent rises, labor is increasingly expensive and hard to find, and immobilized stock is idle money. The warehouse is usually the biggest hidden cost in the operation.",
-          "solucion": "Automation lowers the cost per order structurally and, with the current tax benefits (RIMI, reduced tariffs), the typical return is 18 to 36 months.",
+          "solucion": "Automation lowers the cost per order structurally and, with the current tax benefits (RIMI, reduced tariffs), the return usually falls between 18 and 36 months depending on the case.",
           "link": "/beneficios-fiscales",
           "linkLabel": "See how it pays for itself"
         }

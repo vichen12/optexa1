@@ -51,7 +51,7 @@
     "h2_a": "La automatización",
     "h2_b": "se paga sola",
     "sub": "Los números reales de una operación que automatizó con DELIE.",
-    "exampleTag": "Ejemplo real · Almacén de distribución",
+    "exampleTag": "Ejemplo ilustrativo · Almacén de distribución",
     "space": "Espacio utilizado",
     "before": "m² antes",
     "after": "m² después",
@@ -61,7 +61,7 @@
     "payback": "Retorno de inversión",
     "months": "meses",
     "noExpand": "Sin ampliar la planta",
-    "note": "Basado en tarifa de alquiler industrial de <strong>USD 8/m²/mes</strong> y operación 24/7.",
+    "note": "Basado en tarifa de alquiler industrial de <strong>USD 8/m²/mes</strong> y operación 24/7. Cada operación es distinta; los resultados varían según volumen, rubro y costos actuales.",
     "metrics": {
       "costLabel": "Reducción de costos",
       "costDesc": "Menos errores, menos labor intensiva, menos mermas.",
@@ -70,7 +70,7 @@
       "densityLabel": "Densidad de almacenamiento",
       "densityDesc": "Mismo espacio físico, hasta 3 veces más SKUs.",
       "paybackLabel": "Meses de payback",
-      "paybackDesc": "Retorno de inversión comprobado en operaciones reales."
+      "paybackDesc": "Rango orientativo según el tipo de operación."
     }
   },
   "catalog": {
@@ -377,7 +377,7 @@
       }
     ],
     "systemsTag": "Sistemas que instalamos",
-    "roiTag": "Retorno de inversión típico",
+    "roiTag": "Retorno de inversión orientativo",
     "roiMonths": "meses",
     "roiSub": "Primera consulta sin costo · Respuesta en menos de 24 hs",
     "processTag": "Nuestro proceso",
@@ -444,14 +444,14 @@
       },
       {
         "q": "¿Cuánto cuesta automatizar un depósito?",
-        "a": "Depende del tamaño y del sistema. Hay soluciones escalables desde USD 150.000 (un módulo VLM o miniload) hasta proyectos integrales. Lo importante: con los beneficios fiscales vigentes (RIMI, aranceles reducidos) y el ahorro en alquiler y errores, el retorno típico es de 18 a 36 meses. Pedí una evaluación sin cargo y te damos el número para TU caso."
+        "a": "Depende del tamaño y del sistema. Hay soluciones escalables desde USD 150.000 (un módulo VLM o miniload) hasta proyectos integrales. Lo importante: con los beneficios fiscales vigentes (RIMI, aranceles reducidos) y el ahorro en alquiler y errores, el retorno suele ubicarse entre 18 y 36 meses según el caso. Pedí una evaluación sin cargo y te damos el número para TU caso."
       }
     ],
     "faqTag": "Preguntas frecuentes",
     "faqH2": "Preguntas frecuentes sobre automatización de almacenes",
     "zonasTag": "Cobertura geográfica",
     "zonasH2": "Automatización de almacenes en toda Argentina",
-    "zonasPara": "STOKA implementa sistemas ASRS, robots y software de gestión en los principales polos industriales y logísticos del país, con soporte técnico local y repuestos en Argentina.",
+    "zonasPara": "Trabajamos en todo el país y en Chile. Estos son algunos de los polos donde ya operamos, pero llegamos a cualquier punto de Argentina con sistemas ASRS, robots y software de gestión, soporte técnico local y repuestos.",
     "zonasCta": "Ver zona",
     "zonas": {
       "buenosAires": {
@@ -470,7 +470,9 @@
         "title": "Mendoza",
         "desc": "Vitivinícola y agroindustria de Cuyo. Base local de STOKA en Maipú."
       }
-    }
+    },
+    "roiSub2": "Depende de tu operación — lo calculamos con tus números.",
+    "zonasNote": "¿Tu operación está en otra provincia? También llegamos."
   },
   "pages": {
     "breadcrumb": {
@@ -1602,7 +1604,7 @@
           "num": "03",
           "problema": "Los costos te comen el margen",
           "descripcion": "El alquiler sube, la mano de obra es cada vez más cara y difícil de conseguir, y el stock inmovilizado es plata quieta. El depósito suele ser el costo oculto más grande de la operación.",
-          "solucion": "Automatizar baja el costo por pedido de forma estructural y, con los beneficios fiscales vigentes (RIMI, aranceles reducidos), el retorno típico es de 18 a 36 meses.",
+          "solucion": "Automatizar baja el costo por pedido de forma estructural y, con los beneficios fiscales vigentes (RIMI, aranceles reducidos), el retorno suele ubicarse entre 18 y 36 meses según el caso.",
           "link": "/beneficios-fiscales",
           "linkLabel": "Ver cómo se paga sola"
         }
