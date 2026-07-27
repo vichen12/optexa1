@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Clock, Building2, User, MessageSquare, Send, Loader2, Phone, MapPin, Briefcase, HelpCircle, Globe, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { WPP_DISPLAY, wppLink } from '../lib/contacto';
 
 const inp = "w-full bg-white border border-gray-200 rounded-lg pl-8 pr-3 py-2 text-gray-900 text-xs placeholder:text-gray-400 focus:outline-none focus:border-slate-400 transition-all";
 const sel = "w-full bg-white border border-gray-200 rounded-lg pl-8 pr-3 py-2 text-gray-900 text-xs focus:outline-none focus:border-slate-400 transition-all appearance-none";
@@ -82,24 +83,13 @@ export const Contact = () => {
               </div>
               <div className="px-5 py-3 flex flex-col gap-2">
                 <a
-                  href="https://wa.me/5492615886671?text=Hola%2C%20quiero%20iniciar%20una%20consulta%20express%20con%20STOKA."
-                  target="_blank" rel="noopener noreferrer"
-                  className="flex items-center justify-between group px-4 py-2.5 rounded-xl bg-gray-50 hover:bg-[#25D366]/8 border border-gray-200 hover:border-[#25D366]/30 transition-all"
-                >
-                  <div>
-                    <p className="text-gray-400 text-[9px] uppercase tracking-wider font-bold mb-0.5">Anuk Vilarasau</p>
-                    <p className="text-gray-800 font-mono text-xs font-bold">+54 9 2615 88-6671</p>
-                  </div>
-                  <ArrowRight size={12} className="text-[#25D366] group-hover:translate-x-0.5 transition-transform" />
-                </a>
-                <a
-                  href="https://wa.me/5492612071048?text=Hola%2C%20quiero%20iniciar%20una%20consulta%20express%20con%20STOKA."
+                  href={wppLink('Hola, quiero iniciar una consulta express con STOKA.')}
                   target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-between group px-4 py-2.5 rounded-xl bg-gray-50 hover:bg-[#25D366]/8 border border-gray-200 hover:border-[#25D366]/30 transition-all"
                 >
                   <div>
                     <p className="text-gray-400 text-[9px] uppercase tracking-wider font-bold mb-0.5">{t('contact.techInquiries')}</p>
-                    <p className="text-gray-800 font-mono text-xs font-bold">+54 9 261 207-1048</p>
+                    <p className="text-gray-800 font-mono text-xs font-bold">{WPP_DISPLAY}</p>
                   </div>
                   <ArrowRight size={12} className="text-[#25D366] group-hover:translate-x-0.5 transition-transform" />
                 </a>

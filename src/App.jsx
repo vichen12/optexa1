@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, Outlet, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { WPP_TEL } from './lib/contacto';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Hero } from './components/hero';
@@ -55,7 +56,7 @@ export const ORGANIZATION_SCHEMA = {
   "url": "https://www.stokagroup.com",
   "logo": "https://www.stokagroup.com/stoka-logo.png",
   "image": "https://www.stokagroup.com/stoka-logo.png",
-  "telephone": ["+5492615886671", "+5492612071048"],
+  "telephone": WPP_TEL,
   "email": "contacto@stokagroup.com",
   "address": {
     "@type": "PostalAddress",

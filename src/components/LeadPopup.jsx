@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, User, Mail, Briefcase, Loader2, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { wppLink } from '../lib/contacto';
 
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzhg3lF1NXpxytuxno8XakeIYEA_iMEomRYK5jNIdpbM8vGDufWx-MepBKodQEMAhReOw/exec';
 
@@ -55,7 +56,7 @@ export const LeadPopup = () => {
         const msg = product
           ? `Hola! Soy ${form.name}, me interesa el producto *${product}* de STOKA. Ya completé el formulario en el sitio.`
           : `Hola! Soy ${form.name}, me interesa saber más sobre STOKA. Mi email es ${form.email}.`;
-        window.open(`https://wa.me/5492615886671?text=${encodeURIComponent(msg)}`, '_blank');
+        window.open(wppLink(msg), '_blank');
         setTimeout(close, 2500);
       }, 1200);
     } catch {

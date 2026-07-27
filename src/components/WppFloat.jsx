@@ -2,9 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { WPP_NUMBER } from '../lib/contacto';
 
 const GS_URL = 'https://script.google.com/macros/s/AKfycbzhg3lF1NXpxytuxno8XakeIYEA_iMEomRYK5jNIdpbM8vGDufWx-MepBKodQEMAhReOw/exec';
-const WPP_NUMBER = '5492612071048';
 const EMAIL = 'contacto@stokagroup.com';
 
 const WaIcon = ({ size = 32 }) => (

@@ -2,6 +2,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { LangLink } from '../lib/i18n-utils';
+import { WPP_TEL, WPP_DISPLAY } from '../lib/contacto';
 
 const FOOTER_LANGS = [
   { code: 'es', label: 'Español' },
@@ -116,13 +117,9 @@ export const Footer = () => {
             />
             <p className="text-gray-500 text-sm leading-relaxed">{t('footer.tagline')}</p>
             <div className="space-y-2">
-              <a href="tel:+5492615886671" className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm">
+              <a href={`tel:${WPP_TEL}`} className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm">
                 <Phone size={13} className="text-cyan-500 shrink-0" />
-                +54 9 2615 88-6671
-              </a>
-              <a href="tel:+5492612071048" className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm">
-                <Phone size={13} className="text-cyan-500 shrink-0" />
-                +54 9 261 207-1048
+                {WPP_DISPLAY}
               </a>
               <a href="mailto:contacto@stokagroup.com" className="flex items-center gap-2 text-gray-500 hover:text-cyan-500 transition-colors text-sm">
                 <Mail size={13} className="text-cyan-500 shrink-0" />

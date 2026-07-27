@@ -10,6 +10,7 @@ import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
+import { wppLink } from '../../lib/contacto';
 import { SeoHead } from '../../lib/SeoHead';
 
 const canonical = 'https://www.stokagroup.com/recursos/roi-automatizacion';
@@ -165,7 +166,7 @@ export const ROIPage = () => {
       }).toString(),
     }).catch(() => {});
 
-    window.open(`https://wa.me/5492612071048?text=${encodeURIComponent(texto)}`, '_blank');
+    window.open(wppLink(texto), '_blank');
   };
 
   return (

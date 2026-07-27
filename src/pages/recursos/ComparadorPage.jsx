@@ -10,6 +10,7 @@ import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
 import { WppFloat } from '../../components/WppFloat';
+import { wppLink } from '../../lib/contacto';
 import { SeoHead } from '../../lib/SeoHead';
 
 const PREGUNTAS = [
@@ -336,7 +337,7 @@ export const ComparadorPage = () => {
                       {p('verFicha')} <ArrowRight size={16} />
                     </LangLink>
                     <a
-                      href={`https://wa.me/5492612071048?text=${encodeURIComponent(`Hola, completé el comparador de sistemas ASRS de STOKA y me recomendaron: *${recomendacion.nombre}*. Me gustaría recibir más información para mi operación.`)}`}
+                      href={wppLink(`Hola, completé el comparador de sistemas ASRS de STOKA y me recomendaron: *${recomendacion.nombre}*. Me gustaría recibir más información para mi operación.`)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 justify-center bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold px-6 py-3 rounded-xl transition-colors"
