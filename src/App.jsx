@@ -53,8 +53,8 @@ export const ORGANIZATION_SCHEMA = {
   "legalName": "STOKA",
   "description": "Aliado estratégico oficial y exclusivo de DELIE en Argentina. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales.",
   "url": "https://www.stokagroup.com",
-  "logo": "https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png",
-  "image": "https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png",
+  "logo": "https://www.stokagroup.com/stoka-logo.png",
+  "image": "https://www.stokagroup.com/stoka-logo.png",
   "telephone": ["+5492615886671", "+5492612071048"],
   "email": "contacto@stokagroup.com",
   "address": {

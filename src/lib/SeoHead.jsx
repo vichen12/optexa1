@@ -23,7 +23,7 @@ export function SeoHead({ title, description, ogImage, basePath, noIndex }) {
   // og:image debe ser absoluta; si llega relativa, anteponer el dominio.
   const absoluteOgImage = ogImage
     ? (ogImage.startsWith('http') ? ogImage : `${BASE}${ogImage.startsWith('/') ? '' : '/'}${ogImage}`)
-    : `${BASE}/stoka_og_image_1200x630.png`;
+    : `${BASE}/stoka-og.png`;
 
   return (
     <Helmet>

@@ -169,11 +169,11 @@ export const Navbar = () => {
               scrolled ? "w-32 h-14" : "w-40 h-16",
             )}>
               <img
-                src="/stoka_logo_sin_fondo-sm.webp"
+                src="/stoka-logo.png"
                 alt={t('nav.logoAlt')}
                 width="160" height="64"
                 fetchpriority="high"
-                className="w-full h-full object-contain scale-[2] group-hover:scale-[2.1] active:scale-[1.9] transition-transform duration-300"
+                className="w-full h-full object-contain group-hover:scale-105 active:scale-95 transition-transform duration-300"
               />
             </div>
           </a>

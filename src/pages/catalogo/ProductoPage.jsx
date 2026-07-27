@@ -102,7 +102,7 @@ export const ProductoPage = () => {
   // URL absoluta de la imagen para Product/OG (heroImg viene como ruta relativa)
   const absImg = data.heroImg
     ? (data.heroImg.startsWith('http') ? data.heroImg : `${baseUrl}${data.heroImg}`)
-    : `${baseUrl}/stoka_og_image_1200x630.png`;
+    : `${baseUrl}/stoka-og.png`;
 
   const productSchema = {
     "@context": "https://schema.org",

@@ -108,7 +108,7 @@ export const Footer = () => {
           {/* BRAND */}
           <div className="space-y-4 lg:w-64 shrink-0">
             <img
-              src="/stoka_deliecn_logo_sin_fondo.webp"
+              src="/stoka-logo.png"
               alt={t('footer.logoAlt')}
               width="224" height="118"
               loading="lazy"

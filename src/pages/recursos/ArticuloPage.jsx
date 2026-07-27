@@ -43,7 +43,7 @@ export const ArticuloPage = () => {
     "publisher": {
       "@type": "Organization",
       "name": "STOKA",
-      "logo": { "@type": "ImageObject", "url": "https://www.stokagroup.com/stoka_deliecn_logo_sin_fondo.png" }
+      "logo": { "@type": "ImageObject", "url": "https://www.stokagroup.com/stoka-logo.png" }
     },
     "mainEntityOfPage": { "@type": "WebPage", "@id": canonical },
     "image": `https://www.stokagroup.com${art.heroImg}`,
