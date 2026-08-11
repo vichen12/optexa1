@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { useLangNavigate } from '../../lib/i18n-utils';
+import { useLangNavigate, LangLink } from '../../lib/i18n-utils';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
@@ -182,6 +182,26 @@ export const CatalogoTransportePage = () => {
       <section className="bg-white py-16 px-6 border-b border-gray-100">
         <div className="max-w-5xl mx-auto space-y-10">
 
+          {/* ¿Cuál equipo necesitás? */}
+          {Array.isArray(p('techCards')) && p('techCards').length > 0 && (
+            <div>
+              <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-2">{p('techTag')}</p>
+              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-6">{p('techH2')}</h2>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {p('techCards').map((card, i) => (
+                  <div key={i} className="bg-gray-50 border border-gray-200 rounded-2xl p-5 flex flex-col gap-3">
+                    <div>
+                      <span className="inline-block text-[10px] font-bold uppercase tracking-wide border px-2 py-0.5 rounded-full mb-2 bg-cyan-50 text-cyan-600 border-cyan-200">{card.badge}</span>
+                      <p className="text-sm font-black text-gray-900">{card.name}</p>
+                    </div>
+                    <p className="text-xs text-gray-600 leading-relaxed">{card.desc}</p>
+                    <p className="text-[11px] font-bold text-cyan-600 border-t border-gray-200 pt-3 mt-auto">{card.best}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Comparación */}
           <div>
             <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('seoTag')}</p>
@@ -294,6 +314,9 @@ export const CatalogoTransportePage = () => {
               </motion.div>
             ))}
           </div>
+          <LangLink to="/recursos/glosario" className="inline-block mt-6 text-sm font-semibold text-cyan-600 hover:text-cyan-500">
+            {p('glossaryCta')}
+          </LangLink>
         </div>
       </section>
 

@@ -4,12 +4,346 @@
   "framework": null,
   "cleanUrls": true,
   "redirects": [
-    { "source": "/delie-argentina", "destination": "/tecnologia-asrs", "permanent": true },
-    { "source": "/en/delie-argentina", "destination": "/en/tecnologia-asrs", "permanent": true },
-    { "source": "/zh/delie-argentina", "destination": "/zh/tecnologia-asrs", "permanent": true },
-    { "source": "/alternativa-delie-argentina", "destination": "/tecnologia-asrs", "permanent": true },
-    { "source": "/en/alternativa-delie-argentina", "destination": "/en/tecnologia-asrs", "permanent": true },
-    { "source": "/zh/alternativa-delie-argentina", "destination": "/zh/tecnologia-asrs", "permanent": true }
+    {
+      "source": "/delie-argentina",
+      "destination": "/tecnologia-asrs",
+      "permanent": true
+    },
+    {
+      "source": "/en/delie-argentina",
+      "destination": "/en/tecnologia-asrs",
+      "permanent": true
+    },
+    {
+      "source": "/zh/delie-argentina",
+      "destination": "/zh/tecnologia-asrs",
+      "permanent": true
+    },
+    {
+      "source": "/alternativa-delie-argentina",
+      "destination": "/tecnologia-asrs",
+      "permanent": true
+    },
+    {
+      "source": "/en/alternativa-delie-argentina",
+      "destination": "/en/tecnologia-asrs",
+      "permanent": true
+    },
+    {
+      "source": "/zh/alternativa-delie-argentina",
+      "destination": "/zh/tecnologia-asrs",
+      "permanent": true
+    },
+    {
+      "source": "/en/catalogo/asrs/autostore-alternativa",
+      "destination": "/en/catalog/asrs/autostore-alternative",
+      "permanent": true
+    },
+    {
+      "source": "/en/catalogo/asrs/:path*",
+      "destination": "/en/catalog/asrs/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/catalogo/robots-manipulacion/:path*",
+      "destination": "/en/catalog/handling-robots/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/catalogo/almacenamiento-vertical/:path*",
+      "destination": "/en/catalog/vertical-storage/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/catalogo/equipo-transporte/:path*",
+      "destination": "/en/catalog/transport-equipment/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/catalogo/software/:path*",
+      "destination": "/en/catalog/software/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/catalogo/:path*",
+      "destination": "/en/catalog/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/industrias/logistica-3pl",
+      "destination": "/en/industries/3pl-logistics",
+      "permanent": true
+    },
+    {
+      "source": "/en/industrias/manufactura",
+      "destination": "/en/industries/manufacturing",
+      "permanent": true
+    },
+    {
+      "source": "/en/industrias/alimentos-bebidas",
+      "destination": "/en/industries/food-beverage",
+      "permanent": true
+    },
+    {
+      "source": "/en/industrias/farmaceutica",
+      "destination": "/en/industries/pharmaceutical",
+      "permanent": true
+    },
+    {
+      "source": "/en/industrias/mineria-oil-gas",
+      "destination": "/en/industries/mining-oil-gas",
+      "permanent": true
+    },
+    {
+      "source": "/en/industrias/cadena-frio",
+      "destination": "/en/industries/cold-chain",
+      "permanent": true
+    },
+    {
+      "source": "/en/industrias/:path*",
+      "destination": "/en/industries/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/recursos/glosario",
+      "destination": "/en/resources/glossary",
+      "permanent": true
+    },
+    {
+      "source": "/en/recursos/comparador-sistemas",
+      "destination": "/en/resources/system-comparator",
+      "permanent": true
+    },
+    {
+      "source": "/en/recursos/roi-automatizacion",
+      "destination": "/en/resources/automation-roi",
+      "permanent": true
+    },
+    {
+      "source": "/en/recursos/:path*",
+      "destination": "/en/resources/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/soluciones",
+      "destination": "/en/solutions",
+      "permanent": true
+    },
+    {
+      "source": "/en/beneficios-fiscales",
+      "destination": "/en/tax-benefits",
+      "permanent": true
+    },
+    {
+      "source": "/en/como-trabajamos",
+      "destination": "/en/how-we-work",
+      "permanent": true
+    },
+    {
+      "source": "/en/nosotros",
+      "destination": "/en/about-us",
+      "permanent": true
+    },
+    {
+      "source": "/en/contacto",
+      "destination": "/en/contact",
+      "permanent": true
+    },
+    {
+      "source": "/en/tecnologia-asrs",
+      "destination": "/en/asrs-technology",
+      "permanent": true
+    },
+    {
+      "source": "/en/preguntas-frecuentes",
+      "destination": "/en/faq",
+      "permanent": true
+    },
+    {
+      "source": "/en/alternativa-economica-asrs",
+      "destination": "/en/affordable-asrs-alternative",
+      "permanent": true
+    },
+    {
+      "source": "/en/casos-de-exito",
+      "destination": "/en/case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/en/automatizacion-almacenes-buenos-aires",
+      "destination": "/en/warehouse-automation-buenos-aires",
+      "permanent": true
+    },
+    {
+      "source": "/en/automatizacion-almacenes-mendoza",
+      "destination": "/en/warehouse-automation-mendoza",
+      "permanent": true
+    },
+    {
+      "source": "/en/automatizacion-almacenes-cordoba",
+      "destination": "/en/warehouse-automation-cordoba",
+      "permanent": true
+    },
+    {
+      "source": "/en/automatizacion-almacenes-rosario",
+      "destination": "/en/warehouse-automation-rosario",
+      "permanent": true
+    },
+    {
+      "source": "/zh/catalogo/asrs/autostore-alternativa",
+      "destination": "/zh/catalog/asrs/autostore-alternative",
+      "permanent": true
+    },
+    {
+      "source": "/zh/catalogo/asrs/:path*",
+      "destination": "/zh/catalog/asrs/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/zh/catalogo/robots-manipulacion/:path*",
+      "destination": "/zh/catalog/handling-robots/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/zh/catalogo/almacenamiento-vertical/:path*",
+      "destination": "/zh/catalog/vertical-storage/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/zh/catalogo/equipo-transporte/:path*",
+      "destination": "/zh/catalog/transport-equipment/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/zh/catalogo/software/:path*",
+      "destination": "/zh/catalog/software/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/zh/catalogo/:path*",
+      "destination": "/zh/catalog/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/zh/industrias/logistica-3pl",
+      "destination": "/zh/industries/3pl-logistics",
+      "permanent": true
+    },
+    {
+      "source": "/zh/industrias/manufactura",
+      "destination": "/zh/industries/manufacturing",
+      "permanent": true
+    },
+    {
+      "source": "/zh/industrias/alimentos-bebidas",
+      "destination": "/zh/industries/food-beverage",
+      "permanent": true
+    },
+    {
+      "source": "/zh/industrias/farmaceutica",
+      "destination": "/zh/industries/pharmaceutical",
+      "permanent": true
+    },
+    {
+      "source": "/zh/industrias/mineria-oil-gas",
+      "destination": "/zh/industries/mining-oil-gas",
+      "permanent": true
+    },
+    {
+      "source": "/zh/industrias/cadena-frio",
+      "destination": "/zh/industries/cold-chain",
+      "permanent": true
+    },
+    {
+      "source": "/zh/industrias/:path*",
+      "destination": "/zh/industries/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/zh/recursos/glosario",
+      "destination": "/zh/resources/glossary",
+      "permanent": true
+    },
+    {
+      "source": "/zh/recursos/comparador-sistemas",
+      "destination": "/zh/resources/system-comparator",
+      "permanent": true
+    },
+    {
+      "source": "/zh/recursos/roi-automatizacion",
+      "destination": "/zh/resources/automation-roi",
+      "permanent": true
+    },
+    {
+      "source": "/zh/recursos/:path*",
+      "destination": "/zh/resources/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/zh/soluciones",
+      "destination": "/zh/solutions",
+      "permanent": true
+    },
+    {
+      "source": "/zh/beneficios-fiscales",
+      "destination": "/zh/tax-benefits",
+      "permanent": true
+    },
+    {
+      "source": "/zh/como-trabajamos",
+      "destination": "/zh/how-we-work",
+      "permanent": true
+    },
+    {
+      "source": "/zh/nosotros",
+      "destination": "/zh/about-us",
+      "permanent": true
+    },
+    {
+      "source": "/zh/contacto",
+      "destination": "/zh/contact",
+      "permanent": true
+    },
+    {
+      "source": "/zh/tecnologia-asrs",
+      "destination": "/zh/asrs-technology",
+      "permanent": true
+    },
+    {
+      "source": "/zh/preguntas-frecuentes",
+      "destination": "/zh/faq",
+      "permanent": true
+    },
+    {
+      "source": "/zh/alternativa-economica-asrs",
+      "destination": "/zh/affordable-asrs-alternative",
+      "permanent": true
+    },
+    {
+      "source": "/zh/casos-de-exito",
+      "destination": "/zh/case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/zh/automatizacion-almacenes-buenos-aires",
+      "destination": "/zh/warehouse-automation-buenos-aires",
+      "permanent": true
+    },
+    {
+      "source": "/zh/automatizacion-almacenes-mendoza",
+      "destination": "/zh/warehouse-automation-mendoza",
+      "permanent": true
+    },
+    {
+      "source": "/zh/automatizacion-almacenes-cordoba",
+      "destination": "/zh/warehouse-automation-cordoba",
+      "permanent": true
+    },
+    {
+      "source": "/zh/automatizacion-almacenes-rosario",
+      "destination": "/zh/warehouse-automation-rosario",
+      "permanent": true
+    }
   ],
   "headers": [
     {

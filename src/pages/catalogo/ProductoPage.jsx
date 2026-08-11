@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { LangLink, useLangNavigate } from '../../lib/i18n-utils';
+import { delocalizeSegment } from '../../lib/slugMap';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { ChevronRight, ArrowRight, CheckCircle, Factory, ShoppingCart, Truck, Pill, Snowflake, Mountain, X, ZoomIn, ChevronLeft } from 'lucide-react';
@@ -35,8 +36,10 @@ const INDUSTRY_SLUGS = {
 export const ProductoPage = () => {
   const { t, i18n } = useTranslation();
   const p = (k) => t(`pages.producto.${k}`, { returnObjects: true });
-  const { categoria, producto } = useParams();
+  const { categoria: categoriaParam, producto } = useParams();
   const langNavigate = useLangNavigate();
+  // En /en y /zh la categoría llega localizada ('handling-robots'); los datos indexan por slug ES.
+  const categoria = delocalizeSegment(categoriaParam);
   const key = `${categoria}/${producto}`;
   const data = getProducto(key, i18n.language);
   // Industrias en español (ficha base) para resolver icono/slug por índice,
@@ -109,6 +112,31 @@ export const ProductoPage = () => {
     })),
   };
 
+  // Producto integrado por STOKA (sin price: se cotiza por proyecto).
+  const absImg = data.heroImg
+    ? (data.heroImg.startsWith('http') ? data.heroImg : `${baseUrl}${data.heroImg}`)
+    : `${baseUrl}/stoka-og.png`;
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": data.nombre,
+    "description": data.metaDesc,
+    "image": absImg,
+    "category": data.categoriaLabel,
+    "brand": { "@type": "Brand", "name": "STOKA" },
+    "additionalProperty": (data.specs || []).map(s => ({
+      "@type": "PropertyValue", "name": s.param, "value": s.valor,
+    })),
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@id": `${baseUrl}/#organization` },
+    },
+    "url": canonicalUrl,
+    "inLanguage": i18n.language,
+  };
+
   return (
     <div className="min-h-screen text-gray-900">
       <SeoHead
@@ -120,6 +148,7 @@ export const ProductoPage = () => {
       <Helmet>
                                                         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Navbar />
@@ -221,6 +250,22 @@ export const ProductoPage = () => {
           {/* DERECHA — descripción + cómo funciona + specs */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
             className="space-y-10">
+
+            {/* Qué hace, en criterio simple */}
+            {data.queHace && (
+              <div className="bg-cyan-50 border border-cyan-100 rounded-2xl p-6">
+                <p className="text-[10px] font-mono text-cyan-600 tracking-[0.5em] uppercase mb-3">{p('queHace')}</p>
+                <p className="text-gray-700 text-base leading-relaxed">{data.queHace}</p>
+              </div>
+            )}
+
+            {/* Cuándo conviene */}
+            {data.cuandoConviene && (
+              <div>
+                <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-3">{p('cuandoConviene')}</p>
+                <p className="text-gray-700 text-base leading-relaxed">{data.cuandoConviene}</p>
+              </div>
+            )}
 
             {/* Descripción */}
             <div>

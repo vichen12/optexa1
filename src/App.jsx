@@ -19,6 +19,7 @@ import { Process } from './components/Process';
 import { CTABanner } from './components/CTABanner';
 import { LangLink } from './lib/i18n-utils';
 import { SeoHead } from './lib/SeoHead';
+import { localizePath } from './lib/slugMap';
 
 const CatalogPage = lazy(() => import('./pages/CatalogPage').then(m => ({ default: m.CatalogPage })));
 const SolucionesPage = lazy(() => import('./pages/SolucionesPage').then(m => ({ default: m.SolucionesPage })));
@@ -44,6 +45,7 @@ const CasosDeExitoPage = lazy(() => import('./pages/CasosDeExitoPage').then(m =>
 const ROIPage = lazy(() => import('./pages/recursos/ROIPage').then(m => ({ default: m.ROIPage })));
 const AutoStoreAlternativaPage = lazy(() => import('./pages/catalogo/AutoStoreAlternativaPage').then(m => ({ default: m.AutoStoreAlternativaPage })));
 const ChilePage = lazy(() => import('./pages/ChilePage').then(m => ({ default: m.ChilePage })));
+const PreguntasFrecuentesPage = lazy(() => import('./pages/PreguntasFrecuentesPage').then(m => ({ default: m.PreguntasFrecuentesPage })));
 const ZonaPage = lazy(() => import('./pages/ZonaPage').then(m => ({ default: m.ZonaPage })));
 
 export const ORGANIZATION_SCHEMA = {
@@ -52,10 +54,12 @@ export const ORGANIZATION_SCHEMA = {
   "@id": "https://www.stokagroup.com/#organization",
   "name": "STOKA",
   "legalName": "STOKA",
-  "description": "Integrador de automatización de depósitos con ingeniería local en Argentina y Chile. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para almacenes industriales.",
-  "sameAs": [
-    // TODO: agregar perfiles cuando existan — LinkedIn, YouTube, Google Business Profile
-  ],
+  "alternateName": ["STOKA Group", "Stoka Automatización"],
+  "description": "STOKA es un integrador argentino de sistemas automáticos de almacenamiento (ASRS) con base en Maipú, Mendoza. Diseña, importa, instala y mantiene depósitos automatizados —transelevadores, robots shuttle, torres verticales y software WMS/WCS— para operaciones industriales y logísticas en Argentina y Chile.",
+  // sameAs: pendiente — los perfiles (LinkedIn, Instagram, YouTube propio, Google Business
+  // Profile) deben CREARSE antes de listarlos; un sameAs a un perfil inexistente daña la entidad.
+  // founder / vatID (CUIT) / numberOfEmployees: pendientes de dato del dueño.
+  // foundingDate 2025: dato a CONFIRMAR con el dueño, no se ajusta por conveniencia.
   "url": "https://www.stokagroup.com",
   "logo": "https://www.stokagroup.com/stoka-logo.png",
   "image": "https://www.stokagroup.com/stoka-logo.png",
@@ -76,7 +80,25 @@ export const ORGANIZATION_SCHEMA = {
   ],
   "knowsAbout": ["Sistemas ASRS", "Automatización de almacenes", "Transelevadores", "Robots AMR", "Software WMS", "Software WCS", "VLM", "Carruseles verticales"],
   "foundingDate": "2025",
-  "priceRange": "$$$$"
+  "priceRange": "$$$$",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": WPP_TEL,
+    "contactType": "sales",
+    "areaServed": ["AR", "CL"],
+    "availableLanguage": ["Spanish", "English", "Chinese"]
+  }],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Sistemas de automatización de depósitos",
+    "itemListElement": [
+      { "@type": "OfferCatalog", "name": "Sistemas AS/RS", "url": "https://www.stokagroup.com/catalogo/asrs" },
+      { "@type": "OfferCatalog", "name": "Robots de manipulación", "url": "https://www.stokagroup.com/catalogo/robots-manipulacion" },
+      { "@type": "OfferCatalog", "name": "Almacenamiento vertical", "url": "https://www.stokagroup.com/catalogo/almacenamiento-vertical" },
+      { "@type": "OfferCatalog", "name": "Equipo de transporte", "url": "https://www.stokagroup.com/catalogo/equipo-transporte" },
+      { "@type": "OfferCatalog", "name": "Software WMS/WCS", "url": "https://www.stokagroup.com/catalogo/software" }
+    ]
+  }
 };
 
 /* Language layout — reads lang prefix from URL and syncs i18n */
@@ -334,38 +356,42 @@ export function HomePage() {
 function App() {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
-  /* Shared inner routes — reused for /, /en, /zh */
-  const inner = [
-    <Route key="home" index element={<HomePage />} />,
-    <Route key="catalogo" path="catalogo" element={<CatalogPage />} />,
-    <Route key="catalogo-asrs" path="catalogo/asrs" element={<CatalogoASRSPage />} />,
-    <Route key="catalogo-robots" path="catalogo/robots-manipulacion" element={<CatalogoRobotsPage />} />,
-    <Route key="catalogo-vertical" path="catalogo/almacenamiento-vertical" element={<CatalogoVerticalPage />} />,
-    <Route key="catalogo-transport" path="catalogo/equipo-transporte" element={<CatalogoTransportePage />} />,
-    <Route key="catalogo-software" path="catalogo/software" element={<CatalogoSoftwarePage />} />,
-    <Route key="catalogo-producto" path="catalogo/:categoria/:producto" element={<ProductoPage />} />,
-    <Route key="soluciones" path="soluciones" element={<SolucionesPage />} />,
-    <Route key="industrias" path="industrias" element={<IndustriasPage />} />,
-    <Route key="industria-detail" path="industrias/:slug" element={<IndustriaDetailPage />} />,
-    <Route key="beneficios" path="beneficios-fiscales" element={<BeneficiosFiscalesPage />} />,
-    <Route key="como-trabajamos" path="como-trabajamos" element={<ComoTrabajamosPage />} />,
-    <Route key="nosotros" path="nosotros" element={<NosotrosPage />} />,
-    <Route key="contacto" path="contacto" element={<ContactPage />} />,
-    <Route key="tec-asrs" path="tecnologia-asrs" element={<TecnologiaASRSPage />} />,
-    <Route key="alt-asrs" path="alternativa-economica-asrs" element={<AlternativaEconomicaASRSPage />} />,
-    <Route key="casos" path="casos-de-exito" element={<CasosDeExitoPage />} />,
-    <Route key="recursos" path="recursos" element={<RecursosHub />} />,
-    <Route key="glosario" path="recursos/glosario" element={<GlosarioPage />} />,
-    <Route key="comparador" path="recursos/comparador-sistemas" element={<ComparadorPage />} />,
-    <Route key="roi" path="recursos/roi-automatizacion" element={<ROIPage />} />,
-    <Route key="articulo" path="recursos/:slug" element={<ArticuloPage />} />,
-    <Route key="autostore" path="catalogo/asrs/autostore-alternativa" element={<AutoStoreAlternativaPage />} />,
-    <Route key="chile" path="chile" element={<ChilePage />} />,
-    <Route key="zona-bsas" path="automatizacion-almacenes-buenos-aires" element={<ZonaPage zona="buenos-aires" />} />,
-    <Route key="zona-mendoza" path="automatizacion-almacenes-mendoza" element={<ZonaPage zona="mendoza" />} />,
-    <Route key="zona-cordoba" path="automatizacion-almacenes-cordoba" element={<ZonaPage zona="cordoba" />} />,
-    <Route key="zona-rosario" path="automatizacion-almacenes-rosario" element={<ZonaPage zona="rosario" />} />,
-  ];
+  /* Shared inner routes — reused for /, /en, /zh con slugs localizados por idioma */
+  const inner = (routeLang) => {
+    const lp = (path) => (routeLang === 'es' ? path : localizePath(path, routeLang));
+    return [
+      <Route key="home" index element={<HomePage />} />,
+      <Route key="catalogo" path={lp("catalogo")} element={<CatalogPage />} />,
+      <Route key="catalogo-asrs" path={lp("catalogo/asrs")} element={<CatalogoASRSPage />} />,
+      <Route key="catalogo-robots" path={lp("catalogo/robots-manipulacion")} element={<CatalogoRobotsPage />} />,
+      <Route key="catalogo-vertical" path={lp("catalogo/almacenamiento-vertical")} element={<CatalogoVerticalPage />} />,
+      <Route key="catalogo-transport" path={lp("catalogo/equipo-transporte")} element={<CatalogoTransportePage />} />,
+      <Route key="catalogo-software" path={lp("catalogo/software")} element={<CatalogoSoftwarePage />} />,
+      <Route key="catalogo-producto" path={lp("catalogo/:categoria/:producto")} element={<ProductoPage />} />,
+      <Route key="soluciones" path={lp("soluciones")} element={<SolucionesPage />} />,
+      <Route key="industrias" path={lp("industrias")} element={<IndustriasPage />} />,
+      <Route key="industria-detail" path={lp("industrias/:slug")} element={<IndustriaDetailPage />} />,
+      <Route key="beneficios" path={lp("beneficios-fiscales")} element={<BeneficiosFiscalesPage />} />,
+      <Route key="como-trabajamos" path={lp("como-trabajamos")} element={<ComoTrabajamosPage />} />,
+      <Route key="nosotros" path={lp("nosotros")} element={<NosotrosPage />} />,
+      <Route key="contacto" path={lp("contacto")} element={<ContactPage />} />,
+      <Route key="tec-asrs" path={lp("tecnologia-asrs")} element={<TecnologiaASRSPage />} />,
+      <Route key="faq" path={lp("preguntas-frecuentes")} element={<PreguntasFrecuentesPage />} />,
+      <Route key="alt-asrs" path={lp("alternativa-economica-asrs")} element={<AlternativaEconomicaASRSPage />} />,
+      <Route key="casos" path={lp("casos-de-exito")} element={<CasosDeExitoPage />} />,
+      <Route key="recursos" path={lp("recursos")} element={<RecursosHub />} />,
+      <Route key="glosario" path={lp("recursos/glosario")} element={<GlosarioPage />} />,
+      <Route key="comparador" path={lp("recursos/comparador-sistemas")} element={<ComparadorPage />} />,
+      <Route key="roi" path={lp("recursos/roi-automatizacion")} element={<ROIPage />} />,
+      <Route key="articulo" path={lp("recursos/:slug")} element={<ArticuloPage />} />,
+      <Route key="autostore" path={lp("catalogo/asrs/autostore-alternativa")} element={<AutoStoreAlternativaPage />} />,
+      <Route key="chile" path={lp("chile")} element={<ChilePage />} />,
+      <Route key="zona-bsas" path={lp("automatizacion-almacenes-buenos-aires")} element={<ZonaPage zona="buenos-aires" />} />,
+      <Route key="zona-mendoza" path={lp("automatizacion-almacenes-mendoza")} element={<ZonaPage zona="mendoza" />} />,
+      <Route key="zona-cordoba" path={lp("automatizacion-almacenes-cordoba")} element={<ZonaPage zona="cordoba" />} />,
+      <Route key="zona-rosario" path={lp("automatizacion-almacenes-rosario")} element={<ZonaPage zona="rosario" />} />,
+    ];
+  };
 
   return (
     <>
@@ -376,15 +402,15 @@ function App() {
         <Routes>
           {/* Spanish (default) */}
           <Route path="/" element={<LangLayout lang="es" />}>
-            {inner}
+            {inner('es')}
           </Route>
           {/* English */}
           <Route path="/en" element={<LangLayout lang="en" />}>
-            {inner}
+            {inner('en')}
           </Route>
           {/* Chinese */}
           <Route path="/zh" element={<LangLayout lang="zh" />}>
-            {inner}
+            {inner('zh')}
           </Route>
         </Routes>
       </Suspense>

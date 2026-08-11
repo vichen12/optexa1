@@ -8,6 +8,7 @@ export const ARTICULOS = [
     categoria: 'Fundamentos ASRS',
     readTime: '7 min',
     publishDate: '2026-06-10',
+    modifiedDate: '2026-07-29',
     heroImg: '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
     intro: 'Un sistema ASRS (Automated Storage and Retrieval System, o sistema automatizado de almacenamiento y recuperación) es la infraestructura tecnológica que permite que un almacén, bodega o depósito industrial almacene y recupere paletas, cajas y contenedores sin intervención humana directa. En lugar de operarios manejando carretillas elevadoras en pasillos de estanterías, el ASRS usa transelevadores, robots lanzadera o robots shuttle que se mueven automáticamente dentro del rack, guiados por un software WCS que recibe órdenes del WMS. El resultado: mayor densidad de almacenamiento, mayor velocidad de operación, menor tasa de error y reducción del costo de mano de obra en el largo plazo.',
     sections: [
@@ -25,7 +26,7 @@ export const ARTICULOS = [
       },
       {
         h2: 'Cuándo conviene instalar un sistema ASRS en tu almacén',
-        body: 'Un ASRS se justifica cuando se cumplen al menos tres de estas condiciones: el almacén, bodega o depósito trabaja con más de 500 movimientos/día, el espacio disponible es limitado y hay altura libre para aprovechar, el costo de mano de obra es significativo o la rotación de personal es alta, los errores de picking o de inventario generan impacto operativo o de imagen, y el volumen de operación es suficiente para amortizar la inversión en 18 a 36 meses. En Argentina, el Decreto 513/2025 (arancel 0% en equipos ASRS) y el RIMI (amortización acelerada de bienes de capital) mejoran significativamente el ROI proyectado.',
+        body: 'Un ASRS se justifica cuando se cumplen al menos tres de estas condiciones: el almacén, bodega o depósito trabaja con más de 500 movimientos/día, el espacio disponible es limitado y hay altura libre para aprovechar, el costo de mano de obra es significativo o la rotación de personal es alta, los errores de picking o de inventario generan impacto operativo o de imagen, y el volumen de operación es suficiente para amortizar la inversión en 18 a 36 meses. En Argentina, el arancel reducido según la posición NCM de cada equipo (Decreto 513/2025) y el RIMI (amortización acelerada de bienes de capital) mejoran significativamente el ROI proyectado.',
       },
     ],
     conclusionH2: 'Primer paso: la consulta técnica gratuita',
@@ -53,8 +54,9 @@ export const ARTICULOS = [
     categoria: 'Inversión y ROI',
     readTime: '8 min',
     publishDate: '2026-06-10',
+    modifiedDate: '2026-07-29',
     heroImg: '/gxo-2023.webp',
-    intro: 'La pregunta más frecuente en la primera reunión técnica es siempre la misma: ¿cuánto cuesta automatizar mi almacén? La respuesta honesta es que depende de muchos factores —tecnología elegida, throughput, altura, cantidad de SKUs y nivel de integración— pero sí existen rangos orientativos por tipo de proyecto. En Argentina, el panorama de costos de automatización cambió sustancialmente en 2025 y 2026: el Decreto 513/2025 reduce el arancel de importación para equipos ASRS según su clasificación NCM y el RIMI (Ley 27.802) permite amortización acelerada en el primer ejercicio, mejorando el ROI de todos los proyectos de automatización de almacenes, bodegas y depósitos industriales.',
+    intro: 'La pregunta más frecuente en la primera reunión técnica es siempre la misma: ¿cuánto cuesta automatizar mi almacén? La respuesta honesta es que depende de muchos factores —tecnología elegida, throughput, altura, cantidad de SKUs y nivel de integración— pero sí existen rangos orientativos por tipo de proyecto. En Argentina, el panorama de costos de automatización cambió sustancialmente en 2025 y 2026: el Decreto 513/2025 reduce el arancel de importación para equipos ASRS según su clasificación NCM y el RIMI (Ley 27.802) permite amortizar los bienes de capital en dos cuotas anuales iguales, mejorando el ROI de todos los proyectos de automatización de almacenes, bodegas y depósitos industriales.',
     sections: [
       {
         h2: 'Rangos de inversión por tipo de sistema de automatización',
@@ -62,7 +64,7 @@ export const ARTICULOS = [
       },
       {
         h2: 'Impacto del Decreto 513/2025 y el RIMI en el costo real',
-        body: 'Antes del Decreto 513/2025, importar equipos ASRS tenía un arancel del 12% al 18% sobre el valor CIF. Para un proyecto de USD 1.000.000, ese sobrecosto era de USD 120.000 a USD 180.000. Con el decreto vigente, ese desembolso desaparece. El RIMI (Ley 27.802) agrega otro beneficio: la amortización acelerada del 100% del bien de capital en el primer ejercicio fiscal reduce la carga impositiva del año de la inversión. Para una empresa que tributa al 35%, un proyecto de USD 1.000.000 genera una reducción impositiva de ~USD 350.000 distribuida en el tiempo. Combinados, ambos beneficios pueden reducir el costo neto de un proyecto en un 25% a 35%.',
+        body: 'El derecho de importación de un sistema ASRS depende de la posición NCM de cada componente: el transelevador tributa 0% por Arancel Externo Común, los robots y las apiladoras eléctricas 2% (Decreto 513/2025), y los transportadores y la estantería bastante más. El RIMI (Ley 27.802) agrega otro beneficio: amortizar el bien de capital en dos cuotas anuales iguales adelanta deducciones de Ganancias. Para una empresa que tributa al 35%, un proyecto de USD 1.000.000 permite deducir USD 500.000 el primer año: unos USD 175.000 menos de Ganancias en ese ejercicio, que se compensan en los siguientes. Es un diferimiento, no un descuento. Lo que sí reduce el costo es el arancel y el IVA del 10,5%: entre un 8% y un 15% del valor del equipo importado.',
       },
       {
         h2: 'ROI típico por industria y tipo de proyecto',
@@ -78,7 +80,7 @@ export const ARTICULOS = [
     faq: [
       { q: '¿El precio del ASRS incluye la instalación?', a: 'Los presupuestos de STOKA son llave en mano: incluyen el equipo, el transporte, la ingeniería de detalle, la instalación mecánica y eléctrica, la integración con el WMS/ERP existente y la capacitación. Lo que no está incluido es la obra civil (si se requiere) y el software ERP del cliente.' },
       { q: '¿Cuál es la inversión mínima para que se justifique un ASRS?', a: 'Un VLM o carrusel vertical puede justificarse con una inversión de USD 80.000 si el ahorro en tiempo de búsqueda y errores de inventario es suficiente. Para un MiniLoad o transelevador, el mínimo razonable suele ser a partir de USD 300.000 con un throughput mínimo de 300 movimientos/día.' },
-      { q: '¿Cómo impacta el RIMI en el precio real de un proyecto?', a: 'El RIMI (Ley 27.802) permite amortizar el 100% del bien de capital en el primer ejercicio, reduciendo la base imponible de Ganancias. Para una empresa que tributa al 35%, un proyecto de USD 500.000 genera una reducción impositiva de USD 175.000 en el año de la inversión. Combinado con el arancel 0% del Decreto 513/2025, el costo neto puede ser un 25-30% menor que el precio de lista.' },
+      { q: '¿Cómo impacta el RIMI en el precio real de un proyecto?', a: 'El RIMI (Ley 27.802) permite amortizar el bien de capital en dos cuotas anuales iguales, adelantando deducciones de Ganancias. Para una empresa que tributa al 35%, un proyecto de USD 500.000 permite deducir USD 250.000 el primer año: unos USD 87.500 menos de Ganancias en ese ejercicio, que se compensan en los siguientes. Lo que sí reduce el costo neto es el arancel según la posición NCM y el IVA del 10,5%: entre un 8% y un 15% del valor del equipo importado.' },
       { q: '¿Cuánto cuesta el soporte técnico después de la instalación?', a: 'El costo del contrato de mantenimiento preventivo anual típicamente representa el 3% al 5% del valor del equipo instalado. Incluye visitas semestrales de mantenimiento preventivo, repuestos de desgaste y soporte técnico telefónico/remoto. STOKA tiene equipo de soporte en Argentina para respuesta en horas, no días.' },
     ],
     cta: { heading: 'Calculá el ROI de tu proyecto de automatización', text: 'Enviamos el análisis técnico-financiero sin costo. Respuesta en 24 horas.', btnPrimary: { label: 'Solicitar análisis de ROI', url: '/contacto' }, btnSecondary: { label: 'Ver beneficios fiscales 2026', url: '/beneficios-fiscales' } },
@@ -98,6 +100,7 @@ export const ARTICULOS = [
     categoria: 'Comparativas técnicas',
     readTime: '6 min',
     publishDate: '2026-06-10',
+    modifiedDate: '2026-07-29',
     heroImg: '/productos/robots-manipulacion/Robot%20lanzadera%20de%20cuatro%20direcciones-para%20paletas/pallet-four-way-shuttle-robotb829c.webp',
     intro: 'Transelevador o pallet shuttle: es la primera gran decisión técnica en cualquier proyecto de automatización de almacenes con paletas. Ambos sistemas almacenan y recuperan paletas automáticamente, pero tienen características de throughput, densidad y costo muy distintas. Elegir mal puede costar caro: un transelevador en un almacén que necesitaba shuttle tiene throughput limitado; un shuttle en un almacén que necesitaba transelevador tiene costos de mantenimiento más altos de lo necesario. Esta guía explica las diferencias técnicas concretas para ayudarte a determinar cuál es el correcto para tu bodega, almacén o depósito.',
     sections: [
@@ -139,35 +142,36 @@ export const ARTICULOS = [
     h1: 'RIMI 2026: cómo el nuevo régimen financia tu automatización',
     metaTitle: 'RIMI 2026: Cómo Financia tu Automatización | STOKA',
     wordCount: 1600,
-    metaDesc: 'Cómo el RIMI (Ley 27.802) financia tu automatización: amortización acelerada del 100% en el primer ejercicio y devolución de IVA en 90 a 120 días.',
+    metaDesc: 'Cómo el RIMI (Ley 27.802) financia tu automatización: amortización en dos cuotas anuales iguales y recupero del IVA en tres períodos fiscales en vez de seis.',
     categoria: 'Beneficios fiscales',
     readTime: '7 min',
     publishDate: '2026-06-10',
+    modifiedDate: '2026-07-29',
     heroImg: '/bandera4-cropped.webp',
-    intro: 'El RIMI (Régimen de Incentivo a la Manufactura e Industria, Ley 27.802) es el instrumento fiscal más relevante del 2026 para las PyMEs y empresas medianas que quieren automatizar sus almacenes, bodegas y depósitos en Argentina. A diferencia del RIGI — que requiere inversiones de USD 200 millones o más — el RIMI fue diseñado para proyectos de escala industrial estándar, sin umbral mínimo tan elevado. Su principal beneficio: amortización acelerada del 100% de los bienes de capital adquiridos en el primer ejercicio fiscal, más devolución anticipada del IVA en la importación de equipos. Para un proyecto de automatización de almacén de USD 500.000, estos dos beneficios reducen la carga fiscal del año de inversión en hasta USD 200.000.',
+    intro: 'El RIMI (Régimen de Incentivo para Medianas Inversiones, Título XXIII de la Ley 27.802) es el instrumento fiscal más relevante del 2026 para las PyMEs que quieren automatizar sus almacenes, bodegas y depósitos en Argentina. A diferencia del RIGI — que requiere inversiones de USD 200 millones o más — el RIMI fue diseñado para proyectos de escala industrial estándar, con mínimos de inversión desde USD 150.000 según la categoría MiPyME. Su principal beneficio: amortizar los bienes de capital nuevos en dos cuotas anuales iguales —en lugar de su vida útil— y recuperar el IVA de la inversión en tres períodos fiscales en vez de seis. Para un proyecto de automatización de USD 500.000, deducir USD 250.000 el primer año significa unos USD 87.500 menos de Ganancias en ese ejercicio: un adelanto de la deducción que mejora el flujo de caja.',
     sections: [
       {
         h2: 'Qué es el RIMI y quién puede acceder',
-        body: 'El RIMI (Ley 27.802) es un régimen especial de incentivos para inversiones en manufactura e industria en Argentina. Está diseñado para empresas que no califican para el RIGI por no alcanzar el umbral de inversión mínima o no estar en los sectores elegibles de ese régimen. Los beneficios del RIMI aplican a: adquisición de bienes de capital nuevos (maquinaria, equipos de automatización, robótica industrial), importación de equipos con destino productivo, y proyectos de modernización de procesos industriales. Para acceder, la empresa debe presentar un proyecto de inversión ante AFIP con la documentación técnica y comercial del equipo a adquirir. STOKA acompaña ese proceso con la documentación técnica del proyecto.',
+        body: 'El RIMI (Título XXIII de la Ley 27.802, reglamentado por el Decreto 242/2026) es un régimen de incentivo para medianas inversiones en bienes de capital en Argentina. Requiere certificado MiPyME vigente y alcanzar la inversión mínima de tu categoría, que se computa sumando las inversiones elegibles dentro de una ventana de 2 años. Los beneficios aplican a bienes muebles nuevos clasificados como Bienes de Capital (BK) o Bienes de Informática y Telecomunicaciones (BIT): maquinaria, equipos de automatización y robótica industrial, locales o importados, con destino productivo. La inscripción se tramita por el Sistema de Gestión de Inversiones (SGI) de ARCA. STOKA acompaña ese proceso con la documentación técnica del proyecto.',
       },
       {
         h2: 'Amortización acelerada de bienes de capital: cómo funciona',
-        body: 'Normalmente, un sistema ASRS o un transelevador se amortiza contablemente en 10 años (10% por año). Con el RIMI, es posible amortizar el 100% del bien en el primer ejercicio fiscal. ¿Qué significa eso en términos de caja? Para una empresa que tributa Ganancias al 35%, un sistema de USD 500.000 = ARS equivalente en activo fijo. Con amortización acelerada, ese monto completo se deduce en el año 1, reduciendo la base imponible de Ganancias en USD 500.000. El ahorro fiscal en el primer ejercicio es de USD 175.000 (35% × USD 500.000) en lugar de USD 17.500 (35% × 10% × USD 500.000) con amortización normal. La diferencia es de USD 157.500 de liquidez adicional en el primer año.',
+        body: 'Normalmente, un sistema ASRS o un transelevador se amortiza contablemente en 10 años (10% por año). Con el RIMI se amortiza en dos cuotas anuales iguales: 50% y 50%. ¿Qué significa eso en términos de caja? Para una empresa que tributa Ganancias al 35%, un sistema de USD 500.000 permite deducir USD 250.000 el primer año, contra USD 50.000 con la amortización normal. Son unos USD 70.000 menos de Ganancias en ese ejercicio (35% × la diferencia de USD 200.000). Importante: la amortización acelerada no reduce el impuesto total, lo adelanta. Deducís más al principio y menos después; a lo largo de la vida del bien pagás lo mismo, pero más tarde, y esa plata queda trabajando en tu empresa.',
       },
       {
         h2: 'Devolución anticipada del IVA: impacto en el flujo de caja',
-        body: 'Al importar equipos ASRS, la empresa paga IVA en la aduana. Normalmente, ese IVA se recupera a través del crédito fiscal en el plazo habitual del proceso AFIP, que puede extenderse entre 6 y 18 meses. El RIMI habilita la devolución anticipada del IVA de las importaciones de bienes de capital en un plazo mucho menor —usualmente 90 a 120 días— mejorando significativamente el flujo de caja del proyecto. Para un sistema de USD 800.000 (con IVA de 21% = USD 168.000), recuperar ese monto en 3 meses en lugar de 12-18 meses representa un beneficio financiero equivalente al costo del dinero en ese período.',
+        body: 'Al importar equipos ASRS, la empresa paga IVA en la aduana. Ese IVA es crédito fiscal: se descuenta del IVA que tu empresa cobra en sus ventas y, cuando no se absorbe, el régimen general permite pedir la devolución recién después de seis períodos fiscales. El RIMI acorta ese plazo a tres. Para un sistema de USD 800.000 con 70% de maquinaria alcanzada por el 10,5%, el crédito fiscal ronda los USD 109.000: recuperarlo en la mitad de tiempo representa un beneficio financiero equivalente al costo del dinero en ese período. La devolución RIMI está sujeta a cupo anual.',
       },
       {
         h2: 'Combinación RIMI + Decreto 513/2025 + BICE: el escenario óptimo',
-        body: 'Los tres instrumentos son compatibles y se potencian mutuamente. El Decreto 513/2025 reduce el arancel de importación según la clasificación NCM (ahorro variable según NCM). El RIMI reduce la carga fiscal del primer año con amortización acelerada y devolución anticipada de IVA. La línea BICE financia hasta el 80% del proyecto a 10 años con tasa preferencial. En un proyecto representativo de USD 1.000.000: el arancel 0% ahorra USD 150.000, la amortización acelerada RIMI genera USD 350.000 de deducción impositiva en el año 1, y el BICE reduce el desembolso inicial a USD 200.000. El impacto sobre el flujo de caja del primer año es dramático: la empresa puede arrancar un sistema de un millón de dólares con un desembolso neto inicial que compite con el costo laboral que está reemplazando.',
+        body: 'Los tres instrumentos son compatibles y se potencian mutuamente. El Decreto 513/2025 reduce el arancel de importación según la clasificación NCM (0% a 12,6% según el componente). El RIMI adelanta deducciones con la amortización en dos cuotas y acorta el recupero del IVA de seis a tres períodos. La línea BICE financia hasta el 80% del proyecto a 10 años. En un proyecto representativo de USD 1.000.000: el arancel y el IVA del 10,5% reducen el costo efectivo del equipo importado entre un 8% y un 15%, la amortización acelerada permite deducir USD 500.000 el primer año (unos USD 175.000 menos de Ganancias en ese ejercicio), y el BICE reduce el desembolso inicial a USD 200.000. El impacto sobre el flujo de caja del primer año es significativo: la empresa puede arrancar un sistema de un millón de dólares con un desembolso neto inicial que compite con el costo laboral que está reemplazando.',
       },
     ],
     conclusionH2: 'El 2026 no se va a repetir',
     conclusion: 'El RIMI, el Decreto 513/2025 y el BICE se alinearon en un momento inusual. No hay garantía de que este contexto fiscal se mantenga más allá de 2026-2027: los decretos tienen revisión anual y los regímenes fiscales cambian. Las empresas que estructuren sus proyectos de automatización en esta ventana de oportunidad capturan beneficios que las que esperen pueden no tener disponibles. STOKA analiza qué combinación de beneficios maximiza el ahorro para tu proyecto específico de forma gratuita.',
     faq: [
-      { q: '¿En qué se diferencia el RIMI del RIGI?', a: 'El RIGI (Ley 27.742) requiere inversiones de USD 200 millones o más y ofrece 30 años de estabilidad fiscal total. El RIMI (Ley 27.802) está diseñado para proyectos de escala industrial estándar — sin umbral mínimo tan elevado — y ofrece amortización acelerada y devolución anticipada de IVA. Para la mayoría de los proyectos de automatización de almacenes y depósitos en Argentina, el RIMI es el instrumento más accesible y aplicable.' },
-      { q: '¿Qué documentación necesito para acceder al RIMI?', a: 'Básicamente necesitás: factura proforma o contrato de compra del bien de capital, descripción técnica del equipo y su función productiva, y la adhesión formal al régimen a través de AFIP. STOKA provee toda la documentación técnica del sistema ASRS requerida por el régimen.' },
+      { q: '¿En qué se diferencia el RIMI del RIGI?', a: 'El RIGI (Ley 27.742) requiere inversiones de USD 200 millones o más y ofrece 30 años de estabilidad fiscal total. El RIMI (Ley 27.802) está diseñado para proyectos de escala industrial estándar — con mínimos de inversión desde USD 150.000 según la categoría MiPyME — y ofrece amortización en dos cuotas anuales y recupero del IVA en tres períodos fiscales en vez de seis. Para la mayoría de los proyectos de automatización de almacenes y depósitos en Argentina, el RIMI es el instrumento más accesible y aplicable.' },
+      { q: '¿Qué documentación necesito para acceder al RIMI?', a: 'Básicamente necesitás: factura proforma o contrato de compra del bien de capital, descripción técnica del equipo y su función productiva, y la inscripción en el régimen a través del Sistema de Gestión de Inversiones (SGI) de ARCA. STOKA provee toda la documentación técnica del sistema ASRS requerida por el régimen.' },
       { q: '¿El RIMI aplica a software WMS/WCS además del hardware?', a: 'El software de gestión y control de almacenes (WMS/WCS) adquirido como parte de un sistema integrado de automatización puede calificar como bien de capital bajo el RIMI. La categorización específica depende de cómo se estructura el contrato. STOKA recomienda consultar con el asesor impositivo antes de la firma del contrato.' },
       { q: '¿Cuándo convendrá más una ruta RIGI que el RIMI?', a: 'El RIGI conviene cuando el proyecto supera los USD 200 millones y la empresa busca estabilidad fiscal a 30 años con libre disponibilidad de divisas. Para proyectos menores — prácticamente todos los proyectos de automatización de almacenes, bodegas y depósitos industriales standard — el RIMI + Decreto 513 + BICE es la combinación más accesible y de mayor impacto en el corto plazo.' },
     ],
@@ -188,6 +192,7 @@ export const ARTICULOS = [
     categoria: 'Comparativas técnicas',
     readTime: '6 min',
     publishDate: '2026-06-10',
+    modifiedDate: '2026-07-29',
     heroImg: '/productos/robots-manipulacion/Robot%20lanzadera%20para%20padres%20e%20hijos%20de%20paletas/pallet-parent-child-shuttle-robotdad7c.webp',
     intro: 'AGV y AMR son dos tipos de robots móviles para transporte interno en almacenes, bodegas y depósitos industriales. Ambos reemplazan el trabajo del montacargas o del operario empujando un carro, pero lo hacen de formas muy distintas. Elegir entre AGV y AMR no es solo una decisión técnica: tiene implicancias en la flexibilidad operativa, los costos de instalación, el mantenimiento y la capacidad de escalar la operación. Esta guía explica las diferencias concretas para ayudarte a elegir la opción correcta para tu operación en Argentina.',
     sections: [
@@ -233,6 +238,7 @@ export const ARTICULOS = [
     categoria: 'Software logístico',
     readTime: '6 min',
     publishDate: '2026-06-10',
+    modifiedDate: '2026-07-29',
     heroImg: '/productos/software-inteligente/%28WMS%29%20Sistema%20de%20gesti%C3%B3n%20de%20almacenes/2025112715331054f3e.webp',
     intro: 'WMS y WCS son dos sistemas de software que trabajan juntos en cualquier almacén, bodega o depósito automatizado, pero hacen cosas completamente distintas. La confusión entre ambos es frecuente — y costosa cuando lleva a implementar solo uno. El WMS gestiona el inventario y las operaciones de negocio: qué hay, dónde está, cuándo entra y cuándo sale. El WCS controla los equipos físicos en tiempo real: qué transelevador se mueve, a qué velocidad y en qué secuencia. Sin WMS, el almacén no sabe qué producto tiene. Sin WCS, el ASRS no recibe instrucciones. Necesitás los dos.',
     sections: [
@@ -278,6 +284,7 @@ export const ARTICULOS = [
     categoria: 'Mercados regionales',
     readTime: '7 min',
     publishDate: '2026-06-10',
+    modifiedDate: '2026-07-29',
     heroImg: '/gxo-2023.webp',
     intro: 'Chile tiene características únicas que hacen especialmente relevante la automatización de bodegas y almacenes: una industria minera con operaciones en zonas extremas (altiplano, desierto, sur austral), una vitivinicultura de clase mundial con bodegas de alta complejidad logística, y una agroindustria exportadora que necesita cadena de frío de precisión. En todos estos sectores, el desafío no es solo el throughput o la densidad de almacenamiento: es operar con pocos operarios especializados, en zonas con alta rotación de personal y condiciones climáticas extremas. Los sistemas ASRS que STOKA integra como aliado estratégico en Chile y Argentina son especialmente adecuados para estas condiciones.',
     sections: [
@@ -323,6 +330,7 @@ export const ARTICULOS = [
     categoria: 'Comparativas técnicas',
     readTime: '8 min',
     publishDate: '2026-06-10',
+    modifiedDate: '2026-07-29',
     heroImg: '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp',
     intro: 'AutoStore es una de las tecnologías de almacenamiento robótico más visibles de los últimos años: robots que corren sobre un grid tridimensional recuperando contenedores apilados. ASRS tradicional — transelevadores, MiniLoad, shuttles — lleva décadas en el mercado con instalaciones de referencia global. ¿Cuál es mejor? Depende completamente de tu operación. Esta comparativa no busca vender ninguna de las dos: busca darte los datos técnicos para decidir qué tecnología se ajusta mejor a tu almacén, bodega o depósito y a tu presupuesto.',
     sections: [
@@ -367,12 +375,13 @@ export const ARTICULOS = [
     categoria: 'Fundamentos ASRS',
     readTime: '7 min',
     publishDate: '2026-06-10',
+    modifiedDate: '2026-07-29',
     heroImg: '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
     intro: 'Un transelevador es el componente central de la mayoría de los sistemas ASRS (sistemas de almacenamiento y recuperación automatizados). Es una grúa automatizada que se desplaza dentro de un pasillo de estanterías, capturando y depositando paletas, cajas o contenedores con precisión milimétrica. Si alguna vez viste imágenes de un almacén moderno con estanterías de 20 o 30 metros y máquinas moviéndose entre ellas sin operarios — eso es un transelevador. En Argentina y Chile, la creciente adopción de automatización industrial hace que cada vez más empresas de logística, manufactura, alimentos y farmacéutica evalúen esta tecnología para sus almacenes, bodegas y depósitos.',
     sections: [
       {
-        h2: 'En criollo: qué hace un transelevador y para qué te sirve',
-        body: 'Pensá en un transelevador como un robot que hace el trabajo del autoelevador y del operario, pero solo, sin parar y sin equivocarse. Se mueve por un pasillo entre estanterías altas, sube hasta la posición exacta, agarra la paleta o la caja y la lleva hasta donde tenés que armar el pedido. Vos no mandás a nadie a buscar mercadería ni a subir 15 metros con una máquina: el sistema trae el producto hasta el operario (lo que se llama goods-to-person). ¿Para qué te sirve en concreto? Para las tres cosas que duelen en cualquier depósito: ganás espacio (guardás en altura, hasta 3 veces más en los mismos metros cuadrados), ganás tiempo (el robot no camina kilómetros como un operario) y dejás de equivocarte (cada movimiento lo controla el software, con exactitud por encima del 99,9%). Por eso el transelevador es el corazón de la mayoría de los depósitos automáticos: es lo que convierte una nave llena de estanterías en una operación que trabaja sola las 24 horas.',
+        h2: 'En pocas palabras: qué hace un transelevador y para qué te sirve',
+        body: 'Pensá en un transelevador como un robot que hace el trabajo del autoelevador y del operario, pero solo, sin parar y con una exactitud superior al 99,9%. Se mueve por un pasillo entre estanterías altas, sube hasta la posición exacta, agarra la paleta o la caja y la lleva hasta donde tenés que armar el pedido. Vos no mandás a nadie a buscar mercadería ni a subir 15 metros con una máquina: el sistema trae el producto hasta el operario (lo que se llama goods-to-person). ¿Para qué te sirve en concreto? Para las tres cosas que duelen en cualquier depósito: ganás espacio (guardás en altura, hasta 3 veces más en los mismos metros cuadrados), ganás tiempo (el robot no camina kilómetros como un operario) y te equivocás muchísimo menos (cada movimiento lo controla el software, con exactitud por encima del 99,9%). Por eso el transelevador es el corazón de la mayoría de los depósitos automáticos: es lo que convierte una nave llena de estanterías en una operación que trabaja sola las 24 horas.',
       },
       {
         h2: 'Tipos de transelevador: unit-load y miniload',
@@ -388,7 +397,7 @@ export const ARTICULOS = [
       },
       {
         h2: 'Cuánto cuesta un transelevador y cuál es el ROI en Argentina',
-        body: 'El costo de un transelevador unit-load para un pasillo de almacén de mediana escala (15 metros de altura, 500 posiciones de paleta) ronda los USD 180.000 a USD 280.000, sin incluir las estanterías ni el WCS. Un proyecto completo de 2 pasillos con transportadores, estanterías, WCS e integración con el ERP existente en un almacén o bodega en Argentina oscila entre USD 800.000 y USD 1.500.000. Con el Decreto 513/2025 (arancel 0% para equipos ASRS) y el RIMI (amortización acelerada del 100% en el primer ejercicio), el costo neto de un proyecto se reduce entre un 25% y un 35%. El ROI típico de un proyecto de transelevadores en Argentina está entre 18 y 36 meses, dependiendo del costo laboral actual de la operación manual que reemplaza.',
+        body: 'El costo de un transelevador unit-load para un pasillo de almacén de mediana escala (15 metros de altura, 500 posiciones de paleta) ronda los USD 180.000 a USD 280.000, sin incluir las estanterías ni el WCS. Un proyecto completo de 2 pasillos con transportadores, estanterías, WCS e integración con el ERP existente en un almacén o bodega en Argentina oscila entre USD 800.000 y USD 1.500.000. Con el arancel reducido según posición NCM (Decreto 513/2025), el IVA del 10,5% y la amortización acelerada del RIMI, la reducción efectiva del costo se ubica entre un 8% y un 15%, más un adelanto de deducciones de Ganancias que mejora la caja del primer año. El ROI típico de un proyecto de transelevadores en Argentina está entre 18 y 36 meses, dependiendo del costo laboral actual de la operación manual que reemplaza.',
       },
       {
         h2: '¿Un transelevador sirve para un depósito chico o mediano?',
@@ -402,7 +411,7 @@ export const ARTICULOS = [
       { q: '¿Qué pasa si el transelevador falla en el medio de la operación?', a: 'Estos transelevadores tienen un MTBF (tiempo medio entre fallas) mayor a 8.000 horas de operación. Si se produce una falla, el pasillo puede operarse en modo manual de emergencia con carretilla elevadora mientras se resuelve. STOKA tiene repuestos en Argentina para resolver la mayoría de las fallas en menos de 24 horas.' },
       { q: '¿Cuántos pasillos de transelevador necesito para mi operación?', a: 'El número de pasillos depende del throughput requerido (movimientos por hora) y de la capacidad de almacenamiento necesaria (número de posiciones de paleta o contenedor). Con esos dos datos, STOKA dimensiona el sistema en la primera consulta técnica gratuita.' },
       { q: '¿El transelevador se integra con mi WMS o ERP existente?', a: 'Sí. El WCS se conecta a cualquier WMS o ERP vía API REST, SOAP o EDI. Integraciones certificadas con SAP, Oracle, Microsoft Dynamics e Infor. STOKA gestiona la integración técnica como parte del proyecto llave en mano sin costo adicional.' },
-      { q: '¿Qué diferencia hay entre un transelevador y un autoelevador?', a: 'El autoelevador (o montacargas) lo maneja una persona y sirve para mover paletas de a una, a baja altura. El transelevador es automático: no lo maneja nadie, opera dentro de un pasillo fijo de estanterías, llega a alturas de hasta 40 metros y trabaja las 24 horas sin errores ni descansos. En criollo: el autoelevador es una herramienta que usa un operario; el transelevador es un robot que reemplaza el recorrido manual y guarda en altura mucho más de lo que llega un autoelevador.' },
+      { q: '¿Qué diferencia hay entre un transelevador y un autoelevador?', a: 'El autoelevador (o montacargas) lo maneja una persona y sirve para mover paletas de a una, a baja altura. El transelevador es automático: no lo maneja nadie, opera dentro de un pasillo fijo de estanterías, llega a alturas de hasta 40 metros y trabaja las 24 horas con una exactitud del 99,9%, sin descansos. En pocas palabras: el autoelevador es una herramienta que usa un operario; el transelevador es un robot que reemplaza el recorrido manual y guarda en altura mucho más de lo que llega un autoelevador.' },
       { q: '¿Cuánto cuesta un transelevador?', a: 'Depende del tipo y de la escala, así que va como rango y no como número cerrado: un transelevador unit-load (para paletas) de mediana escala ronda los USD 180.000 a USD 280.000 sin estanterías ni software. Un proyecto completo de varios pasillos, con estanterías, control e integración, suele ir de USD 800.000 a USD 1.500.000. Con el arancel reducido (Decreto 513/2025) y el RIMI, el costo neto baja bastante. El número para TU caso sale del diagnóstico gratuito, según tu operación.' },
       { q: '¿Sirve para un depósito chico?', a: 'Sí, siempre que tengas altura libre (idealmente 7 metros o más): lo que manda no son los metros cuadrados sino la altura que podés aprovechar. Para depósitos chicos o medianos que mueven cajas, el miniload es la opción más accesible, y podés empezar por un solo pasillo y crecer después. Si te quedaste sin lugar a lo ancho pero tenés altura, casi seguro entra en la conversación.' },
     ],
@@ -423,6 +432,7 @@ export const ARTICULOS = [
     categoria: 'Software y tecnología',
     readTime: '6 min',
     publishDate: '2026-06-10',
+    modifiedDate: '2026-07-29',
     heroImg: '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp',
     intro: 'El WMS (Warehouse Management System, o sistema de gestión de almacenes) es el software que convierte un almacén, bodega o depósito en una operación controlada y trazable. Sabe exactamente qué está en cada celda, de dónde vino, cuándo llegó y para qué cliente es. Sin WMS, la automatización física — transelevadores, robots, transportadores — no puede funcionar con precisión. Con WMS, el almacén sabe y decide; sin él, alguien tiene que adivinarlo. En Argentina, el WMS se convirtió en un requisito en industrias reguladas (farmacéutica, alimentos) y en el ancla de todo proyecto de automatización de almacén serio.',
     sections: [

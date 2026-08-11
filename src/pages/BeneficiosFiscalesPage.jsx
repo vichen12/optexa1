@@ -459,7 +459,7 @@ export const BeneficiosFiscalesPage = () => {
 
             <div className="flex items-center gap-3 mb-3">
               <span className="inline-block text-[10px] font-black uppercase tracking-[0.2em] border px-3 py-1 rounded-full bg-cyan-400/10 border-cyan-400/20 text-cyan-400">
-                04 — IVA 10,5% · Ley 23.966
+                04 — IVA 10,5% · Ley 23.349
               </span>
             </div>
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter leading-tight text-white mb-4">

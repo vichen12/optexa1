@@ -386,9 +386,9 @@ export const GLOSARIO = [
     en: 'Return on Investment. Time in months it takes an investment to pay back with the savings it generates. In warehouse automation, typical ROI is between 18 and 48 months.',
     zh: 'ROI（投资回报）：投资通过其产生的节省收回所需的月数。在仓库自动化中，典型ROI为18至48个月。' } },
   { term: 'CAPEX', id: 'capex', cat: 'finanzas', def: {
-    es: 'Capital Expenditure. Inversión en activos fijos: sistemas ASRS, equipos, instalaciones. Se amortiza contablemente durante años. Con el RIMI, puede amortizarse el 100% en el primer ejercicio.',
-    en: 'Capital Expenditure. Investment in fixed assets: ASRS systems, equipment, installations. Depreciated for accounting over years. With RIMI, 100% can be depreciated in the first fiscal year.',
-    zh: 'CAPEX（资本支出）：固定资产投资：ASRS系统、设备、安装。在会计上多年折旧。通过RIMI，可在第一个财政年度100%折旧。' } },
+    es: 'Capital Expenditure. Inversión en activos fijos: sistemas ASRS, equipos, instalaciones. Se amortiza contablemente durante años. Con el RIMI, puede amortizarse en dos cuotas anuales iguales.',
+    en: 'Capital Expenditure. Investment in fixed assets: ASRS systems, equipment, installations. Depreciated for accounting over years. With RIMI, it can be depreciated in two equal annual installments.',
+    zh: 'CAPEX（资本支出）：固定资产投资：ASRS系统、设备、安装。在会计上多年折旧。通过RIMI，可分两笔相等的年度折旧计提。' } },
   { term: 'OPEX', id: 'opex', cat: 'finanzas', def: {
     es: 'Operating Expenditure. Gastos operativos recurrentes: mantenimiento, energía, mano de obra y licencias de software. La automatización transforma OPEX variable (mano de obra) en CAPEX + OPEX fijo (mantenimiento).',
     en: 'Operating Expenditure. Recurring operating expenses: maintenance, energy, labor and software licenses. Automation transforms variable OPEX (labor) into CAPEX + fixed OPEX (maintenance).',
@@ -402,9 +402,9 @@ export const GLOSARIO = [
     en: 'Site Acceptance Test. Complete functional test of the system installed at the client\'s warehouse, upon commissioning completion. It is the milestone that starts the equipment warranty.',
     zh: 'SAT（现场验收测试）：在调试完成时对安装于客户仓库的系统进行的完整功能测试。是启动设备保修的里程碑。' } },
   { term: 'RIMI', id: 'rimi', cat: 'finanzas', def: {
-    es: 'Régimen de Incentivo a la Manufactura e Industria (Ley 27.802). Permite amortización acelerada del 100% de bienes de capital en el primer ejercicio y devolución anticipada del IVA en importaciones de equipos productivos.',
-    en: 'Manufacturing and Industry Incentive Regime (Ley 27.802). Allows 100% accelerated depreciation of capital goods in the first fiscal year and early VAT refund on imports of productive equipment.',
-    zh: 'RIMI（制造业与工业激励制度，Ley 27.802）：允许在第一个财政年度对资本货物进行100%加速折旧，并对生产设备进口提前退还增值税。' } },
+    es: 'Régimen de Incentivo para Medianas Inversiones (Título XXIII, Ley 27.802). Permite amortizar bienes de capital nuevos en dos cuotas anuales iguales y recuperar el IVA de la inversión en tres períodos fiscales en vez de seis. Requiere certificado MiPyME y una inversión mínima según categoría.',
+    en: 'Medium-Sized Investment Incentive Regime (Title XXIII, Ley 27.802). Allows depreciating new capital goods in two equal annual installments and recovering the VAT of the investment in three fiscal periods instead of six. Requires a MiPyME certificate and a minimum investment per category.',
+    zh: 'RIMI（中型投资激励制度，Ley 27.802第二十三编）：允许将新购资本货物分两笔相等的年度折旧计提，并将投资IVA的回收期从6个财政期缩短至3个。需持有效MiPyME证书并达到相应类别的最低投资额。' } },
   { term: 'Decreto 513/2025', id: 'decreto-513', cat: 'finanzas', def: {
     es: 'Decreto del Poder Ejecutivo Nacional que reduce los aranceles de importación para equipos ASRS y sistemas de automatización logística en Argentina según la clasificación NCM de cada componente. Vigente desde 2025.',
     en: 'National Executive Branch decree that reduces import tariffs for ASRS equipment and logistics automation systems in Argentina based on the NCM classification of each component. In force since 2025.',

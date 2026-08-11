@@ -11,17 +11,18 @@ import { INDUSTRIES } from './IndustriasPage';
 import { ArrowRight, ArrowLeft, CheckCircle, X, ChevronRight } from 'lucide-react';
 import { LangLink, useLangNavigate } from '../lib/i18n-utils';
 import { SeoHead } from '../lib/SeoHead';
+import { delocalizeSegment } from '../lib/slugMap';
 
 /* Solo datos NO traducibles, resueltos por índice contra el i18n
    (pages.industriaDetail.data.<slug>): valores de stats y URLs de producto.
    Todo el texto vive en i18n con traducción real es/en/zh. */
 const INDUSTRY_MEDIA = {
   'e-commerce-retail': {
-    statValues: ['3x', '99.9%', '-60%', '5x'],
+    statValues: ['3x', '99.9%', '-60%', '3x'],
     productUrls: ['/catalogo/asrs/shuttle', '/catalogo/asrs/miniload', '/catalogo/robots-manipulacion/picking', '/catalogo/software/wms'],
   },
   'logistica-3pl': {
-    statValues: ['40%', '5x', '24/7', '-45%'],
+    statValues: ['40%', '3x', '24/7', '-45%'],
     productUrls: ['/catalogo/asrs/miniload', '/catalogo/asrs/shuttle', '/catalogo/software/wms', '/catalogo/equipo-transporte/transportadores'],
   },
   manufactura: {
@@ -48,7 +49,9 @@ const INDUSTRY_MEDIA = {
 
 
 export const IndustriaDetailPage = () => {
-  const { slug } = useParams();
+  const { slug: slugParam } = useParams();
+  // En /en y /zh el slug llega localizado ('manufacturing'); los datos indexan por slug ES.
+  const slug = delocalizeSegment(slugParam);
   const langNavigate = useLangNavigate();
   const { t, i18n } = useTranslation();
   const media = INDUSTRY_MEDIA[slug];
@@ -66,7 +69,7 @@ export const IndustriaDetailPage = () => {
     benefits: c.benefits,
     challenges: c.challenges,
     solutions: c.solutions,
-    stats: c.stats.map((s, i) => ({ value: media.statValues[i], label: s.label })),
+    stats: c.stats.map((s, i) => ({ value: s.v || media.statValues[i], label: s.label })),
     products: c.products.map((p, i) => ({ name: p.name, url: media.productUrls[i] })),
   } : null;
   const faq = c ? c.faq : null;
@@ -138,14 +141,14 @@ export const IndustriaDetailPage = () => {
       <Navbar />
 
       {/* HERO */}
-      <div className="relative mt-20 h-[55vh] min-h-90 flex items-end overflow-hidden">
+      <div className="relative mt-20 min-h-[55vh] flex items-end overflow-hidden">
         <img src={ind.image} alt={label}
           className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-linear-to-r from-slate-950/95 via-slate-950/70 to-slate-950/20" />
         <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 to-transparent" />
         <div className="absolute top-0 left-0 right-0 h-0.75 bg-cyan-500" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-14 lg:pb-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-14 lg:pb-20">
           <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut' }}>
             <button onClick={() => langNavigate('/industrias')} style={{ outline: 'none' }}
               className="flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors text-xs mb-5">

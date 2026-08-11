@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, User, Mail, Briefcase, Loader2, ArrowRight } from 'lucide-react';
+import { X, User, Mail, Briefcase, Loader2, ArrowRight, ArrowLeft } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { wppLink } from '../lib/contacto';
 
@@ -12,6 +12,7 @@ export const LeadPopup = () => {
   const [product, setProduct] = useState('');
   const [sending, setSending] = useState(false);
   const [done, setDone] = useState(false);
+  const [step, setStep] = useState(1);
   const [form, setForm] = useState({ name: '', email: '', sector: '' });
 
   const sectors = t('contact.sectors', { returnObjects: true });
@@ -21,6 +22,7 @@ export const LeadPopup = () => {
       setProduct(e.detail?.product || '');
       setDone(false);
       setSending(false);
+      setStep(1);
       setForm({ name: '', email: '', sector: '' });
       setOpen(true);
     };
@@ -122,42 +124,74 @@ export const LeadPopup = () => {
                     <p className="text-gray-500 text-xs">{t('leadPopup.opening')}</p>
                   </motion.div>
                 ) : (
-                  <motion.form key="form" onSubmit={handleSubmit} className="space-y-3">
-                    <div className="relative">
-                      <User size={13} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                      <input
-                        type="text" required placeholder={t('leadPopup.namePlaceholder')}
-                        value={form.name} onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))}
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl pl-8 pr-3 py-2.5 text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-all"
-                      />
+                  <motion.div key={`step-${step}`}
+                    initial={{ opacity: 0, x: step === 1 ? -12 : 12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: step === 1 ? 12 : -12 }}
+                    transition={{ duration: 0.18 }}
+                  >
+                    {/* Indicador de pasos */}
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="flex-1 flex gap-1.5">
+                        {[1, 2].map((s) => (
+                          <span key={s} className={`h-1 flex-1 rounded-full transition-colors duration-300 ${s <= step ? 'bg-cyan-500' : 'bg-gray-200'}`} />
+                        ))}
+                      </div>
+                      <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">
+                        {t('leadPopup.step', { n: step })}
+                      </span>
                     </div>
-                    <div className="relative">
-                      <Mail size={13} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                      <input
-                        type="email" required placeholder={t('leadPopup.emailPlaceholder')}
-                        value={form.email} onChange={(e) => setForm(f => ({ ...f, email: e.target.value }))}
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl pl-8 pr-3 py-2.5 text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-all"
-                      />
-                    </div>
-                    <div className="relative">
-                      <Briefcase size={13} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                      <select
-                        required value={form.sector}
-                        onChange={(e) => setForm(f => ({ ...f, sector: e.target.value }))}
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl pl-8 pr-3 py-2.5 text-gray-900 text-sm focus:outline-none focus:border-cyan-400 transition-all appearance-none"
-                      >
-                        <option value="" disabled>{t('leadPopup.sectorPlaceholder')}</option>
-                        {Array.isArray(sectors) && sectors.map((s) => <option key={s} value={s}>{s}</option>)}
-                      </select>
-                    </div>
-                    <button type="submit" disabled={sending}
-                      className="w-full flex items-center justify-center gap-2 py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-black text-sm uppercase tracking-wider rounded-xl transition-colors disabled:opacity-60">
-                      {sending
-                        ? <Loader2 size={15} className="animate-spin" />
-                        : <><span>{t('leadPopup.submit')}</span><ArrowRight size={14} /></>
-                      }
-                    </button>
-                  </motion.form>
+
+                    {step === 1 ? (
+                      <form onSubmit={(e) => { e.preventDefault(); setStep(2); }} className="space-y-3">
+                        <div className="relative">
+                          <User size={13} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                          <input
+                            type="text" required autoFocus placeholder={t('leadPopup.namePlaceholder')}
+                            value={form.name} onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))}
+                            className="w-full bg-gray-50 border border-gray-200 rounded-xl pl-8 pr-3 py-2.5 text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-all"
+                          />
+                        </div>
+                        <div className="relative">
+                          <Mail size={13} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                          <input
+                            type="email" required placeholder={t('leadPopup.emailPlaceholder')}
+                            value={form.email} onChange={(e) => setForm(f => ({ ...f, email: e.target.value }))}
+                            className="w-full bg-gray-50 border border-gray-200 rounded-xl pl-8 pr-3 py-2.5 text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-all"
+                          />
+                        </div>
+                        <button type="submit"
+                          className="w-full flex items-center justify-center gap-2 py-3 bg-cyan-500 hover:bg-cyan-400 text-white font-black text-sm uppercase tracking-wider rounded-xl transition-colors">
+                          <span>{t('leadPopup.continue')}</span><ArrowRight size={14} />
+                        </button>
+                      </form>
+                    ) : (
+                      <form onSubmit={handleSubmit} className="space-y-3">
+                        <div className="relative">
+                          <Briefcase size={13} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                          <select
+                            required autoFocus value={form.sector}
+                            onChange={(e) => setForm(f => ({ ...f, sector: e.target.value }))}
+                            className="w-full bg-gray-50 border border-gray-200 rounded-xl pl-8 pr-3 py-2.5 text-gray-900 text-sm focus:outline-none focus:border-cyan-400 transition-all appearance-none"
+                          >
+                            <option value="" disabled>{t('leadPopup.sectorPlaceholder')}</option>
+                            {Array.isArray(sectors) && sectors.map((s) => <option key={s} value={s}>{s}</option>)}
+                          </select>
+                        </div>
+                        <button type="submit" disabled={sending}
+                          className="w-full flex items-center justify-center gap-2 py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-black text-sm uppercase tracking-wider rounded-xl transition-colors disabled:opacity-60">
+                          {sending
+                            ? <Loader2 size={15} className="animate-spin" />
+                            : <><span>{t('leadPopup.submit')}</span><ArrowRight size={14} /></>
+                          }
+                        </button>
+                        <button type="button" onClick={() => setStep(1)}
+                          className="w-full flex items-center justify-center gap-1.5 py-1.5 text-gray-400 hover:text-gray-600 text-xs font-semibold transition-colors">
+                          <ArrowLeft size={12} /> {t('leadPopup.back')}
+                        </button>
+                      </form>
+                    )}
+                  </motion.div>
                 )}
               </AnimatePresence>
             </div>

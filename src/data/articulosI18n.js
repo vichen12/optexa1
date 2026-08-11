@@ -24,7 +24,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "When it makes sense to install an ASRS in your warehouse",
-          "body": "An ASRS is justified when at least three of these conditions are met: the warehouse handles more than 500 movements per day; available floor space is limited but there is clear height to exploit; labor costs are significant or staff turnover is high; picking or inventory errors create operational or reputational impact; and operating volume is high enough to amortize the investment within 18 to 36 months. In Argentina, Decree 513/2025 (0% tariff on ASRS equipment) and the RIMI regime (accelerated depreciation of capital goods) significantly improve the projected ROI."
+          "body": "An ASRS is justified when at least three of these conditions are met: the warehouse handles more than 500 movements per day; available floor space is limited but there is clear height to exploit; labor costs are significant or staff turnover is high; picking or inventory errors create operational or reputational impact; and operating volume is high enough to amortize the investment within 18 to 36 months. In Argentina, the reduced import duty based on each component's NCM classification (Decree 513/2025) and the RIMI regime (accelerated depreciation of capital goods) significantly improve the projected ROI."
         }
       ],
       "conclusionH2": "First step: a free technical consultation",
@@ -96,7 +96,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "何时值得在仓库中安装ASRS系统",
-          "body": "当满足以下条件中至少三项时，安装ASRS便具有合理性：仓库日均作业量超过500次；可用面积有限，但具备可加以利用的净空高度；人工成本较高或人员流动率较大；拣选或库存差错会造成运营或声誉方面的影响；以及作业量足以在18至36个月内收回投资。在阿根廷，第513/2025号法令（ASRS设备零关税）和RIMI制度（资本货物加速折旧）都显著改善了预期的投资回报率（ROI）。"
+          "body": "当满足以下条件中至少三项时，安装ASRS便具有合理性：仓库日均作业量超过500次；可用面积有限，但具备可加以利用的净空高度；人工成本较高或人员流动率较大；拣选或库存差错会造成运营或声誉方面的影响；以及作业量足以在18至36个月内收回投资。在阿根廷，按各部件NCM归类降低的进口关税（第513/2025号法令）和RIMI制度（资本货物加速折旧）都显著改善了预期的投资回报率（ROI）。"
         }
       ],
       "conclusionH2": "第一步：免费技术咨询",
@@ -154,7 +154,7 @@ export const ARTICULOS_I18N = {
       "h1": "How much does it cost to automate a warehouse in 2026",
       "categoria": "Investment & ROI",
       "readTime": "8 min",
-      "intro": "The most common question in the first technical meeting is always the same: how much does it cost to automate my warehouse? The honest answer is that it depends on many factors—chosen technology, throughput, height, number of SKUs and level of integration—but reference ranges by project type do exist. In Argentina, the automation cost landscape changed substantially in 2025 and 2026: Decree 513/2025 reduces the import tariff for ASRS equipment based on its NCM classification, and the RIMI (Law 27.802) allows accelerated depreciation in the first fiscal year, improving the ROI of every automation project across warehouses, storage facilities and industrial depots.",
+      "intro": "The most common question in the first technical meeting is always the same: how much does it cost to automate my warehouse? The honest answer is that it depends on many factors—chosen technology, throughput, height, number of SKUs and level of integration—but reference ranges by project type do exist. In Argentina, the automation cost landscape changed substantially in 2025 and 2026: Decree 513/2025 reduces the import tariff for ASRS equipment based on its NCM classification, and the RIMI (Law 27.802) allows depreciating capital goods in two equal annual installments, improving the ROI of every automation project across warehouses, storage facilities and industrial depots.",
       "sections": [
         {
           "h2": "Investment ranges by type of automation system",
@@ -162,7 +162,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "Impact of Decree 513/2025 and RIMI on the real cost",
-          "body": "Before Decree 513/2025, importing ASRS equipment carried a tariff of 12% to 18% on the CIF value. For a USD 1,000,000 project, that surcharge amounted to USD 120,000 to USD 180,000. With the decree in force, that outlay disappears. The RIMI (Law 27.802) adds another benefit: accelerated depreciation of 100% of the capital asset in the first fiscal year reduces the tax burden in the year of the investment. For a company taxed at 35%, a USD 1,000,000 project generates a tax reduction of ~USD 350,000 spread over time. Combined, both benefits can reduce the net cost of a project by 25% to 35%."
+          "body": "The import duty on an ASRS system depends on the NCM position of each component: the stacker crane pays 0% under the Common External Tariff, robots and electric stackers 2% (Decree 513/2025), and conveyors and racking considerably more. The RIMI (Law 27.802) adds another benefit: depreciating the capital asset in two equal annual installments brings income tax deductions forward. For a company taxed at 35%, a USD 1,000,000 project allows deducting USD 500,000 in the first year: about USD 175,000 less income tax in that fiscal year, offset in the following ones. It is a deferral, not a discount. What does reduce the cost is the tariff and the 10.5% VAT: between 8% and 15% of the value of the imported equipment."
         },
         {
           "h2": "Typical ROI by industry and project type",
@@ -186,7 +186,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "How does RIMI impact the real price of a project?",
-          "a": "The RIMI (Law 27.802) allows depreciating 100% of the capital asset in the first fiscal year, reducing the income tax base. For a company taxed at 35%, a USD 500,000 project generates a tax reduction of USD 175,000 in the year of the investment. Combined with the 0% tariff under Decree 513/2025, the net cost can be 25-30% lower than the list price."
+          "a": "The RIMI (Law 27.802) allows depreciating the capital asset in two equal annual installments, bringing income tax deductions forward. For a company taxed at 35%, a USD 500,000 project allows deducting USD 250,000 in the first year: about USD 87,500 less income tax in that fiscal year, offset in the following ones. What does reduce the net cost is the duty based on the NCM position and the 10.5% VAT: between 8% and 15% of the value of the imported equipment."
         },
         {
           "q": "How much does technical support cost after installation?",
@@ -226,7 +226,7 @@ export const ARTICULOS_I18N = {
       "h1": "2026年仓库自动化的成本是多少",
       "categoria": "投资与ROI",
       "readTime": "8 分钟",
-      "intro": "在首次技术洽谈中，最常被问到的问题始终如一：将我的仓库自动化需要多少成本？坦率地说，这取决于诸多因素——所选技术、吞吐量、货架高度、SKU 数量以及集成程度——但按项目类型仍然存在可供参考的投资区间。在阿根廷，自动化成本格局在 2025 年和 2026 年发生了重大变化：513/2025 号法令根据 ASRS 设备的 NCM 归类降低其进口关税，而 RIMI（第 27.802 号法律）允许在首个财政年度进行加速折旧，从而提升了所有仓库、库房及工业货仓自动化项目的投资回报率。",
+      "intro": "在首次技术洽谈中，最常被问到的问题始终如一：将我的仓库自动化需要多少成本？坦率地说，这取决于诸多因素——所选技术、吞吐量、货架高度、SKU 数量以及集成程度——但按项目类型仍然存在可供参考的投资区间。在阿根廷，自动化成本格局在 2025 年和 2026 年发生了重大变化：513/2025 号法令根据 ASRS 设备的 NCM 归类降低其进口关税，而 RIMI（第 27.802 号法律）允许将资本货物分两笔相等的年度折旧计提，从而提升了所有仓库、库房及工业货仓自动化项目的投资回报率。",
       "sections": [
         {
           "h2": "按自动化系统类型划分的投资区间",
@@ -234,7 +234,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "513/2025 号法令与 RIMI 对实际成本的影响",
-          "body": "在 513/2025 号法令出台之前，进口 ASRS 设备须按 CIF 价值缴纳 12% 至 18% 的关税。对于一个 USD 1,000,000 的项目，这笔额外成本高达 USD 120,000 至 USD 180,000。该法令生效后，这笔支出不复存在。RIMI（第 27.802 号法律）带来了另一项优惠：在首个财政年度对资本资产进行 100% 加速折旧，可降低投资当年的税负。对于按 35% 税率纳税的企业而言，一个 USD 1,000,000 的项目可带来约 USD 350,000 的税负减免，并分摊于各年度。两项优惠叠加，可使项目的净成本降低 25% 至 35%。"
+          "body": "ASRS 系统的进口关税取决于每个部件的 NCM 归类：堆垛机依共同对外关税（AEC）适用 0%，机器人和电动堆高机适用 2%（第 513/2025 号法令），输送机和货架则明显更高。RIMI（第 27.802 号法律）带来另一项优惠：将资本货物分两笔相等的年度折旧计提，可提前抵扣所得税。对于按 35% 税率纳税的企业而言，一个 USD 1,000,000 的项目第一年可扣除 USD 500,000：当年少缴约 USD 175,000 的所得税，之后年度再行补回——这是递延，而非折扣。真正降低成本的是关税和 10.5% 的 IVA：约为进口设备价值的 8% 至 15%。"
         },
         {
           "h2": "按行业与项目类型划分的典型投资回报率",
@@ -258,7 +258,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "RIMI 如何影响项目的实际价格？",
-          "a": "RIMI（第 27.802 号法律）允许在首个财政年度对资本资产进行 100% 折旧，从而降低所得税税基。对于按 35% 税率纳税的企业而言，一个 USD 500,000 的项目可在投资当年带来 USD 175,000 的税负减免。若再叠加 513/2025 号法令的 0% 关税，净成本可比标价低 25-30%。"
+          "a": "RIMI（第 27.802 号法律）允许将资本货物分两笔相等的年度折旧计提，提前抵扣所得税。对于按 35% 税率纳税的企业而言，一个 USD 500,000 的项目第一年可扣除 USD 250,000：当年少缴约 USD 87,500 的所得税，之后年度再行补回。真正降低净成本的是按 NCM 归类确定的关税和 10.5% 的 IVA：约为进口设备价值的 8% 至 15%。"
         },
         {
           "q": "安装完成后的技术支持费用是多少？",
@@ -442,27 +442,27 @@ export const ARTICULOS_I18N = {
   "rimi-2026-automatizacion": {
     "en": {
       "metaTitle": "RIMI 2026: How It Funds Your Warehouse Automation | STOKA",
-      "metaDesc": "How RIMI (Law 27.802) funds warehouse automation: 100% first-year depreciation and early IVA refunds can cut the investment-year tax burden by USD 200,000.",
+      "metaDesc": "How RIMI (Law 27.802) funds warehouse automation: depreciation in two equal annual installments and VAT recovery in three fiscal periods instead of six.",
       "h1": "RIMI 2026: how the new regime funds your automation",
       "categoria": "Tax benefits",
       "readTime": "7 min",
-      "intro": "RIMI (the Manufacturing and Industry Incentive Regime, Law 27.802) is the most relevant tax instrument of 2026 for SMEs and mid-sized companies looking to automate their warehouses and storage facilities in Argentina. Unlike RIGI — which requires investments of USD 200 million or more — RIMI was designed for standard industrial-scale projects, without such a high minimum threshold. Its main benefit: 100% accelerated depreciation of capital goods acquired in the first fiscal year, plus an early IVA refund on imported equipment. For a USD 500.000 warehouse automation project, these two benefits cut the tax burden in the investment year by up to USD 200.000.",
+      "intro": "RIMI (the Medium-Sized Investment Incentive Regime, Title XXIII of Law 27.802) is the most relevant tax instrument of 2026 for SMEs looking to automate their warehouses and storage facilities in Argentina. Unlike RIGI — which requires investments of USD 200 million or more — RIMI was designed for standard industrial-scale projects, with investment minimums starting at USD 150.000 depending on the MiPyME category. Its main benefit: depreciating new capital goods in two equal annual installments — instead of over their useful life — and recovering the VAT of the investment in three fiscal periods instead of six. For a USD 500.000 warehouse automation project, deducting USD 250.000 in the first year means about USD 87.500 less income tax in that fiscal year: a deduction brought forward that improves cash flow.",
       "sections": [
         {
           "h2": "What RIMI is and who qualifies",
-          "body": "RIMI (Law 27.802) is a special incentive regime for manufacturing and industrial investments in Argentina. It is designed for companies that do not qualify for RIGI because they fall short of the minimum investment threshold or do not operate in that regime's eligible sectors. RIMI's benefits apply to: the acquisition of new capital goods (machinery, automation equipment, industrial robotics), the import of equipment for productive use, and industrial process modernization projects. To apply, a company must submit an investment project to AFIP together with the technical and commercial documentation for the equipment to be acquired. STOKA supports this process with the project's technical documentation."
+          "body": "RIMI (Title XXIII of Law 27.802, regulated by Decree 242/2026) is an incentive regime for medium-sized investments in capital goods in Argentina. It requires a valid MiPyME certificate and reaching the minimum investment for your category, which is computed by adding up eligible investments within a 2-year window. The benefits apply to new movable assets classified as Capital Goods (BK) or IT and Telecommunications Goods (BIT): machinery, automation equipment and industrial robotics, local or imported, for productive use. Registration is processed through ARCA's Investment Management System (SGI). STOKA supports that process with the technical documentation of the project."
         },
         {
           "h2": "Accelerated depreciation of capital goods: how it works",
-          "body": "Normally, an ASRS system or a stacker crane is depreciated over 10 years for accounting purposes (10% per year). With RIMI, you can depreciate 100% of the asset in the first fiscal year. What does that mean in cash terms? For a company paying Income Tax at 35%, a USD 500.000 system counts as the equivalent amount in ARS as a fixed asset. With accelerated depreciation, that full amount is deducted in year 1, reducing the Income Tax base by USD 500.000. The tax saving in the first fiscal year is USD 175.000 (35% × USD 500.000) instead of USD 17.500 (35% × 10% × USD 500.000) under normal depreciation. The difference is USD 157.500 of additional liquidity in the first year."
+          "body": "Normally, an ASRS system or a stacker crane is depreciated over 10 years for accounting purposes (10% per year). With RIMI it is depreciated in two equal annual installments: 50% and 50%. What does that mean in cash terms? For a company paying Income Tax at 35%, a USD 500.000 system allows deducting USD 250.000 in the first year, against USD 50.000 under normal depreciation. That is about USD 70.000 less Income Tax in that fiscal year (35% × the USD 200.000 difference). Important: accelerated depreciation does not reduce the total tax, it brings it forward. You deduct more at the start and less later; over the life of the asset you pay the same, but later, and that money keeps working in your company."
         },
         {
           "h2": "Early IVA refund: impact on cash flow",
-          "body": "When importing ASRS equipment, the company pays IVA at customs. Normally, that IVA is recovered through the tax credit within AFIP's standard processing period, which can stretch from 6 to 18 months. RIMI enables an early IVA refund on capital goods imports within a much shorter timeframe — usually 90 to 120 days — significantly improving the project's cash flow. For a USD 800.000 system (with 21% IVA = USD 168.000), recovering that amount in 3 months instead of 12-18 months represents a financial benefit equal to the cost of money over that period."
+          "body": "When importing ASRS equipment, the company pays IVA at customs. That IVA is a tax credit: it is offset against the IVA your company charges on its sales and, when it is not absorbed, the general regime only allows requesting a refund after six fiscal periods. RIMI shortens that period to three. For a USD 800.000 system with 70% of the machinery under the 10.5% rate, the tax credit is around USD 109.000: recovering it in half the time represents a financial benefit equivalent to the cost of money over that period. The RIMI refund is subject to an annual quota."
         },
         {
           "h2": "Combining RIMI + Decreto 513/2025 + BICE: the optimal scenario",
-          "body": "The three instruments are compatible and reinforce one another. Decreto 513/2025 reduces the import tariff based on the NCM classification (savings vary by NCM). RIMI cuts the first-year tax burden through accelerated depreciation and early IVA refunds. The BICE credit line finances up to 80% of the project over 10 years at a preferential rate. In a representative USD 1.000.000 project: the 0% tariff saves USD 150.000, RIMI's accelerated depreciation generates USD 350.000 in tax deductions in year 1, and BICE brings the upfront outlay down to USD 200.000. The impact on first-year cash flow is dramatic: a company can launch a million-dollar system with a net initial outlay that competes with the labor cost it is replacing."
+          "body": "The three instruments are compatible and reinforce one another. Decreto 513/2025 reduces the import tariff based on the NCM classification (0% to 12.6% depending on the component). RIMI brings deductions forward through the two-installment depreciation and shortens VAT recovery from six to three fiscal periods. The BICE credit line finances up to 80% of the project over 10 years. In a representative USD 1.000.000 project: the tariff and the 10.5% IVA reduce the effective cost of the imported equipment by 8% to 15%, the accelerated depreciation allows deducting USD 500.000 in the first year (about USD 175.000 less Income Tax in that fiscal year), and BICE brings the upfront outlay down to USD 200.000. The impact on first-year cash flow is significant: a company can launch a million-dollar system with a net initial outlay that competes with the labor cost it is replacing."
         }
       ],
       "conclusionH2": "2026 won't come around again",
@@ -470,7 +470,7 @@ export const ARTICULOS_I18N = {
       "faq": [
         {
           "q": "How does RIMI differ from RIGI?",
-          "a": "RIGI (Law 27.742) requires investments of USD 200 million or more and offers 30 years of full tax stability. RIMI (Law 27.802) is designed for standard industrial-scale projects — without such a high minimum threshold — and offers accelerated depreciation and early IVA refunds. For most warehouse and storage-facility automation projects in Argentina, RIMI is the more accessible and applicable instrument."
+          "a": "RIGI (Law 27.742) requires investments of USD 200 million or more and offers 30 years of full tax stability. RIMI (Law 27.802) is designed for standard industrial-scale projects — with investment minimums starting at USD 150.000 depending on the MiPyME category — and offers depreciation in two equal annual installments and VAT recovery in three fiscal periods instead of six. For most warehouse and storage-facility automation projects in Argentina, RIMI is the more accessible and applicable instrument."
         },
         {
           "q": "What documentation do I need to access RIMI?",
@@ -514,27 +514,27 @@ export const ARTICULOS_I18N = {
     },
     "zh": {
       "metaTitle": "RIMI 2026：仓库自动化的税收融资指南",
-      "metaDesc": "RIMI如何为仓库自动化融资：首年100%加速折旧加上IVA提前退税，可将投资当年的税负最多降低20万美元，且可与BICE贷款叠加使用。",
+      "metaDesc": "RIMI如何为仓库自动化融资：分两笔相等的年度折旧计提，并将IVA回收期从6个财政期缩短至3个，改善投资当年的现金流，还可与BICE贷款叠加使用。",
       "h1": "RIMI 2026：新税制如何为您的自动化项目融资",
       "categoria": "税收优惠",
       "readTime": "7 分钟",
-      "intro": "RIMI（制造业与工业激励制度，第27.802号法律）是 2026 年对希望在阿根廷实现仓库及货栈自动化的中小企业和中型企业而言最重要的税收工具。与要求投资达 2 亿美元或以上的 RIGI 不同，RIMI 专为标准工业规模的项目设计，没有如此之高的最低门槛。其核心优惠在于：对首个财政年度购置的资本货物给予 100% 加速折旧，并对进口设备提供 IVA 提前退税。对于一个 USD 500.000 的仓库自动化项目而言，这两项优惠可将投资当年的税负最多降低 USD 200.000。",
+      "intro": "RIMI（中型投资激励制度，第27.802号法律第二十三编）是 2026 年对希望在阿根廷实现仓库及货栈自动化的中小企业而言最重要的税收工具。与要求投资达 2 亿美元或以上的 RIGI 不同，RIMI 专为标准工业规模的项目设计，最低投资额依 MiPyME 类别自 USD 150.000 起。其核心优惠在于：将新购资本货物分两笔相等的年度折旧计提（而非按使用年限折旧），并将投资 IVA 的回收期从 6 个财政期缩短至 3 个。对于一个 USD 500.000 的仓库自动化项目而言，第一年扣除 USD 250.000 意味着当年少缴约 USD 87.500 的所得税：这是一笔提前的抵扣，能改善现金流。",
       "sections": [
         {
           "h2": "什么是 RIMI，谁可以申请",
-          "body": "RIMI（第27.802号法律）是阿根廷针对制造业和工业投资的一项特别激励制度。它专为因未达到最低投资门槛、或不属于 RIGI 合格行业而无法适用 RIGI 的企业而设计。RIMI 的优惠适用于：购置全新的资本货物（机械、自动化设备、工业机器人）、进口用于生产的设备，以及工业流程现代化项目。企业若要申请，须向 AFIP 提交投资项目，并附上拟购置设备的技术与商业文件。STOKA 会以项目的技术文件全程协助这一流程。"
+          "body": "RIMI（第27.802号法律第二十三编，由第242/2026号法令实施细则规范）是阿根廷针对资本货物中型投资的激励制度。企业须持有效的 MiPyME 证书，并在 2 年窗口期内累计达到相应类别的最低投资额。优惠适用于归类为资本货物（BK）或信息技术与电信货物（BIT）的全新动产：机械、自动化设备和工业机器人，本地购置或进口、用于生产均可。登记通过 ARCA 的投资管理系统（SGI）办理。STOKA 会以项目的技术文件全程协助这一流程。"
         },
         {
           "h2": "资本货物加速折旧：运作方式",
-          "body": "通常情况下，一套 ASRS 系统或一台堆垛机在会计上按 10 年折旧（每年 10%）。而借助 RIMI，可在首个财政年度对该资产计提 100% 折旧。这在现金层面意味着什么？对于一家按 35% 缴纳所得税的企业，一套 USD 500.000 的系统即为等值的阿根廷比索（ARS）固定资产。采用加速折旧后，该笔金额可在第 1 年全额扣除，使所得税税基减少 USD 500.000。首个财政年度的税收节省为 USD 175.000（35% × USD 500.000），而非普通折旧下的 USD 17.500（35% × 10% × USD 500.000）。两者相差 USD 157.500，即第一年可多出这笔流动资金。"
+          "body": "通常情况下，一套 ASRS 系统或一台堆垛机在会计上按 10 年折旧（每年 10%）。而借助 RIMI，则分两笔相等的年度折旧计提：50% 加 50%。这在现金层面意味着什么？对于一家按 35% 缴纳所得税的企业，一套 USD 500.000 的系统第一年可扣除 USD 250.000，而普通折旧仅为 USD 50.000。当年因此少缴约 USD 70.000 的所得税（35% × USD 200.000 的差额）。重要提示：加速折旧并不减少税款总额，而是将其提前。前期多扣、后期少扣；在资产的整个使用期内缴纳的税款相同，只是缴得更晚，这笔资金得以留在企业中运转。"
         },
         {
           "h2": "IVA 提前退税：对现金流的影响",
-          "body": "在进口 ASRS 设备时，企业需在海关缴纳 IVA。通常，这笔 IVA 会通过进项税抵扣、在 AFIP 常规处理周期内收回，而该周期可能长达 6 至 18 个月。RIMI 允许对资本货物进口的 IVA 提前退税，退税周期大幅缩短——通常为 90 至 120 天——从而显著改善项目的现金流。以一套 USD 800.000 的系统为例（21% 的 IVA = USD 168.000），在 3 个月内而非 12-18 个月内收回这笔款项，其带来的财务收益相当于该期间的资金成本。"
+          "body": "在进口 ASRS 设备时，企业需在海关缴纳 IVA。这笔 IVA 是进项税额：可抵扣企业销售时收取的 IVA；当无法被吸收时，一般制度须等六个财政期后才能申请退还。RIMI 将该期限缩短至三个。以一套 USD 800.000、其中 70% 的机械适用 10.5% 税率的系统为例，进项税额约为 USD 109.000：用一半的时间收回这笔款项，其财务收益相当于该期间的资金成本。RIMI 退税受年度额度限制。"
         },
         {
           "h2": "RIMI + Decreto 513/2025 + BICE 组合：最优方案",
-          "body": "这三项工具彼此兼容，并能相互增强。Decreto 513/2025 根据 NCM 分类降低进口关税（节省额因 NCM 而异）。RIMI 通过加速折旧和 IVA 提前退税降低第一年的税负。BICE 信贷额度可为项目提供最高 80% 的融资，期限 10 年，利率优惠。在一个具代表性的 USD 1.000.000 项目中：0% 关税可节省 USD 150.000，RIMI 的加速折旧在第 1 年产生 USD 350.000 的税前扣除，而 BICE 将初始支出降至 USD 200.000。对第一年现金流的影响十分显著：企业能够以与其所替代的人力成本相当的净初始支出，启动一套价值百万美元的系统。"
+          "body": "这三项工具彼此兼容，并能相互增强。Decreto 513/2025 根据 NCM 分类降低进口关税（视部件而定，为 0% 至 12.6%）。RIMI 通过分两笔的折旧提前抵扣，并将 IVA 回收期从六个财政期缩短至三个。BICE 信贷额度可为项目提供最高 80% 的融资，期限 10 年。在一个具代表性的 USD 1.000.000 项目中：关税与 10.5% 的 IVA 可将进口设备的实际成本降低 8% 至 15%，加速折旧使第一年可扣除 USD 500.000（当年少缴约 USD 175.000 的所得税），而 BICE 将初始支出降至 USD 200.000。对第一年现金流的影响十分可观：企业能够以与其所替代的人力成本相当的净初始支出，启动一套价值百万美元的系统。"
         }
       ],
       "conclusionH2": "2026 年的机会窗口不会再现",
@@ -542,11 +542,11 @@ export const ARTICULOS_I18N = {
       "faq": [
         {
           "q": "RIMI 与 RIGI 有何区别？",
-          "a": "RIGI（第27.742号法律）要求投资达 2 亿美元或以上，并提供 30 年的完全税收稳定性。RIMI（第27.802号法律）专为标准工业规模的项目设计——没有如此之高的最低门槛——并提供加速折旧和 IVA 提前退税。对于阿根廷绝大多数仓库和货栈自动化项目而言，RIMI 是更易获得、更适用的工具。"
+          "a": "RIGI（第27.742号法律）要求投资达 2 亿美元或以上，并提供 30 年的完全税收稳定性。RIMI（第27.802号法律）专为标准工业规模的项目设计——最低投资额依 MiPyME 类别自 USD 150.000 起——并提供分两笔年度折旧计提，以及将 IVA 回收期从六个财政期缩短至三个。对于阿根廷绝大多数仓库和货栈自动化项目而言，RIMI 是更易获得、更适用的工具。"
         },
         {
           "q": "申请 RIMI 需要哪些文件？",
-          "a": "基本上您需要：资本货物的形式发票或采购合同、设备的技术说明及其生产用途，以及通过 AFIP 正式加入该制度。STOKA 会提供该制度所要求的 ASRS 系统全部技术文件。"
+          "a": "基本上您需要：资本货物的形式发票或采购合同、设备的技术说明及其生产用途，以及通过 ARCA 的投资管理系统（SGI）完成登记。STOKA 会提供该制度所要求的 ASRS 系统全部技术文件。"
         },
         {
           "q": "除硬件外，RIMI 是否也适用于 WMS/WCS 软件？",
@@ -1180,7 +1180,7 @@ export const ARTICULOS_I18N = {
       "sections": [
         {
           "h2": "In plain terms: what a stacker crane does and why it matters",
-          "body": "Think of a stacker crane as a robot that does the work of both a forklift and an operator, but on its own, nonstop, and without making mistakes. It moves down an aisle between tall racks, rises to the exact position, grabs the pallet or box, and delivers it to wherever you need to assemble the order. You don't send anyone to fetch goods or climb 15 meters on a machine: the system brings the product to the operator (this is known as goods-to-person). What does this mean in practice? It solves the three things that hurt in any warehouse. You gain space (storing vertically, up to 3 times more in the same square meters), you gain time (the robot doesn't walk kilometers the way an operator does), and you stop making errors (every movement is controlled by software, with accuracy above 99,9%). That is why the stacker crane is the heart of most automated warehouses: it turns a building full of racking into an operation that runs on its own, 24 hours a day."
+          "body": "Think of a stacker crane as a robot that does the work of both a forklift and an operator, but on its own, nonstop, and with accuracy above 99.9%. It moves down an aisle between tall racks, rises to the exact position, grabs the pallet or box, and delivers it to wherever you need to assemble the order. You don't send anyone to fetch goods or climb 15 meters on a machine: the system brings the product to the operator (this is known as goods-to-person). What does this mean in practice? It solves the three things that hurt in any warehouse. You gain space (storing vertically, up to 3 times more in the same square meters), you gain time (the robot doesn't walk kilometers the way an operator does), and you stop making errors (every movement is controlled by software, with accuracy above 99,9%). That is why the stacker crane is the heart of most automated warehouses: it turns a building full of racking into an operation that runs on its own, 24 hours a day."
         },
         {
           "h2": "Types of stacker crane: unit-load and miniload",
@@ -1196,7 +1196,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "How much a stacker crane costs and its ROI in Argentina",
-          "body": "The cost of a unit-load stacker crane for a mid-scale warehouse aisle (15 meters high, 500 pallet positions) runs between USD 180.000 and USD 280.000, not including the racking or the WCS. A complete 2-aisle project with conveyors, racking, WCS, and integration with the existing ERP in a warehouse in Argentina ranges from USD 800.000 to USD 1.500.000. With Decree 513/2025 (0% tariff on AS/RS equipment) and RIMI (100% accelerated depreciation in the first fiscal year), the net cost of a project drops by 25% to 35%. The typical ROI of a stacker crane project in Argentina is between 18 and 36 months, depending on the current labor cost of the manual operation it replaces."
+          "body": "The cost of a unit-load stacker crane for a mid-scale warehouse aisle (15 meters high, 500 pallet positions) runs between USD 180.000 and USD 280.000, not including the racking or the WCS. A complete 2-aisle project with conveyors, racking, WCS, and integration with the existing ERP in a warehouse in Argentina ranges from USD 800.000 to USD 1.500.000. With the reduced duty based on NCM position (Decree 513/2025), the 10.5% VAT and RIMI's accelerated depreciation, the effective cost reduction is 8% to 15%, plus income tax deductions brought forward that improve first-year cash flow. The typical ROI of a stacker crane project in Argentina is between 18 and 36 months, depending on the current labor cost of the manual operation it replaces."
         },
         {
           "h2": "Is a stacker crane worth it for a small or mid-size warehouse?",
@@ -1224,7 +1224,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "What is the difference between a stacker crane and a forklift?",
-          "a": "A forklift is operated by a person and is used to move pallets one at a time, at low height. A stacker crane is automatic: no one drives it, it operates within a fixed rack aisle, reaches heights of up to 40 meters, and works 24 hours a day without errors or breaks. In short: a forklift is a tool used by an operator; a stacker crane is a robot that replaces the manual travel and stores at heights far beyond a forklift's reach."
+          "a": "A forklift is operated by a person and is used to move pallets one at a time, at low height. A stacker crane is automatic: no one drives it, it operates within a fixed rack aisle, reaches heights of up to 40 meters, and works 24 hours a day with 99.9% accuracy and no breaks. In short: a forklift is a tool used by an operator; a stacker crane is a robot that replaces the manual travel and stores at heights far beyond a forklift's reach."
         },
         {
           "q": "How much does a stacker crane cost?",
@@ -1272,7 +1272,7 @@ export const ARTICULOS_I18N = {
       "sections": [
         {
           "h2": "通俗地说：堆垛机做什么，对您有什么用",
-          "body": "可以把堆垛机想象成一个机器人，它同时完成叉车和操作人员的工作，却能独立运行、不间断、且不出错。它在高货架之间的巷道中移动，升到精确的位置，抓取托盘或箱子，并将其送到您需要拣配订单的地方。您无需派人去取货，也无需让人操作机器爬升 15 米：系统会把货物送到操作人员面前（这被称为货到人 goods-to-person）。具体有什么用？它能解决任何仓库都头疼的三件事：您获得空间（向高处存储，在相同的平方米内最多可多存 3 倍），您节省时间（机器人不像操作人员那样要走上数公里），您不再出错（每一个动作都由软件控制，准确率超过 99,9%）。正因如此，堆垛机是大多数自动化仓库的核心：它把一座堆满货架的厂房，变成一套 24 小时自主运转的作业系统。"
+          "body": "可以把堆垛机想象成一个机器人，它同时完成叉车和操作人员的工作，却能独立运行、不间断、准确率高达99,9%。它在高货架之间的巷道中移动，升到精确的位置，抓取托盘或箱子，并将其送到您需要拣配订单的地方。您无需派人去取货，也无需让人操作机器爬升 15 米：系统会把货物送到操作人员面前（这被称为货到人 goods-to-person）。具体有什么用？它能解决任何仓库都头疼的三件事：您获得空间（向高处存储，在相同的平方米内最多可多存 3 倍），您节省时间（机器人不像操作人员那样要走上数公里），差错大幅减少（每一个动作都由软件控制，准确率超过 99,9%）。正因如此，堆垛机是大多数自动化仓库的核心：它把一座堆满货架的厂房，变成一套 24 小时自主运转的作业系统。"
         },
         {
           "h2": "堆垛机的类型：unit-load 与 miniload",
@@ -1288,7 +1288,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "堆垛机的成本以及在阿根廷的投资回报率",
-          "body": "一台用于中等规模仓库巷道（15 米高、500 个托盘货位）的 unit-load 堆垛机，价格约在 USD 180.000 至 USD 280.000 之间，不含货架和 WCS。在阿根廷的一座仓库中，一个包含输送机、货架、WCS 以及与现有 ERP 集成的完整 2 条巷道项目，价格介于 USD 800.000 至 USD 1.500.000 之间。凭借第 513/2025 号法令（ASRS 设备关税为 0%）和 RIMI（首个财政年度 100% 加速折旧），项目的净成本可降低 25% 至 35%。在阿根廷，堆垛机项目的典型投资回报周期为 18 至 36 个月，具体取决于其所替代的人工作业当前的用工成本。"
+          "body": "一台用于中等规模仓库巷道（15 米高、500 个托盘货位）的 unit-load 堆垛机，价格约在 USD 180.000 至 USD 280.000 之间，不含货架和 WCS。在阿根廷的一座仓库中，一个包含输送机、货架、WCS 以及与现有 ERP 集成的完整 2 条巷道项目，价格介于 USD 800.000 至 USD 1.500.000 之间。凭借按 NCM 归类降低的关税（第 513/2025 号法令）、10.5% 的 IVA 以及 RIMI 的加速折旧，实际成本可降低 8% 至 15%，另有提前抵扣所得税带来的第一年现金流改善。在阿根廷，堆垛机项目的典型投资回报周期为 18 至 36 个月，具体取决于其所替代的人工作业当前的用工成本。"
         },
         {
           "h2": "堆垛机适合中小型仓库吗？",
@@ -1316,7 +1316,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "堆垛机和叉车有什么区别？",
-          "a": "叉车由人操作，用于以低高度一次搬运一个托盘。堆垛机是自动化的：无需人驾驶，它在固定的货架巷道内作业，可达到最高 40 米的高度，并 24 小时不间断工作，不出错也不休息。简而言之：叉车是操作人员使用的工具；堆垛机则是一个机器人，取代了人工的往返行走，并在远超叉车可及高度的位置存储货物。"
+          "a": "叉车由人操作，用于以低高度一次搬运一个托盘。堆垛机是自动化的：无需人驾驶，它在固定的货架巷道内作业，可达到最高 40 米的高度，并以 99,9% 的准确率 24 小时不间断工作。简而言之：叉车是操作人员使用的工具；堆垛机则是一个机器人，取代了人工的往返行走，并在远超叉车可及高度的位置存储货物。"
         },
         {
           "q": "堆垛机要多少钱？",

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { LangLink } from '../lib/i18n-utils';
 import { WPP_TEL, WPP_DISPLAY } from '../lib/contacto';
+import { localizePath, delocalizePath } from '../lib/slugMap';
 
 const FOOTER_LANGS = [
   { code: 'es', label: 'Español' },
@@ -10,13 +11,16 @@ const FOOTER_LANGS = [
   { code: 'zh', label: '中文' },
 ];
 
-/* URL equivalente de la página actual en otro idioma (link estático rastreable). */
+/* URL equivalente de la página actual en otro idioma (link estático rastreable),
+   traduciendo los slugs por idioma vía el mapa central. */
 const buildLangHref = (pathname, code) => {
   let p = pathname;
   if (p.startsWith('/en')) p = p.slice(3) || '/';
   else if (p.startsWith('/zh')) p = p.slice(3) || '/';
   if (!p.startsWith('/')) p = '/' + p;
-  return code === 'es' ? p : `/${code}${p === '/' ? '' : p}`;
+  const esPath = delocalizePath(p);
+  if (code === 'es') return esPath;
+  return esPath === '/' ? `/${code}` : `/${code}${localizePath(esPath, code)}`;
 };
 
 const CATALOGO_PATHS = [
@@ -38,6 +42,7 @@ const INDUSTRIAS_PATHS = [
 ];
 
 const RECURSOS_PATHS = [
+  { key: 'faq',        href: '/preguntas-frecuentes' },
   { key: 'roi',        href: '/recursos/roi-automatizacion' },
   { key: 'comparator', href: '/recursos/comparador-sistemas' },
   { key: 'blog',       href: '/recursos' },

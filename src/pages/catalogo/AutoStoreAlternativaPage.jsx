@@ -29,7 +29,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "¿Existe una alternativa a AutoStore en Argentina?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Los sistemas ASRS que integramos — cube storage, shuttle y transelevadores — compiten directamente con AutoStore. La principal diferencia es el precio: son entre un 30% y un 50% más económicos que AutoStore para proyectos equivalentes, y tienen soporte técnico local en Argentina a través de STOKA." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Los sistemas ASRS que integramos — shuttle y transelevadores — compiten directamente con AutoStore. La principal diferencia es el precio: el costo de adquisición es hasta un 40% menor para proyectos equivalentes, con soporte técnico local en Argentina a través de STOKA." }
     },
     {
       "@type": "Question",
@@ -48,7 +48,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Alternativa a AutoStore en Argentina — Sistemas ASRS",
-  "description": "Sistemas ASRS cube storage y shuttle como alternativa a AutoStore en Argentina y Chile. 30-50% más económico, soporte técnico local.",
+  "description": "Sistemas ASRS shuttle y de transelevadores como alternativa a AutoStore en Argentina y Chile. Hasta 40% menor costo de adquisición, soporte técnico local.",
   "provider": { "@id": "https://www.stokagroup.com/#organization" },
   "areaServed": [
     { "@type": "Country", "name": "Argentina" },
@@ -60,7 +60,7 @@ const COMPARISON = [
   { feature: 'Soporte técnico local en Argentina', stoka: true, autostore: false },
   { feature: 'Repuestos en stock en Argentina', stoka: true, autostore: false },
   { feature: 'Proyecto llave en mano local', stoka: true, autostore: false },
-  { feature: 'Precio competitivo (30-50% menos)', stoka: true, autostore: false },
+  { feature: 'Costo de adquisición hasta 40% menor', stoka: true, autostore: false },
   { feature: 'SKUs hasta 30 kg por unidad', stoka: true, autostore: true },
   { feature: 'SKUs hasta 100 kg por unidad', stoka: true, autostore: false },
   { feature: 'Almacenamiento hasta 40 m de altura', stoka: true, autostore: false },
@@ -162,7 +162,7 @@ export const AutoStoreAlternativaPage = () => {
           {/* Stats chips */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10">
             {[
-              { v: '30-50%', l: p('stat1Label') },
+              { v: 'hasta 40%', l: p('stat1Label') },
               { v: 'Local', l: p('stat2Label') },
               { v: '100%', l: p('stat3Label') },
               { v: '<24h', l: p('stat4Label') },

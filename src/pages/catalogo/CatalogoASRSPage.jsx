@@ -106,7 +106,7 @@ export const CatalogoASRSPage = () => {
       <Navbar />
 
       {/* HERO — video de fondo */}
-      <div className="relative mt-20 h-[70vh] min-h-120 flex items-end overflow-hidden">
+      <div className="relative mt-20 min-h-[70vh] flex items-end overflow-hidden">
         <video
           src="/bannervideo2-compressed.mp4"
           autoPlay muted loop playsInline
@@ -118,7 +118,7 @@ export const CatalogoASRSPage = () => {
         <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-transparent to-transparent" />
         <div className="absolute top-0 left-0 right-0 h-0.75 bg-cyan-500" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-16 lg:pb-20">
           <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut' }}>
             {/* Breadcrumb visual */}
             <nav className="flex items-center gap-2 text-xs text-gray-400 mb-4">
@@ -171,7 +171,7 @@ export const CatalogoASRSPage = () => {
             {[
               { value: '40 m', label: p('stat1Label'), sub: p('stat1Sub') },
               { value: '±0,1 mm', label: p('stat2Label'), sub: p('stat2Sub') },
-              { value: '30–50%', label: p('stat3Label'), sub: p('stat3Sub') },
+              { value: p('stat3Value'), label: p('stat3Label'), sub: p('stat3Sub') },
               { value: '18–36', label: p('stat4Label'), sub: p('stat4Sub') },
             ].map(s => (
               <div key={s.label} className="bg-gray-50 border border-gray-200 rounded-2xl p-4 text-center">
@@ -363,6 +363,9 @@ export const CatalogoASRSPage = () => {
               </motion.div>
             ))}
           </div>
+          <LangLink to="/recursos/glosario" className="inline-block mt-6 text-sm font-semibold text-cyan-600 hover:text-cyan-500">
+            {p('glossaryCta')}
+          </LangLink>
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { resolve, join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { localizePath } from './src/lib/slugMap.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, 'dist');
@@ -21,6 +22,7 @@ const STATIC_ROUTES = [
   '/nosotros',
   '/contacto',
   '/tecnologia-asrs',
+  '/preguntas-frecuentes',
   '/alternativa-economica-asrs',
   '/casos-de-exito',
   '/recursos',
@@ -75,8 +77,10 @@ let errors = 0;
 
 for (const lang of LANGS) {
   for (const route of ROUTES) {
+    // En /en y /zh los slugs van localizados (mapa central en src/lib/slugMap.js)
+    const locRoute = localizePath(route, lang);
     const url =
-      lang === 'es' ? route : `/${lang}${route === '/' ? '' : route}`;
+      lang === 'es' ? route : `/${lang}${locRoute === '/' ? '' : locRoute}`;
     try {
       const { html, helmet } = await render(url);
 

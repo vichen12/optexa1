@@ -22,10 +22,10 @@ export const Hero = () => {
   ];
 
   const STATS = [
-    { value: "1.000+",   label: t('hero.stats.installations') },
-    { value: "15+ años", label: t('hero.stats.years') },
-    { value: "30–50%",   label: t('hero.stats.cheaper') },
-    { value: "CE · ISO", label: t('hero.stats.cert') },
+    { value: t('hero.stats.installationsValue'), label: t('hero.stats.installations') },
+    { value: t('hero.stats.yearsValue'),         label: t('hero.stats.years') },
+    { value: t('hero.stats.cheaperValue'),       label: t('hero.stats.cheaper') },
+    { value: t('hero.stats.certValue'),          label: t('hero.stats.cert') },
   ];
 
   return (
@@ -52,35 +52,20 @@ export const Hero = () => {
       {/* CONTENT */}
       <div className="max-w-5xl mx-auto relative z-10 w-full text-center flex flex-col items-center justify-center min-h-screen pt-20 px-6 py-10">
 
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-6 flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-400/40 bg-cyan-400/10 backdrop-blur-sm"
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-          <span className="text-[11px] font-mono tracking-[0.35em] text-cyan-300 font-bold uppercase">
-            {t('hero.badge')}
-          </span>
-        </motion.div>
-
         {/* Proof strip */}
         <motion.div
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
-          className="mb-5 grid grid-cols-2 gap-x-6 gap-y-2 sm:flex sm:items-center sm:justify-center"
+          className="mb-8 flex flex-wrap items-center justify-center gap-2"
         >
           {PROOF.map((p, i) => (
             <span
               key={i}
-              className="flex items-center justify-center gap-6 text-[11px] font-mono tracking-[0.15em] text-white/60 uppercase whitespace-nowrap"
+              className="flex items-center gap-1.5 bg-white/5 border border-white/15 backdrop-blur-sm rounded-full px-3.5 py-1.5 text-[10px] sm:text-[11px] font-semibold tracking-[0.08em] text-white/75 uppercase whitespace-nowrap"
             >
+              <span aria-hidden="true" className="w-1 h-1 rounded-full bg-cyan-400" />
               {p}
-              {i < PROOF.length - 1 && (
-                <span aria-hidden="true" className="hidden sm:block w-px h-3 bg-white/25" />
-              )}
             </span>
           ))}
         </motion.div>
@@ -92,7 +77,7 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-5"
         >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black italic leading-[0.95] tracking-tighter text-white">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black italic uppercase leading-[0.95] tracking-tighter text-white">
             {t('hero.h1_line1')}<br />
             {t('hero.h1_line2')}<br />
             <span className="text-cyan-400">

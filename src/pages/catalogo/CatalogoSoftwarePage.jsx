@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { useLangNavigate } from '../../lib/i18n-utils';
+import { useLangNavigate, LangLink } from '../../lib/i18n-utils';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { CTABanner } from '../../components/CTABanner';
@@ -273,6 +273,9 @@ export const CatalogoSoftwarePage = () => {
               </motion.div>
             ))}
           </div>
+          <LangLink to="/recursos/glosario" className="inline-block mt-6 text-sm font-semibold text-cyan-600 hover:text-cyan-500">
+            {p('glossaryCta')}
+          </LangLink>
         </div>
       </section>
 

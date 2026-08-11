@@ -16,6 +16,7 @@ export const ARTICULOS_SPRINT2 = [
     readTime: '8 min',
     wordCount: 1500,
     publishDate: '2026-06-14',
+    modifiedDate: '2026-07-29',
     heroImg: IMG_ASRS,
     i18n: {
       es: {
@@ -124,6 +125,7 @@ export const ARTICULOS_SPRINT2 = [
     readTime: '9 min',
     wordCount: 1600,
     publishDate: '2026-06-14',
+    modifiedDate: '2026-07-29',
     heroImg: IMG_WMS,
     i18n: {
       es: {
@@ -136,14 +138,14 @@ export const ARTICULOS_SPRINT2 = [
           { h2: 'Foco 2: Los errores de picking y sus costos ocultos', body: 'Un error de picking no cuesta solo la corrección: cuesta la devolución, el reenvío, la atención al cliente y, sobre todo, la confianza. En un depósito manual la tasa de error ronda el 1% al 3%, que parece poco hasta que se multiplica por el volumen. La automatización con confirmación automática, pick-to-light y control por WMS lleva la exactitud al 99,9%, eliminando casi por completo este costo invisible que rara vez aparece en los reportes pero erosiona el margen.' },
           { h2: 'Foco 3: El espacio mal aprovechado', body: 'Pagar alquiler o amortización por metros cuadrados que no se usan bien es un costo silencioso. Un depósito tradicional desperdicia más de la mitad de su volumen al almacenar en superficie en lugar de altura. La automatización de alta densidad permite almacenar de 3 a 5 veces más en el mismo espacio, lo que muchas veces evita una mudanza o una ampliación —una inversión que puede costar millones. Aprovechar mejor el espacio existente es una de las formas más directas de reducir el costo logístico por unidad almacenada.' },
           { h2: 'Foco 4: Energía y operación 24/7', body: 'Un almacén automatizado consume energía de forma más eficiente: los sistemas modernos recuperan energía en el frenado de los transelevadores y operan en la oscuridad (dark warehouse) sin necesidad de iluminar toda la nave. Además, al funcionar 24/7 sin turnos nocturnos costosos, el costo por hora de operación baja de forma estructural. En cámaras de frío, donde la energía es crítica, la automatización reduce además las pérdidas por apertura de puertas y presencia de personal.' },
-          { h2: 'Foco 5: El stock inmovilizado y el capital de trabajo', body: 'El inventario inmovilizado es dinero que no rota. Un WMS con datos en tiempo real mejora la rotación, reduce el sobrestock y permite trabajar con menos inventario de seguridad gracias a la previsibilidad del sistema. En Argentina, además, los beneficios fiscales como el RIMI permiten amortización acelerada y devolución anticipada de IVA, mejorando el flujo de caja del proyecto de automatización y reduciendo el costo financiero real de la inversión.' },
+          { h2: 'Foco 5: El stock inmovilizado y el capital de trabajo', body: 'El inventario inmovilizado es dinero que no rota. Un WMS con datos en tiempo real mejora la rotación, reduce el sobrestock y permite trabajar con menos inventario de seguridad gracias a la previsibilidad del sistema. En Argentina, además, los beneficios fiscales como el RIMI permiten amortizar en dos cuotas anuales y acortar el recupero del IVA, mejorando el flujo de caja del proyecto de automatización y reduciendo el costo financiero real de la inversión.' },
         ],
         conclusionH2: 'Reducir costos sin recortar capacidad',
         conclusion: 'Bajar el costo logístico de forma sostenible no es cuestión de recortes temporales, sino de atacar los focos estructurales: mano de obra improductiva, errores, espacio desperdiciado, energía y stock inmovilizado. La automatización ataca los cinco a la vez y reduce el costo por pedido de manera permanente. Con los beneficios fiscales vigentes en Argentina, el retorno de la inversión se acelera todavía más. En STOKA calculamos el ahorro específico de tu operación y el payback del proyecto.',
         faq: [
           { q: '¿Cuánto se puede ahorrar en costos logísticos con automatización?', a: 'Depende de la operación, pero la combinación de mayor productividad de picking, menor tasa de error, mejor uso del espacio y operación 24/7 suele reducir el costo por pedido entre un 30% y un 60% respecto a un almacén manual.' },
           { q: '¿La automatización reemplaza a los operarios?', a: 'No necesariamente. El objetivo es que cada operario sea mucho más productivo —preparando 3 a 4 veces más pedidos por hora con sistemas goods-to-person— y reasignar al personal a tareas de mayor valor, en un contexto donde conseguir mano de obra es cada vez más difícil.' },
-          { q: '¿Cómo mejoran los beneficios fiscales el costo de la inversión?', a: 'En Argentina, el RIMI permite amortización acelerada del 100% en el primer ejercicio y devolución anticipada de IVA, y el Decreto 513/2025 reduce los aranceles según la clasificación NCM. Esto mejora el flujo de caja y baja el costo real de automatizar.' },
+          { q: '¿Cómo mejoran los beneficios fiscales el costo de la inversión?', a: 'En Argentina, el RIMI permite amortizar en dos cuotas anuales iguales y recuperar el IVA en tres períodos fiscales en vez de seis, y el Decreto 513/2025 reduce los aranceles según la clasificación NCM. Esto mejora el flujo de caja y baja el costo real de automatizar.' },
         ],
         cta: {
           heading: '¿Cuánto podés reducir tu costo logístico?',
@@ -167,14 +169,14 @@ export const ARTICULOS_SPRINT2 = [
           { h2: 'Driver 2: Picking errors and their hidden costs', body: 'A picking error does not only cost the correction: it costs the return, the reshipment, customer service and, above all, trust. In a manual warehouse the error rate is around 1% to 3%, which seems small until multiplied by volume. Automation with automatic confirmation, pick-to-light and WMS control brings accuracy to 99.9%, almost completely eliminating this invisible cost that rarely appears in reports but erodes the margin.' },
           { h2: 'Driver 3: Poorly used space', body: 'Paying rent or depreciation for square meters that are not well used is a silent cost. A traditional warehouse wastes more than half its volume by storing on the surface instead of the height. High-density automation allows storing 3 to 5 times more in the same space, which often avoids a relocation or expansion —an investment that can cost millions. Making better use of existing space is one of the most direct ways to reduce logistics cost per stored unit.' },
           { h2: 'Driver 4: Energy and 24/7 operation', body: 'An automated warehouse consumes energy more efficiently: modern systems recover energy from stacker crane braking and operate in the dark (dark warehouse) without lighting the whole building. Moreover, by running 24/7 without expensive night shifts, the cost per operating hour drops structurally. In cold storage, where energy is critical, automation also reduces losses from door openings and staff presence.' },
-          { h2: 'Driver 5: Immobilized stock and working capital', body: 'Immobilized inventory is money that does not rotate. A WMS with real-time data improves rotation, reduces overstock and allows working with less safety stock thanks to system predictability. In Argentina, tax benefits such as RIMI allow accelerated depreciation and early VAT refund, improving the automation project\'s cash flow and reducing the real financial cost of the investment.' },
+          { h2: 'Driver 5: Immobilized stock and working capital', body: 'Immobilized inventory is money that does not rotate. A WMS with real-time data improves rotation, reduces overstock and allows working with less safety stock thanks to system predictability. In Argentina, tax benefits such as RIMI allow depreciation in two equal annual installments and a shorter VAT recovery period, improving the automation project\'s cash flow and reducing the real financial cost of the investment.' },
         ],
         conclusionH2: 'Reducing costs without cutting capacity',
         conclusion: 'Lowering logistics cost sustainably is not a matter of temporary cuts, but of attacking the structural drivers: unproductive labor, errors, wasted space, energy and immobilized stock. Automation tackles all five at once and reduces the cost per order permanently. With the tax benefits in force in Argentina, the return on investment accelerates even more. At STOKA we calculate the specific savings of your operation and the project payback.',
         faq: [
           { q: 'How much can be saved in logistics costs with automation?', a: 'It depends on the operation, but the combination of higher picking productivity, lower error rate, better space use and 24/7 operation usually reduces the cost per order by 30% to 60% compared to a manual warehouse.' },
           { q: 'Does automation replace operators?', a: 'Not necessarily. The goal is to make each operator much more productive —preparing 3 to 4 times more orders per hour with goods-to-person systems— and reassign staff to higher-value tasks, in a context where finding labor is increasingly difficult.' },
-          { q: 'How do tax benefits improve the cost of the investment?', a: 'In Argentina, RIMI allows 100% accelerated depreciation in the first year and early VAT refund, and Decreto 513/2025 reduces tariffs based on NCM classification. This improves cash flow and lowers the real cost of automating.' },
+          { q: 'How do tax benefits improve the cost of the investment?', a: 'In Argentina, RIMI allows depreciation in two equal annual installments and VAT recovery in three fiscal periods instead of six, and Decreto 513/2025 reduces tariffs based on NCM classification. This improves cash flow and lowers the real cost of automating.' },
         ],
         cta: {
           heading: 'How much can you reduce your logistics cost?',
@@ -198,14 +200,14 @@ export const ARTICULOS_SPRINT2 = [
           { h2: '驱动因素2：拣选差错及其隐性成本', body: '拣选差错的成本不仅是纠正：还包括退货、重发、客户服务，尤其是信任。在人工仓库中差错率约为1%至3%，看似很小，但乘以数量后就不小了。采用自动确认、灯光拣选和WMS控制的自动化将准确率提升至99.9%，几乎完全消除这种很少出现在报告中却侵蚀利润的隐形成本。' },
           { h2: '驱动因素3：空间利用不当', body: '为利用率低的平方米支付租金或折旧是一种无声的成本。传统仓库因在地面而非高度存储而浪费一半以上的体积。高密度自动化可在相同空间内多存储3至5倍，这通常避免了搬迁或扩建——一项可能耗资数百万的投资。更好地利用现有空间是降低每存储单位物流成本最直接的方式之一。' },
           { h2: '驱动因素4：能源与24/7运营', body: '自动化仓库的能源消耗更高效：现代系统在堆垛机制动时回收能量，并在黑暗中运营（黑灯仓库），无需照亮整个厂房。此外，通过24/7运营而无需昂贵的夜班，每运营小时的成本从结构上下降。在能源至关重要的冷库中，自动化还减少了开门和人员在场造成的损失。' },
-          { h2: '驱动因素5：占压库存与营运资金', body: '占压库存是不周转的资金。具有实时数据的WMS改善周转、减少过量库存，并凭借系统可预测性以更少的安全库存运作。在阿根廷，RIMI等税收优惠允许加速折旧和提前退还增值税，改善自动化项目的现金流并降低投资的实际财务成本。' },
+          { h2: '驱动因素5：占压库存与营运资金', body: '占压库存是不周转的资金。具有实时数据的WMS改善周转、减少过量库存，并凭借系统可预测性以更少的安全库存运作。在阿根廷，RIMI等税收优惠允许分两笔相等的年度折旧计提并缩短增值税回收期，改善自动化项目的现金流并降低投资的实际财务成本。' },
         ],
         conclusionH2: '在不削减容量的情况下降低成本',
         conclusion: '可持续地降低物流成本不是临时削减的问题，而是针对结构性驱动因素：低效人工、差错、浪费空间、能源和占压库存。自动化同时应对所有五项，并永久降低每单成本。凭借阿根廷现行的税收优惠，投资回报进一步加速。STOKA计算您运营的具体节省和项目回收期。',
         faq: [
           { q: '自动化能节省多少物流成本？', a: '取决于运营，但更高的拣选生产力、更低的差错率、更好的空间利用和24/7运营相结合，通常可使每单成本比人工仓库降低30%至60%。' },
           { q: '自动化会替代操作员吗？', a: '不一定。目标是让每位操作员的生产力大幅提升——使用货到人系统每小时准备3至4倍的订单——并在招工日益困难的背景下将人员重新分配到更高价值的任务。' },
-          { q: '税收优惠如何改善投资成本？', a: '在阿根廷，RIMI允许第一年100%加速折旧和提前退还增值税，Decreto 513/2025根据NCM分类降低关税。这改善现金流并降低自动化的实际成本。' },
+          { q: '税收优惠如何改善投资成本？', a: '在阿根廷，RIMI允许分两笔相等的年度折旧计提，并将增值税回收期从6个财政期缩短至3个；Decreto 513/2025根据NCM分类降低关税。这改善现金流并降低自动化的实际成本。' },
         ],
         cta: {
           heading: '您能降低多少物流成本？',
@@ -229,6 +231,7 @@ export const ARTICULOS_SPRINT2 = [
     readTime: '8 min',
     wordCount: 1450,
     publishDate: '2026-06-14',
+    modifiedDate: '2026-07-29',
     heroImg: IMG_SHUTTLE,
     i18n: {
       es: {
@@ -334,6 +337,7 @@ export const ARTICULOS_SPRINT2 = [
     readTime: '9 min',
     wordCount: 1550,
     publishDate: '2026-06-14',
+    modifiedDate: '2026-07-29',
     heroImg: IMG_ASRS,
     i18n: {
       es: {
@@ -439,6 +443,7 @@ export const ARTICULOS_SPRINT2 = [
     readTime: '8 min',
     wordCount: 1450,
     publishDate: '2026-06-14',
+    modifiedDate: '2026-07-29',
     heroImg: IMG_WMS,
     i18n: {
       es: {

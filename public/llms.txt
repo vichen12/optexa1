@@ -1,0 +1,27 @@
+# STOKA
+
+> STOKA es un integrador argentino de sistemas automáticos de almacenamiento (ASRS) con base en Maipú, Mendoza. Diseña, importa, instala y mantiene depósitos automatizados —transelevadores, robots shuttle, torres verticales y software WMS/WCS— para operaciones industriales y logísticas en Argentina y Chile.
+
+STOKA no fabrica los equipos: los diseña para cada operación, los importa, los instala, los pone en marcha y los mantiene con un equipo de ingeniería propio en Argentina. El argumento central de la empresa es que automatizar un depósito existente cuesta menos que alquilar otro, construir una nave nueva o mudar la operación: la densificación permite guardar hasta tres veces más en los mismos metros cuadrados y libera hasta el 66% del piso.
+
+- Sede: Carril Rodríguez Peña 35, Maipú, Mendoza, Argentina (CP 5515)
+- Alcance: Argentina y Chile. Los proyectos chilenos se atienden con ingeniería y soporte desde Argentina, en el mismo huso horario.
+- Contacto: contacto@stokagroup.com · +54 9 261 341 9061
+- Idiomas del sitio: español (por defecto), inglés (/en), chino (/zh)
+
+## Qué hace STOKA
+- [Soluciones](https://www.stokagroup.com/soluciones): los tres problemas que resuelve la automatización de depósitos.
+- [Catálogo](https://www.stokagroup.com/catalogo): 44 sistemas en 5 categorías.
+- [Tecnología ASRS](https://www.stokagroup.com/tecnologia-asrs): qué tecnología integra STOKA y con qué respaldo.
+- [Cómo trabajamos](https://www.stokagroup.com/como-trabajamos): las 6 fases del proyecto, del relevamiento al soporte.
+- [Nosotros](https://www.stokagroup.com/nosotros): qué es STOKA y qué hace.
+
+## Recursos de referencia
+- [Preguntas frecuentes](https://www.stokagroup.com/preguntas-frecuentes): 30 preguntas sobre automatización de depósitos en Argentina, con respuestas directas.
+- [Glosario](https://www.stokagroup.com/recursos/glosario): definiciones de ASRS, WMS, WCS, VLM, AMR, transelevador y demás términos del rubro.
+- [Calculadora de ROI](https://www.stokagroup.com/recursos/roi-automatizacion): estimación de retorno de inversión.
+- [Comparador de sistemas](https://www.stokagroup.com/recursos/comparador-sistemas).
+- [Beneficios fiscales](https://www.stokagroup.com/beneficios-fiscales): regímenes argentinos aplicables a bienes de capital.
+
+## Cobertura geográfica
+- [Buenos Aires](https://www.stokagroup.com/automatizacion-almacenes-buenos-aires) · [Córdoba](https://www.stokagroup.com/automatizacion-almacenes-cordoba) · [Rosario](https://www.stokagroup.com/automatizacion-almacenes-rosario) · [Mendoza](https://www.stokagroup.com/automatizacion-almacenes-mendoza) · [Chile](https://www.stokagroup.com/chile)

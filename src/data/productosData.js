@@ -1367,7 +1367,7 @@ export const PRODUCTOS = {
     nombre: 'Robots AGV / AMR',
     metaTitle: 'Robots AGV y AMR | Transporte Interno Autónomo | STOKA',
     metaDesc: 'AGV y AMR para transporte interno de paletas: navegación SLAM, hasta 1.500 kg y 2 m/s sin obra civil. Ingeniería, instalación y soporte en Argentina y Chile.',
-    heroImg: '/productos/robots-manipulacion/Robot%20lanzadera%20para%20padres%20e%20hijos%20de%20paletas/pallet-parent-child-shuttle-robotdad7c.webp',
+    heroImg: '/productos/robots-manipulacion/Vehiculos%20AGV%20y%20AMR/pallet-latent-amr.webp',
     heroAlt: 'Robot AGV AMR transportando paletas en pasillo de depósito',
     tagline: 'Transporte autónomo de cargas sin infraestructura fija',
     descripcion: 'Los robots AGV (Automated Guided Vehicles) y AMR (Autonomous Mobile Robots) automatizan el transporte interno de paletas y contenedores dentro del almacén, bodega o depósito sin requerir cambios en la infraestructura existente. Los AMR navegan con SLAM (Simultaneous Localization And Mapping) y evitan obstáculos en tiempo real, adaptándose a cambios en el layout. Los AGV siguen rutas predefinidas con alta repetibilidad para flujos constantes y predecibles. Ambos tipos se integran con el WCS para recibir misiones de transporte directamente del sistema de gestión del almacén.',

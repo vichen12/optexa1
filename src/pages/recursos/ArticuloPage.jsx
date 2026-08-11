@@ -38,7 +38,7 @@ export const ArticuloPage = () => {
     "headline": art.h1,
     "description": art.metaDesc,
     "datePublished": art.publishDate,
-    "dateModified": art.publishDate,
+    "dateModified": art.modifiedDate || art.publishDate,
     "author": { "@type": "Organization", "name": "STOKA" },
     "publisher": {
       "@type": "Organization",

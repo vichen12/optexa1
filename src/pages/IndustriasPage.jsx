@@ -12,11 +12,11 @@ import { useLangNavigate } from '../lib/i18n-utils';
 
 export const INDUSTRIES = [
   { slug: 'e-commerce-retail',  icon: ShoppingBag,     image: '/industria-ecommerce-retail.webp',                      stats: [{ v: '3x', l: 'Picking' }, { v: '99.9%', l: 'Exactitud' }, { v: '-60%', l: 'Labor' }] },
-  { slug: 'logistica-3pl',      icon: Truck,           image: '/industria-logistica-3pl.webp',                          stats: [{ v: '40%', l: 'Menos espacio' }, { v: '5x', l: 'Densidad' }, { v: '24/7', l: 'Operación' }] },
+  { slug: 'logistica-3pl',      icon: Truck,           image: '/industria-logistica-3pl.webp',                          stats: [{ v: '40%', l: 'Menos espacio' }, { v: '3x', l: 'Densidad' }, { v: '24/7', l: 'Operación' }] },
   { slug: 'manufactura',        icon: Cog,             image: '/productos/industrias/manufactura.webp',           stats: [{ v: '-35%', l: 'Búsqueda' }, { v: '100%', l: 'Trazabilidad' }, { v: '+20%', l: 'OEE' }] },
   { slug: 'alimentos-bebidas',  icon: UtensilsCrossed, image: '/productos/industrias/alimentos-bebidas.webp',     stats: [{ v: 'FIFO', l: 'Garantizado' }, { v: '100%', l: 'Trazabilidad' }, { v: 'GS1', l: 'Compatible' }] },
   { slug: 'farmaceutica',       icon: FlaskConical,    image: '/productos/industrias/farmaceutica.webp',          stats: [{ v: 'GMP', l: 'Compliant' }, { v: 'FEFO', l: 'Automático' }, { v: '21 CFR', l: 'Compatible' }] },
-  { slug: 'mineria-oil-gas',    icon: HardHat,         image: '/productos/industrias/mineria.webp',               stats: [{ v: '0', l: 'Errores' }, { v: '-30%', l: 'Stock' }, { v: '24/7', l: 'Disponibilidad' }] },
+  { slug: 'mineria-oil-gas',    icon: HardHat,         image: '/productos/industrias/mineria.webp',               stats: [{ v: '99,9%', l: 'Exactitud' }, { v: '-30%', l: 'Stock' }, { v: '24/7', l: 'Disponibilidad' }] },
   { slug: 'cadena-frio',        icon: Snowflake,       image: '/productos/industrias/cadena-frio.webp',           stats: [{ v: '-30°C', l: 'Temp. mín.' }, { v: '0', l: 'Personal exp.' }, { v: '+50%', l: 'Uso cámara' }] },
 ];
 
@@ -52,14 +52,14 @@ export const IndustriasPage = () => {
       <Navbar />
 
       {/* HERO */}
-      <div className="relative mt-20 h-[50vh] min-h-90 flex items-end overflow-hidden">
+      <div className="relative mt-20 min-h-[50vh] flex items-end overflow-hidden">
         <img src="/industrias-banner.webp" alt="Industrias STOKA — automatización ASRS por sector"
           className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-linear-to-r from-slate-950/95 via-slate-950/70 to-slate-950/20" />
         <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 to-transparent" />
         <div className="absolute top-0 left-0 right-0 h-0.75 bg-cyan-500" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-16 lg:pb-20">
           <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut' }}>
             <p className="text-cyan-400 text-[11px] font-black uppercase tracking-[0.35em] mb-4">{t(`${ns}.heroTag`)}</p>
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black italic uppercase leading-[1.05] tracking-tight mb-5">

@@ -36,7 +36,7 @@ export const CatalogPage = () => {
       <Navbar />
 
       {/* HERO */}
-      <div className="relative mt-20 h-[50vh] min-h-90 flex items-end overflow-hidden">
+      <div className="relative mt-20 min-h-[50vh] flex items-end overflow-hidden">
         <img
           src="/catalogo-banner-asrs.webp"
           alt="Almacén automatizado STOKA"
@@ -46,7 +46,7 @@ export const CatalogPage = () => {
         <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 to-transparent" />
         <div className="absolute top-0 left-0 right-0 h-0.75 bg-cyan-500" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-16 lg:pb-20">
           <motion.div
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}

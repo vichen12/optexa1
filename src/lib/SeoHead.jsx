@@ -56,6 +56,15 @@ export function SeoHead({ title, description, ogImage, basePath, noIndex }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={absoluteOgImage} />
+
+      {/* Speakable — el H1 y el primer párrafo son la respuesta extraíble de la página */}
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "url": canonical,
+        "name": title,
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "main p"] },
+      })}</script>
     </Helmet>
   );
 }

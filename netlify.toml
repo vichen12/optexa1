@@ -43,6 +43,396 @@
 # SPA fallback — solo cuando NO existe un archivo prerenderizado.
 # force = false (default) hace que los index.html estáticos tengan prioridad.
 [[redirects]]
+  from = "/en/catalogo/asrs/autostore-alternativa"
+  to = "/en/catalog/asrs/autostore-alternative"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo/asrs"
+  to = "/en/catalog/asrs"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo/asrs/*"
+  to = "/en/catalog/asrs/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo/robots-manipulacion"
+  to = "/en/catalog/handling-robots"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo/robots-manipulacion/*"
+  to = "/en/catalog/handling-robots/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo/almacenamiento-vertical"
+  to = "/en/catalog/vertical-storage"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo/almacenamiento-vertical/*"
+  to = "/en/catalog/vertical-storage/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo/equipo-transporte"
+  to = "/en/catalog/transport-equipment"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo/equipo-transporte/*"
+  to = "/en/catalog/transport-equipment/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo/software"
+  to = "/en/catalog/software"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo/software/*"
+  to = "/en/catalog/software/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo"
+  to = "/en/catalog"
+  status = 301
+
+[[redirects]]
+  from = "/en/catalogo/*"
+  to = "/en/catalog/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/en/industrias/logistica-3pl"
+  to = "/en/industries/3pl-logistics"
+  status = 301
+
+[[redirects]]
+  from = "/en/industrias/manufactura"
+  to = "/en/industries/manufacturing"
+  status = 301
+
+[[redirects]]
+  from = "/en/industrias/alimentos-bebidas"
+  to = "/en/industries/food-beverage"
+  status = 301
+
+[[redirects]]
+  from = "/en/industrias/farmaceutica"
+  to = "/en/industries/pharmaceutical"
+  status = 301
+
+[[redirects]]
+  from = "/en/industrias/mineria-oil-gas"
+  to = "/en/industries/mining-oil-gas"
+  status = 301
+
+[[redirects]]
+  from = "/en/industrias/cadena-frio"
+  to = "/en/industries/cold-chain"
+  status = 301
+
+[[redirects]]
+  from = "/en/industrias"
+  to = "/en/industries"
+  status = 301
+
+[[redirects]]
+  from = "/en/industrias/*"
+  to = "/en/industries/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/en/recursos/glosario"
+  to = "/en/resources/glossary"
+  status = 301
+
+[[redirects]]
+  from = "/en/recursos/comparador-sistemas"
+  to = "/en/resources/system-comparator"
+  status = 301
+
+[[redirects]]
+  from = "/en/recursos/roi-automatizacion"
+  to = "/en/resources/automation-roi"
+  status = 301
+
+[[redirects]]
+  from = "/en/recursos"
+  to = "/en/resources"
+  status = 301
+
+[[redirects]]
+  from = "/en/recursos/*"
+  to = "/en/resources/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/en/soluciones"
+  to = "/en/solutions"
+  status = 301
+
+[[redirects]]
+  from = "/en/beneficios-fiscales"
+  to = "/en/tax-benefits"
+  status = 301
+
+[[redirects]]
+  from = "/en/como-trabajamos"
+  to = "/en/how-we-work"
+  status = 301
+
+[[redirects]]
+  from = "/en/nosotros"
+  to = "/en/about-us"
+  status = 301
+
+[[redirects]]
+  from = "/en/contacto"
+  to = "/en/contact"
+  status = 301
+
+[[redirects]]
+  from = "/en/tecnologia-asrs"
+  to = "/en/asrs-technology"
+  status = 301
+
+[[redirects]]
+  from = "/en/preguntas-frecuentes"
+  to = "/en/faq"
+  status = 301
+
+[[redirects]]
+  from = "/en/alternativa-economica-asrs"
+  to = "/en/affordable-asrs-alternative"
+  status = 301
+
+[[redirects]]
+  from = "/en/casos-de-exito"
+  to = "/en/case-studies"
+  status = 301
+
+[[redirects]]
+  from = "/en/automatizacion-almacenes-buenos-aires"
+  to = "/en/warehouse-automation-buenos-aires"
+  status = 301
+
+[[redirects]]
+  from = "/en/automatizacion-almacenes-mendoza"
+  to = "/en/warehouse-automation-mendoza"
+  status = 301
+
+[[redirects]]
+  from = "/en/automatizacion-almacenes-cordoba"
+  to = "/en/warehouse-automation-cordoba"
+  status = 301
+
+[[redirects]]
+  from = "/en/automatizacion-almacenes-rosario"
+  to = "/en/warehouse-automation-rosario"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/asrs/autostore-alternativa"
+  to = "/zh/catalog/asrs/autostore-alternative"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/asrs"
+  to = "/zh/catalog/asrs"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/asrs/*"
+  to = "/zh/catalog/asrs/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/robots-manipulacion"
+  to = "/zh/catalog/handling-robots"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/robots-manipulacion/*"
+  to = "/zh/catalog/handling-robots/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/almacenamiento-vertical"
+  to = "/zh/catalog/vertical-storage"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/almacenamiento-vertical/*"
+  to = "/zh/catalog/vertical-storage/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/equipo-transporte"
+  to = "/zh/catalog/transport-equipment"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/equipo-transporte/*"
+  to = "/zh/catalog/transport-equipment/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/software"
+  to = "/zh/catalog/software"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/software/*"
+  to = "/zh/catalog/software/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo"
+  to = "/zh/catalog"
+  status = 301
+
+[[redirects]]
+  from = "/zh/catalogo/*"
+  to = "/zh/catalog/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/zh/industrias/logistica-3pl"
+  to = "/zh/industries/3pl-logistics"
+  status = 301
+
+[[redirects]]
+  from = "/zh/industrias/manufactura"
+  to = "/zh/industries/manufacturing"
+  status = 301
+
+[[redirects]]
+  from = "/zh/industrias/alimentos-bebidas"
+  to = "/zh/industries/food-beverage"
+  status = 301
+
+[[redirects]]
+  from = "/zh/industrias/farmaceutica"
+  to = "/zh/industries/pharmaceutical"
+  status = 301
+
+[[redirects]]
+  from = "/zh/industrias/mineria-oil-gas"
+  to = "/zh/industries/mining-oil-gas"
+  status = 301
+
+[[redirects]]
+  from = "/zh/industrias/cadena-frio"
+  to = "/zh/industries/cold-chain"
+  status = 301
+
+[[redirects]]
+  from = "/zh/industrias"
+  to = "/zh/industries"
+  status = 301
+
+[[redirects]]
+  from = "/zh/industrias/*"
+  to = "/zh/industries/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/zh/recursos/glosario"
+  to = "/zh/resources/glossary"
+  status = 301
+
+[[redirects]]
+  from = "/zh/recursos/comparador-sistemas"
+  to = "/zh/resources/system-comparator"
+  status = 301
+
+[[redirects]]
+  from = "/zh/recursos/roi-automatizacion"
+  to = "/zh/resources/automation-roi"
+  status = 301
+
+[[redirects]]
+  from = "/zh/recursos"
+  to = "/zh/resources"
+  status = 301
+
+[[redirects]]
+  from = "/zh/recursos/*"
+  to = "/zh/resources/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/zh/soluciones"
+  to = "/zh/solutions"
+  status = 301
+
+[[redirects]]
+  from = "/zh/beneficios-fiscales"
+  to = "/zh/tax-benefits"
+  status = 301
+
+[[redirects]]
+  from = "/zh/como-trabajamos"
+  to = "/zh/how-we-work"
+  status = 301
+
+[[redirects]]
+  from = "/zh/nosotros"
+  to = "/zh/about-us"
+  status = 301
+
+[[redirects]]
+  from = "/zh/contacto"
+  to = "/zh/contact"
+  status = 301
+
+[[redirects]]
+  from = "/zh/tecnologia-asrs"
+  to = "/zh/asrs-technology"
+  status = 301
+
+[[redirects]]
+  from = "/zh/preguntas-frecuentes"
+  to = "/zh/faq"
+  status = 301
+
+[[redirects]]
+  from = "/zh/alternativa-economica-asrs"
+  to = "/zh/affordable-asrs-alternative"
+  status = 301
+
+[[redirects]]
+  from = "/zh/casos-de-exito"
+  to = "/zh/case-studies"
+  status = 301
+
+[[redirects]]
+  from = "/zh/automatizacion-almacenes-buenos-aires"
+  to = "/zh/warehouse-automation-buenos-aires"
+  status = 301
+
+[[redirects]]
+  from = "/zh/automatizacion-almacenes-mendoza"
+  to = "/zh/warehouse-automation-mendoza"
+  status = 301
+
+[[redirects]]
+  from = "/zh/automatizacion-almacenes-cordoba"
+  to = "/zh/warehouse-automation-cordoba"
+  status = 301
+
+[[redirects]]
+  from = "/zh/automatizacion-almacenes-rosario"
+  to = "/zh/warehouse-automation-rosario"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

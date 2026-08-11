@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
+import { localizePath, delocalizePath } from './slugMap';
 
 const BASE_URL = 'https://www.stokagroup.com';
 const LANGS = ['es', 'en', 'zh'];
@@ -14,7 +15,8 @@ export function useLangPath() {
     if (lang === 'es') return p;
     // La home '/' debe quedar como '/en' (no '/en/'): con cleanUrls de Vercel,
     // '/en/' redirige 308 a '/en'. Se quita la barra final del prefijo de idioma.
-    return p === '/' ? `/${lang}` : `/${lang}${p}`;
+    // Los paths internos siempre se escriben en ES; acá se traducen los slugs.
+    return p === '/' ? `/${lang}` : `/${lang}${localizePath(p, lang)}`;
   };
 }
 
@@ -46,17 +48,19 @@ export function useSeoUrls(basePath) {
   const location = useLocation();
   const lang = i18n.language;
 
-  // Strip the /en or /zh prefix to get the canonical Spanish path
+  // Strip the /en or /zh prefix and de-localize slugs to get the canonical Spanish path
   const rawPath = basePath ?? location.pathname;
-  const spanishPath = rawPath
-    .replace(/^\/en(\/|$)/, '/')
-    .replace(/^\/zh(\/|$)/, '/')
-    .replace(/\/$/, '') || '/';
+  const spanishPath = delocalizePath(
+    rawPath
+      .replace(/^\/en(\/|$)/, '/')
+      .replace(/^\/zh(\/|$)/, '/')
+      .replace(/\/$/, '') || '/'
+  );
 
   const urlFor = (l) =>
     l === 'es'
       ? `${BASE_URL}${spanishPath === '/' ? '' : spanishPath}`
-      : `${BASE_URL}/${l}${spanishPath === '/' ? '' : spanishPath}`;
+      : `${BASE_URL}/${l}${spanishPath === '/' ? '' : localizePath(spanishPath, l)}`;
 
   const canonical = urlFor(lang);
   const hreflangs = [

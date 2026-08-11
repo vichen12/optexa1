@@ -4,6 +4,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { resolve, join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { localizePath } from '../src/lib/slugMap.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -15,7 +16,7 @@ const STATIC_ROUTES = [
   '/catalogo/robots-manipulacion', '/catalogo/almacenamiento-vertical',
   '/catalogo/equipo-transporte', '/catalogo/software', '/industrias',
   '/beneficios-fiscales', '/como-trabajamos', '/nosotros', '/contacto',
-  '/tecnologia-asrs', '/alternativa-economica-asrs', '/casos-de-exito',
+  '/tecnologia-asrs', '/preguntas-frecuentes', '/alternativa-economica-asrs', '/casos-de-exito',
   '/recursos', '/recursos/glosario', '/recursos/comparador-sistemas',
   '/recursos/roi-automatizacion', '/catalogo/asrs/autostore-alternativa',
   '/chile',
@@ -61,9 +62,12 @@ const enc = (s) =>
    "indexable page not in sitemap", y Google recibe la señal hreflang completa. */
 function urlBlocks(route) {
   const path = route === '/' ? '' : enc(route);
+  // Slugs localizados por idioma (mapa central en src/lib/slugMap.js)
+  const pathEn = route === '/' ? '' : enc(localizePath(route, 'en'));
+  const pathZh = route === '/' ? '' : enc(localizePath(route, 'zh'));
   const es = `${BASE}${path || '/'}`;
-  const en = `${BASE}/en${path}`;
-  const zh = `${BASE}/zh${path}`;
+  const en = `${BASE}/en${pathEn}`;
+  const zh = `${BASE}/zh${pathZh}`;
   const { freq, prio } = meta(route);
   const alternates = `    <xhtml:link rel="alternate" hreflang="es"        href="${es}"/>
     <xhtml:link rel="alternate" hreflang="en"        href="${en}"/>
