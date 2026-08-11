@@ -31,12 +31,12 @@
   },
   "hero": {
     "badge": "Warehouse Automation · Local Engineering · Argentina & Chile",
-    "h1_line1": "Automate your warehouse:",
-    "h1_line2": "more space,",
-    "h1_line3": "lower costs",
-    "h1_line4": "and zero errors.",
-    "sub": "Get up to 3x more out of your space, save time and cut errors with automated storage systems. World-class technology, at an accessible price and with local engineering and support in Argentina.",
-    "cta1": "Automate my warehouse",
+    "h1_line1": "Your warehouse can hold",
+    "h1_line2": "up to 3 times more",
+    "h1_line3": "without moving,",
+    "h1_line4": "without building or expanding.",
+    "sub": "Before renting another warehouse or building a new facility, look at how much space you are wasting in height and aisles. Automated storage systems densify what you already have: up to three times more goods in the same square metres, with engineering, installation and support from Argentina.",
+    "cta1": "Show me how much space I can recover",
     "cta2": "View Solutions Catalog",
     "stats": {
       "installations": "Global ASRS Installations",
@@ -48,25 +48,25 @@
       "installations": "1,000+ global installations",
       "countries": "30+ countries",
       "cert": "CE / ISO",
-      "years": "15+ years of track record"
+      "years": "+20 years of manufacturing track record"
     }
   },
   "roi": {
-    "tag": "How much you really save",
-    "h2_a": "Automation",
-    "h2_b": "pays for itself",
-    "sub": "The real numbers of a real operation that automated its warehouse.",
+    "tag": "How much you save, in numbers",
+    "h2_a": "Rent, build or",
+    "h2_b": "densify: the three costs",
+    "sub": "How the three paths compare in a typical operation.",
     "exampleTag": "Illustrative example · Distribution warehouse",
     "space": "Space used",
     "before": "m² before",
     "after": "m² after",
-    "spaceSaving": "–85% floor space",
+    "spaceSaving": "–66% floor area",
     "rentSaving": "Monthly rent savings",
     "perMonth": "per month",
     "payback": "Return on investment",
     "months": "months",
     "noExpand": "Without expanding the facility",
-    "note": "Based on industrial rent rate of <strong>USD 8/m²/month</strong> and 24/7 operation. Every operation is different; results vary by volume, industry and current costs.",
+    "note": "Based on premium industrial rent in Greater Buenos Aires of <strong>USD 7.33/m²/month</strong> (CBRE, Q2 2026) and construction costs of <strong>USD 180 to 430/m²</strong> (OneMake, June 2026). Every operation is different: results vary with volume, industry, available clear height and current costs.",
     "metrics": {
       "costLabel": "Cost reduction",
       "costDesc": "Fewer errors, less labor intensive, less waste.",
@@ -442,33 +442,39 @@
         "desc": "Wine and agro-industry of Cuyo. STOKA local base in Maipú."
       }
     },
-    "problemas": {
-      "tag": "The hidden cost of your warehouse",
-      "h2": "Has your warehouse hit its limit?",
-      "sub": "If any of these three things is happening to you, automation pays for itself. In Argentina, logistics costs account for 20% to 30% of a product’s final value — the warehouse is the biggest hidden cost in your operation.",
-      "cards": [
+    "decision": {
+      "tag": "THE DECISION YOU ARE ABOUT TO MAKE",
+      "h2_a": "The question is not where to move.",
+      "h2_b": "It is how much more the warehouse you already have can hold.",
+      "sub": "When a warehouse runs out of room, three options get evaluated and the fourth is usually dismissed without a look. Here are all four, with what each one costs.",
+      "options": [
         {
-          "title": "Nothing else fits",
-          "body": "Your warehouse ran out of room, and expanding or relocating costs a fortune. Automated systems use the height: up to 3x more goods in the same square meters, with no construction.",
-          "to": "/recursos/falta-de-espacio-deposito-soluciones",
-          "linkLabel": "See space solutions"
+          "title": "Rent another warehouse",
+          "cost": "USD 7.33 per m² per month",
+          "body": "The fastest way out and the most expensive one over time, because the cost never ends and rises with every renewal. Adding 1,000 m² in premium Greater Buenos Aires runs about USD 88,000 a year, every year, without building any asset of your own.",
+          "note": "Premium industrial rent, Greater Buenos Aires. Source: CBRE, Q2 2026."
         },
         {
-          "title": "You lose time and errors creep in",
-          "body": "Searching for products by hand, walking kilometers to pick orders, getting shipments wrong. An automated warehouse brings the goods to the operator and prepares orders with 99.9% accuracy, 24 hours a day.",
-          "to": "/recursos/reducir-costos-logisticos",
-          "linkLabel": "Cut times and errors"
+          "title": "Build a new facility",
+          "cost": "USD 180 to 430 per m²",
+          "body": "It solves the problem for a decade, but it ties up capital before a single pallet moves: you need land, permits, construction and months of running the operation alongside a building site.",
+          "note": "Industrial facility construction cost. Source: OneMake, June 2026."
         },
         {
-          "title": "Rent is eating your margin",
-          "body": "You pay for more and more meters to store the same thing. With high-density storage you keep the same goods in up to 85% less floor space and stop paying for wasted room.",
-          "to": "/recursos/como-aprovechar-espacio-almacen",
-          "linkLabel": "Lower cost per meter"
+          "title": "Relocate the whole operation",
+          "cost": "Moving + downtime + learning curve",
+          "body": "On top of the move itself you pay for what you do not invoice while relocating, for the time new staff take to match the old team's output and, often, for a higher rent to sit closer to demand.",
+          "note": ""
+        },
+        {
+          "title": "Make the one you have work harder",
+          "cost": "Up to 3 times more in the same m²",
+          "body": "A conventional warehouse wastes air: between the aisles a forklift needs and the height nobody uses, more than half the volume stores nothing. Storing vertically and removing aisles lets the same floor area hold up to three times more, freeing up to 66% of the floor for production, docks or growth.",
+          "note": "3x densification versus a conventional selective racking warehouse."
         }
       ],
-      "transPre": "Not sure where to start? Learn what a ",
-      "transAnchor": "stacker crane",
-      "transPost": " is and how it automates your warehouse."
+      "closing": "The first three options buy new square metres. The fourth gives back the ones you are already paying for.",
+      "cta": "Find out how much space you can recover"
     },
     "roiSub2": "It depends on your operation — we calculate it with your numbers.",
     "zonasNote": "Is your operation in another province? We reach there too."
@@ -651,7 +657,7 @@
       "heroTag": "Solutions catalog · Argentina & Chile",
       "heroH1_a": "Automation",
       "heroH1_b": "Catalog",
-      "heroSub": "World-class AS/RS systems, vertical storage, robots and software — with local support in Argentina.",
+      "heroSub": "Everything it takes for the warehouse you already have to hold up to three times more: AS/RS systems, vertical storage, robots and software, with engineering and support from Argentina.",
       "faqTag": "Frequently asked questions",
       "faqH2": "Automation catalog Argentina",
       "faq": [
@@ -1160,7 +1166,7 @@
       "heroTag": "Sectors we automate · Argentina",
       "heroH1_a": "Solutions for",
       "heroH1_b": "your industry",
-      "heroSub": "Each sector has its own storage challenges. See how the technology we integrate solves them with local engineering.",
+      "heroSub": "Each sector has its own storage challenges. See how the technology we integrate solves them with local engineering — without moving or expanding.",
       "heroStats": {
         "industries": "Industries",
         "projects": "Global projects",
@@ -1762,7 +1768,7 @@
       "heroTag": "REAL RESULTS",
       "heroH1_a": "SUCCESS",
       "heroH1_b": "CASES",
-      "heroSub": "Reference implementations of the systems we integrate, across different countries and industries, with verified metrics.",
+      "heroSub": "Reference implementations of the systems we integrate: operations that tripled their warehouse capacity without relocating, across countries and industries, with verified metrics.",
       "stats": [
         {
           "num": "9+",
@@ -2904,7 +2910,7 @@
       "heroTag": "ASRS System · Argentina & Chile",
       "heroH1_a": "AS/RS Systems",
       "heroH1_b": "Automated racking",
-      "heroSub": "AS/RS racking from 7 to 40 meters tall. Drive-in, shuttle, mezzanine and automated selective rack with local support in Argentina.",
+      "heroSub": "AS/RS racking from 7 to 40 metres that uses the height you are not using today: more goods in the same square metres, with no construction or expansion. Drive-in, shuttle, mezzanine and automated selective rack with local support in Argentina.",
       "heroStat1Label": "Models",
       "heroStat2Label": "Max height",
       "heroStat3Label": "Precision",
@@ -3123,7 +3129,7 @@
       "heroTag": "Stacker cranes · Shuttle · AMR",
       "heroH1_a": "Handling robots",
       "heroH1_b": "Stacker cranes, shuttles and AMR",
-      "heroSub": "14 warehouse robot models: stacker cranes, MiniLoad stacker cranes, 4-way shuttle robots and tote robots. 24/7 technical support in Argentina.",
+      "heroSub": "14 warehouse robot models to make the warehouse you already have work harder: stacker cranes, MiniLoad cranes, 4-way shuttle robots and tote robots, with technical support in Argentina.",
       "statsTag": "Warehouse robots",
       "statsH2": "Stacker cranes, shuttle robots, AMR, automatic palletizer and goods-to-person automated picking",
       "stat1Label": "Available models",
@@ -3305,7 +3311,7 @@
       "heroTag": "VLM · Vertical carousel",
       "heroH1_a": "Vertical storage",
       "heroH1_b": "VLM and intelligent carousels",
-      "heroSub": "Save up to 90% of floor space. Ergonomic \"goods-to-person\" picking at operator height, no walking. Integration with ERP and MES.",
+      "heroSub": "Store at height what sits on your floor today: up to 90% less floor space per module, without moving or expanding. Ergonomic picking with goods brought to the operator, no walking. ERP and MES integration.",
       "statsTag": "VLM vs Vertical carousel",
       "statsH2": "Automated vertical warehouse: VLM, carousel and storage tower to optimize space",
       "stat1Label": "Space savings",
@@ -3446,7 +3452,7 @@
       "heroTag": "Conveyors · Lifters · Palletizers",
       "heroH1_a": "Transport equipment —",
       "heroH1_b": "Conveyors, lifters and palletizers",
-      "heroSub": "10 transport equipment models to connect every point of your automated warehouse. From chain conveyors to automatic palletizers with WCS integration.",
+      "heroSub": "10 transport equipment models so internal flow keeps pace with densification: they connect every point of the warehouse you already have, from chain conveyors to automatic palletizers with WCS integration.",
       "statsTag": "Transport equipment",
       "statsH2": "The connective tissue of the automated warehouse — conveyors, lifters and palletizers integrated under WCS",
       "stat1Label": "Available models",
@@ -3626,7 +3632,7 @@
       "heroTag": "WMS · WCS · HMS · ECS",
       "heroH1_a": "Smart software —",
       "heroH1_b": "WMS, WCS and warehouse control",
-      "heroSub": "6 software modules CMMI Level 5 certified. Full control of the automated warehouse with SAP, Oracle and any ERP integration. 3D Digital Twin included.",
+      "heroSub": "The software that makes your existing square metres work harder: 6 CMMI Level 5 certified modules to run the automated warehouse, with SAP, Oracle and any ERP integration. 3D Digital Twin included.",
       "stat1Label": "Software modules",
       "stat2Label": "Top certification",
       "stat3Label": "Native integration",
@@ -4680,7 +4686,7 @@
           }
         ],
         "introH2": "The country's logistics heart",
-        "introP1": "The Buenos Aires Metropolitan Area (AMBA) is Argentina's main node of consumption, distribution and foreign trade. Large logistics parks —in areas such as Tigre, Garín, Pilar, Tortuguitas, Esteban Echeverría and the Panamericana / Buenos Aires–La Plata corridor— host distribution centers for retail, e-commerce, food, pharma and auto parts. Pressure on productivity per square meter is maximal: industrial land near the capital is expensive and scarce, making dense automation (AS/RS, shuttle, VLM) the natural answer to grow without relocating or expanding the footprint.",
+        "introP1": "The Buenos Aires Metropolitan Area (AMBA) is Argentina's main node of consumption, distribution and foreign trade. Large logistics parks —in areas such as Tigre, Garín, Pilar, Tortuguitas, Esteban Echeverría and the Panamericana / Buenos Aires–La Plata corridor— host distribution centers for retail, e-commerce, food, pharma and auto parts. Pressure on productivity per square meter is maximal: industrial land near the capital is expensive and scarce, making dense automation (AS/RS, shuttle, VLM) the natural answer to grow without relocating or expanding the floor area.",
         "introP2": "In this context, logistics operators and retail chains in Greater Buenos Aires face very sharp demand peaks (hot sales, commercial dates, cyber events) that require high throughput and full traceability. STOKA supports automation projects in Buenos Aires end to end: diagnosis with flow simulation, system sizing, integration with the existing ERP/WMS, installation and after-sales support with parts available locally.",
         "whyTag": "Why STOKA in Buenos Aires",
         "whyH2": "Automation designed for AMBA",

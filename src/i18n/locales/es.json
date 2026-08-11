@@ -31,12 +31,12 @@
   },
   "hero": {
     "badge": "Automatización de depósitos · Ingeniería local · Argentina y Chile",
-    "h1_line1": "Automatizá tu depósito:",
-    "h1_line2": "más espacio,",
-    "h1_line3": "menos costos",
-    "h1_line4": "y cero errores.",
-    "sub": "Aprovechá hasta 3 veces más tu espacio, ganá tiempo y reducí errores con sistemas automáticos de almacenamiento. Tecnología de clase mundial, a precio accesible y con ingeniería y soporte en Argentina.",
-    "cta1": "Quiero automatizar mi depósito",
+    "h1_line1": "Tu depósito puede guardar",
+    "h1_line2": "hasta 3 veces más",
+    "h1_line3": "sin mudarte,",
+    "h1_line4": "sin obra ni ampliación.",
+    "sub": "Antes de alquilar otro depósito o construir una nave, mirá cuánto espacio estás desperdiciando en altura y en pasillos. Los sistemas automáticos de almacenamiento densifican lo que ya tenés: hasta tres veces más mercadería en los mismos metros cuadrados, con ingeniería, montaje y soporte desde Argentina.",
+    "cta1": "Quiero saber cuánto espacio puedo recuperar",
     "cta2": "Ver catálogo de soluciones",
     "stats": {
       "installations": "Instalaciones ASRS globales",
@@ -48,25 +48,25 @@
       "installations": "+1.000 instalaciones globales",
       "countries": "+30 países",
       "cert": "CE / ISO",
-      "years": "15+ años de trayectoria"
+      "years": "+20 años de trayectoria fabril"
     }
   },
   "roi": {
-    "tag": "Cuánto ahorrás en serio",
-    "h2_a": "La automatización",
-    "h2_b": "se paga sola",
-    "sub": "Los números reales de una operación real que automatizó su depósito.",
+    "tag": "Cuánto se ahorra, en números",
+    "h2_a": "Alquilar, construir o",
+    "h2_b": "densificar: los tres costos",
+    "sub": "Cómo se comparan los tres caminos en una operación tipo.",
     "exampleTag": "Ejemplo ilustrativo · Almacén de distribución",
     "space": "Espacio utilizado",
     "before": "m² antes",
     "after": "m² después",
-    "spaceSaving": "–85% de superficie",
+    "spaceSaving": "–66% de superficie",
     "rentSaving": "Ahorro mensual en alquiler",
     "perMonth": "por mes",
     "payback": "Retorno de inversión",
     "months": "meses",
     "noExpand": "Sin ampliar la planta",
-    "note": "Basado en tarifa de alquiler industrial de <strong>USD 8/m²/mes</strong> y operación 24/7. Cada operación es distinta; los resultados varían según volumen, rubro y costos actuales.",
+    "note": "Basado en tarifa de alquiler industrial premium AMBA de <strong>USD 7,33/m²/mes</strong> (CBRE, Q2 2026) y costo de construcción de <strong>USD 180 a 430/m²</strong> (OneMake, junio 2026). Cada operación es distinta: los resultados varían según volumen, rubro, altura libre disponible y costos actuales.",
     "metrics": {
       "costLabel": "Reducción de costos",
       "costDesc": "Menos errores, menos labor intensiva, menos mermas.",
@@ -323,33 +323,39 @@
     "seoTag": "STOKA · Automatización de depósitos · Argentina y Chile",
     "h2": "Automatización de almacenes, bodegas y depósitos industriales en Argentina y Chile",
     "seoPara": "Integramos sistemas ASRS de los fabricantes de mayor escala global. Ingeniería, instalación y soporte 100% local en Argentina y Chile.",
-    "problemas": {
-      "tag": "El costo oculto de tu depósito",
-      "h2": "¿Tu depósito llegó al límite?",
-      "sub": "Si te pasa alguna de estas tres cosas, la automatización se paga sola. En Argentina, los costos logísticos representan entre el 20% y el 30% del valor final de un producto — el depósito es el costo oculto más grande de tu operación.",
-      "transPre": "¿No sabés por dónde empezar? Entendé qué es un ",
-      "transAnchor": "transelevador",
-      "transPost": " y cómo automatiza tu depósito.",
-      "cards": [
+    "decision": {
+      "tag": "LA DECISIÓN QUE ESTÁS POR TOMAR",
+      "h2_a": "La pregunta no es adónde te mudás.",
+      "h2_b": "Es cuánto más puede rendir el depósito que ya tenés.",
+      "sub": "Cuando un depósito se queda chico se evalúan tres caminos, y casi siempre se descarta el cuarto sin haberlo mirado. Estos son los cuatro, con lo que cuesta cada uno.",
+      "options": [
         {
-          "title": "No te entra más nada",
-          "body": "Tu depósito se quedó chico y ampliar o mudarte cuesta una fortuna. Los sistemas automáticos aprovechan la altura: hasta 3 veces más mercadería en los mismos metros cuadrados, sin obra.",
-          "to": "/recursos/falta-de-espacio-deposito-soluciones",
-          "linkLabel": "Ver soluciones de espacio"
+          "title": "Alquilar otro depósito",
+          "cost": "USD 7,33 por m² al mes",
+          "body": "Es la salida más rápida y la más cara en el largo plazo, porque el costo no termina nunca y sube en cada renovación. Sumar 1.000 m² en el AMBA premium son unos USD 88.000 por año, todos los años, sin construir ningún activo propio.",
+          "note": "Alquiler industrial premium AMBA. Fuente: CBRE, Q2 2026."
         },
         {
-          "title": "Perdés tiempo y aparecen errores",
-          "body": "Buscar productos a mano, preparar pedidos caminando kilómetros, equivocarse en los envíos. Un depósito automatizado lleva la mercadería hasta el operario y prepara pedidos con 99,9% de exactitud, las 24 horas.",
-          "to": "/recursos/reducir-costos-logisticos",
-          "linkLabel": "Reducir tiempos y errores"
+          "title": "Construir una nave nueva",
+          "cost": "USD 180 a 430 por m²",
+          "body": "Resuelve el problema por una década, pero inmoviliza capital antes de mover un solo pallet: hace falta terreno, permisos, obra y meses de operación conviviendo con la construcción.",
+          "note": "Costo de construcción de nave industrial. Fuente: OneMake, junio 2026."
         },
         {
-          "title": "El alquiler te come la rentabilidad",
-          "body": "Pagás cada vez más metros para guardar lo mismo. Con almacenamiento de alta densidad guardás lo mismo en hasta 85% menos superficie y dejás de pagar espacio de más.",
-          "to": "/recursos/como-aprovechar-espacio-almacen",
-          "linkLabel": "Bajar el costo por metro"
+          "title": "Mudar toda la operación",
+          "cost": "Traslado + parate + curva de aprendizaje",
+          "body": "Al costo del traslado hay que sumarle lo que no se factura durante la mudanza, el tiempo que tarda el personal nuevo en rendir como el anterior y, con frecuencia, un alquiler más caro por acercarse al consumo.",
+          "note": ""
+        },
+        {
+          "title": "Hacer rendir el que ya tenés",
+          "cost": "Hasta 3 veces más en los mismos m²",
+          "body": "Un depósito convencional desperdicia el aire: entre los pasillos que necesita el autoelevador y la altura que nadie usa, más de la mitad del volumen no guarda nada. Al almacenar en altura y eliminar pasillos, la misma superficie guarda hasta tres veces más y se libera hasta el 66% del piso para producción, playa de carga o crecimiento.",
+          "note": "Densificación 3x sobre depósito con estantería selectiva convencional."
         }
-      ]
+      ],
+      "closing": "Las tres primeras opciones compran metros cuadrados nuevos. La cuarta te devuelve los que ya estás pagando.",
+      "cta": "Calculá cuánto espacio podés recuperar"
     },
     "stats": {
       "installations": "Instalaciones globales",
@@ -651,7 +657,7 @@
       "heroTag": "Catálogo de soluciones · Argentina y Chile",
       "heroH1_a": "Catálogo de",
       "heroH1_b": "Automatización",
-      "heroSub": "Sistemas AS/RS, almacenamiento vertical, robots y software de clase mundial — con soporte local en Argentina.",
+      "heroSub": "Todo lo que hace falta para que el depósito que ya tenés guarde hasta tres veces más: sistemas AS/RS, almacenamiento vertical, robots y software, con ingeniería y soporte desde Argentina.",
       "faqTag": "Preguntas frecuentes",
       "faqH2": "Catálogo de automatización Argentina",
       "faq": [
@@ -1160,7 +1166,7 @@
       "heroTag": "Sectores que automatizamos · Argentina",
       "heroH1_a": "Soluciones para",
       "heroH1_b": "tu industria",
-      "heroSub": "Cada sector tiene sus propios desafíos de almacenamiento. Conocé cómo la tecnología que integramos los resuelve con ingeniería local.",
+      "heroSub": "Cada sector tiene sus propios desafíos de almacenamiento. Conocé cómo, sin mudarte ni ampliar, la tecnología que integramos los resuelve con ingeniería local.",
       "heroStats": {
         "industries": "Industrias",
         "projects": "Proyectos globales",
@@ -1762,7 +1768,7 @@
       "heroTag": "RESULTADOS REALES",
       "heroH1_a": "CASOS DE",
       "heroH1_b": "ÉXITO",
-      "heroSub": "Implementaciones de referencia de los sistemas que integramos, en distintos países e industrias, con métricas verificadas.",
+      "heroSub": "Implementaciones de referencia de los sistemas que integramos: operaciones que triplicaron la capacidad de sus depósitos sin mudarse, en distintos países e industrias, con métricas verificadas.",
       "stats": [
         {
           "num": "9+",
@@ -2907,7 +2913,7 @@
       "transPost": ": una grúa automática que guarda y recupera la mercadería en altura, sin operarios.",
       "heroH1_a": "Sistemas AS/RS",
       "heroH1_b": "Estanterías automatizadas",
-      "heroSub": "Estanterías AS/RS de 7 a 40 metros de altura. Drive-in, shuttle, mezzanine y rack selectivo automatizado con soporte local en Argentina.",
+      "heroSub": "Estanterías AS/RS de 7 a 40 metros que aprovechan la altura que hoy no usás: más mercadería en los mismos metros, sin obra ni ampliación. Drive-in, shuttle, mezzanine y rack selectivo automatizado con soporte local en Argentina.",
       "heroStat1Label": "Modelos",
       "heroStat2Label": "Altura máx.",
       "heroStat3Label": "Precisión",
@@ -3123,7 +3129,7 @@
       "heroTag": "Transelevadores · Shuttle · AMR",
       "heroH1_a": "Robots de manipulación",
       "heroH1_b": "Transelevadores, shuttles y AMR",
-      "heroSub": "14 modelos de robots de almacén: grúas apiladoras, transelevadores MiniLoad, robots lanzadera 4 vías y robots tote. Soporte técnico 24/7 en Argentina.",
+      "heroSub": "14 modelos de robots de almacén para hacer rendir el depósito que ya tenés: grúas apiladoras, transelevadores MiniLoad, robots lanzadera 4 vías y robots tote, con soporte técnico en Argentina.",
       "statsTag": "Robots de almacén",
       "statsH2": "Transelevadores, robots shuttle, AMR, paletizadora automática y picking automatizado goods-to-person",
       "stat1Label": "Modelos disponibles",
@@ -3305,7 +3311,7 @@
       "heroTag": "VLM · Carrusel vertical",
       "heroH1_a": "Almacenamiento vertical",
       "heroH1_b": "VLM y carruseles inteligentes",
-      "heroSub": "Ahorrá hasta el 90% del espacio de suelo. Picking ergonómico \"mercancías a persona\" a la altura del operador, sin desplazamientos. Integración con ERP y MES.",
+      "heroSub": "Guardá en altura lo que hoy ocupa piso: hasta 90% menos huella en el módulo, sin mudarte ni ampliar. Picking ergonómico con la mercadería a la altura del operario, sin desplazamientos. Integración con ERP y MES.",
       "statsTag": "VLM vs Carrusel vertical",
       "statsH2": "Almacén vertical automático: VLM, carrusel y torre de almacenamiento para optimizar espacio",
       "stat1Label": "Ahorro de espacio",
@@ -3446,7 +3452,7 @@
       "heroTag": "Conveyors · Elevadores · Paletizadores",
       "heroH1_a": "Equipo de transporte —",
       "heroH1_b": "Conveyors, elevadores y paletizadores",
-      "heroSub": "10 modelos de equipos de transporte para conectar cada punto de tu almacén automatizado. Desde transportadores de cadena hasta paletizadores automáticos con integración WCS.",
+      "heroSub": "10 modelos de equipos de transporte para que el flujo interno acompañe la densificación: conectan cada punto del depósito que ya tenés, desde transportadores de cadena hasta paletizadores automáticos con integración WCS.",
       "statsTag": "Equipo de transporte",
       "statsH2": "El tejido conectivo del almacén automatizado — conveyors, elevadores y paletizadores integrados bajo WCS",
       "stat1Label": "Modelos disponibles",
@@ -3626,7 +3632,7 @@
       "heroTag": "WMS · WCS · HMS · ECS",
       "heroH1_a": "Software inteligente —",
       "heroH1_b": "WMS, WCS y control de almacén",
-      "heroSub": "6 módulos de software certificados CMMI Nivel 5. Control total del almacén automatizado con integración SAP, Oracle y cualquier ERP. Digital Twin 3D incluido.",
+      "heroSub": "El software que hace rendir los metros que ya tenés: 6 módulos certificados CMMI Nivel 5 para controlar el almacén automatizado, con integración SAP, Oracle y cualquier ERP. Digital Twin 3D incluido.",
       "stat1Label": "Módulos de software",
       "stat2Label": "Certificación máxima",
       "stat3Label": "Integración nativa",
@@ -4680,7 +4686,7 @@
           }
         ],
         "introH2": "El corazón logístico del país",
-        "introP1": "El Área Metropolitana de Buenos Aires (AMBA) es el principal nodo de consumo, distribución y comercio exterior de la Argentina. Los grandes parques logísticos —en zonas como Tigre, Garín, Pilar, Tortuguitas, Esteban Echeverría y el corredor de la Ruta Panamericana y la Autopista Buenos Aires–La Plata— alojan centros de distribución de retail, e-commerce, alimentos, farmacéutica y autopartes. La presión sobre la productividad por metro cuadrado es máxima: el suelo industrial cerca de la Capital es caro y escaso, lo que vuelve a la automatización densa (AS/RS, shuttle, VLM) la respuesta natural para crecer sin mudarse ni ampliar el footprint.",
+        "introP1": "El Área Metropolitana de Buenos Aires (AMBA) es el principal nodo de consumo, distribución y comercio exterior de la Argentina. Los grandes parques logísticos —en zonas como Tigre, Garín, Pilar, Tortuguitas, Esteban Echeverría y el corredor de la Ruta Panamericana y la Autopista Buenos Aires–La Plata— alojan centros de distribución de retail, e-commerce, alimentos, farmacéutica y autopartes. La presión sobre la productividad por metro cuadrado es máxima: el suelo industrial cerca de la Capital es caro y escaso, lo que vuelve a la automatización densa (AS/RS, shuttle, VLM) la respuesta natural para crecer sin mudarse ni ampliar el superficie.",
         "introP2": "En este contexto, los operadores logísticos y las cadenas de retail del GBA enfrentan picos de demanda muy marcados (hot sales, fechas comerciales, cyber events) que exigen throughput elevado y trazabilidad total. STOKA acompaña proyectos de automatización en Buenos Aires de punta a punta: diagnóstico con simulación de flujos, dimensionamiento del sistema, integración con el ERP/WMS existente, instalación y soporte posventa con repuestos disponibles localmente.",
         "whyTag": "Por qué STOKA en Buenos Aires",
         "whyH2": "Automatización pensada para el AMBA",
