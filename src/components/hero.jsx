@@ -50,7 +50,7 @@ export const Hero = () => {
       </div>
 
       {/* CONTENT */}
-      <div className="max-w-5xl mx-auto relative z-10 w-full text-center flex flex-col items-center justify-center min-h-screen pt-20 px-6 py-10">
+      <div className="max-w-5xl mx-auto relative z-10 w-full text-center flex flex-col items-center justify-center min-h-screen pt-32 px-6 pb-10">
 
         {/* Proof strip */}
         <motion.div
