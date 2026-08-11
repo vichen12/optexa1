@@ -52,7 +52,7 @@ export const Hero = () => {
       {/* CONTENT */}
       {/* flex-1 (no min-h-screen): el contenido llena el alto restante y el hero
           completo —con la barra de stats incluida— entra en 100vh */}
-      <div className="max-w-5xl mx-auto relative z-10 w-full text-center flex flex-col items-center justify-center flex-1 pt-28 px-6 pb-8">
+      <div className="max-w-5xl mx-auto relative z-10 w-full text-center flex flex-col items-center justify-center flex-1 pt-36 px-6 pb-8">
 
         {/* Proof strip */}
         <motion.div
