@@ -12,12 +12,12 @@ import { SeoHead } from '../lib/SeoHead';
 const canonical = 'https://www.stokagroup.com/chile';
 
 const SECTOR_IMAGES = [
-  '/productos-delie/asrs/Estanter%C3%ADa%20del%20robot%20Tote%20Shuttle/tote-shuttle-robot-racking38678.webp',
-  '/productos-delie/robots-manipulacion/Robot%20transportador%20de%20paletas%20de%20almacenamiento%20en%20fr%C3%ADo/cold-storage-pallet-shuttle-robot3e9c9.webp',
-  '/productos-delie/almacenamiento-vertical/Carrusel%20vertical%20inteligente%20para%20almacenamiento%20automatizado%20de%20alta-densidad/2025112714330825019.webp',
-  '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20paletas%20de%20doble-m%C3%A1stil/double-mast-pallet-stacker-craned111c.webp',
-  '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp',
-  '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20paletas%20personalizada/customized-pallet-stacker-crane5dc5d.webp',
+  '/productos/asrs/Estanter%C3%ADa%20del%20robot%20Tote%20Shuttle/tote-shuttle-robot-racking38678.webp',
+  '/productos/robots-manipulacion/Robot%20transportador%20de%20paletas%20de%20almacenamiento%20en%20fr%C3%ADo/cold-storage-pallet-shuttle-robot3e9c9.webp',
+  '/productos/almacenamiento-vertical/Carrusel%20vertical%20inteligente%20para%20almacenamiento%20automatizado%20de%20alta-densidad/2025112714330825019.webp',
+  '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20paletas%20de%20doble-m%C3%A1stil/double-mast-pallet-stacker-craned111c.webp',
+  '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp',
+  '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20paletas%20personalizada/customized-pallet-stacker-crane5dc5d.webp',
 ];
 
 const SYSTEM_URLS = [
@@ -140,12 +140,12 @@ export const ChilePage = () => {
       <section className="px-6 pb-12">
         <div className="max-w-5xl mx-auto grid grid-cols-3 gap-3 rounded-2xl overflow-hidden">
           {[
-            '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
-            '/productos-delie/asrs/Transelevador%20Gr%C3%BAa%20+%20Estanter%C3%ADa%20Robot%20Lanzadera/pallet-stacker-crane-shuttle-robot-racking89e90.webp',
-            '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20paletas%20de%20doble-m%C3%A1stil/double-mast-pallet-stacker-craned111c.webp',
+            '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
+            '/productos/asrs/Transelevador%20Gr%C3%BAa%20+%20Estanter%C3%ADa%20Robot%20Lanzadera/pallet-stacker-crane-shuttle-robot-racking89e90.webp',
+            '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20paletas%20de%20doble-m%C3%A1stil/double-mast-pallet-stacker-craned111c.webp',
           ].map((src, i) => (
             <div key={i} className="relative h-44 overflow-hidden rounded-xl border border-gray-100">
-              <img loading="lazy" src={src} alt="Sistema ASRS DELIE en bodega Chile" className="w-full h-full object-cover" />
+              <img loading="lazy" src={src} alt="Sistema ASRS con transelevadores en bodega automatizada en Chile" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-linear-to-t from-gray-900/30 to-transparent" />
             </div>
           ))}

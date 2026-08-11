@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useLangNavigate } from '../lib/i18n-utils';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
-const img = (cat, prod, file) => `/productos-delie/${cat}/${seg(prod)}/${file}`;
+const img = (cat, prod, file) => `/productos/${cat}/${seg(prod)}/${file}`;
 
 const CAT_R = 'robots-manipulacion';
 const CAT_V = 'almacenamiento-vertical';
@@ -337,31 +337,6 @@ export const ProductCatalog = () => {
             </motion.button>
           ))}
 
-          {/* Card YouTube DELIE */}
-          <motion.a
-            href="https://www.youtube.com/@DELIECN"
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: LOCALIZED.length * 0.07 }}
-            className="text-left rounded-2xl overflow-hidden border border-gray-200 bg-slate-900 shadow-sm hover:shadow-md hover:border-red-500/40 transition-all duration-300 group"
-          >
-            <div className="aspect-video flex items-center justify-center bg-slate-800 relative overflow-hidden">
-              <div className="absolute inset-0 bg-linear-to-br from-slate-700 to-slate-900" />
-              <img loading="lazy" src="/image.webp" alt="DELIE — Fabricante de sistemas ASRS" className="relative z-10 w-28 object-contain" />
-              <div className="absolute top-3 right-3 w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6a3 3 0 0 0-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
-              </div>
-            </div>
-            <div className="p-5">
-              <h3 className="text-white font-black text-base uppercase tracking-tight mb-1">{ct('youtubeTitle')}</h3>
-              <p className="text-gray-400 text-xs leading-relaxed mb-3">{ct('youtubeDesc')}</p>
-              <span className="inline-flex items-center gap-1 text-xs font-semibold text-red-400 group-hover:gap-2 transition-all">
-                {ct('verCanal')} <ChevronRight size={13} />
-              </span>
-            </div>
-          </motion.a>
         </div>
       </div>
     </section>
@@ -388,7 +363,7 @@ export const ProductCatalog = () => {
         </nav>
 
         <p className="text-[10px] font-mono text-cyan-500 tracking-[0.5em] uppercase mb-2">
-          DELIE · {activeCat.products.length} {ct('productsLabel')}
+          {activeCat.products.length} {ct('productsLabel')}
         </p>
         <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter">
           {activeCat.label}

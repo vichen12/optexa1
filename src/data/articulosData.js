@@ -4,11 +4,11 @@ export const ARTICULOS = [
     h1: 'Qué es un sistema ASRS y cómo funciona',
     metaTitle: '¿Qué es un Sistema ASRS? Guía Completa 2026 | STOKA',
     wordCount: 1600,
-    metaDesc: 'Guía completa sobre sistemas ASRS (Automated Storage and Retrieval System): tipos, componentes, cómo funciona un transelevador y cuándo conviene automatizar',
+    metaDesc: 'Qué es un sistema ASRS y cómo funciona: componentes, tipos de transelevadores y shuttles, ciclos de 45 a 120 segundos y cuándo conviene automatizar.',
     categoria: 'Fundamentos ASRS',
     readTime: '7 min',
     publishDate: '2026-06-10',
-    heroImg: '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
+    heroImg: '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
     intro: 'Un sistema ASRS (Automated Storage and Retrieval System, o sistema automatizado de almacenamiento y recuperación) es la infraestructura tecnológica que permite que un almacén, bodega o depósito industrial almacene y recupere paletas, cajas y contenedores sin intervención humana directa. En lugar de operarios manejando carretillas elevadoras en pasillos de estanterías, el ASRS usa transelevadores, robots lanzadera o robots shuttle que se mueven automáticamente dentro del rack, guiados por un software WCS que recibe órdenes del WMS. El resultado: mayor densidad de almacenamiento, mayor velocidad de operación, menor tasa de error y reducción del costo de mano de obra en el largo plazo.',
     sections: [
       {
@@ -34,7 +34,7 @@ export const ARTICULOS = [
       { q: '¿Cuál es la diferencia entre ASRS y automatización de almacenes?', a: 'La automatización de almacenes es el concepto general: incluye ASRS, robots AMR, transportadores, sistemas de picking automático y software WMS/WCS. El ASRS es la parte de almacenamiento y recuperación automática, que puede ser el núcleo de un almacén automatizado completo o una tecnología puntual para una zona específica del depósito.' },
       { q: '¿Cuánto tiempo demora instalar un ASRS?', a: 'Un proyecto completo de instalación de ASRS va de 5 a 10 meses desde la orden de compra hasta el arranque operativo: 2-3 meses de ingeniería de detalle, 3-4 meses de fabricación y 4-10 semanas de instalación + integración + puesta en marcha en el almacén o bodega.' },
       { q: '¿El ASRS requiere cambios en la estructura del almacén?', a: 'Depende del diseño. Si el almacén tiene altura libre suficiente y una losa nivelada, el ASRS se instala sin obra mayor. Los proyectos que requieren más altura sí necesitan construcción de nave nueva o ampliación vertical. STOKA evalúa la factibilidad técnica in-situ antes de la propuesta.' },
-      { q: '¿Qué pasa si el sistema ASRS se detiene por una falla?', a: 'Los sistemas ASRS modernos tienen redundancia en los equipos de control y modos de operación manual de emergencia. Si falla un transelevador, el pasillo puede operarse manualmente con carretilla en modo emergencia. El MTBF (tiempo medio entre fallas) de los transelevadores DELIE supera las 8.000 horas de operación continua.' },
+      { q: '¿Qué pasa si el sistema ASRS se detiene por una falla?', a: 'Los sistemas ASRS modernos tienen redundancia en los equipos de control y modos de operación manual de emergencia. Si falla un transelevador, el pasillo puede operarse manualmente con carretilla en modo emergencia. El MTBF (tiempo medio entre fallas) de los transelevadores modernos supera las 8.000 horas de operación continua.' },
     ],
     cta: { heading: 'Conocé cómo funciona un ASRS en tu operación específica', text: 'Primera consulta gratuita con ingeniero especializado. Análisis de throughput y estimación de ROI incluidos.', btnPrimary: { label: 'Solicitar consulta técnica', url: '/contacto' }, btnSecondary: { label: 'Ver sistemas ASRS', url: '/catalogo/asrs' } },
     relacionados: [
@@ -49,7 +49,7 @@ export const ARTICULOS = [
     h1: 'Cuánto cuesta automatizar un almacén en 2026',
     metaTitle: '¿Cuánto Cuesta Automatizar un Almacén en 2026? | STOKA',
     wordCount: 1700,
-    metaDesc: 'Guía de costos para automatizar almacenes, bodegas y depósitos en Argentina 2026. Rangos de inversión por tecnología, impacto del RIMI y Decreto 513/2025 y',
+    metaDesc: 'Cuánto cuesta automatizar un almacén en Argentina: rangos desde USD 80.000 por tecnología, y cómo el RIMI y el Decreto 513/2025 bajan el neto un 25-35%.',
     categoria: 'Inversión y ROI',
     readTime: '8 min',
     publishDate: '2026-06-10',
@@ -92,13 +92,13 @@ export const ARTICULOS = [
   {
     slug: 'transelevador-vs-shuttle',
     h1: 'Transelevador vs Shuttle: cuál conviene según tu operación',
-    metaTitle: 'Transelevador vs Shuttle: Cuál Elegir | STOKA',
+    metaTitle: 'Transelevador vs Shuttle: Cuál Elegir en 2026 | STOKA',
     wordCount: 1500,
-    metaDesc: 'Comparativa técnica entre transelevador unit-load y pallet shuttle. Throughput, densidad, costo y operación. Cuál conviene para tu almacén, bodega o depósito',
+    metaDesc: 'Transelevador o pallet shuttle, cuál conviene: comparativa de throughput (200 vs 400 paletas/hora), densidad, TCO a 10 años y perfil de operación ideal.',
     categoria: 'Comparativas técnicas',
     readTime: '6 min',
     publishDate: '2026-06-10',
-    heroImg: '/productos-delie/robots-manipulacion/Robot%20lanzadera%20de%20cuatro%20direcciones-para%20paletas/pallet-four-way-shuttle-robotb829c.webp',
+    heroImg: '/productos/robots-manipulacion/Robot%20lanzadera%20de%20cuatro%20direcciones-para%20paletas/pallet-four-way-shuttle-robotb829c.webp',
     intro: 'Transelevador o pallet shuttle: es la primera gran decisión técnica en cualquier proyecto de automatización de almacenes con paletas. Ambos sistemas almacenan y recuperan paletas automáticamente, pero tienen características de throughput, densidad y costo muy distintas. Elegir mal puede costar caro: un transelevador en un almacén que necesitaba shuttle tiene throughput limitado; un shuttle en un almacén que necesitaba transelevador tiene costos de mantenimiento más altos de lo necesario. Esta guía explica las diferencias técnicas concretas para ayudarte a determinar cuál es el correcto para tu bodega, almacén o depósito.',
     sections: [
       {
@@ -122,7 +122,7 @@ export const ARTICULOS = [
     conclusion: 'No existe un ganador universal entre transelevador y shuttle. La elección correcta depende del volumen de SKUs distintos, el throughput requerido, la rotación del inventario y el espacio disponible. STOKA simula ambas opciones con los datos reales de tu almacén, bodega o depósito y te muestra el TCO comparativo a 10 años antes de que tomes cualquier decisión de inversión.',
     faq: [
       { q: '¿Se puede combinar transelevador y shuttle en el mismo almacén?', a: 'Sí. Una configuración híbrida muy común usa transelevadores para los pasillos de zona A (alta rotación, muchos SKUs) y shuttle para la zona B/C (baja rotación, productos homogéneos). El mismo WCS gestiona ambos tipos de equipos de forma transparente.' },
-      { q: '¿El pallet shuttle puede operar en cámara fría?', a: 'Sí. Los robots shuttle DELIE tienen versión para frío (-30 °C). Las baterías de litio operan en frío con sistemas de calefacción interna. La carga de baterías se realiza en zona atemperada para extender la vida útil del pack.' },
+      { q: '¿El pallet shuttle puede operar en cámara fría?', a: 'Sí. Los robots shuttle que integramos tienen versión para frío (-30 °C). Las baterías de litio operan en frío con sistemas de calefacción interna. La carga de baterías se realiza en zona atemperada para extender la vida útil del pack.' },
       { q: '¿Cuántos pasillos son necesarios para que el shuttle sea rentable?', a: 'En general, el shuttle empieza a ser más rentable que el transelevador en configuraciones de 2+ pasillos con productos homogéneos y baja variabilidad de SKUs. Para pasillos únicos con alto mix de productos, el transelevador suele ser la mejor opción técnica y económica.' },
       { q: '¿El transelevador necesita obra civil especial?', a: 'La losa debe estar nivelada dentro de ±5 mm en 5 metros y con la capacidad de carga adecuada para los rieles del transelevador. No requiere obra estructural especial si el almacén o bodega ya tiene la altura libre necesaria.' },
     ],
@@ -139,7 +139,7 @@ export const ARTICULOS = [
     h1: 'RIMI 2026: cómo el nuevo régimen financia tu automatización',
     metaTitle: 'RIMI 2026: Cómo Financia tu Automatización | STOKA',
     wordCount: 1600,
-    metaDesc: 'Guía práctica sobre el RIMI (Ley 27.802): amortización acelerada de bienes de capital, devolución anticipada de IVA y beneficios fiscales para PyMEs que',
+    metaDesc: 'Cómo el RIMI (Ley 27.802) financia tu automatización: amortización acelerada del 100% en el primer ejercicio y devolución de IVA en 90 a 120 días.',
     categoria: 'Beneficios fiscales',
     readTime: '7 min',
     publishDate: '2026-06-10',
@@ -184,11 +184,11 @@ export const ARTICULOS = [
     h1: 'AGV vs AMR: diferencias y cuándo usar cada uno en tu almacén',
     metaTitle: 'AGV vs AMR: Diferencias y Cuándo Usar Cada Uno | Robots',
     wordCount: 1500,
-    metaDesc: 'Comparativa técnica entre AGV y AMR para almacenes, bodegas y depósitos. Navegación, flexibilidad, costos y casos de uso. Cuál conviene para tu operación en',
+    metaDesc: 'AGV o AMR para tu almacén: diferencias de navegación, flexibilidad y costos, y cuándo conviene combinar ambas flotas de robots en la misma operación.',
     categoria: 'Comparativas técnicas',
     readTime: '6 min',
     publishDate: '2026-06-10',
-    heroImg: '/productos-delie/robots-manipulacion/Robot%20lanzadera%20para%20padres%20e%20hijos%20de%20paletas/pallet-parent-child-shuttle-robotdad7c.webp',
+    heroImg: '/productos/robots-manipulacion/Robot%20lanzadera%20para%20padres%20e%20hijos%20de%20paletas/pallet-parent-child-shuttle-robotdad7c.webp',
     intro: 'AGV y AMR son dos tipos de robots móviles para transporte interno en almacenes, bodegas y depósitos industriales. Ambos reemplazan el trabajo del montacargas o del operario empujando un carro, pero lo hacen de formas muy distintas. Elegir entre AGV y AMR no es solo una decisión técnica: tiene implicancias en la flexibilidad operativa, los costos de instalación, el mantenimiento y la capacidad de escalar la operación. Esta guía explica las diferencias concretas para ayudarte a elegir la opción correcta para tu operación en Argentina.',
     sections: [
       {
@@ -212,9 +212,9 @@ export const ARTICULOS = [
     conclusion: 'No hay un ganador universal entre AGV y AMR. El AGV es la mejor opción para flujos fijos y predecibles; el AMR para entornos dinámicos y compartidos con personas. En muchos almacenes y bodegas, la combinación de ambos maximiza el ROI. El equipo de STOKA mapea los flujos de tu operación actual y recomienda la combinación óptima en la consulta inicial gratuita.',
     faq: [
       { q: '¿Cuánto tiempo tarda implementar una flota AMR?', a: 'El mapeo del almacén tarda 1-2 días. La integración con el WCS y la capacitación de operarios toma 1-2 semanas más. Una flota AMR puede estar operativa en 4 a 8 semanas desde la llegada del equipo al almacén o bodega, sin obras civiles ni modificaciones físicas.' },
-      { q: '¿Los AMR pueden circular junto con personas sin riesgo?', a: 'Sí. Los AMR DELIE están certificados para entornos con personas. Los sensores detectan obstáculos a 5 metros y frenan a 0,5 metros. En zonas de alta densidad de tráfico, el WCS establece semáforos virtuales para evitar congestión.' },
+      { q: '¿Los AMR pueden circular junto con personas sin riesgo?', a: 'Sí. Los AMR modernos están certificados para entornos con personas. Los sensores detectan obstáculos a 5 metros y frenan a 0,5 metros. En zonas de alta densidad de tráfico, el WCS establece semáforos virtuales para evitar congestión.' },
       { q: '¿Cuántos robots AMR necesita mi almacén?', a: 'Depende del throughput, la distancia promedio de cada viaje y la velocidad de carga/descarga. STOKA simula la flota óptima con los datos de tu operación. Como referencia, un almacén de 2.000 m² con 200 misiones/hora puede funcionar con 8 a 12 AMR de capacidad media.' },
-      { q: '¿El sistema AMR puede integrarse con mi ERP o WMS actual?', a: 'Sí. Los AMR DELIE se integran vía API REST con cualquier WMS o ERP. El WCS actúa como middleware entre el sistema de gestión y los robots, haciendo la integración transparente para el sistema del cliente.' },
+      { q: '¿El sistema AMR puede integrarse con mi ERP o WMS actual?', a: 'Sí. Los AMR se integran vía API REST con cualquier WMS o ERP. El WCS actúa como middleware entre el sistema de gestión y los robots, haciendo la integración transparente para el sistema del cliente.' },
     ],
     cta: { heading: 'Analizamos qué robots convienen para tu operación', text: 'Estudio de flujos gratuito y recomendación técnica de flota en 24 horas.', btnPrimary: { label: 'Solicitar análisis de flota', url: '/contacto' }, btnSecondary: { label: 'Ver robots AGV / AMR', url: '/catalogo/robots-manipulacion/agv-amr' } },
     relacionados: [
@@ -227,13 +227,13 @@ export const ARTICULOS = [
   {
     slug: 'wms-vs-wcs',
     h1: 'WMS vs WCS: qué hace cada software en el almacén automatizado',
-    metaTitle: 'WMS vs WCS: Diferencias y Funciones en el Almacén',
+    metaTitle: 'WMS vs WCS: Diferencias y Funciones en el Almacén | STOKA',
     wordCount: 1600,
-    metaDesc: 'Diferencia entre WMS y WCS en almacenes automatizados. Qué hace cada software, cómo se integran con el ERP y por qué necesitás ambos para un ASRS funcionando',
+    metaDesc: 'Qué hace el WMS y qué hace el WCS en un almacén automatizado: funciones de cada software, integración con el ERP y por qué un ASRS necesita los dos.',
     categoria: 'Software logístico',
     readTime: '6 min',
     publishDate: '2026-06-10',
-    heroImg: '/productos-delie/software-inteligente/%28WMS%29%20Sistema%20de%20gesti%C3%B3n%20de%20almacenes/2025112715331054f3e.webp',
+    heroImg: '/productos/software-inteligente/%28WMS%29%20Sistema%20de%20gesti%C3%B3n%20de%20almacenes/2025112715331054f3e.webp',
     intro: 'WMS y WCS son dos sistemas de software que trabajan juntos en cualquier almacén, bodega o depósito automatizado, pero hacen cosas completamente distintas. La confusión entre ambos es frecuente — y costosa cuando lleva a implementar solo uno. El WMS gestiona el inventario y las operaciones de negocio: qué hay, dónde está, cuándo entra y cuándo sale. El WCS controla los equipos físicos en tiempo real: qué transelevador se mueve, a qué velocidad y en qué secuencia. Sin WMS, el almacén no sabe qué producto tiene. Sin WCS, el ASRS no recibe instrucciones. Necesitás los dos.',
     sections: [
       {
@@ -246,19 +246,19 @@ export const ARTICULOS = [
       },
       {
         h2: 'Cómo se integran WMS, WCS y ERP en la práctica',
-        body: 'La cadena de información en un almacén automatizado funciona así: el ERP recibe un pedido de cliente y lo envía al WMS. El WMS verifica el stock, genera las órdenes de picking y las envía al WCS. El WCS asigna las misiones a los equipos (transelevador 1, recuperar paleta en pasillo A, posición 15). Los equipos ejecutan y confirman al WCS. El WCS confirma al WMS. El WMS confirma al ERP. Todo el ciclo puede tomar menos de 2 minutos desde que entra el pedido hasta que la paleta está en la estación de expedición. La latencia del WCS es el cuello de botella técnico: en sistemas DELIE, es menor a 50 ms.',
+        body: 'La cadena de información en un almacén automatizado funciona así: el ERP recibe un pedido de cliente y lo envía al WMS. El WMS verifica el stock, genera las órdenes de picking y las envía al WCS. El WCS asigna las misiones a los equipos (transelevador 1, recuperar paleta en pasillo A, posición 15). Los equipos ejecutan y confirman al WCS. El WCS confirma al WMS. El WMS confirma al ERP. Todo el ciclo puede tomar menos de 2 minutos desde que entra el pedido hasta que la paleta está en la estación de expedición. La latencia del WCS es el cuello de botella técnico: en los sistemas que integramos es menor a 50 ms.',
       },
       {
         h2: 'Necesito WMS, WCS o ambos: cómo decidir',
-        body: 'Si tu almacén o bodega no tiene equipos automatizados (transelevadores, robots, transportadores), probablemente solo necesites un WMS para gestionar el inventario y las tareas manuales. Si tenés equipos ASRS o robots, necesitás WCS para controlarlos aunque no tengas WMS propio (muchas empresas usan el WMS de su ERP y agregan el WCS para el ASRS). Si querés la máxima eficiencia y visibilidad, el stack completo WMS + WCS integrado es la solución óptima: elimina las latencias de integración y da una vista unificada del almacén en tiempo real. El WMS y WCS de DELIE fueron diseñados como un stack integrado, con la misma base de datos y una interfaz unificada.',
+        body: 'Si tu almacén o bodega no tiene equipos automatizados (transelevadores, robots, transportadores), probablemente solo necesites un WMS para gestionar el inventario y las tareas manuales. Si tenés equipos ASRS o robots, necesitás WCS para controlarlos aunque no tengas WMS propio (muchas empresas usan el WMS de su ERP y agregan el WCS para el ASRS). Si querés la máxima eficiencia y visibilidad, el stack completo WMS + WCS integrado es la solución óptima: elimina las latencias de integración y da una vista unificada del almacén en tiempo real. El WMS y el WCS que implementa STOKA fueron diseñados como un stack integrado, con la misma base de datos y una interfaz unificada.',
       },
     ],
     conclusionH2: 'El software correcto es el que se integra con tu ERP sin fricciones',
     conclusion: 'Implementar un ASRS sin el WCS correcto es como comprar un auto de Fórmula 1 sin el volante: el hardware no puede operar sin el software de control. Y un WCS que no habla bien con el WMS de tu ERP genera inconsistencias de inventario que pueden costar más que el sistema mismo. En STOKA, el proyecto de implementación de software es parte del contrato llave en mano: la integración técnica con el ERP del cliente es nuestra responsabilidad, no la tuya.',
     faq: [
-      { q: '¿Puede el WCS de DELIE integrarse con mi SAP?', a: 'Sí. El WCS DELIE tiene conectores certificados para SAP (IDoc, BAPI y RFC), Oracle, Microsoft Dynamics, Infor y sistemas propietarios. La integración bidireccional actualiza el inventario en SAP en tiempo real.' },
+      { q: '¿Puede el WCS integrarse con mi SAP?', a: 'Sí. El WCS tiene conectores certificados para SAP (IDoc, BAPI y RFC), Oracle, Microsoft Dynamics, Infor y sistemas propietarios. La integración bidireccional actualiza el inventario en SAP en tiempo real.' },
       { q: '¿Cuánto tiempo lleva implementar el WMS/WCS?', a: 'El WCS solo (sin WMS) se implementa en 4 a 8 semanas junto con la instalación del ASRS. El stack WMS + WCS completo toma entre 12 y 20 semanas incluyendo migración de datos, capacitación y pruebas de aceptación.' },
-      { q: '¿El WMS de DELIE reemplaza al WMS de mi ERP?', a: 'Puede funcionar como sistema principal o como sistema satélite de la zona automatizada, interfaceado con el WMS del ERP. La decisión depende de la complejidad de los procesos y del deseo de la empresa de consolidar sistemas. STOKA presenta ambas opciones con pros y contras antes de la propuesta.' },
+      { q: '¿El WMS del proyecto reemplaza al WMS de mi ERP?', a: 'Puede funcionar como sistema principal o como sistema satélite de la zona automatizada, interfaceado con el WMS del ERP. La decisión depende de la complejidad de los procesos y del deseo de la empresa de consolidar sistemas. STOKA presenta ambas opciones con pros y contras antes de la propuesta.' },
       { q: '¿Qué pasa con el inventario si el WCS falla?', a: 'El WCS tiene servidor redundante con failover automático en menos de 30 segundos. Los equipos físicos tienen PLC local con modo de emergencia que permite operación manual mientras el WCS se restaura. El inventario queda bloqueado en modo de solo lectura durante la recuperación.' },
     ],
     cta: { heading: 'Te ayudamos a diseñar el stack de software correcto', text: 'Análisis gratuito de integración WMS/WCS con tu ERP existente.', btnPrimary: { label: 'Consultar integración de software', url: '/contacto' }, btnSecondary: { label: 'Ver software WMS y WCS', url: '/catalogo/software' } },
@@ -274,16 +274,16 @@ export const ARTICULOS = [
     h1: 'Automatización de bodegas en Chile: la oportunidad de la industria minera y agroindustrial',
     metaTitle: 'Automatización de Bodegas en Chile: Guía 2026 | STOKA',
     wordCount: 1700,
-    metaDesc: 'Cómo automatizar tu bodega en Chile: sistemas, costos y beneficios. Tecnología DELIE con soporte local. Reducí espacio y errores en tu operación.',
+    metaDesc: 'Cómo automatizar bodegas en Chile para minería, viñas y cadena de frío: sistemas que operan de -30 °C a +4 °C con ingeniería local en todo el país.',
     categoria: 'Mercados regionales',
     readTime: '7 min',
     publishDate: '2026-06-10',
     heroImg: '/gxo-2023.webp',
-    intro: 'Chile tiene características únicas que hacen especialmente relevante la automatización de bodegas y almacenes: una industria minera con operaciones en zonas extremas (altiplano, desierto, sur austral), una vitivinicultura de clase mundial con bodegas de alta complejidad logística, y una agroindustria exportadora que necesita cadena de frío de precisión. En todos estos sectores, el desafío no es solo el throughput o la densidad de almacenamiento: es operar con pocos operarios especializados, en zonas con alta rotación de personal y condiciones climáticas extremas. Los sistemas ASRS de DELIE, que STOKA integra como aliado estratégico en Chile y Argentina, son especialmente adecuados para estas condiciones.',
+    intro: 'Chile tiene características únicas que hacen especialmente relevante la automatización de bodegas y almacenes: una industria minera con operaciones en zonas extremas (altiplano, desierto, sur austral), una vitivinicultura de clase mundial con bodegas de alta complejidad logística, y una agroindustria exportadora que necesita cadena de frío de precisión. En todos estos sectores, el desafío no es solo el throughput o la densidad de almacenamiento: es operar con pocos operarios especializados, en zonas con alta rotación de personal y condiciones climáticas extremas. Los sistemas ASRS que STOKA integra como aliado estratégico en Chile y Argentina son especialmente adecuados para estas condiciones.',
     sections: [
       {
         h2: 'Automatización de bodegas mineras en Chile: el desafío del norte',
-        body: 'Las operaciones mineras en el norte de Chile (II a IV Región) necesitan bodegas de repuestos, materiales e insumos que funcionen con personal mínimo en condiciones de altitud extrema. La rotación de personal en estas zonas es alta y los costos laborales son elevados. Un sistema ASRS o VLM para repuestos mineros resuelve tres problemas simultáneamente: reduce el personal necesario en bodega, minimiza los errores de inventario (críticos cuando una parte faltante puede parar una línea de producción millonaria) y protege el inventario de las condiciones ambientales extremas de polvo y temperatura. Los VLM y carruseles verticales de DELIE tienen versiones certificadas para ambientes con polvo en suspensión (IP6X).',
+        body: 'Las operaciones mineras en el norte de Chile (II a IV Región) necesitan bodegas de repuestos, materiales e insumos que funcionen con personal mínimo en condiciones de altitud extrema. La rotación de personal en estas zonas es alta y los costos laborales son elevados. Un sistema ASRS o VLM para repuestos mineros resuelve tres problemas simultáneamente: reduce el personal necesario en bodega, minimiza los errores de inventario (críticos cuando una parte faltante puede parar una línea de producción millonaria) y protege el inventario de las condiciones ambientales extremas de polvo y temperatura. Los VLM y carruseles verticales tienen versiones certificadas para ambientes con polvo en suspensión (IP6X).',
       },
       {
         h2: 'Bodegas vitivinícolas automatizadas: más capacidad, menos espacio',
@@ -291,19 +291,19 @@ export const ARTICULOS = [
       },
       {
         h2: 'Cadena de frío en Chile: exportación de fruta y proteínas',
-        body: 'Chile es el segundo exportador mundial de fruta fresca y uno de los principales exportadores de productos del mar. Ambas industrias dependen de una cadena de frío sin interrupciones desde la cosecha o la faena hasta el contenedor de exportación. Los sistemas ASRS para cámara fría de DELIE operan desde -30 °C (congelados) hasta +4 °C (refrigerados) con los mismos equipos. Para los centros de distribución frigorífica en los puertos de Valparaíso, San Antonio y Mejillones, la automatización reduce la carga térmica del almacén (menos apertura de puertas, menos presencia de personas en frío) y aumenta la capacidad en el mismo footprint.',
+        body: 'Chile es el segundo exportador mundial de fruta fresca y uno de los principales exportadores de productos del mar. Ambas industrias dependen de una cadena de frío sin interrupciones desde la cosecha o la faena hasta el contenedor de exportación. Los sistemas ASRS para cámara fría operan desde -30 °C (congelados) hasta +4 °C (refrigerados) con los mismos equipos. Para los centros de distribución frigorífica en los puertos de Valparaíso, San Antonio y Mejillones, la automatización reduce la carga térmica del almacén (menos apertura de puertas, menos presencia de personas en frío) y aumenta la capacidad en el mismo footprint.',
       },
       {
         h2: 'Por qué STOKA para proyectos de automatización en Chile',
         body: 'STOKA opera como aliado estratégico en Chile, con equipo de ingeniería que atiende proyectos en todo el territorio: desde Arica hasta Punta Arenas. Esto es fundamental para proyectos mineros en el norte y operaciones en zonas remotas del sur: el soporte técnico no depende de tiempos de respuesta desde Argentina o desde Asia. El marco fiscal chileno para bienes de capital importados también tiene beneficios: la exención de IVA en la importación de bienes de capital para determinados sectores productivos aplica a sistemas ASRS. STOKA gestiona los permisos y la documentación técnica de importación en Chile como parte del proyecto.',
       },
     ],
-    conclusionH2: 'Chile: la oportunidad que la mayoría de los proveedores de automatización no están aprovechando',
-    conclusion: 'La mayoría de los proveedores de sistemas de automatización de almacenes no tienen presencia local en Chile. STOKA sí. Si tu operación minera, vitivinícola o agroindustrial en Chile necesita automatizar una bodega o depósito, el equipo de STOKA Chile puede visitar tus instalaciones, diagnosticar la operación y presentar una propuesta técnica llave en mano en las mismas condiciones que en Argentina.',
+    conclusionH2: 'Chile: automatización de bodegas con ingeniería en tu mismo huso horario',
+    conclusion: 'STOKA atiende proyectos en Chile con ingeniería y soporte desde Argentina: mismo huso horario, mismo idioma y tiempos de respuesta que no dependen de una fábrica en Asia o Europa. Si tu operación minera, vitivinícola o agroindustrial en Chile necesita automatizar una bodega o depósito, el equipo de STOKA puede visitar tus instalaciones, diagnosticar la operación y presentar una propuesta técnica llave en mano en las mismas condiciones que en Argentina.',
     faq: [
-      { q: '¿STOKA tiene servicio técnico en Chile?', a: 'Sí. STOKA opera como aliado estratégico oficial en Chile con equipo de ingeniería local para ventas, instalación y soporte técnico posventa. Los proyectos en Chile se gestionan desde Chile, no desde Argentina.' },
-      { q: '¿Los equipos DELIE aplican a las exenciones de IVA en Chile para bienes de capital?', a: 'Los sistemas ASRS importados para uso productivo en Chile califican como bienes de capital. La exención de IVA para bienes de capital importados aplica en ciertos sectores y condiciones. STOKA Chile gestiona la documentación técnica requerida para acreditar el uso productivo del equipo.' },
-      { q: '¿Un sistema ASRS puede operar en zonas de alta altitud como la mina?', a: 'Los equipos eléctricos y electrónicos requieren ajuste para operar sobre los 3.000 m de altitud (menor presión atmosférica afecta la refrigeración de motores y disipación térmica). DELIE fabrica versiones de sus equipos especificadas para alta altitud. El diseño específico se confirma en la ingeniería de detalle.' },
+      { q: '¿Cómo atiende STOKA los proyectos en Chile?', a: 'STOKA atiende Chile con ingeniería y soporte desde Argentina: mismo huso horario, mismo idioma y visitas técnicas a sitio para diagnóstico, instalación y soporte posventa. Los tiempos de respuesta no dependen de una fábrica en Asia o Europa.' },
+      { q: '¿Los equipos ASRS aplican a las exenciones de IVA en Chile para bienes de capital?', a: 'Los sistemas ASRS importados para uso productivo en Chile califican como bienes de capital. La exención de IVA para bienes de capital importados aplica en ciertos sectores y condiciones. STOKA gestiona la documentación técnica requerida para acreditar el uso productivo del equipo.' },
+      { q: '¿Un sistema ASRS puede operar en zonas de alta altitud como la mina?', a: 'Los equipos eléctricos y electrónicos requieren ajuste para operar sobre los 3.000 m de altitud (menor presión atmosférica afecta la refrigeración de motores y disipación térmica). Estos equipos se fabrican en versiones especificadas para alta altitud. El diseño específico se confirma en la ingeniería de detalle.' },
       { q: '¿Cuánto tiempo tarda un proyecto en Chile vs. en Argentina?', a: 'El plazo de ejecución es equivalente: 5 a 10 meses desde la orden de compra hasta el arranque. La logística de importación se gestiona a través del puerto de Valparaíso o de San Antonio. La integración con el ERP local (SAP, Oracle, etc.) sigue el mismo proceso que en Argentina.' },
     ],
     cta: { heading: 'Proyectos de automatización en Chile: cotizá tu bodega', text: 'Equipo de ingeniería local en Chile. Consulta gratuita en tu instalación.', btnPrimary: { label: 'Consultar proyecto en Chile', url: '/contacto' }, btnSecondary: { label: 'Ver sistemas para cadena de frío', url: '/catalogo/asrs/camara-frio' } },
@@ -317,13 +317,13 @@ export const ARTICULOS = [
   {
     slug: 'asrs-vs-autostore',
     h1: 'ASRS vs AutoStore: comparativa técnica honesta',
-    metaTitle: 'ASRS vs AutoStore: Comparativa Técnica | Cuál Conviene para',
+    metaTitle: 'ASRS vs AutoStore: Comparativa Técnica 2026 | STOKA',
     wordCount: 1700,
-    metaDesc: 'Comparativa honesta entre sistemas ASRS tradicionales (transelevador, shuttle) y AutoStore (grid robotics). Throughput, densidad, costo, escalabilidad y',
+    metaDesc: 'ASRS tradicional o AutoStore: comparativa de densidad, throughput y costos, y por qué el umbral de 20.000 posiciones define cuál conviene en Argentina.',
     categoria: 'Comparativas técnicas',
     readTime: '8 min',
     publishDate: '2026-06-10',
-    heroImg: '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp',
+    heroImg: '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp',
     intro: 'AutoStore es una de las tecnologías de almacenamiento robótico más visibles de los últimos años: robots que corren sobre un grid tridimensional recuperando contenedores apilados. ASRS tradicional — transelevadores, MiniLoad, shuttles — lleva décadas en el mercado con instalaciones de referencia global. ¿Cuál es mejor? Depende completamente de tu operación. Esta comparativa no busca vender ninguna de las dos: busca darte los datos técnicos para decidir qué tecnología se ajusta mejor a tu almacén, bodega o depósito y a tu presupuesto.',
     sections: [
       {
@@ -336,22 +336,22 @@ export const ARTICULOS = [
       },
       {
         h2: 'Throughput: quién mueve más unidades por hora',
-        body: 'El throughput de AutoStore depende del número de robots y del número de puertos de salida. Un sistema de 100 robots y 10 puertos puede alcanzar 1.000 contenedores/hora en condiciones óptimas. Un MiniLoad DELIE de 2 pasillos con 400 contenedores/hora/pasillo alcanza 800 contenedores/hora. Similares en throughput puro. La diferencia está en la consistencia: AutoStore puede degradar su throughput cuando los contenedores más solicitados están enterrados bajo muchos menos solicitados (efecto de enterrado). El ASRS MiniLoad mantiene throughput constante independientemente de dónde esté almacenado el contenedor, porque el acceso es siempre directo.',
+        body: 'El throughput de AutoStore depende del número de robots y del número de puertos de salida. Un sistema de 100 robots y 10 puertos puede alcanzar 1.000 contenedores/hora en condiciones óptimas. Un MiniLoad de 2 pasillos con 400 contenedores/hora/pasillo alcanza 800 contenedores/hora. Similares en throughput puro. La diferencia está en la consistencia: AutoStore puede degradar su throughput cuando los contenedores más solicitados están enterrados bajo muchos menos solicitados (efecto de enterrado). El ASRS MiniLoad mantiene throughput constante independientemente de dónde esté almacenado el contenedor, porque el acceso es siempre directo.',
       },
       {
         h2: 'Costo, escalabilidad y disponibilidad en Argentina',
-        body: 'AutoStore es significativamente más caro que un ASRS tradicional equivalente: el grid metálico y los robots tienen un costo por posición de almacenamiento mayor que las estanterías de un MiniLoad. Además, AutoStore es una marca propietaria con patentes activas y distribuidores exclusivos: en Argentina, la disponibilidad de soporte técnico local es limitada o depende de acuerdos con distribuidores internacionales. Los ASRS DELIE representados por STOKA tienen soporte técnico local completo, piezas de repuesto en Argentina y precios competitivos en el mercado latinoamericano. Para operaciones por encima de 20.000 posiciones de almacenamiento, AutoStore puede ser técnicamente superior; por debajo de ese umbral, el ASRS tradicional ofrece mejor relación precio/performance en el mercado argentino.',
+        body: 'AutoStore es significativamente más caro que un ASRS tradicional equivalente: el grid metálico y los robots tienen un costo por posición de almacenamiento mayor que las estanterías de un MiniLoad. Además, AutoStore es una marca propietaria con patentes activas y distribuidores exclusivos: en Argentina, la disponibilidad de soporte técnico local es limitada o depende de acuerdos con distribuidores internacionales. Los sistemas ASRS que representa STOKA tienen soporte técnico local completo, piezas de repuesto en Argentina y precios competitivos en el mercado latinoamericano. Para operaciones por encima de 20.000 posiciones de almacenamiento, AutoStore puede ser técnicamente superior; por debajo de ese umbral, el ASRS tradicional ofrece mejor relación precio/performance en el mercado argentino.',
       },
     ],
     conclusionH2: 'AutoStore o ASRS: la tecnología correcta depende de tu escala y operación',
-    conclusion: 'AutoStore es una tecnología excelente para operaciones de e-commerce de gran escala con muchos SKUs de pequeño tamaño. Para almacenes industriales con paletas, cajas medianas o mezcla de volúmenes, el ASRS tradicional — transelevador, shuttle o MiniLoad — es más adecuado, más económico y con mejor soporte local en Argentina y Chile. Si estás evaluando AutoStore vs. DELIE para tu operación, STOKA puede hacer el análisis comparativo con tus datos reales.',
+    conclusion: 'AutoStore es una tecnología excelente para operaciones de e-commerce de gran escala con muchos SKUs de pequeño tamaño. Para almacenes industriales con paletas, cajas medianas o mezcla de volúmenes, el ASRS tradicional — transelevador, shuttle o MiniLoad — es más adecuado, más económico y con mejor soporte local en Argentina y Chile. Si estás evaluando AutoStore vs. ASRS tradicional para tu operación, STOKA puede hacer el análisis comparativo con tus datos reales.',
     faq: [
-      { q: '¿AutoStore tiene distribuidores en Argentina?', a: 'AutoStore opera a través de distribuidores autorizados. En Argentina, la disponibilidad de soporte técnico local de AutoStore es limitada comparada con mercados como Europa o EEUU. Los transelevadores y MiniLoad DELIE tienen soporte técnico local completo a través de STOKA.' },
+      { q: '¿AutoStore tiene distribuidores en Argentina?', a: 'AutoStore opera a través de distribuidores autorizados. En Argentina, la disponibilidad de soporte técnico local de AutoStore es limitada comparada con mercados como Europa o EEUU. Los transelevadores y MiniLoad tradicionales tienen soporte técnico local completo a través de STOKA.' },
       { q: '¿Para qué tipo de operación conviene AutoStore?', a: 'AutoStore es más adecuado para operaciones de e-commerce con muchos SKUs de pequeño formato (electrónica, farmacéutica, accesorios), alta variabilidad de pedidos y necesidad de densidad extrema en espacios muy limitados. Para paletas, cajas medianas y volúmenes mixtos, el ASRS tradicional es técnicamente superior.' },
-      { q: '¿Cuál tiene mayor disponibilidad operativa (uptime)?', a: 'Ambos sistemas tienen uptime teórico mayor al 99%. La diferencia práctica está en el soporte local: un robot AutoStore que falla en Argentina puede requerir semanas para conseguir la pieza de repuesto. Un transelevador DELIE con STOKA local se repara en horas con el stock de repuestos en Argentina.' },
+      { q: '¿Cuál tiene mayor disponibilidad operativa (uptime)?', a: 'Ambos sistemas tienen uptime teórico mayor al 99%. La diferencia práctica está en el soporte local: un robot AutoStore que falla en Argentina puede requerir semanas para conseguir la pieza de repuesto. Un transelevador con soporte local de STOKA se repara en horas con el stock de repuestos en Argentina.' },
       { q: '¿Es posible migrar de AutoStore a ASRS tradicional o viceversa?', a: 'Una migración completa requiere desmontaje del sistema existente y nueva instalación. Sin embargo, en ampliaciones, es posible mantener el sistema existente para una zona y agregar tecnología complementaria para el crecimiento. La decisión tecnológica inicial es importante porque condiciona décadas de operación.' },
     ],
-    cta: { heading: 'Comparamos ASRS DELIE vs AutoStore para tu operación', text: 'Análisis técnico comparativo con tus datos reales. Gratuito, sin compromiso.', btnPrimary: { label: 'Solicitar análisis comparativo', url: '/contacto' }, btnSecondary: { label: 'Ver transelevadores MiniLoad', url: '/catalogo/asrs/miniload' } },
+    cta: { heading: 'Comparamos ASRS vs AutoStore para tu operación', text: 'Análisis técnico comparativo con tus datos reales. Gratuito, sin compromiso.', btnPrimary: { label: 'Solicitar análisis comparativo', url: '/contacto' }, btnSecondary: { label: 'Ver transelevadores MiniLoad', url: '/catalogo/asrs/miniload' } },
     relacionados: [
       { titulo: 'Transelevador vs Shuttle', slug: 'transelevador-vs-shuttle' },
       { titulo: 'Qué es un sistema ASRS', slug: 'que-es-un-sistema-asrs' },
@@ -363,11 +363,11 @@ export const ARTICULOS = [
     h1: 'Qué es un transelevador y cómo funciona en un almacén automático',
     metaTitle: '¿Qué es un Transelevador? Tipos, Funcionamiento y Costos',
     wordCount: 1950,
-    metaDesc: 'Guía completa sobre transelevadores: tipos (unit-load, miniload), cómo funcionan, diferencias con shuttle y cuándo conviene instalar uno en tu almacén',
+    metaDesc: 'Qué es un transelevador y cómo funciona: tipos unit-load y miniload, alturas de hasta 40 metros, costos desde USD 180.000 y ROI de 18 a 36 meses.',
     categoria: 'Fundamentos ASRS',
     readTime: '7 min',
     publishDate: '2026-06-10',
-    heroImg: '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
+    heroImg: '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
     intro: 'Un transelevador es el componente central de la mayoría de los sistemas ASRS (sistemas de almacenamiento y recuperación automatizados). Es una grúa automatizada que se desplaza dentro de un pasillo de estanterías, capturando y depositando paletas, cajas o contenedores con precisión milimétrica. Si alguna vez viste imágenes de un almacén moderno con estanterías de 20 o 30 metros y máquinas moviéndose entre ellas sin operarios — eso es un transelevador. En Argentina y Chile, la creciente adopción de automatización industrial hace que cada vez más empresas de logística, manufactura, alimentos y farmacéutica evalúen esta tecnología para sus almacenes, bodegas y depósitos.',
     sections: [
       {
@@ -388,7 +388,7 @@ export const ARTICULOS = [
       },
       {
         h2: 'Cuánto cuesta un transelevador y cuál es el ROI en Argentina',
-        body: 'El costo de un transelevador unitload DELIE para un pasillo de almacén de mediana escala (15 metros de altura, 500 posiciones de paleta) ronda los USD 180.000 a USD 280.000, sin incluir las estanterías ni el WCS. Un proyecto completo de 2 pasillos con transportadores, estanterías, WCS e integración con el ERP existente en un almacén o bodega en Argentina oscila entre USD 800.000 y USD 1.500.000. Con el Decreto 513/2025 (arancel 0% para equipos ASRS) y el RIMI (amortización acelerada del 100% en el primer ejercicio), el costo neto de un proyecto se reduce entre un 25% y un 35%. El ROI típico de un proyecto de transelevadores en Argentina está entre 18 y 36 meses, dependiendo del costo laboral actual de la operación manual que reemplaza.',
+        body: 'El costo de un transelevador unit-load para un pasillo de almacén de mediana escala (15 metros de altura, 500 posiciones de paleta) ronda los USD 180.000 a USD 280.000, sin incluir las estanterías ni el WCS. Un proyecto completo de 2 pasillos con transportadores, estanterías, WCS e integración con el ERP existente en un almacén o bodega en Argentina oscila entre USD 800.000 y USD 1.500.000. Con el Decreto 513/2025 (arancel 0% para equipos ASRS) y el RIMI (amortización acelerada del 100% en el primer ejercicio), el costo neto de un proyecto se reduce entre un 25% y un 35%. El ROI típico de un proyecto de transelevadores en Argentina está entre 18 y 36 meses, dependiendo del costo laboral actual de la operación manual que reemplaza.',
       },
       {
         h2: '¿Un transelevador sirve para un depósito chico o mediano?',
@@ -399,9 +399,9 @@ export const ARTICULOS = [
     conclusion: 'La decisión de instalar un transelevador en tu almacén, bodega o depósito no empieza por el presupuesto: empieza por entender si el sistema es el correcto para tu operación. STOKA realiza el diagnóstico técnico —análisis de throughput, perfil de SKUs, altura disponible y proyección de ROI— sin costo y sin compromiso. Si el transelevador no es lo que necesitás, lo decimos. Si lo es, armamos la propuesta técnica completa en 2 a 4 semanas.',
     faq: [
       { q: '¿Un transelevador puede operar en una bodega o depósito existente o solo en obra nueva?', a: 'Puede instalarse en instalaciones existentes siempre que haya altura libre suficiente (mínimo 7 metros) y la losa pueda soportar las cargas de la estructura. La mayoría de los proyectos de STOKA son en depósitos existentes. Se requiere una nivelación de piso y obra civil menor de anclaje.' },
-      { q: '¿Qué pasa si el transelevador falla en el medio de la operación?', a: 'Los transelevadores DELIE tienen un MTBF (tiempo medio entre fallas) mayor a 8.000 horas de operación. Si se produce una falla, el pasillo puede operarse en modo manual de emergencia con carretilla elevadora mientras se resuelve. STOKA tiene repuestos en Argentina para resolver la mayoría de las fallas en menos de 24 horas.' },
+      { q: '¿Qué pasa si el transelevador falla en el medio de la operación?', a: 'Estos transelevadores tienen un MTBF (tiempo medio entre fallas) mayor a 8.000 horas de operación. Si se produce una falla, el pasillo puede operarse en modo manual de emergencia con carretilla elevadora mientras se resuelve. STOKA tiene repuestos en Argentina para resolver la mayoría de las fallas en menos de 24 horas.' },
       { q: '¿Cuántos pasillos de transelevador necesito para mi operación?', a: 'El número de pasillos depende del throughput requerido (movimientos por hora) y de la capacidad de almacenamiento necesaria (número de posiciones de paleta o contenedor). Con esos dos datos, STOKA dimensiona el sistema en la primera consulta técnica gratuita.' },
-      { q: '¿El transelevador se integra con mi WMS o ERP existente?', a: 'Sí. El WCS de DELIE se conecta a cualquier WMS o ERP vía API REST, SOAP o EDI. Integraciones certificadas con SAP, Oracle, Microsoft Dynamics e Infor. STOKA gestiona la integración técnica como parte del proyecto llave en mano sin costo adicional.' },
+      { q: '¿El transelevador se integra con mi WMS o ERP existente?', a: 'Sí. El WCS se conecta a cualquier WMS o ERP vía API REST, SOAP o EDI. Integraciones certificadas con SAP, Oracle, Microsoft Dynamics e Infor. STOKA gestiona la integración técnica como parte del proyecto llave en mano sin costo adicional.' },
       { q: '¿Qué diferencia hay entre un transelevador y un autoelevador?', a: 'El autoelevador (o montacargas) lo maneja una persona y sirve para mover paletas de a una, a baja altura. El transelevador es automático: no lo maneja nadie, opera dentro de un pasillo fijo de estanterías, llega a alturas de hasta 40 metros y trabaja las 24 horas sin errores ni descansos. En criollo: el autoelevador es una herramienta que usa un operario; el transelevador es un robot que reemplaza el recorrido manual y guarda en altura mucho más de lo que llega un autoelevador.' },
       { q: '¿Cuánto cuesta un transelevador?', a: 'Depende del tipo y de la escala, así que va como rango y no como número cerrado: un transelevador unit-load (para paletas) de mediana escala ronda los USD 180.000 a USD 280.000 sin estanterías ni software. Un proyecto completo de varios pasillos, con estanterías, control e integración, suele ir de USD 800.000 a USD 1.500.000. Con el arancel reducido (Decreto 513/2025) y el RIMI, el costo neto baja bastante. El número para TU caso sale del diagnóstico gratuito, según tu operación.' },
       { q: '¿Sirve para un depósito chico?', a: 'Sí, siempre que tengas altura libre (idealmente 7 metros o más): lo que manda no son los metros cuadrados sino la altura que podés aprovechar. Para depósitos chicos o medianos que mueven cajas, el miniload es la opción más accesible, y podés empezar por un solo pasillo y crecer después. Si te quedaste sin lugar a lo ancho pero tenés altura, casi seguro entra en la conversación.' },
@@ -419,11 +419,11 @@ export const ARTICULOS = [
     h1: 'Qué es un WMS y por qué es el cerebro del almacén automatizado',
     metaTitle: '¿Qué es un WMS? Warehouse Management System Explicado',
     wordCount: 1500,
-    metaDesc: 'Guía completa sobre WMS (Warehouse Management System): qué hace, diferencia con WCS y ERP, funciones clave y cómo elegir el correcto para tu almacén, bodega',
+    metaDesc: 'Qué es un WMS y para qué sirve: control de inventario en tiempo real, trazabilidad de lote, diferencias con WCS y ERP y cuándo necesitás uno dedicado.',
     categoria: 'Software y tecnología',
     readTime: '6 min',
     publishDate: '2026-06-10',
-    heroImg: '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp',
+    heroImg: '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp',
     intro: 'El WMS (Warehouse Management System, o sistema de gestión de almacenes) es el software que convierte un almacén, bodega o depósito en una operación controlada y trazable. Sabe exactamente qué está en cada celda, de dónde vino, cuándo llegó y para qué cliente es. Sin WMS, la automatización física — transelevadores, robots, transportadores — no puede funcionar con precisión. Con WMS, el almacén sabe y decide; sin él, alguien tiene que adivinarlo. En Argentina, el WMS se convirtió en un requisito en industrias reguladas (farmacéutica, alimentos) y en el ancla de todo proyecto de automatización de almacén serio.',
     sections: [
       {
@@ -432,7 +432,7 @@ export const ARTICULOS = [
       },
       {
         h2: 'WMS vs WCS vs ERP: qué hace cada uno',
-        body: 'El ERP (SAP, Oracle, Microsoft Dynamics) gestiona los procesos de negocio: finanzas, compras, ventas, producción. Sabe que hay 100 paletas de producto X en el almacén, pero no sabe en qué celda está cada una. El WMS vive entre el ERP y el almacén físico: recibe las órdenes del ERP y las traduce en instrucciones de almacenamiento y picking, sabiendo exactamente dónde está cada producto en el depósito. El WCS (Warehouse Control System) es el siguiente nivel de control: convierte las instrucciones del WMS en comandos para los equipos físicos — transelevadores, robots, transportadores — en tiempo real. En un almacén automatizado completo, los tres sistemas trabajan en cascada: ERP → WMS → WCS → equipo físico. En sistemas DELIE, el WMS y WCS están integrados en una misma plataforma, reduciendo la complejidad de integración.',
+        body: 'El ERP (SAP, Oracle, Microsoft Dynamics) gestiona los procesos de negocio: finanzas, compras, ventas, producción. Sabe que hay 100 paletas de producto X en el almacén, pero no sabe en qué celda está cada una. El WMS vive entre el ERP y el almacén físico: recibe las órdenes del ERP y las traduce en instrucciones de almacenamiento y picking, sabiendo exactamente dónde está cada producto en el depósito. El WCS (Warehouse Control System) es el siguiente nivel de control: convierte las instrucciones del WMS en comandos para los equipos físicos — transelevadores, robots, transportadores — en tiempo real. En un almacén automatizado completo, los tres sistemas trabajan en cascada: ERP → WMS → WCS → equipo físico. En los stacks más modernos, el WMS y el WCS están integrados en una misma plataforma, reduciendo la complejidad de integración.',
       },
       {
         h2: 'Funciones clave de un WMS moderno para almacenes en Argentina',
@@ -440,16 +440,16 @@ export const ARTICULOS = [
       },
       {
         h2: 'Cuándo el WMS del ERP no es suficiente y se necesita WMS dedicado',
-        body: 'Los módulos de inventario de los ERP (SAP MM, Oracle Inventory) gestionan el stock a nivel de almacén, no a nivel de celda. Saben que hay 100 paletas en el depósito pero no en qué celda exacta está cada una. Para un almacén con celdas numeradas, operación de picking y procesos de FEFO, el módulo de inventario del ERP no es suficiente: necesitás un WMS dedicado que se integre con el ERP. El punto de inflexión habitual es cuando el almacén supera las 500 posiciones de almacenamiento y 300 movimientos diarios, o cuando se incorpora equipamiento automatizado (transelevadores, robots) que requiere control en tiempo real de las ubicaciones. DELIE entrega su propio WMS integrado con el WCS como parte del proyecto llave en mano de STOKA.',
+        body: 'Los módulos de inventario de los ERP (SAP MM, Oracle Inventory) gestionan el stock a nivel de almacén, no a nivel de celda. Saben que hay 100 paletas en el depósito pero no en qué celda exacta está cada una. Para un almacén con celdas numeradas, operación de picking y procesos de FEFO, el módulo de inventario del ERP no es suficiente: necesitás un WMS dedicado que se integre con el ERP. El punto de inflexión habitual es cuando el almacén supera las 500 posiciones de almacenamiento y 300 movimientos diarios, o cuando se incorpora equipamiento automatizado (transelevadores, robots) que requiere control en tiempo real de las ubicaciones. El proyecto llave en mano de STOKA incluye un WMS propio integrado con el WCS.',
       },
     ],
     conclusionH2: 'El WMS: la inversión que más impacta en el largo plazo',
-    conclusion: 'En un proyecto de automatización de almacén, bodega o depósito, el WMS es la tecnología que más impacta la operación en el largo plazo: sigue siendo el sistema central después de que los equipos físicos se amortizan. Elegir un WMS con capacidad de crecimiento — multi-cliente, multi-sitio, escalable en funciones regulatorias — evita proyectos de reemplazo costosos en el futuro. STOKA entrega el WMS de DELIE como parte del proyecto, con integración completa al ERP existente y capacitación del equipo operativo incluida.',
+    conclusion: 'En un proyecto de automatización de almacén, bodega o depósito, el WMS es la tecnología que más impacta la operación en el largo plazo: sigue siendo el sistema central después de que los equipos físicos se amortizan. Elegir un WMS con capacidad de crecimiento — multi-cliente, multi-sitio, escalable en funciones regulatorias — evita proyectos de reemplazo costosos en el futuro. STOKA entrega el WMS como parte del proyecto, con integración completa al ERP existente y capacitación del equipo operativo incluida.',
     faq: [
-      { q: '¿El WMS de DELIE se integra con SAP?', a: 'Sí. El WMS tiene conector certificado con SAP S/4HANA y SAP ECC vía RFC/BAPI y API REST. La integración bidireccional sincroniza órdenes de entrada y salida del ERP con las ubicaciones físicas del almacén en tiempo real. STOKA gestiona la integración técnica con el equipo IT del cliente.' },
+      { q: '¿El WMS se integra con SAP?', a: 'Sí. El WMS tiene conector certificado con SAP S/4HANA y SAP ECC vía RFC/BAPI y API REST. La integración bidireccional sincroniza órdenes de entrada y salida del ERP con las ubicaciones físicas del almacén en tiempo real. STOKA gestiona la integración técnica con el equipo IT del cliente.' },
       { q: '¿Cuánto tiempo lleva implementar un WMS en un almacén o depósito existente?', a: 'Para un almacén sin sistema WMS previo, la implementación completa (configuración, integración con ERP, carga de datos maestros y capacitación) toma entre 8 y 14 semanas. Si ya hay un WMS que se reemplaza, el proyecto incluye migración de datos y puede extenderse entre 4 y 6 meses.' },
       { q: '¿El WMS funciona si se corta la conexión al ERP?', a: 'Sí. El WMS opera de forma autónoma con su propia base de datos. En caso de caída del ERP, el almacén continúa operando y las transacciones se sincronizan automáticamente cuando se restablece la conexión. No hay pérdida de datos ni necesidad de ingreso manual retroactivo.' },
-      { q: '¿Qué pasa cuando crece el almacén o se agregan más SKUs?', a: 'El WMS de DELIE es escalable sin cambios de arquitectura. Podés agregar más posiciones de almacenamiento, más usuarios, más equipos físicos y más funciones regulatorias de forma incremental. La licencia incluye actualizaciones de software y nuevas funciones durante el período de soporte.' },
+      { q: '¿Qué pasa cuando crece el almacén o se agregan más SKUs?', a: 'El WMS es escalable sin cambios de arquitectura. Podés agregar más posiciones de almacenamiento, más usuarios, más equipos físicos y más funciones regulatorias de forma incremental. La licencia incluye actualizaciones de software y nuevas funciones durante el período de soporte.' },
     ],
     cta: { heading: 'Evaluamos si tu operación necesita WMS dedicado o el del ERP es suficiente', text: 'Consulta técnica gratuita con análisis de tu flujo operativo actual.', btnPrimary: { label: 'Consultar con un especialista', url: '/contacto' }, btnSecondary: { label: 'Ver software WMS/WCS', url: '/catalogo/software/wms' } },
     relacionados: [

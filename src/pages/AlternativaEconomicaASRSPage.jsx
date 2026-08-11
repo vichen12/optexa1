@@ -20,10 +20,10 @@ const PRODUCT_HREFS = [
 ];
 
 const PRODUCT_IMGS = [
-  '/productos-delie/asrs/Estanterías para grúa apiladora de paletas/pallet-stacker-crane-racking598c7.webp',
-  '/productos-delie/asrs/Estanterías robóticas con lanzadera para palés/pallet-shuttle-robot-racking13c59.webp',
-  '/productos-delie/asrs/Estanterías Miniload/miniload-rackinga0ea0.webp',
-  '/productos-delie/asrs/Transelevador Grúa + Estantería Robot Lanzadera/pallet-stacker-crane-shuttle-robot-racking89e90.webp',
+  '/productos/asrs/Estanterías para grúa apiladora de paletas/pallet-stacker-crane-racking598c7.webp',
+  '/productos/asrs/Estanterías robóticas con lanzadera para palés/pallet-shuttle-robot-racking13c59.webp',
+  '/productos/asrs/Estanterías Miniload/miniload-rackinga0ea0.webp',
+  '/productos/asrs/Transelevador Grúa + Estantería Robot Lanzadera/pallet-stacker-crane-shuttle-robot-racking89e90.webp',
 ];
 
 const FAQItem = ({ q, a }) => {
@@ -139,13 +139,13 @@ export const AlternativaEconomicaASRSPage = () => {
           >
             <div className="absolute inset-0 bg-linear-to-l from-zinc-950 via-transparent to-transparent z-10 pointer-events-none rounded-2xl" />
             <img
-              src="/productos-delie/asrs/Transelevador Grúa + Estantería Robot Lanzadera/pallet-stacker-crane-shuttle-robot-racking89e90.webp"
-              alt="Sistema ASRS DELIE transelevador y shuttle — implementación Argentina"
+              src="/productos/asrs/Transelevador Grúa + Estantería Robot Lanzadera/pallet-stacker-crane-shuttle-robot-racking89e90.webp"
+              alt="Sistema ASRS con transelevador y pallet shuttle en operación — implementación Argentina"
               className="w-full h-125 object-cover rounded-2xl"
               loading="eager"
             />
             <div className="absolute bottom-5 left-5 z-20 bg-black/60 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3">
-              <p className="text-white text-xs font-bold">Transelevador + Pallet Shuttle DELIE</p>
+              <p className="text-white text-xs font-bold">Transelevador + Pallet Shuttle</p>
               <p className="text-slate-400 text-[10px]">Sistema combinado Unit-Load / alta densidad</p>
             </div>
           </motion.div>
@@ -196,7 +196,7 @@ export const AlternativaEconomicaASRSPage = () => {
           <div className="grid grid-cols-3 gap-3 mb-2">
             <div />
             <div className="bg-cyan-400 rounded-xl px-4 py-3 flex items-center justify-center">
-              <img loading="lazy" src="/image.webp" alt="DELIE" className="h-5 object-contain" />
+              <p className="text-slate-900 text-[10px] font-bold uppercase tracking-widest leading-tight">STOKA</p>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-center">
               <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest leading-tight">{t(`${ns}.comparisonColOther`)}</p>
@@ -250,7 +250,7 @@ export const AlternativaEconomicaASRSPage = () => {
                   <div className="relative h-44 overflow-hidden bg-gray-100">
                     <img
                       src={PRODUCT_IMGS[i]}
-                      alt={`${p.name} — sistema ASRS DELIE Argentina`}
+                      alt={`${p.name} — sistema ASRS de almacenamiento automatizado en Argentina`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />

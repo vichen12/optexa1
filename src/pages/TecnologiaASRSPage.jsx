@@ -12,10 +12,10 @@ import { SeoHead } from '../lib/SeoHead';
 
 const CAPACIDAD_ICONS = [Layers, Cpu, Globe, Thermometer];
 
-export const AlternativaDeliePage = () => {
+export const TecnologiaASRSPage = () => {
   const { t } = useTranslation();
   const langNavigate = useLangNavigate();
-  const ns = 'pages.delie';
+  const ns = 'pages.tecnologiaAsrs';
 
   const metrics = t(`${ns}.metrics`, { returnObjects: true });
   const capacidades = t(`${ns}.capacidades`, { returnObjects: true });
@@ -29,8 +29,8 @@ export const AlternativaDeliePage = () => {
   return (
     <div className="min-h-screen text-gray-900 bg-white">
       <SeoHead
-        title={t('pages.alternativeDelie.metaTitle')}
-        description={t('pages.alternativeDelie.metaDesc')}
+        title={t(`${ns}.metaTitle`)}
+        description={t(`${ns}.metaDesc`)}
       />
       <Helmet>
                                                 <script type="application/ld+json">{JSON.stringify({
@@ -38,7 +38,7 @@ export const AlternativaDeliePage = () => {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": t(`${ns}.breadcrumbHome`), "item": "https://www.stokagroup.com/" },
-            { "@type": "ListItem", "position": 2, "name": t(`${ns}.breadcrumb`), "item": "https://www.stokagroup.com/delie-argentina" },
+            { "@type": "ListItem", "position": 2, "name": t(`${ns}.breadcrumb`), "item": "https://www.stokagroup.com/tecnologia-asrs" },
           ],
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
@@ -101,11 +101,11 @@ export const AlternativaDeliePage = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="w-full max-w-[360px] bg-slate-50 border border-gray-100 rounded-3xl p-8 shadow-sm flex flex-col items-center justify-center aspect-[4/3]">
+              <div className="w-full max-w-[360px] overflow-hidden rounded-3xl border border-gray-100 shadow-sm">
                 <img loading="lazy"
-                  src="/image.webp"
-                  alt="DELIE Logo"
-                  className="w-full h-auto object-contain max-h-[140px]"
+                  src="/catalogo-banner-asrs.webp"
+                  alt={t(`${ns}.heroImgAlt`)}
+                  className="w-full h-full object-cover aspect-[4/3]"
                 />
               </div>
             </motion.div>
@@ -192,7 +192,7 @@ export const AlternativaDeliePage = () => {
               <thead>
                 <tr className="bg-slate-900 text-white">
                   <th className="px-6 py-4 text-left font-black text-xs uppercase tracking-wide w-1/2">{t(`${ns}.comparativaColAspect`)}</th>
-                  <th className="px-6 py-4 text-center font-black text-xs uppercase tracking-wide text-cyan-400">{t(`${ns}.comparativaColDelie`)}</th>
+                  <th className="px-6 py-4 text-center font-black text-xs uppercase tracking-wide text-cyan-400">{t(`${ns}.comparativaColStoka`)}</th>
                   <th className="px-6 py-4 text-center font-black text-xs uppercase tracking-wide text-gray-400">{t(`${ns}.comparativaColOther`)}</th>
                 </tr>
               </thead>
@@ -203,11 +203,11 @@ export const AlternativaDeliePage = () => {
                     className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="px-6 py-4 text-gray-700 font-semibold border-r border-gray-100">{row.aspecto}</td>
                     <td className="px-6 py-4 text-center">
-                      {row.delie === true
+                      {row.stoka === true
                         ? <CheckCircle size={18} className="text-cyan-500 mx-auto" />
-                        : row.delie === false
+                        : row.stoka === false
                           ? <X size={18} className="text-red-400 mx-auto" />
-                          : <span className="font-bold text-cyan-600 text-xs">{row.delie}</span>}
+                          : <span className="font-bold text-cyan-600 text-xs">{row.stoka}</span>}
                     </td>
                     <td className="px-6 py-4 text-center">
                       {row.otro === true

@@ -27,30 +27,35 @@
     },
     "menu": "Menú",
     "language": "Seleccionar idioma",
-    "logoAlt": "STOKA — Aliado estratégico oficial de DELIE en Argentina"
+    "logoAlt": "STOKA — Automatización de depósitos · Ingeniería y soporte local"
   },
   "hero": {
-    "badge": "Aliado Estratégico Oficial DELIE · Argentina",
+    "badge": "Automatización de depósitos · Ingeniería local · Argentina y Chile",
     "h1_line1": "Automatizá tu depósito:",
     "h1_line2": "más espacio,",
     "h1_line3": "menos costos",
     "h1_line4": "y cero errores.",
-    "sub": "Aprovechá hasta 3 veces más tu espacio, ganá tiempo y reducí errores con sistemas automáticos de almacenamiento. Tecnología DELIE de clase mundial, a precio accesible y con soporte en Argentina.",
+    "sub": "Aprovechá hasta 3 veces más tu espacio, ganá tiempo y reducí errores con sistemas automáticos de almacenamiento. Tecnología de clase mundial, a precio accesible y con ingeniería y soporte en Argentina.",
     "cta1": "Quiero automatizar mi depósito",
     "cta2": "Ver catálogo de soluciones",
     "stats": {
       "installations": "Instalaciones ASRS globales",
-      "years": "Trayectoria DELIE",
+      "years": "Trayectoria en automatización",
       "cheaper": "Más económico que Europa",
       "cert": "Certificación industrial"
     },
-    "delieAlt": "Sistemas ASRS DELIE para automatización de almacenes industriales"
+    "proof": {
+      "installations": "+1.000 instalaciones globales",
+      "countries": "+30 países",
+      "cert": "CE / ISO",
+      "years": "15+ años de trayectoria"
+    }
   },
   "roi": {
     "tag": "Cuánto ahorrás en serio",
     "h2_a": "La automatización",
     "h2_b": "se paga sola",
-    "sub": "Los números reales de una operación que automatizó con DELIE.",
+    "sub": "Los números reales de una operación real que automatizó su depósito.",
     "exampleTag": "Ejemplo ilustrativo · Almacén de distribución",
     "space": "Espacio utilizado",
     "before": "m² antes",
@@ -74,17 +79,11 @@
     }
   },
   "catalog": {
-    "tag": "Catálogo de soluciones — Tecnología DELIE",
+    "tag": "Catálogo de soluciones",
     "h2_a": "Qué podemos automatizar",
     "h2_b": "en tu depósito",
     "viewAll": "Ver catálogo completo",
     "viewProducts": "Ver productos",
-    "youtube": {
-      "title": "DELIE en YouTube",
-      "desc": "Instalaciones reales, demos y casos de uso globales.",
-      "cta": "Ver canal",
-      "alt": "DELIE en YouTube — Instalaciones reales y casos de uso globales"
-    },
     "categories": {
       "asrsDesc": "Guardá más en el mismo espacio. Estanterías AS/RS de 7 a 40 metros: drive-in, shuttle, mezzanine.",
       "verticalDesc": "Torres automáticas que liberan hasta 90% del piso. Carruseles verticales y módulos VLM.",
@@ -106,7 +105,7 @@
     "h2_b": "importa",
     "pillars": {
       "p1title": "Aliado directo del fabricante",
-      "p1body": "DELIE fabrica, STOKA integra como su aliado estratégico oficial en Argentina: garantía de fábrica, piezas originales y soporte técnico local, sin cadena de intermediarios.",
+      "p1body": "STOKA integra sistemas de fabricantes globales certificados: garantía de fábrica, piezas originales y soporte técnico local en Argentina, sin cadena de intermediarios.",
       "p1stat": "instalaciones en el mundo",
       "p2title": "30–50% más económico",
       "p2body": "Misma tecnología que Europa y EE.UU., con los costos de manufactura china y comercialización local. El precio deja de ser la barrera.",
@@ -187,13 +186,13 @@
     "btn2": "Ver catálogo completo"
   },
   "footer": {
-    "tagline": "Aliado estratégico oficial y exclusivo de DELIE en Argentina y Chile. Soporte técnico 100% local.",
+    "tagline": "Automatización de depósitos con ingeniería y soporte 100% local en Argentina y Chile.",
     "catalog": "Catálogo",
     "industries": "Industrias",
     "resources": "Recursos",
     "company": "Empresa",
     "location": "Ubicación — Mendoza, Argentina",
-    "copyright": "© {{year}} STOKA — Aliado estratégico oficial de DELIE en Argentina",
+    "copyright": "© {{year}} STOKA — Automatización de depósitos · Argentina y Chile",
     "address": "Carril Rodríguez Peña 35, Maipú, Mendoza",
     "catalogLinks": {
       "asrs": "Sistemas AS/RS",
@@ -223,7 +222,7 @@
       "howWeWork": "Cómo trabajamos",
       "taxBenefits": "Beneficios fiscales",
       "contact": "Contacto",
-      "delie": "DELIE en Argentina",
+      "tecnologia": "Tecnología ASRS",
       "chile": "Automatización Chile"
     },
     "coverage": "Cobertura",
@@ -233,7 +232,7 @@
       "rosario": "Rosario",
       "mendoza": "Mendoza"
     },
-    "logoAlt": "Logo STOKA — Aliado estratégico de DELIE en Argentina"
+    "logoAlt": "Logo STOKA — Automatización de depósitos"
   },
   "wpp": {
     "writeUs": "Escribinos por WhatsApp",
@@ -321,9 +320,9 @@
     "successTitle": "¡Consulta recibida!"
   },
   "home": {
-    "seoTag": "STOKA · Aliado estratégico de DELIE en Argentina",
+    "seoTag": "STOKA · Automatización de depósitos · Argentina y Chile",
     "h2": "Automatización de almacenes, bodegas y depósitos industriales en Argentina y Chile",
-    "seoPara": "Aliado estratégico oficial y exclusivo de DELIE — uno de los fabricantes de sistemas ASRS de mayor escala global. Ingeniería, instalación y soporte 100% local en Argentina y Chile.",
+    "seoPara": "Integramos sistemas ASRS de los fabricantes de mayor escala global. Ingeniería, instalación y soporte 100% local en Argentina y Chile.",
     "problemas": {
       "tag": "El costo oculto de tu depósito",
       "h2": "¿Tu depósito llegó al límite?",
@@ -353,7 +352,7 @@
       ]
     },
     "stats": {
-      "installations": "Instalaciones globales DELIE",
+      "installations": "Instalaciones globales",
       "countries": "Países con presencia",
       "height": "Altura máx. de rack",
       "cert": "Certificación software WMS/WCS"
@@ -418,7 +417,7 @@
         "desc": "Cadena de frío con FIFO automático para certificación de origen. Cumplimiento normativa fitosanitaria."
       }
     ],
-    "chileNote": "Los sistemas DELIE cumplen normativas locales de Chile en seguridad eléctrica e importación de bienes de capital.",
+    "chileNote": "Los sistemas que integramos cumplen normativas locales de Chile en seguridad eléctrica e importación de bienes de capital.",
     "links": {
       "cases": "Casos de éxito reales",
       "glossary": "Glosario técnico",
@@ -427,7 +426,7 @@
     },
     "tabAway": "¡Volvé! Te esperamos 👋",
     "pageTitle": "Automatizá tu Depósito: Más Espacio y Menos Costos | STOKA",
-    "metaDesc": "Automatizá tu depósito y aprovechá 3x más espacio. Reducí costos, errores y tiempos con almacenamiento automático. Tecnología DELIE, soporte en Argentina.",
+    "metaDesc": "Automatizá tu depósito y aprovechá 3 veces más espacio con sistemas de almacenamiento automático. Ingeniería, instalación y soporte en Argentina y Chile.",
     "vocabPara": "Las soluciones de STOKA abarcan la logística inteligente de extremo a extremo: desde depósitos automáticos de alta densidad hasta centros de distribución 4.0 con robótica industrial y software de gestión. Transformamos almacenes tradicionales y naves industriales en operaciones automatizadas e inteligentes —depósitos inteligentes, almacenes robotizados y plantas logísticas digitalizadas— combinando transelevadores, vehículos autónomos (AGV/AMR) y sistemas de almacenamiento automático para maximizar el aprovechamiento del espacio. Si tu depósito se quedó chico, si perdés tiempo preparando pedidos o si el costo del alquiler no para de subir, la automatización deja de ser un lujo: es la forma más rápida de ordenar el depósito, ganar espacio y bajar costos sin mudarte ni ampliar.",
     "faq": [
       {
@@ -479,25 +478,25 @@
       "home": "Inicio"
     },
     "nosotros": {
-      "metaTitle": "Aliado Estratégico Oficial de DELIE en Argentina | STOKA",
-      "metaDesc": "Aliado estratégico oficial de DELIE en Argentina y Chile. 15+ años de tecnología, 1.000+ instalaciones globales. Automatizá tu depósito con respaldo local.",
+      "metaTitle": "Quiénes somos | Automatización de depósitos en Argentina | STOKA",
+      "metaDesc": "Integradores de automatización de depósitos con ingeniería y soporte 100% local. Tecnología de clase mundial con más de 1.000 instalaciones globales.",
       "breadcrumb": "Nosotros",
       "whoWeAre": "Quiénes somos",
       "h1_a": "STOKA",
       "h1_b": "Argentina",
-      "tagline": "Aliado estratégico oficial y exclusivo de DELIE en Argentina. Tecnología de automatización de almacenes de clase mundial, con ingeniería y soporte 100% local.",
+      "tagline": "Integramos tecnología de automatización de almacenes de clase mundial, con ingeniería y soporte 100% local en Argentina y Chile.",
       "stats": {
-        "installations": "Instalaciones globales DELIE",
+        "installations": "Instalaciones globales",
         "countries": "Países con presencia",
         "local": "Ingeniería y soporte local",
-        "founded": "Año de fundación DELIE"
+        "founded": "Trayectoria del fabricante"
       },
-      "officialRep": "Aliado estratégico oficial",
-      "officialRepCountry": "Argentina",
+      "officialRep": "Ingeniería local",
+      "officialRepCountry": "Argentina y Chile",
       "missionTag": "Nuestra misión",
       "missionH2": "Democratizar la automatización logística en Argentina",
       "missionPara": "Que ninguna empresa pierda competitividad por no poder acceder a tecnología que hasta hoy estaba reservada para las multinacionales. Los sistemas ASRS de clase mundial ya son accesibles para la industria argentina: almacenes de distribución, bodegas de manufactura y depósitos 3PL.",
-      "criolloBajada": "En criollo: hacemos que automatizar tu depósito deje de ser cosa de multinacionales. Traemos la tecnología de DELIE —de primer nivel mundial— y la ponemos a tu alcance, con gente que te atiende acá, en tu idioma y a tu hora.",
+      "criolloBajada": "En criollo: hacemos que automatizar tu depósito deje de ser cosa de multinacionales. Traemos tecnología de primer nivel mundial y la ponemos a tu alcance, con gente que te atiende acá, en tu idioma y a tu hora.",
       "quote": "\"Fabricación asiática de primer nivel + ingeniería y soporte local = la forma más inteligente de automatizar en Argentina: máxima tecnología, mínimo riesgo.\"",
       "requirementsTag": "Lo que un integrador ASRS en Argentina debe garantizar",
       "requirements": [
@@ -518,8 +517,8 @@
           "desc": "Restricciones y realidades de la operación nacional."
         }
       ],
-      "delieTag": "DELIE · Aliado estratégico exclusivo Argentina y Chile",
-      "deliePara": "STOKA es el aliado estratégico exclusivo de DELIE en Argentina y Chile. Tecnología ASRS de primer nivel mundial con precios 30–50% más accesibles que las alternativas europeas, y soporte técnico 100% local garantizado desde Argentina.",
+      "techTag": "Tecnología · Argentina y Chile",
+      "techPara": "STOKA integra tecnología ASRS de primer nivel mundial con precios 30–50% más accesibles que las alternativas europeas, y soporte técnico 100% local desde Argentina.",
       "valuesTag": "Cómo trabajamos",
       "valuesH2": "Nuestros valores",
       "values": [
@@ -540,13 +539,13 @@
           "desc": "Acceso a la misma tecnología que usan las grandes multinacionales globales, con precios 30–50% más accesibles que las alternativas europeas."
         }
       ],
-      "ourManufacturer": "Nuestro fabricante",
-      "delieH2_a": "DELIE —",
-      "delieH2_b": "Fabricante global ASRS",
-      "deliePara2": "Fundada en 2003, DELIE es uno de los principales fabricantes de sistemas de almacenamiento automatizado del mundo. Con más de 1.000 instalaciones en más de 30 países, combina robustez industrial, software propio WMS/WCS y una línea completa de productos: transelevadores, robots lanzadera, AMR, VLM, transportadores y estanterías de hasta 40 metros.",
-      "delieRegions": "Asia · Europa · América · Medio Oriente",
-      "delieStats": {
-        "founded": "Año de fundación DELIE",
+      "ourManufacturer": "Nuestra tecnología",
+      "techH2_a": "Tecnología ASRS",
+      "techH2_b": "de clase mundial",
+      "techPara2": "Los fabricantes con los que trabajamos operan desde hace más de 20 años y suman más de 1.000 instalaciones en más de 30 países. La tecnología que integramos combina robustez industrial, software propio WMS/WCS y una línea completa de productos: transelevadores, robots lanzadera, AMR, VLM, transportadores y estanterías de hasta 40 metros.",
+      "techRegions": "Asia · Europa · América · Medio Oriente",
+      "techStats": {
+        "founded": "Años de trayectoria fabril",
         "installations": "Instalaciones globales",
         "countries": "Países con presencia",
         "height": "Altura máx. instalación"
@@ -554,7 +553,7 @@
     },
     "howWeWork": {
       "metaTitle": "Cómo Automatizamos tu Depósito: de Plano a Arranque | STOKA",
-      "metaDesc": "Nuestro proceso para automatizar tu almacén: relevamiento, ingeniería, instalación y soporte. Proyecto llave en mano con tecnología DELIE en Argentina.",
+      "metaDesc": "Proceso de automatización en 6 fases: relevamiento, cálculo de ROI, proyecto y puesta en marcha. Ingeniería, instalación y soporte en Argentina y Chile.",
       "breadcrumb": "Cómo trabajamos",
       "methodologyTag": "Metodología · 6 fases",
       "h1_a": "De la consulta",
@@ -640,8 +639,8 @@
       "metaDesc": "Pedí tu evaluación sin cargo. Te asesoramos sobre sistemas ASRS, robots y software para tu depósito en Argentina y Chile. Respondemos en 24hs."
     },
     "catalog": {
-      "metaTitle": "Catálogo de Automatización | Sistemas ASRS DELIE | STOKA",
-      "metaDesc": "Catálogo completo de sistemas ASRS, robots, almacenamiento vertical, equipo de transporte y software WMS/WCS DELIE para automatización de almacenes en",
+      "metaTitle": "Catálogo de Automatización | Sistemas ASRS | STOKA",
+      "metaDesc": "Catálogo de automatización: sistemas ASRS, robots, almacenamiento vertical y software WMS/WCS. Ingeniería, instalación y soporte en Argentina y Chile.",
       "tag": "Catálogo",
       "h1": "Catálogo de Automatización",
       "stats": {
@@ -649,7 +648,7 @@
         "products": "Productos",
         "projects": "Proyectos globales"
       },
-      "heroTag": "Aliado estratégico oficial DELIE · Argentina",
+      "heroTag": "Catálogo de soluciones · Argentina y Chile",
       "heroH1_a": "Catálogo de",
       "heroH1_b": "Automatización",
       "heroSub": "Sistemas AS/RS, almacenamiento vertical, robots y software de clase mundial — con soporte local en Argentina.",
@@ -658,7 +657,7 @@
       "faq": [
         {
           "q": "¿Puedo combinar sistemas de distintas categorías en un mismo almacén o depósito?",
-          "a": "Sí, es lo más habitual en proyectos complejos. Por ejemplo: transelevadores unit-load para paletas en la zona de almacenamiento masivo + robots shuttle para alta rotación + VLM para repuestos o SKUs de baja rotación, todo coordinado por el WMS DELIE. La integración de los sistemas es parte del proyecto llave en mano."
+          "a": "Sí, es lo más habitual en proyectos complejos. Por ejemplo: transelevadores unit-load para paletas en la zona de almacenamiento masivo + robots shuttle para alta rotación + VLM para repuestos o SKUs de baja rotación, todo coordinado por el mismo WMS. La integración de los sistemas es parte del proyecto llave en mano."
         },
         {
           "q": "¿Cuál es el tamaño mínimo de almacén, bodega o depósito para que tenga sentido automatizar?",
@@ -666,15 +665,15 @@
         },
         {
           "q": "¿Todos los productos del catálogo están disponibles en Argentina?",
-          "a": "Sí. STOKA es el aliado estratégico oficial y representante exclusivo de DELIE en Argentina y Chile. Todos los sistemas del catálogo — transelevadores, robots shuttle, VLM, transportadores y software WMS/WCS — se pueden instalar en el país con ingeniería, instalación y soporte 100% local."
+          "a": "Sí. Todos los sistemas del catálogo — transelevadores, robots shuttle, VLM, transportadores y software WMS/WCS — se pueden instalar en el país con ingeniería, instalación y soporte 100% local de STOKA."
         },
         {
           "q": "¿El catálogo incluye el software de gestión o solo los equipos físicos?",
-          "a": "Incluye ambos. DELIE tiene su propio WMS (gestión de inventario y órdenes) y WCS (control de equipos físicos) certificados CMMI Nivel 5. Se integran con tu ERP existente. También hay soluciones de visualización 3D y módulo HMS para flotas de robots AMR."
+          "a": "Incluye ambos. La línea de software cuenta con WMS propio (gestión de inventario y órdenes) y WCS (control de equipos físicos) certificados CMMI Nivel 5. Se integran con tu ERP existente. También hay soluciones de visualización 3D y módulo HMS para flotas de robots AMR."
         },
         {
           "q": "¿Se puede ampliar el sistema en el futuro sin detener la operación?",
-          "a": "Sí, todos los sistemas DELIE son modulares. Un almacén o bodega puede empezar con 2 pasillos de transelevador y escalar a 10 sin detener la operación. El WMS gestiona la ampliación de capacidad de forma transparente para la operación existente."
+          "a": "Sí, todos los sistemas que integramos son modulares. Un almacén o bodega puede empezar con 2 pasillos de transelevador y escalar a 10 sin detener la operación. El WMS gestiona la ampliación de capacidad de forma transparente para la operación existente."
         }
       ],
       "consultarWpp": "Consultar por WhatsApp",
@@ -685,10 +684,7 @@
       "vocabPara": "Nuestro catálogo cubre toda la cadena de la automatización logística: depósitos automáticos, almacenes robotizados, transelevadores y grúas de almacén, robots logísticos (AGV/AMR), almacenamiento vertical y software de gestión. Soluciones de intralogística y almacén 4.0 para centros de distribución, depósitos inteligentes y naves industriales de cualquier escala.",
       "verProductos": "Ver productos",
       "verDetalle": "Ver detalle",
-      "verCanal": "Ver canal",
-      "youtubeTitle": "DELIE en YouTube",
-      "youtubeDesc": "Instalaciones reales, demostraciones y casos de uso de los sistemas ASRS DELIE en todo el mundo.",
-      "certLine": "DELIE · Fabricante certificado ISO 9001 · CE",
+      "certLine": "Fabricante certificado ISO 9001 · CE",
       "cats": {
         "estanterias": {
           "label": "AS/RS",
@@ -1164,7 +1160,7 @@
       "heroTag": "Sectores que automatizamos · Argentina",
       "heroH1_a": "Soluciones para",
       "heroH1_b": "tu industria",
-      "heroSub": "Cada sector tiene sus propios desafíos de almacenamiento. Conocé cómo la tecnología DELIE los resuelve con ingeniería local.",
+      "heroSub": "Cada sector tiene sus propios desafíos de almacenamiento. Conocé cómo la tecnología que integramos los resuelve con ingeniería local.",
       "heroStats": {
         "industries": "Industrias",
         "projects": "Proyectos globales",
@@ -1177,19 +1173,19 @@
         },
         {
           "title": "Certificado ISO 9001 · CE",
-          "desc": "Fabricante DELIE con más de 1.000 proyectos en 30 países y doble certificación."
+          "desc": "Fabricantes con más de 1.000 proyectos en 30 países y doble certificación."
         },
         {
           "title": "ROI comprobado",
           "desc": "Retorno de inversión promedio entre 18 y 36 meses según el sector y el volumen."
         }
       ],
-      "sectorTag": "7 sectores · DELIE Argentina",
+      "sectorTag": "7 sectores · Argentina y Chile",
       "sectorH2": "Elegí tu industria",
       "ctaTag": "¿No encontrás tu sector?",
       "ctaH2_a": "Trabajamos con",
       "ctaH2_b": "cualquier industria",
-      "ctaSub": "Si tu sector no está en la lista, consultanos igual. Los sistemas DELIE son configurables para prácticamente cualquier tipo de almacenamiento.",
+      "ctaSub": "Si tu sector no está en la lista, consultanos igual. Los sistemas que integramos son configurables para prácticamente cualquier tipo de almacenamiento.",
       "ctaBtn": "Consultar mi caso",
       "industriesList": {
         "e-commerce-retail": {
@@ -1230,23 +1226,23 @@
       }
     },
     "casos": {
-      "metaTitle": "Casos de Éxito | Instalaciones ASRS DELIE | STOKA Argentina",
-      "metaDesc": "Resultados reales de proyectos ASRS en manufactura, logística y e-commerce. +1.000 instalaciones globales DELIE.",
+      "metaTitle": "Casos de Éxito | Instalaciones ASRS | STOKA Argentina",
+      "metaDesc": "Proyectos de referencia de los sistemas que integramos en manufactura, logística y e-commerce, con métricas verificadas por el cliente final.",
       "h1": "Casos de Éxito",
       "breadcrumb": "Casos de éxito",
       "statsTag": "+1.000 instalaciones",
       "casesTitle": "9 casos que lo demuestran"
     },
     "chile": {
-      "metaTitle": "Automatización de Bodegas en Chile | Sistemas ASRS DELIE",
-      "metaDesc": "Sistemas de automatización logística DELIE para bodegas en Chile. ASRS, robots de manipulación y software WMS con soporte técnico local. Solicite diagnóstico",
+      "metaTitle": "Automatización de Bodegas en Chile | Sistemas ASRS | STOKA",
+      "metaDesc": "Automatización de bodegas en Chile: sistemas ASRS, robots de manipulación y software WMS. Ingeniería y soporte desde Argentina, en tu mismo huso horario.",
       "h1": "Automatización en Chile",
       "breadcrumb": "Chile",
       "breadcrumbHome": "Inicio",
       "heroTag": "CHILE · AUTOMATIZACIÓN DE BODEGAS",
       "heroH1_a": "AUTOMATIZACIÓN",
       "heroH1_b": "PARA CHILE",
-      "heroSub": "Sistemas ASRS y robots de manipulación DELIE para bodegas chilenas. Diagnóstico, ingeniería e implementación con soporte técnico en el país.",
+      "heroSub": "Sistemas ASRS y robots de manipulación para bodegas chilenas. Diagnóstico, ingeniería e implementación con soporte desde Argentina, en tu mismo huso horario.",
       "heroBtnPrimary": "Agendar diagnóstico",
       "heroBtnSecondary": "Ver catálogo",
       "stats": [
@@ -1267,12 +1263,12 @@
           "l": "Años de experiencia"
         }
       ],
-      "whyTag": "VENTAJAS LOCALES",
+      "whyTag": "VENTAJAS PARA CHILE",
       "whyH2": "¿POR QUÉ ELEGIR STOKA EN CHILE?",
       "whyItems": [
         "Diagnóstico y proyecto de ingeniería completamente en español, sin intermediarios internacionales.",
-        "Importación directa desde fábrica DELIE con gestión aduanera local y sin sobrecostos.",
-        "Soporte técnico presencial disponible en Santiago, Valparaíso, Concepción y otras ciudades.",
+        "Importación directa desde fábrica con gestión aduanera local y sin sobrecostos.",
+        "Soporte en español desde Argentina, con visitas técnicas coordinadas a Santiago, Valparaíso, Concepción y otras ciudades.",
         "Adaptación a normativa chilena (SUSESO, ARICA, etc.) en seguridad industrial.",
         "Integración con sistemas ERP y WMS utilizados en Chile (SAP, Oracle, local).",
         "Financiamiento compatible con Ley de Fomento a la Inversión Productiva."
@@ -1335,11 +1331,11 @@
       "faqH2": "PREGUNTAS FRECUENTES — CHILE",
       "faq": [
         {
-          "q": "¿STOKA tiene presencia física en Chile?",
-          "a": "Sí. Contamos con presencia comercial y técnica en Chile para diagnóstico, venta, instalación y soporte post-venta. No es necesario gestionar desde Argentina."
+          "q": "¿Cómo atiende STOKA los proyectos en Chile?",
+          "a": "STOKA atiende Chile con ingeniería y soporte desde Argentina: mismo huso horario, mismo idioma y visitas técnicas a sitio para diagnóstico, instalación y soporte post-venta. Los tiempos de respuesta no dependen de una fábrica en Asia o Europa."
         },
         {
-          "q": "¿Los sistemas DELIE cumplen con normativa chilena?",
+          "q": "¿Los sistemas cumplen con normativa chilena?",
           "a": "Sí. Los sistemas se adaptan a las normativas de seguridad industrial y construcción vigentes en Chile, incluyendo requerimientos sísmicos específicos para instalaciones permanentes."
         },
         {
@@ -1352,70 +1348,71 @@
         }
       ]
     },
-    "delie": {
-      "metaTitle": "DELIE Argentina | Aliado Estratégico Oficial | STOKA",
-      "metaDesc": "STOKA, aliado estratégico exclusivo de DELIE en Argentina y Chile. Sistemas ASRS líderes globales con soporte técnico local y financiamiento en pesos.",
-      "h1": "DELIE en Argentina",
-      "breadcrumb": "DELIE Argentina",
+    "tecnologiaAsrs": {
+      "metaTitle": "Tecnología ASRS en Argentina | Ingeniería local | STOKA",
+      "metaDesc": "STOKA importa, integra y soporta sistemas ASRS en Argentina y Chile: transelevadores, robots, shuttles y software WMS/WCS con ingeniería y repuestos locales.",
+      "h1": "Tecnología ASRS en Argentina",
+      "breadcrumb": "Tecnología ASRS",
       "breadcrumbHome": "Inicio",
-      "heroTag": "DELIE EN ARGENTINA · ALIADO ESTRATÉGICO EXCLUSIVO",
-      "heroH1_a": "TECNOLOGÍA DELIE",
-      "heroH1_b": "CON SOPORTE LOCAL",
-      "heroSub": "Importamos, implementamos y soportamos los sistemas ASRS de DELIE en Argentina y Chile. Acceso directo al fabricante con acompañamiento técnico local de primer nivel.",
-      "criolloBajada": "En criollo: DELIE fabrica los equipos y nosotros los hacemos andar en tu depósito, acá. No tratás con una fábrica del otro lado del mundo: tratás con un equipo local que entiende tu operación y te banca después de la venta.",
+      "heroTag": "TECNOLOGÍA ASRS · INGENIERÍA Y SOPORTE LOCAL",
+      "heroH1_a": "TECNOLOGÍA ASRS",
+      "heroH1_b": "CON INGENIERÍA LOCAL",
+      "heroSub": "Importamos, implementamos y soportamos sistemas de almacenamiento automatizado en Argentina y Chile. Un solo interlocutor desde el relevamiento hasta el service posventa.",
+      "criolloBajada": "En criollo: la fábrica hace los equipos y nosotros los hacemos andar en tu depósito, acá. No tratás con una planta del otro lado del mundo: tratás con un equipo local que entiende tu operación y te banca después de la venta.",
+      "heroImgAlt": "Sistema ASRS de almacenamiento automatizado integrado por STOKA",
       "metrics": [
         {
-          "value": "30+",
-          "label": "Países con DELIE"
+          "value": "+30",
+          "label": "Países donde opera la tecnología"
         },
         {
-          "value": "2.000+",
+          "value": "+1.000",
           "label": "Proyectos instalados"
         },
         {
-          "value": "30 años",
-          "label": "De experiencia global"
+          "value": "+20",
+          "label": "Años de trayectoria fabril"
         },
         {
           "value": "100%",
-          "label": "Soporte local"
+          "label": "Ingeniería y soporte local"
         }
       ],
-      "capacidadesTag": "CAPACIDADES DELIE",
+      "capacidadesTag": "CAPACIDADES",
       "capacidadesH2": "UNA LÍNEA COMPLETA DE AUTOMATIZACIÓN",
-      "capacidadesSub": "DELIE fabrica y diseña soluciones para todo el espectro de la automatización logística.",
+      "capacidadesSub": "Integramos soluciones para todo el espectro de la automatización logística, del palé a la caja.",
       "capacidades": [
         {
-          "title": "AS/RS Pallets y Cajas",
-          "desc": "Transelevadores, Pallet Shuttle y Miniload para almacenamiento automatizado de alta densidad en cualquier escala."
+          "title": "AS/RS de palés y cajas",
+          "desc": "Transelevadores, pallet shuttle y miniload para almacenamiento de alta densidad en cualquier escala."
         },
         {
           "title": "Software WMS integrado",
-          "desc": "WMS propio integrable con SAP, Oracle y cualquier ERP. Control en tiempo real de inventario, lotes y trazabilidad."
+          "desc": "WMS integrable con SAP, Oracle, Tango y cualquier ERP. Control en tiempo real de inventario, lotes y trazabilidad."
         },
         {
-          "title": "Presencia global certificada",
-          "desc": "Instalaciones certificadas en Europa, Asia, América y Oceanía. Más de 2.000 proyectos con disponibilidad superior al 99%."
+          "title": "Tecnología certificada",
+          "desc": "Equipos con certificación CE e ISO, instalados en Europa, Asia, América y Oceanía, con disponibilidad superior al 99%."
         },
         {
-          "title": "Soluciones temperatura controlada",
-          "desc": "Sistemas ASRS para frío positivo y negativo, cadena de frío farmacéutica y almacenamiento criogénico."
+          "title": "Temperatura controlada",
+          "desc": "Sistemas para frío positivo y negativo, cadena de frío farmacéutica y almacenamiento hasta −30 °C."
         }
       ],
-      "globalTag": "PRESENCIA GLOBAL",
-      "globalPresence": "DELIE opera en más de 30 países en 5 continentes",
+      "globalTag": "RESPALDO GLOBAL",
+      "globalPresence": "La tecnología que integramos opera en más de 30 países y 5 continentes",
       "globalStats": [
         {
-          "value": "30+",
+          "value": "+30",
           "label": "Países"
         },
         {
-          "value": "2.000+",
+          "value": "+1.000",
           "label": "Proyectos"
         },
         {
-          "value": "30 años",
-          "label": "Experiencia"
+          "value": "+20",
+          "label": "Años"
         },
         {
           "value": "5",
@@ -1423,109 +1420,109 @@
         }
       ],
       "whyTag": "VENTAJA LOCAL",
-      "whyH2": "POR QUÉ ELEGIR DELIE CON SOPORTE LOCAL",
+      "whyH2": "POR QUÉ AUTOMATIZAR CON STOKA",
       "whyItems": [
         {
-          "label": "Sin intermediarios internacionales",
-          "desc": "Comprá directo al aliado estratégico exclusivo. Sin markups de distribuidores, con precio de fábrica y soporte directo."
+          "label": "Un solo responsable",
+          "desc": "Ingeniería, importación, montaje, puesta en marcha y service los hace el mismo equipo. Si algo falla, sabés a quién llamar."
         },
         {
           "label": "Ingeniería en tu idioma",
-          "desc": "Todo el proceso —diagnóstico, ingeniería, instalación y soporte— en español, con ingenieros locales."
+          "desc": "Todo el proceso —relevamiento, diseño, instalación y soporte— en español y en tu mismo huso horario."
         },
         {
-          "label": "Piezas y repuestos en stock",
-          "desc": "Mantenemos inventario de repuestos críticos en Argentina para minimizar el tiempo de parada ante cualquier falla."
+          "label": "Repuestos críticos en stock",
+          "desc": "Mantenemos inventario de repuestos críticos en Argentina para que una falla no te frene la operación durante semanas."
         },
         {
-          "label": "Integración con sistemas locales",
-          "desc": "Experiencia integrando con los ERP y sistemas contables más utilizados en Argentina y Chile (SAP, Oracle, Tango, etc.)."
+          "label": "Integración con tus sistemas",
+          "desc": "Experiencia integrando con los ERP más usados en Argentina y Chile: SAP, Oracle, Tango y desarrollos propios."
         }
       ],
       "tcoTag": "TCO / RETORNO DE INVERSIÓN",
-      "tcoText": "El costo total de propiedad (TCO) de un sistema DELIE con soporte local es significativamente menor que el de sistemas europeos o norteamericanos equivalentes, especialmente considerando tiempos de respuesta, costos de traslado de técnicos y disponibilidad de repuestos.",
+      "tcoText": "El costo total de propiedad de un sistema ASRS con soporte local es sensiblemente menor que el de un equivalente europeo o norteamericano: sobre el total pesan más los tiempos de respuesta, el traslado de técnicos y la espera de repuestos que el precio de lista.",
       "comparativaTag": "COMPARATIVA",
-      "comparativaH2": "DELIE VS. ALTERNATIVAS GLOBALES",
+      "comparativaH2": "STOKA VS. PROVEEDOR GLOBAL SIN ESTRUCTURA LOCAL",
       "comparativaColAspect": "Aspecto",
-      "comparativaColDelie": "DELIE + STOKA",
-      "comparativaColOther": "Otras marcas",
+      "comparativaColStoka": "STOKA",
+      "comparativaColOther": "Proveedor global",
       "comparativaNote": "* Basado en proyectos implementados en LATAM. Los resultados pueden variar según escala y tipo de operación.",
       "comparativa": [
         {
           "aspecto": "Soporte técnico local en Argentina",
-          "delie": true,
+          "stoka": true,
           "otro": false
         },
         {
           "aspecto": "Repuestos en stock local",
-          "delie": true,
+          "stoka": true,
           "otro": false
         },
         {
           "aspecto": "Ingeniería en español",
-          "delie": true,
+          "stoka": true,
           "otro": "Parcial"
         },
         {
           "aspecto": "Financiamiento en pesos",
-          "delie": true,
+          "stoka": true,
           "otro": false
         },
         {
           "aspecto": "Garantía de fábrica directa",
-          "delie": true,
+          "stoka": true,
           "otro": "Parcial"
         },
         {
           "aspecto": "Integración ERP local (SAP, Tango)",
-          "delie": true,
+          "stoka": true,
           "otro": "Parcial"
         },
         {
           "aspecto": "Precio competitivo para LATAM",
-          "delie": true,
+          "stoka": true,
           "otro": false
         },
         {
           "aspecto": "Adaptación normativa IRAM/local",
-          "delie": true,
+          "stoka": true,
           "otro": "Parcial"
         },
         {
-          "aspecto": "Más de 2.000 proyectos instalados",
-          "delie": true,
+          "aspecto": "Más de 1.000 proyectos instalados",
+          "stoka": true,
           "otro": "Varía"
         },
         {
-          "aspecto": "Capacitación operarios en planta",
-          "delie": true,
+          "aspecto": "Capacitación de operarios en planta",
+          "stoka": true,
           "otro": false
         }
       ],
       "faqTag": "PREGUNTAS FRECUENTES",
-      "faqH2": "DELIE EN ARGENTINA — DUDAS COMUNES",
+      "faqH2": "TECNOLOGÍA ASRS — DUDAS COMUNES",
       "faq": [
         {
-          "q": "¿STOKA es el único representante de DELIE en Argentina?",
-          "a": "Sí. STOKA Group es el aliado estratégico oficial y representante exclusivo de DELIE para Argentina y Chile. Cualquier cotización de sistemas DELIE en estos países debe pasar por STOKA."
+          "q": "¿STOKA fabrica los equipos o los importa?",
+          "a": "Los diseñamos, los importamos y los hacemos andar. La fabricación está a cargo de plantas especializadas con las que trabajamos hace años; STOKA se hace cargo de la ingeniería, la importación, el montaje, la puesta en marcha y el soporte. Vos tenés un solo interlocutor y un solo responsable del resultado."
         },
         {
-          "q": "¿Los sistemas DELIE tienen garantía de fábrica en Argentina?",
-          "a": "Sí. Al comprar a través de STOKA obtenés garantía de fábrica con respaldo local. Gestionamos cualquier reclamo de garantía directamente con DELIE sin intermediarios adicionales."
+          "q": "¿Los equipos tienen garantía de fábrica en Argentina?",
+          "a": "Sí. Comprando a través de STOKA obtenés garantía de fábrica con respaldo local: cualquier reclamo lo gestionamos nosotros directamente con la planta, sin intermediarios adicionales."
         },
         {
-          "q": "¿Puedo visitar una instalación de referencia en Argentina?",
-          "a": "Contamos con referencias de proyectos en Latinoamérica y Asia disponibles para visita. Dependiendo del cliente y su NDA, coordinamos visitas técnicas para que puedas ver el sistema en operación real."
+          "q": "¿Puedo visitar una instalación de referencia?",
+          "a": "Tenemos referencias de proyectos en Latinoamérica y Asia disponibles para visita. Según el cliente y su acuerdo de confidencialidad, coordinamos una visita técnica para que veas el sistema operando en real."
         },
         {
-          "q": "¿Qué diferencia a DELIE de otras marcas asiáticas?",
-          "a": "DELIE tiene más de 30 años de historia, certificaciones internacionales (CE, ISO) y presencia en mercados exigentes como Europa y Japón. No es una marca nueva: es un fabricante establecido con trayectoria comprobada."
+          "q": "¿Qué diferencia a esta tecnología de otras alternativas asiáticas?",
+          "a": "Más de 20 años de trayectoria, certificaciones internacionales (CE, ISO) y presencia en mercados exigentes como Europa y Japón. No es una plataforma nueva y sin historial: es una línea probada, y acá la respalda un equipo de ingeniería que la instala y la mantiene."
         }
       ]
     },
     "alternativeAsrs": {
       "metaTitle": "Alternativa Económica a Sistemas ASRS Europeos | STOKA",
-      "metaDesc": "DELIE: la alternativa de clase mundial a los sistemas ASRS europeos y japoneses. 30-50% más económico con la misma tecnología.",
+      "metaDesc": "La alternativa mundial a los sistemas ASRS europeos y japoneses: 30-50% más económico con la misma tecnología. Ingeniería y soporte en Argentina y Chile.",
       "h1": "Alternativa Económica ASRS"
     },
     "recursos": {
@@ -1542,7 +1539,7 @@
         "glossaryTitle": "Glosario ASRS",
         "glossaryDesc": "Más de 60 términos técnicos de automatización y logística con definiciones en español.",
         "comparatorTitle": "Comparador de sistemas",
-        "comparatorDesc": "Respondé 5 preguntas sobre tu operación y recibí la recomendación de tecnología DELIE más adecuada.",
+        "comparatorDesc": "Respondé 5 preguntas sobre tu operación y recibí la recomendación técnica más adecuada.",
         "articlesTitle": "Artículos técnicos",
         "read": "Leer",
         "toolBadge": "Herramienta",
@@ -1703,8 +1700,8 @@
       "whyH2": "VENTAJAS DIFERENCIALES",
       "whyItems": [
         {
-          "label": "Aliado estratégico oficial DELIE",
-          "desc": "Acceso directo al fabricante: sin intermediarios, con garantía de fábrica y piezas originales."
+          "label": "Acceso directo a fábrica",
+          "desc": "Sin intermediarios: garantía de fábrica y piezas originales gestionadas por STOKA."
         },
         {
           "label": "Ingeniería local",
@@ -1736,7 +1733,7 @@
         },
         {
           "q": "¿Qué pasa si se corta la luz o hay una falla técnica?",
-          "a": "Los sistemas DELIE tienen protocolos de operación de emergencia, UPS y generadores opcionales. El WMS preserva el estado de inventario y los equipos retoman automáticamente desde donde estaban."
+          "a": "Los sistemas que integramos tienen protocolos de operación de emergencia, UPS y generadores opcionales. El WMS preserva el estado de inventario y los equipos retoman automáticamente desde donde estaban."
         },
         {
           "q": "¿Pueden financiar el proyecto en Argentina?",
@@ -1759,13 +1756,13 @@
     },
     "casosDeExito": {
       "metaTitle": "Casos de Éxito | Automatización Logística | STOKA",
-      "metaDesc": "Conocé implementaciones reales de sistemas ASRS DELIE en industrias farmacéutica, química, textil y más. Resultados medibles en eficiencia y ROI.",
+      "metaDesc": "Implementaciones de referencia de sistemas ASRS en industrias farmacéutica, química, textil y más. Resultados medibles en eficiencia, exactitud y ROI.",
       "breadcrumbHome": "Inicio",
       "breadcrumb": "Casos de Éxito",
       "heroTag": "RESULTADOS REALES",
       "heroH1_a": "CASOS DE",
       "heroH1_b": "ÉXITO",
-      "heroSub": "Implementaciones reales de sistemas DELIE en distintos países e industrias, con métricas verificadas y resultados concretos.",
+      "heroSub": "Implementaciones de referencia de los sistemas que integramos, en distintos países e industrias, con métricas verificadas.",
       "stats": [
         {
           "num": "9+",
@@ -1792,20 +1789,20 @@
       "trustItems": [
         {
           "title": "Datos verificados",
-          "desc": "Todas las métricas son reportadas por el propio cliente o validadas por nuestro equipo de ingeniería post-implementación."
+          "desc": "Todas las métricas son reportadas por el cliente final de cada implementación."
         },
         {
           "title": "Tecnología probada globalmente",
-          "desc": "DELIE opera en más de 30 países con más de 2.000 proyectos instalados, lo que garantiza robustez y predictibilidad."
+          "desc": "La tecnología que integramos opera en más de 30 países con más de 1.000 instalaciones, lo que garantiza robustez y predictibilidad."
         },
         {
           "title": "Soporte continuo",
-          "desc": "El acompañamiento post-venta nos permite documentar y medir el impacto real de cada implementación a lo largo del tiempo."
+          "desc": "En los proyectos de STOKA, el acompañamiento posventa local permite medir y sostener el impacto de la automatización a lo largo del tiempo."
         }
       ],
       "ctaTag": "SIGUIENTE PASO",
-      "ctaH2_a": "¿QUERÉS SER EL",
-      "ctaH2_b": "PRÓXIMO CASO?",
+      "ctaH2_a": "¿QUERÉS QUE TU DEPÓSITO",
+      "ctaH2_b": "SEA EL PRÓXIMO?",
       "ctaSub": "Evaluamos tu operación y te presentamos una solución con proyección de ROI sin costo ni compromiso.",
       "ctaBtnPrimary": "Consultá ahora",
       "ctaBtnSecondary": "Ver catálogo",
@@ -1819,7 +1816,7 @@
           "ubicacion": "Tailandia",
           "titulo": "Almacén automatizado para fabricante de alfombras de alto volumen",
           "empresa": "Fabricante líder textil · Asia Pacífico",
-          "sistema": "AS/RS Unit-Load + Transelevador DELIE",
+          "sistema": "AS/RS Unit-Load + Transelevador",
           "resumen": "Un fabricante de alfombras de gran escala necesitaba triplicar su capacidad de almacenamiento sin expandir superficie. Se implementó un sistema ASRS con 4 transelevadores de doble mástil y WMS integrado al ERP existente.",
           "metricas": [
             {
@@ -1836,7 +1833,7 @@
             }
           ],
           "tecnologias": [
-            "Transelevador DELIE",
+            "Transelevador",
             "WMS integrado",
             "Pallets standard"
           ],
@@ -1848,7 +1845,7 @@
           "ubicacion": "China",
           "titulo": "Centro de distribución automatizado para bodega de licores premium",
           "empresa": "Productor de licores premium · China",
-          "sistema": "Pallet Shuttle + Miniload DELIE",
+          "sistema": "Pallet Shuttle + Miniload",
           "resumen": "Integración de sistema ASRS combinado (Pallet Shuttle para stock masivo y Miniload para picking de cajas) en un centro de distribución de 15.000 m². Reducción del 75% en tiempos de despacho.",
           "metricas": [
             {
@@ -1865,7 +1862,7 @@
             }
           ],
           "tecnologias": [
-            "Pallet Shuttle DELIE",
+            "Pallet Shuttle",
             "Miniload",
             "Conveyor",
             "WMS"
@@ -1878,7 +1875,7 @@
           "ubicacion": "China",
           "titulo": "Almacén automatizado para laboratorio de medicina tradicional",
           "empresa": "Laboratorio farmacéutico certificado · China",
-          "sistema": "Miniload AS/RS + WMS Farma DELIE",
+          "sistema": "Miniload AS/RS + WMS Farma",
           "resumen": "Implementación de Miniload con control de lotes y vencimientos bajo normativa GMP. Trazabilidad total desde ingreso de materia prima hasta despacho de producto terminado.",
           "metricas": [
             {
@@ -1908,7 +1905,7 @@
           "ubicacion": "Europa",
           "titulo": "Depósito de cadena de frío para distribución farmacéutica",
           "empresa": "Distribuidor farmacéutico multinacional · Europa",
-          "sistema": "ASRS Cold Storage DELIE",
+          "sistema": "ASRS Cold Storage",
           "resumen": "Sistema ASRS específico para almacenamiento a 2–8°C con control de temperatura en tiempo real por posición. Reducción del 45% en consumo energético respecto al almacenamiento manual equivalente.",
           "metricas": [
             {
@@ -1937,7 +1934,7 @@
           "ubicacion": "China",
           "titulo": "Gestión automatizada de materias primas químicas a granel",
           "empresa": "Productor de sulfatos industriales · China",
-          "sistema": "AS/RS Unit-Load Heavy Duty DELIE",
+          "sistema": "AS/RS Unit-Load Heavy Duty",
           "resumen": "Almacenamiento automatizado de materias primas en formato big-bag y pallets para producción continua. El sistema gestiona FIFO automático y reabastecimiento de línea sin intervención manual.",
           "metricas": [
             {
@@ -1966,7 +1963,7 @@
           "ubicacion": "Europa",
           "titulo": "Almacén automatizado para productos peligrosos bajo ATEX",
           "empresa": "Fabricante de especialidades químicas · Europa",
-          "sistema": "ASRS ATEX DELIE + Sistema de segregación",
+          "sistema": "ASRS ATEX + Sistema de segregación",
           "resumen": "Sistema ASRS certificado ATEX para almacenamiento de productos inflamables y tóxicos. Incluye segregación automática por clase de peligrosidad y gestión de incompatibilidades.",
           "metricas": [
             {
@@ -1995,7 +1992,7 @@
           "ubicacion": "Asia",
           "titulo": "Almacén automatizado para gestión de titanio y aleaciones",
           "empresa": "Proveedor de materiales aeroespaciales · Asia",
-          "sistema": "Almacenamiento vertical + ASRS DELIE",
+          "sistema": "Almacenamiento vertical + ASRS",
           "resumen": "Gestión de perfiles, tubos y chapas de titanio y aleaciones especiales con rastreabilidad por certificado de material. Control de condiciones ambientales y trazabilidad total de cada pieza.",
           "metricas": [
             {
@@ -2024,7 +2021,7 @@
           "ubicacion": "Asia",
           "titulo": "Centro de distribución automatizado para lubricantes industriales",
           "empresa": "Distribuidor de lubricantes industrial · Asia",
-          "sistema": "Pallet Shuttle + Conveyor DELIE",
+          "sistema": "Pallet Shuttle + Conveyor",
           "resumen": "Distribución de alta velocidad de lubricantes en envases de múltiples formatos (bidones, tambores, IBC). El sistema gestiona 1.200 movimientos/hora con exactitud de 99.8%.",
           "metricas": [
             {
@@ -2053,7 +2050,7 @@
           "ubicacion": "China",
           "titulo": "Almacén central para manufactura de gran escala just-in-time",
           "empresa": "Fabricante multinacional de componentes · China",
-          "sistema": "AS/RS completo + AGV + WMS DELIE",
+          "sistema": "AS/RS completo + AGV + WMS",
           "resumen": "Centro logístico integrado que abastece 12 líneas de producción just-in-time. El WMS coordina AGVs, ASRS y conveyors para garantizar componentes en línea con latencia inferior a 15 minutos.",
           "metricas": [
             {
@@ -2081,14 +2078,14 @@
     },
     "alternativaEconomica": {
       "metaTitle": "Alternativa Económica a Sistemas ASRS Europeos | STOKA",
-      "metaDesc": "Sistemas ASRS DELIE con la misma tecnología que marcas europeas pero a precio competitivo para Argentina y LATAM. Financiamiento local y soporte técnico",
+      "metaDesc": "Sistemas ASRS con la misma tecnología que las marcas europeas, a un costo 30-50% menor. Ingeniería, instalación y soporte en Argentina y Chile.",
       "breadcrumbHome": "Inicio",
       "breadcrumb": "Alternativa Económica ASRS",
       "heroTag": "ALTERNATIVA AL ASRS EUROPEO",
       "heroH1_a": "MISMA TECNOLOGÍA",
       "heroH1_b": "MENOR",
       "heroH1_c": "COSTO TOTAL",
-      "heroSub": "Los sistemas ASRS DELIE ofrecen la misma funcionalidad y confiabilidad que las marcas europeas líderes, a un costo de adquisición hasta un 40% menor, con soporte técnico local en Argentina.",
+      "heroSub": "Los sistemas ASRS que integramos ofrecen la misma funcionalidad y confiabilidad que las marcas europeas líderes, a un costo de adquisición hasta un 40% menor, con soporte técnico local en Argentina.",
       "heroStats": [
         {
           "n": "-40%",
@@ -2126,7 +2123,7 @@
         }
       ],
       "comparisonTag": "COMPARATIVA TÉCNICA",
-      "comparisonH2": "DELIE VS. MARCAS EUROPEAS",
+      "comparisonH2": "SISTEMAS ASRS VS. MARCAS EUROPEAS",
       "comparisonSub": "Comparativa de características técnicas y comerciales para proyectos en Argentina y LATAM.",
       "comparisonColOther": "Marca europea",
       "comparisonPartial": "Parcial",
@@ -2203,7 +2200,7 @@
       "tcoH2_a": "EL MENOR",
       "tcoH2_b": "COSTO TOTAL",
       "tcoH2_c": "DE PROPIEDAD",
-      "tcoSub": "No solo el precio de compra: considerá el costo total durante 15–20 años de operación. Con soporte local y repuestos en stock, el TCO de un sistema DELIE es significativamente menor.",
+      "tcoSub": "No solo el precio de compra: considerá el costo total durante 15–20 años de operación. Con soporte local y repuestos en stock, el TCO de los sistemas que integramos es significativamente menor.",
       "tcoLinkLabel": "Ver beneficios fiscales disponibles →",
       "tcoStats": [
         {
@@ -2223,20 +2220,20 @@
       "faqH2": "DUDAS SOBRE LA COMPARATIVA",
       "faq": [
         {
-          "q": "¿DELIE es de la misma calidad que marcas europeas como SSI Schäfer o Mecalux?",
-          "a": "Sí. DELIE tiene más de 30 años de historia, certificaciones CE e ISO, y opera en mercados europeos y japoneses que exigen los mismos estándares que las marcas europeas tradicionales. La diferencia está en la estructura de costos, no en la calidad técnica."
+          "q": "¿Estos sistemas son de la misma calidad que marcas europeas como SSI Schäfer o Mecalux?",
+          "a": "Sí. Los fabricantes que integramos tienen más de 20 años de historia, certificaciones CE e ISO, y operan en mercados europeos y japoneses que exigen los mismos estándares que las marcas europeas tradicionales. La diferencia está en la estructura de costos, no en la calidad técnica."
         },
         {
           "q": "¿Qué pasa con el soporte técnico a largo plazo?",
-          "a": "STOKA mantiene un equipo de ingenieros locales certificados por DELIE, con stock de repuestos críticos en Argentina. El soporte post-venta está garantizado localmente sin depender de técnicos del exterior."
+          "a": "STOKA mantiene un equipo de ingenieros locales certificados por el fabricante, con stock de repuestos críticos en Argentina. El soporte post-venta está garantizado localmente sin depender de técnicos del exterior."
         },
         {
           "q": "¿Puedo ver una instalación de referencia antes de decidir?",
           "a": "Sí. Podemos coordinar visitas técnicas a instalaciones de referencia en Argentina y Latinoamérica, con acuerdo previo del cliente. También contamos con referencias de proyectos en Europa y Asia."
         },
         {
-          "q": "¿Los beneficios fiscales argentinos aplican a sistemas DELIE?",
-          "a": "Sí. Los sistemas DELIE califican para los regímenes de amortización acelerada, leasing y en muchos casos para créditos fiscales de la ley de bienes de capital. Nuestro equipo asesora sobre las opciones disponibles en cada caso."
+          "q": "¿Los beneficios fiscales argentinos aplican a estos sistemas?",
+          "a": "Sí. Los sistemas que integramos califican para los regímenes de amortización acelerada, leasing y en muchos casos para créditos fiscales de la ley de bienes de capital. Nuestro equipo asesora sobre las opciones disponibles en cada caso."
         },
         {
           "q": "¿Cuál es el proceso para obtener una cotización?",
@@ -2255,7 +2252,7 @@
       "keyBenefits": "Beneficios clave",
       "beforeAfter": "Antes y después",
       "withoutAutomation": "Sin automatización",
-      "withStoka": "Con STOKA · DELIE",
+      "withStoka": "Con STOKA",
       "automationContext": "Contexto de automatización",
       "automationH2": "Automatización de almacenes en {{industry}}",
       "recommendedTag": "Equipamiento recomendado",
@@ -2340,7 +2337,7 @@
               "name": "WMS — Software de gestión"
             }
           ],
-          "seo": "El canal online en Argentina y Chile creció más del 40% anual entre 2020 y 2024. Ese crecimiento no es solo oportunidad: es presión sobre los centros de fulfillment automatizados y los centros de distribución que tienen que despachar pedidos cada vez más rápido y a un costo por unidad cada vez menor. La preparación de pedidos ecommerce automatizada —el proceso más intensivo en labor del e-commerce— es la que más se beneficia de la automatización fulfillment: un sistema ASRS con robots lanzadera y transelevadores MiniLoad permite multiplicar el throughput sin multiplicar el plantel.\n\nLos sistemas DELIE para e-commerce incluyen gestión de devoluciones automática —uno de los mayores dolores del canal online—, slotting dinámico que optimiza la ubicación de SKUs según el historial de ventas en tiempo real, y una interfaz WMS que se integra directamente con las plataformas de e-commerce más usadas en la región. Para empresas que operan un micro fulfillment center o una dark store automatizada, el sistema DELIE ofrece la densidad y velocidad que esos formatos exigen. El resultado: el centro de fulfillment procesa el mismo volumen con menos personal, menos errores y más velocidad de despacho. En picos estacionales como Hot Sale o Black Friday, el sistema escala sin contratar personal de refuerzo.",
+          "seo": "El canal online en Argentina y Chile creció más del 40% anual entre 2020 y 2024. Ese crecimiento no es solo oportunidad: es presión sobre los centros de fulfillment automatizados y los centros de distribución que tienen que despachar pedidos cada vez más rápido y a un costo por unidad cada vez menor. La preparación de pedidos ecommerce automatizada —el proceso más intensivo en labor del e-commerce— es la que más se beneficia de la automatización fulfillment: un sistema ASRS con robots lanzadera y transelevadores MiniLoad permite multiplicar el throughput sin multiplicar el plantel.\n\nLos sistemas que integramos para e-commerce incluyen gestión de devoluciones automática —uno de los mayores dolores del canal online—, slotting dinámico que optimiza la ubicación de SKUs según el historial de ventas en tiempo real, y una interfaz WMS que se integra directamente con las plataformas de e-commerce más usadas en la región. Para empresas que operan un micro fulfillment center o una dark store automatizada, estos sistemas ofrecen la densidad y velocidad que esos formatos exigen. El resultado: el centro de fulfillment procesa el mismo volumen con menos personal, menos errores y más velocidad de despacho. En picos estacionales como Hot Sale o Black Friday, el sistema escala sin contratar personal de refuerzo.",
           "faq": [
             {
               "q": "¿Cuánto tiempo lleva implementar un sistema ASRS para e-commerce?",
@@ -2352,17 +2349,17 @@
             },
             {
               "q": "¿Qué velocidad de preparación de pedidos real puedo esperar?",
-              "a": "Dependiendo del perfil de SKUs, los sistemas DELIE alcanzan entre 800 y 1.200 líneas por hora por estación, comparado con 150-200 líneas en picking manual."
+              "a": "Dependiendo del perfil de SKUs, los sistemas que integramos alcanzan entre 800 y 1.200 líneas por hora por estación, comparado con 150-200 líneas en picking manual."
             },
             {
-              "q": "¿El WMS de DELIE se integra con mi ERP o plataforma de e-commerce?",
+              "q": "¿El WMS se integra con mi ERP o plataforma de e-commerce?",
               "a": "Sí. El WMS tiene conectores nativos para SAP, Oracle, Microsoft Dynamics y APIs RESTful para cualquier sistema. La integración con plataformas como Shopify, VTEX o Magento es posible mediante middleware estándar."
             }
           ]
         },
         "logistica-3pl": {
           "metaTitle": "Automatización para Operadores Logísticos 3PL | STOKA",
-          "metaDesc": "Más pedidos por hora y menos errores en tu operación 3PL. Automatización para depósitos multicliente en Argentina. Tecnología DELIE.",
+          "metaDesc": "Más pedidos por hora y menos errores en tu operación 3PL con depósitos multicliente automatizados. Ingeniería, instalación y soporte en Argentina y Chile.",
           "hero": "Operación multicliente con máxima eficiencia.",
           "description": "Los operadores 3PL necesitan flexibilidad extrema: múltiples clientes, múltiples tipos de producto y contratos cambiantes. La automatización del operador logístico permite ofrecer más valor a cada cliente sin escalar costos fijos.",
           "highlight": "\"Un operador 3PL automatizado puede servir el doble de clientes con la misma infraestructura.\"",
@@ -2426,7 +2423,7 @@
               "name": "Transportadores y Sorters"
             }
           ],
-          "seo": "Los operadores logísticos 3PL en Argentina y Chile enfrentan una presión constante: los clientes exigen más servicios, más visibilidad y menores costos, mientras los márgenes se comprimen. La diferenciación competitiva real de un operador logístico en este contexto viene de la automatización del operador logístico: el warehouse automation 3PL —visibilidad de inventario en tiempo real, reportes por cliente y operación 24/7— tiene una propuesta de valor que el resto no puede igualar con infraestructura manual.\n\nLa automatización del almacén multicliente permite además ofrecer servicios de valor agregado que antes eran inaccesibles: picking unitario a alta velocidad, gestión de devoluciones e-commerce, picking por temperatura para productos frescos o farmacéuticos, y automatización cross docking para flujos de alta rotación sin almacenaje intermedio. El WMS multicliente de DELIE permite que un mismo almacén multicliente atienda simultáneamente a clientes con perfiles operativos muy distintos —consumo masivo, farmacéutica, textil— con inventarios completamente segregados y sin mezclas. Esta flexibilidad convierte al operador logístico en un socio estratégico del cliente, no en un simple proveedor de espacio.",
+          "seo": "Los operadores logísticos 3PL en Argentina y Chile enfrentan una presión constante: los clientes exigen más servicios, más visibilidad y menores costos, mientras los márgenes se comprimen. La diferenciación competitiva real de un operador logístico en este contexto viene de la automatización del operador logístico: el warehouse automation 3PL —visibilidad de inventario en tiempo real, reportes por cliente y operación 24/7— tiene una propuesta de valor que el resto no puede igualar con infraestructura manual.\n\nLa automatización del almacén multicliente permite además ofrecer servicios de valor agregado que antes eran inaccesibles: picking unitario a alta velocidad, gestión de devoluciones e-commerce, picking por temperatura para productos frescos o farmacéuticos, y automatización cross docking para flujos de alta rotación sin almacenaje intermedio. El WMS multicliente que implementamos permite que un mismo almacén multicliente atienda simultáneamente a clientes con perfiles operativos muy distintos —consumo masivo, farmacéutica, textil— con inventarios completamente segregados y sin mezclas. Esta flexibilidad convierte al operador logístico en un socio estratégico del cliente, no en un simple proveedor de espacio.",
           "faq": [
             {
               "q": "¿Puedo gestionar múltiples clientes en el mismo almacén multicliente automatizado?",
@@ -2516,11 +2513,11 @@
           "faq": [
             {
               "q": "¿Puedo integrar la logística de planta directamente con mi línea de producción?",
-              "a": "Sí. Los sistemas DELIE se integran con el MES (Manufacturing Execution System) de la planta. Cuando la línea necesita un insumo, el MES envía la orden al WCS del depósito automáticamente, habilitando el just in time automatizado."
+              "a": "Sí. Los sistemas que implementamos se integran con el MES (Manufacturing Execution System) de la planta. Cuando la línea necesita un insumo, el MES envía la orden al WCS del depósito automáticamente, habilitando el just in time automatizado."
             },
             {
               "q": "¿Qué pasa si hay un corte de energía durante la operación?",
-              "a": "Los sistemas DELIE cuentan con UPS integrada y protocolos de recuperación automática. En caso de corte, el sistema registra la posición exacta de cada robot y se recupera desde el punto de interrupción sin pérdida de datos."
+              "a": "Estos sistemas cuentan con UPS integrada y protocolos de recuperación automática. En caso de corte, el sistema registra la posición exacta de cada robot y se recupera desde el punto de interrupción sin pérdida de datos."
             },
             {
               "q": "¿Puedo implementar el sistema por fases sin parar la producción?",
@@ -2534,9 +2531,9 @@
         },
         "alimentos-bebidas": {
           "metaTitle": "Logística Alimentaria Automatizada | FIFO | STOKA",
-          "metaDesc": "Logística alimentaria automatizada: FIFO automático, trazabilidad de alimentos y almacén frigorífico. Compatible GS1 y FSSC 22000. Sistemas DELIE.",
+          "metaDesc": "Logística alimentaria automatizada: FIFO automático, trazabilidad por lote y almacén frigorífico. Compatible GS1 y FSSC 22000. Ingeniería y soporte local.",
           "hero": "FIFO automático e inocuidad en cada movimiento.",
-          "description": "La logística alimentaria tiene requisitos de inocuidad no negociables. El FIFO automático, la trazabilidad de alimentos por lote y las alertas de vencimiento son nativas en los sistemas DELIE.",
+          "description": "La logística alimentaria tiene requisitos de inocuidad no negociables. El FIFO automático, la trazabilidad de alimentos por lote y las alertas de vencimiento son nativas en los sistemas que integramos.",
           "highlight": "\"Un retiro de mercado bien gestionado con trazabilidad completa puede ser la diferencia entre una multa y un cierre.\"",
           "benefits": [
             {
@@ -2598,7 +2595,7 @@
               "name": "Módulos VLM para picking"
             }
           ],
-          "seo": "La logística alimentaria en Argentina y Chile opera bajo una tensión permanente entre el costo de almacenamiento y los requisitos de inocuidad. Las grandes cadenas exigen trazabilidad de alimentos completa, fechas de vencimiento garantizadas y cero errores de identificación. El almacén automatizado de alimentos y el almacén frigorífico automatizado de bebidas son la única forma de garantizar eso de forma consistente a escala industrial.\n\nLos sistemas ASRS de DELIE para logística alimentaria incluyen módulo FEFO (First Expired, First Out) nativo en el WMS, complemento del FIFO automático: en cada salida, el sistema elige automáticamente el producto con vencimiento más próximo sin depender del criterio del operario. Esto elimina las mermas por vencimiento, reduce el riesgo de recall y garantiza el cumplimiento de los requisitos de trazabilidad de alimentos de los grandes compradores.",
+          "seo": "La logística alimentaria en Argentina y Chile opera bajo una tensión permanente entre el costo de almacenamiento y los requisitos de inocuidad. Las grandes cadenas exigen trazabilidad de alimentos completa, fechas de vencimiento garantizadas y cero errores de identificación. El almacén automatizado de alimentos y el almacén frigorífico automatizado de bebidas son la forma más confiable de garantizar eso de manera consistente a escala industrial.\n\nLos sistemas ASRS que integramos para logística alimentaria incluyen módulo FEFO (First Expired, First Out) nativo en el WMS, complemento del FIFO automático: en cada salida, el sistema elige automáticamente el producto con vencimiento más próximo sin depender del criterio del operario. Esto elimina las mermas por vencimiento, reduce el riesgo de recall y garantiza el cumplimiento de los requisitos de trazabilidad de alimentos de los grandes compradores.",
           "faq": [
             {
               "q": "¿El sistema garantiza el FIFO automático en la logística alimentaria?",
@@ -2606,7 +2603,7 @@
             },
             {
               "q": "¿A qué temperaturas operan los robots en el almacén frigorífico?",
-              "a": "Los transelevadores y robots lanzadera de DELIE operan entre -5°C y +10°C en formato refrigerado y hasta -25°C en formato congelado en el almacén frigorífico. Cuentan con sellado hermético anticondensación y lubricación especial para frío."
+              "a": "Los transelevadores y robots lanzadera operan entre -5°C y +10°C en formato refrigerado y hasta -25°C en formato congelado en el almacén frigorífico. Cuentan con sellado hermético anticondensación y lubricación especial para frío."
             },
             {
               "q": "¿Cómo agiliza el sistema un retiro de mercado (recall)?",
@@ -2614,15 +2611,15 @@
             },
             {
               "q": "¿Qué certificaciones de calidad tiene el sistema para la logística alimentaria?",
-              "a": "Los sistemas DELIE son compatibles con GS1, FSSC 22000 y BRC. El WMS genera registros en formato audit-ready que cumplen los requisitos de estas certificaciones."
+              "a": "Estos sistemas son compatibles con GS1, FSSC 22000 y BRC. El WMS genera registros en formato audit-ready que cumplen los requisitos de estas certificaciones."
             }
           ]
         },
         "farmaceutica": {
           "metaTitle": "Logística Farmacéutica GMP | Trazabilidad | STOKA",
-          "metaDesc": "Logística farmacéutica: almacén GMP, FEFO automático, trazabilidad de medicamentos y serialización ANMAT para depósito droguería. DELIE Argentina.",
+          "metaDesc": "Logística farmacéutica automatizada: almacén GMP, FEFO automático, trazabilidad y serialización ANMAT. Ingeniería, instalación y soporte en Argentina.",
           "hero": "Almacén GMP, FEFO y trazabilidad regulatoria nativa.",
-          "description": "La logística farmacéutica opera bajo las regulaciones más exigentes del mundo. Los sistemas DELIE para el almacén GMP están diseñados para cumplir con GMP, 21 CFR Part 11 y las normativas de ANMAT sin configuración adicional.",
+          "description": "La logística farmacéutica opera bajo las regulaciones más exigentes del mundo. Los sistemas que integramos para el almacén GMP están diseñados para cumplir con GMP, 21 CFR Part 11 y las normativas de ANMAT sin configuración adicional.",
           "highlight": "\"En farmacéutica, el compliance no es opcional. El sistema tiene que garantizarlo por diseño, no por proceso.\"",
           "benefits": [
             {
@@ -2631,7 +2628,7 @@
             },
             {
               "title": "FEFO automático",
-              "desc": "El sistema prioriza por fecha de vencimiento en cada egreso sin intervención del operario. Cumplimiento garantizado 100%."
+              "desc": "El sistema prioriza por fecha de vencimiento en cada egreso sin intervención del operario, habilitando el cumplimiento normativo de forma consistente."
             },
             {
               "title": "Temperatura controlada",
@@ -2647,7 +2644,7 @@
             },
             {
               "title": "Documentación IQ/OQ/PQ",
-              "desc": "DELIE entrega DQ, FS y DS preelaborados. STOKA acompaña el proceso de calificación para cumplir plazos regulatorios."
+              "desc": "El fabricante entrega DQ, FS y DS preelaborados. STOKA acompaña el proceso de calificación para cumplir plazos regulatorios."
             }
           ],
           "challenges": [
@@ -2664,7 +2661,7 @@
             "Zonas de temperatura diferenciada con monitoreo continuo",
             "Control de acceso por rol con segundo factor para controlados",
             "Módulo de serialización unitaria compatible con ANMAT",
-            "Documentación de validación DQ/FS/DS preelaborada por DELIE"
+            "Documentación de validación DQ/FS/DS preelaborada de fábrica"
           ],
           "stats": [
             {
@@ -2694,7 +2691,7 @@
               "name": "Módulos VLM para controlados"
             }
           ],
-          "seo": "El almacén farmacéutico es el entorno más regulado de la logística farmacéutica. Las normativas nacionales (ANMAT en Argentina) e internacionales (FDA, EMA, WHO GDP) exigen trazabilidad de medicamentos completa de cada unidad desde su recepción hasta su despacho, control de temperatura y humedad con registros continuos, y acceso controlado por rol con audit trail inmutable en el almacén GMP.\n\nEl WMS GMP-compliant de DELIE cumple con 21 CFR Part 11, EU GMP Annex 11 y los requisitos de ANMAT. Para laboratorios, droguerías y distribuidores farmacéuticos en Argentina y Chile, la automatización del depósito droguería con STOKA incluye documentación IQ/OQ/PQ preelaborada que reduce significativamente el tiempo y el costo del proceso de calificación regulatoria.",
+          "seo": "El almacén farmacéutico es el entorno más regulado de la logística farmacéutica. Las normativas nacionales (ANMAT en Argentina) e internacionales (FDA, EMA, WHO GDP) exigen trazabilidad de medicamentos completa de cada unidad desde su recepción hasta su despacho, control de temperatura y humedad con registros continuos, y acceso controlado por rol con audit trail inmutable en el almacén GMP.\n\nEl WMS GMP-compliant que implementamos cumple con 21 CFR Part 11, EU GMP Annex 11 y los requisitos de ANMAT. Para laboratorios, droguerías y distribuidores farmacéuticos en Argentina y Chile, la automatización del depósito droguería con STOKA incluye documentación IQ/OQ/PQ preelaborada que reduce significativamente el tiempo y el costo del proceso de calificación regulatoria.",
           "faq": [
             {
               "q": "¿El sistema cumple con GMP y las normativas de ANMAT para el almacén GMP?",
@@ -2710,7 +2707,7 @@
             },
             {
               "q": "¿Cuánto tiempo lleva validar el sistema para GMP en un depósito droguería?",
-              "a": "La validación IQ/OQ/PQ toma entre 3 y 6 meses post-instalación. DELIE entrega documentación de validación (DQ, FS, DS) con el sistema."
+              "a": "La validación IQ/OQ/PQ toma entre 3 y 6 meses post-instalación. El fabricante entrega documentación de validación (DQ, FS, DS) con el sistema."
             },
             {
               "q": "¿El sistema gestiona la serialización unitaria requerida por ANMAT?",
@@ -2718,7 +2715,7 @@
             },
             {
               "q": "¿Puede usarse el sistema en una droguería con habilitación GDP?",
-              "a": "Sí. El WMS de DELIE ha sido calificado en instalaciones con habilitación GDP en Latinoamérica."
+              "a": "Sí. El WMS que implementamos ha sido calificado en instalaciones con habilitación GDP en Latinoamérica."
             },
             {
               "q": "¿Cómo se maneja la devolución de medicamentos vencidos o retirados del mercado?",
@@ -2792,11 +2789,11 @@
               "name": "Transelevador Unit-Load"
             }
           ],
-          "seo": "La logística minera y de oil & gas en Argentina (Vaca Muerta, minería en Mendoza, San Juan, Catamarca) y en Chile (norte minero: I a IV Región) comparte un desafío logístico específico: almacenes MRO automatizados y depósitos de insumos petroleros en ubicaciones remotas, con personal escaso y rotación alta. La gestión MRO de repuestos en minería es crítica: una parada de equipo por falta de pieza puede costar USD 10.000 a USD 100.000 por hora.\n\nLos sistemas VLM y carrusel vertical de DELIE para el almacén de repuestos de minería resuelven tres problemas simultáneamente: densifican el almacenamiento en el espacio disponible, reducen el personal necesario para operar el depósito de insumos petroleros, y localizan cualquier repuesto entre miles de SKUs en menos de 30 segundos.",
+          "seo": "La logística minera y de oil & gas en Argentina (Vaca Muerta, minería en Mendoza, San Juan, Catamarca) y en Chile (norte minero: I a IV Región) comparte un desafío logístico específico: almacenes MRO automatizados y depósitos de insumos petroleros en ubicaciones remotas, con personal escaso y rotación alta. La gestión MRO de repuestos en minería es crítica: una parada de equipo por falta de pieza puede costar USD 10.000 a USD 100.000 por hora.\n\nLos sistemas VLM y carrusel vertical que integramos para el almacén de repuestos de minería resuelven tres problemas simultáneamente: densifican el almacenamiento en el espacio disponible, reducen el personal necesario para operar el depósito de insumos petroleros, y localizan cualquier repuesto entre miles de SKUs en menos de 30 segundos.",
           "faq": [
             {
               "q": "¿El sistema funciona en ambientes con polvo, vibración y temperaturas extremas?",
-              "a": "Sí. Los equipos DELIE para logística minera y oil & gas tienen grado de protección IP54 a IP65, están certificados para vibración conforme a IEC y operan entre -20°C y +50°C. Para zonas con riesgo de explosión, existe la versión ATEX certificada."
+              "a": "Sí. Los equipos que integramos para logística minera y oil & gas tienen grado de protección IP54 a IP65, están certificados para vibración conforme a IEC y operan entre -20°C y +50°C. Para zonas con riesgo de explosión, existe la versión ATEX certificada."
             },
             {
               "q": "¿Cuánto tarda en localizar un repuesto crítico entre 50.000 SKUs en la gestión MRO?",
@@ -2816,7 +2813,7 @@
           "metaTitle": "Almacén Frigorífico Automatizado −30°C | STOKA",
           "metaDesc": "Logística refrigerada y almacén congelado automatizado hasta −30°C. Depósito frío con transelevadores, robots shuttle, FIFO y ahorro energético.",
           "hero": "Robots que operan a -30°C sin exposición de personal.",
-          "description": "El almacén congelado es caro de construir y peligroso para el personal. Los sistemas DELIE para logística refrigerada permiten maximizar cada metro cúbico del depósito frío automatizado mientras eliminan la exposición de operarios al frío extremo.",
+          "description": "El almacén congelado es caro de construir y peligroso para el personal. Los sistemas que integramos para logística refrigerada permiten maximizar cada metro cúbico del depósito frío automatizado mientras eliminan la exposición de operarios al frío extremo.",
           "highlight": "\"Cada apertura de puerta de cámara pierde entre 5% y 15% de la energía acumulada. Automatizarlo reduce ese costo un 40%.\"",
           "benefits": [
             {
@@ -2878,10 +2875,10 @@
               "name": "Transelevador Unit-Load"
             }
           ],
-          "seo": "La logística refrigerada es uno de los sectores de más rápido crecimiento en automatización logística. El almacén frigorífico automatizado y el depósito frío automatizado son la respuesta al costo creciente de la mano de obra en frío extremo.\n\nEl ASRS congelado de DELIE —el sistema para almacén congelado a -30 grados— opera sin presencia de operarios dentro de la cámara. Los transelevadores y robots lanzadera tienen diseño especial: sellado hermético anticondensación, lubricación para frío extremo y calefacción interna de la electrónica, claves para la logística refrigerada de alto rendimiento.",
+          "seo": "La logística refrigerada es uno de los sectores de más rápido crecimiento en automatización logística. El almacén frigorífico automatizado y el depósito frío automatizado son la respuesta al costo creciente de la mano de obra en frío extremo.\n\nEl ASRS congelado que integramos —el sistema para almacén congelado a -30 grados— opera sin presencia de operarios dentro de la cámara. Los transelevadores y robots lanzadera tienen diseño especial: sellado hermético anticondensación, lubricación para frío extremo y calefacción interna de la electrónica, claves para la logística refrigerada de alto rendimiento.",
           "faq": [
             {
-              "q": "¿A qué temperatura mínima operan los robots de DELIE en el almacén congelado?",
+              "q": "¿A qué temperatura mínima operan los robots en el almacén congelado?",
               "a": "Los transelevadores y robots lanzadera para logística refrigerada están certificados hasta -30°C. Cuentan con sellado hermético anticondensación, lubricantes especiales y diagnóstico remoto."
             },
             {
@@ -2902,15 +2899,15 @@
     },
     "catalogoAsrs": {
       "metaTitle": "Sistemas ASRS Argentina | AS/RS Automatizados | STOKA",
-      "metaDesc": "ASRS y AS/RS DELIE en Argentina: transelevadores, pallet shuttle y miniload de 7 a 40 m de altura. 30–50% más económico que proveedores europeos.",
+      "metaDesc": "Sistemas ASRS en Argentina: transelevadores, pallet shuttle y miniload de 7 a 40 m de altura, 30-50% más económicos. Ingeniería y soporte 100% local.",
       "breadcrumbCat": "AS/RS",
-      "heroTag": "Sistema ASRS · Aliado estratégico DELIE · Argentina",
+      "heroTag": "Sistema ASRS · Argentina y Chile",
       "transPre": "El equipo central de casi todos los AS/RS es el ",
       "transAnchor": "transelevador",
       "transPost": ": una grúa automática que guarda y recupera la mercadería en altura, sin operarios.",
       "heroH1_a": "Sistemas AS/RS",
       "heroH1_b": "Estanterías automatizadas",
-      "heroSub": "Estanterías AS/RS DELIE de 7 a 40 metros de altura. Drive-in, shuttle, mezzanine y rack selectivo automatizado con soporte local en Argentina.",
+      "heroSub": "Estanterías AS/RS de 7 a 40 metros de altura. Drive-in, shuttle, mezzanine y rack selectivo automatizado con soporte local en Argentina.",
       "heroStat1Label": "Modelos",
       "heroStat2Label": "Altura máx.",
       "heroStat3Label": "Precisión",
@@ -2921,7 +2918,7 @@
       "stat2Label": "Precisión de mecanizado",
       "stat2Sub": "Robots sin desgaste ni paradas",
       "stat3Label": "Más económico que Europa",
-      "stat3Sub": "Precio directo de fábrica DELIE",
+      "stat3Sub": "Precio directo de fábrica",
       "stat4Label": "Meses de ROI",
       "stat4Sub": "Comprobado en operaciones reales",
       "guideTag": "Guía de selección — ¿Qué sistema AS/RS necesitás?",
@@ -2960,7 +2957,7 @@
           "note": "Simple o doble profundidad"
         }
       ],
-      "fabTag": "Fabricación DELIE",
+      "fabTag": "Fabricación certificada",
       "fiscalTag": "Argentina 2026 — Combinación fiscal",
       "fiscalItems": [
         {
@@ -3009,7 +3006,7 @@
       "faq": [
         {
           "q": "¿Cuánto espacio vertical aprovecha un sistema AS/RS en mi almacén, bodega o depósito?",
-          "a": "Los sistemas AS/RS DELIE aprovechan desde 7 hasta 40 metros de altura libre. En un almacén con 12 metros de altura, podés almacenar hasta 5 veces más que con estanterías convencionales de 4-5 metros. La clave está en diseñar la estructura según la altura disponible y el tipo de carga."
+          "a": "Los sistemas AS/RS que integramos aprovechan desde 7 hasta 40 metros de altura libre. En un almacén con 12 metros de altura, podés almacenar hasta 5 veces más que con estanterías convencionales de 4-5 metros. La clave está en diseñar la estructura según la altura disponible y el tipo de carga."
         },
         {
           "q": "¿Cuál es la diferencia entre estanterías drive-in, shuttle y MiniLoad?",
@@ -3020,7 +3017,7 @@
           "a": "La instalación mecánica de estanterías AS/RS toma 4 a 10 semanas según el modelo. La adecuación civil previa (losa plana, iluminación) puede añadir 4-6 semanas si el edificio lo requiere. STOKA coordina toda la ingeniería de detalle, el montaje y la puesta en marcha certificada en Argentina."
         },
         {
-          "q": "¿Las estanterías DELIE aplican al Decreto 513/2025 de arancel reducido en Argentina?",
+          "q": "¿Las estanterías aplican al Decreto 513/2025 de arancel reducido en Argentina?",
           "a": "Sí. Las estanterías AS/RS para sistemas automatizados están incluidas en las posiciones arancelarias del Decreto 513/2025, que reduce los aranceles de importación según la clasificación NCM de cada componente. STOKA verifica la posición arancelaria exacta para cada proyecto sin costo adicional, garantizando que aprovechés el beneficio desde el primer día de importación."
         },
         {
@@ -3047,7 +3044,7 @@
         }
       ],
       "alsoInterest": "También te puede interesar",
-      "autostoreH3": "¿Evaluaste AutoStore? Conocé la alternativa DELIE",
+      "autostoreH3": "¿Evaluaste AutoStore? Conocé la alternativa que integramos",
       "autostoreDesc": "Misma densidad de almacenamiento, 30-50% más económico y con soporte técnico local en Argentina.",
       "autostoreLink": "Ver comparativa",
       "sisterCats": [
@@ -3123,16 +3120,16 @@
     },
     "catalogoRobots": {
       "breadcrumbCat": "Robots de manipulación",
-      "heroTag": "Transelevadores · Shuttle · AMR · DELIE",
+      "heroTag": "Transelevadores · Shuttle · AMR",
       "heroH1_a": "Robots de manipulación",
       "heroH1_b": "Transelevadores, shuttles y AMR",
-      "heroSub": "14 modelos de robots de almacén DELIE: grúas apiladoras, transelevadores MiniLoad, robots lanzadera 4 vías y robots tote. Soporte técnico 24/7 en Argentina.",
-      "statsTag": "Robots de almacén DELIE",
+      "heroSub": "14 modelos de robots de almacén: grúas apiladoras, transelevadores MiniLoad, robots lanzadera 4 vías y robots tote. Soporte técnico 24/7 en Argentina.",
+      "statsTag": "Robots de almacén",
       "statsH2": "Transelevadores, robots shuttle, AMR, paletizadora automática y picking automatizado goods-to-person",
       "stat1Label": "Modelos disponibles",
       "stat1Sub": "Gama más completa del mercado",
       "stat2Label": "Velocidad máxima",
-      "stat2Sub": "Transelevador MiniLoad DELIE",
+      "stat2Sub": "Transelevador MiniLoad",
       "stat3Label": "Precisión",
       "stat3Sub": "Control de posición absoluta",
       "stat4Label": "Temp. mínima",
@@ -3148,8 +3145,8 @@
           "a": "El transelevador ocupa un pasillo completo de estantería y mueve paletas o totes con un único equipo. El robot lanzadera circula dentro de las estanterías entre niveles con mayor velocidad y sin pasillo dedicado. Para almacenes, bodegas y depósitos con alta rotación y muchos SKUs, el shuttle generalmente ofrece mayor throughput por metro cuadrado."
         },
         {
-          "q": "¿Los robots DELIE pueden operar en cámaras frigoríficas o bodegas de frío?",
-          "a": "Sí. DELIE fabrica versiones para cadena de frío certificadas a -25°C (robots lanzadera) y -30°C (transelevadores). Incluyen sellado hermético anticondensación, lubricación especial y materiales de frío. Operan de forma autónoma sin necesidad de personal dentro del depósito frigorífico."
+          "q": "¿Los robots pueden operar en cámaras frigoríficas o bodegas de frío?",
+          "a": "Sí. Existen versiones para cadena de frío certificadas a -25°C (robots lanzadera) y -30°C (transelevadores). Incluyen sellado hermético anticondensación, lubricación especial y materiales de frío. Operan de forma autónoma sin necesidad de personal dentro del depósito frigorífico."
         },
         {
           "q": "¿Cuántos robots necesito para el throughput de mi operación?",
@@ -3157,7 +3154,7 @@
         },
         {
           "q": "¿Qué mantenimiento preventivo requieren los robots de almacén?",
-          "a": "Los robots DELIE tienen mantenimiento preventivo de 2-4 horas por mes por equipo. El WCS monitorea en tiempo real el estado de cada robot y genera alertas tempranas. Los componentes de mayor desgaste son modulares y se reemplazan sin herramientas especializadas. STOKA mantiene stock de repuestos locales en Argentina."
+          "a": "Los robots que integramos tienen mantenimiento preventivo de 2-4 horas por mes por equipo. El WCS monitorea en tiempo real el estado de cada robot y genera alertas tempranas. Los componentes de mayor desgaste son modulares y se reemplazan sin herramientas especializadas. STOKA mantiene stock de repuestos locales en Argentina."
         }
       ],
       "sisterCats": [
@@ -3179,7 +3176,7 @@
         }
       ],
       "metaTitle": "Robots de Manipulación | Transelevadores y AMR | STOKA",
-      "metaDesc": "Catálogo de robots de almacén DELIE: grúas apiladoras, transelevadores MiniLoad, robots shuttle y AMR. 14 modelos con soporte local de STOKA en Argentina.",
+      "metaDesc": "Catálogo de robots de almacén: grúas apiladoras, transelevadores MiniLoad, robots shuttle y AMR. 14 modelos con ingeniería y soporte local en Argentina.",
       "products": [
         {
           "name": "Grúa apiladora mástil simple",
@@ -3239,7 +3236,7 @@
         },
         {
           "name": "Robot tote doble estación 4 vías",
-          "desc": "Primicia mundial: maneja 2 contenedores por ciclo, eficiencia +80-90%. PLC Siemens, algoritmo ECBS. Hasta 100 kg, 5 m/s, ±2 mm."
+          "desc": "Maneja 2 contenedores por ciclo, eficiencia +80-90%. PLC Siemens, algoritmo ECBS. Hasta 100 kg, 5 m/s, ±2 mm."
         }
       ],
       "techTag": "¿Cuál tecnología necesitás?",
@@ -3305,7 +3302,7 @@
     },
     "catalogoVertical": {
       "breadcrumbCat": "Almacenamiento vertical",
-      "heroTag": "VLM · Carrusel vertical · DELIE",
+      "heroTag": "VLM · Carrusel vertical",
       "heroH1_a": "Almacenamiento vertical",
       "heroH1_b": "VLM y carruseles inteligentes",
       "heroSub": "Ahorrá hasta el 90% del espacio de suelo. Picking ergonómico \"mercancías a persona\" a la altura del operador, sin desplazamientos. Integración con ERP y MES.",
@@ -3360,11 +3357,11 @@
         },
         {
           "q": "¿Cómo se integra el VLM con mi ERP o WMS actual?",
-          "a": "Mediante APIs estándar RESTful o la interfaz del WMS de DELIE. Si ya tenés un WMS de terceros (SAP EWM, Manhattan, etc.), el VLM puede operar como subsistema esclavo que recibe órdenes de extracción. Si no tenés WMS, el módulo de DELIE gestiona el inventario del depósito de forma autónoma con integración al ERP."
+          "a": "Mediante APIs estándar RESTful o la interfaz del WMS del sistema. Si ya tenés un WMS de terceros (SAP EWM, Manhattan, etc.), el VLM puede operar como subsistema esclavo que recibe órdenes de extracción. Si no tenés WMS, el módulo de gestión propio administra el inventario del depósito de forma autónoma con integración al ERP."
         },
         {
           "q": "¿Puede operar el VLM o carrusel vertical en temperatura controlada?",
-          "a": "El carrusel vertical opera entre -5°C y +40°C, compatible con cámaras de frío positivo. El VLM tiene versiones para entornos entre 2°C y 25°C, ideal para farmacéutica y productos refrigerados. Para frío negativo (bodega de congelados), se recomiendan los transelevadores especializados de la línea AS/RS de DELIE."
+          "a": "El carrusel vertical opera entre -5°C y +40°C, compatible con cámaras de frío positivo. El VLM tiene versiones para entornos entre 2°C y 25°C, ideal para farmacéutica y productos refrigerados. Para frío negativo (bodega de congelados), se recomiendan los transelevadores especializados de la línea AS/RS."
         }
       ],
       "sisterCats": [
@@ -3386,7 +3383,7 @@
         }
       ],
       "metaTitle": "Almacenamiento Vertical | VLM y Carruseles | STOKA",
-      "metaDesc": "Sistemas de almacenamiento vertical DELIE: VLM y carruseles inteligentes. Ahorrá hasta 90% de espacio con picking goods-to-person. Soporte local STOKA.",
+      "metaDesc": "Sistemas de almacenamiento vertical: VLM y carruseles inteligentes. Ahorrá hasta 90% de espacio con picking goods-to-person. Ingeniería y soporte local.",
       "products": [
         {
           "name": "Carrusel vertical inteligente",
@@ -3446,11 +3443,11 @@
     },
     "catalogoTransporte": {
       "breadcrumbCat": "Equipo de transporte",
-      "heroTag": "Conveyors · Elevadores · Paletizadores · DELIE",
+      "heroTag": "Conveyors · Elevadores · Paletizadores",
       "heroH1_a": "Equipo de transporte —",
       "heroH1_b": "Conveyors, elevadores y paletizadores",
       "heroSub": "10 modelos de equipos de transporte para conectar cada punto de tu almacén automatizado. Desde transportadores de cadena hasta paletizadores automáticos con integración WCS.",
-      "statsTag": "Equipo de transporte DELIE",
+      "statsTag": "Equipo de transporte",
       "statsH2": "El tejido conectivo del almacén automatizado — conveyors, elevadores y paletizadores integrados bajo WCS",
       "stat1Label": "Modelos disponibles",
       "stat1Sub": "Gama completa de transporte",
@@ -3468,18 +3465,18 @@
       "faq": [
         {
           "q": "¿Qué tipo de transportador necesito para paletas de 3.000 kg en mi depósito?",
-          "a": "Para cargas de 3.000 kg por palé, el transportador de cadena o el de rodillos de DELIE son los indicados. Ambos están dimensionados para esa carga con variador de frecuencia para arranque suave. La elección entre cadena y rodillos depende de la fragilidad de la paleta y si necesitás acumulación por zonas en el almacén o bodega."
+          "a": "Para cargas de 3.000 kg por palé, el transportador de cadena o el de rodillos que integramos son los indicados. Ambos están dimensionados para esa carga con variador de frecuencia para arranque suave. La elección entre cadena y rodillos depende de la fragilidad de la paleta y si necesitás acumulación por zonas en el almacén o bodega."
         },
         {
-          "q": "¿Puedo integrar transportadores existentes en mi almacén con el sistema DELIE?",
-          "a": "En muchos casos, sí. El WCS de DELIE puede controlar transportadores de otras marcas con interfaz de control estándar (PLC con Profibus, Profinet o similar). STOKA realiza la auditoría de compatibilidad durante el diagnóstico técnico para determinar qué conveyors existentes podés reutilizar y reducir la inversión total."
+          "q": "¿Puedo integrar transportadores existentes en mi almacén con el sistema?",
+          "a": "En muchos casos, sí. El WCS que implementamos puede controlar transportadores de otras marcas con interfaz de control estándar (PLC con Profibus, Profinet o similar). STOKA realiza la auditoría de compatibilidad durante el diagnóstico técnico para determinar qué conveyors existentes podés reutilizar y reducir la inversión total."
         },
         {
           "q": "¿Qué mantenimiento requieren los transportadores en el almacén o bodega?",
-          "a": "Los conveyors DELIE tienen mantenimiento preventivo trimestral: lubricación de cadenas o rodillos, verificación de tensores y revisión de sensores. Los componentes de desgaste están normalizados y disponibles en Argentina. El WCS monitorea cada sección del depósito y emite alertas antes de que ocurra una falla."
+          "a": "Los conveyors que integramos tienen mantenimiento preventivo trimestral: lubricación de cadenas o rodillos, verificación de tensores y revisión de sensores. Los componentes de desgaste están normalizados y disponibles en Argentina. El WCS monitorea cada sección del depósito y emite alertas antes de que ocurra una falla."
         },
         {
-          "q": "¿Los transportadores DELIE funcionan a temperatura negativa en bodegas o cámaras frigoríficas?",
+          "q": "¿Los transportadores funcionan a temperatura negativa en bodegas o cámaras frigoríficas?",
           "a": "Sí. Los transportadores de cadena para cadena de frío operan hasta -25°C con lubricantes especiales, materiales anticongelantes y diseño hermético. Se integran con los transelevadores y robots lanzadera de la línea de frío para crear un sistema completamente automatizado en el depósito frigorífico."
         }
       ],
@@ -3502,7 +3499,7 @@
         }
       ],
       "metaTitle": "Equipo de Transporte | Conveyors y Elevadores | STOKA",
-      "metaDesc": "Catálogo de transporte DELIE: transportadores, elevadores, paletizadores y máquinas de transferencia. 10 modelos con ingeniería local de STOKA en Argentina.",
+      "metaDesc": "Catálogo de equipo de transporte: transportadores, elevadores, paletizadores y máquinas de transferencia. 10 modelos con ingeniería local en Argentina.",
       "products": [
         {
           "name": "Elevador de paletas",
@@ -3608,7 +3605,7 @@
       "benefitsBody": "En un almacén automatizado, el transportador es tan crítico como el transelevador: un cuello de botella en el conveyor puede reducir el throughput total del sistema aunque los robots funcionen a máxima capacidad. Por eso el diseño de la red de transporte interno se realiza con simulación de flujos antes de la instalación — el WCS prueba virtualmente el comportamiento del sistema bajo picos de demanda para garantizar que no existan cuellos de botella.",
       "fiscalTag": "Decreto 513/2025 — Beneficio fiscal",
       "fiscalH3": "Arancel reducido según NCM para conveyors y paletizadores",
-      "fiscalBody": "Los equipos de transporte industrial DELIE pueden aplicar al Decreto 513/2025, que reduce el arancel de importación según la clasificación NCM de transportadores industriales, elevadores y paletizadores automáticos. STOKA gestiona la importación completa desde China hasta tu planta en Argentina.",
+      "fiscalBody": "Los equipos de transporte industrial que integramos pueden aplicar al Decreto 513/2025, que reduce el arancel de importación según la clasificación NCM de transportadores industriales, elevadores y paletizadores automáticos. STOKA gestiona la importación completa desde China hasta tu planta en Argentina.",
       "fiscalCta": "Ver beneficios fiscales",
       "explorarTag": "Explorar por tipo",
       "explorarH2": "Equipo de transporte disponible",
@@ -3626,10 +3623,10 @@
     },
     "catalogoSoftware": {
       "breadcrumbCat": "Software inteligente",
-      "heroTag": "WMS · WCS · HMS · ECS · DELIE",
+      "heroTag": "WMS · WCS · HMS · ECS",
       "heroH1_a": "Software inteligente —",
       "heroH1_b": "WMS, WCS y control de almacén",
-      "heroSub": "6 módulos de software DELIE certificados CMMI Nivel 5. Control total del almacén automatizado con integración SAP, Oracle y cualquier ERP. Digital Twin 3D incluido.",
+      "heroSub": "6 módulos de software certificados CMMI Nivel 5. Control total del almacén automatizado con integración SAP, Oracle y cualquier ERP. Digital Twin 3D incluido.",
       "stat1Label": "Módulos de software",
       "stat2Label": "Certificación máxima",
       "stat3Label": "Integración nativa",
@@ -3642,10 +3639,10 @@
       "seoSub": "en la gestión de almacenes y bodegas",
       "nivel": "Nivel",
       "integraWith": "Integra con",
-      "benefitsTag": "Ventajas clave del stack DELIE",
+      "benefitsTag": "Ventajas clave del stack integrado",
       "errorTag": "El error más común en proyectos AS/RS",
       "errorH3": "Implementar el hardware sin diseñar la capa de software.",
-      "errorBody": "Un transelevador sin WCS adecuado opera como equipo manual: eficiente en el movimiento físico pero sin la inteligencia para coordinar ciclos combinados, gestionar inventario en tiempo real e integrarse con el ERP. El WMS y el WCS de DELIE se diseñaron como un stack integrado: misma base de datos, misma interfaz, misma fuente de verdad para el inventario del almacén, bodega o depósito.",
+      "errorBody": "Un transelevador sin WCS adecuado opera como equipo manual: eficiente en el movimiento físico pero sin la inteligencia para coordinar ciclos combinados, gestionar inventario en tiempo real e integrarse con el ERP. El WMS y el WCS que implementamos se diseñaron como un stack integrado: misma base de datos, misma interfaz, misma fuente de verdad para el inventario del almacén, bodega o depósito.",
       "argTag": "Argentina y Chile — WMS heredado",
       "comparison": [
         {
@@ -3692,7 +3689,7 @@
       "faq": [
         {
           "q": "¿Cuánto tiempo lleva implementar el WMS en mi almacén, bodega o depósito?",
-          "a": "La implementación base del WMS toma entre 4 y 12 semanas según la complejidad de integración con el ERP. En proyectos con hardware DELIE, el WMS se configura simultáneamente con la instalación mecánica, sin sumar tiempo al cronograma general. STOKA gestiona la implementación de software como parte del proyecto llave en mano."
+          "a": "La implementación base del WMS toma entre 4 y 12 semanas según la complejidad de integración con el ERP. En proyectos con hardware del mismo fabricante, el WMS se configura simultáneamente con la instalación mecánica, sin sumar tiempo al cronograma general. STOKA gestiona la implementación de software como parte del proyecto llave en mano."
         },
         {
           "q": "¿El WMS puede gestionar un almacén o bodega manual (sin robots)?",
@@ -3700,7 +3697,7 @@
         },
         {
           "q": "¿Cómo es la integración técnica del WMS con SAP o ERP en Argentina?",
-          "a": "DELIE tiene conectores nativos para SAP (BAPI/RFC y SAP EWM), Oracle, Microsoft Dynamics y APIs RESTful para cualquier otro sistema. La integración incluye sincronización de maestros de artículos y ubicaciones, órdenes de entrada/salida y confirmaciones en tiempo real. STOKA entrega documentación técnica completa."
+          "a": "El software cuenta con conectores nativos para SAP (BAPI/RFC y SAP EWM), Oracle, Microsoft Dynamics y APIs RESTful para cualquier otro sistema. La integración incluye sincronización de maestros de artículos y ubicaciones, órdenes de entrada/salida y confirmaciones en tiempo real. STOKA entrega documentación técnica completa."
         },
         {
           "q": "¿Qué pasa con los datos del depósito si el servidor del WMS se cae?",
@@ -3726,7 +3723,7 @@
         }
       ],
       "metaTitle": "Software de Almacén | WMS, WCS y Control | STOKA",
-      "metaDesc": "Software DELIE certificado CMMI Nivel 5: WMS, WCS, HMS y control de almacén automatizado. 6 módulos integrados con soporte local de STOKA en Argentina.",
+      "metaDesc": "Software certificado CMMI Nivel 5: WMS, WCS, HMS y control de almacén automatizado. 6 módulos integrados con ingeniería y soporte local en Argentina.",
       "products": [
         {
           "name": "WMS — Gestión de almacenes",
@@ -3753,7 +3750,7 @@
           "desc": "Digital Twin tridimensional en tiempo real de todo el almacén. Simulación, optimización y dashboards diferenciados por rol de usuario."
         }
       ],
-      "argBody": "Muchos operadores de depósitos y almacenes ya tienen un WMS heredado (o el módulo WM del ERP) y buscan agregar un WCS para controlar el equipamiento AS/RS. El WCS de DELIE se integra con cualquier WMS externo mediante APIs documentadas. <strong>STOKA gestiona la integración técnica con el ERP del cliente como parte del contrato llave en mano, sin costos adicionales por hora de consultoría de integración.</strong>",
+      "argBody": "Muchos operadores de depósitos y almacenes ya tienen un WMS heredado (o el módulo WM del ERP) y buscan agregar un WCS para controlar el equipamiento AS/RS. El WCS que implementamos se integra con cualquier WMS externo mediante APIs documentadas. <strong>STOKA gestiona la integración técnica con el ERP del cliente como parte del contrato llave en mano, sin costos adicionales por hora de consultoría de integración.</strong>",
       "verDetalle": "Ver detalle",
       "explorarTag": "Explorar por tipo",
       "explorarH2": "Software disponible",
@@ -3774,17 +3771,17 @@
       "heroChip": "Alternativa económica · Soporte local",
       "heroH1_a": "Alternativa a AutoStore",
       "heroH1_b": "con soporte local en Argentina",
-      "heroSub": "Los sistemas ASRS DELIE ofrecen densidad y throughput comparables a AutoStore a un costo 30-50% menor, con ingeniería, instalación y soporte técnico 100% local a través de STOKA.",
+      "heroSub": "Los sistemas ASRS que integramos ofrecen densidad y throughput comparables a AutoStore a un costo 30-50% menor, con ingeniería, instalación y soporte técnico 100% local a través de STOKA.",
       "heroCta": "Consultar precio y disponibilidad",
       "heroLink": "Ver catálogo ASRS completo",
       "stat1Label": "Más económico",
       "stat2Label": "Soporte técnico",
       "stat3Label": "Proyecto llave en mano",
       "stat4Label": "Respuesta de repuestos",
-      "compH2": "DELIE vs AutoStore",
+      "compH2": "Sistemas ASRS vs AutoStore",
       "compSub": "Comparativa técnica para proyectos en Argentina y Chile",
       "compFeature": "Característica",
-      "whyH2": "Por qué empresas argentinas eligen DELIE sobre AutoStore",
+      "whyH2": "Por qué empresas argentinas eligen estos sistemas ASRS sobre AutoStore",
       "why": [
         {
           "stat": "24h",
@@ -3796,43 +3793,43 @@
           "stat": "40%",
           "label": "Ahorro promedio vs AutoStore",
           "title": "Precio 30-50% menor",
-          "desc": "En proyectos de USD 1M, DELIE significa entre USD 300.000 y USD 500.000 de ahorro en la inversión inicial con throughput y capacidad equivalente."
+          "desc": "En proyectos de USD 1M, esto significa entre USD 300.000 y USD 500.000 de ahorro en la inversión inicial con throughput y capacidad equivalente."
         },
         {
           "stat": "1.500kg",
           "label": "Carga máxima por posición",
           "title": "Sin límite de tamaño de SKU",
-          "desc": "AutoStore soporta hasta 30 kg y tamaños fijos de contenedor. DELIE opera con paletas de hasta 1.500 kg y cualquier tipo de unidad de carga."
+          "desc": "AutoStore soporta hasta 30 kg y tamaños fijos de contenedor. Nuestros sistemas operan con paletas de hasta 1.500 kg y cualquier tipo de unidad de carga."
         }
       ],
-      "productsH2": "Sistemas DELIE que reemplazan a AutoStore",
+      "productsH2": "Sistemas ASRS que reemplazan a AutoStore",
       "viewSystem": "Ver sistema",
       "faqH2": "Preguntas frecuentes sobre alternativas a AutoStore en Argentina",
       "faq": [
         {
-          "q": "¿DELIE es una alternativa a AutoStore en Argentina?",
-          "a": "Sí. DELIE fabrica sistemas ASRS cube storage, shuttle y transelevadores que compiten directamente con AutoStore. La principal diferencia es el precio: los sistemas DELIE son entre un 30% y un 50% más económicos que AutoStore para proyectos equivalentes, y tienen soporte técnico local en Argentina a través de STOKA."
+          "q": "¿Existe una alternativa a AutoStore en Argentina?",
+          "a": "Sí. Los sistemas ASRS que integramos — cube storage, shuttle y transelevadores — compiten directamente con AutoStore. La principal diferencia es el precio: son entre un 30% y un 50% más económicos que AutoStore para proyectos equivalentes, y tienen soporte técnico local en Argentina a través de STOKA."
         },
         {
-          "q": "¿Qué diferencia técnica hay entre AutoStore y los sistemas DELIE?",
-          "a": "AutoStore usa robots de rejilla (grid robots) que operan sobre una grilla modular. DELIE ofrece sistemas shuttle y de transelevadores que en muchas configuraciones logran densidades comparables o superiores, especialmente en depósitos con altura disponible mayor a 8 metros. El sistema DELIE también permite SKUs de mayor tamaño y peso."
+          "q": "¿Qué diferencia técnica hay entre AutoStore y estos sistemas ASRS?",
+          "a": "AutoStore usa robots de rejilla (grid robots) que operan sobre una grilla modular. Los sistemas ASRS que integramos ofrecen shuttle y transelevadores que en muchas configuraciones logran densidades comparables o superiores, especialmente en depósitos con altura disponible mayor a 8 metros. También permiten SKUs de mayor tamaño y peso."
         },
         {
           "q": "¿Cuánto cuesta un sistema alternativo a AutoStore en Argentina?",
-          "a": "Un sistema DELIE equivalente a una instalación AutoStore mediana (1.000-3.000 posiciones) en Argentina puede costar entre USD 600.000 y USD 1.500.000 completo (equipos + estanterías + WCS + integración). AutoStore suele costar entre un 30% y 50% más para configuraciones equivalentes, más el costo del soporte técnico importado."
+          "a": "Un sistema ASRS equivalente a una instalación AutoStore mediana (1.000-3.000 posiciones) en Argentina puede costar entre USD 600.000 y USD 1.500.000 completo (equipos + estanterías + WCS + integración). AutoStore suele costar entre un 30% y 50% más para configuraciones equivalentes, más el costo del soporte técnico importado."
         },
         {
           "q": "¿STOKA tiene experiencia instalando sistemas en operaciones similares a las de AutoStore?",
-          "a": "Sí. STOKA ha instalado sistemas DELIE en operaciones de e-commerce, logística 3PL, farmacéutica y manufactura en Argentina con perfiles de throughput similares a los que suelen automatizarse con AutoStore. Podemos mostrar referencias del sector en la primera reunión técnica."
+          "a": "Sí. STOKA ha implementado estos sistemas en operaciones de e-commerce, logística 3PL, farmacéutica y manufactura en Argentina con perfiles de throughput similares a los que suelen automatizarse con AutoStore. Podemos mostrar referencias del sector en la primera reunión técnica."
         }
       ],
       "parcial": "parcial",
-      "metaTitle": "Alternativa a AutoStore en Argentina | ASRS DELIE | STOKA",
-      "metaDesc": "Alternativa a AutoStore con densidad y throughput comparables a menor costo. Sistemas ASRS DELIE con ingeniería y soporte local en Argentina por STOKA."
+      "metaTitle": "Alternativa a AutoStore en Argentina | Sistemas ASRS | STOKA",
+      "metaDesc": "Alternativa a AutoStore con densidad y throughput comparables a un costo 30-50% menor. Sistemas ASRS con ingeniería y soporte en Argentina y Chile."
     },
     "recursosHub": {
       "metaTitle": "Recursos técnicos ASRS | Artículos, herramientas y glosario",
-      "metaDesc": "Centro de recursos técnicos STOKA: artículos sobre automatización logística, calculadora ROI, comparador de sistemas y glosario técnico para Argentina y",
+      "metaDesc": "Centro de recursos técnicos: artículos sobre automatización logística, calculadora ROI, comparador de sistemas y glosario para Argentina y Chile.",
       "breadcrumb": "Recursos",
       "heroTag": "Artículos · Herramientas · Glosario · Argentina",
       "heroH1_a": "Centro de",
@@ -4509,7 +4506,7 @@
       "ctx2026P": [
         "La convergencia de tres factores hace de 2025–2026 una ventana única para invertir en automatización de almacenes en Argentina. Por primera vez en décadas se combinan estabilidad normativa de largo plazo, reducción de aranceles de importación y acceso a financiamiento preferencial en simultáneo.",
         "El RIGI ofrece 30 años de estabilidad fiscal: Ganancias al 25%, aranceles fijos y libre disponibilidad de divisas desde el tercer año. Para empresas que automatizan hoy, este horizonte de certeza facilita el cálculo del TCO a 10 años y la presentación del proyecto ante directorio o financiadores.",
-        "El Decreto 513/2025 reduce significativamente el arancel según la posición NCM: en un proyecto de USD 800.000, puede representar hasta USD 120.000 menos de desembolso inicial. Sin gestión adicional por parte de la empresa: aplica automáticamente al importar los equipos DELIE.",
+        "El Decreto 513/2025 reduce significativamente el arancel según la posición NCM: en un proyecto de USD 800.000, puede representar hasta USD 120.000 menos de desembolso inicial. Sin gestión adicional por parte de la empresa: aplica automáticamente al importar los equipos.",
         "La combinación de BICE + RIMI + arancel 0% transforma la ecuación de inversión: la cuota mensual del financiamiento queda por debajo del costo laboral mensual que se reemplaza, haciendo que el sistema se financie a sí mismo desde el primer año de operación."
       ],
       "faqTag": "Preguntas frecuentes",
@@ -4639,10 +4636,10 @@
       "descripcionTecnica": "Descripción técnica",
       "funcionamiento": "Funcionamiento",
       "fichaTecnica": "Ficha técnica",
-      "delieTag": "Tecnología DELIE en Argentina",
-      "delieH2": "DELIE — aliado estratégico oficial STOKA",
-      "delieParrafo": "DELIE fabrica más de 1.000 instalaciones activas en +30 países. STOKA es el aliado estratégico exclusivo en Argentina: ingeniería, instalación y soporte técnico local sin depender de tiempos de fábrica en el exterior. Tecnología de clase mundial, precio para el mercado LATAM.",
-      "verMasDelie": "Ver más sobre DELIE en Argentina →",
+      "tecTag": "Ingeniería STOKA",
+      "tecH2": "Por qué implementarlo con STOKA",
+      "tecParrafo": "Tecnología con más de 1.000 instalaciones activas en más de 30 países. STOKA aporta la ingeniería local: dimensionamiento, importación, instalación, integración con tu ERP y soporte técnico en Argentina, sin depender de tiempos de fábrica en el exterior.",
+      "verMasTec": "Ver más sobre la tecnología →",
       "relacionadosTag": "También te puede interesar",
       "relacionadosH2": "Productos relacionados",
       "verCategoria": "Ver toda la categoría",
@@ -4653,10 +4650,6 @@
       "consultarSobre": "Consultar sobre",
       "verCategoriaCompleta": "Ver categoría completa",
       "vistaAmpliada": "Vista ampliada"
-    },
-    "alternativeDelie": {
-      "metaTitle": "DELIE en Argentina | Sistemas ASRS DELIE | STOKA",
-      "metaDesc": "Aliado estratégico oficial de DELIE en Argentina. Sistemas ASRS, transelevadores, robots y software WMS/WCS con ingeniería y soporte 100% local de STOKA."
     },
     "zonas": {
       "buenos-aires": {
@@ -4948,7 +4941,7 @@
           },
           {
             "q": "¿La automatización se integra con los sistemas de planta existentes?",
-            "a": "Sí. El software de DELIE se integra con los ERP y MES de planta mediante APIs documentadas y conectores nativos (SAP, Oracle, Microsoft Dynamics). STOKA gestiona la integración técnica como parte del proyecto llave en mano."
+            "a": "Sí. El software que implementamos se integra con los ERP y MES de planta mediante APIs documentadas y conectores nativos (SAP, Oracle, Microsoft Dynamics). STOKA gestiona la integración técnica como parte del proyecto llave en mano."
           }
         ],
         "heroBtnPrimary": "Hablar con un especialista",
@@ -5059,7 +5052,7 @@
   },
   "schema": {
     "siteName": "STOKA — Automatización de Almacenes",
-    "orgDesc": "Aliado estratégico oficial y exclusivo de DELIE en Argentina. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales.",
+    "orgDesc": "Integrador de automatización de depósitos con ingeniería local en Argentina y Chile. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para almacenes industriales.",
     "knowsAbout": [
       "Sistemas ASRS",
       "Automatización de almacenes",

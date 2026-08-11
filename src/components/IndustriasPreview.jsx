@@ -6,11 +6,11 @@ import { useLangNavigate } from '../lib/i18n-utils';
 const INDUSTRIES = [
   { slug: 'e-commerce-retail',  descKey: 'ecommerceDesc',     label: 'E-commerce & Retail',   icon: ShoppingBag,     image: '/industria-ecommerce-retail.webp' },
   { slug: 'logistica-3pl',      descKey: 'logisticsDesc',     label: 'Logística 3PL',         icon: Truck,           image: '/industria-logistica-3pl.webp' },
-  { slug: 'manufactura',        descKey: 'manufacturingDesc', label: 'Manufactura Industrial', icon: Cog,             image: '/productos-delie/industrias/manufactura.webp' },
-  { slug: 'alimentos-bebidas',  descKey: 'foodDesc',          label: 'Alimentos & Bebidas',   icon: UtensilsCrossed, image: '/productos-delie/industrias/alimentos-bebidas.webp' },
-  { slug: 'farmaceutica',       descKey: 'pharmaDesc',        label: 'Farmacéutica',          icon: FlaskConical,    image: '/productos-delie/industrias/farmaceutica.webp' },
-  { slug: 'mineria-oil-gas',    descKey: 'miningDesc',        label: 'Minería & Oil & Gas',   icon: HardHat,         image: '/productos-delie/industrias/mineria.webp' },
-  { slug: 'cadena-frio',        descKey: 'coldDesc',          label: 'Cadena de Frío',        icon: Snowflake,       image: '/productos-delie/industrias/cadena-frio.webp' },
+  { slug: 'manufactura',        descKey: 'manufacturingDesc', label: 'Manufactura Industrial', icon: Cog,             image: '/productos/industrias/manufactura.webp' },
+  { slug: 'alimentos-bebidas',  descKey: 'foodDesc',          label: 'Alimentos & Bebidas',   icon: UtensilsCrossed, image: '/productos/industrias/alimentos-bebidas.webp' },
+  { slug: 'farmaceutica',       descKey: 'pharmaDesc',        label: 'Farmacéutica',          icon: FlaskConical,    image: '/productos/industrias/farmaceutica.webp' },
+  { slug: 'mineria-oil-gas',    descKey: 'miningDesc',        label: 'Minería & Oil & Gas',   icon: HardHat,         image: '/productos/industrias/mineria.webp' },
+  { slug: 'cadena-frio',        descKey: 'coldDesc',          label: 'Cadena de Frío',        icon: Snowflake,       image: '/productos/industrias/cadena-frio.webp' },
 ];
 
 export const IndustriasPreview = () => {

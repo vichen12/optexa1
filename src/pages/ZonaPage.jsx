@@ -9,17 +9,17 @@ import { WppFloat } from '../components/WppFloat';
 import { LangLink } from '../lib/i18n-utils';
 import { SeoHead } from '../lib/SeoHead';
 
-/* Imágenes reutilizables por sector (genéricas DELIE; no son contenido textual). */
+/* Imágenes reutilizables por sector (genéricas; no son contenido textual). */
 const SECTOR_IMAGES = [
-  '/productos-delie/asrs/Transelevador%20Gr%C3%BAa%20+%20Estanter%C3%ADa%20Robot%20Lanzadera/pallet-stacker-crane-shuttle-robot-racking89e90.webp',
-  '/productos-delie/almacenamiento-vertical/Carrusel%20vertical%20inteligente%20para%20almacenamiento%20automatizado%20de%20alta-densidad/2025112714330825019.webp',
-  '/productos-delie/robots-manipulacion/Robot%20transportador%20de%20paletas%20de%20almacenamiento%20en%20fr%C3%ADo/cold-storage-pallet-shuttle-robot3e9c9.webp',
+  '/productos/asrs/Transelevador%20Gr%C3%BAa%20+%20Estanter%C3%ADa%20Robot%20Lanzadera/pallet-stacker-crane-shuttle-robot-racking89e90.webp',
+  '/productos/almacenamiento-vertical/Carrusel%20vertical%20inteligente%20para%20almacenamiento%20automatizado%20de%20alta-densidad/2025112714330825019.webp',
+  '/productos/robots-manipulacion/Robot%20transportador%20de%20paletas%20de%20almacenamiento%20en%20fr%C3%ADo/cold-storage-pallet-shuttle-robot3e9c9.webp',
 ];
 
 const PHOTO_STRIP = [
-  '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
-  '/productos-delie/asrs/Estanter%C3%ADas%20robóticas%20con%20lanzadera%20para%20palés/pallet-shuttle-robot-racking13c59.webp',
-  '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20paletas%20de%20doble-m%C3%A1stil/double-mast-pallet-stacker-crane202510151146372d8c5.webp',
+  '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
+  '/productos/asrs/Estanter%C3%ADas%20robóticas%20con%20lanzadera%20para%20palés/pallet-shuttle-robot-racking13c59.webp',
+  '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20paletas%20de%20doble-m%C3%A1stil/double-mast-pallet-stacker-crane202510151146372d8c5.webp',
 ];
 
 /* Cada zona define sus propios system URLs reutilizando el catálogo existente. */

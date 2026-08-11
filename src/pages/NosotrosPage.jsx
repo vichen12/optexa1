@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { SeoHead } from '../lib/SeoHead';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
@@ -19,11 +20,11 @@ export const NosotrosPage = () => {
   const values = t(`${ns}.values`, { returnObjects: true });
   const requirements = t(`${ns}.requirements`, { returnObjects: true });
 
-  const DELIE_STATS = [
-    { value: '2003',   label: t(`${ns}.delieStats.founded`) },
-    { value: '+1.000', label: t(`${ns}.delieStats.installations`) },
-    { value: '+30',    label: t(`${ns}.delieStats.countries`) },
-    { value: '40m',    label: t(`${ns}.delieStats.height`) },
+  const MANUFACTURER_STATS = [
+    { value: '+20',    label: t(`${ns}.techStats.founded`) },
+    { value: '+1.000', label: t(`${ns}.techStats.installations`) },
+    { value: '+30',    label: t(`${ns}.techStats.countries`) },
+    { value: '40m',    label: t(`${ns}.techStats.height`) },
   ];
 
   return (
@@ -33,6 +34,16 @@ export const NosotrosPage = () => {
         description={t(`${ns}.metaDesc`)}
         basePath={'/nosotros'}
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Nosotros", "item": "https://www.stokagroup.com/nosotros" },
+          ]
+        })}</script>
+      </Helmet>
       <Navbar />
 
       {/* HERO */}
@@ -58,7 +69,7 @@ export const NosotrosPage = () => {
                 { value: '+1.000', label: t(`${ns}.stats.installations`) },
                 { value: '+30',    label: t(`${ns}.stats.countries`) },
                 { value: '100%',   label: t(`${ns}.stats.local`) },
-                { value: '2003',   label: t(`${ns}.stats.founded`) },
+                { value: '+20',    label: t(`${ns}.stats.founded`) },
               ].map((s) => (
                 <div key={s.label}>
                   <p className="text-gray-900 text-3xl font-black italic leading-none mb-1">{s.value}</p>
@@ -71,7 +82,7 @@ export const NosotrosPage = () => {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }}
             className="hidden md:flex flex-col items-center gap-4 mt-8">
             <div className="border border-gray-100 rounded-2xl px-10 py-8 bg-gray-50 flex flex-col items-center gap-4 shadow-sm">
-              <img loading="lazy" src="/image.webp" alt="DELIE — Fabricante de sistemas ASRS" className="w-56 object-contain" />
+              <p className="text-4xl font-black italic tracking-tighter text-cyan-500">STOKA</p>
               <div className="w-8 h-px bg-gray-300" />
               <p className="text-[10px] font-mono text-gray-400 uppercase tracking-[0.3em] text-center leading-relaxed">
                 {t(`${ns}.officialRep`)}<br />{t(`${ns}.officialRepCountry`)}
@@ -116,9 +127,9 @@ export const NosotrosPage = () => {
           </div>
 
           <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-2xl p-6">
-            <p className="text-cyan-400 text-[10px] font-black uppercase tracking-[0.35em] mb-3">{t(`${ns}.delieTag`)}</p>
+            <p className="text-cyan-400 text-[10px] font-black uppercase tracking-[0.35em] mb-3">{t(`${ns}.techTag`)}</p>
             <p className="text-gray-300 text-sm leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: t(`${ns}.deliePara`) }} />
+              dangerouslySetInnerHTML={{ __html: t(`${ns}.techPara`) }} />
           </div>
         </div>
       </section>
@@ -146,24 +157,23 @@ export const NosotrosPage = () => {
         </div>
       </section>
 
-      {/* DELIE */}
+      {/* TECNOLOGÍA */}
       <section className="bg-slate-900 py-20 px-6">
         <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <img loading="lazy" src="/image.webp" alt="DELIE — Fabricante de sistemas ASRS" className="h-10 object-contain mb-5" />
             <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-4">{t(`${ns}.ourManufacturer`)}</p>
             <h2 className="text-3xl md:text-4xl font-black italic uppercase tracking-tighter leading-tight text-white mb-5">
-              {t(`${ns}.delieH2_a`)}<br /><span className="text-cyan-400">{t(`${ns}.delieH2_b`)}</span>
+              {t(`${ns}.techH2_a`)}<br /><span className="text-cyan-400">{t(`${ns}.techH2_b`)}</span>
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-6">{t(`${ns}.deliePara2`)}</p>
+            <p className="text-gray-400 leading-relaxed mb-6">{t(`${ns}.techPara2`)}</p>
             <div className="flex items-center gap-2 text-cyan-400 text-sm font-bold">
               <Globe size={14} />
-              <span>{t(`${ns}.delieRegions`)}</span>
+              <span>{t(`${ns}.techRegions`)}</span>
             </div>
           </motion.div>
 
           <div className="grid grid-cols-2 gap-4">
-            {DELIE_STATS.map((s, i) => (
+            {MANUFACTURER_STATS.map((s, i) => (
               <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:border-cyan-400/30 transition-colors">
                 <p className="text-3xl font-black text-cyan-400 leading-none mb-2">{s.value}</p>

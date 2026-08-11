@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { SeoHead } from '../lib/SeoHead';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
@@ -22,6 +23,16 @@ export const CatalogPage = () => {
         description={t(`${ns}.metaDesc`)}
         basePath={'/catalogo'}
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Catálogo", "item": "https://www.stokagroup.com/catalogo" },
+          ]
+        })}</script>
+      </Helmet>
       <Navbar />
 
       {/* HERO */}

@@ -1,5 +1,5 @@
 import { useEffect, lazy, Suspense } from 'react';
-import { Routes, Route, Navigate, Outlet, useLocation } from 'react-router-dom';
+import { Routes, Route, Outlet, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -34,7 +34,7 @@ const CatalogoVerticalPage = lazy(() => import('./pages/catalogo/CatalogoVertica
 const CatalogoTransportePage = lazy(() => import('./pages/catalogo/CatalogoTransportePage').then(m => ({ default: m.CatalogoTransportePage })));
 const CatalogoSoftwarePage = lazy(() => import('./pages/catalogo/CatalogoSoftwarePage').then(m => ({ default: m.CatalogoSoftwarePage })));
 const ProductoPage = lazy(() => import('./pages/catalogo/ProductoPage').then(m => ({ default: m.ProductoPage })));
-const AlternativaDeliePage = lazy(() => import('./pages/AlternativaDeliePage').then(m => ({ default: m.AlternativaDeliePage })));
+const TecnologiaASRSPage = lazy(() => import('./pages/TecnologiaASRSPage').then(m => ({ default: m.TecnologiaASRSPage })));
 const AlternativaEconomicaASRSPage = lazy(() => import('./pages/AlternativaEconomicaASRSPage').then(m => ({ default: m.AlternativaEconomicaASRSPage })));
 const RecursosHub = lazy(() => import('./pages/recursos/RecursosHub').then(m => ({ default: m.RecursosHub })));
 const ArticuloPage = lazy(() => import('./pages/recursos/ArticuloPage').then(m => ({ default: m.ArticuloPage })));
@@ -52,7 +52,10 @@ export const ORGANIZATION_SCHEMA = {
   "@id": "https://www.stokagroup.com/#organization",
   "name": "STOKA",
   "legalName": "STOKA",
-  "description": "Aliado estratégico oficial y exclusivo de DELIE en Argentina. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para automatización de almacenes industriales.",
+  "description": "Integrador de automatización de depósitos con ingeniería local en Argentina y Chile. Sistemas ASRS, transelevadores, robots AMR y software WMS/WCS para almacenes industriales.",
+  "sameAs": [
+    // TODO: agregar perfiles cuando existan — LinkedIn, YouTube, Google Business Profile
+  ],
   "url": "https://www.stokagroup.com",
   "logo": "https://www.stokagroup.com/stoka-logo.png",
   "image": "https://www.stokagroup.com/stoka-logo.png",
@@ -73,7 +76,6 @@ export const ORGANIZATION_SCHEMA = {
   ],
   "knowsAbout": ["Sistemas ASRS", "Automatización de almacenes", "Transelevadores", "Robots AMR", "Software WMS", "Software WCS", "VLM", "Carruseles verticales"],
   "foundingDate": "2025",
-  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2 },
   "priceRange": "$$$$"
 };
 
@@ -125,6 +127,13 @@ export function HomePage() {
           "publisher": { "@type": "Organization", "name": "STOKA" }
         })}</script>
         <script type="application/ld+json">{JSON.stringify({ ...ORGANIZATION_SCHEMA, inLanguage: lang, description: t('schema.orgDesc'), knowsAbout: t('schema.knowsAbout', { returnObjects: true }) })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
+          ]
+        })}</script>
       </Helmet>
       <Navbar />
 
@@ -342,9 +351,8 @@ function App() {
     <Route key="como-trabajamos" path="como-trabajamos" element={<ComoTrabajamosPage />} />,
     <Route key="nosotros" path="nosotros" element={<NosotrosPage />} />,
     <Route key="contacto" path="contacto" element={<ContactPage />} />,
-    <Route key="delie-ar" path="delie-argentina" element={<AlternativaDeliePage />} />,
+    <Route key="tec-asrs" path="tecnologia-asrs" element={<TecnologiaASRSPage />} />,
     <Route key="alt-asrs" path="alternativa-economica-asrs" element={<AlternativaEconomicaASRSPage />} />,
-    <Route key="alt-delie-redir" path="alternativa-delie-argentina" element={<Navigate to="delie-argentina" replace />} />,
     <Route key="casos" path="casos-de-exito" element={<CasosDeExitoPage />} />,
     <Route key="recursos" path="recursos" element={<RecursosHub />} />,
     <Route key="glosario" path="recursos/glosario" element={<GlosarioPage />} />,

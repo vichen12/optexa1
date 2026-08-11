@@ -7,18 +7,18 @@ import path from 'path';
 
 // Rutas relativas a public/ (sin slash inicial)
 const TARGETS = [
-  'productos-delie/industrias/cadena-frio.png',
-  'productos-delie/industrias/farmaceutica.png',
+  'productos/industrias/cadena-frio.png',
+  'productos/industrias/farmaceutica.png',
   'industria-logistica-3pl.png',
   'industria-ecommerce-retail.png',
   'industrias-banner.png',
-  'productos-delie/industrias/manufactura.png',
-  'productos-delie/industrias/alimentos-bebidas.png',
-  'productos-delie/industrias/mineria.png',
+  'productos/industrias/manufactura.png',
+  'productos/industrias/alimentos-bebidas.png',
+  'productos/industrias/mineria.png',
   'bandera4-cropped.jpg',
   'catalogo-banner-asrs.jpeg',
   'gxo-2023.jpg',
-  'productos-delie/robots-manipulacion/Robot de transporte-de cuatro vías-con doble estación/dual-station-tote-four-way-shuttle-robot-1.png',
+  'productos/robots-manipulacion/Robot de transporte-de cuatro vías-con doble estación/dual-station-tote-four-way-shuttle-robot-1.png',
 ];
 
 // Archivos de código a reescribir

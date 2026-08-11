@@ -11,7 +11,7 @@ import { ArrowRight, ChevronRight } from 'lucide-react';
 import { SeoHead } from '../../lib/SeoHead';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
-const img = (prod, file) => `/productos-delie/robots-manipulacion/${seg(prod)}/${file}`;
+const img = (prod, file) => `/productos/robots-manipulacion/${seg(prod)}/${file}`;
 
 /* Solo datos no traducibles (imagen + link). El name/desc se resuelven por
    índice desde i18n: t('pages.catalogoRobots.products')[i]. */
@@ -166,7 +166,7 @@ export const CatalogoRobotsPage = () => {
                 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.04 }}
                 className="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-md transition-all group w-full cursor-pointer">
                 <div className="aspect-4/3 overflow-hidden bg-gray-100">
-                  <img loading="lazy" src={prod.image} alt={`${prod.name} — DELIE`}
+                  <img loading="lazy" src={prod.image} alt={`${prod.name} — robot de manipulación de cargas para almacenes automatizados`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-4">

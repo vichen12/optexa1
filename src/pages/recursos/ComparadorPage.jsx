@@ -113,7 +113,7 @@ function calcularRecomendacion(respuestas) {
       return {
         nombre: 'ASRS Cámara Fría',
         url: '/catalogo/asrs/camara-frio',
-        descripcion: 'Para almacenamiento de paletas a temperatura controlada (refrigerado, congelado o congelado profundo), DELIE tiene transelevadores especificados para cámara fría con aislamiento de mástil, lubricantes especiales y baterías calefaccionadas.',
+        descripcion: 'Para almacenamiento de paletas a temperatura controlada (refrigerado, congelado o congelado profundo), integramos transelevadores especificados para cámara fría con aislamiento de mástil, lubricantes especiales y baterías calefaccionadas.',
         alternativa: 'Transelevador Unit-Load (con cámara)',
         altUrl: '/catalogo/asrs/unit-load',
         tags: ['Temperatura controlada', 'Hasta -30 °C', 'Ahorro energético', 'Sin operarios en frío'],

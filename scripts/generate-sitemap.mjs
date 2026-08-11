@@ -15,7 +15,7 @@ const STATIC_ROUTES = [
   '/catalogo/robots-manipulacion', '/catalogo/almacenamiento-vertical',
   '/catalogo/equipo-transporte', '/catalogo/software', '/industrias',
   '/beneficios-fiscales', '/como-trabajamos', '/nosotros', '/contacto',
-  '/delie-argentina', '/alternativa-economica-asrs', '/casos-de-exito',
+  '/tecnologia-asrs', '/alternativa-economica-asrs', '/casos-de-exito',
   '/recursos', '/recursos/glosario', '/recursos/comparador-sistemas',
   '/recursos/roi-automatizacion', '/catalogo/asrs/autostore-alternativa',
   '/chile',

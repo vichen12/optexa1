@@ -20,7 +20,7 @@ const STATIC_ROUTES = [
   '/como-trabajamos',
   '/nosotros',
   '/contacto',
-  '/delie-argentina',
+  '/tecnologia-asrs',
   '/alternativa-economica-asrs',
   '/casos-de-exito',
   '/recursos',

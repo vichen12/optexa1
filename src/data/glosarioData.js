@@ -170,9 +170,9 @@ export const GLOSARIO = [
     en: 'Service Level Agreement. Contractual commitment on system availability and repair times. STOKA offers SLAs with response in hours for its client portfolio in Argentina and Chile.',
     zh: 'SLA（服务级别协议）：关于系统可用性和维修时间的合同承诺。STOKA为其在阿根廷和智利的客户群提供数小时响应的SLA。' } },
   { term: 'MTBF', id: 'mtbf', cat: 'software', def: {
-    es: 'Mean Time Between Failures. Indicador de confiabilidad: cuántas horas opera un equipo en promedio entre una falla y la siguiente. Los transelevadores DELIE tienen MTBF superior a 8.000 horas.',
-    en: 'Mean Time Between Failures. Reliability indicator: how many hours a machine operates on average between one failure and the next. DELIE stacker cranes have an MTBF over 8,000 hours.',
-    zh: 'MTBF（平均故障间隔时间）：可靠性指标：设备平均在两次故障之间运行多少小时。DELIE堆垛机的MTBF超过8000小时。' } },
+    es: 'Mean Time Between Failures. Indicador de confiabilidad: cuántas horas opera un equipo en promedio entre una falla y la siguiente. Los transelevadores que integramos superan las 8.000 horas de MTBF.',
+    en: 'Mean Time Between Failures. Reliability indicator: how many hours a machine operates on average between one failure and the next. The stacker cranes we integrate exceed 8,000 hours of MTBF.',
+    zh: 'MTBF（平均故障间隔时间）：可靠性指标：设备平均在两次故障之间运行多少小时。我们集成的堆垛机MTBF超过8000小时。' } },
   { term: 'MTTR', id: 'mttr', cat: 'software', def: {
     es: 'Mean Time To Repair. Tiempo promedio que tarda un equipo en restaurarse después de una falla. Junto con el MTBF, determina la disponibilidad operativa del sistema.',
     en: 'Mean Time To Repair. Average time a machine takes to be restored after a failure. Together with MTBF, it determines the system\'s operational availability.',
@@ -182,9 +182,9 @@ export const GLOSARIO = [
     en: 'Percentage of time a system is operational and available. An industrial-class ASRS has uptime over 99%. It is calculated as MTBF / (MTBF + MTTR).',
     zh: '正常运行时间：系统运营和可用的时间百分比。工业级ASRS的正常运行时间超过99%。计算公式为MTBF /（MTBF + MTTR）。' } },
   { term: 'Redundancia', id: 'redundancia', cat: 'software', def: {
-    es: 'Duplicación de componentes críticos (servidores, PLC, redes) para garantizar continuidad operativa en caso de falla. Los sistemas DELIE tienen servidor WCS redundante con failover automático en menos de 30 segundos.',
-    en: 'Duplication of critical components (servers, PLCs, networks) to guarantee operational continuity in case of failure. DELIE systems have a redundant WCS server with automatic failover in under 30 seconds.',
-    zh: '冗余：复制关键组件（服务器、PLC、网络）以确保故障时的运营连续性。DELIE系统配备冗余WCS服务器，可在30秒内自动故障切换。' } },
+    es: 'Duplicación de componentes críticos (servidores, PLC, redes) para garantizar continuidad operativa en caso de falla. Los sistemas que integramos incluyen servidor WCS redundante con failover automático en menos de 30 segundos.',
+    en: 'Duplication of critical components (servers, PLCs, networks) to guarantee operational continuity in case of failure. The systems we integrate include a redundant WCS server with automatic failover in under 30 seconds.',
+    zh: '冗余：复制关键组件（服务器、PLC、网络）以确保故障时的运营连续性。我们集成的系统配备冗余WCS服务器，可在30秒内自动故障切换。' } },
   { term: 'Failover', id: 'failover', cat: 'software', def: {
     es: 'Conmutación automática al sistema redundante cuando falla el componente principal, sin intervención humana. En sistemas WCS de alta disponibilidad ocurre en menos de 30 segundos.',
     en: 'Automatic switch to the redundant system when the main component fails, with no human intervention. In high-availability WCS systems it occurs in under 30 seconds.',
@@ -194,9 +194,9 @@ export const GLOSARIO = [
     en: 'Ability to record and query a product\'s full history: who received it, what position it was in, when it moved and where it was dispatched. The WMS maintains full traceability by batch and serial number.',
     zh: '可追溯性：记录和查询产品完整历史的能力：谁收的货、在什么位置、何时移动以及发往何处。WMS按批次和序列号维护完整可追溯性。' } },
   { term: 'Integrador WMS', id: 'integrador-wms', cat: 'software', def: {
-    es: 'Empresa especializada que implementa, configura e integra sistemas WMS con los ERP del cliente. STOKA es integrador de los WMS y WCS de DELIE para instalaciones en Argentina y Chile.',
-    en: 'Specialized company that implements, configures and integrates WMS systems with the client\'s ERP. STOKA is the integrator of DELIE\'s WMS and WCS for installations in Argentina and Chile.',
-    zh: 'WMS集成商：实施、配置WMS系统并将其与客户ERP集成的专业公司。STOKA是DELIE的WMS和WCS在阿根廷和智利安装的集成商。' } },
+    es: 'Empresa especializada que implementa, configura e integra sistemas WMS con los ERP del cliente. STOKA integra los WMS y WCS de los sistemas que implementa en Argentina y Chile.',
+    en: 'Specialized company that implements, configures and integrates WMS systems with the client\'s ERP. STOKA integrates the WMS and WCS of the systems it implements in Argentina and Chile.',
+    zh: 'WMS集成商：实施、配置WMS系统并将其与客户ERP集成的专业公司。STOKA为其在阿根廷和智利实施的系统集成WMS和WCS。' } },
 
   // ── OPERACIONES ───────────────────────────────────────────────
   { term: 'Goods-to-Person (GTP)', id: 'goods-to-person', cat: 'operaciones', def: {

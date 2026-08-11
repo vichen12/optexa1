@@ -4,9 +4,9 @@
    Estructura de cada variante: metaTitle, metaDesc, h1, intro, sections[],
    conclusionH2, conclusion, faq[], cta, relacionados[]. */
 
-const IMG_ASRS = '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp';
-const IMG_SHUTTLE = '/productos-delie/robots-manipulacion/Robot%20lanzadera%20de%20cuatro%20direcciones-para%20paletas/pallet-four-way-shuttle-robotb829c.webp';
-const IMG_WMS = '/productos-delie/software-inteligente/%28WMS%29%20Sistema%20de%20gesti%C3%B3n%20de%20almacenes/2025112715331054f3e.webp';
+const IMG_ASRS = '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp';
+const IMG_SHUTTLE = '/productos/robots-manipulacion/Robot%20lanzadera%20de%20cuatro%20direcciones-para%20paletas/pallet-four-way-shuttle-robotb829c.webp';
+const IMG_WMS = '/productos/software-inteligente/%28WMS%29%20Sistema%20de%20gesti%C3%B3n%20de%20almacenes/2025112715331054f3e.webp';
 
 export const ARTICULOS_SPRINT2 = [
   /* ───────────────────────── 1. APROVECHAR ESPACIO ───────────────────────── */
@@ -52,7 +52,7 @@ export const ARTICULOS_SPRINT2 = [
       },
       en: {
         metaTitle: 'How to Maximize Warehouse Space | 7 Strategies | STOKA',
-        metaDesc: 'A practical guide to optimize your warehouse space: vertical use, high density and automation. Multiply capacity without relocating.',
+        metaDesc: 'A practical guide to optimizing your warehouse space: vertical use, high-density storage and automation to multiply capacity without relocating.',
         h1: 'How to maximize warehouse space: 7 strategies that work',
         intro: 'Your warehouse is full, but relocating or expanding the building costs a fortune and takes months. It is one of the most common problems in logistics: inventory grows faster than the available square meters. The good news is that most warehouses use less than 30% of their real volume, because they store on the floor and waste the height. In this guide we review seven concrete strategies to make better use of warehouse space, from reorganizing the layout to automating with high-density systems that multiply capacity without adding a single square meter.',
         sections: [
@@ -84,7 +84,7 @@ export const ARTICULOS_SPRINT2 = [
       },
       zh: {
         metaTitle: '如何最大化仓库空间 | 7个策略 | STOKA',
-        metaDesc: '优化仓库空间的实用指南：垂直利用、高密度和自动化。无需搬迁即可成倍提升容量。',
+        metaDesc: '优化仓库空间的实用指南：垂直空间利用、高密度存储与自动化方案，无需搬迁或扩建即可将存储容量成倍提升，并有效降低单位运营成本。',
         h1: '如何最大化仓库空间：7个行之有效的策略',
         intro: '您的仓库已满，但搬迁或扩建厂房成本高昂且耗时数月。这是物流中最常见的问题之一：库存增长快于可用面积。好消息是，大多数仓库实际利用率不足30%，因为它们在地面存储而浪费了高度空间。在本指南中，我们将介绍七个充分利用仓库空间的具体策略，从重新规划布局到采用高密度系统实现自动化，无需增加一平方米即可成倍提升容量。',
         sections: [
@@ -159,7 +159,7 @@ export const ARTICULOS_SPRINT2 = [
       },
       en: {
         metaTitle: 'How to Reduce Logistics Costs | Practical Guide 2026 | STOKA',
-        metaDesc: 'Concrete strategies to lower storage and logistics costs: labor, errors, space and energy. How automation reduces the cost per order.',
+        metaDesc: 'Concrete strategies to lower storage and logistics costs — labor, errors, space and energy — and how automation reduces the cost of every order.',
         h1: 'How to reduce logistics costs: where the money goes and how to recover it',
         intro: 'Logistics cost can represent between 8% and 15% of a company\'s sales, and in manual warehouse operations that number only grows. The pressure to reduce storage costs is constant, but many companies attack the wrong symptoms. Before cutting, it helps to understand where the money really goes in a warehouse: labor, errors, inefficient use of space, energy and immobilized stock. In this guide we analyze the five major logistics cost drivers and how automation tackles each one to lower the cost per order structurally, not with temporary cuts.',
         sections: [
@@ -190,7 +190,7 @@ export const ARTICULOS_SPRINT2 = [
       },
       zh: {
         metaTitle: '如何降低物流成本 | 2026实用指南 | STOKA',
-        metaDesc: '降低仓储和物流成本的具体策略：人工、差错、空间和能源。自动化如何降低每单成本。',
+        metaDesc: '降低仓储和物流成本的具体策略：从人工、差错、空间到能源逐项分析，并说明自动化如何降低每张订单的处理成本、提升整体运营效率。',
         h1: '如何降低物流成本：钱花在哪里以及如何收回',
         intro: '物流成本可占企业销售额的8%至15%，在人工仓库运营中这一数字只会增长。降低仓储成本的压力持续存在，但许多企业针对错误的症状下手。在削减之前，应当了解仓库中的钱实际花在哪里：人工、差错、空间利用低效、能源和占压库存。在本指南中，我们分析五大物流成本驱动因素，以及自动化如何针对每一项从结构上降低每单成本，而非临时削减。',
         sections: [
@@ -295,7 +295,7 @@ export const ARTICULOS_SPRINT2 = [
       },
       zh: {
         metaTitle: '我的仓库没有更多空间了：6个真实解决方案 | STOKA',
-        metaDesc: '您的仓库已达极限，搬迁不是选项。空间不足的具体解决方案：高密度、垂直存储和无需扩建的自动化。',
+        metaDesc: '您的仓库已达极限而搬迁不是选项时怎么办：高密度存储、垂直空间利用与无需扩建的自动化方案，帮助您在现有面积内成倍提升存储能力。',
         h1: '我的仓库没有更多空间了：搬迁前的真实解决方案',
         intro: '"再也放不下了。"这句话促使许多企业决定寻找更大的仓库、搬迁或建设。但搬迁物流运营成本高、速度慢且风险大：意味着停工、搬运、重新安置和重新运营，还有新建筑的成本。在做出这一决定之前，值得了解：空间不足几乎总能在同一仓库内找到解决方案。在本文中，我们将从最简单到最具变革性的顺序，介绍六个空间不足的具体解决方案，让您无需增加平方米即可提升容量。',
         sections: [
@@ -400,7 +400,7 @@ export const ARTICULOS_SPRINT2 = [
       },
       zh: {
         metaTitle: '何时值得实施仓库自动化 | 关键信号 | STOKA',
-        metaDesc: '现在应该实施仓库自动化还是等待？表明时机已到的信号、预期投资回报，以及如何在不过度投资的情况下评估决策。',
+        metaDesc: '现在应该实施仓库自动化还是继续等待？本文分析表明时机已到的关键信号、预期投资回报周期，以及如何在不过度投资的情况下评估这一决策。',
         h1: '何时值得实施仓库自动化：信号、投资回报与如何决策',
         intro: '仓库自动化是物流运营最重要的投资决策之一，也是最常被推迟的决策之一。"是时候了吗？"是许多企业在不断累积人工成本、差错和空间问题时所问的问题。答案并非普遍适用：取决于数量、需求高峰、人工成本和增长目标。在本文中，我们将介绍表明值得自动化的具体信号、如何估算投资回报，以及如何既避免过早自动化又避免等待过久。',
         sections: [
@@ -505,7 +505,7 @@ export const ARTICULOS_SPRINT2 = [
       },
       zh: {
         metaTitle: '什么是智能物流与物流4.0 | 指南 | STOKA',
-        metaDesc: '什么是智能物流和物流4.0、智能仓库如何运作以及哪些技术使其成为可能。配有真实示例的清晰指南。',
+        metaDesc: '什么是智能物流与物流4.0：智能仓库如何运作、哪些核心技术使其成为可能，以及企业如何分阶段落地。配有真实示例的清晰实用指南。',
         h1: '什么是智能物流（以及物流4.0为何改变规则）',
         intro: '智能物流、物流4.0、仓库4.0、智能仓库：这些术语越来越频繁地出现，但很少被清晰解释。这只是营销还是背后有具体内容？在本文中，我们阐明智能物流的真正含义、它与传统物流的区别、哪些技术使其成为可能，以及它产生哪些具体成果。如果您的企业正在评估现代化运营，理解这些概念是做出正确决策的第一步。',
         sections: [

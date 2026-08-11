@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { SeoHead } from '../lib/SeoHead';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
@@ -12,11 +13,11 @@ import { useLangNavigate } from '../lib/i18n-utils';
 export const INDUSTRIES = [
   { slug: 'e-commerce-retail',  icon: ShoppingBag,     image: '/industria-ecommerce-retail.webp',                      stats: [{ v: '3x', l: 'Picking' }, { v: '99.9%', l: 'Exactitud' }, { v: '-60%', l: 'Labor' }] },
   { slug: 'logistica-3pl',      icon: Truck,           image: '/industria-logistica-3pl.webp',                          stats: [{ v: '40%', l: 'Menos espacio' }, { v: '5x', l: 'Densidad' }, { v: '24/7', l: 'Operación' }] },
-  { slug: 'manufactura',        icon: Cog,             image: '/productos-delie/industrias/manufactura.webp',           stats: [{ v: '-35%', l: 'Búsqueda' }, { v: '100%', l: 'Trazabilidad' }, { v: '+20%', l: 'OEE' }] },
-  { slug: 'alimentos-bebidas',  icon: UtensilsCrossed, image: '/productos-delie/industrias/alimentos-bebidas.webp',     stats: [{ v: 'FIFO', l: 'Garantizado' }, { v: '100%', l: 'Trazabilidad' }, { v: 'GS1', l: 'Compatible' }] },
-  { slug: 'farmaceutica',       icon: FlaskConical,    image: '/productos-delie/industrias/farmaceutica.webp',          stats: [{ v: 'GMP', l: 'Compliant' }, { v: 'FEFO', l: 'Automático' }, { v: '21 CFR', l: 'Compatible' }] },
-  { slug: 'mineria-oil-gas',    icon: HardHat,         image: '/productos-delie/industrias/mineria.webp',               stats: [{ v: '0', l: 'Errores' }, { v: '-30%', l: 'Stock' }, { v: '24/7', l: 'Disponibilidad' }] },
-  { slug: 'cadena-frio',        icon: Snowflake,       image: '/productos-delie/industrias/cadena-frio.webp',           stats: [{ v: '-30°C', l: 'Temp. mín.' }, { v: '0', l: 'Personal exp.' }, { v: '+50%', l: 'Uso cámara' }] },
+  { slug: 'manufactura',        icon: Cog,             image: '/productos/industrias/manufactura.webp',           stats: [{ v: '-35%', l: 'Búsqueda' }, { v: '100%', l: 'Trazabilidad' }, { v: '+20%', l: 'OEE' }] },
+  { slug: 'alimentos-bebidas',  icon: UtensilsCrossed, image: '/productos/industrias/alimentos-bebidas.webp',     stats: [{ v: 'FIFO', l: 'Garantizado' }, { v: '100%', l: 'Trazabilidad' }, { v: 'GS1', l: 'Compatible' }] },
+  { slug: 'farmaceutica',       icon: FlaskConical,    image: '/productos/industrias/farmaceutica.webp',          stats: [{ v: 'GMP', l: 'Compliant' }, { v: 'FEFO', l: 'Automático' }, { v: '21 CFR', l: 'Compatible' }] },
+  { slug: 'mineria-oil-gas',    icon: HardHat,         image: '/productos/industrias/mineria.webp',               stats: [{ v: '0', l: 'Errores' }, { v: '-30%', l: 'Stock' }, { v: '24/7', l: 'Disponibilidad' }] },
+  { slug: 'cadena-frio',        icon: Snowflake,       image: '/productos/industrias/cadena-frio.webp',           stats: [{ v: '-30°C', l: 'Temp. mín.' }, { v: '0', l: 'Personal exp.' }, { v: '+50%', l: 'Uso cámara' }] },
 ];
 
 const PILLAR_ICONS = [Zap, Shield, TrendingUp];
@@ -38,6 +39,16 @@ export const IndustriasPage = () => {
         description={t(`${ns}.metaDesc`)}
         basePath={'/industrias'}
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.stokagroup.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Industrias", "item": "https://www.stokagroup.com/industrias" },
+          ]
+        })}</script>
+      </Helmet>
       <Navbar />
 
       {/* HERO */}

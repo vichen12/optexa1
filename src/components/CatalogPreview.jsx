@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useLangNavigate } from '../lib/i18n-utils';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
-const img = (cat, prod, file) => `/productos-delie/${cat}/${seg(prod)}/${file}`;
+const img = (cat, prod, file) => `/productos/${cat}/${seg(prod)}/${file}`;
 
 const CATEGORIES = [
   {
@@ -126,35 +126,6 @@ export const CatalogPreview = () => {
             </motion.button>
           ))}
 
-          {/* YouTube DELIE card */}
-          <motion.a
-            href="https://www.youtube.com/@DELIECN"
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: CATEGORIES.length * 0.07 }}
-            className="relative text-left rounded-2xl overflow-hidden border border-white/10 hover:border-red-500/40 transition-all duration-300 group"
-          >
-            <div className="aspect-video flex items-center justify-center bg-slate-800 relative overflow-hidden">
-              <div className="absolute inset-0 bg-linear-to-br from-slate-700 to-slate-900" />
-              <img loading="lazy" src="/image.webp" alt={t('catalog.youtube.alt')} width="400" height="51" className="relative z-10 w-32 object-contain" style={{ filter: 'brightness(1.1) saturate(1.2)' }} />
-              <div className="absolute top-3 right-3 w-9 h-9 bg-red-600 rounded-xl flex items-center justify-center shadow-lg">
-                <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4">
-                  <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6a3 3 0 0 0-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/>
-                </svg>
-              </div>
-            </div>
-            <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-5">
-              <h3 className="text-white font-bold text-base leading-tight mb-1">{t('catalog.youtube.title')}</h3>
-              <p className="text-white/55 text-xs leading-relaxed mb-3">{t('catalog.youtube.desc')}</p>
-              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-red-400 group-hover:gap-2.5 transition-all">
-                {t('catalog.youtube.cta')} <ArrowRight size={12} />
-              </span>
-            </div>
-          </motion.a>
         </div>
 
       </div>

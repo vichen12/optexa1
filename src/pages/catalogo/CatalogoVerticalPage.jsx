@@ -11,7 +11,7 @@ import { ArrowRight, ChevronRight } from 'lucide-react';
 import { SeoHead } from '../../lib/SeoHead';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
-const img = (prod, file) => `/productos-delie/almacenamiento-vertical/${seg(prod)}/${file}`;
+const img = (prod, file) => `/productos/almacenamiento-vertical/${seg(prod)}/${file}`;
 
 /* Solo imagen + link; name/desc/features/best_for desde i18n por índice. */
 const PRODUCT_MEDIA = [
@@ -149,7 +149,7 @@ export const CatalogoVerticalPage = () => {
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-md transition-all cursor-pointer group w-full">
                 <div className="aspect-video overflow-hidden bg-gray-100">
-                  <img loading="lazy" src={prod.image} alt={`${prod.name} — DELIE`}
+                  <img loading="lazy" src={prod.image} alt={`${prod.name} — sistema de almacenamiento vertical automatizado de alta densidad`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">

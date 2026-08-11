@@ -1,7 +1,7 @@
 /* SSR entry — mirrors App.jsx routes with static imports (renderToString
    no soporta lazy()). HomePage y el schema se importan del App real para
    que el HTML prerenderizado salga traducido por idioma. */
-import { Routes, Route, Navigate, StaticRouter } from 'react-router-dom';
+import { Routes, Route, StaticRouter } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { renderToString } from 'react-dom/server';
 import i18next from './i18n/ssr.js';
@@ -21,7 +21,7 @@ import { CatalogoVerticalPage } from './pages/catalogo/CatalogoVerticalPage';
 import { CatalogoTransportePage } from './pages/catalogo/CatalogoTransportePage';
 import { CatalogoSoftwarePage } from './pages/catalogo/CatalogoSoftwarePage';
 import { ProductoPage } from './pages/catalogo/ProductoPage';
-import { AlternativaDeliePage } from './pages/AlternativaDeliePage';
+import { TecnologiaASRSPage } from './pages/TecnologiaASRSPage';
 import { AlternativaEconomicaASRSPage } from './pages/AlternativaEconomicaASRSPage';
 import { RecursosHub } from './pages/recursos/RecursosHub';
 import { ArticuloPage } from './pages/recursos/ArticuloPage';
@@ -52,9 +52,8 @@ function App() {
     <Route key="como-trabajamos" path="como-trabajamos" element={<ComoTrabajamosPage />} />,
     <Route key="nosotros" path="nosotros" element={<NosotrosPage />} />,
     <Route key="contacto" path="contacto" element={<ContactPage />} />,
-    <Route key="delie-ar" path="delie-argentina" element={<AlternativaDeliePage />} />,
+    <Route key="tec-asrs" path="tecnologia-asrs" element={<TecnologiaASRSPage />} />,
     <Route key="alt-asrs" path="alternativa-economica-asrs" element={<AlternativaEconomicaASRSPage />} />,
-    <Route key="alt-delie-redir" path="alternativa-delie-argentina" element={<Navigate to="delie-argentina" replace />} />,
     <Route key="casos" path="casos-de-exito" element={<CasosDeExitoPage />} />,
     <Route key="recursos" path="recursos" element={<RecursosHub />} />,
     <Route key="glosario" path="recursos/glosario" element={<GlosarioPage />} />,

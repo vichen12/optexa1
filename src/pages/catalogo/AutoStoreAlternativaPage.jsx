@@ -28,18 +28,18 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿DELIE es una alternativa a AutoStore en Argentina?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sí. DELIE fabrica sistemas ASRS cube storage, shuttle y transelevadores que compiten directamente con AutoStore. La principal diferencia es el precio: los sistemas DELIE son entre un 30% y un 50% más económicos que AutoStore para proyectos equivalentes, y tienen soporte técnico local en Argentina a través de STOKA." }
+      "name": "¿Existe una alternativa a AutoStore en Argentina?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Los sistemas ASRS que integramos — cube storage, shuttle y transelevadores — compiten directamente con AutoStore. La principal diferencia es el precio: son entre un 30% y un 50% más económicos que AutoStore para proyectos equivalentes, y tienen soporte técnico local en Argentina a través de STOKA." }
     },
     {
       "@type": "Question",
-      "name": "¿Qué diferencia técnica hay entre AutoStore y los sistemas DELIE?",
-      "acceptedAnswer": { "@type": "Answer", "text": "AutoStore usa robots de rejilla (grid robots) que operan sobre una grilla modular. DELIE ofrece sistemas shuttle y de transelevadores que en muchas configuraciones logran densidades comparables o superiores, especialmente en depósitos con altura disponible mayor a 8 metros. El sistema DELIE también permite SKUs de mayor tamaño y peso." }
+      "name": "¿Qué diferencia técnica hay entre AutoStore y los sistemas ASRS que integramos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "AutoStore usa robots de rejilla (grid robots) que operan sobre una grilla modular. Los sistemas ASRS que integramos ofrecen shuttle y transelevadores que en muchas configuraciones logran densidades comparables o superiores, especialmente en depósitos con altura disponible mayor a 8 metros. También permiten SKUs de mayor tamaño y peso." }
     },
     {
       "@type": "Question",
       "name": "¿Cuánto cuesta un sistema alternativo a AutoStore en Argentina?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Un sistema DELIE equivalente a una instalación AutoStore mediana (1.000-3.000 posiciones) en Argentina puede costar entre USD 600.000 y USD 1.500.000 completo (equipos + estanterías + WCS + integración). AutoStore suele costar entre un 30% y 50% más para configuraciones equivalentes, más el costo del soporte técnico importado." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Un sistema ASRS equivalente a una instalación AutoStore mediana (1.000-3.000 posiciones) en Argentina puede costar entre USD 600.000 y USD 1.500.000 completo (equipos + estanterías + WCS + integración). AutoStore suele costar entre un 30% y 50% más para configuraciones equivalentes, más el costo del soporte técnico importado." }
     },
   ],
 };
@@ -47,7 +47,7 @@ const faqSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Alternativa a AutoStore en Argentina — Sistemas ASRS DELIE",
+  "name": "Alternativa a AutoStore en Argentina — Sistemas ASRS",
   "description": "Sistemas ASRS cube storage y shuttle como alternativa a AutoStore en Argentina y Chile. 30-50% más económico, soporte técnico local.",
   "provider": { "@id": "https://www.stokagroup.com/#organization" },
   "areaServed": [
@@ -57,36 +57,36 @@ const serviceSchema = {
 };
 
 const COMPARISON = [
-  { feature: 'Soporte técnico local en Argentina', delie: true, autostore: false },
-  { feature: 'Repuestos en stock en Argentina', delie: true, autostore: false },
-  { feature: 'Proyecto llave en mano local', delie: true, autostore: false },
-  { feature: 'Precio competitivo (30-50% menos)', delie: true, autostore: false },
-  { feature: 'SKUs hasta 30 kg por unidad', delie: true, autostore: true },
-  { feature: 'SKUs hasta 100 kg por unidad', delie: true, autostore: false },
-  { feature: 'Almacenamiento hasta 40 m de altura', delie: true, autostore: false },
-  { feature: 'Módulo GMP farmacéutico nativo', delie: true, autostore: 'parcial' },
-  { feature: 'Cámara de frío hasta -30°C', delie: true, autostore: false },
-  { feature: 'Integración WMS/ERP certificada', delie: true, autostore: true },
-  { feature: 'Alta densidad en espacio limitado (<5 m)', delie: 'parcial', autostore: true },
+  { feature: 'Soporte técnico local en Argentina', stoka: true, autostore: false },
+  { feature: 'Repuestos en stock en Argentina', stoka: true, autostore: false },
+  { feature: 'Proyecto llave en mano local', stoka: true, autostore: false },
+  { feature: 'Precio competitivo (30-50% menos)', stoka: true, autostore: false },
+  { feature: 'SKUs hasta 30 kg por unidad', stoka: true, autostore: true },
+  { feature: 'SKUs hasta 100 kg por unidad', stoka: true, autostore: false },
+  { feature: 'Almacenamiento hasta 40 m de altura', stoka: true, autostore: false },
+  { feature: 'Módulo GMP farmacéutico nativo', stoka: true, autostore: 'parcial' },
+  { feature: 'Cámara de frío hasta -30°C', stoka: true, autostore: false },
+  { feature: 'Integración WMS/ERP certificada', stoka: true, autostore: true },
+  { feature: 'Alta densidad en espacio limitado (<5 m)', stoka: 'parcial', autostore: true },
 ];
 
 const PRODUCTS = [
   {
     name: 'Robot Lanzadera Shuttle',
     desc: 'Alta densidad para cajas y contenedores ligeros con throughput paralelo por nivel.',
-    img: '/productos-delie/asrs/Estanter%C3%ADas%20rob%C3%B3ticas%20con%20lanzadera%20para%20pal%C3%A9s/pallet-shuttle-robot-racking13c59.webp',
+    img: '/productos/asrs/Estanter%C3%ADas%20rob%C3%B3ticas%20con%20lanzadera%20para%20pal%C3%A9s/pallet-shuttle-robot-racking13c59.webp',
     url: '/catalogo/asrs/shuttle',
   },
   {
     name: 'Transelevador MiniLoad',
     desc: 'Para SKUs medios y cajas, con velocidades de hasta 400 movimientos/hora por pasillo.',
-    img: '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp',
+    img: '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20minicarga%20profunda-de%20profundidad/single-deep-miniload-stacker-crane41fe7.webp',
     url: '/catalogo/asrs/miniload',
   },
   {
     name: 'Transelevador Unit-Load',
     desc: 'Para paletas y cargas pesadas en almacenes de gran altura. Throughput de 200 movimientos/hora.',
-    img: '/productos-delie/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
+    img: '/productos/robots-manipulacion/Gr%C3%BAa%20apiladora%20de%20un%20solo%20m%C3%A1stil/single-mast-pallet-stacker-crane92251.jpg',
     url: '/catalogo/asrs/unit-load',
   },
 ];
@@ -119,8 +119,8 @@ export const AutoStoreAlternativaPage = () => {
       <section className="relative pt-24 pb-0 overflow-hidden">
         <div className="absolute inset-0">
           <img loading="lazy"
-            src="/productos-delie/asrs/Estanter%C3%ADas%20rob%C3%B3ticas%20con%20lanzadera%20para%20pal%C3%A9s/pallet-shuttle-robot-racking13c59.webp"
-            alt="Alternativa a AutoStore Argentina — Sistema ASRS DELIE"
+            src="/productos/asrs/Estanter%C3%ADas%20rob%C3%B3ticas%20con%20lanzadera%20para%20pal%C3%A9s/pallet-shuttle-robot-racking13c59.webp"
+            alt="Alternativa a AutoStore Argentina — sistema ASRS de alta densidad con robots shuttle"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-linear-to-b from-zinc-950/60 via-zinc-950/85 to-zinc-950" />
@@ -186,7 +186,7 @@ export const AutoStoreAlternativaPage = () => {
               <thead>
                 <tr className="bg-slate-800 border-b border-slate-700">
                   <th className="text-left px-5 py-4 text-slate-400 font-semibold">{p('compFeature')}</th>
-                  <th className="text-center px-5 py-4 text-cyan-400 font-black">DELIE / STOKA</th>
+                  <th className="text-center px-5 py-4 text-cyan-400 font-black">STOKA</th>
                   <th className="text-center px-5 py-4 text-slate-500 font-semibold">AutoStore</th>
                 </tr>
               </thead>
@@ -194,7 +194,7 @@ export const AutoStoreAlternativaPage = () => {
                 {COMPARISON.map((row, i) => (
                   <tr key={i} className={`border-b border-slate-800 ${i % 2 === 0 ? 'bg-slate-900' : 'bg-zinc-950'}`}>
                     <td className="px-5 py-3.5 text-slate-300">{row.feature}</td>
-                    <td className="px-5 py-3.5"><CheckIcon value={row.delie} parcialLabel={p('parcial')} /></td>
+                    <td className="px-5 py-3.5"><CheckIcon value={row.stoka} parcialLabel={p('parcial')} /></td>
                     <td className="px-5 py-3.5"><CheckIcon value={row.autostore} parcialLabel={p('parcial')} /></td>
                   </tr>
                 ))}
@@ -204,12 +204,12 @@ export const AutoStoreAlternativaPage = () => {
         </motion.div>
       </section>
 
-      {/* Why DELIE over AutoStore */}
+      {/* Why our ASRS over AutoStore */}
       <section className="relative overflow-hidden bg-slate-900 py-16">
         <div className="absolute inset-0 opacity-10">
           <img loading="lazy"
-            src="/productos-delie/asrs/Transelevador%20Gr%C3%BAa%20+%20Estanter%C3%ADa%20Robot%20Lanzadera/pallet-stacker-crane-shuttle-robot-racking89e90.webp"
-            alt="Sistema ASRS DELIE con transelevador y robot lanzadera — alternativa a AutoStore"
+            src="/productos/asrs/Transelevador%20Gr%C3%BAa%20+%20Estanter%C3%ADa%20Robot%20Lanzadera/pallet-stacker-crane-shuttle-robot-racking89e90.webp"
+            alt="Sistema ASRS con transelevador y robot lanzadera — alternativa a AutoStore"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-slate-900/70" />

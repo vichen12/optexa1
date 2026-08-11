@@ -89,7 +89,6 @@ export const ProductoPage = () => {
     "name": data.nombre,
     "description": data.metaDesc,
     "provider": { "@id": `${baseUrl}/#organization` },
-    "brand": { "@type": "Brand", "name": "DELIE" },
     "areaServed": [
       { "@type": "Country", "name": "Argentina" },
       { "@type": "Country", "name": "Chile" },
@@ -97,38 +96,6 @@ export const ProductoPage = () => {
     "serviceType": "Automatización de almacenes industriales",
     "url": canonicalUrl,
     "inLanguage": i18n.language,
-  };
-
-  // URL absoluta de la imagen para Product/OG (heroImg viene como ruta relativa)
-  const absImg = data.heroImg
-    ? (data.heroImg.startsWith('http') ? data.heroImg : `${baseUrl}${data.heroImg}`)
-    : `${baseUrl}/stoka-og.png`;
-
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": data.nombre,
-    "description": data.metaDesc,
-    "image": absImg,
-    "brand": { "@type": "Brand", "name": "DELIE" },
-    "category": data.categoriaLabel,
-    "url": canonicalUrl,
-    "inLanguage": i18n.language,
-    "manufacturer": { "@type": "Organization", "name": "DELIE" },
-    // Producto a cotización (sin precio público). Un único price resoluble
-    // (price + priceCurrency + priceValidUntil) es válido y suficiente. NO se
-    // incluye un priceSpecification sin price: un PriceSpecification vacío hace
-    // que el validador no pueda resolver un precio y marque error.
-    "offers": {
-      "@type": "Offer",
-      "url": canonicalUrl,
-      "priceCurrency": "USD",
-      "price": "0",
-      "priceValidUntil": "2026-12-31",
-      "availability": "https://schema.org/InStock",
-      "itemCondition": "https://schema.org/NewCondition",
-      "seller": { "@id": `${baseUrl}/#organization` },
-    },
   };
 
   const faqSchema = {
@@ -152,7 +119,6 @@ export const ProductoPage = () => {
       />
       <Helmet>
                                                         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
@@ -173,7 +139,7 @@ export const ProductoPage = () => {
           </nav>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <p className="text-cyan-500 text-[11px] font-black uppercase tracking-[0.4em] mb-3">
-              {data.categoriaLabel} · DELIE · Argentina
+              {data.categoriaLabel} · Argentina
             </p>
             <h1 className="text-gray-900 text-4xl md:text-5xl lg:text-6xl font-black italic uppercase tracking-tighter leading-[1.05] mb-4">
               {data.nombre}
@@ -219,9 +185,8 @@ export const ProductoPage = () => {
               );
             })()}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
-              <img loading="lazy" src="/image.webp" alt="DELIE" className="h-7 object-contain mb-3" />
               <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                STOKA es el aliado estratégico oficial y exclusivo de DELIE en Argentina y Chile.
+                STOKA integra, instala y da soporte a estos sistemas en Argentina y Chile.
               </p>
               <button onClick={() => langNavigate('/contacto')}
                 className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-cyan-400 transition-colors">
@@ -306,19 +271,19 @@ export const ProductoPage = () => {
       <section className="bg-slate-900 py-16 px-6 border-b border-white/5">
         <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_2fr] gap-10 items-start">
           <div>
-            <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">{p('delieTag')}</p>
-            <h2 className="text-2xl font-black text-white uppercase tracking-tighter">{p('delieH2')}</h2>
+            <p className="text-[10px] font-mono text-cyan-400 tracking-[0.5em] uppercase mb-3">{p('tecTag')}</p>
+            <h2 className="text-2xl font-black text-white uppercase tracking-tighter">{p('tecH2')}</h2>
           </div>
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="space-y-5">
             <div className="flex items-start gap-4">
               <CheckCircle size={20} className="text-cyan-400 shrink-0 mt-1" />
-              <p className="text-gray-300 text-base leading-relaxed">{data.porQueDelie}</p>
+              <p className="text-gray-300 text-base leading-relaxed">{data.porQueStoka}</p>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed border-t border-white/10 pt-5">
-              {p('delieParrafo')}
-              {' '}<LangLink to="/delie-argentina" className="text-cyan-400 hover:underline font-medium">
-                {p('verMasDelie')}
+              {p('tecParrafo')}
+              {' '}<LangLink to="/tecnologia-asrs" className="text-cyan-400 hover:underline font-medium">
+                {p('verMasTec')}
               </LangLink>
             </p>
           </motion.div>

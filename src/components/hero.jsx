@@ -14,6 +14,13 @@ export const Hero = () => {
     if (m) m.setAttribute("content", t('home.metaDesc'));
   }, [t]);
 
+  const PROOF = [
+    t('hero.proof.installations'),
+    t('hero.proof.countries'),
+    t('hero.proof.cert'),
+    t('hero.proof.years'),
+  ];
+
   const STATS = [
     { value: "1.000+",   label: t('hero.stats.installations') },
     { value: "15+ años", label: t('hero.stats.years') },
@@ -24,7 +31,7 @@ export const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative h-screen flex flex-col items-center justify-center pt-20 px-6 bg-slate-900"
+      className="relative flex flex-col bg-slate-900"
     >
       {/* VIDEO BG */}
       <div className="absolute inset-0 overflow-hidden">
@@ -43,7 +50,7 @@ export const Hero = () => {
       </div>
 
       {/* CONTENT */}
-      <div className="max-w-5xl mx-auto relative z-10 w-full text-center flex flex-col items-center">
+      <div className="max-w-5xl mx-auto relative z-10 w-full text-center flex flex-col items-center justify-center min-h-screen pt-20 px-6 py-10">
 
         {/* Badge */}
         <motion.div
@@ -58,21 +65,24 @@ export const Hero = () => {
           </span>
         </motion.div>
 
-        {/* DELIE logo */}
+        {/* Proof strip */}
         <motion.div
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
-          className="mb-5"
+          className="mb-5 grid grid-cols-2 gap-x-6 gap-y-2 sm:flex sm:items-center sm:justify-center"
         >
-          <img
-            src="/image.webp"
-            alt={t('hero.delieAlt')}
-            width="400" height="51"
-            fetchpriority="high"
-            className="h-10 object-contain mx-auto"
-            style={{ filter: 'brightness(1.1) saturate(1.2)' }}
-          />
+          {PROOF.map((p, i) => (
+            <span
+              key={i}
+              className="flex items-center justify-center gap-6 text-[11px] font-mono tracking-[0.15em] text-white/60 uppercase whitespace-nowrap"
+            >
+              {p}
+              {i < PROOF.length - 1 && (
+                <span aria-hidden="true" className="hidden sm:block w-px h-3 bg-white/25" />
+              )}
+            </span>
+          ))}
         </motion.div>
 
         {/* H1 */}
@@ -136,10 +146,10 @@ export const Hero = () => {
         initial={{ opacity: 1, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="absolute bottom-0 left-0 right-0 z-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 border-t border-white/15"
+        className="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 border-t border-white/15"
       >
         {STATS.map((s, i) => (
-          <div key={i} className="bg-black/30 backdrop-blur-sm px-5 py-5 text-center">
+          <div key={i} className="bg-black/30 backdrop-blur-sm px-5 py-5 text-center select-none">
             <p className="text-xl font-black text-cyan-300 leading-none mb-1">{s.value}</p>
             <p className="text-[11px] text-white/55 leading-tight">{s.label}</p>
           </div>

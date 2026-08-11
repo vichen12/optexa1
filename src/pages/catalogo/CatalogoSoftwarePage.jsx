@@ -11,7 +11,7 @@ import { ArrowRight, ChevronRight } from 'lucide-react';
 import { SeoHead } from '../../lib/SeoHead';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
-const img = (prod, file) => `/productos-delie/software-inteligente/${seg(prod)}/${file}`;
+const img = (prod, file) => `/productos/software-inteligente/${seg(prod)}/${file}`;
 
 /* Solo imagen + link; name/desc desde i18n por índice. */
 const PRODUCT_MEDIA = [
@@ -145,7 +145,7 @@ export const CatalogoSoftwarePage = () => {
                 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
                 className="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-400 hover:shadow-md transition-all group cursor-pointer">
                 <div className="aspect-video overflow-hidden bg-gray-100">
-                  <img loading="lazy" src={prod.image} alt={`${prod.name} — DELIE`}
+                  <img loading="lazy" src={prod.image} alt={`${prod.name} — software inteligente de gestión y control de almacenes`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-5">

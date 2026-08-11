@@ -2,6 +2,44 @@
   command = "npm run build:vercel"
   publish = "dist"
 
+# 301 permanentes de las URLs viejas de la página del fabricante.
+# Van ANTES del fallback SPA para que no se los coma el from = "/*".
+[[redirects]]
+  from = "/delie-argentina"
+  to = "/tecnologia-asrs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/delie-argentina"
+  to = "/en/tecnologia-asrs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zh/delie-argentina"
+  to = "/zh/tecnologia-asrs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/alternativa-delie-argentina"
+  to = "/tecnologia-asrs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/alternativa-delie-argentina"
+  to = "/en/tecnologia-asrs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zh/alternativa-delie-argentina"
+  to = "/zh/tecnologia-asrs"
+  status = 301
+  force = true
+
 # SPA fallback — solo cuando NO existe un archivo prerenderizado.
 # force = false (default) hace que los index.html estáticos tengan prioridad.
 [[redirects]]

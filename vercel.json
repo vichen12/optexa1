@@ -3,6 +3,14 @@
   "outputDirectory": "dist",
   "framework": null,
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/delie-argentina", "destination": "/tecnologia-asrs", "permanent": true },
+    { "source": "/en/delie-argentina", "destination": "/en/tecnologia-asrs", "permanent": true },
+    { "source": "/zh/delie-argentina", "destination": "/zh/tecnologia-asrs", "permanent": true },
+    { "source": "/alternativa-delie-argentina", "destination": "/tecnologia-asrs", "permanent": true },
+    { "source": "/en/alternativa-delie-argentina", "destination": "/en/tecnologia-asrs", "permanent": true },
+    { "source": "/zh/alternativa-delie-argentina", "destination": "/zh/tecnologia-asrs", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

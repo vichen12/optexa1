@@ -28,7 +28,7 @@ const RECURSOS_EXTRA = [
   {
     icon: HelpCircle,
     title: 'Comparador de sistemas',
-    desc: 'Respondé 5 preguntas sobre tu operación y recibí la recomendación de tecnología DELIE más adecuada.',
+    desc: 'Respondé 5 preguntas sobre tu operación y recibí la recomendación técnica más adecuada para tu operación.',
     url: '/recursos/comparador-sistemas',
     tag: 'Herramienta',
   },

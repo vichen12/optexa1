@@ -50,7 +50,7 @@ const EMPRESA_PATHS = [
   { key: 'howWeWork',   href: '/como-trabajamos' },
   { key: 'taxBenefits', href: '/beneficios-fiscales' },
   { key: 'contact',     href: '/contacto' },
-  { key: 'delie',       href: '/delie-argentina' },
+  { key: 'tecnologia',  href: '/tecnologia-asrs' },
   { key: 'chile',       href: '/chile' },
 ];
 

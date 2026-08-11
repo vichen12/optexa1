@@ -4,7 +4,7 @@ export const ARTICULOS_I18N = {
   "que-es-un-sistema-asrs": {
     "en": {
       "metaTitle": "What Is an ASRS System? Complete 2026 Guide | STOKA",
-      "metaDesc": "Complete guide to ASRS systems (Automated Storage and Retrieval System): types, components, how a stacker crane works, and when to automate.",
+      "metaDesc": "What an ASRS system is and how it works: types, components, stacker crane cycle times of 45-120 seconds, and when automation pays off in 18-36 months.",
       "h1": "What an ASRS system is and how it works",
       "categoria": "ASRS Fundamentals",
       "readTime": "7 min",
@@ -44,7 +44,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "What happens if the ASRS stops due to a fault?",
-          "a": "Modern ASRS systems have redundancy in their control equipment and manual emergency operating modes. If a stacker crane fails, the aisle can be operated manually with a forklift in emergency mode. The MTBF (mean time between failures) of DELIE stacker cranes exceeds 8,000 hours of continuous operation."
+          "a": "Modern ASRS systems have redundancy in their control equipment and manual emergency operating modes. If a stacker crane fails, the aisle can be operated manually with a forklift in emergency mode. The MTBF (mean time between failures) of modern stacker cranes exceeds 8,000 hours of continuous operation."
         }
       ],
       "cta": {
@@ -76,7 +76,7 @@ export const ARTICULOS_I18N = {
     },
     "zh": {
       "metaTitle": "什么是ASRS系统？2026完整指南 | STOKA",
-      "metaDesc": "ASRS（自动化存储与检索系统）完整指南：系统类型、组成部件、堆垛机工作原理，以及何时值得实现仓库自动化。",
+      "metaDesc": "什么是ASRS系统：类型、组成部件与堆垛机工作原理，一次存取循环仅需45至120秒，并说明何时值得在仓库中引入自动化存储。",
       "h1": "什么是ASRS系统及其工作原理",
       "categoria": "ASRS基础知识",
       "readTime": "7 分钟",
@@ -116,7 +116,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "如果ASRS系统因故障停机怎么办？",
-          "a": "现代ASRS系统在控制设备上具备冗余设计，并配有手动应急运行模式。若某台堆垛机发生故障，该通道可在应急模式下改用叉车手动作业。DELIE堆垛机的MTBF（平均无故障工作时间）超过8,000小时的连续运行。"
+          "a": "现代ASRS系统在控制设备上具备冗余设计，并配有手动应急运行模式。若某台堆垛机发生故障，该通道可在应急模式下改用叉车手动作业。现代堆垛机的MTBF（平均无故障工作时间）超过8,000小时的连续运行。"
         }
       ],
       "cta": {
@@ -150,7 +150,7 @@ export const ARTICULOS_I18N = {
   "cuanto-cuesta-automatizar-almacen": {
     "en": {
       "metaTitle": "How Much Does Warehouse Automation Cost in 2026? | STOKA",
-      "metaDesc": "Cost guide for warehouse automation in Argentina 2026. Investment ranges by technology, plus the impact of RIMI and Decree 513/2025 on real cost.",
+      "metaDesc": "What warehouse automation costs in 2026: investment ranges from USD 80,000 to over USD 10 million, plus how RIMI and Decree 513/2025 cut net cost 25-35%.",
       "h1": "How much does it cost to automate a warehouse in 2026",
       "categoria": "Investment & ROI",
       "readTime": "8 min",
@@ -222,7 +222,7 @@ export const ARTICULOS_I18N = {
     },
     "zh": {
       "metaTitle": "2026年仓库自动化成本要多少？| STOKA",
-      "metaDesc": "2026年阿根廷仓库自动化成本指南：按技术类型划分的投资区间，以及RIMI与513/2025号法令对实际成本的影响。",
+      "metaDesc": "2026年仓库自动化要花多少钱：按技术划分的投资区间从8万美元到上千万美元，RIMI与513/2025号法令可使净成本降低25%至35%。",
       "h1": "2026年仓库自动化的成本是多少",
       "categoria": "投资与ROI",
       "readTime": "8 分钟",
@@ -295,8 +295,8 @@ export const ARTICULOS_I18N = {
   },
   "transelevador-vs-shuttle": {
     "en": {
-      "metaTitle": "Stacker Crane vs Shuttle: Which to Choose | STOKA",
-      "metaDesc": "Technical comparison of unit-load stacker crane vs pallet shuttle: throughput, density, cost and operation. Which suits your warehouse best.",
+      "metaTitle": "Stacker Crane vs Shuttle: Which One to Choose | STOKA",
+      "metaDesc": "Stacker crane or pallet shuttle for pallets: throughput, density and 10-year TCO compared, so you choose the right automation for your warehouse profile.",
       "h1": "Stacker crane vs shuttle: which is right for your operation",
       "categoria": "Technical comparisons",
       "readTime": "6 min",
@@ -328,7 +328,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "Can the pallet shuttle operate in cold storage?",
-          "a": "Yes. DELIE shuttle robots have a cold-storage version (-30 °C). The lithium batteries operate in cold conditions thanks to internal heating systems. Battery charging takes place in a temperature-controlled area to extend the life of the pack."
+          "a": "Yes. Shuttle robots are available in a cold-storage version (-30 °C). The lithium batteries operate in cold conditions thanks to internal heating systems. Battery charging takes place in a temperature-controlled area to extend the life of the pack."
         },
         {
           "q": "How many aisles are needed for a shuttle to be cost-effective?",
@@ -368,7 +368,7 @@ export const ARTICULOS_I18N = {
     },
     "zh": {
       "metaTitle": "堆垛机 vs 穿梭车：如何选择 | STOKA",
-      "metaDesc": "单元载荷堆垛机与托盘穿梭车的技术对比：吞吐量、存储密度、成本与运营。哪种更适合您的仓库。",
+      "metaDesc": "堆垛机与托盘穿梭车如何取舍：从吞吐量、存储密度到十年总拥有成本的逐项技术对比，帮助您为自己的托盘仓库选定合适的自动化方案。",
       "h1": "堆垛机 vs 穿梭车：根据您的运营选择合适方案",
       "categoria": "技术对比",
       "readTime": "6 分钟",
@@ -400,7 +400,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "托盘穿梭车能在冷库中运行吗？",
-          "a": "可以。DELIE 穿梭车机器人配有冷库版本（-30 °C）。锂电池借助内部加热系统可在低温环境下运行。电池充电在恒温区域进行，以延长电池组的使用寿命。"
+          "a": "可以。穿梭车机器人配有冷库版本（-30 °C）。锂电池借助内部加热系统可在低温环境下运行。电池充电在恒温区域进行，以延长电池组的使用寿命。"
         },
         {
           "q": "穿梭车需要多少条巷道才能具备经济效益？",
@@ -442,7 +442,7 @@ export const ARTICULOS_I18N = {
   "rimi-2026-automatizacion": {
     "en": {
       "metaTitle": "RIMI 2026: How It Funds Your Warehouse Automation | STOKA",
-      "metaDesc": "Practical guide to RIMI (Law 27.802): accelerated depreciation of capital goods, early IVA refunds and tax benefits for SMEs automating warehouses.",
+      "metaDesc": "How RIMI (Law 27.802) funds warehouse automation: 100% first-year depreciation and early IVA refunds can cut the investment-year tax burden by USD 200,000.",
       "h1": "RIMI 2026: how the new regime funds your automation",
       "categoria": "Tax benefits",
       "readTime": "7 min",
@@ -513,8 +513,8 @@ export const ARTICULOS_I18N = {
       ]
     },
     "zh": {
-      "metaTitle": "RIMI 2026：新税制如何为您的仓库自动化融资 | STOKA",
-      "metaDesc": "RIMI（第27.802号法律）实用指南：资本货物加速折旧、IVA 提前退税，以及为自动化仓库的中小企业提供的税收优惠。",
+      "metaTitle": "RIMI 2026：仓库自动化的税收融资指南",
+      "metaDesc": "RIMI如何为仓库自动化融资：首年100%加速折旧加上IVA提前退税，可将投资当年的税负最多降低20万美元，且可与BICE贷款叠加使用。",
       "h1": "RIMI 2026：新税制如何为您的自动化项目融资",
       "categoria": "税收优惠",
       "readTime": "7 分钟",
@@ -587,8 +587,8 @@ export const ARTICULOS_I18N = {
   },
   "agv-vs-amr": {
     "en": {
-      "metaTitle": "AGV vs AMR: Key Differences and When to Use Each",
-      "metaDesc": "Technical comparison of AGV and AMR robots for warehouses: navigation, flexibility, cost and use cases. Find out which fits your operation best.",
+      "metaTitle": "AGV vs AMR: Key Differences and When to Use Each | STOKA",
+      "metaDesc": "AGV or AMR for internal transport in your warehouse: navigation, flexibility, cost and TCO compared, plus when a mixed fleet maximizes operational ROI.",
       "h1": "AGV vs AMR: the differences and when to use each in your warehouse",
       "categoria": "Technical comparisons",
       "readTime": "6 min",
@@ -620,7 +620,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "Can AMRs operate alongside people without risk?",
-          "a": "Yes. DELIE AMRs are certified for environments with people. Their sensors detect obstacles at 5 meters and brake at 0.5 meters. In high-traffic zones, the WCS sets up virtual traffic lights to prevent congestion."
+          "a": "Yes. Modern AMRs are certified for environments with people. Their sensors detect obstacles at 5 meters and brake at 0.5 meters. In high-traffic zones, the WCS sets up virtual traffic lights to prevent congestion."
         },
         {
           "q": "How many AMRs does my warehouse need?",
@@ -628,7 +628,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "Can the AMR system integrate with my current ERP or WMS?",
-          "a": "Yes. DELIE AMRs integrate via REST API with any WMS or ERP. The WCS acts as middleware between the management system and the robots, making the integration transparent for the client's system."
+          "a": "Yes. AMRs integrate via REST API with any WMS or ERP. The WCS acts as middleware between the management system and the robots, making the integration transparent for the client's system."
         }
       ],
       "cta": {
@@ -660,7 +660,7 @@ export const ARTICULOS_I18N = {
     },
     "zh": {
       "metaTitle": "AGV 与 AMR：核心区别及各自适用场景",
-      "metaDesc": "面向仓库的 AGV 与 AMR 机器人技术对比：导航方式、灵活性、成本与应用场景，帮助您判断哪种更适合自己的运营。",
+      "metaDesc": "AGV与AMR应如何选择：从导航方式、灵活性到实施与维护成本的全面对比，并说明何时组建混合机队能让仓库投资回报实现最大化。",
       "h1": "AGV 与 AMR：两者的区别以及在仓库中如何选择",
       "categoria": "技术对比",
       "readTime": "6 分钟",
@@ -692,7 +692,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "AMR 能否与人员一同作业而不带来风险？",
-          "a": "可以。DELIE 系列 AMR 已通过在有人环境中作业的认证。传感器可在 5 米处检测到障碍物，并在 0.5 米处刹停。在交通密度较高的区域，WCS 会设置虚拟信号灯以避免拥堵。"
+          "a": "可以。现代 AMR 已通过在有人环境中作业的认证。传感器可在 5 米处检测到障碍物，并在 0.5 米处刹停。在交通密度较高的区域，WCS 会设置虚拟信号灯以避免拥堵。"
         },
         {
           "q": "我的仓库需要多少台 AMR？",
@@ -700,7 +700,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "AMR 系统能否与我现有的 ERP 或 WMS 集成？",
-          "a": "可以。DELIE 系列 AMR 通过 REST API 与任何 WMS 或 ERP 集成。WCS 作为管理系统与机器人之间的中间件，使集成对客户系统而言完全透明。"
+          "a": "可以。AMR 可通过 REST API 与任何 WMS 或 ERP 集成。WCS 作为管理系统与机器人之间的中间件，使集成对客户系统而言完全透明。"
         }
       ],
       "cta": {
@@ -733,8 +733,8 @@ export const ARTICULOS_I18N = {
   },
   "wms-vs-wcs": {
     "en": {
-      "metaTitle": "WMS vs WCS: Warehouse Software Roles Explained",
-      "metaDesc": "The difference between WMS and WCS in automated warehouses: what each system does, how they connect to your ERP, and why an ASRS needs both.",
+      "metaTitle": "WMS vs WCS: Warehouse Software Roles Explained | STOKA",
+      "metaDesc": "What WMS and WCS each do in an automated warehouse: inventory and order management vs real-time equipment control, and why an ASRS always needs both layers.",
       "h1": "WMS vs WCS: what each software does in an automated warehouse",
       "categoria": "Logistics software",
       "readTime": "6 min",
@@ -750,26 +750,26 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "How WMS, WCS and ERP integrate in practice",
-          "body": "The chain of information in an automated warehouse works like this: the ERP receives a customer order and passes it to the WMS. The WMS checks stock, generates the picking orders and sends them to the WCS. The WCS assigns the missions to the equipment (stacker crane 1, retrieve the pallet in aisle A, location 15). The machines execute and report back to the WCS. The WCS confirms to the WMS. The WMS confirms to the ERP. The whole cycle can take under 2 minutes, from the moment the order arrives to the moment the pallet reaches the dispatch station. The WCS latency is the technical bottleneck: in DELIE systems, it is under 50 ms."
+          "body": "The chain of information in an automated warehouse works like this: the ERP receives a customer order and passes it to the WMS. The WMS checks stock, generates the picking orders and sends them to the WCS. The WCS assigns the missions to the equipment (stacker crane 1, retrieve the pallet in aisle A, location 15). The machines execute and report back to the WCS. The WCS confirms to the WMS. The WMS confirms to the ERP. The whole cycle can take under 2 minutes, from the moment the order arrives to the moment the pallet reaches the dispatch station. The WCS latency is the technical bottleneck: in a well-engineered system, it is under 50 ms."
         },
         {
           "h2": "Do I need a WMS, a WCS or both: how to decide",
-          "body": "If your warehouse has no automated equipment (stacker cranes, robots, conveyors), you probably only need a WMS to manage inventory and manual tasks. If you run ASRS equipment or robots, you need a WCS to control them even without a dedicated WMS (many companies use the WMS built into their ERP and add a WCS for the ASRS). If you want maximum efficiency and visibility, a fully integrated WMS + WCS stack is the optimal solution: it eliminates integration latency and gives you a unified, real-time view of the warehouse. DELIE's WMS and WCS were designed as an integrated stack, sharing the same database and a single interface."
+          "body": "If your warehouse has no automated equipment (stacker cranes, robots, conveyors), you probably only need a WMS to manage inventory and manual tasks. If you run ASRS equipment or robots, you need a WCS to control them even without a dedicated WMS (many companies use the WMS built into their ERP and add a WCS for the ASRS). If you want maximum efficiency and visibility, a fully integrated WMS + WCS stack is the optimal solution: it eliminates integration latency and gives you a unified, real-time view of the warehouse. The WMS and WCS that STOKA deploys were designed as an integrated stack, sharing the same database and a single interface."
         }
       ],
       "conclusionH2": "The right software is the one that integrates with your ERP without friction",
       "conclusion": "Deploying an ASRS without the right WCS is like buying a Formula 1 car with no steering wheel: the hardware simply can't run without its control software. And a WCS that doesn't communicate cleanly with your ERP's WMS creates inventory inconsistencies that can cost more than the system itself. At STOKA, the software implementation project is part of the turnkey contract: the technical integration with the client's ERP is our responsibility, not yours.",
       "faq": [
         {
-          "q": "Can DELIE's WCS integrate with my SAP?",
-          "a": "Yes. The DELIE WCS ships with certified connectors for SAP (IDoc, BAPI and RFC), Oracle, Microsoft Dynamics, Infor and proprietary systems. The two-way integration updates inventory in SAP in real time."
+          "q": "Can the WCS integrate with my SAP?",
+          "a": "Yes. The WCS ships with certified connectors for SAP (IDoc, BAPI and RFC), Oracle, Microsoft Dynamics, Infor and proprietary systems. The two-way integration updates inventory in SAP in real time."
         },
         {
           "q": "How long does it take to implement the WMS/WCS?",
           "a": "The WCS on its own (without a WMS) is implemented in 4 to 8 weeks, alongside the ASRS installation. The full WMS + WCS stack takes between 12 and 20 weeks, including data migration, training and acceptance testing."
         },
         {
-          "q": "Does DELIE's WMS replace the WMS in my ERP?",
+          "q": "Does the new WMS replace the WMS in my ERP?",
           "a": "It can run as the primary system or as a satellite system for the automated zone, interfaced with your ERP's WMS. The choice depends on how complex your processes are and on how far the company wants to consolidate systems. STOKA lays out both options, with their pros and cons, before submitting the proposal."
         },
         {
@@ -806,7 +806,7 @@ export const ARTICULOS_I18N = {
     },
     "zh": {
       "metaTitle": "WMS 与 WCS：仓库软件的区别与功能",
-      "metaDesc": "自动化仓库中 WMS 与 WCS 的区别：两套软件各自的职责、如何与 ERP 集成，以及为何 ASRS 系统两者缺一不可。",
+      "metaDesc": "WMS与WCS有何区别：一个负责库存与订单管理，另一个以低于50毫秒的时延实时控制物理设备，说明自动化仓库为何两者缺一不可。",
       "h1": "WMS 与 WCS：自动化仓库中两套软件各自的作用",
       "categoria": "物流软件",
       "readTime": "6 分钟",
@@ -822,26 +822,26 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "WMS、WCS 与 ERP 在实践中如何集成",
-          "body": "自动化仓库中的信息链条是这样运作的：ERP 接收到客户订单后将其下发给 WMS。WMS 核对库存、生成拣选指令并发送给 WCS。WCS 将任务分配给设备（1 号堆垛机，取回 A 巷道 15 号库位的托盘）。设备执行任务并向 WCS 反馈。WCS 向 WMS 确认，WMS 再向 ERP 确认。从订单进入系统到托盘抵达发货工位，整个流程可在 2 分钟以内完成。WCS 的时延是技术上的瓶颈：在 DELIE 系统中，该时延低于 50 毫秒。"
+          "body": "自动化仓库中的信息链条是这样运作的：ERP 接收到客户订单后将其下发给 WMS。WMS 核对库存、生成拣选指令并发送给 WCS。WCS 将任务分配给设备（1 号堆垛机，取回 A 巷道 15 号库位的托盘）。设备执行任务并向 WCS 反馈。WCS 向 WMS 确认，WMS 再向 ERP 确认。从订单进入系统到托盘抵达发货工位，整个流程可在 2 分钟以内完成。WCS 的时延是技术上的瓶颈：在设计良好的系统中，该时延低于 50 毫秒。"
         },
         {
           "h2": "我需要 WMS、WCS 还是两者兼备：如何决策",
-          "body": "如果您的仓库没有自动化设备（堆垛机、机器人、输送机），那么您可能只需要一套 WMS 来管理库存和人工作业。如果您拥有 ASRS 设备或机器人，即便没有自己的 WMS，也需要 WCS 来对其加以控制（许多企业使用其 ERP 自带的 WMS，再为 ASRS 加装 WCS）。如果您追求最高的效率和可视化程度，那么深度集成的 WMS + WCS 完整技术栈才是最优方案：它消除了集成带来的时延，并提供仓库的实时统一视图。DELIE 的 WMS 与 WCS 从设计之初就是一套集成技术栈，共享同一个数据库和统一的界面。"
+          "body": "如果您的仓库没有自动化设备（堆垛机、机器人、输送机），那么您可能只需要一套 WMS 来管理库存和人工作业。如果您拥有 ASRS 设备或机器人，即便没有自己的 WMS，也需要 WCS 来对其加以控制（许多企业使用其 ERP 自带的 WMS，再为 ASRS 加装 WCS）。如果您追求最高的效率和可视化程度，那么深度集成的 WMS + WCS 完整技术栈才是最优方案：它消除了集成带来的时延，并提供仓库的实时统一视图。STOKA 所部署的 WMS 与 WCS 从设计之初就是一套集成技术栈，共享同一个数据库和统一的界面。"
         }
       ],
       "conclusionH2": "正确的软件，是能够与您的 ERP 无缝集成的软件",
       "conclusion": "部署 ASRS 却没有配套合适的 WCS，就像买了一辆没有方向盘的 F1 赛车：没有控制软件，硬件根本无法运转。而一套无法与您 ERP 中的 WMS 顺畅通信的 WCS，会造成库存数据不一致，其代价可能比系统本身还要高。在 STOKA，软件实施项目是交钥匙合同的一部分：与客户 ERP 的技术集成由我们负责，而非由您承担。",
       "faq": [
         {
-          "q": "DELIE 的 WCS 能否与我的 SAP 集成？",
-          "a": "可以。DELIE WCS 配备了面向 SAP（IDoc、BAPI 和 RFC）、Oracle、Microsoft Dynamics、Infor 以及各类专有系统的认证连接器。双向集成可实时更新 SAP 中的库存数据。"
+          "q": "WCS 能否与我的 SAP 集成？",
+          "a": "可以。该 WCS 配备了面向 SAP（IDoc、BAPI 和 RFC）、Oracle、Microsoft Dynamics、Infor 以及各类专有系统的认证连接器。双向集成可实时更新 SAP 中的库存数据。"
         },
         {
           "q": "实施 WMS/WCS 需要多长时间？",
           "a": "仅实施 WCS（不含 WMS）可与 ASRS 安装同步进行，耗时 4 至 8 周。完整的 WMS + WCS 技术栈则需 12 至 20 周，其中包括数据迁移、培训和验收测试。"
         },
         {
-          "q": "DELIE 的 WMS 会取代我 ERP 中的 WMS 吗？",
+          "q": "新的 WMS 会取代我 ERP 中的 WMS 吗？",
           "a": "它既可以作为主系统运行，也可以作为自动化区域的卫星系统，与 ERP 的 WMS 对接。具体如何取舍，取决于业务流程的复杂程度，以及企业整合系统的意愿。STOKA 会在提交方案之前，列明两种选项各自的利弊。"
         },
         {
@@ -879,16 +879,16 @@ export const ARTICULOS_I18N = {
   },
   "automatizacion-bodegas-chile": {
     "en": {
-      "metaTitle": "Warehouse Automation in Chile: 2026 Guide | STOKA",
-      "metaDesc": "How to automate your warehouse in Chile: systems, costs and benefits. DELIE technology with local support. Cut space and errors in your operation.",
+      "metaTitle": "Warehouse Automation in Chile: Complete 2026 Guide | STOKA",
+      "metaDesc": "How to automate warehouses in Chile: ASRS options for mining, wineries and cold chain down to -30 °C, with local engineering support across the country.",
       "h1": "Warehouse automation in Chile: the opportunity in mining and agribusiness",
       "categoria": "Regional markets",
       "readTime": "7 min",
-      "intro": "Chile has unique characteristics that make warehouse automation especially relevant: a mining industry operating in extreme zones (high plateau, desert, far south), a world-class wine industry with logistically complex wineries, and an export-driven agribusiness that needs precision cold-chain management. Across all of these sectors, the challenge is not only throughput or storage density: it is operating with few specialized workers, in areas with high staff turnover and extreme weather conditions. DELIE's ASRS systems, which STOKA integrates as a strategic partner in Chile and Argentina, are especially well suited to these conditions.",
+      "intro": "Chile has unique characteristics that make warehouse automation especially relevant: a mining industry operating in extreme zones (high plateau, desert, far south), a world-class wine industry with logistically complex wineries, and an export-driven agribusiness that needs precision cold-chain management. Across all of these sectors, the challenge is not only throughput or storage density: it is operating with few specialized workers, in areas with high staff turnover and extreme weather conditions. The ASRS systems STOKA integrates as a strategic partner in Chile and Argentina are especially well suited to these conditions.",
       "sections": [
         {
           "h2": "Mining warehouse automation in Chile: the challenge of the north",
-          "body": "Mining operations in northern Chile (Regions II through IV) need spare-parts, materials and supplies warehouses that can run with minimal staff under extreme-altitude conditions. Staff turnover in these areas is high and labor costs are steep. An ASRS or VLM system for mining spare parts solves three problems at once: it reduces the headcount needed in the warehouse, minimizes inventory errors (critical when a single missing part can shut down a multimillion-dollar production line) and shields inventory from the extreme dust and temperature conditions of the environment. DELIE's VLMs and vertical carousels come in versions certified for airborne-dust environments (IP6X)."
+          "body": "Mining operations in northern Chile (Regions II through IV) need spare-parts, materials and supplies warehouses that can run with minimal staff under extreme-altitude conditions. Staff turnover in these areas is high and labor costs are steep. An ASRS or VLM system for mining spare parts solves three problems at once: it reduces the headcount needed in the warehouse, minimizes inventory errors (critical when a single missing part can shut down a multimillion-dollar production line) and shields inventory from the extreme dust and temperature conditions of the environment. VLMs and vertical carousels come in versions certified for airborne-dust environments (IP6X)."
         },
         {
           "h2": "Automated winery warehouses: more capacity, less space",
@@ -896,27 +896,27 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "Cold chain in Chile: fruit and protein exports",
-          "body": "Chile is the world's second-largest exporter of fresh fruit and one of the leading exporters of seafood. Both industries depend on an unbroken cold chain from harvest or catch all the way to the export container. DELIE's ASRS systems for cold rooms operate from -30 °C (frozen) to +4 °C (chilled) with the same equipment. For the refrigerated distribution centers at the ports of Valparaíso, San Antonio and Mejillones, automation reduces the warehouse's thermal load (fewer door openings, fewer people working in the cold) and increases capacity within the same footprint."
+          "body": "Chile is the world's second-largest exporter of fresh fruit and one of the leading exporters of seafood. Both industries depend on an unbroken cold chain from harvest or catch all the way to the export container. ASRS systems for cold rooms operate from -30 °C (frozen) to +4 °C (chilled) with the same equipment. For the refrigerated distribution centers at the ports of Valparaíso, San Antonio and Mejillones, automation reduces the warehouse's thermal load (fewer door openings, fewer people working in the cold) and increases capacity within the same footprint."
         },
         {
           "h2": "Why STOKA for automation projects in Chile",
           "body": "STOKA operates as a strategic partner in Chile, with an engineering team that serves projects across the entire country: from Arica to Punta Arenas. This is essential for mining projects in the north and operations in remote areas of the south: technical support does not depend on response times from Argentina or Asia. Chile's tax framework for imported capital goods also offers benefits: the VAT exemption on the import of capital goods for certain productive sectors applies to ASRS systems. As part of the project, STOKA handles the import permits and technical documentation in Chile."
         }
       ],
-      "conclusionH2": "Chile: the opportunity most automation providers are missing",
-      "conclusion": "Most warehouse automation providers have no local presence in Chile. STOKA does. If your mining, wine or agribusiness operation in Chile needs to automate a warehouse, the STOKA Chile team can visit your facilities, assess the operation and present a turnkey technical proposal on the same terms as in Argentina.",
+      "conclusionH2": "Chile: warehouse automation with engineering in your own time zone",
+      "conclusion": "STOKA serves projects in Chile with engineering and support from Argentina: same time zone, same language and response times that do not depend on a factory in Asia or Europe. If your mining, wine or agribusiness operation in Chile needs to automate a warehouse, the STOKA team can visit your facilities, assess the operation and present a turnkey technical proposal on the same terms as in Argentina.",
       "faq": [
         {
-          "q": "Does STOKA offer technical service in Chile?",
-          "a": "Yes. STOKA operates as an official strategic partner in Chile with a local engineering team for sales, installation and after-sales technical support. Projects in Chile are managed from Chile, not from Argentina."
+          "q": "How does STOKA serve projects in Chile?",
+          "a": "STOKA serves Chile with engineering and support from Argentina: same time zone, same language and on-site technical visits for assessment, installation and after-sales support. Response times do not depend on a factory in Asia or Europe."
         },
         {
-          "q": "Do DELIE systems qualify for Chile's VAT exemptions on capital goods?",
-          "a": "ASRS systems imported for productive use in Chile qualify as capital goods. The VAT exemption for imported capital goods applies in certain sectors and under certain conditions. STOKA Chile handles the technical documentation required to certify the equipment's productive use."
+          "q": "Do ASRS systems qualify for Chile's VAT exemptions on capital goods?",
+          "a": "ASRS systems imported for productive use in Chile qualify as capital goods. The VAT exemption for imported capital goods applies in certain sectors and under certain conditions. STOKA handles the technical documentation required to certify the equipment's productive use."
         },
         {
           "q": "Can an ASRS system operate at high altitude, such as at a mine?",
-          "a": "Electrical and electronic equipment requires adaptation to operate above 3,000 m of altitude (lower atmospheric pressure affects motor cooling and heat dissipation). DELIE manufactures versions of its equipment specified for high altitude. The specific design is confirmed during detailed engineering."
+          "a": "Electrical and electronic equipment requires adaptation to operate above 3,000 m of altitude (lower atmospheric pressure affects motor cooling and heat dissipation). The equipment is built in versions specified for high altitude. The specific design is confirmed during detailed engineering."
         },
         {
           "q": "How long does a project in Chile take vs. in Argentina?",
@@ -952,15 +952,15 @@ export const ARTICULOS_I18N = {
     },
     "zh": {
       "metaTitle": "智利仓库自动化：2026 年指南 | STOKA",
-      "metaDesc": "如何实现智利仓库自动化：系统、成本与效益。采用 DELIE 技术并提供本地支持，减少占地面积与操作差错。",
+      "metaDesc": "智利仓库如何实现自动化：面向矿业、酒庄与低至零下30摄氏度冷链的ASRS解决方案，并配备覆盖智利全国各地的本地工程支持团队。",
       "h1": "智利仓库自动化：矿业与农业产业的发展机遇",
       "categoria": "区域市场",
       "readTime": "7 分钟",
-      "intro": "智利拥有一些独特的条件，使仓库与货仓自动化显得尤为重要：矿业在极端地区（高原、沙漠、南部极地）开展作业，世界一流的葡萄酒产业拥有物流高度复杂的酒庄，而以出口为导向的农业产业则需要精准的冷链管理。在所有这些行业中，挑战不仅在于吞吐量或存储密度，更在于如何在专业操作人员稀缺、人员流动率高且气候条件恶劣的地区维持运营。STOKA 作为智利与阿根廷的战略合作伙伴所集成的 DELIE ASRS 系统，尤其适合应对这些条件。",
+      "intro": "智利拥有一些独特的条件，使仓库与货仓自动化显得尤为重要：矿业在极端地区（高原、沙漠、南部极地）开展作业，世界一流的葡萄酒产业拥有物流高度复杂的酒庄，而以出口为导向的农业产业则需要精准的冷链管理。在所有这些行业中，挑战不仅在于吞吐量或存储密度，更在于如何在专业操作人员稀缺、人员流动率高且气候条件恶劣的地区维持运营。STOKA 作为智利与阿根廷的战略合作伙伴所集成的 ASRS 系统，尤其适合应对这些条件。",
       "sections": [
         {
           "h2": "智利矿业仓库自动化：北部地区的挑战",
-          "body": "智利北部（第二至第四大区）的矿业作业需要备件、材料与耗材仓库能够在极端高海拔条件下以最少的人员运转。这些地区的人员流动率很高，劳动力成本也十分高昂。面向矿用备件的 ASRS 或 VLM 系统可同时解决三个问题：减少仓库所需人员，最大限度降低库存差错（当某个缺失部件可能导致价值数百万的生产线停产时，这一点至关重要），并保护库存免受粉尘与温度等极端环境条件的影响。DELIE 的 VLM 与垂直回转柜提供已通过认证、适用于悬浮粉尘环境（IP6X）的版本。"
+          "body": "智利北部（第二至第四大区）的矿业作业需要备件、材料与耗材仓库能够在极端高海拔条件下以最少的人员运转。这些地区的人员流动率很高，劳动力成本也十分高昂。面向矿用备件的 ASRS 或 VLM 系统可同时解决三个问题：减少仓库所需人员，最大限度降低库存差错（当某个缺失部件可能导致价值数百万的生产线停产时，这一点至关重要），并保护库存免受粉尘与温度等极端环境条件的影响。VLM 与垂直回转柜提供已通过认证、适用于悬浮粉尘环境（IP6X）的版本。"
         },
         {
           "h2": "自动化葡萄酒仓库：容量更大，占地更少",
@@ -968,27 +968,27 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "智利冷链：水果与蛋白类产品出口",
-          "body": "智利是全球第二大鲜果出口国，也是主要的海产品出口国之一。这两个行业都依赖从采收或捕捞直至出口集装箱全程不间断的冷链。DELIE 的冷库 ASRS 系统可使用同一套设备，在 -30 °C（冷冻）至 +4 °C（冷藏）之间运行。对于 Valparaíso、San Antonio 与 Mejillones 港口的冷藏配送中心而言，自动化可降低仓库的热负荷（减少开门次数、减少人员在低温环境中的停留），并在相同占地面积内提升容量。"
+          "body": "智利是全球第二大鲜果出口国，也是主要的海产品出口国之一。这两个行业都依赖从采收或捕捞直至出口集装箱全程不间断的冷链。冷库 ASRS 系统可使用同一套设备，在 -30 °C（冷冻）至 +4 °C（冷藏）之间运行。对于 Valparaíso、San Antonio 与 Mejillones 港口的冷藏配送中心而言，自动化可降低仓库的热负荷（减少开门次数、减少人员在低温环境中的停留），并在相同占地面积内提升容量。"
         },
         {
           "h2": "为何选择 STOKA 承接智利的自动化项目",
           "body": "STOKA 作为智利的战略合作伙伴运营，拥有覆盖全国的工程团队：从 Arica 到 Punta Arenas。这对于北部的矿业项目以及南部偏远地区的作业至关重要：技术支持无需依赖来自阿根廷或亚洲的响应时间。智利针对进口资本货物的税收框架同样带来益处：面向特定生产性行业进口资本货物的增值税免税政策适用于 ASRS 系统。作为项目的一部分，STOKA 负责在智利办理进口许可与技术文件。"
         }
       ],
-      "conclusionH2": "智利：大多数自动化供应商尚未把握的机遇",
-      "conclusion": "大多数仓库自动化供应商在智利没有本地布局，而 STOKA 有。如果您在智利的矿业、葡萄酒或农业产业作业需要实现仓库自动化，STOKA 智利团队可实地考察您的设施、诊断作业情况，并按照与阿根廷相同的条件提交一份交钥匙技术方案。",
+      "conclusionH2": "智利：与您同一时区的仓储自动化工程",
+      "conclusion": "STOKA以阿根廷为基地，为智利的项目提供工程与支持：相同时区、相同语言，响应速度不依赖于亚洲或欧洲的工厂。如果您在智利的矿业、葡萄酒或农业产业作业需要实现仓库自动化，STOKA团队可实地考察您的设施、诊断作业情况，并按照与阿根廷相同的条件提交一份交钥匙技术方案。",
       "faq": [
         {
-          "q": "STOKA 在智利提供技术服务吗？",
-          "a": "是的。STOKA 作为智利的官方战略合作伙伴运营，配备本地工程团队，负责销售、安装与售后技术支持。智利的项目在智利本地管理，而非从阿根廷管理。"
+          "q": "STOKA 如何服务智利的项目？",
+          "a": "STOKA以阿根廷为基地为智利提供工程与支持：相同时区、相同语言，并可进行现场技术考察，覆盖诊断、安装与售后支持。响应速度不依赖于亚洲或欧洲的工厂。"
         },
         {
-          "q": "DELIE 设备是否适用智利资本货物的增值税免税政策？",
-          "a": "为在智利用于生产用途而进口的 ASRS 系统符合资本货物的认定。进口资本货物的增值税免税政策在特定行业与条件下适用。STOKA 智利负责办理证明设备生产性用途所需的技术文件。"
+          "q": "ASRS 设备是否适用智利资本货物的增值税免税政策？",
+          "a": "为在智利用于生产用途而进口的 ASRS 系统符合资本货物的认定。进口资本货物的增值税免税政策在特定行业与条件下适用。STOKA 负责办理证明设备生产性用途所需的技术文件。"
         },
         {
           "q": "ASRS 系统能否在矿区等高海拔地区运行？",
-          "a": "电气与电子设备在海拔 3,000 米以上运行时需要进行调整（大气压力降低会影响电机散热与热量耗散）。DELIE 可制造针对高海拔专门设计的设备版本。具体设计将在详细工程阶段确认。"
+          "a": "电气与电子设备在海拔 3,000 米以上运行时需要进行调整（大气压力降低会影响电机散热与热量耗散）。设备可按高海拔条件专门设计制造相应版本。具体设计将在详细工程阶段确认。"
         },
         {
           "q": "在智利实施一个项目相比阿根廷需要多长时间？",
@@ -1025,8 +1025,8 @@ export const ARTICULOS_I18N = {
   },
   "asrs-vs-autostore": {
     "en": {
-      "metaTitle": "ASRS vs AutoStore: Which Fits Your Warehouse?",
-      "metaDesc": "Honest comparison of traditional ASRS (stacker crane, shuttle) vs AutoStore grid robotics: throughput, density, cost, scalability and support.",
+      "metaTitle": "ASRS vs AutoStore: Which Fits Your Warehouse? | STOKA",
+      "metaDesc": "ASRS or AutoStore for your operation: density, throughput, the burial effect and local support compared, with the 20,000-position threshold explained.",
       "h1": "ASRS vs AutoStore: An Honest Technical Comparison",
       "categoria": "Technical Comparisons",
       "readTime": "8 min",
@@ -1042,19 +1042,19 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "Throughput: which one moves more units per hour",
-          "body": "AutoStore throughput depends on the number of robots and the number of output ports. A system of 100 robots and 10 ports can reach 1,000 bins/hour under optimal conditions. A 2-aisle DELIE MiniLoad running 400 bins/hour/aisle reaches 800 bins/hour. Similar in raw throughput. The difference lies in consistency: AutoStore can degrade its throughput when the most-requested bins are buried under many less-requested ones (the burial effect). The MiniLoad ASRS keeps its throughput constant regardless of where a bin is stored, because access is always direct."
+          "body": "AutoStore throughput depends on the number of robots and the number of output ports. A system of 100 robots and 10 ports can reach 1,000 bins/hour under optimal conditions. A 2-aisle MiniLoad running 400 bins/hour/aisle reaches 800 bins/hour. Similar in raw throughput. The difference lies in consistency: AutoStore can degrade its throughput when the most-requested bins are buried under many less-requested ones (the burial effect). The MiniLoad ASRS keeps its throughput constant regardless of where a bin is stored, because access is always direct."
         },
         {
           "h2": "Cost, scalability and availability in Argentina",
-          "body": "AutoStore is significantly more expensive than an equivalent traditional ASRS: the metal grid and the robots carry a higher cost per storage position than the racking of a MiniLoad. On top of that, AutoStore is a proprietary brand with active patents and exclusive distributors: in Argentina, the availability of local technical support is limited or dependent on agreements with international distributors. The DELIE ASRS systems represented by STOKA offer full local technical support, spare parts held in Argentina, and competitive pricing across the Latin American market. For operations above 20,000 storage positions, AutoStore may be technically superior; below that threshold, traditional ASRS delivers a better price/performance ratio in the Argentine market."
+          "body": "AutoStore is significantly more expensive than an equivalent traditional ASRS: the metal grid and the robots carry a higher cost per storage position than the racking of a MiniLoad. On top of that, AutoStore is a proprietary brand with active patents and exclusive distributors: in Argentina, the availability of local technical support is limited or dependent on agreements with international distributors. The traditional ASRS systems STOKA integrates offer full local technical support, spare parts held in Argentina, and competitive pricing across the Latin American market. For operations above 20,000 storage positions, AutoStore may be technically superior; below that threshold, traditional ASRS delivers a better price/performance ratio in the Argentine market."
         }
       ],
       "conclusionH2": "AutoStore or ASRS: the right technology depends on your scale and operation",
-      "conclusion": "AutoStore is an excellent technology for large-scale e-commerce operations with many small-format SKUs. For industrial warehouses handling pallets, medium-sized cases, or a mix of volumes, traditional ASRS — stacker crane, shuttle, or MiniLoad — is more suitable, more cost-effective, and better supported locally in Argentina and Chile. If you're evaluating AutoStore vs. DELIE for your operation, STOKA can run the comparative analysis using your real data.",
+      "conclusion": "AutoStore is an excellent technology for large-scale e-commerce operations with many small-format SKUs. For industrial warehouses handling pallets, medium-sized cases, or a mix of volumes, traditional ASRS — stacker crane, shuttle, or MiniLoad — is more suitable, more cost-effective, and better supported locally in Argentina and Chile. If you're evaluating AutoStore vs. traditional ASRS for your operation, STOKA can run the comparative analysis using your real data.",
       "faq": [
         {
           "q": "Does AutoStore have distributors in Argentina?",
-          "a": "AutoStore operates through authorized distributors. In Argentina, the availability of local AutoStore technical support is limited compared with markets like Europe or the US. DELIE stacker cranes and MiniLoad systems have full local technical support through STOKA."
+          "a": "AutoStore operates through authorized distributors. In Argentina, the availability of local AutoStore technical support is limited compared with markets like Europe or the US. Stacker cranes and MiniLoad systems have full local technical support through STOKA."
         },
         {
           "q": "What kind of operation is AutoStore best suited for?",
@@ -1062,7 +1062,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "Which one has higher operational availability (uptime)?",
-          "a": "Both systems have a theoretical uptime above 99%. The practical difference lies in local support: an AutoStore robot that fails in Argentina can take weeks to source a spare part. A DELIE stacker crane with STOKA on the ground is repaired in hours, using spare-parts stock held in Argentina."
+          "a": "Both systems have a theoretical uptime above 99%. The practical difference lies in local support: an AutoStore robot that fails in Argentina can take weeks to source a spare part. A stacker crane with STOKA on the ground is repaired in hours, using spare-parts stock held in Argentina."
         },
         {
           "q": "Is it possible to migrate from AutoStore to traditional ASRS or vice versa?",
@@ -1070,7 +1070,7 @@ export const ARTICULOS_I18N = {
         }
       ],
       "cta": {
-        "heading": "We compare DELIE ASRS vs AutoStore for your operation",
+        "heading": "We compare traditional ASRS vs AutoStore for your operation",
         "text": "A comparative technical analysis using your real data. Free, no obligation.",
         "btnPrimary": {
           "label": "Request a comparative analysis",
@@ -1097,8 +1097,8 @@ export const ARTICULOS_I18N = {
       ]
     },
     "zh": {
-      "metaTitle": "ASRS 与 AutoStore 技术对比：哪种更适合您的仓库",
-      "metaDesc": "对传统 ASRS 系统（堆垛机、穿梭车）与 AutoStore（网格机器人）进行客观对比：吞吐量、存储密度、成本、可扩展性与本地支持。",
+      "metaTitle": "ASRS 与 AutoStore：哪种更适合您的仓库",
+      "metaDesc": "ASRS与AutoStore怎么选：存储密度、吞吐量、埋箱效应与本地技术支持的客观对比，并解析2万个存储货位的规模分界线。",
       "h1": "ASRS 与 AutoStore：客观的技术对比",
       "categoria": "技术对比",
       "readTime": "8 分钟",
@@ -1114,19 +1114,19 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "吞吐量：谁每小时处理的件数更多",
-          "body": "AutoStore 的吞吐量取决于机器人数量与出库端口数量。一套配备 100 台机器人和 10 个端口的系统，在理想条件下每小时可处理 1,000 个料箱。而一套双巷道的 DELIE MiniLoad，按每巷道每小时 400 个料箱计算，可达每小时 800 个料箱。就单纯吞吐量而言二者相近。差异在于稳定性：当最热门的料箱被大量冷门料箱压在下方时，AutoStore 的吞吐量可能下降（埋箱效应）。而 MiniLoad ASRS 无论料箱存放在何处都能保持恒定的吞吐量，因为其存取始终是直接的。"
+          "body": "AutoStore 的吞吐量取决于机器人数量与出库端口数量。一套配备 100 台机器人和 10 个端口的系统，在理想条件下每小时可处理 1,000 个料箱。而一套双巷道的 MiniLoad，按每巷道每小时 400 个料箱计算，可达每小时 800 个料箱。就单纯吞吐量而言二者相近。差异在于稳定性：当最热门的料箱被大量冷门料箱压在下方时，AutoStore 的吞吐量可能下降（埋箱效应）。而 MiniLoad ASRS 无论料箱存放在何处都能保持恒定的吞吐量，因为其存取始终是直接的。"
         },
         {
           "h2": "成本、可扩展性与在阿根廷的可获得性",
-          "body": "AutoStore 明显比同等规模的传统 ASRS 更为昂贵：金属网格与机器人的单个存储货位成本高于 MiniLoad 的货架。此外，AutoStore 属于拥有有效专利和独家经销商的专有品牌：在阿根廷，其本地技术支持的可获得性有限，或需依赖与国际经销商的合作协议。由 STOKA 代理的 DELIE ASRS 系统则提供完善的本地技术支持、在阿根廷备有的备品备件，以及在拉美市场具有竞争力的价格。对于超过 20,000 个存储货位的运营，AutoStore 在技术上可能更胜一筹；但在该规模以下，传统 ASRS 在阿根廷市场提供更优的性价比。"
+          "body": "AutoStore 明显比同等规模的传统 ASRS 更为昂贵：金属网格与机器人的单个存储货位成本高于 MiniLoad 的货架。此外，AutoStore 属于拥有有效专利和独家经销商的专有品牌：在阿根廷，其本地技术支持的可获得性有限，或需依赖与国际经销商的合作协议。STOKA所集成的传统ASRS系统则提供完善的本地技术支持、在阿根廷备有的备品备件，以及在拉美市场具有竞争力的价格。对于超过 20,000 个存储货位的运营，AutoStore 在技术上可能更胜一筹；但在该规模以下，传统 ASRS 在阿根廷市场提供更优的性价比。"
         }
       ],
       "conclusionH2": "AutoStore 还是 ASRS：正确的技术取决于您的规模与运营",
-      "conclusion": "对于拥有大量小尺寸 SKU 的大规模电商运营，AutoStore 是一项出色的技术。而对于处理托盘、中型纸箱或多种规格混合的工业仓库，传统 ASRS——堆垛机、穿梭车或 MiniLoad——则更为适用、更经济，且在阿根廷和智利拥有更完善的本地支持。如果您正在为自己的运营评估 AutoStore 与 DELIE 之间的选择，STOKA 可以基于您的真实数据进行对比分析。",
+      "conclusion": "对于拥有大量小尺寸 SKU 的大规模电商运营，AutoStore 是一项出色的技术。而对于处理托盘、中型纸箱或多种规格混合的工业仓库，传统 ASRS——堆垛机、穿梭车或 MiniLoad——则更为适用、更经济，且在阿根廷和智利拥有更完善的本地支持。如果您正在为自己的运营评估 AutoStore 与传统 ASRS 之间的选择，STOKA 可以基于您的真实数据进行对比分析。",
       "faq": [
         {
           "q": "AutoStore 在阿根廷有经销商吗？",
-          "a": "AutoStore 通过授权经销商运营。在阿根廷，AutoStore 本地技术支持的可获得性相较欧洲或美国等市场较为有限。而 DELIE 堆垛机与 MiniLoad 则可通过 STOKA 获得完善的本地技术支持。"
+          "a": "AutoStore 通过授权经销商运营。在阿根廷，AutoStore 本地技术支持的可获得性相较欧洲或美国等市场较为有限。而堆垛机与 MiniLoad 系统则可通过 STOKA 获得完善的本地技术支持。"
         },
         {
           "q": "AutoStore 适合哪类运营？",
@@ -1134,7 +1134,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "哪种系统的运营可用率（uptime）更高？",
-          "a": "两套系统的理论可用率均高于 99%。实际差异在于本地支持：在阿根廷，一台发生故障的 AutoStore 机器人可能需要数周才能获得备件。而配备 STOKA 本地支持的 DELIE 堆垛机，凭借在阿根廷储备的备件，可在数小时内完成维修。"
+          "a": "两套系统的理论可用率均高于 99%。实际差异在于本地支持：在阿根廷，一台发生故障的 AutoStore 机器人可能需要数周才能获得备件。而配备 STOKA 本地支持的堆垛机，凭借在阿根廷储备的备件，可在数小时内完成维修。"
         },
         {
           "q": "是否可以从 AutoStore 迁移到传统 ASRS，或反向迁移？",
@@ -1142,7 +1142,7 @@ export const ARTICULOS_I18N = {
         }
       ],
       "cta": {
-        "heading": "我们为您的运营对比 DELIE ASRS 与 AutoStore",
+        "heading": "我们为您的运营对比传统 ASRS 与 AutoStore",
         "text": "基于您的真实数据进行对比技术分析。免费，无任何承诺。",
         "btnPrimary": {
           "label": "申请对比分析",
@@ -1171,8 +1171,8 @@ export const ARTICULOS_I18N = {
   },
   "que-es-un-transelevador": {
     "en": {
-      "metaTitle": "What Is a Stacker Crane? Types, Function & Cost",
-      "metaDesc": "Complete guide to stacker cranes: types (unit-load, miniload), how they work, shuttle vs. crane, and when to install one in your warehouse.",
+      "metaTitle": "What Is a Stacker Crane? Types, Function & Cost | STOKA",
+      "metaDesc": "What a stacker crane is and when to install one: unit-load and miniload types, 45-90 second cycles, prices from USD 180,000 and ROI of 18-36 months.",
       "h1": "What a stacker crane is and how it works in an automated warehouse",
       "categoria": "AS/RS Fundamentals",
       "readTime": "7 min read",
@@ -1196,7 +1196,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "How much a stacker crane costs and its ROI in Argentina",
-          "body": "The cost of a DELIE unit-load stacker crane for a mid-scale warehouse aisle (15 meters high, 500 pallet positions) runs between USD 180.000 and USD 280.000, not including the racking or the WCS. A complete 2-aisle project with conveyors, racking, WCS, and integration with the existing ERP in a warehouse in Argentina ranges from USD 800.000 to USD 1.500.000. With Decree 513/2025 (0% tariff on AS/RS equipment) and RIMI (100% accelerated depreciation in the first fiscal year), the net cost of a project drops by 25% to 35%. The typical ROI of a stacker crane project in Argentina is between 18 and 36 months, depending on the current labor cost of the manual operation it replaces."
+          "body": "The cost of a unit-load stacker crane for a mid-scale warehouse aisle (15 meters high, 500 pallet positions) runs between USD 180.000 and USD 280.000, not including the racking or the WCS. A complete 2-aisle project with conveyors, racking, WCS, and integration with the existing ERP in a warehouse in Argentina ranges from USD 800.000 to USD 1.500.000. With Decree 513/2025 (0% tariff on AS/RS equipment) and RIMI (100% accelerated depreciation in the first fiscal year), the net cost of a project drops by 25% to 35%. The typical ROI of a stacker crane project in Argentina is between 18 and 36 months, depending on the current labor cost of the manual operation it replaces."
         },
         {
           "h2": "Is a stacker crane worth it for a small or mid-size warehouse?",
@@ -1212,7 +1212,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "What happens if the stacker crane fails in the middle of operations?",
-          "a": "DELIE stacker cranes have an MTBF (mean time between failures) of over 8.000 operating hours. If a failure occurs, the aisle can be run in emergency manual mode with a forklift while the issue is resolved. STOKA keeps spare parts in Argentina to resolve most failures in under 24 hours."
+          "a": "Modern stacker cranes have an MTBF (mean time between failures) of over 8.000 operating hours. If a failure occurs, the aisle can be run in emergency manual mode with a forklift while the issue is resolved. STOKA keeps spare parts in Argentina to resolve most failures in under 24 hours."
         },
         {
           "q": "How many stacker crane aisles does my operation need?",
@@ -1220,7 +1220,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "Does the stacker crane integrate with my existing WMS or ERP?",
-          "a": "Yes. The DELIE WCS connects to any WMS or ERP via REST API, SOAP, or EDI. Certified integrations with SAP, Oracle, Microsoft Dynamics, and Infor. STOKA manages the technical integration as part of the turnkey project at no additional cost."
+          "a": "Yes. The WCS connects to any WMS or ERP via REST API, SOAP, or EDI. Certified integrations with SAP, Oracle, Microsoft Dynamics, and Infor. STOKA manages the technical integration as part of the turnkey project at no additional cost."
         },
         {
           "q": "What is the difference between a stacker crane and a forklift?",
@@ -1263,8 +1263,8 @@ export const ARTICULOS_I18N = {
       ]
     },
     "zh": {
-      "metaTitle": "什么是堆垛机？类型、工作原理与成本",
-      "metaDesc": "堆垛机完全指南：类型（unit-load、miniload）、工作原理、与穿梭车的区别，以及何时适合在仓库中安装堆垛机。",
+      "metaTitle": "什么是堆垛机？类型、工作原理与成本完整指南",
+      "metaDesc": "什么是堆垛机：unit-load与miniload两大类型、45至90秒的作业循环、18万美元起的价格区间，以及18至36个月的典型投资回报。",
       "h1": "什么是堆垛机，它在自动化仓库中如何工作",
       "categoria": "ASRS 基础",
       "readTime": "7 分钟阅读",
@@ -1288,7 +1288,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "堆垛机的成本以及在阿根廷的投资回报率",
-          "body": "一台用于中等规模仓库巷道（15 米高、500 个托盘货位）的 DELIE unit-load 堆垛机，价格约在 USD 180.000 至 USD 280.000 之间，不含货架和 WCS。在阿根廷的一座仓库中，一个包含输送机、货架、WCS 以及与现有 ERP 集成的完整 2 条巷道项目，价格介于 USD 800.000 至 USD 1.500.000 之间。凭借第 513/2025 号法令（ASRS 设备关税为 0%）和 RIMI（首个财政年度 100% 加速折旧），项目的净成本可降低 25% 至 35%。在阿根廷，堆垛机项目的典型投资回报周期为 18 至 36 个月，具体取决于其所替代的人工作业当前的用工成本。"
+          "body": "一台用于中等规模仓库巷道（15 米高、500 个托盘货位）的 unit-load 堆垛机，价格约在 USD 180.000 至 USD 280.000 之间，不含货架和 WCS。在阿根廷的一座仓库中，一个包含输送机、货架、WCS 以及与现有 ERP 集成的完整 2 条巷道项目，价格介于 USD 800.000 至 USD 1.500.000 之间。凭借第 513/2025 号法令（ASRS 设备关税为 0%）和 RIMI（首个财政年度 100% 加速折旧），项目的净成本可降低 25% 至 35%。在阿根廷，堆垛机项目的典型投资回报周期为 18 至 36 个月，具体取决于其所替代的人工作业当前的用工成本。"
         },
         {
           "h2": "堆垛机适合中小型仓库吗？",
@@ -1304,7 +1304,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "如果堆垛机在作业中途发生故障怎么办？",
-          "a": "DELIE 堆垛机的 MTBF（平均无故障时间）超过 8.000 个运行小时。如果发生故障，可在问题解决期间以叉车的应急手动模式运行该巷道。STOKA 在阿根廷备有备件，能够在 24 小时内解决大多数故障。"
+          "a": "现代堆垛机的 MTBF（平均无故障时间）超过 8.000 个运行小时。如果发生故障，可在问题解决期间以叉车的应急手动模式运行该巷道。STOKA 在阿根廷备有备件，能够在 24 小时内解决大多数故障。"
         },
         {
           "q": "我的作业需要多少条堆垛机巷道？",
@@ -1312,7 +1312,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "堆垛机能否与我现有的 WMS 或 ERP 集成？",
-          "a": "可以。DELIE 的 WCS 可通过 REST API、SOAP 或 EDI 连接到任何 WMS 或 ERP。已通过与 SAP、Oracle、Microsoft Dynamics 和 Infor 的认证集成。STOKA 将技术集成作为交钥匙项目的一部分进行管理，不收取额外费用。"
+          "a": "可以。WCS 可通过 REST API、SOAP 或 EDI 连接到任何 WMS 或 ERP。已通过与 SAP、Oracle、Microsoft Dynamics 和 Infor 的认证集成。STOKA 将技术集成作为交钥匙项目的一部分进行管理，不收取额外费用。"
         },
         {
           "q": "堆垛机和叉车有什么区别？",
@@ -1358,7 +1358,7 @@ export const ARTICULOS_I18N = {
   "que-es-un-wms": {
     "en": {
       "metaTitle": "What Is a WMS? Warehouse Management System Explained",
-      "metaDesc": "A complete guide to WMS (Warehouse Management System): what it does, how it differs from WCS and ERP, its core functions and how to choose the right one.",
+      "metaDesc": "What a WMS does and when your ERP is not enough: real-time inventory, FIFO/FEFO, full traceability, and the 500-position threshold for a dedicated system.",
       "h1": "What a WMS Is and Why It Is the Brain of the Automated Warehouse",
       "categoria": "Software and Technology",
       "readTime": "6 min",
@@ -1370,7 +1370,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "WMS vs. WCS vs. ERP: What Each One Does",
-          "body": "The ERP (SAP, Oracle, Microsoft Dynamics) manages business processes: finance, purchasing, sales and production. It knows there are 100 pallets of product X in the warehouse, but not which location each one occupies. The WMS lives between the ERP and the physical warehouse: it receives orders from the ERP and translates them into storage and picking instructions, knowing exactly where each product sits in the warehouse. The WCS (Warehouse Control System) is the next level of control: it turns the WMS instructions into real-time commands for the physical equipment — stacker cranes, robots and conveyors. In a fully automated warehouse, all three systems work in a cascade: ERP to WMS to WCS to physical equipment. In DELIE systems, the WMS and WCS are integrated into a single platform, reducing integration complexity."
+          "body": "The ERP (SAP, Oracle, Microsoft Dynamics) manages business processes: finance, purchasing, sales and production. It knows there are 100 pallets of product X in the warehouse, but not which location each one occupies. The WMS lives between the ERP and the physical warehouse: it receives orders from the ERP and translates them into storage and picking instructions, knowing exactly where each product sits in the warehouse. The WCS (Warehouse Control System) is the next level of control: it turns the WMS instructions into real-time commands for the physical equipment — stacker cranes, robots and conveyors. In a fully automated warehouse, all three systems work in a cascade: ERP to WMS to WCS to physical equipment. In the platforms STOKA deploys, the WMS and WCS are integrated into a single stack, reducing integration complexity."
         },
         {
           "h2": "Key Functions of a Modern WMS for Warehouses in Argentina",
@@ -1378,14 +1378,14 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "When the ERP's WMS Is Not Enough and a Dedicated WMS Is Needed",
-          "body": "The inventory modules of ERP systems (SAP MM, Oracle Inventory) manage stock at the warehouse level, not at the location level. They know there are 100 pallets in the warehouse, but not the exact location of each one. For a warehouse with numbered locations, a picking operation and FEFO processes, the ERP inventory module is not enough: you need a dedicated WMS that integrates with the ERP. The usual tipping point comes when the warehouse exceeds 500 storage positions and 300 daily movements, or when automated equipment (stacker cranes, robots) that requires real-time location control is introduced. DELIE delivers its own WMS, integrated with the WCS, as part of STOKA's turnkey project."
+          "body": "The inventory modules of ERP systems (SAP MM, Oracle Inventory) manage stock at the warehouse level, not at the location level. They know there are 100 pallets in the warehouse, but not the exact location of each one. For a warehouse with numbered locations, a picking operation and FEFO processes, the ERP inventory module is not enough: you need a dedicated WMS that integrates with the ERP. The usual tipping point comes when the warehouse exceeds 500 storage positions and 300 daily movements, or when automated equipment (stacker cranes, robots) that requires real-time location control is introduced. A dedicated WMS, integrated with the WCS, is delivered as part of STOKA's turnkey project."
         }
       ],
       "conclusionH2": "The WMS: The Investment With the Greatest Long-Term Impact",
-      "conclusion": "In a warehouse automation project, the WMS is the technology with the greatest long-term impact on operations: it remains the central system long after the physical equipment has been depreciated. Choosing a WMS with room to grow — multi-client, multi-site, scalable in regulatory functions — avoids costly replacement projects down the road. STOKA delivers the DELIE WMS as part of the project, with full integration to the existing ERP and training for the operations team included.",
+      "conclusion": "In a warehouse automation project, the WMS is the technology with the greatest long-term impact on operations: it remains the central system long after the physical equipment has been depreciated. Choosing a WMS with room to grow — multi-client, multi-site, scalable in regulatory functions — avoids costly replacement projects down the road. STOKA delivers the WMS as part of the project, with full integration to the existing ERP and training for the operations team included.",
       "faq": [
         {
-          "q": "Does the DELIE WMS integrate with SAP?",
+          "q": "Does the WMS integrate with SAP?",
           "a": "Yes. The WMS has a certified connector for SAP S/4HANA and SAP ECC via RFC/BAPI and REST API. The two-way integration synchronizes inbound and outbound orders from the ERP with the physical warehouse locations in real time. STOKA manages the technical integration with the client's IT team."
         },
         {
@@ -1398,7 +1398,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "What happens when the warehouse grows or more SKUs are added?",
-          "a": "The DELIE WMS is scalable without architectural changes. You can add more storage positions, more users, more physical equipment and more regulatory functions incrementally. The license includes software updates and new features throughout the support period."
+          "a": "The WMS is scalable without architectural changes. You can add more storage positions, more users, more physical equipment and more regulatory functions incrementally. The license includes software updates and new features throughout the support period."
         }
       ],
       "cta": {
@@ -1429,8 +1429,8 @@ export const ARTICULOS_I18N = {
       ]
     },
     "zh": {
-      "metaTitle": "什么是WMS？仓库管理系统详解",
-      "metaDesc": "WMS（仓库管理系统）完整指南：它的作用、与WCS和ERP的区别、核心功能，以及如何为您的仓库选择合适的WMS。",
+      "metaTitle": "什么是WMS？仓库管理系统功能与选型完整指南",
+      "metaDesc": "什么是WMS、何时ERP不够用：实时库存、FIFO/FEFO与全程追溯功能，当超过500个货位或引入自动化设备时便需要专用系统。",
       "h1": "什么是WMS，以及为什么它是自动化仓库的大脑",
       "categoria": "软件与技术",
       "readTime": "6 分钟",
@@ -1442,7 +1442,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "WMS、WCS与ERP：各自的职责",
-          "body": "ERP（SAP、Oracle、Microsoft Dynamics）负责管理业务流程：财务、采购、销售和生产。它知道仓库里有100托盘的X产品，却不知道每一托盘具体存放在哪个货位。WMS位于ERP与物理仓库之间：它接收来自ERP的订单，并将其转化为存储和拣选指令，同时精确掌握每件产品在仓库中的位置。WCS（仓库控制系统）则是更下一层的控制：它将WMS的指令实时转化为对物理设备——堆垛机、机器人、输送机——的操作命令。在一座完全自动化的仓库中，这三套系统层层衔接运行：ERP → WMS → WCS → 物理设备。在DELIE系统中，WMS与WCS集成于同一平台，从而降低了集成的复杂度。"
+          "body": "ERP（SAP、Oracle、Microsoft Dynamics）负责管理业务流程：财务、采购、销售和生产。它知道仓库里有100托盘的X产品，却不知道每一托盘具体存放在哪个货位。WMS位于ERP与物理仓库之间：它接收来自ERP的订单，并将其转化为存储和拣选指令，同时精确掌握每件产品在仓库中的位置。WCS（仓库控制系统）则是更下一层的控制：它将WMS的指令实时转化为对物理设备——堆垛机、机器人、输送机——的操作命令。在一座完全自动化的仓库中，这三套系统层层衔接运行：ERP → WMS → WCS → 物理设备。在STOKA所部署的系统中，WMS与WCS集成于同一平台，从而降低了集成的复杂度。"
         },
         {
           "h2": "阿根廷现代仓库对WMS的关键功能要求",
@@ -1450,14 +1450,14 @@ export const ARTICULOS_I18N = {
         },
         {
           "h2": "何时ERP自带的WMS不够用，需要专用WMS",
-          "body": "ERP系统的库存模块（SAP MM、Oracle Inventory）在仓库层面而非货位层面管理库存。它们知道仓库里有100托盘，却不知道每一托盘具体在哪个货位。对于设有编号货位、进行拣选作业并采用FEFO流程的仓库，ERP的库存模块并不够用：您需要一套与ERP集成的专用WMS。通常的转折点出现在仓库存储货位超过500个、日移动量超过300次时，或引入需要实时货位控制的自动化设备（堆垛机、机器人）时。作为STOKA交钥匙项目的一部分，DELIE会交付其自有的、与WCS集成的WMS。"
+          "body": "ERP系统的库存模块（SAP MM、Oracle Inventory）在仓库层面而非货位层面管理库存。它们知道仓库里有100托盘，却不知道每一托盘具体在哪个货位。对于设有编号货位、进行拣选作业并采用FEFO流程的仓库，ERP的库存模块并不够用：您需要一套与ERP集成的专用WMS。通常的转折点出现在仓库存储货位超过500个、日移动量超过300次时，或引入需要实时货位控制的自动化设备（堆垛机、机器人）时。作为STOKA交钥匙项目的一部分，将交付一套与WCS集成的专用WMS。"
         }
       ],
       "conclusionH2": "WMS：长期影响最大的投资",
-      "conclusion": "在仓库自动化项目中，WMS是对运营产生长期影响最大的技术：即便物理设备折旧完毕，它依然是核心系统。选择一套具备成长空间的WMS——支持多客户、多站点、监管功能可扩展——可避免日后代价高昂的更换项目。STOKA将DELIE的WMS作为项目的一部分交付，包含与现有ERP的完整集成以及运营团队的培训。",
+      "conclusion": "在仓库自动化项目中，WMS是对运营产生长期影响最大的技术：即便物理设备折旧完毕，它依然是核心系统。选择一套具备成长空间的WMS——支持多客户、多站点、监管功能可扩展——可避免日后代价高昂的更换项目。STOKA将WMS作为项目的一部分交付，包含与现有ERP的完整集成以及运营团队的培训。",
       "faq": [
         {
-          "q": "DELIE的WMS能与SAP集成吗？",
+          "q": "该WMS能与SAP集成吗？",
           "a": "可以。该WMS配有面向SAP S/4HANA和SAP ECC的认证连接器，通过RFC/BAPI和REST API对接。双向集成可将ERP的入库和出库订单与物理仓库货位实时同步。STOKA负责与客户IT团队协作完成技术集成。"
         },
         {
@@ -1470,7 +1470,7 @@ export const ARTICULOS_I18N = {
         },
         {
           "q": "当仓库规模扩大或新增更多SKU时会怎样？",
-          "a": "DELIE的WMS无需变更架构即可扩展。您可以逐步增加更多存储货位、更多用户、更多物理设备以及更多监管功能。许可证在支持期内包含软件更新和新功能。"
+          "a": "该WMS无需变更架构即可扩展。您可以逐步增加更多存储货位、更多用户、更多物理设备以及更多监管功能。许可证在支持期内包含软件更新和新功能。"
         }
       ],
       "cta": {

@@ -11,7 +11,7 @@ import { ArrowRight, ChevronRight, Maximize2 } from 'lucide-react';
 import { SeoHead } from '../../lib/SeoHead';
 
 const seg = (s) => s.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@ ]/gu, c => encodeURIComponent(c)).replace(/ /g, '%20');
-const img = (prod, file) => `/productos-delie/asrs/${seg(prod)}/${file}`;
+const img = (prod, file) => `/productos/asrs/${seg(prod)}/${file}`;
 
 /* Solo imagen + link; name/desc desde i18n por índice. */
 const PRODUCT_MEDIA = [
@@ -230,7 +230,7 @@ export const CatalogoASRSPage = () => {
 
           {/* 2-col: fabricación + fiscal */}
           <div className="grid md:grid-cols-2 gap-6">
-            {/* Fabricación DELIE */}
+            {/* Fabricación certificada */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
               <p className="text-[10px] font-mono text-gray-400 tracking-[0.4em] uppercase mb-4">{p('fabTag')}</p>
               <div className="flex flex-wrap gap-2">
@@ -288,7 +288,7 @@ export const CatalogoASRSPage = () => {
               <motion.button key={i} onClick={() => langNavigate(prod.link)} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
                 className="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-cyan-300 hover:shadow-sm transition-all group">
                 <div className="aspect-4/3 overflow-hidden bg-gray-100">
-                  <img loading="lazy" src={prod.image} alt={`${prod.name} — AS/RS DELIE`}
+                  <img loading="lazy" src={prod.image} alt={`${prod.name} — sistema AS/RS de almacenamiento automático de pallets y cajas`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-4">
