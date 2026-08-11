@@ -58,15 +58,15 @@ export const Navbar = () => {
     { name: t('nav.resourcesItems.cases'),        href: "/casos-de-exito" },
     { name: t('nav.resourcesItems.glossary'),     href: "/recursos/glosario" },
     { divider: true },
-    { name: t('nav.taxBenefits'),                 href: "/beneficios-fiscales" },
     { name: t('nav.howWeWork'),                   href: "/como-trabajamos" },
     { name: t('footer.companyLinks.chile'),       href: "/chile" },
   ];
 
-  /* 5 ítems, mismos en desktop y mobile — Recursos al final, después de Contacto */
+  /* 6 ítems, mismos en desktop y mobile — Recursos al final, después de Contacto */
   const ALL_NAV = [
     { name: t('nav.catalog'),                 href: "/catalogo",  type: "dropdown-catalogo" },
     { name: t('nav.industries'),              href: "/industrias", type: "page" },
+    { name: t('nav.taxBenefits'),             href: "/beneficios-fiscales", type: "page" },
     { name: t('nav.aboutUs'),                 href: "/nosotros",  type: "page" },
     { name: t('footer.companyLinks.contact'), href: "/contacto",  type: "page" },
     { name: t('nav.resources'),               href: "/recursos",  type: "dropdown-recursos" },
@@ -76,7 +76,7 @@ export const Navbar = () => {
   const isActive = (item) => {
     if (item.type === "dropdown-catalogo") return basePath.startsWith("/catalogo");
     if (item.type === "dropdown-recursos") {
-      return ["/recursos", "/preguntas-frecuentes", "/casos-de-exito", "/beneficios-fiscales", "/como-trabajamos", "/chile"]
+      return ["/recursos", "/preguntas-frecuentes", "/casos-de-exito", "/como-trabajamos", "/chile"]
         .some(p => basePath === p || basePath.startsWith(p + "/"));
     }
     return basePath === item.href || basePath.startsWith(item.href + "/");
