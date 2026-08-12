@@ -79,13 +79,11 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-5"
         >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black italic uppercase leading-[0.95] tracking-tighter text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black italic uppercase leading-[0.95] tracking-tight text-white break-words px-2">
             {t('hero.h1_line1')}<br />
-            {t('hero.h1_line2')}<br />
             <span className="text-cyan-400">
-              {t('hero.h1_line3')}
+              {t('hero.h1_line2')}
             </span>
-            <br />{t('hero.h1_line4')}
           </h1>
         </motion.div>
 
